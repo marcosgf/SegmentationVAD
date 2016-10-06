@@ -1,0 +1,808 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.543
+[MÚSICA] [MÚSICA] Quem diria?
+
+2
+00:00:09.543 --> 00:00:10.885
+Quem diria!
+
+3
+00:00:10.885 --> 00:00:17.374
+Estamos aqui na última parte da nossa
+sequência de vídeos de refatoração.
+
+4
+00:00:17.374 --> 00:00:23.261
+Estamos refatorando o mesmo código e
+a cada vídeo ele muda mais de cara, está?
+
+5
+00:00:23.261 --> 00:00:28.843
+A gente passou monte de coisas para as
+classes Movie, Rental, agora a gente
+
+6
+00:00:28.843 --> 00:00:34.756
+criou subclasses, substituiu aqui monte de
+if, monte de condicional por polimorfismo.
+
+7
+00:00:34.756 --> 00:00:38.329
+Pessoal, não leva a mal não,
+mas eu acho isso muito bonito.
+
+8
+00:00:38.329 --> 00:00:40.084
+Para mim, isso aqui é arte.
+
+9
+00:00:40.084 --> 00:00:40.999
+Está certo?
+
+10
+00:00:40.999 --> 00:00:42.578
+Vamos voltar, não é?
+
+11
+00:00:42.578 --> 00:00:47.785
+Agora que a gente já poliu aqui as
+nossas classes Movie e Rental não é?
+
+12
+00:00:47.785 --> 00:00:50.730
+Criamos aqui as subclasses Regular,
+
+13
+00:00:50.730 --> 00:00:56.219
+NewRelease, a Childrens não é?
+
+14
+00:00:56.219 --> 00:00:59.290
+Vamos voltar aqui na
+nossa classe Customer.
+
+15
+00:00:59.290 --> 00:01:01.256
+Nossa Senhora, argh!
+
+16
+00:01:01.256 --> 00:01:08.032
+Tinha desacostumado a ver
+esse código feioso aí está?
+
+17
+00:01:08.032 --> 00:01:11.249
+Eu vou é, vamos refatorar.
+
+18
+00:01:11.249 --> 00:01:16.022
+Uma coisa que eu não estou gostando
+aqui é porque ele faz esse
+
+19
+00:01:16.022 --> 00:01:20.365
+cálculo da quantidade,
+da soma dos amounts,
+
+20
+00:01:20.365 --> 00:01:25.410
+da soma dos frequentRenterPoints
+misturado com o statement.
+
+21
+00:01:25.410 --> 00:01:27.556
+Está?
+Isso eu não acho legal.
+
+22
+00:01:27.556 --> 00:01:29.950
+Então o que é que eu vou fazer aqui?
+
+23
+00:01:29.950 --> 00:01:32.568
+Eu vou é, criar esses métodos está?
+
+24
+00:01:32.568 --> 00:01:37.140
+E como está tudo muito misturado
+fica até difícil de extrair isso
+
+25
+00:01:37.140 --> 00:01:39.692
+usando o Eclipse está?
+
+26
+00:01:39.692 --> 00:01:46.202
+Então eu vou criar aqui método public é,
+double é,
+
+27
+00:01:46.202 --> 00:01:51.137
+que eu vou chamar de getTotalAmount.
+
+28
+00:01:51.137 --> 00:01:55.835
+Nesse caso faz sentido
+esse método estar aqui,
+
+29
+00:01:55.835 --> 00:01:59.293
+porque eu estou calculando
+o total do cliente.
+
+30
+00:01:59.293 --> 00:02:02.410
+Então é uma coisa relacionada ao cliente.
+
+31
+00:02:02.410 --> 00:02:03.482
+Está?
+
+32
+00:02:03.482 --> 00:02:09.592
+Então eu vou vir aqui, vou pegar esse,
+
+33
+00:02:09.592 --> 00:02:14.250
+esse pedação aqui onde esse
+
+34
+00:02:14.250 --> 00:02:19.410
+cálculo está todo misturado e
+vou jogar aqui dentro está?
+
+35
+00:02:19.410 --> 00:02:24.451
+E aí eu vou começar a tirar coisas
+que não são importantes para mim,
+
+36
+00:02:24.451 --> 00:02:29.480
+como isso, isso, aqui ele está
+
+37
+00:02:29.480 --> 00:02:34.992
+pegando o getAmount,
+é e aqui eu posso tirar isso aqui.
+
+38
+00:02:34.992 --> 00:02:37.190
+ali ele está somando.
+
+39
+00:02:37.190 --> 00:02:42.337
+E no final aqui eu posso dar return é,
+
+40
+00:02:42.337 --> 00:02:46.570
+esse totalAmount.
+
+41
+00:02:46.570 --> 00:02:50.248
+Dá para dar uma melhorada aqui não é?
+
+42
+00:02:50.248 --> 00:02:54.112
+Eu não precisaria de
+criar esse thisAmount,
+
+43
+00:02:54.112 --> 00:02:57.649
+é até uma refatoração que eu gosto
+bastante, que é o inline não é?
+
+44
+00:02:57.649 --> 00:03:05.090
+Por exemplo, se eu vier aqui e der inline,
+ele vai substituir o, pela implementação.
+
+45
+00:03:05.090 --> 00:03:08.130
+Olha, ele fez isso aqui sozinho,
+está vendo?
+
+46
+00:03:08.130 --> 00:03:11.650
+O Eclipse, às vezes, é esperto,
+às vezes ele é esperto está?
+
+47
+00:03:11.650 --> 00:03:18.861
+Então aqui eu já posso tirar as coisas
+referentes ao cálculo do total, não é?
+
+48
+00:03:18.861 --> 00:03:22.550
+Então aqui eu posso excluir,
+eu posso excluir isso daqui.
+
+49
+00:03:22.550 --> 00:03:28.988
+E aqui, ao invés do totalAmount,
+
+50
+00:03:28.988 --> 00:03:34.405
+eu dou getTotalAmount.
+
+51
+00:03:34.405 --> 00:03:35.443
+Certo.
+
+52
+00:03:35.443 --> 00:03:41.125
+Aí aqui, se eu for olhar,
+ele também pega esse thisAmount.
+
+53
+00:03:41.125 --> 00:03:42.457
+Ele usa isso onde?
+
+54
+00:03:42.457 --> 00:03:43.710
+Só aqui baixo.
+
+55
+00:03:43.710 --> 00:03:48.963
+Eu também posso vir aqui e dar inline,
+está?
+
+56
+00:03:48.963 --> 00:03:55.047
+Então ele vai substituir onde tem o
+thisAmount por each ponto getAmount, está?
+
+57
+00:03:55.047 --> 00:03:57.961
+Dá para tirar esses
+comentários aqui não é?
+
+58
+00:03:57.961 --> 00:04:00.730
+O método já dá para entender melhor não é?
+
+59
+00:04:00.730 --> 00:04:07.999
+Bom, vou fazer a mesma coisa agora
+para os frequentRenterPoints está?
+
+60
+00:04:07.999 --> 00:04:14.343
+Então também vou começar a criar
+aqui na mão mesmo não é?
+
+61
+00:04:14.343 --> 00:04:20.410
+Então getTotalFrequentRenterPoints
+
+62
+00:04:20.410 --> 00:04:25.457
+e vou também copiar todo esse
+
+63
+00:04:25.457 --> 00:04:30.149
+pedaço aqui que pode ter
+alguma coisa a ver com isso.
+
+64
+00:04:30.149 --> 00:04:33.037
+E aí eu vou excluir as
+linhas que não tem a ver,
+
+65
+00:04:33.037 --> 00:04:38.472
+que é essa aqui que imprime e essa
+daqui também que imprime certo?
+
+66
+00:04:38.472 --> 00:04:45.100
+Então ele vai dar return
+frequentRenterPoints aqui.
+
+67
+00:04:45.100 --> 00:04:49.220
+[SEM_ÁUDIO] Certo.
+
+68
+00:04:49.220 --> 00:04:53.150
+E aqui também eu consigo
+já excluir algumas coisas.
+
+69
+00:04:53.150 --> 00:04:55.660
+O total de linhas de código não é?
+
+70
+00:04:55.660 --> 00:04:58.325
+Você pode perceber que ele não,
+por exemplo,
+
+71
+00:04:58.325 --> 00:05:01.836
+nesse método eu nem vou mexer
+mais com o frequentRenterPoints,
+
+72
+00:05:01.836 --> 00:05:06.700
+eu só vou imprimir o total ali está?
+
+73
+00:05:06.700 --> 00:05:11.840
+Então a gente pode ver aqui que essa,
+
+74
+00:05:11.840 --> 00:05:14.776
+esse método statement agora ele só,
+
+75
+00:05:14.776 --> 00:05:19.865
+só é responsável por essa parte
+de gerar o statement mesmo, está?
+
+76
+00:05:19.865 --> 00:05:21.996
+Opa, eu estou esquecendo de rodar o teste.
+
+77
+00:05:21.996 --> 00:05:25.870
+Deixa eu rodar aqui, antes que dê problema
+ali e eu não sei o que é que aconteceu.
+
+78
+00:05:25.870 --> 00:05:28.561
+ok, está?
+
+79
+00:05:28.561 --> 00:05:34.426
+Bom, aí pode vir o pessoal aí,
+que é muito preciosista relação
+
+80
+00:05:34.426 --> 00:05:39.904
+a desempenho e aí falar assim: Guerra,
+presta atenção no que você fez aí não é?
+
+81
+00:05:39.904 --> 00:05:45.764
+Você tinha ali loop, IO ali, aqui dentro
+do statement, onde você aproveitava para
+
+82
+00:05:45.764 --> 00:05:51.398
+calcular os frequentRenterPoints e você
+aproveitava para calcular o totalAmount.
+
+83
+00:05:51.398 --> 00:05:56.532
+Agora, você tem aqui loop,
+quando você chama o getTotalAmount
+
+84
+00:05:56.532 --> 00:06:02.530
+ele chama outro loop e quando você
+tem o total de frequentRenterPoints,
+
+85
+00:06:02.530 --> 00:06:05.630
+você ainda tem outro loop, está?
+
+86
+00:06:05.630 --> 00:06:07.519
+É, sim está?
+
+87
+00:06:07.519 --> 00:06:15.904
+Realmente muitas refatorações acabam
+piorando o desempenho do código está?
+
+88
+00:06:15.904 --> 00:06:19.087
+E aí eu chamo atenção para duas coisas.
+
+89
+00:06:19.087 --> 00:06:22.924
+A primeira coisa é que essa
+questão do desempenho,
+
+90
+00:06:22.924 --> 00:06:28.650
+você não pode ser aquele cara que reduzir
+o máximo desempenho do código, é, é, e
+
+91
+00:06:28.650 --> 00:06:33.292
+aí você vai gastar muito do seu tempo com
+uma coisa que talvez não agregue valor.
+
+92
+00:06:33.292 --> 00:06:36.139
+Então a primeira coisa que
+você tem que se perguntar
+
+93
+00:06:36.139 --> 00:06:39.767
+relação ao desempenho é: qual
+que é o requisito de desempenho?
+
+94
+00:06:39.767 --> 00:06:42.621
+Se, mesmo com aquela
+estrutura que não é ótima,
+
+95
+00:06:42.621 --> 00:06:45.356
+se mesmo assim atende ao
+requisito de desempenho.
+
+96
+00:06:45.356 --> 00:06:49.390
+Às vezes você está mexendo uma coisa
+que você vai ganhar 1 milissegundo,
+
+97
+00:06:49.390 --> 00:06:53.420
+enquanto você tem acesso
+a banco de dados que demora 50.
+
+98
+00:06:53.420 --> 00:06:58.509
+Então aquela otimização que você está
+fazendo, por mais que de repente sei
+
+99
+00:06:58.509 --> 00:07:04.095
+lá diminui pela metade o tempo daquele
+método, ela não vai ser significativa
+
+100
+00:07:04.095 --> 00:07:09.260
+termos de funcionalidade e para o cliente
+isso não vai fazer a menor diferença está?
+
+101
+00:07:09.260 --> 00:07:13.632
+Então, dito isso, o segundo ponto que
+eu queria falar é que muitas vezes
+
+102
+00:07:13.632 --> 00:07:18.230
+o código mais limpo e mais refatorado
+ele é muito mais fácil de você otimizar.
+
+103
+00:07:18.230 --> 00:07:22.522
+Vamos fazer isso aqui agora está?
+
+104
+00:07:22.522 --> 00:07:26.858
+Note que aqui eu tenho o
+frequentRenterPoints e o
+
+105
+00:07:26.858 --> 00:07:29.549
+getTotalAmount eles estão agora separados.
+
+106
+00:07:29.549 --> 00:07:31.067
+Com isso eu consigo o quê?
+
+107
+00:07:31.067 --> 00:07:34.334
+Eu consigo criar cash dessas informações.
+
+108
+00:07:34.334 --> 00:07:39.081
+Então eu posso vir aqui por
+exemplo e criar essas variáveis
+
+109
+00:07:39.081 --> 00:07:43.927
+aqui de frequentRenterPoints
+na minha classe, está?
+
+110
+00:07:43.927 --> 00:07:49.561
+Então eu vou colocar aqui
+private frequentRenterPoints e
+
+111
+00:07:49.561 --> 00:07:57.500
+eu posso vir aqui e colocar o totalAmount
+também como uma variável aqui, está?
+
+112
+00:07:57.500 --> 00:08:00.721
+Então o que é que eu posso fazer?
+
+113
+00:08:00.721 --> 00:08:07.209
+Toda a vez que eu adicionar, eu posso
+ao invés de calcular aquele total todas
+
+114
+00:08:07.209 --> 00:08:12.148
+as vezes, toda vez que eu adicionar uma
+locação, eu vou e já somo aquilo no total.
+
+115
+00:08:12.148 --> 00:08:16.206
+Então eu posso chamar quantas
+vezes eu quiser o getTotalAmount,
+
+116
+00:08:16.206 --> 00:08:19.967
+que ele não vai ficar
+repetindo esse cálculo está?
+
+117
+00:08:19.967 --> 00:08:23.135
+Então o que é que eu preciso fazer aqui?
+
+118
+00:08:23.135 --> 00:08:29.550
+Quando eu tenho é, é, é, quando eu
+adiciono elemento, eu vou vir aqui no meu,
+
+119
+00:08:29.550 --> 00:08:34.110
+eu vou até inicializar aqui,
+isso já estava pronto não é?
+
+120
+00:08:34.110 --> 00:08:36.931
+Mas eu vou arrumar direitinho está?
+
+121
+00:08:36.931 --> 00:08:41.571
+Então esse frequentRenterPoints aqui é,
+é, quando,
+
+122
+00:08:41.571 --> 00:08:45.030
+quando eu adicionar rental não é?
+
+123
+00:08:45.030 --> 00:08:48.262
+Eu vou vir aqui e vou somar isso não é?
+
+124
+00:08:48.262 --> 00:08:50.880
+Eu vou fazer essa linha aqui.
+
+125
+00:08:50.880 --> 00:08:54.040
+Eu vou passar essa linha aqui para cima,
+
+126
+00:08:54.040 --> 00:08:59.480
+e a mesma coisa aqui para o amount não é?
+
+127
+00:08:59.480 --> 00:09:02.750
+Eu também vou passar essa
+linha aqui para cima.
+
+128
+00:09:02.750 --> 00:09:06.248
+Só que aqui não vai ser mais o each não é?
+
+129
+00:09:06.248 --> 00:09:11.410
+Vai ser esse, está chamando de arg aqui,
+eu vou chamar de rental.
+
+130
+00:09:11.410 --> 00:09:18.390
+Para você ver como é que o código estava
+ruim, ele tinha uma variável chamada arg.
+
+131
+00:09:18.390 --> 00:09:23.440
+Quando eu vejo uma variável chamada arg,
+eu penso assim: argh.
+
+132
+00:09:23.440 --> 00:09:25.718
+Vamos lá.
+
+133
+00:09:25.718 --> 00:09:29.184
+Passei para cá, está?
+
+134
+00:09:29.184 --> 00:09:32.474
+Então agora eu estou fazendo cálculo,
+
+135
+00:09:32.474 --> 00:09:37.119
+eu estou meio que criando
+cash dessas informações está?
+
+136
+00:09:37.119 --> 00:09:40.451
+E agora o meu
+getTotalFrequentRenterPoints,
+
+137
+00:09:40.451 --> 00:09:45.383
+eu vou apagar isso tudo aqui e ele vai
+simplesmente retornar o que eu estou
+
+138
+00:09:45.383 --> 00:09:48.153
+guardando naquela variável, não é?
+
+139
+00:09:48.153 --> 00:09:50.925
+Nesse caso, eu estou é, é,
+
+140
+00:09:50.925 --> 00:09:55.578
+eu estou aqui no momento que
+eu adiciono uma nova locação,
+
+141
+00:09:55.578 --> 00:10:00.830
+ele já pega aqueles valores e já
+soma aí nessas variáveis está?
+
+142
+00:10:00.830 --> 00:10:04.836
+Então eu vou salvar, vou rodar, opa!
+
+143
+00:10:04.836 --> 00:10:08.687
+Pode pôr como unit test aqui está?
+
+144
+00:10:08.687 --> 00:10:10.996
+Ele roda e continua funcionando.
+
+145
+00:10:10.996 --> 00:10:14.298
+Olha a quantidade de código
+que eu tirei ali não é?
+
+146
+00:10:14.298 --> 00:10:21.443
+Aí você falou assim: quando você refatorou
+você tornou o código menos eficiente.
+
+147
+00:10:21.443 --> 00:10:28.143
+Mas justamente por ter refatorado é que
+eu tive a facilidade de criar esse cash.
+
+148
+00:10:28.143 --> 00:10:33.026
+Fazer isso enquanto estava lá no meio
+do statement teria sido bem mais
+
+149
+00:10:33.026 --> 00:10:34.366
+complicado está?
+
+150
+00:10:34.366 --> 00:10:37.477
+Então esse aqui é o nosso
+código final não é?
+
+151
+00:10:37.477 --> 00:10:38.749
+Da refatoração.
+
+152
+00:10:38.749 --> 00:10:44.270
+Espero que com essa, com essa sequência
+de vídeos você tenha visto como que é,
+
+153
+00:10:44.270 --> 00:10:46.854
+funciona essa questão da refatoração,
+
+154
+00:10:46.854 --> 00:10:50.635
+da importância dos testes
+para te dar segurança, está?
+
+155
+00:10:50.635 --> 00:10:56.871
+Felizmente aqui eu não quebrei nenhum
+teste durante a refatoração, mas é,
+
+156
+00:10:56.871 --> 00:11:02.104
+é, eu já fiz esse exercício outras vezes
+e já quebrei acidentalmente algum teste,
+
+157
+00:11:02.104 --> 00:11:07.804
+alguma coisinha que eu acabei deixando
+errado, ali pelo meio do caminho está?
+
+158
+00:11:07.804 --> 00:11:13.070
+Então ver essa dinâmica dos
+testes dentro da refatoração,
+
+159
+00:11:13.070 --> 00:11:18.035
+essa ideia de fazer pequenos
+passos e você ir rodando testes,
+
+160
+00:11:18.035 --> 00:11:21.385
+muitas vezes não é fácil,
+você sabe aonde você que chegar,
+
+161
+00:11:21.385 --> 00:11:25.157
+mas você não sabe exatamente quais
+passos que você precisa não é?
+
+162
+00:11:25.157 --> 00:11:29.816
+E a gente vai de pouquinho pouquinho
+melhorando o código e a gente pode ver
+
+163
+00:11:29.816 --> 00:11:35.058
+realmente, que era código bem mais
+complicado e a gente conseguiu é,
+
+164
+00:11:35.058 --> 00:11:38.948
+é, a partir da refatoração
+ir melhorando ele não é?
+
+165
+00:11:38.948 --> 00:11:42.519
+E até chegamos aqui num design,
+criamos subclasses,
+
+166
+00:11:42.519 --> 00:11:45.313
+começamos a utilizar polimorfismo não é?
+
+167
+00:11:45.313 --> 00:11:49.877
+Podemos até terminar aqui
+otimizando o desempemho está?
+
+168
+00:11:49.877 --> 00:11:55.342
+Último disclaimer aqui é que, se você
+pegar o livro do Martin Fowler, onde tem
+
+169
+00:11:55.342 --> 00:12:01.310
+essa refatoração, você vai ver que ele fez
+as coisas pouco diferente das que eu fiz.
+
+170
+00:12:01.310 --> 00:12:05.881
+Então, recomendo você a dar uma
+olhada lá para você ver que
+
+171
+00:12:05.881 --> 00:12:10.336
+não existe só uma solução para
+esse tipo de problema, está certo?
+
+172
+00:12:10.336 --> 00:12:12.184
+Muito obrigado por assistir,
+
+173
+00:12:12.184 --> 00:12:17.204
+espero que tenha enriquecido o
+conhecimento de refatoração de vocês.
+
+174
+00:12:17.204 --> 00:12:18.520
+Muito obrigado!
+
+175
+00:12:18.520 --> 00:12:24.150
+[MÚSICA]

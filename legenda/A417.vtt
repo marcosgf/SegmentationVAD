@@ -1,0 +1,436 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.258
+[MUSICA] [MUSICA]
+
+2
+00:00:08.258 --> 00:00:13.227
+Estamos aqui com a última
+parte do nosso hands
+
+3
+00:00:13.227 --> 00:00:17.072
+on de TDD,
+onde a gente está desenvolvendo tradutor.
+
+4
+00:00:17.072 --> 00:00:21.303
+A gente fez aqui uma lista de requisitos
+só que a gente percebeu que tinha
+
+5
+00:00:21.303 --> 00:00:25.901
+requisito a mais, que tinha cenário a mais
+que a gente não estava considerando,
+
+6
+00:00:25.901 --> 00:00:29.776
+que era a tradução da frase com as
+duas traduções para a mesma palavra.
+
+7
+00:00:29.776 --> 00:00:32.997
+Então, eu adicionei aqui
+mais item na nossa lista,
+
+8
+00:00:32.997 --> 00:00:35.880
+isso é bem comum quando
+a gente está fazendo TDD.
+
+9
+00:00:35.880 --> 00:00:39.800
+A gente vislumbra ali uma série de
+cenários e à medida que a gente vai
+
+10
+00:00:39.800 --> 00:00:44.881
+desenvolvendo, a gente vai percebendo
+que existem cenários que talvez
+
+11
+00:00:44.881 --> 00:00:50.040
+são importantes e não estão
+incluidos naquela lista inicial,
+
+12
+00:00:50.040 --> 00:00:54.680
+e aí a gente vai acrescentando,
+a gente pode até escolher botar ele no
+
+13
+00:00:54.680 --> 00:00:59.519
+final da lista, querer fazer ele agora
+ou deixar ele para fazer depois.
+
+14
+00:00:59.519 --> 00:01:03.649
+No nosso caso aqui a gente já tinha
+terminado o que a gente tinha previsto,
+
+15
+00:01:03.649 --> 00:01:06.540
+adicionamos ali novo requisito,
+então vamos fazer ele.
+
+16
+00:01:06.540 --> 00:01:11.400
+Para isso precisamos do nosso
+chapéu vermelho, certo?
+
+17
+00:01:11.400 --> 00:01:14.515
+Para podermos fazer os testes.
+
+18
+00:01:14.515 --> 00:01:21.384
+Então, o que eu vou fazer aqui,
+vai ser colocar
+
+19
+00:01:21.384 --> 00:01:26.191
+novo teste onde eu vou colocar aqui,
+
+20
+00:01:26.191 --> 00:01:32.990
+traduzirFraseCom
+DuasTraducoesMesmaPalavra.
+
+21
+00:01:32.990 --> 00:01:38.482
+[SEM_ÁUDIO] Então eu vou me inspirar aqui,
+
+22
+00:01:38.482 --> 00:01:45.545
+eu vou colocar aqui, peace [SEM_ÁUDIO]
+
+23
+00:01:45.545 --> 00:01:50.662
+[SEM_ÁUDIO] é paz, é,
+
+24
+00:01:50.662 --> 00:01:56.880
+e ai eu copiar aqui essas traduções aqui,
+
+25
+00:01:56.880 --> 00:02:05.326
+ele vai colocar aqui bom
+como good e como nice.
+
+26
+00:02:05.326 --> 00:02:10.672
+Então a gente vai traduzir aqui, paz
+
+27
+00:02:10.672 --> 00:02:15.885
+é bom e aí ele vai ter que traduzir,
+no caso eu vou
+
+28
+00:02:15.885 --> 00:02:21.616
+considerar que ele sempre vai usar
+a primeria tradução, que é o peace.
+
+29
+00:02:21.616 --> 00:02:28.900
+Não é assim não, [RISOS] is good,
+
+30
+00:02:28.900 --> 00:02:33.890
+[SEM_ÁUDIO] certo?
+
+31
+00:02:33.890 --> 00:02:38.195
+Então vamos lá, repara meu inglês não,
+
+32
+00:02:38.195 --> 00:02:44.370
+que eu não sou professor de inglês,
+[RISOS] então roda aqui.
+
+33
+00:02:44.370 --> 00:02:48.490
+Então ele falhou,
+vamos ver no que é que ele falhou aqui.
+
+34
+00:02:48.490 --> 00:02:51.494
+Então, ele está botando good vírgula nice,
+
+35
+00:02:51.494 --> 00:02:54.745
+que é o que ele retorna ali na tradução,
+certo?
+
+36
+00:02:54.745 --> 00:02:57.737
+Então o que é que a gente vai fazer aqui?
+
+37
+00:02:57.737 --> 00:02:59.098
+Deixa eu pensar.
+
+38
+00:02:59.098 --> 00:03:04.571
+Bom, eu poderia ir para aquela
+solução de fazer aquele
+
+39
+00:03:04.571 --> 00:03:09.153
+mapa de lista,
+mas eu acho que não é necessário,
+
+40
+00:03:09.153 --> 00:03:14.592
+eu acho que eu consigo pegar ali
+a string e até a vírgula, né,
+
+41
+00:03:14.592 --> 00:03:19.797
+então, o que é que eu vou fazer aqui,
+eu vou pegar aqui a minha tradução e
+
+42
+00:03:19.797 --> 00:03:25.881
+vou fazer aqui igual
+
+43
+00:03:25.881 --> 00:03:31.570
+a traducao ponto
+
+44
+00:03:31.570 --> 00:03:37.253
+substring e ele
+
+45
+00:03:37.253 --> 00:03:43.216
+vai de 0 até o traducao,
+
+46
+00:03:43.216 --> 00:03:49.570
+ponto, o lugar que tem o ponto
+e vírgula que é o indexOf.
+
+47
+00:03:49.570 --> 00:03:53.740
+O ponto e vírgula não, a vírgula.
+
+48
+00:03:53.740 --> 00:03:58.550
+Então ele vai ali até a vírgula,
+ficou a mais aqui, será que vai dar certo?
+
+49
+00:03:58.550 --> 00:04:03.015
+Não sei,
+vamos rodar o teste e ver se funciona.
+
+50
+00:04:03.015 --> 00:04:04.317
+Torce, torce!
+
+51
+00:04:04.317 --> 00:04:07.480
+Deu errado, vamos ver o que deu errado.
+
+52
+00:04:07.480 --> 00:04:10.280
+O traduzir frase aqui já deu errado aqui,
+
+53
+00:04:10.280 --> 00:04:15.290
+já deu StringindexOutOfBoundsException.
+
+54
+00:04:15.290 --> 00:04:15.990
+Opa!
+
+55
+00:04:15.990 --> 00:04:19.019
+O que é que está acontecendo aqui?
+
+56
+00:04:19.019 --> 00:04:23.482
+E esse daqui o que é que
+foi que deu errado aqui?
+
+57
+00:04:23.482 --> 00:04:28.170
+Ele está dando errado nos outros,
+eu vou fazer isso aqui,
+
+58
+00:04:28.170 --> 00:04:33.832
+então, eu vou fazer aqui
+isso só se a traducao,
+
+59
+00:04:33.832 --> 00:04:36.960
+ela tem uma vírgula não é?
+
+60
+00:04:36.960 --> 00:04:43.262
+traducao contains a vírgula,
+
+61
+00:04:43.262 --> 00:04:49.010
+então se a traducao tem uma
+vírgula eu vou fazer isso aqui.
+
+62
+00:04:49.010 --> 00:04:51.035
+Será que vai dar certo agora?
+
+63
+00:04:51.035 --> 00:04:52.574
+Vamos rodar para ver.
+
+64
+00:04:52.574 --> 00:04:55.180
+Ainda bem que a gente tem o teste não é?
+
+65
+00:04:55.180 --> 00:04:58.170
+A gente roda aqui e aí?
+
+66
+00:04:58.170 --> 00:05:01.820
+Agora passou, tudo funcionou!
+
+67
+00:05:01.820 --> 00:05:04.267
+Beleza, conseguimos cumprir aqui.
+
+68
+00:05:04.267 --> 00:05:10.043
+Ai meu Deus do céu, eu estava com chapéu
+errado, finge que eu estava com o verde.
+
+69
+00:05:10.043 --> 00:05:16.070
+Eu vou vir aqui, e vou dar o ok aqui,
+para traduzir a frase.
+
+70
+00:05:16.070 --> 00:05:21.110
+Então, mas calma, calma que eu ainda
+tenho meu chapéu azul de refatoração,
+
+71
+00:05:21.110 --> 00:05:29.038
+eu não gostei disso daqui ficar dentro
+desse método de traduzir frases.
+
+72
+00:05:29.038 --> 00:05:33.540
+Então eu vou vir aqui,
+vou dar Extract Method,
+
+73
+00:05:33.540 --> 00:05:38.932
+eu vou chamar esse método
+
+74
+00:05:38.932 --> 00:05:42.990
+de primeiraTraducao.
+
+75
+00:05:42.990 --> 00:05:48.011
+Então, ele pega ali a primeira tradução
+
+76
+00:05:48.011 --> 00:05:52.393
+da palavra,
+será que ele continua funcionando?
+
+77
+00:05:52.393 --> 00:05:55.230
+Acho que assim ficou mais claro, né?
+
+78
+00:05:55.230 --> 00:06:00.600
+Então, ele roda aqui, depois se eu
+alterar como eu guardo as palavras,
+
+79
+00:06:00.600 --> 00:06:06.258
+ele vai continuar, é só eu alterar esse
+método aqui sem ter que mudar por exemplo,
+
+80
+00:06:06.258 --> 00:06:08.310
+a tradução da frase inteira.
+
+81
+00:06:08.310 --> 00:06:10.908
+Então, continuou funcionando.
+
+82
+00:06:10.908 --> 00:06:16.906
+A princípio esse método está privado, de
+repente até faria sentido eu querer deixar
+
+83
+00:06:16.906 --> 00:06:21.340
+esse método da primeiraTradução como
+método público para outras pessoas usarem,
+
+84
+00:06:21.340 --> 00:06:23.366
+mas como eu não tenho esse requisito,
+
+85
+00:06:23.366 --> 00:06:26.964
+a princípio ele vai ficar como
+método privado mesmo, está certo?
+
+86
+00:06:26.964 --> 00:06:32.320
+Então é isso, esse foi o nosso hands on do
+TDD, que a gente fez aqui a implementação
+
+87
+00:06:32.320 --> 00:06:38.120
+aqui de tradutor, que traduz
+quase com muitas traduções e etc.
+
+88
+00:06:38.120 --> 00:06:41.228
+Vimos aqui o nosso chapéu de TDD,
+
+89
+00:06:41.228 --> 00:06:44.210
+o vermelho quando a gente
+está criando teste,
+
+90
+00:06:44.210 --> 00:06:48.045
+o verde quando a gente está implementando
+e o azul quando a gente está refatorando.
+
+91
+00:06:48.045 --> 00:06:49.713
+Dei uma escorregada no final,
+
+92
+00:06:49.713 --> 00:06:54.282
+onde eu esqueci de botar o verde aqui na
+hora de implementar, mas espero que vocês
+
+93
+00:06:54.282 --> 00:06:59.042
+tenham entendido esses diferentes
+momentos do TDD na prática, certo?
+
+94
+00:06:59.042 --> 00:07:00.220
+Muito obrigado!
+
+95
+00:07:00.220 --> 00:07:05.572
+Continuem assistindo o nosso curso.
+
+96
+00:07:05.572 --> 00:07:07.250
+[MÚSICA]

@@ -1,0 +1,759 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.681
+[MÚSICA] Após esse vídeo,
+
+2
+00:00:08.681 --> 00:00:13.315
+dada a função de transferência
+malha aberta do sistema,
+
+3
+00:00:13.315 --> 00:00:17.586
+você será capaz de obter a função
+de transferência malha fechada.
+
+4
+00:00:17.586 --> 00:00:22.140
+Você também será capaz de explicar as
+vantagens do controle com realimentação.
+
+5
+00:00:22.140 --> 00:00:26.290
+Primeiro vamos facilitar
+pouco a nossa vida.
+
+6
+00:00:26.290 --> 00:00:30.229
+Como nesse curso só falamos
+da BIBO estabilidade,
+
+7
+00:00:30.229 --> 00:00:35.676
+daqui diante eu vou me referir à BIBO
+estabilidade apenas como estabilidade.
+
+8
+00:00:35.676 --> 00:00:40.750
+Outros cursos você poderá trabalhar
+com diferentes tipos de estabilidade.
+
+9
+00:00:40.750 --> 00:00:45.550
+Então quando eu disser que
+sistema é estável ou instável,
+
+10
+00:00:45.550 --> 00:00:50.350
+eu estou querendo dizer que ele
+é BIBO estável ou BIBO instável.
+
+11
+00:00:50.350 --> 00:00:54.417
+De vez quando,
+eu posso até usar BIBO aqui ou BIBO ali,
+
+12
+00:00:54.417 --> 00:00:58.350
+só para lembrar que estamos
+falando da BIBO estabilidade.
+
+13
+00:00:58.350 --> 00:00:59.573
+Muito bem!
+
+14
+00:00:59.573 --> 00:01:04.503
+Você já sabe o que é sistema,
+como obter a função de
+
+15
+00:01:04.503 --> 00:01:09.791
+transferência de sistema e já sabe como
+verificar a estabilidade de sistema e sabe
+
+16
+00:01:09.791 --> 00:01:15.124
+também que o controle pode ser realizado
+malha aberta ou malha fechada.
+
+17
+00:01:15.124 --> 00:01:18.490
+Vamos ver as vantagens do
+controle malha fechada.
+
+18
+00:01:18.490 --> 00:01:22.087
+Mas primeiro vamos ver como
+obter a função de transferência
+
+19
+00:01:22.087 --> 00:01:26.040
+malha fechada a partir da função
+de transferência malha aberta.
+
+20
+00:01:26.040 --> 00:01:29.877
+Aqui temos nosso sistema
+malha fechada representado
+
+21
+00:01:29.877 --> 00:01:32.940
+diagrama de blocos no
+domínio transformado.
+
+22
+00:01:32.940 --> 00:01:38.850
+A função de transferência do sistema
+é G(s) e o controlador será ganho k.
+
+23
+00:01:38.850 --> 00:01:42.928
+G(s) é a razão entre Y(s) e U(s),
+
+24
+00:01:42.928 --> 00:01:47.865
+mas agora queremos a razão
+entre Y(s) e R(s),
+
+25
+00:01:47.865 --> 00:01:52.529
+assim poderemos obter
+facilmente a transformada da
+
+26
+00:01:52.529 --> 00:01:56.690
+saída Y(s) para diferentes
+sinais de referência e também
+
+27
+00:01:56.690 --> 00:02:00.840
+poderemos avaliar a estabilidade
+do sistema malha fechada.
+
+28
+00:02:00.840 --> 00:02:05.960
+Vamos então tentar escrever
+Y(s) função de R(s)
+
+29
+00:02:05.960 --> 00:02:11.080
+e então poderemos escrever
+a razão Y(s) sobre R(s).
+
+30
+00:02:11.080 --> 00:02:15.700
+Podemos escrever U(s)
+igual a k vezes E(s) e
+
+31
+00:02:15.700 --> 00:02:20.040
+Y(s) igual a G(s) vezes U(s).
+
+32
+00:02:20.040 --> 00:02:25.735
+E então temos: Y(s) igual
+a G(s) vezes k vezes E(s)
+
+33
+00:02:25.735 --> 00:02:31.430
+e E(s) nada mais é do que R(s) menos Y(s).
+
+34
+00:02:31.430 --> 00:02:36.555
+Substituindo E(s) na
+equação de Y(s) obtemos:
+
+35
+00:02:36.555 --> 00:02:41.680
+Y(s) igual a k G(s) vezes R menos Y.
+
+36
+00:02:41.680 --> 00:02:46.115
+E fazendo a multiplicação chegamos a Y
+
+37
+00:02:46.115 --> 00:02:50.550
+igual a k G R menos k G Y.
+
+38
+00:02:50.550 --> 00:02:55.785
+Passamos o termo com Y para
+a esquerda da igualdade e colocamos Y
+
+39
+00:02:55.785 --> 00:03:02.580
+evidência e finalmente podemos
+escrever a razão entre Y(s) e R(s).
+
+40
+00:03:02.580 --> 00:03:07.440
+Se escrevermos a função de
+transferência malha aberta como a razão
+
+41
+00:03:07.440 --> 00:03:11.575
+de dois polinômios, N de G(s) e D(G(s)),
+
+42
+00:03:11.575 --> 00:03:16.333
+podemos escrever a função de
+transferência malha fechada função
+
+43
+00:03:16.333 --> 00:03:21.424
+desses mesmos polinômios e a razão
+Y sobre R pode ser escrita
+
+44
+00:03:21.424 --> 00:03:26.040
+como k numerador sobre
+denominador mais k numerador.
+
+45
+00:03:26.040 --> 00:03:31.725
+A função de transferência malha
+fechada comumente é denotada por T(s).
+
+46
+00:03:31.725 --> 00:03:37.112
+Então temos: T(s) igual a k G sobre 1 mais
+
+47
+00:03:37.112 --> 00:03:42.140
+k G ou k numerador sobre
+denominador mais k numerador.
+
+48
+00:03:42.140 --> 00:03:48.010
+E podemos representar o sistema pela
+função de transferência malha fechada.
+
+49
+00:03:48.010 --> 00:03:48.862
+Muito bem.
+
+50
+00:03:48.862 --> 00:03:53.209
+Agora que você já sabe como
+obter a função de transferência
+
+51
+00:03:53.209 --> 00:03:57.098
+malha fechada a partir da função
+de transferência malha aberta,
+
+52
+00:03:57.098 --> 00:04:00.640
+podemos falar sobre as vantagens
+do controle com realimentação.
+
+53
+00:04:00.640 --> 00:04:04.441
+Com realimentação e controle proporcional,
+
+54
+00:04:04.441 --> 00:04:10.090
+podemos tornar sistema instável
+malha aberta estável malha fechada,
+
+55
+00:04:10.090 --> 00:04:14.100
+mas isso não vale para todos os sistemas,
+apenas para alguns.
+
+56
+00:04:14.100 --> 00:04:17.620
+O mesmo não acontece com
+o controle malha aberta.
+
+57
+00:04:17.620 --> 00:04:25.090
+Vamos ver exemplo simples: a função de
+transferência malha aberta é 1 / (s- 1),
+
+58
+00:04:25.090 --> 00:04:31.320
+malha fechada temos T(s)
+igual a k / (s- 1 + k).
+
+59
+00:04:31.320 --> 00:04:38.369
+Assim para k maior que 1, por exemplo,
+2 o sistema malha fechada é estável.
+
+60
+00:04:38.369 --> 00:04:41.838
+Malha aberta o ganho
+altera apenas o numerador,
+
+61
+00:04:41.838 --> 00:04:45.320
+não alterando assim
+a estabilidade do sistema.
+
+62
+00:04:45.320 --> 00:04:51.329
+Note no entanto que se a função
+de transferência malha aberta for
+
+63
+00:04:51.329 --> 00:04:54.440
+1 / (s ao quadrado- 2s- 2),
+
+64
+00:04:54.440 --> 00:04:59.780
+o sistema malha fechada continuará
+instável para qualquer valor de ganho k.
+
+65
+00:04:59.780 --> 00:05:02.937
+Verifique usando o Routh-Hurwitz.
+
+66
+00:05:02.937 --> 00:05:08.265
+Mas podemos estabilizar este sistema
+usando controladores mais elaborados,
+
+67
+00:05:08.265 --> 00:05:10.250
+o que é assunto de outros cursos.
+
+68
+00:05:10.250 --> 00:05:14.996
+Por enquanto é suficiente você
+saber que a realimentação é capaz
+
+69
+00:05:14.996 --> 00:05:18.840
+de estabilizar alguns sistemas
+instáveis malha aberta.
+
+70
+00:05:18.840 --> 00:05:23.771
+Outra vantagem da realimentação é
+que com ela o sistema fica menos
+
+71
+00:05:23.771 --> 00:05:28.547
+sensível a variações ou erros de
+modelagem no sistema e a variações
+
+72
+00:05:28.547 --> 00:05:33.200
+ou erros de implementação no controlador,
+no nosso caso no ganho.
+
+73
+00:05:33.200 --> 00:05:36.708
+Vamos comparar o controle
+malha aberta e o controle
+
+74
+00:05:36.708 --> 00:05:39.930
+malha fechada na presença
+de erro de modelagem.
+
+75
+00:05:39.930 --> 00:05:41.985
+Para facilitar os cálculos,
+
+76
+00:05:41.985 --> 00:05:48.200
+mas sem perder a representatividade do
+exemplo vamos fazer G(s) igual a ganho A.
+
+77
+00:05:48.200 --> 00:05:54.828
+Malha aberta a transformada
+da saída é k x A x R(s).
+
+78
+00:05:54.828 --> 00:06:02.520
+Malha fechada a transformada da saída
+é (k x A / (1 + k x A )) x R(s).
+
+79
+00:06:02.520 --> 00:06:07.518
+Vamos considerar agora que o
+valor correto seja A mais B.
+
+80
+00:06:07.518 --> 00:06:15.120
+Malha aberta temos: Y real de
+s igual a k x (A + B) x R(s).
+
+81
+00:06:15.120 --> 00:06:19.700
+E malha fechada temos
+Y real de s igual a k
+
+82
+00:06:19.700 --> 00:06:24.040
+x (A + B) / (1 + k x (A + B) x R(s).
+
+83
+00:06:24.040 --> 00:06:28.985
+E agora vamos comparar
+a saída nominal considerando
+
+84
+00:06:28.985 --> 00:06:34.141
+apenas A com a saída real,
+considerando A mais B nos 2 casos.
+
+85
+00:06:34.141 --> 00:06:38.593
+Malha aberta a saída real
+menos a saída nominal que
+
+86
+00:06:38.593 --> 00:06:42.753
+seria o erro fica k
+vezes B vezes a entrada.
+
+87
+00:06:42.753 --> 00:06:48.570
+Malha fechada a expressão para o erro fica
+pouco mais complicada, mas nem tanto.
+
+88
+00:06:48.570 --> 00:06:54.242
+Para facilitar a comparação,
+vamos analisar o erro relativo,
+
+89
+00:06:54.242 --> 00:06:57.326
+ou seja, o erro sobre o valor real.
+
+90
+00:06:57.326 --> 00:07:02.294
+Malha aberta o erro
+relativo é B / (A + B).
+
+91
+00:07:02.294 --> 00:07:09.500
+Malha fechada o erro relativo
+é B / (1 + k A) (A + B).
+
+92
+00:07:09.500 --> 00:07:14.810
+Podemos ver que o erro malha
+fechada é o erro malha aberta
+
+93
+00:07:14.810 --> 00:07:19.981
+multiplicado por fator 1 sobre 1
+mais k A e se k A for maior que 0,
+
+94
+00:07:19.981 --> 00:07:24.690
+o erro malha fechada será
+menor que o erro malha aberta.
+
+95
+00:07:24.690 --> 00:07:29.990
+Vamos considerar por exemplo que
+o erro no modelo seja de 20%,
+
+96
+00:07:29.990 --> 00:07:34.731
+isto é,
+B é igual a 0,2 vezes A e vamos considerar
+
+97
+00:07:34.731 --> 00:07:39.850
+também que k vezes A tenha valor 10,
+que é valor bem razoável.
+
+98
+00:07:39.850 --> 00:07:44.813
+Nesse caso erro de 20%
+no modelo leva a erro
+
+99
+00:07:44.813 --> 00:07:47.688
+de 17% no cálculo da saída malha aberta.
+
+100
+00:07:47.688 --> 00:07:53.690
+Mas se o sistema estiver malha fechada,
+o erro será de apenas 1,5%.
+
+101
+00:07:53.690 --> 00:07:58.820
+Se ao invés de 10 k
+vezes A fosse apenas 2,
+
+102
+00:07:58.820 --> 00:08:03.290
+o erro relativo malha
+fechada seria de 5,6%.
+
+103
+00:08:03.290 --> 00:08:07.760
+Ainda consideravelmente menor
+do que o erro malha aberta.
+
+104
+00:08:07.760 --> 00:08:12.238
+Observe que malha fechada podemos diminuir
+
+105
+00:08:12.238 --> 00:08:16.950
+a sensibilidade do sistema a erros no
+modelo, aumentando o ganho do controlador.
+
+106
+00:08:16.950 --> 00:08:18.870
+Quanto maior o valor de k,
+
+107
+00:08:18.870 --> 00:08:23.680
+menor será o efeito dos erros de
+modelagem na estimação da saída.
+
+108
+00:08:23.680 --> 00:08:27.320
+Você pode fazer a mesma
+análise considerando
+
+109
+00:08:27.320 --> 00:08:29.870
+erro na implementação do ganho.
+
+110
+00:08:29.870 --> 00:08:32.802
+Suponha que você queira usar ganho k,
+
+111
+00:08:32.802 --> 00:08:37.040
+mas por erro de implementação
+o ganho real seja k mais q.
+
+112
+00:08:37.040 --> 00:08:41.670
+Vamos considerar agora o
+efeito da perturbação.
+
+113
+00:08:41.670 --> 00:08:47.296
+Para isso precisamos alterar o diagrama
+de blocos para acrescentar esse efeito.
+
+114
+00:08:47.296 --> 00:08:49.670
+Eu já tinha citado a perturbação.
+
+115
+00:08:49.670 --> 00:08:53.389
+Ela representa as entradas não
+manipuladas, como rajadas de
+
+116
+00:08:53.389 --> 00:08:58.120
+vento no caso de uma aeronave ou
+a temperatura ambiente no caso de forno.
+
+117
+00:08:58.120 --> 00:09:04.746
+A entrada do sistema é então
+a soma da perturbação representada
+
+118
+00:09:04.746 --> 00:09:10.477
+por N com a saída do controlador,
+que no nosso caso é ganho simples.
+
+119
+00:09:10.477 --> 00:09:15.159
+Novamente para facilitar os cálculos
+mas sem prejudicar a nossa análise,
+
+120
+00:09:15.159 --> 00:09:17.430
+G(s) será simplesmente ganho A.
+
+121
+00:09:17.430 --> 00:09:22.555
+As saídas nominais são as mesmas
+calculadas anteriormente,
+
+122
+00:09:22.555 --> 00:09:27.680
+basta considerar N(s) igual a 0 e
+temos o caso nominal sem perturbação.
+
+123
+00:09:27.680 --> 00:09:32.577
+Então vamos apenas copiar as saídas
+nominais malha aberta e malha
+
+124
+00:09:32.577 --> 00:09:37.910
+fechada e agora vamos calcular as saídas
+reais com a presença da perturbação.
+
+125
+00:09:37.910 --> 00:09:41.722
+Para a malha aberta o cálculo
+da saída real é bem simples,
+
+126
+00:09:41.722 --> 00:09:44.590
+basta adicionar o efeito da perturbação.
+
+127
+00:09:44.590 --> 00:09:49.435
+Para a malha fechada vamos calcular
+a saída real passo a passo.
+
+128
+00:09:49.435 --> 00:09:54.537
+Primeiro escrevemos G(s),
+seguida U(s) função
+
+129
+00:09:54.537 --> 00:09:59.030
+de E e de N e substituímos
+E(s) que já temos.
+
+130
+00:09:59.030 --> 00:10:04.348
+Finalmente podemos escrever
+Y(s) como A vezes U(s)
+
+131
+00:10:04.348 --> 00:10:10.350
+que acabamos de obter e podemos
+escrever Y(s) função de R e N.
+
+132
+00:10:10.350 --> 00:10:15.399
+E agora podemos escrever a variação
+da saída devido à perturbação
+
+133
+00:10:15.399 --> 00:10:18.093
+malha aberta e malha fechada.
+
+134
+00:10:18.093 --> 00:10:23.454
+Malha aberta a variação da saída
+é A vezes a perturbação e malha
+
+135
+00:10:23.454 --> 00:10:28.595
+fechada a variação é 1 / (1 + k
+A) vezes a variação malha aberta.
+
+136
+00:10:28.595 --> 00:10:33.786
+Novamente para k A maior que 0 o
+efeito da perturbação é menor malha
+
+137
+00:10:33.786 --> 00:10:39.530
+fechada e quanto maior o valor do ganho,
+menor é o efeito da perturbação na saída.
+
+138
+00:10:39.530 --> 00:10:44.640
+Já malha aberta não conseguimos alterar
+o efeito da perturbação na saída.
+
+139
+00:10:44.640 --> 00:10:48.036
+As vantagens do controle malha fechada,
+
+140
+00:10:48.036 --> 00:10:53.428
+também chamado de controle com
+realimentação, são então a possibilidade
+
+141
+00:10:53.428 --> 00:10:57.886
+de estabilizar sistema instável malha
+aberta, a redução dos efeitos de erros de
+
+142
+00:10:57.886 --> 00:11:01.860
+modelagem e implementação e
+a redução do efeito de perturbações.
+
+143
+00:11:01.860 --> 00:11:05.880
+Então por que não usamos sempre
+o controle de realimentação?
+
+144
+00:11:05.880 --> 00:11:09.782
+Simples, porque ele
+exige componente a mais:
+
+145
+00:11:09.782 --> 00:11:14.760
+sensor para constantemente medir a saída
+e poder subtrair esse sinal na entrada.
+
+146
+00:11:14.760 --> 00:11:19.556
+Esses sensores podem ser muito caros
+e podem adicionar uma complexidade
+
+147
+00:11:19.556 --> 00:11:21.450
+desnecessária ao sistema.
+
+148
+00:11:21.450 --> 00:11:26.275
+Se o sistema é estável malha
+aberta e podemos tolerar os
+
+149
+00:11:26.275 --> 00:11:30.790
+efeitos dos erros de modelagem e
+implementação e das perturbações,
+
+150
+00:11:30.790 --> 00:11:34.784
+pode ser mais vantajoso usar
+o controle malha aberta.
+
+151
+00:11:34.784 --> 00:11:39.755
+Alguns casos,
+ganho inadequado pode até mesmo deixar o
+
+152
+00:11:39.755 --> 00:11:44.790
+sistema malha fechada instável, mesmo
+o sistema malha aberta sendo estável.
+
+153
+00:11:44.790 --> 00:11:48.000
+Veremos exemplo disso no próximo vídeo.
+
+154
+00:11:48.000 --> 00:11:52.774
+Agora dada a função de transferência
+malha aberta de sistema,
+
+155
+00:11:52.774 --> 00:11:57.346
+você já deve ser capaz de obter a função
+de transferência malha fechada.
+
+156
+00:11:57.346 --> 00:12:01.930
+Você também deve ser capaz de explicar as
+vantagens do controle com realimentação.
+
+157
+00:12:01.930 --> 00:12:06.725
+[MÚSICA] [SOM]
+
+158
+00:12:06.725 --> 00:12:11.520
+[SOM]

@@ -1,0 +1,795 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.299
+[MÚSICA] Bem vindos
+
+2
+00:00:09.299 --> 00:00:15.802
+a mais "hands on" do nosso curso
+de Orientação a Objetos com Java.
+
+3
+00:00:15.802 --> 00:00:20.490
+Hoje vou mostrar aqui exemplo simples
+de herança, para a gente entender
+
+4
+00:00:20.490 --> 00:00:25.670
+direitinho na prática,
+como que se faz uma herança, tá?
+
+5
+00:00:25.670 --> 00:00:29.473
+No nosso exemplo a gente vai criar uma
+classe conta corrente, e depois vamos
+
+6
+00:00:29.473 --> 00:00:35.310
+criar uma conta especial, que ela tem aí
+a questão do limite, então, vamos lá!
+
+7
+00:00:35.310 --> 00:00:41.716
+Vou vir aqui no meu,
+vou criar novo projeto Java, certo?
+
+8
+00:00:41.716 --> 00:00:44.800
+Vou chamar ele de Banco.
+
+9
+00:00:44.800 --> 00:00:49.765
+[SEM ÁUDIO] Vou
+
+10
+00:00:49.765 --> 00:00:55.270
+a princípio criar aqui a minha classe,
+conta corrente, certo?
+
+11
+00:00:55.270 --> 00:01:01.970
+Então vou chamar aqui de Conta Corrente,
+certo?
+
+12
+00:01:01.970 --> 00:01:04.610
+Essa classe aqui,
+
+13
+00:01:04.610 --> 00:01:10.110
+ela vai ter saldo, certo?
+
+14
+00:01:10.110 --> 00:01:15.490
+E ela vai ter aqui método
+
+15
+00:01:15.490 --> 00:01:21.597
+sacar, certo?
+
+16
+00:01:21.597 --> 00:01:26.295
+Que ele vai tirar do saldo e vamos
+
+17
+00:01:26.295 --> 00:01:30.620
+ter método aqui,
+
+18
+00:01:30.620 --> 00:01:35.550
+depositar, certo?
+
+19
+00:01:35.550 --> 00:01:39.396
+Que ele vai adicionar no saldo, tá?
+
+20
+00:01:39.396 --> 00:01:44.128
+Então o método depositar aqui,
+ele é bem tranquilo,
+
+21
+00:01:44.128 --> 00:01:49.710
+porque a gente consegue o,
+
+22
+00:01:49.710 --> 00:01:53.960
+é só a gente somar,
+não tem nenhuma restrição.
+
+23
+00:01:53.960 --> 00:02:02.415
+Saldo, ele é mais igual ao valor,
+a gente somou ali, tá?
+
+24
+00:02:02.415 --> 00:02:07.084
+O sacar a gente tem que ver se
+o valor é maior que o saldo,
+
+25
+00:02:07.084 --> 00:02:11.802
+a princípio a conta corrente, a gente não
+pode deixar ela ficar negativa, então,
+
+26
+00:02:11.802 --> 00:02:17.787
+eu vou verificar aqui primeiro,
+se o valor for
+
+27
+00:02:17.787 --> 00:02:26.314
+maior, aí eu vou fazer o seguinte,
+para saber se sacou ou não,
+
+28
+00:02:26.314 --> 00:02:30.649
+eu vou retornar ali inteiro
+com o valor do saque, tá?
+
+29
+00:02:30.649 --> 00:02:33.580
+Então se o valor for maior que o saldo,
+
+30
+00:02:33.580 --> 00:02:39.280
+eu vou retornar 0,
+
+31
+00:02:39.280 --> 00:02:43.579
+ou seja,
+você não conseguiu sacar nada, tá?
+
+32
+00:02:43.579 --> 00:02:45.445
+Senão, certo?
+
+33
+00:02:45.445 --> 00:02:51.613
+Vou até colocar aqui as coisinhas aqui
+para ficar mais direitinho, não é?
+
+34
+00:02:51.613 --> 00:02:55.357
+Então se o valor for
+maior que o saldo, ele não saca nada,
+
+35
+00:02:55.357 --> 00:03:00.420
+senão ele vai retirar o valor do saldo,
+então saldo menos igual
+
+36
+00:03:00.420 --> 00:03:06.302
+ao valor, certo?
+
+37
+00:03:06.302 --> 00:03:11.566
+E aí ele vai dar o return valor, certo?
+
+38
+00:03:11.566 --> 00:03:16.861
+Bom então essa aqui é
+a minha conta corrente, tá?
+
+39
+00:03:16.861 --> 00:03:19.663
+Vamos criar testezinho dela aqui,
+
+40
+00:03:19.663 --> 00:03:25.450
+só para a gente ver se está
+funcionando direitinho?
+
+41
+00:03:25.450 --> 00:03:29.560
+Então TesteContaCorrente,
+
+42
+00:03:29.560 --> 00:03:36.084
+vamos acostumando aí a fazer
+bastante teste, hein, gente, tá?
+
+43
+00:03:36.084 --> 00:03:39.821
+Por isso que a gente viu
+isso no começo e está a cada
+
+44
+00:03:39.821 --> 00:03:42.930
+exercício exercitando aqui os testes.
+
+45
+00:03:42.930 --> 00:03:48.360
+Então vamos colocar aqui, depósito,
+
+46
+00:03:48.360 --> 00:03:55.160
+eu vou criar aqui ContaCorrente new
+
+47
+00:03:55.160 --> 00:04:01.000
+ContaCorrente, certo?
+
+48
+00:04:01.000 --> 00:04:05.140
+E aqui eu vou fazer o depositar,
+
+49
+00:04:05.140 --> 00:04:09.137
+vou depositar 200, certo?
+
+50
+00:04:09.137 --> 00:04:13.110
+Seria interessante eu poder ver o saldo,
+não é?
+
+51
+00:04:13.110 --> 00:04:16.521
+Tá?
+Vou criar métodozinho ali, não,
+
+52
+00:04:16.521 --> 00:04:20.028
+a princípio deixa,
+vamos acessar direto aqui,
+
+53
+00:04:20.028 --> 00:04:23.260
+para a gente focar na questão da herança,
+certo?
+
+54
+00:04:23.260 --> 00:04:30.554
+Então eu vou ver aqui,
+se a minha conta corrente,
+
+55
+00:04:30.554 --> 00:04:35.878
+se o saldo dela, está realmente 200,
+então vou fazer aqui,
+
+56
+00:04:35.878 --> 00:04:41.020
+assert Equals cc.
+
+57
+00:04:41.020 --> 00:04:45.600
+saldo, tem que ser 200.
+
+58
+00:04:45.600 --> 00:04:50.190
+Vamos rodar aqui nosso teste,
+para ver se está certinho.
+
+59
+00:04:50.190 --> 00:04:54.100
+JUnit teste.
+
+60
+00:04:54.100 --> 00:04:59.890
+Ok, funcionou, tá?
+
+61
+00:04:59.890 --> 00:05:06.426
+Vamos fazer mais outros dois testes aqui,
+que é o teste do saque, certo?
+
+62
+00:05:06.426 --> 00:05:10.200
+Então eu depositei 200 e vou
+
+63
+00:05:10.200 --> 00:05:16.110
+sacar 100,
+
+64
+00:05:16.110 --> 00:05:23.289
+então vou criar aqui,
+int valor Sacado, certo?
+
+65
+00:05:23.289 --> 00:05:28.962
+Então o meu saldo tem que ser
+100 e o meu valor sacado,
+
+66
+00:05:28.962 --> 00:05:33.780
+qual o problema aqui do saque,
+que ele está reclamando?
+
+67
+00:05:33.780 --> 00:05:37.760
+Saque não está definido?
+
+68
+00:05:39.732 --> 00:05:44.247
+É sacar, certo?
+
+69
+00:05:44.247 --> 00:05:48.459
+E o saldo tem que ser 100,
+vamos fazer valor diferente,
+
+70
+00:05:48.459 --> 00:05:52.423
+só para não ficarem os dois iguais,
+vou sacar 50,
+
+71
+00:05:52.423 --> 00:06:01.115
+então meu saldo tem que
+ser 150 e assertEquals,
+
+72
+00:06:01.115 --> 00:06:06.420
+o meu valor sacado ali,
+
+73
+00:06:06.420 --> 00:06:11.650
+ele tem que ser 50, certo?
+
+74
+00:06:11.650 --> 00:06:16.620
+Então vamos ver aqui
+
+75
+00:06:16.620 --> 00:06:20.870
+se o saque acontece perfeitamente.
+
+76
+00:06:20.870 --> 00:06:21.844
+Ok.          
+
+77
+00:06:21.844 --> 00:06:27.975
+E o nosso último teste aqui vai
+ser eu tentar sacar valor maior
+
+78
+00:06:27.975 --> 00:06:35.387
+do que o meu saldo, então vou chamar
+o teste aqui de saqueMaior QueSaldo.
+
+79
+00:06:35.387 --> 00:06:40.566
+Então eu vou tentar sacar 250,
+o meu saldo,
+
+80
+00:06:40.566 --> 00:06:46.133
+ele tem que continuar 200, e o meu valor
+sacado agora tem que ser 0, certo?
+
+81
+00:06:46.133 --> 00:06:53.320
+Então vou rodar aqui novamente os
+testes e agora, tudo rodando, tá?
+
+82
+00:06:53.320 --> 00:06:59.435
+Então essa daqui é a primeira
+parte do nosso exemplo, tá?
+
+83
+00:06:59.435 --> 00:07:04.573
+Na segunda parte a gente vai estar
+criando a classe conta especial,
+
+84
+00:07:04.573 --> 00:07:08.517
+que essa classe tem limite de saque, tá?
+
+85
+00:07:08.517 --> 00:07:10.630
+Então vamos lá.
+
+86
+00:07:10.630 --> 00:07:18.404
+Eu vou vir aqui,
+vou criar uma nova classe, certo?
+
+87
+00:07:18.404 --> 00:07:22.050
+Eu vou chamar ela de
+
+88
+00:07:22.050 --> 00:07:28.552
+ContaEspecial, certo?
+
+89
+00:07:28.552 --> 00:07:33.298
+E aí eu vou colocar aqui,
+
+90
+00:07:33.298 --> 00:07:36.442
+extends ContaCorrente.
+
+91
+00:07:36.442 --> 00:07:42.590
+Então a partir desse momento ele tem
+tudo ali que a conta corrente tem,
+
+92
+00:07:42.590 --> 00:07:46.890
+certo?
+
+93
+00:07:46.890 --> 00:07:50.126
+Que que eu tenho que fazer?
+
+94
+00:07:50.126 --> 00:07:57.077
+A diferença é que a minha conta especial,
+ela tem limite, certo?
+
+95
+00:07:57.077 --> 00:08:01.770
+Que é o quanto eu posso ir negativo,
+certo?
+
+96
+00:08:01.770 --> 00:08:08.519
+Então vou fazer o seguinte,
+eu vou criar aqui construtor,
+
+97
+00:08:08.519 --> 00:08:14.432
+quando estou criando a conta especial,
+ContaEspecial,
+
+98
+00:08:14.432 --> 00:08:20.970
+eu preciso estar passando
+qual que é o limite, não é?
+
+99
+00:08:20.970 --> 00:08:24.085
+Então vou colocar aqui,
+
+100
+00:08:24.085 --> 00:08:29.380
+this.limite é igual a limite, pronto.
+
+101
+00:08:29.380 --> 00:08:31.457
+Que que vai ser diferente?
+
+102
+00:08:31.457 --> 00:08:37.510
+Eu não vou ter nenhuma diferença no método
+depositar e no método sacar o valor,
+
+103
+00:08:37.510 --> 00:08:43.172
+ele tem que ser maior que o saldo,
+mais o limite, certo?
+
+104
+00:08:43.172 --> 00:08:46.180
+Então vamos lá.
+
+105
+00:08:46.180 --> 00:08:51.532
+Eu vou vir aqui,
+
+106
+00:08:51.532 --> 00:08:56.315
+eu posso sobrescrever
+método que já existe na
+
+107
+00:08:56.315 --> 00:09:00.844
+subclasse, tá?
+
+108
+00:09:00.844 --> 00:09:04.411
+E vou estar colocando aqui,
+
+109
+00:09:04.411 --> 00:09:09.783
+que ele tem que ser maior do que o saldo,
+
+110
+00:09:09.783 --> 00:09:13.774
+mais o limite, certo?
+
+111
+00:09:13.774 --> 00:09:17.840
+E vou salvar aqui, tá?
+
+112
+00:09:17.840 --> 00:09:22.806
+Então eu tenho aqui meus
+testes de conta corrente, tá?
+
+113
+00:09:22.806 --> 00:09:29.985
+Eu vou até fazer o seguinte aqui,
+eu vou usar o método Before, certo?
+
+114
+00:09:29.985 --> 00:09:35.204
+Para eu fazer assim, public void
+
+115
+00:09:35.204 --> 00:09:41.308
+inicializa Conta, certo?
+
+116
+00:09:41.308 --> 00:09:47.728
+E aí eu vou fazer isso aqui,
+eu vou copiar esse aqui para cá,
+
+117
+00:09:47.728 --> 00:09:52.554
+deixa eu só importar o Before aqui antes,
+vamos lá,
+
+118
+00:09:52.554 --> 00:09:58.594
+importa o before,
+pega esse aqui Passa pra cá,
+
+119
+00:09:58.594 --> 00:10:03.310
+eu tenho ali a minha ContaCorrente.
+
+120
+00:10:03.310 --> 00:10:08.167
+Antes de cada teste ele vai criar nova
+ContaCorrente e aí eu posso tirar
+
+121
+00:10:08.167 --> 00:10:10.599
+essa primeira linha aqui de tudo.
+
+122
+00:10:10.599 --> 00:10:15.770
+Eu poderia até, por exemplo,
+esse depositar aqui que tá igual,
+
+123
+00:10:15.770 --> 00:10:21.140
+eu posso até já criar a minha
+conta corrente com o depósito.
+
+124
+00:10:21.140 --> 00:10:27.060
+Então já vou adiantar isso daqui.
+
+125
+00:10:27.060 --> 00:10:30.330
+Certo?
+
+126
+00:10:30.330 --> 00:10:34.230
+Excelente.
+
+127
+00:10:34.230 --> 00:10:36.042
+O que eu vou fazer?
+
+128
+00:10:36.042 --> 00:10:41.016
+Eu vou criar o meu teste
+da conta especial, certo?
+
+129
+00:10:41.016 --> 00:10:45.069
+Então vou criar aqui JUnit test case.
+
+130
+00:10:45.069 --> 00:10:53.235
+Eu vou criar aqui o meu
+Teste ContaEspecial
+
+131
+00:10:53.235 --> 00:11:00.687
+e aí o que eu vou fazer vai
+ser sobreescrever este...
+
+132
+00:11:00.687 --> 00:11:07.177
+então, o teste é uma classe também,
+eu também posso estar inicializando ele.
+
+133
+00:11:07.177 --> 00:11:10.365
+Então ó,
+vez de eu criar uma ContaCorrente,
+
+134
+00:11:10.365 --> 00:11:12.460
+eu vou criar uma ContaEspecial.
+
+135
+00:11:12.460 --> 00:11:18.844
+Essa conta,
+ela vai ter aqui 100 de limite.
+
+136
+00:11:18.844 --> 00:11:24.500
+No caso aqui,
+ele não está aceitando por ser...
+
+137
+00:11:24.500 --> 00:11:28.650
+é [errado] ...      
+
+138
+00:11:28.650 --> 00:11:31.070
+Cadê?
+
+139
+00:11:31.070 --> 00:11:35.430
+Tá, faltou o extends
+
+140
+00:11:35.430 --> 00:11:41.100
+TesteContaCorrente, certo?
+
+141
+00:11:41.100 --> 00:11:44.460
+Vou salvar aqui...
+
+142
+00:11:44.460 --> 00:11:45.555
+Certo?
+
+143
+00:11:45.555 --> 00:11:49.470
+Então, o que vai acontecer?
+
+144
+00:11:49.470 --> 00:11:52.970
+Estes testes aqui ó.
+
+145
+00:11:52.970 --> 00:11:56.210
+Quando eu rodar aqui, vamos ver aqui, ó.
+
+146
+00:11:56.210 --> 00:12:01.717
+Ele vai rodar todos os
+testes que tinham lá.
+
+147
+00:12:01.717 --> 00:12:05.560
+Só que esse teste MaiorQueSaldo
+aqui não se aplica lá.
+
+148
+00:12:05.560 --> 00:12:06.572
+Certo?
+
+149
+00:12:06.572 --> 00:12:11.780
+Então, como que é o teste maior que saldo?
+
+150
+00:12:11.780 --> 00:12:16.670
+Eu vou colocar aqui, ó.
+
+151
+00:12:16.670 --> 00:12:21.520
+Esse teste aqui eu vou
+mandar ele sacar 350.
+
+152
+00:12:21.520 --> 00:12:26.580
+Aí sim eu posso fazer
+com que ele passe ali,
+
+153
+00:12:26.580 --> 00:12:31.400
+porque aí ele tá, opa,
+qual foi o problema aqui?
+
+154
+00:12:31.400 --> 00:12:36.570
+Ele, tá! [errado]
+
+155
+00:12:36.570 --> 00:12:42.120
+O saldo tem que continuar 200,
+porque ele tem 200 na conta.
+
+156
+00:12:42.120 --> 00:12:45.392
+O meu teste que estava errado, tá?
+
+157
+00:12:45.392 --> 00:12:47.360
+Vou rodar aqui...
+
+158
+00:12:47.360 --> 00:12:52.530
+Agora funcionou e aí eu tenho
+que fazer o teste do limite.
+
+159
+00:12:52.530 --> 00:12:55.967
+Então ó, eu vou ver aqui,
+
+160
+00:12:55.967 --> 00:13:00.730
+se eu sacar por exemplo, 250,
+
+161
+00:13:00.730 --> 00:13:07.330
+o meu saldo vai estar menos 50, porque eu
+tenho limite, e o valor vai estar limite.
+
+162
+00:13:07.330 --> 00:13:13.460
+Então eu vou chamar esse cara aqui
+de MaiorQueSaldoDentroDoLimite.
+
+163
+00:13:13.460 --> 00:13:14.538
+Certo?
+
+164
+00:13:14.538 --> 00:13:19.363
+Então eu vou rodar, note que eu preciso,
+
+165
+00:13:19.363 --> 00:13:24.085
+pra essa subclasse aqui, teste a mais.
+
+166
+00:13:24.085 --> 00:13:30.410
+Mas observe que mesmo assim ele vai rodar
+os testes que estavam lá na superclasse.
+
+167
+00:13:30.410 --> 00:13:35.655
+Então, ó,
+se eu vier aqui no projeto e mandar rodar
+
+168
+00:13:35.655 --> 00:13:40.883
+ele com o JUnit, ele vai rodar pra
+mim todas as classes de teste,
+
+169
+00:13:40.883 --> 00:13:46.521
+que são os quatro testes da conta especial
+mais os três testes da conta corrente.
+
+170
+00:13:46.521 --> 00:13:51.679
+Então eu espero que com isso daí
+a gente tenha visto na prática
+
+171
+00:13:51.679 --> 00:13:54.800
+pouco essa questão da herança,
+
+172
+00:13:54.800 --> 00:14:00.324
+visto como que uma classe que estende
+a outra pode adicionar informações,
+
+173
+00:14:00.324 --> 00:14:08.670
+pode sobrescrever os
+métodos da classe de cima.
+
+174
+00:14:08.670 --> 00:14:09.223
+Tá certo?
+
+175
+00:14:09.223 --> 00:14:11.006
+Espero que tenham compreendido.
+
+176
+00:14:11.006 --> 00:14:12.975
+Muito obrigado, até a próxima aula.
+
+177
+00:14:12.975 --> 00:14:17.280
+[Música]

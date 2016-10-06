@@ -1,0 +1,196 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:16.557
+[MÚSICA] E aí, pessoal, tudo bem?
+
+3
+00:00:16.557 --> 00:00:21.400
+Nessa aula veremos como interligar
+os objetos criados com código.
+
+4
+00:00:21.400 --> 00:00:25.120
+Vamos criar novo botão
+para esconder o quadro.
+
+5
+00:00:25.120 --> 00:00:30.978
+Clique no botão com ícone de 2
+círculos para dividir a tela no
+
+6
+00:00:30.978 --> 00:00:35.150
+meio e fazer com que o código Swift dessa
+View Controller apareça do lado direito.
+
+7
+00:00:35.150 --> 00:00:39.156
+Clique na label com o botão
+direito do mouse e arraste
+
+8
+00:00:39.156 --> 00:00:42.260
+para o código dentro do bloco da classe.
+
+9
+00:00:42.260 --> 00:00:46.520
+Escolha nome para a variável
+que representará essa label.
+
+10
+00:00:46.520 --> 00:00:50.240
+Coloque por exemplo, label Texto.
+
+11
+00:00:50.240 --> 00:00:54.660
+Você pode selecionar tanto
+a representação visual do objeto
+
+12
+00:00:54.660 --> 00:00:58.741
+quanto a representação desse
+objeto na lista de hierarquia.
+
+13
+00:00:58.741 --> 00:01:01.180
+Clique com o botão direito do mouse,
+
+14
+00:01:01.180 --> 00:01:05.440
+arraste para o código e
+escolha o nome da variável.
+
+15
+00:01:05.440 --> 00:01:07.860
+Dê o nome de imagem quadro.
+
+16
+00:01:07.860 --> 00:01:12.080
+Vamos mudar o texto da
+label através do código.
+
+17
+00:01:12.080 --> 00:01:17.350
+Para isso dentro da função viewDidLoad
+atualize a propriedade text dessa
+
+18
+00:01:17.350 --> 00:01:22.750
+label digitando o nome
+da variável ponto text
+
+19
+00:01:22.750 --> 00:01:28.140
+e atribuindo uma nova string,
+por exemplo, qual o nome do quadro.
+
+20
+00:01:28.140 --> 00:01:31.760
+Rode no simulador para
+ver isso na prática.
+
+21
+00:01:31.760 --> 00:01:37.850
+Quando a função viewDidLoad é chamada
+o texto da label é atualizado.
+
+22
+00:01:37.850 --> 00:01:41.960
+O próximo passo é fazer com
+que esses botões funcionem.
+
+23
+00:01:41.960 --> 00:01:45.070
+Vamos conectar os botões ao código.
+
+24
+00:01:45.070 --> 00:01:49.565
+Uma alternativa ao botão direito
+do mouse é deixar a tecla control
+
+25
+00:01:49.565 --> 00:01:52.190
+pressionada e usar o botão esquerdo.
+
+26
+00:01:52.190 --> 00:01:56.690
+Esse modo é bastante útil quando estamos
+utilizando o trackpad do MacBook.
+
+27
+00:01:56.690 --> 00:02:01.183
+Para o botão não queremos criar
+uma variável conectando o
+
+28
+00:02:01.183 --> 00:02:05.288
+objeto e sim criar uma
+função de ação do botão.
+
+29
+00:02:05.288 --> 00:02:12.360
+Na opção Connection selecione Action
+e escolha nome para a função.
+
+30
+00:02:12.360 --> 00:02:20.360
+Faça o mesmo para o outro botão.
+
+31
+00:02:20.360 --> 00:02:25.262
+Volte para
+
+32
+00:02:25.262 --> 00:02:29.580
+o modo padrão do editor e selecione
+o código ViewController.swift.
+
+33
+00:02:29.580 --> 00:02:34.567
+Vamos fazer que quando o usuário tocar
+no primeiro botão o texto da label
+
+34
+00:02:34.567 --> 00:02:39.653
+seja atualizado com o nome do quadro
+que é "A noite estrelada" e na função
+
+35
+00:02:39.653 --> 00:02:44.688
+de ação do segundo botão atualize
+a propriedade hidden da imagem,
+
+36
+00:02:44.688 --> 00:02:51.280
+digitando o nome da variável da
+imagem ponto hidden igual a true.
+
+37
+00:02:51.280 --> 00:02:57.950
+Rode o aplicativo para ver o resultado.
+
+38
+00:02:57.950 --> 00:03:02.204
+Quando clicamos no botão Muda texto
+
+39
+00:03:02.204 --> 00:03:07.280
+a label é atualizada e quando clicamos no
+
+40
+00:03:07.280 --> 00:03:12.290
+botão Esconder quadro a imagem some.
+
+41
+00:03:12.290 --> 00:03:17.304
+Na próxima aula faremos uma
+recapitulação do módulo.
+
+42
+00:03:17.304 --> 00:03:18.070
+Até lá!

@@ -1,0 +1,429 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.963
+Após esse vídeo,
+você será capaz de projetar
+
+2
+00:00:02.963 --> 00:00:07.420
+controlador PID e de explicar
+a implementação de PID como PILead.
+
+3
+00:00:07.420 --> 00:00:11.723
+Para facilitar os cálculos, vamos usar uma
+função de transferência de segunda ordem
+
+4
+00:00:11.723 --> 00:00:15.800
+do Tipo 0 sem zeros, mas procedimento
+assim como no caso do controlador Lead,
+
+5
+00:00:15.800 --> 00:00:20.160
+do controlador Lag, do controlador PD, do
+controlador PI e do controlador Lead-Lag,
+
+6
+00:00:20.160 --> 00:00:23.958
+é exatamente o mesmo para sistemas
+de ordem maior de qualquer tipo,
+
+7
+00:00:23.958 --> 00:00:24.965
+com ou sem zeros.
+
+8
+00:00:24.965 --> 00:00:27.986
+Você só vai ter que calcular
+mais fases e mais módulos,
+
+9
+00:00:27.986 --> 00:00:29.700
+mas a receita de bolo é a mesma.
+
+10
+00:00:29.700 --> 00:00:34.730
+Digamos que você vai ter que medir e
+misturar mais ingredientes para a massa,
+
+11
+00:00:34.730 --> 00:00:35.658
+ao invés de só farinha comum,
+
+12
+00:00:35.658 --> 00:00:38.183
+você vai ter que usar pouco de farinha
+comum, pouco de farinha integral,
+
+13
+00:00:38.183 --> 00:00:41.418
+pouco de semolina, pouco de fécula de
+batata, pouco de amido de milho e etc.
+
+14
+00:00:41.418 --> 00:00:44.920
+Mas você vai misturar tudo exatamente
+do mesmo jeito que faria só com
+
+15
+00:00:44.920 --> 00:00:45.841
+a farinha comum.
+
+16
+00:00:45.841 --> 00:00:47.760
+E depois para o recheio e cobertura,
+
+17
+00:00:47.760 --> 00:00:51.378
+ao invés de usar só creme básico de
+confeiteiro, você vai ter que fazer vários
+
+18
+00:00:51.378 --> 00:00:55.605
+cremes com diferentes essências e
+diferentes frutas, mas todos os casos você
+
+19
+00:00:55.605 --> 00:00:59.289
+vai lavar e picar as frutas e colocar
+o creme para engrossar, ou seja,
+
+20
+00:00:59.289 --> 00:01:03.524
+se você consegue fazer o bolo só com trigo
+comum e com o recheio e cobertura simples,
+
+21
+00:01:03.524 --> 00:01:06.977
+só deve ter mais trabalho para fazer
+usando vários ingredientes diferentes,
+
+22
+00:01:06.977 --> 00:01:09.470
+mas tirando o tempo a mais para
+medir cada dos ingredientes,
+
+23
+00:01:09.470 --> 00:01:13.890
+você não deve ter nenhuma dificuldade
+completar sua receita com sucesso.
+
+24
+00:01:13.890 --> 00:01:16.512
+É mais trabalhoso mas
+não é mais complicado,
+
+25
+00:01:16.512 --> 00:01:18.655
+basta seguir os passos com atenção.
+
+26
+00:01:18.655 --> 00:01:22.021
+1 Determinar os parâmetros da resposta
+de segunda ordem a partir dos
+
+27
+00:01:22.021 --> 00:01:23.420
+requisitos de desempenho.
+
+28
+00:01:23.420 --> 00:01:27.435
+2 Determinar o polo desejado
+malha fechada, o quadradinho d.
+
+29
+00:01:27.435 --> 00:01:29.737
+3 Calcular a fase de G de quadradinho d,
+
+30
+00:01:29.737 --> 00:01:34.340
+se essa fase for pouco maior que menos 180
+graus, ir direto para o calculo do ganho,
+
+31
+00:01:34.340 --> 00:01:38.038
+se essa fase for consideravelmente
+maior que menos 180 graus,
+
+32
+00:01:38.038 --> 00:01:42.134
+aumentar a Csi ômega n e voltar ao
+passo 2 da receita, se essa fase for
+
+33
+00:01:42.134 --> 00:01:46.425
+menor que menos 180 graus,
+prosseguir para o passo 4.
+
+34
+00:01:46.425 --> 00:01:48.465
+4 Determinar o avanço necessário.
+
+35
+00:01:48.465 --> 00:01:51.830
+5 Escolher a posição do 0 do
+controlador de avanço ou do PD.
+
+36
+00:01:51.830 --> 00:01:55.551
+6 Determinar a posição do polo
+para ter o avanço necessário,
+
+37
+00:01:55.551 --> 00:01:57.995
+se for PD essa etapa não é necessária.
+
+38
+00:01:57.995 --> 00:02:01.994
+Se quiser, pode verificar se a fase de C
+de quadradinho d G de quadradinho é igual
+
+39
+00:02:01.994 --> 00:02:04.160
+a menos 180 graus antes de prosseguir.
+
+40
+00:02:04.160 --> 00:02:08.600
+7 Calcule k, 1 sobre a vezes o
+produto das distâncias até os polos,
+
+41
+00:02:08.600 --> 00:02:12.258
+dividido por produto das distâncias até
+os zeros, não esqueça de a ou seu ganho
+
+42
+00:02:12.258 --> 00:02:16.736
+ficará errado, algo como: não esqueça do
+fermento ou seu bolo não vai crescer.
+
+43
+00:02:16.736 --> 00:02:20.500
+Se você só tinha requisitos de tempos de
+resposta de overshoot, é só simular e
+
+44
+00:02:20.500 --> 00:02:24.449
+verificar se eles foram atendidos,
+se a resposta não atender os requisitos,
+
+45
+00:02:24.449 --> 00:02:28.745
+faça os ajustes necessários nos requisitos
+de desempenho e volte ao passo 2,
+
+46
+00:02:28.745 --> 00:02:31.899
+algo como: se o bolo ficou
+muito seco ou muito húmido,
+
+47
+00:02:31.899 --> 00:02:34.995
+ajuste a receita e tente outra vez!
+
+48
+00:02:34.995 --> 00:02:39.930
+8 Se você tiver requisito de regime,
+calcule a constante
+
+49
+00:02:39.930 --> 00:02:43.630
+de erro do sistema e o fator necessário
+para ter a constante de erro desejada.
+
+50
+00:02:43.630 --> 00:02:46.742
+9 Escolha a posição do 0
+do atraso de fase ou do PI,
+
+51
+00:02:46.742 --> 00:02:50.500
+bom chute inicial é décimo da
+parte real dos polos desejados.
+
+52
+00:02:50.500 --> 00:02:54.964
+10 Calcule a posição do polo do atraso, de
+acordo com o fator de ajuste necessário,
+
+53
+00:02:54.964 --> 00:02:57.080
+se for PI essa etapa não é necessária.
+
+54
+00:02:57.080 --> 00:03:01.179
+Finalmente, teste seu projeto via
+simulação, se não ficar satisfeito,
+
+55
+00:03:01.179 --> 00:03:03.660
+faça os ajustes necessários
+e tente de novo,
+
+56
+00:03:03.660 --> 00:03:06.810
+depois de algumas tentativas você
+vai ver que não é tão difícil assim.
+
+57
+00:03:06.810 --> 00:03:09.746
+Voltemos ao nosso exemplo
+de projeto de PID,
+
+58
+00:03:09.746 --> 00:03:14.181
+a função de transferência do sistema é,
+2 sobre s mais 2 s mais 5 e os
+
+59
+00:03:14.181 --> 00:03:18.513
+requisitos de desempenho são overshoot de
+16,3 por cento, instante de pico de 400
+
+60
+00:03:18.513 --> 00:03:22.084
+milisegundos e regime permanente
+para entrada degrau nulo,
+
+61
+00:03:22.084 --> 00:03:27.066
+com isso chegamos a Csi igual a 0,5
+e ômega d aproximadamente 7,85,
+
+62
+00:03:27.066 --> 00:03:32.620
+vamos usar 7,9 e temos quadradinho
+d igual a menos 4,6 mais 7,9 j.
+
+63
+00:03:32.620 --> 00:03:38.076
+Calculando a fase, chegamos a menos
+195,3 graus e precisamos de
+
+64
+00:03:38.076 --> 00:03:43.370
+avanço de 15,3 graus, ou seja, precisamos
+ter fase de quadradinho d mais a igual
+
+65
+00:03:43.370 --> 00:03:48.240
+a 15,3 graus e para que isso aconteça
+precisamos ter a igual a 33,4.
+
+66
+00:03:48.240 --> 00:03:52.915
+Calculando o ganho,
+chegamos a k igual a 1,1 e temos C de
+
+67
+00:03:52.915 --> 00:03:57.393
+s igual a 1,1 s mais
+33,4 s mais 0,46 sobre s,
+
+68
+00:03:57.393 --> 00:04:03.530
+que podemos escrever como: 1,1
+s mais 37,25 mais 16,9 sobre s,
+
+69
+00:04:03.530 --> 00:04:09.610
+ou seja, k p igual a 37,25,
+k i é igual 16,9 e k d é igual a 1,1.
+
+70
+00:04:09.610 --> 00:04:13.106
+Simulando esse sistema, você vai notar
+que o overshoot é menor que o projetado,
+
+71
+00:04:13.106 --> 00:04:15.690
+isso acontece porque a saída
+converge lentamente para 1.
+
+72
+00:04:15.690 --> 00:04:19.810
+Podemos melhorar a convergência para o
+valor final afastando mais o 0 da origem,
+
+73
+00:04:19.810 --> 00:04:22.029
+podemos colocar ele menos 2,
+
+74
+00:04:22.029 --> 00:04:26.480
+então temos: C de s igual a 1,1
+s mais 33,4 s mais 2 sobre s.
+
+75
+00:04:26.480 --> 00:04:31.792
+E os parâmetros k p,
+k I e k D ficam, 38,9, 73,5 e 1,1.
+
+76
+00:04:31.792 --> 00:04:36.070
+A saída converge bem mais rápido para 1,
+mas o overshoot fica grande demais.
+
+77
+00:04:36.070 --> 00:04:42.816
+Tentando de novo com 1,1 s mais 33,4 s
+mais 1 sobre s, temos: k p é igual a 37,8,
+
+78
+00:04:42.816 --> 00:04:48.550
+k I é igual a 36,7 e k D é igual a 1,1 e
+a resposta simulada fica bem satisfatória.
+
+79
+00:04:48.550 --> 00:04:51.910
+Se quiser pode tentar afastar
+o 0 pouco mais da origem,
+
+80
+00:04:51.910 --> 00:04:53.840
+tente menos 1,1 por exemplo.
+
+81
+00:04:53.840 --> 00:04:57.382
+E note que o Simulink não
+implementa o PID como PID,
+
+82
+00:04:57.382 --> 00:05:00.710
+do mesmo modo que ele não
+implementa PD como PD.
+
+83
+00:05:00.710 --> 00:05:05.682
+A forma do PID é P mais I vezes
+1 sobre s mais D vezes N sobre 1
+
+84
+00:05:05.682 --> 00:05:08.197
+mais N vezes 1 sobre s, ou seja,
+
+85
+00:05:08.197 --> 00:05:13.110
+o derivador tem polo menos N e na
+verdade é Lead e não derivador.
+
+86
+00:05:13.110 --> 00:05:17.230
+Agora, você já é capaz de projetar
+controlador PID e de explicar
+
+87
+00:05:17.230 --> 00:05:19.745
+a implementação de PID com PILead.
+
+88
+00:05:19.745 --> 00:05:23.705
+No próximo video, você verá como modelar
+o atraso de transporte e como fazer uma
+
+89
+00:05:23.705 --> 00:05:26.380
+aproximação desse resultado
+de forma conveniente.

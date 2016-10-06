@@ -1,0 +1,351 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.533
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.533 --> 00:00:13.346
+Esse é o Curso de Programação Orientada
+a Objetos com Java.
+
+3
+00:00:13.346 --> 00:00:15.570
+Meu nome é Eduardo Guerra.
+
+4
+00:00:15.570 --> 00:00:20.688
+E hoje vamos falar sobre uma
+funcionalidade do JUnit que permite
+
+5
+00:00:20.688 --> 00:00:26.910
+que a gente execute código antes e depois
+de testes, ou de uma suíte de testes.
+
+6
+00:00:26.910 --> 00:00:31.630
+Então o objetivo dessa aula é estar
+ensinando vocês a utilização,
+
+7
+00:00:31.630 --> 00:00:37.206
+a criação de métodos de inicialização
+e finalização nos testes.
+
+8
+00:00:37.206 --> 00:00:42.736
+Bom imagina por exemplo, que você precisa
+testar software, que antes de executar,
+
+9
+00:00:42.736 --> 00:00:47.985
+ele precisar ler arquivo de configuração,
+então antes de executar qualquer
+
+10
+00:00:47.985 --> 00:00:53.208
+método @teste,
+você tem que inicializar a classe,
+
+11
+00:00:53.208 --> 00:00:58.224
+ou o software si com aquelas informações,
+ou determinado componente.
+
+12
+00:00:58.224 --> 00:01:03.988
+Outro caso bastante comum, é por exemplo,
+quando a gente precisa criar objetos,
+
+13
+00:01:03.988 --> 00:01:07.281
+ou para a gente setar na classe
+que a gente está criando,
+
+14
+00:01:07.281 --> 00:01:10.223
+que a gente quer testar,
+ou para de repente estar passando como
+
+15
+00:01:10.223 --> 00:01:12.814
+parâmetro para a classe
+que a gente quer testar.
+
+16
+00:01:12.814 --> 00:01:18.556
+Então às vezes, esses mesmos objetos
+eles vão ser usados vários testes
+
+17
+00:01:18.556 --> 00:01:24.709
+ao longo daquela execução para testar toda
+funcionalidade de uma determinada classe.
+
+18
+00:01:24.709 --> 00:01:28.565
+Alguns outros casos,
+a gente pode ter essa questão comum,
+
+19
+00:01:28.565 --> 00:01:32.726
+ela muitas vezes,
+ela pode ser depois da execução do teste.
+
+20
+00:01:32.726 --> 00:01:37.695
+Por exemplo, se de repente a minha classe,
+ela abre uma conexão,
+
+21
+00:01:37.695 --> 00:01:42.893
+que às vezes deixa aberta,
+ou então eu mesmo na hora de inicializar o
+
+22
+00:01:42.893 --> 00:01:48.050
+teste eu crio essa conexão e abro ela para
+que a minha classe testada possa utilizar.
+
+23
+00:01:48.050 --> 00:01:53.101
+Muitas vezes no final eu preciso fechar
+essa conexão, para que o próximo teste,
+
+24
+00:01:53.101 --> 00:01:58.235
+ele possa passar por todo esse processo
+novamente dentro de cenário diferente.
+
+25
+00:01:58.235 --> 00:02:03.080
+Com isso aí dá para perceber que muitas
+vezes, eu tenho códigos que vão executar
+
+26
+00:02:03.080 --> 00:02:07.619
+antes do teste e códigos que
+vão executar depois dos testes,
+
+27
+00:02:07.619 --> 00:02:13.479
+que pode ser comum dentro de uma suíte
+de teste, dentro de conjunto de testes.
+
+28
+00:02:13.479 --> 00:02:17.517
+A gente não quer que esse código,
+ele fique duplicado,
+
+29
+00:02:17.517 --> 00:02:22.177
+eu não quero por exemplo,
+se eu tenho que criar objeto antes,
+
+30
+00:02:22.177 --> 00:02:26.690
+eu ter que estar criando aquele objeto
+antes, todos os métodos de testes.
+
+31
+00:02:26.690 --> 00:02:30.525
+E eu também não quero por exemplo,
+se eu tenho que fechar uma conexão,
+
+32
+00:02:30.525 --> 00:02:34.120
+ter que fechar essa conexão
+todos os métodos de teste,
+
+33
+00:02:34.120 --> 00:02:38.276
+além de isso ser a duplicação de código
+que é ruim, porque se eu tenho que
+
+34
+00:02:38.276 --> 00:02:44.057
+modificar eu tenho que modificar tudo, se
+alguém por exemplo, esquecer vamos supor,
+
+35
+00:02:44.057 --> 00:02:48.530
+de fechar uma conexão,
+isso pode quebrar o meu próximo teste.
+
+36
+00:02:48.530 --> 00:02:51.557
+Isso daí de repente vai me dar
+uma ferrada, eu vou olhar,
+
+37
+00:02:51.557 --> 00:02:53.639
+porque esse cara está dando problema?
+
+38
+00:02:53.639 --> 00:02:57.845
+E as vezes é porque no teste anterior,
+eu esqueci de fazer uma limpeza,
+
+39
+00:02:57.845 --> 00:03:00.709
+ou porque eu não inicializei direito.
+
+40
+00:03:00.709 --> 00:03:04.962
+Então não é desejável que eu
+fique duplicando esse código,
+
+41
+00:03:04.962 --> 00:03:08.885
+isso aí as pessoas podem esquecer
+de colocar, ou por exemplo,
+
+42
+00:03:08.885 --> 00:03:11.284
+vamos supor que eu tenha
+que dar uma manutenção,
+
+43
+00:03:11.284 --> 00:03:15.160
+eu preciso alterar uma coisa nesse teste,
+vou ter que alterar vários locais,
+
+44
+00:03:15.160 --> 00:03:19.703
+se eu esquecer de alterar isso daí também
+pode gerar consequências para o teste,
+
+45
+00:03:19.703 --> 00:03:24.444
+para os próximos testes, então,
+não é assim que devemos fazer.
+
+46
+00:03:24.444 --> 00:03:30.368
+Felizmente, o JUnit ele tem anotações
+que eu posso colocar métodos,
+
+47
+00:03:30.368 --> 00:03:34.561
+para que eles sejam métodos
+de inicialização, ou seja,
+
+48
+00:03:34.561 --> 00:03:39.532
+que eu posso utilizar ele para inicializar
+coisas antes do teste e eu também
+
+49
+00:03:39.532 --> 00:03:44.783
+posso criar métodos para fazer
+limpeza para os próximos testes.
+
+50
+00:03:44.783 --> 00:03:48.131
+Então, eu tenho a anotação @before,
+
+51
+00:03:48.131 --> 00:03:53.066
+que eu posso utilizar
+métodos para executar antes
+
+52
+00:03:53.066 --> 00:03:58.160
+de cada método de teste e
+eu tenho a anotação @after,
+
+53
+00:03:58.160 --> 00:04:03.951
+que eu posso utilizar métodos para
+executar depois de cada método de teste.
+
+54
+00:04:03.951 --> 00:04:08.739
+Então assim, para ficar mais claro,
+se eu tiver o teste A,
+
+55
+00:04:08.739 --> 00:04:13.588
+o teste B e o teste C,
+ele vai executar o before, o teste A,
+
+56
+00:04:13.588 --> 00:04:18.538
+depois do after, o before,
+o teste B, depois do after,
+
+57
+00:04:18.538 --> 00:04:21.831
+o before, o teste C, e depois o after.
+
+58
+00:04:21.831 --> 00:04:28.140
+Então o before e o after, eles executam
+antes e depois de cada método de teste.
+
+59
+00:04:28.140 --> 00:04:32.794
+Talvez você esteja se perguntando: "E se
+eu precisar de uma coisa que vai rodar uma
+
+60
+00:04:32.794 --> 00:04:37.572
+vez antes de todos os testes?"
+Aí você pode utilizar a anotação
+
+61
+00:04:37.572 --> 00:04:40.511
+BeforeClass e AfterClass.
+
+62
+00:04:40.511 --> 00:04:45.514
+Nesse caso, essa anotação,
+ela vai executar esse método que tem
+
+63
+00:04:45.514 --> 00:04:50.514
+essa anotação, ele vai executar
+antes e depois de todos os testes,
+
+64
+00:04:50.514 --> 00:04:55.830
+então se eu tiver o teste A, B e C,
+ele vai executar o BeforeClass
+
+65
+00:04:55.830 --> 00:05:01.330
+todos os testes,
+e depois o que tiver o AfterClass.
+
+66
+00:05:01.330 --> 00:05:06.830
+Então, espero que dessa forma,
+vocês tenham entendido como fazer,
+
+67
+00:05:06.830 --> 00:05:13.636
+criar métodos de inicialização e
+finalização dentro de suítes de testes,
+
+68
+00:05:13.636 --> 00:05:18.520
+sabendo como criar esses que
+são antes de todos os testes e
+
+69
+00:05:18.520 --> 00:05:23.820
+depois de de todos os testes e aqueles que
+são antes e depois de cada dos testes.
+
+70
+00:05:23.820 --> 00:05:25.964
+Muito obrigado por assistir.
+
+71
+00:05:25.964 --> 00:05:28.360
+Fique ligado nas próximas aulas!
+
+72
+00:05:28.360 --> 00:05:32.900
+[MÚSICA]

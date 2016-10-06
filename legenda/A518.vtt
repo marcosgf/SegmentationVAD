@@ -1,0 +1,654 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.706
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.706 --> 00:00:13.410
+Esse é o curso de Orientação
+a Objetos com Java.
+
+3
+00:00:13.410 --> 00:00:19.045
+Eu sou o Eduardo Guerra e hoje vamos
+falar sobre tratamento de exceção.
+
+4
+00:00:19.045 --> 00:00:22.743
+A gente já viu o que é que é uma exceção,
+já entende o que é,
+
+5
+00:00:22.743 --> 00:00:26.799
+já entendeu bloco try catch e hoje
+vamos falar aí sobre cenários,
+
+6
+00:00:26.799 --> 00:00:31.163
+vamos entrar pouco mais no detalhe
+nessa quetão do tratamento da exceção,
+
+7
+00:00:31.163 --> 00:00:36.100
+entendendo aí como fazer isso diferentes
+cenários, diferentes situações.
+
+8
+00:00:36.100 --> 00:00:40.897
+Antes de mais nada uma coisa
+extremamente importante de
+
+9
+00:00:40.897 --> 00:00:46.664
+entender é que uma exceção
+quando ela acontece dentro de
+
+10
+00:00:46.664 --> 00:00:52.810
+bloco try tudo o que vem depois daquilo
+ali, dentro do bloco try, ele vai pular.
+
+11
+00:00:52.810 --> 00:00:57.175
+Ele vai direto para o bloco Catch
+e continua depois daquilo, não é,
+
+12
+00:00:57.175 --> 00:00:58.171
+ele não volta.
+
+13
+00:00:58.171 --> 00:01:01.697
+Então vamos pegar esse exemplo,
+o exemplo desse código aí.
+
+14
+00:01:01.697 --> 00:01:05.850
+No caso, ele vai lá, executa ali o que
+está antes do try, ele entra no try,
+
+15
+00:01:05.850 --> 00:01:11.037
+ele executa ali aquele antesErro e ali
+ele vai chamar o instancia.metodo, pá!
+
+16
+00:01:11.037 --> 00:01:17.410
+Vai dar uma exceção, ele vai e pula para o
+Catch e aí ele vai executar o trataErro.
+
+17
+00:01:17.410 --> 00:01:22.013
+Aquele código ali depoisErro
+não vai ser executado, está?
+
+18
+00:01:22.013 --> 00:01:24.328
+É extremamente importante entender isso.
+
+19
+00:01:24.328 --> 00:01:28.327
+E aí depois do bloco catch,
+ele não volta, ele continua depois,
+
+20
+00:01:28.327 --> 00:01:31.350
+ele vai executar o que está ali depoisTry.
+
+21
+00:01:31.350 --> 00:01:34.567
+Então é extremamente importante
+para a gente de saber,
+
+22
+00:01:34.567 --> 00:01:38.550
+olha se aconteceu erro o que tem
+aqui depois não vai ser executado.
+
+23
+00:01:38.550 --> 00:01:45.098
+Então, não é, pode ser que a gente
+tenha método que mais de tipo de erro
+
+24
+00:01:45.098 --> 00:01:51.377
+pode acontecer e às vezes você quer
+tratar esses erros de forma diferente.
+
+25
+00:01:51.377 --> 00:01:56.401
+Uma coisa importante nesse caso é que
+só bloco catch vai ser executado,
+
+26
+00:01:56.401 --> 00:02:00.795
+está, não interessa o erro que acontecer
+só bloco catch vai ser executado.
+
+27
+00:02:00.795 --> 00:02:06.244
+Então por exemplo nesse caso aqui
+eu coloquei, olha se for erro
+
+28
+00:02:06.244 --> 00:02:11.783
+de IO eu vou tratar IO e se for qualquer
+outra exception, ele trata a outra.
+
+29
+00:02:11.783 --> 00:02:15.889
+Uma coisa importante,
+observa por exemplo que o
+
+30
+00:02:15.889 --> 00:02:20.400
+IOException ele é uma
+subclasse de Exception.
+
+31
+00:02:20.400 --> 00:02:23.576
+Então você fala assim "
+então ele é IOException,
+
+32
+00:02:23.576 --> 00:02:26.940
+ele é uma exception" era para
+ele executar os 2 blocos.
+
+33
+00:02:26.940 --> 00:02:30.842
+Não, ele vai executar sempre
+ele vai executar o primeiro
+
+34
+00:02:30.842 --> 00:02:34.894
+que aquela exceção que
+aconteceu se encaixar.
+
+35
+00:02:34.894 --> 00:02:36.007
+No caso ali,
+
+36
+00:02:36.007 --> 00:02:41.337
+se der IOException ele vai cair no
+primeiro catch e já vai sair do bloco.
+
+37
+00:02:41.337 --> 00:02:46.550
+Se não for IOException ele vai ser
+tratado pelo segundo bloco e aí é por
+
+38
+00:02:46.550 --> 00:02:52.140
+isso que é importante que quando você,
+se você colocar vários blocos catchs,
+
+39
+00:02:52.140 --> 00:02:56.646
+na hora de tratar uma exceção,
+que as subclasses venham primeiro.
+
+40
+00:02:56.646 --> 00:03:01.847
+Então, por exemplo, se eu colocar primeiro
+exception e depois o IOException,
+
+41
+00:03:01.847 --> 00:03:05.845
+como ele pega o primeiro bloco
+que se encaixar o IOException,
+
+42
+00:03:05.845 --> 00:03:09.270
+aquele catch do IOException
+nunca seria executado.
+
+43
+00:03:09.270 --> 00:03:13.760
+Por isso mesmo a própria
+compilação do Java já diz,
+
+44
+00:03:13.760 --> 00:03:18.040
+já acusa ali Unreachable Code,
+ou seja aquele código nunca vai poder,
+
+45
+00:03:18.040 --> 00:03:24.785
+não tem como alcançar aquele código,
+certo, e aí ele já dá erro.
+
+46
+00:03:24.785 --> 00:03:28.506
+Por isso que a gente sempre tem que
+colocar na ordem ali do catch as
+
+47
+00:03:28.506 --> 00:03:30.531
+subclasses antes das superclasses.
+
+48
+00:03:30.531 --> 00:03:34.288
+Deixa eu sair aqui da frente para
+vocês poderem ver melhor, está,
+
+49
+00:03:34.288 --> 00:03:39.188
+mas observa que você pode, não é,
+isso daí foi uma adição aí
+
+50
+00:03:39.188 --> 00:03:43.399
+nas últimas versões do Java,
+você pode falar,
+
+51
+00:03:43.399 --> 00:03:48.570
+tratar da mesma forma
+diferentes tipos de exceção.
+
+52
+00:03:48.570 --> 00:03:50.943
+Então nesse caso aí, por exemplo,
+
+53
+00:03:50.943 --> 00:03:55.715
+ele está tratando da mesma forma o
+IOException e o SQLException, não é?
+
+54
+00:03:55.715 --> 00:03:58.907
+Então tanto faz pode ser
+que dê IOException ou
+
+55
+00:03:58.907 --> 00:04:03.350
+SQLException ele vai fazer
+o tratamento do erro.
+
+56
+00:04:03.350 --> 00:04:07.037
+Uma coisa importante de falar aqui é que,
+por exemplo,
+
+57
+00:04:07.037 --> 00:04:12.008
+esse tipo de estratégia ele não
+é recomendado para quando você
+
+58
+00:04:12.008 --> 00:04:16.037
+tem vários erros possíveis
+dentro da mesma hierarquia.
+
+59
+00:04:16.037 --> 00:04:20.649
+No caso ali, o IOException o erro
+por exemplo no acesso a arquivo,
+
+60
+00:04:20.649 --> 00:04:23.590
+no SQLException no acesso
+ao banco de dados,
+
+61
+00:04:23.590 --> 00:04:28.101
+mas você pode ver que nenhum dos 2 ali,
+não é,
+
+62
+00:04:28.101 --> 00:04:32.217
+digamos assim o pai deles ali mais
+próximo talvez seja o Exception.
+
+63
+00:04:32.217 --> 00:04:36.626
+Por exemplo, vamos supor que você tem uma
+exceção de segurança e você tem várias
+
+64
+00:04:36.626 --> 00:04:40.677
+subclasses, mas você quer
+tratar tudo da mesma forma,
+
+65
+00:04:40.677 --> 00:04:44.393
+é só você colocar a superclasse
+dentro do catch que
+
+66
+00:04:44.393 --> 00:04:48.857
+ele vai tratar qualquer uma
+das subclasses que caírem ali.
+
+67
+00:04:48.857 --> 00:04:54.913
+Esse, este tipo de solução que eu estou
+mostrando aí no slide ele é para os casos
+
+68
+00:04:54.913 --> 00:04:59.981
+que as exceções não estão dentro
+da mesma hierarquia e que não
+
+69
+00:04:59.981 --> 00:05:05.326
+seria adequado botar a superclasse
+comum mais próximas dela.
+
+70
+00:05:05.326 --> 00:05:10.226
+Bom, existe outro pedaço que
+você pode colocar no bloco
+
+71
+00:05:10.226 --> 00:05:12.380
+try catch que é o finally.
+
+72
+00:05:12.380 --> 00:05:17.560
+O finally ele vai executar
+independente de acontecer erro ou não.
+
+73
+00:05:17.560 --> 00:05:20.223
+O finally ele é muito conhecido,
+por exemplo,
+
+74
+00:05:20.223 --> 00:05:24.819
+quando você tem que fechar arquivo,
+fechar uma conexão porque, por exemplo,
+
+75
+00:05:24.819 --> 00:05:29.930
+se nesse caso não é,
+você colocasse o close aí dentro do try,
+
+76
+00:05:29.930 --> 00:05:34.300
+se acontecesse erro a conexão ficaria
+aberta porque ele ia pular esse código.
+
+77
+00:05:34.300 --> 00:05:35.831
+Então o que é que você quer fazer?
+
+78
+00:05:35.831 --> 00:05:39.753
+" independente de ter erro ou não,
+eu quero fechar a minha conexão".
+
+79
+00:05:39.753 --> 00:05:44.609
+Então você coloca isso no bloco finally,
+não é, então o que é que você faz?
+
+80
+00:05:44.609 --> 00:05:46.476
+Você vai lá, cria a conexão,
+
+81
+00:05:46.476 --> 00:05:50.557
+" deu erro?" ele vai para o
+catch e aí executa o finally.
+
+82
+00:05:50.557 --> 00:05:53.921
+" criou a conexão com sucesso",
+não deu erro?
+
+83
+00:05:53.921 --> 00:05:58.423
+Depois que ele termina o bloco
+try ele vai e executa o finally.
+
+84
+00:05:58.423 --> 00:06:03.105
+Uma coisa importante é que mesmo
+quando você retorna alguma
+
+85
+00:06:03.105 --> 00:06:08.109
+coisa o finally ele é sempre executado,
+então você pode terminar
+
+86
+00:06:08.109 --> 00:06:12.523
+o bloco try simplesmente pelos
+comandos dele terem acabado,
+
+87
+00:06:12.523 --> 00:06:17.419
+ou pode ser uma interrupção abrupta
+tanto por uma exceção quanto por
+
+88
+00:06:17.419 --> 00:06:22.219
+retorno que o finally vai ser sempre,
+sempre, sempre,
+
+89
+00:06:22.219 --> 00:06:26.254
+mais sempre, executado, está certo?
+
+90
+00:06:26.254 --> 00:06:31.933
+Uma coisa importante é você
+entender que você colocar
+
+91
+00:06:31.933 --> 00:06:39.320
+o bloco try catch de forma diferente pode
+gerar efeitos diferentes no seu software.
+
+92
+00:06:39.320 --> 00:06:44.440
+Note nesse exemplo aí que,
+por exemplo, se der erro no a,
+
+93
+00:06:44.440 --> 00:06:48.650
+o b não vai ser executado,
+ele vai direto para o tratamento do erro.
+
+94
+00:06:48.650 --> 00:06:54.470
+Diferente dessa opção onde eu tenho try
+catch para o a e try catch para o b.
+
+95
+00:06:54.470 --> 00:07:00.317
+Nesse caso se ele executar o
+a ele vai tratar o erro mas logo
+
+96
+00:07:00.317 --> 00:07:05.730
+seguida ele vai executar também o b,
+não é, ele não pula a execução.
+
+97
+00:07:05.730 --> 00:07:09.336
+Então faz diferença, não é,
+você tem que pensar isso.
+
+98
+00:07:09.336 --> 00:07:14.728
+Eu vejo isso ter muito efeito,
+por exemplo: " eu coloco o meu try catch
+
+99
+00:07:14.728 --> 00:07:20.350
+dentro de loop ou fora desse loop?"
+Saiba que se você colocar fora,
+
+100
+00:07:20.350 --> 00:07:25.819
+quando der uma excepção ele vai sair
+fora do loop e não vai continuar ele.
+
+101
+00:07:25.819 --> 00:07:29.250
+Se você colocar dentro do
+loop e tratar aquela exceção,
+
+102
+00:07:29.250 --> 00:07:32.836
+ele vai continuar aquela,
+as próximas iterações.
+
+103
+00:07:32.836 --> 00:07:37.500
+Então " qual é que é a melhor
+forma?" Depende do que você prefere,
+
+104
+00:07:37.500 --> 00:07:41.332
+depende do qual é a sua intenção
+na hora de criar aquele código.
+
+105
+00:07:41.332 --> 00:07:44.820
+É para ele continuar processando
+mesmo se acontecer erro?
+
+106
+00:07:44.820 --> 00:07:49.356
+Ou se a lista lá que ele está processando
+é para ele parar de processar tudo quando
+
+107
+00:07:49.356 --> 00:07:50.110
+der erro?
+
+108
+00:07:50.110 --> 00:07:55.572
+Isso vai influenciar onde você vai
+colocar o seu bloco try catch.
+
+109
+00:07:55.572 --> 00:08:00.410
+Então presta bem atenção onde você
+está botando os seus blocos try catch,
+
+110
+00:08:00.410 --> 00:08:02.854
+o que é que você está
+botando dentro do seu try,
+
+111
+00:08:02.854 --> 00:08:07.118
+o que é que você está botando no finally,
+presta bem atenção porque isso faz muita
+
+112
+00:08:07.118 --> 00:08:09.997
+diferença na hora do
+tratamento de exceções.
+
+113
+00:08:09.997 --> 00:08:14.681
+O que acontece que eu vejo às vezes
+muito erro software por causa disso,
+
+114
+00:08:14.681 --> 00:08:19.425
+já vi aí vários projetos que eu trabalhei
+vários erros acontecerem porque na
+
+115
+00:08:19.425 --> 00:08:24.003
+hora de testar você vai lá e testa, tudo
+funcionando, você não vai fazer o teste lá
+
+116
+00:08:24.003 --> 00:08:29.107
+dando erro de conexão no banco de dados
+mas se eventualmente esse erro acontece,
+
+117
+00:08:29.107 --> 00:08:32.345
+às vezes esse erro é tratado
+de uma forma indevida.
+
+118
+00:08:32.345 --> 00:08:36.607
+E aí já vi muitas vezes software que
+já está funcionando há certo tempo,
+
+119
+00:08:36.607 --> 00:08:41.304
+às vezes acontece erro,
+que seria normal mas inesperado e o
+
+120
+00:08:41.304 --> 00:08:45.897
+software não sabe lidar com aquilo,
+não sabe tratar aquilo da forma
+
+121
+00:08:45.897 --> 00:08:50.730
+adequada às vezes por não ter colocado
+uma instrução dentro do finally,
+
+122
+00:08:50.730 --> 00:08:55.690
+não ter colocado o bloco try catch,
+
+123
+00:08:55.690 --> 00:09:00.727
+o código adequado,
+ter colocado coisas a mais para dentro,
+
+124
+00:09:00.727 --> 00:09:03.426
+coisas a mais para fora, certo?
+
+125
+00:09:03.426 --> 00:09:07.829
+Então tem que prestar muita
+atenção nisso por realmente faz
+
+126
+00:09:07.829 --> 00:09:12.342
+diferença e só vai aparecer esse
+problema no momento que der
+
+127
+00:09:12.342 --> 00:09:16.057
+erro e às vezes a consequência
+pode não ser muito legal.
+
+128
+00:09:16.057 --> 00:09:20.672
+Então eu espero que com essa aula vocês
+tenham entendido melhor o tratamento de
+
+129
+00:09:20.672 --> 00:09:25.338
+excepções, entendido esses casos especiais
+quando quer tratar mais de uma classe,
+
+130
+00:09:25.338 --> 00:09:30.460
+entendido a importância de posicionar
+e colocar os comandos corretos não é,
+
+131
+00:09:30.460 --> 00:09:34.481
+e necessários dentro do bloco try,
+dentro do finally e etc.
+
+132
+00:09:34.481 --> 00:09:36.485
+Muito obrigado por assistir.
+
+133
+00:09:36.485 --> 00:09:41.133
+Até à próxima aula!
+
+134
+00:09:41.133 --> 00:09:43.870
+[MÚSICA]

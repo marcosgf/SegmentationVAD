@@ -1,0 +1,253 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.290
+[MÚSICA]
+
+2
+00:00:07.290 --> 00:00:12.130
+Muito bem.
+
+3
+00:00:12.130 --> 00:00:17.059
+Chegamos à última semana desse curso
+e acho interessante listarmos o que
+
+4
+00:00:17.059 --> 00:00:19.580
+você já aprendeu nessas 3 semanas.
+
+5
+00:00:19.580 --> 00:00:24.850
+Você aprendeu o que é sistema e
+o que é o controle de sistemas,
+
+6
+00:00:24.850 --> 00:00:30.120
+também aprendeu que Ktesíbios era inventor
+grego e que o pai dele era barbeiro.
+
+7
+00:00:30.120 --> 00:00:34.260
+Você aprendeu que o objetivo
+do controle é modificar
+
+8
+00:00:34.260 --> 00:00:38.400
+o comportamento de sistemas
+adequando-os às nossas necessidades.
+
+9
+00:00:38.400 --> 00:00:42.337
+Você aprendeu que o controle
+pode ser feito malha aberta e
+
+10
+00:00:42.337 --> 00:00:46.290
+malha fechada e viu quais são
+as vantagens da realimentação.
+
+11
+00:00:46.290 --> 00:00:51.437
+Você também aprendeu o que são
+modelos e que é muito importante ter
+
+12
+00:00:51.437 --> 00:00:55.850
+modelo matemático do sistema para
+fins de análise e projeto teóricos.
+
+13
+00:00:55.850 --> 00:01:00.628
+Você viu a transformada de Laplace
+e aprendeu a usá-la para obter
+
+14
+00:01:00.628 --> 00:01:04.290
+a função de transferência de sistema
+linear e invariante no tempo.
+
+15
+00:01:04.290 --> 00:01:07.859
+Você também aprendeu
+a verificar a estabilidade de
+
+16
+00:01:07.859 --> 00:01:12.550
+sistema e a calcular o e regime
+permanente para as entradas mais comuns.
+
+17
+00:01:12.550 --> 00:01:17.447
+Além disso, você viu alguns exemplos
+de sistemas e pôde até citar seus
+
+18
+00:01:17.447 --> 00:01:20.020
+exemplos e ver exemplos de colegas.
+
+19
+00:01:20.020 --> 00:01:26.030
+E essa semana você vai ver como
+projetar controlador proporcional.
+
+20
+00:01:26.030 --> 00:01:30.010
+Quanta coisa para curso
+introdutório de 4 semanas, não?
+
+21
+00:01:30.010 --> 00:01:33.497
+Bom.
+Agora acho que convém fazer pequeno
+
+22
+00:01:33.497 --> 00:01:38.730
+esclarecimento: controle de
+sistemas não é coisa de preguiçoso.
+
+23
+00:01:38.730 --> 00:01:43.500
+Controle de sistemas é coisa de
+quem quer fazer mais menos tempo.
+
+24
+00:01:43.500 --> 00:01:48.340
+É coisa de quem sabe que pode melhorar
+as coisas e quer fazer isso de
+
+25
+00:01:48.340 --> 00:01:49.750
+forma eficiente.
+
+26
+00:01:49.750 --> 00:01:53.830
+É coisa de quem quer acabar
+projeto que levaria 1 ano
+
+27
+00:01:53.830 --> 00:01:57.060
+apenas 6 meses e já começar novo projeto.
+
+28
+00:01:57.060 --> 00:02:02.067
+Sem o controle de sistemas, não
+teríamos comunicação a longa distância,
+
+29
+00:02:02.067 --> 00:02:06.363
+não haveria corrida espacial,
+nada de viagens à Lua, satélites,
+
+30
+00:02:06.363 --> 00:02:08.680
+estação espacial, viagem a Marte.
+
+31
+00:02:08.680 --> 00:02:13.201
+Não teríamos motores a jato
+ou turbojato ou turboélice,
+
+32
+00:02:13.201 --> 00:02:17.706
+até mesmo os motores à combustão e
+consequentemente os inúmeros veículos
+
+33
+00:02:17.706 --> 00:02:22.452
+que usam esse tipo de motor seriam muito
+menos eficientes, consumiriam muito
+
+34
+00:02:22.452 --> 00:02:26.400
+mais combustível e poluiriam
+muito mais o nosso meio ambiente.
+
+35
+00:02:26.400 --> 00:02:31.090
+Isso sem mencionar a robótica
+e suas variadas aplicações.
+
+36
+00:02:31.090 --> 00:02:32.773
+Sem controle de sistemas,
+
+37
+00:02:32.773 --> 00:02:37.531
+não teríamos braços robóticos capazes
+de realizar cirurgias delicadas e nem
+
+38
+00:02:37.531 --> 00:02:42.196
+mesmo robôs industriais capazes de
+elevar a produtividade de uma fábrica e
+
+39
+00:02:42.196 --> 00:02:45.320
+substituir o ser humano
+situações perigosas.
+
+40
+00:02:45.320 --> 00:02:50.110
+Estaríamos basicamente vivendo
+antes da Revolução Industrial.
+
+41
+00:02:50.110 --> 00:02:53.205
+Nem dá para imaginar, dá?
+
+42
+00:02:53.205 --> 00:02:58.136
+Então sempre que você usar
+algum dispositivo ou aparelho
+
+43
+00:02:58.136 --> 00:03:02.450
+e gostar do seu desempenho,
+agradeça a engenheiro de controle.
+
+44
+00:03:02.450 --> 00:03:04.387
+Agora, se você não gostar,
+
+45
+00:03:04.387 --> 00:03:09.890
+você vai poder propor o seu próprio
+controlador para melhorar esse desempenho.
+
+46
+00:03:09.890 --> 00:03:16.410
+Bom, pelo menos depois de ter finalizado
+esse curso e feito mais alguns.
+
+47
+00:03:16.410 --> 00:03:20.950
+Com o controle de sistemas
+realmente podemos mudar o mundo e
+
+48
+00:03:20.950 --> 00:03:25.890
+torná-lo lugar melhor,
+sistema e controlador de cada vez.
+
+49
+00:03:25.890 --> 00:03:26.678
+Nossa!
+
+50
+00:03:26.678 --> 00:03:29.606
+Fiquei até emocionado agora.
+
+51
+00:03:29.606 --> 00:03:35.516
+Nessa última semana do curso,
+você verá como projetar controle
+
+52
+00:03:35.516 --> 00:03:41.395
+proporcional para atender requisitos
+de desempenho da resposta ao degrau.
+
+53
+00:03:41.395 --> 00:03:48.900
+[MÚSICA] [RUÍDO]

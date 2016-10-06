@@ -1,0 +1,635 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.054
+[MÚSICA] Esse
+
+2
+00:00:08.054 --> 00:00:12.414
+é o curso de Orientação
+a Objetos com Java.
+
+3
+00:00:12.414 --> 00:00:16.935
+Meu nome é Eduardo Guerra
+e hoje eu estou aqui para
+
+4
+00:00:16.935 --> 00:00:21.585
+responder uma pergunta que
+muitos desenvolvedores fazem.
+
+5
+00:00:21.585 --> 00:00:23.325
+Eu preciso de diagramas?
+
+6
+00:00:23.325 --> 00:00:27.600
+A gente vai falar aqui no curso
+sobre alguns tipos de diagramas,
+
+7
+00:00:27.600 --> 00:00:31.256
+na sequência vamos falar
+sobre os diagramas de classe,
+
+8
+00:00:31.256 --> 00:00:36.644
+mas antes de entrar no diagrama si eu
+não quero que você comece a aprender
+
+9
+00:00:36.644 --> 00:00:41.470
+sem entender como que diagrama
+deve ser utilizado num
+
+10
+00:00:41.470 --> 00:00:46.258
+projeto de software,
+qual é a utilidade do diagrama,
+
+11
+00:00:46.258 --> 00:00:51.648
+como utilizar ele de forma
+que ele vai ser útil, certo?
+
+12
+00:00:51.648 --> 00:00:56.530
+Então, eu vejo que muita
+gente se faz essa pergunta:
+
+13
+00:00:56.530 --> 00:00:59.033
+Por que que eu preciso de diagrama?
+
+14
+00:00:59.033 --> 00:01:03.418
+O cara pensa assim: "Eu tenho diagrama",
+"Eu tenho código,
+
+15
+00:01:03.418 --> 00:01:07.425
+as vezes eu tenho código, o cógico
+já representa o que o software faz.
+
+16
+00:01:07.425 --> 00:01:12.534
+Para que que eu preciso de diagrama
+mostrando essas mesmas coisas?" Vamos ver
+
+17
+00:01:12.534 --> 00:01:18.256
+aqui alguns motivos pelos quais você
+pode querer estar utilizando diagrama.
+
+18
+00:01:18.256 --> 00:01:22.175
+A primeira coisa é que o
+diagrama ele pode te ajudar
+
+19
+00:01:22.175 --> 00:01:26.323
+a comunicar de uma forma bastante
+eficiente as suas ideias.
+
+20
+00:01:26.323 --> 00:01:30.151
+Imagina por exemplo que você
+quer comunicar a equipe,
+
+21
+00:01:30.151 --> 00:01:34.261
+por exemplo,
+explicar pouco do domínio do software.
+
+22
+00:01:34.261 --> 00:01:37.780
+Imagina lá que o seu
+software é sobre uma escola,
+
+23
+00:01:37.780 --> 00:01:42.917
+então você quer mostrar como que os
+alunos se relacionam com os cursos,
+
+24
+00:01:42.917 --> 00:01:47.229
+os professores como eles são
+alocados nos cursos nas unidades,
+
+25
+00:01:47.229 --> 00:01:51.242
+então você tem diagrama
+representando esse domínio,
+
+26
+00:01:51.242 --> 00:01:55.970
+isso daí pode ajudar as outras pessoas,
+pode ser uma
+
+27
+00:01:55.970 --> 00:02:00.950
+forma bastante eficiente de comunicação,
+de você passar essas informações
+
+28
+00:02:00.950 --> 00:02:05.462
+para as pessoas de uma forma mais rápida,
+muito mais rápido que você ter,
+
+29
+00:02:05.462 --> 00:02:10.774
+por exemplo, monte de classes lá no código
+e a pessoa ter que ir olhando uma por uma.
+
+30
+00:02:10.774 --> 00:02:13.593
+Outro motivo para você utilizar os
+
+31
+00:02:13.593 --> 00:02:18.157
+diagramas é para você poder
+pensar melhor no seu domínio.
+
+32
+00:02:18.157 --> 00:02:23.549
+Muitas vezes, eu por exemplo eu tenho
+essa característica de as vezes eu estou
+
+33
+00:02:23.549 --> 00:02:28.573
+pensando, eu estou raciocinando, estou
+montando uma arquitetura, estou tentando
+
+34
+00:02:28.573 --> 00:02:33.529
+pensar melhor como representar
+aquelas informações do domínio,
+
+35
+00:02:33.529 --> 00:02:38.750
+de as vezes indo e desenhando diagrama,
+muitas vezes sem muitas amarras,
+
+36
+00:02:38.750 --> 00:02:43.073
+sem muitas ferramentas, as vezes num
+papel ou as vezes num quadro branco,
+
+37
+00:02:43.073 --> 00:02:46.254
+me ajuda bastante a pensar, a raciocinar,
+
+38
+00:02:46.254 --> 00:02:51.225
+a trabalhar melhor aquele
+conceito antes de ir por exemplo,
+
+39
+00:02:51.225 --> 00:02:55.440
+pro código e trabalhar
+naquilo ali individualmente.
+
+40
+00:02:55.440 --> 00:02:57.960
+O diagrama ele me ajuda a pensar.
+
+41
+00:02:57.960 --> 00:03:03.006
+Uma outra utilidade do
+diagrama é você poder explorar
+
+42
+00:03:03.006 --> 00:03:08.531
+diversas soluções então muitas vezes
+você fala assim: " eu posso representar,
+
+43
+00:03:08.531 --> 00:03:10.280
+por exemplo, a escola dessa forma.
+
+44
+00:03:10.280 --> 00:03:14.646
+Eu posso ter por exemplo os cursos,
+eles podem fazer parte da escola,
+
+45
+00:03:14.646 --> 00:03:18.992
+ou então eu posso ter os cursos como
+uma coisa independente da escola,
+
+46
+00:03:18.992 --> 00:03:21.418
+e simplesmente serem relacionados".
+
+47
+00:03:21.418 --> 00:03:25.909
+E ai eu posso por exemplo, na hora
+que eu estou pensando no meu sistema,
+
+48
+00:03:25.909 --> 00:03:31.140
+eu posso explorar essas diversas
+alternativas a partir dos diagramas.
+
+49
+00:03:31.140 --> 00:03:33.462
+"Se eu fizer assim fica desse jeito,
+
+50
+00:03:33.462 --> 00:03:36.729
+se eu fizer desse outro vai
+ter essa consequência".
+
+51
+00:03:36.729 --> 00:03:41.526
+E ai ver o que que seria o mais adequado,
+simular cenários, e então o diagrama
+
+52
+00:03:41.526 --> 00:03:46.350
+também é muito interessante para ao invés
+de você ir direto pro código e querer já
+
+53
+00:03:46.350 --> 00:03:51.404
+criar uma solução definitiva que muitas
+vezes você não sabe se é aquilo mesmo,
+
+54
+00:03:51.404 --> 00:03:55.162
+ou você nem sabe direito o que
+você tá indo pro código fazer,
+
+55
+00:03:55.162 --> 00:04:00.034
+o diagrama é uma forma de você estar
+explorando essas diferentes opções que
+
+56
+00:04:00.034 --> 00:04:04.110
+muitas vezes você tem na
+hora de criar software.
+
+57
+00:04:04.110 --> 00:04:10.684
+Que lugar, que lugar bonito,
+deixa até eu colocar aqui meu óculos aqui,
+
+58
+00:04:10.684 --> 00:04:14.794
+maravilha, então pensa se de
+dentro de apartamento, se
+
+59
+00:04:14.794 --> 00:04:19.710
+dentro da casa de alguém a pessoa consegue
+ter essa visão ai do Rio de Janeiro.
+
+60
+00:04:19.710 --> 00:04:24.694
+Difícil né, da mesma forma,
+você pegando o código de uma classe
+
+61
+00:04:24.694 --> 00:04:28.796
+você não consegue ter uma
+visão geral do software.
+
+62
+00:04:28.796 --> 00:04:33.911
+Essa é uma das outras utilidades
+dos diagramas que é dar essa
+
+63
+00:04:33.911 --> 00:04:39.951
+visão geral onde você pode estar
+visualizando o software como todo.
+
+64
+00:04:39.951 --> 00:04:43.703
+Então da mesma forma que eu,
+por exemplo, se eu subir, se for
+
+65
+00:04:43.703 --> 00:04:47.867
+de helicóptero ou subir as
+vezes num lugar muito alto,
+
+66
+00:04:47.867 --> 00:04:53.540
+eu consigo ter essa visão panorâmica
+ai da cidade, que maravilha,
+
+67
+00:04:53.540 --> 00:04:58.305
+eu consigo por exemplo
+a partir de diagrama ter
+
+68
+00:04:58.305 --> 00:05:03.270
+essa visão do software mais como todo.
+
+69
+00:05:03.270 --> 00:05:07.766
+Muitas vezes o diagrama ele vai focar
+numa questão específica, por exemplo,
+
+70
+00:05:07.766 --> 00:05:13.257
+arquitetura, as classes de domínio,
+ou como é a interação entre as classes,
+
+71
+00:05:13.257 --> 00:05:17.567
+ou de repente como uma determinada
+classe muda de estados
+
+72
+00:05:17.567 --> 00:05:22.290
+durante o seu ciclo de vida,
+mas o diagrama ele é interessante que
+
+73
+00:05:22.290 --> 00:05:25.740
+muitas vezes essas informações elas
+estão espalhadas pelo software.
+
+74
+00:05:25.740 --> 00:05:30.274
+Muitas vezes essas são implementadas
+por diversas classes e você indo lá e
+
+75
+00:05:30.274 --> 00:05:34.871
+olhando cada uma dessas classes é
+diferente de você, por exemplo,
+
+76
+00:05:34.871 --> 00:05:39.854
+ir lá e olhar tudo de cima e ver
+como as coisas estão organizadas e
+
+77
+00:05:39.854 --> 00:05:43.871
+como elas se encaixam,
+do que indo lá baixo e visitando cada uma.
+
+78
+00:05:43.871 --> 00:05:47.356
+Quantas vezes,
+as vezes você não pega caminho diferente,
+
+79
+00:05:47.356 --> 00:05:51.910
+e ai você se surpreende você fala assim:
+"Olha, mas esse caminho veio parar aqui.
+
+80
+00:05:51.910 --> 00:05:56.929
+Por que?" Porque ali no detalhe muitas
+vezes você não tem a visão de como as
+
+81
+00:05:56.929 --> 00:06:01.816
+coisas estão conectadas, como as
+coisas se relacionam e tomando essa
+
+82
+00:06:01.816 --> 00:06:06.633
+distancia a partir do diagrama
+isso pode ficar muito mais claro.
+
+83
+00:06:06.633 --> 00:06:11.721
+Isso com certeza é uma das
+principais utilidades de diagrama e
+
+84
+00:06:11.721 --> 00:06:16.855
+pode ser essencial na comunicação
+dentro da equipe para que todos
+
+85
+00:06:16.855 --> 00:06:22.069
+entendam as soluções e tenham esse
+panorama de como que o software funciona,
+
+86
+00:06:22.069 --> 00:06:25.829
+de como as classes colaboram para
+se chegar num resultado final.
+
+87
+00:06:25.829 --> 00:06:30.125
+Uma outra experiencia que eu posso falar,
+talvez seja o principal uso de diagramas
+
+88
+00:06:30.125 --> 00:06:35.060
+pelo menos para mim,
+ser uma excelente ferramenta para
+
+89
+00:06:35.060 --> 00:06:39.317
+você discutir o design e as
+soluções com outras pessoas.
+
+90
+00:06:39.317 --> 00:06:44.320
+Eu tive uma experiência recente que
+eu tava discutindo a arquitetura
+
+91
+00:06:44.320 --> 00:06:48.754
+uma nova arquitetura para software
+existente junto com a equipe,
+
+92
+00:06:48.754 --> 00:06:52.066
+e a gente utilizou diagramas
+num quadro branco,
+
+93
+00:06:52.066 --> 00:06:56.285
+eu fui e fui desenhando a solução toda
+a equipe foi interagindo dando opinião,
+
+94
+00:06:56.285 --> 00:06:59.035
+quando alguém não entendia
+falava: "Mas que bloco e aquele?
+
+95
+00:06:59.035 --> 00:07:00.560
+Que que aquilo faz?
+
+96
+00:07:00.560 --> 00:07:03.800
+Olha, onde que está tal parte da solução?
+
+97
+00:07:03.800 --> 00:07:08.102
+Quem vai ser responsável por fazer
+aquilo?" Então a partir daquele diagrama
+
+98
+00:07:08.102 --> 00:07:10.382
+a gente foi criando dentro da equipe ali,
+
+99
+00:07:10.382 --> 00:07:15.053
+toda uma visão de como que aquela
+arquitetura iria funcionar.
+
+100
+00:07:15.053 --> 00:07:20.737
+Então os diagramas eles são uma excelente
+ferramenta para o design colaborativo,
+
+101
+00:07:20.737 --> 00:07:24.100
+para se trabalhar junto com
+outra pessoa numa solução,
+
+102
+00:07:24.100 --> 00:07:27.256
+principalmente por exemplo
+na frente de quadro branco.
+
+103
+00:07:27.256 --> 00:07:32.999
+Falei várias formas de usar o diagrama,
+agora a principal forma de não utilizar.
+
+104
+00:07:32.999 --> 00:07:37.700
+Você não deve utilizar diagrama
+só porque alguém falou
+
+105
+00:07:37.700 --> 00:07:41.726
+que você precisava fazer aquele diagrama,
+é a pior forma.
+
+106
+00:07:41.726 --> 00:07:46.695
+Pode até ser que a pessoa tenha razão
+pedir para você fazer aquele diagrama,
+
+107
+00:07:46.695 --> 00:07:50.290
+só que se você não souber para
+que que aquele diagrama serve,
+
+108
+00:07:50.290 --> 00:07:54.920
+quem vai ler aquele diagrama,
+você não vai fazer o diagrama adequado.
+
+109
+00:07:54.920 --> 00:07:59.644
+Então, não siga como se fosse
+esses cavalos que usam,
+
+110
+00:07:59.644 --> 00:08:05.140
+que se chama antolho
+que tampa a visão e faz
+
+111
+00:08:05.140 --> 00:08:11.760
+ele ver somente retinho,
+sem saber o que está acontecendo do lado,
+
+112
+00:08:11.760 --> 00:08:17.270
+ele está indo ali para a frente sem saber
+o que esta acontecendo, não seja assim.
+
+113
+00:08:17.270 --> 00:08:20.886
+Crie diagrama sabendo para
+que aquele diagrama serve,
+
+114
+00:08:20.886 --> 00:08:25.255
+para quem é aquele diagrama,
+para que você possa fazer o diagrama mais
+
+115
+00:08:25.255 --> 00:08:29.560
+adequado de acordo com o
+propósito que você tem.
+
+116
+00:08:29.560 --> 00:08:35.888
+Então a pior forma de você usar diagrama
+é simplesmente porque o processo,
+
+117
+00:08:35.888 --> 00:08:41.015
+ou alguém falou que você tem que
+fazer e você não vê aquela utilidade.
+
+118
+00:08:41.015 --> 00:08:44.963
+Então por mais que aquela pessoa
+ou aquele processo tenha razão,
+
+119
+00:08:44.963 --> 00:08:50.225
+procure primeiro entender o motivo de
+fazer aquele diagrama, questione se for
+
+120
+00:08:50.225 --> 00:08:55.451
+necessário mas evite criar
+diagramas de forma cega só porque
+
+121
+00:08:55.451 --> 00:09:00.233
+alguém ou algum processo disse que
+era necessário e que era importante.
+
+122
+00:09:00.233 --> 00:09:04.902
+Com isso eu espero que vocês tenham
+entendido como que os diagramas eles podem
+
+123
+00:09:04.902 --> 00:09:09.470
+ser utilizados dentro de uma equipe,
+dentro de projeto de software para
+
+124
+00:09:09.470 --> 00:09:14.895
+a comunicação, para a colaboração,
+para você pensar melhor num problema,
+
+125
+00:09:14.895 --> 00:09:20.470
+para você poder ter uma visão geral
+de como as coisas estão organizadas.
+
+126
+00:09:20.470 --> 00:09:25.390
+E não se esqueça de não seguir
+cegamente sem entender o porquê
+
+127
+00:09:25.390 --> 00:09:27.609
+precisa criar diagrama.
+
+128
+00:09:27.609 --> 00:09:32.620
+Sempre entenda o motivo e quem é o público
+alvo do diagrama que você está criando.
+
+129
+00:09:32.620 --> 00:09:34.830
+Espero que tenha ficado claro para vocês.
+
+130
+00:09:34.830 --> 00:09:41.940
+Até a próxima aula!

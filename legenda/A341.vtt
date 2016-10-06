@@ -1,0 +1,254 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.730
+[MÚSICA]
+
+2
+00:00:06.730 --> 00:00:12.600
+[MÚSICA]
+
+3
+00:00:12.600 --> 00:00:18.804
+[MÚSICA] Bem-vindo
+
+4
+00:00:18.804 --> 00:00:24.380
+à quarta semana do curso de Controle
+usando a Resposta Frequência.
+
+5
+00:00:24.380 --> 00:00:29.351
+Nesta semana você aprenderá a projetar
+controladores usando o conhecimento
+
+6
+00:00:29.351 --> 00:00:34.080
+da resposta frequência tanto do
+sistema quanto do controlador.
+
+7
+00:00:34.080 --> 00:00:39.014
+Nesse caso, falamos da resposta
+frequência do controlador porque esse
+
+8
+00:00:39.014 --> 00:00:41.140
+não será mais simples ganho.
+
+9
+00:00:41.140 --> 00:00:46.130
+Nossos controladores passarão a ser
+também sistemas dinâmicos e os graus
+
+10
+00:00:46.130 --> 00:00:50.784
+de liberdade a mais que essa maior
+complexidade trará serão usados para
+
+11
+00:00:50.784 --> 00:00:56.010
+atingir requisitos de desempenho que não
+poderiam ser alcançados com simples ganho.
+
+12
+00:00:56.010 --> 00:01:01.039
+Neste vídeo você aprenderá
+a computar o efeito de se colocar 0
+
+13
+00:01:01.039 --> 00:01:06.310
+na função de transferência por meio da
+alteração de diagrama de Bode do sistema.
+
+14
+00:01:06.310 --> 00:01:13.416
+Antes de mais nada vamos relembrar que
+com o módulo da dB e a frase graus,
+
+15
+00:01:13.416 --> 00:01:20.869
+isso significa que
+G(s)=Gn(s)(s-z1) Que G(s)
+
+16
+00:01:20.869 --> 00:01:25.686
+é a função de transferência
+resultante com o 0 e Gn(s) é
+
+17
+00:01:25.686 --> 00:01:29.820
+a função original sem o 0, e o 0 é z1.
+
+18
+00:01:29.820 --> 00:01:34.200
+Vamos tratar do caso z1 menor do que 0,
+
+19
+00:01:34.200 --> 00:01:37.880
+isto é, com o 0 no semiplano esquerdo.
+
+20
+00:01:37.880 --> 00:01:42.010
+Para o caso z1 maior do que 0,
+consulte o material adicional.
+
+21
+00:01:42.010 --> 00:01:46.735
+O módulo dB será |G(jω)|dB
+
+22
+00:01:46.735 --> 00:01:51.460
+= |Gn(jω)|dB
+
+23
+00:01:51.460 --> 00:01:56.139
++ | jω-z1|dB Isto é,
+
+24
+00:01:56.139 --> 00:02:01.070
+o módulo da função de transferência
+resultante será o módulo
+
+25
+00:02:01.070 --> 00:02:05.300
+da função sem o 0,
+mais o módulo da porção devido ao 0.
+
+26
+00:02:05.300 --> 00:02:07.990
+Esse segundo termo é muito simples.
+
+27
+00:02:07.990 --> 00:02:13.937
+Se você pensar termos das
+assíntotas e frequência de quebra,
+
+28
+00:02:13.937 --> 00:02:19.551
+terá |jω-z1|dB = 20log(|z1|),
+
+29
+00:02:19.551 --> 00:02:24.379
+para ω≤ |z1| = 20log(|ω/z1|),
+
+30
+00:02:24.379 --> 00:02:28.947
+para ω> |z1| Agora, calculando a fase,
+
+31
+00:02:28.947 --> 00:02:36.740
+a fase de G(jω) será igual a fase
+de Gn(jω) + a fase de (jω-z1).
+
+32
+00:02:36.740 --> 00:02:44.160
+Novamente, pensando termos das assíntotas,
+fase de (jω-z1) será igual 0,
+
+33
+00:02:44.160 --> 00:02:49.140
+para ω≤ |z1| e 90° para ω> |z1|.
+
+34
+00:02:49.140 --> 00:02:55.732
+E seguimos o nosso procedimento de
+unir essas assíntotas por uma reta,
+
+35
+00:02:55.732 --> 00:03:00.806
+começando meia década antes de z1
+e terminado meia década depois,
+
+36
+00:03:00.806 --> 00:03:06.160
+teremos: fase de (jω-z1) = 0
+
+37
+00:03:06.160 --> 00:03:11.362
+para ω≤ |z1| /5 90°.
+
+38
+00:03:11.362 --> 00:03:16.508
+log(ω.5/ |z1|) tudo isso
+
+39
+00:03:16.508 --> 00:03:21.718
+dividido pelo log25 para |z1| /5<ω≤
+
+40
+00:03:21.718 --> 00:03:26.090
+5.z1 e 90° para ω>5|z1|
+
+41
+00:03:26.090 --> 00:03:31.030
+Esboçando essas assíntotas de modo
+de fase, teremos a seguinte figura.
+
+42
+00:03:31.030 --> 00:03:35.190
+Você pode notar a frequência
+de quebra módulo de z1.
+
+43
+00:03:35.190 --> 00:03:41.470
+Agora você pode ver claramente os efeitos
+de se acrescentar 0 no diagrama de Bode.
+
+44
+00:03:41.470 --> 00:03:46.480
+Primeiro, o ganho dB será
+aumentado de 20log |z1|
+
+45
+00:03:46.480 --> 00:03:51.840
+baixas frequências e crescerá com
+20dB por década acima de |z1|.
+
+46
+00:03:51.840 --> 00:03:56.656
+Segundo, a fase será aumentada
+a partir de cerca de
+
+47
+00:03:56.656 --> 00:04:02.339
+|z1|/5 atingindo 45° ω=|z1| e alcançando
+
+48
+00:04:02.339 --> 00:04:07.730
+a assíntota constante de 90°
+a partir de cerca de ω=5|z1|.
+
+49
+00:04:07.730 --> 00:04:12.677
+Claramente, adicionar zero pode ser
+uma boa ideia caso você precise
+
+50
+00:04:12.677 --> 00:04:14.580
+aumentar a margem de fase.
+
+51
+00:04:14.580 --> 00:04:18.176
+Contudo, esse elemento não
+é realizável pois o grau
+
+52
+00:04:18.176 --> 00:04:21.620
+do numerador é maior do
+que o grau do denominador.
+
+53
+00:04:21.620 --> 00:04:25.120
+Então a função de transferência
+desse elemento não é própria.
+
+54
+00:04:25.120 --> 00:04:29.903
+Nos próximos vídeos vamos
+ver qual é o efeito
+
+55
+00:04:29.903 --> 00:04:33.390
+de acrescentar polo à
+função de transferência.

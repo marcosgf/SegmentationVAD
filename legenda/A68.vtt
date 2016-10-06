@@ -1,0 +1,557 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.710
+[MÚSICA]
+
+2
+00:00:05.710 --> 00:00:12.997
+[SEM_ÁUDIO] Olá!
+
+3
+00:00:12.997 --> 00:00:19.340
+Nesta aula de hoje nós vamos aprender
+a usar Stata para fazer cluster analysis.
+
+4
+00:00:19.340 --> 00:00:23.188
+Primeira cois,a vamos abrir
+o software Stata versão 13,
+
+5
+00:00:23.188 --> 00:00:26.890
+que é a que nós estamos usando,
+e importar a base de dados.
+
+6
+00:00:26.890 --> 00:00:31.452
+Primeira base que nós vamos usar,
+vamos fazer aqui o browse,
+
+7
+00:00:31.452 --> 00:00:34.753
+é a base dados chamada Gastos Diários.
+
+8
+00:00:34.753 --> 00:00:40.348
+Esta base é aquela base muito
+simples que a gente já usou nas
+
+9
+00:00:40.348 --> 00:00:46.579
+nossas vídeoaulas para mostrar os gastos
+diários de pessoas entre comida e roupa.
+
+10
+00:00:46.579 --> 00:00:51.310
+Toda vez que você importa uma base de
+dados, você tem que identificar qual é
+
+11
+00:00:51.310 --> 00:00:54.320
+a planilha,
+a planilha certa é a planilha dados,
+
+12
+00:00:54.320 --> 00:01:00.160
+e aí clicar nesta casa para que o nome
+da variável assuma a posição correta.
+
+13
+00:01:00.160 --> 00:01:04.994
+Você pode agora ir no Editor ver se a base
+de dados foi carregada corretamente.
+
+14
+00:01:04.994 --> 00:01:06.824
+Nós temos aqui as 5 pessoas,
+
+15
+00:01:06.824 --> 00:01:11.084
+os gastos diários com comida e os
+gastos diários com roupas, portanto,
+
+16
+00:01:11.084 --> 00:01:16.004
+estamos já em condições de pedir para
+o Stata fazer gráfico para que a gente
+
+17
+00:01:16.004 --> 00:01:21.020
+possa identificar o posicionamento
+das pessoas em relação aos pontos.
+
+18
+00:01:21.020 --> 00:01:23.439
+O gráfico a gente faz aqui em Gráficos,
+
+19
+00:01:23.439 --> 00:01:29.116
+vamos fazer gráfico chamado Twoway Graph,
+que é scatter plotter.
+
+20
+00:01:29.116 --> 00:01:34.613
+Clicando nesta,
+neste local você cria gráfico,
+
+21
+00:01:34.613 --> 00:01:40.368
+você pode então definir aqui no
+seu eixo do Y vamos colocar o X2,
+
+22
+00:01:40.368 --> 00:01:44.976
+no eixo do X o X1, e vamos colocar
+Marker properties para a gente
+
+23
+00:01:44.976 --> 00:01:49.505
+identificar os pontos, que é,
+nada mais é do que label.
+
+24
+00:01:49.505 --> 00:01:53.929
+Coloque aqui Add Labels to
+markers e vamos colocar Pessoas.
+
+25
+00:01:53.929 --> 00:01:58.988
+Dar Accept e dar OK,
+e dar OK aqui, e aguarda alguns
+
+26
+00:01:58.988 --> 00:02:04.056
+segundos até que o Stata
+faça gráfico colocando os
+
+27
+00:02:04.056 --> 00:02:11.780
+5 pontos de acordo com as
+variáveis Comida e Roupas.
+
+28
+00:02:11.780 --> 00:02:18.240
+Estamos aguardando o Stata, e aí estamos.
+
+29
+00:02:18.240 --> 00:02:19.760
+Nada de novo.
+
+30
+00:02:19.760 --> 00:02:25.728
+Os pontos A e D estão mais próximos,
+o conjunto C, B e E também.
+
+31
+00:02:25.728 --> 00:02:28.035
+Ainda não fizemos cluster analysis,
+
+32
+00:02:28.035 --> 00:02:33.071
+fizemos apenas gráfico de dispersão
+que indica que nós podemos ter 2
+
+33
+00:02:33.071 --> 00:02:38.370
+agrupamentos mas para isso temos que
+fazer o procedimento cluster analysis.
+
+34
+00:02:38.370 --> 00:02:43.445
+Para fazer esse procedimento eu
+vou ter que deslocar pouco o
+
+35
+00:02:43.445 --> 00:02:48.970
+cursor do nosso vídeo para que você
+acompanhe bem onde eu vou fazer.
+
+36
+00:02:48.970 --> 00:02:54.331
+Eu vou clicar aqui em Estatísticas,
+Análise Multivariada,
+
+37
+00:02:54.331 --> 00:02:57.871
+Cluster Analysis,
+estamos no início, portanto,
+
+38
+00:02:57.871 --> 00:03:03.097
+eu vou aqui no caminho Cluster Data e vou
+fazer pelo método do vizinho mais próximo,
+
+39
+00:03:03.097 --> 00:03:05.810
+também chamado Single Linkage.
+
+40
+00:03:05.810 --> 00:03:08.577
+Quando eu abro este,
+
+41
+00:03:08.577 --> 00:03:14.461
+este comando eu tenho que
+dizer quais são as variáveis.
+
+42
+00:03:14.461 --> 00:03:17.263
+Obviamente que eu tenho várias
+maneiras de colocar as variáveis,
+
+43
+00:03:17.263 --> 00:03:22.130
+eu posso colocar a variável
+indicando iluminada e
+
+44
+00:03:22.130 --> 00:03:27.298
+ou mesmo poderia
+
+45
+00:03:27.298 --> 00:03:33.437
+também colocar simplesmente
+as variáveis colocando X* uma
+
+46
+00:03:33.437 --> 00:03:38.910
+vez que ele pegaria todas as
+variáveis que começariam com X.
+
+47
+00:03:38.910 --> 00:03:44.610
+Eu não posso colocar a variável Pessoa
+por que é uma variável que tem respostas
+
+48
+00:03:44.610 --> 00:03:49.610
+categóricas de A a E e não se
+presta a uma análise de cluster.
+
+49
+00:03:49.610 --> 00:03:55.755
+Então, colocando aqui as variáveis
+X1 e X2, eu vou agora escolher
+
+50
+00:03:55.755 --> 00:04:00.569
+se eu quero a distância Euclidiana ou
+a distância Euclidiana ao quadrado.
+
+51
+00:04:00.569 --> 00:04:04.374
+O Stata tem ainda várias outras
+distâncias que eu posso usar,
+
+52
+00:04:04.374 --> 00:04:09.235
+aqui nesta barra de rolamento, mas nós
+vamos fixar em marketing que a gente
+
+53
+00:04:09.235 --> 00:04:13.543
+vai usar com mais frequência as
+distâncias Euclidiana e ao quadrado.
+
+54
+00:04:13.543 --> 00:04:16.440
+Nesse caso eu vou usar
+a distância Euclidiana.
+
+55
+00:04:16.440 --> 00:04:21.588
+Dar OK e aparentemente o
+
+56
+00:04:21.588 --> 00:04:27.193
+Stata não devolveu nenhuma
+resposta aqui exceto
+
+57
+00:04:27.193 --> 00:04:32.901
+o comando que eu acabei de dar,
+mas se você vir aqui no editor de dados
+
+58
+00:04:32.901 --> 00:04:38.147
+você vai notar que o Stata fez 3 colunas
+que não haviam no meu banco de dados.
+
+59
+00:04:38.147 --> 00:04:42.460
+Na coluna 1 ele simplesmente
+identificou de 1 a 5 as variáveis,
+
+60
+00:04:42.460 --> 00:04:47.854
+na coluna 2 ele ordenou, ele está
+me dizendo que o 1 e o 2, ou seja,
+
+61
+00:04:47.854 --> 00:04:52.772
+as observações A e D são próximas,
+e que depois as observações 3,
+
+62
+00:04:52.772 --> 00:04:57.624
+4 e 5 também são próximas,
+e estes números você vai lembrar estão
+
+63
+00:04:57.624 --> 00:05:02.915
+exatamente na nossa tabela de
+Excel para distâncias Euclidianas.
+
+64
+00:05:02.915 --> 00:05:08.476
+Ou seja, o Stata fez agora uma coluna
+a partir de qual ele está em condições
+
+65
+00:05:08.476 --> 00:05:13.391
+de me fazer gráfico muito importante
+que vai me permitir decidir
+
+66
+00:05:13.391 --> 00:05:18.731
+quantos grupos eu quero colocar,
+é o gráfico chamado dendrograma.
+
+67
+00:05:18.731 --> 00:05:24.692
+De novo eu vou deslocar o meu cursor
+e vou naquela campo Estatísticas,
+
+68
+00:05:24.692 --> 00:05:29.775
+vou em Análise Multivariada,
+vou em Cluster, eu já fiz o cluster
+
+69
+00:05:29.775 --> 00:05:35.050
+e portanto eu vou em Postcluster e
+vou pedir para fazer dendrograma.
+
+70
+00:05:35.050 --> 00:05:40.040
+Quando eu peço para fazer o
+dendrograma o Stata abre esta tela
+
+71
+00:05:40.040 --> 00:05:44.997
+e eu imediatamente estou em
+condições de pedir para que ele
+
+72
+00:05:44.997 --> 00:05:49.766
+faça o dendrograma deste cluster,
+que foi o primeiro que eu fiz,
+
+73
+00:05:49.766 --> 00:05:56.070
+e eu posso já pedir para ele colocar
+aqui a identificação da pessoa,
+
+74
+00:05:56.070 --> 00:06:02.115
+que assim quando sai o Stata eu já sei
+exatamente quem está agrupado com quem.
+
+75
+00:06:02.115 --> 00:06:07.790
+Dar OK e imediatamente nós vamos
+ter gráfico que nos permite olhar,
+
+76
+00:06:07.790 --> 00:06:13.478
+observar que o ponto A e D estão mais
+próximos, o C, B e E estão mais próximos,
+
+77
+00:06:13.478 --> 00:06:17.265
+e existe uma grande distância
+entre esses 2 agrupamentos,
+
+78
+00:06:17.265 --> 00:06:22.460
+o agrupamento 1 onde temos 2 pontos e
+o agrupamento 2 onde temos 3 pontos.
+
+79
+00:06:22.460 --> 00:06:27.138
+Nós aqui temos que fazer uma decisão
+e a decisão é do pesquisador,
+
+80
+00:06:27.138 --> 00:06:32.095
+é do estudante, é do profissional,
+é do analista de marketing,
+
+81
+00:06:32.095 --> 00:06:37.110
+mas tecnicamente a melhor decisão
+é tomarmos aqui 2 grupos.
+
+82
+00:06:37.110 --> 00:06:41.857
+Decidido que vamos fazer 2 grupos, eu
+tenho que contar para o Stata que eu quero
+
+83
+00:06:41.857 --> 00:06:47.463
+2 grupos e de novo eu vou ter que deslocar
+o meu cursor, abrir em Estatísticas,
+
+84
+00:06:47.463 --> 00:06:52.489
+vou em Análise Mutivariada de Dados,
+vou em Cluster Data,
+
+85
+00:06:52.489 --> 00:06:57.309
+eu já fiz o meu cluster agora eu vou em
+Postcluster e vou pedir para ele fazer
+
+86
+00:06:57.309 --> 00:07:02.227
+Summary e gerar uma variável
+
+87
+00:07:02.227 --> 00:07:06.484
+onde eu tenho, eu posso colocar nome,
+
+88
+00:07:06.484 --> 00:07:12.300
+eu vou colocar aqui o nome
+"Cluster_2" a partir do,
+
+89
+00:07:12.300 --> 00:07:15.842
+da minha clusterização inicial
+e tenho que contar o número.
+
+90
+00:07:15.842 --> 00:07:20.300
+A informação mais importante, além do
+nome que você quer dar para a coluna,
+
+91
+00:07:20.300 --> 00:07:22.320
+é o número de grupos.
+
+92
+00:07:22.320 --> 00:07:25.492
+Eu escolhi 2 grupos uma vez que pelo
+
+93
+00:07:25.492 --> 00:07:29.502
+meu dendrograma eu cheguei à conclusão
+que eu tenho 2 grupos bem distintos.
+
+94
+00:07:29.502 --> 00:07:34.351
+Eu dou OK, de novo dá a impressão
+que não foi feito mas sim foi feito.
+
+95
+00:07:34.351 --> 00:07:39.042
+Toda a vez que o Stata sai comando aqui
+em preto, é porque a coisa funcionou,
+
+96
+00:07:39.042 --> 00:07:42.000
+se tivesse tido algum erro,
+teria saído em vermelho.
+
+97
+00:07:42.000 --> 00:07:46.900
+Olha só o que nós temos agora,
+
+98
+00:07:46.900 --> 00:07:50.885
+nós temos agora uma coluna nova,
+chamada Cluster_2,
+
+99
+00:07:50.885 --> 00:07:55.808
+onde ele me disse que a observação A e
+a observação D estão no mesmo cluster,
+
+100
+00:07:55.808 --> 00:08:00.337
+enquanto que as observações B,
+C e E estão no cluster 2.
+
+101
+00:08:00.337 --> 00:08:05.280
+A partir daí eu posso agora
+fazer de novo aquele meu
+
+102
+00:08:05.280 --> 00:08:10.145
+mesmo scatter plot só que agora eu
+
+103
+00:08:10.145 --> 00:08:15.696
+queria criar outro e
+colocar aqui na variável Y,
+
+104
+00:08:15.696 --> 00:08:20.684
+de novo, Roupas, na variável X,
+de novo, Comidas mas eu
+
+105
+00:08:20.684 --> 00:08:25.949
+queria marcar como propriedades
+a variável Grupos, eu quero saber
+
+106
+00:08:25.949 --> 00:08:31.020
+onde cada pessoa caiu em cada grupo,
+então eu marco a variável Cluster_2.
+
+107
+00:08:31.020 --> 00:08:36.100
+De antemão eu já posso dizer que eu
+tenho que colocar o label numa posição
+
+108
+00:08:36.100 --> 00:08:41.507
+que me permita leitura, então eu vou
+colocar como se fosse num relógio oposto,
+
+109
+00:08:41.507 --> 00:08:45.810
+9 horas da noite,
+e aí eu dou OK, aceito, aceito,
+
+110
+00:08:45.810 --> 00:08:51.624
+OK e aí ele vai fazer scatter,
+novo scatter plotter oficialmente
+
+111
+00:08:51.624 --> 00:08:56.730
+me mostrando que eu tenho 2
+cluster: O cluster 1 e o cluster 2.
+
+112
+00:08:56.730 --> 00:09:02.058
+Com isso nós terminamos essa
+videoaula de clusterização
+
+113
+00:09:02.058 --> 00:09:07.093
+e você tem a possibilidade agora de
+fazer plano de marketing voltado para
+
+114
+00:09:07.093 --> 00:09:11.960
+o cluster 1 e plano de
+marketing voltado para o
+
+115
+00:09:11.960 --> 00:09:16.680
+cluster 2.

@@ -1,0 +1,554 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.766
+[MÚSICA] Olá, nesse vídeo a gente
+
+2
+00:00:04.766 --> 00:00:09.616
+vai começar a analisar as
+distorções introduzidas pelo
+
+3
+00:00:09.616 --> 00:00:13.393
+conversor digital analógico e a gente
+vai ver o que é que a gente pode fazer,
+
+4
+00:00:13.393 --> 00:00:16.960
+algumas das coisas que a gente pode fazer,
+para compensar essas distorções.
+
+5
+00:00:16.960 --> 00:00:19.998
+Visualmente, entender essas
+distorções é muito fácil.
+
+6
+00:00:19.998 --> 00:00:23.656
+Quando a gente olha aqui, por exemplo,
+para o segurador de ordem 0,
+
+7
+00:00:23.656 --> 00:00:28.450
+que eu já comentei eu gostaria de
+reconstruir esse sinal em azul aqui.
+
+8
+00:00:28.450 --> 00:00:32.299
+Mas o segurador de ordem 0 ele vai
+reconstruir o sinal em magenta,
+
+9
+00:00:32.299 --> 00:00:35.374
+ele vai pegar o valor da amostra,
+segurar a amostra,
+
+10
+00:00:35.374 --> 00:00:38.448
+segurar a sua saída contante
+entre uma amostra e outra,
+
+11
+00:00:38.448 --> 00:00:42.866
+é assim que ele vai recriar o sinal
+analógico entre as duas amostras.
+
+12
+00:00:42.866 --> 00:00:46.362
+Então, visualmente é fácil ver que ele eh,
+
+13
+00:00:46.362 --> 00:00:50.840
+introduziu algumas distorções, mas não é
+muito fácil de modelar essas distorções e
+
+14
+00:00:50.840 --> 00:00:53.750
+a gente precisa modular para
+poder compensar elas depois.
+
+15
+00:00:53.750 --> 00:00:54.485
+Mas aqui,
+
+16
+00:00:54.485 --> 00:01:00.045
+a gente já começa a ter alguma intuição
+de alguma coisa que pode estar ocorrendo.
+
+17
+00:01:00.045 --> 00:01:03.990
+Observa que ele tem o sinal
+reconstruído aqui em magenta,
+
+18
+00:01:03.990 --> 00:01:07.510
+tem uma variação muito
+rápida desse ponto para ele.
+
+19
+00:01:07.510 --> 00:01:11.741
+Variações rápidas estão
+relacionadas a altas frequências,
+
+20
+00:01:11.741 --> 00:01:16.496
+são coisas que variam velozmente, baixas
+frequências elas variam muito lentamente,
+
+21
+00:01:16.496 --> 00:01:18.910
+as altas frequências é
+que variam muito rápido.
+
+22
+00:01:18.910 --> 00:01:23.345
+Então a impressão que nos dá aqui,
+é que esse sinal em magenta introduziu
+
+23
+00:01:23.345 --> 00:01:27.472
+componentes em alta frequência que
+não existiam no sinal original.
+
+24
+00:01:27.472 --> 00:01:31.597
+Então, vamos ver se a gente consegue
+chegar em algum modelo para como isso
+
+25
+00:01:31.597 --> 00:01:32.270
+acontece.
+
+26
+00:01:32.270 --> 00:01:36.455
+A gente chegar nesse modelo, a gente
+tem que reconhecer o seguinte: Todos os
+
+27
+00:01:36.455 --> 00:01:39.996
+conversores digital analógico que existem,
+
+28
+00:01:39.996 --> 00:01:42.948
+eles podem ser modelados e eu
+não vou entrar em detalhes,
+
+29
+00:01:42.948 --> 00:01:46.360
+esse video vai ter 2 pontos em que eu vou
+pedir a fé de vocês, esse é o primeiro.
+
+30
+00:01:46.360 --> 00:01:50.407
+Conversores digital analógico
+podem ser modelados, como?
+
+31
+00:01:50.407 --> 00:01:54.609
+Se eles pegassem para cada
+amostra nova que chega,
+
+32
+00:01:54.609 --> 00:01:59.421
+ele coloca em sua saída pulso
+multiplicado por essa amostra.
+
+33
+00:01:59.421 --> 00:02:02.759
+Então, o segurador de ordem
+0 chega a essa amostra,
+
+34
+00:02:02.759 --> 00:02:07.522
+ele coloca pulso retangular, que tem
+duração de uma amostra e depois ele zera.
+
+35
+00:02:07.522 --> 00:02:10.755
+Para a próxima amostra,
+ele coloca o mesmo pulso,
+
+36
+00:02:10.755 --> 00:02:15.108
+centrado aqui na próxima amostra
+com a amplitude igual à da amostra,
+
+37
+00:02:15.108 --> 00:02:18.850
+com duração de 1 período de amostragem,
+depois ele zera.
+
+38
+00:02:18.850 --> 00:02:23.201
+Próxima amostra, ele coloca novo pulso,
+deslocado, multiplicado pela amostra.
+
+39
+00:02:23.201 --> 00:02:26.510
+No caso do segurador de ordem 0
+isso é relativamente fácil de ver.
+
+40
+00:02:26.510 --> 00:02:29.809
+No caso do segurador de ordem 1
+isso é bem mais difícil de ver,
+
+41
+00:02:29.809 --> 00:02:31.720
+mas o fato é que ele também faz isso.
+
+42
+00:02:31.720 --> 00:02:35.916
+Para cada amostra, ele coloca,
+e aí não dá para ver mesmo,
+
+43
+00:02:35.916 --> 00:02:39.688
+triângulo centrado na amostra,
+com a amplitude igual à amostra, então,
+
+44
+00:02:39.688 --> 00:02:44.735
+ele aqui coloca 1 triângulo aqui ele
+coloca 1 triângulo e assim sucessivamente.
+
+45
+00:02:44.735 --> 00:02:48.586
+Então o segurador de ordem
+1 ele coloca 1 triângulo,
+
+46
+00:02:48.586 --> 00:02:54.080
+que dura de menos o período de amostragem
+até mais o período de amostragem,
+
+47
+00:02:54.080 --> 00:02:58.798
+segurador de ordem 0 coloca
+esse retângulo e daí?
+
+48
+00:02:58.798 --> 00:03:03.711
+E daí, que a partir dessa acreditando,
+aceitando nesse fato,
+
+49
+00:03:03.711 --> 00:03:06.950
+a gente tem uma outra
+consequência importante disso,
+
+50
+00:03:06.950 --> 00:03:09.281
+que eu também peço para
+vocês acreditarem em mim,
+
+51
+00:03:09.281 --> 00:03:13.754
+essas não é tão difícil de amostrar mas
+exige traquejo e algumas propriedades da
+
+52
+00:03:13.754 --> 00:03:17.400
+transformada de Fourier que
+a gente não cobriu nesse curso.
+
+53
+00:03:17.400 --> 00:03:22.732
+Mas o fato,
+é que depois que eu passo pelo segurador
+
+54
+00:03:22.732 --> 00:03:27.860
+de ordem 0 a transformada de
+Fourier do sinal reconstruído,
+
+55
+00:03:27.860 --> 00:03:33.620
+numa frequência ômegão aqui,
+ômega maiúsculo,
+
+56
+00:03:33.620 --> 00:03:39.060
+que significa frequência analógica
+em radianos por segundo, ela vai
+
+57
+00:03:39.060 --> 00:03:45.008
+ser a transformada de Fourier do meu
+sinal digital calculada nessa frequência.
+
+58
+00:03:45.008 --> 00:03:49.378
+Observa que aqui,
+eu desfaço a regrinha de 3, então,
+
+59
+00:03:49.378 --> 00:03:53.082
+o Pi aqui vira fs sobre 2 e coisas assim.
+
+60
+00:03:53.082 --> 00:03:58.216
+Então aqui, eu desfaço a regrinha
+de 3 e isso aqui eu vou
+
+61
+00:03:58.216 --> 00:04:03.210
+multiplicar pela transformada de Fourier
+daquele pulso que eu mencionei lá em cima.
+
+62
+00:04:03.210 --> 00:04:08.450
+Então, o segurador de ordem 0 tem pulso,
+o segurador de ordem 1 tem pulso,
+
+63
+00:04:08.450 --> 00:04:13.070
+visualmente o que acontece é o seguinte,
+aqui em preto nesse figura,
+
+64
+00:04:13.070 --> 00:04:17.359
+eu tenho a transformada de
+Fourier do meu sinal digital,
+
+65
+00:04:17.359 --> 00:04:20.220
+onde eu desfiz a regrinha de 3.
+
+66
+00:04:20.220 --> 00:04:25.317
+O que era 2Pi, virou fs o que era Pi,
+
+67
+00:04:25.317 --> 00:04:28.980
+virou fs sobre 2 e assim sucessivamente.
+
+68
+00:04:28.980 --> 00:04:33.164
+A frequência máxima está aqui,
+está tudo aqui,
+
+69
+00:04:33.164 --> 00:04:37.240
+então qual é que vai ser a transformada
+de Fourier do meu sinal reconstruído?
+
+70
+00:04:37.240 --> 00:04:42.208
+Vai ser o produto entre a transformada
+de Fourier do meu sinal digital vezes
+
+71
+00:04:42.208 --> 00:04:44.910
+a transformada de Fourier do pulso.
+
+72
+00:04:44.910 --> 00:04:48.606
+E o pulso para o segurador de ordem
+0 tem essa transformada de Fourier
+
+73
+00:04:48.606 --> 00:04:53.482
+aqui em vermelho que eu estou mostrando,
+o pulso para o meu segurador de ordem 1,
+
+74
+00:04:53.482 --> 00:04:58.290
+tem essa transformada de Fourier em
+magenta que eu estou mostrando aqui.
+
+75
+00:04:58.290 --> 00:04:59.699
+E aí, qual é a diferença?
+
+76
+00:04:59.699 --> 00:05:03.550
+E como a gente vê que começa a ficar
+pouquinho melhor do que o outro?
+
+77
+00:05:03.550 --> 00:05:08.531
+A gente vê que aqui ao redor de fs o
+
+78
+00:05:08.531 --> 00:05:13.380
+segurador de ordem 0, a transformada de
+Fourier dele ainda é relativamente grande.
+
+79
+00:05:13.380 --> 00:05:18.308
+Então, a hora que eu fizer o
+produto disso aqui por essa
+
+80
+00:05:18.308 --> 00:05:23.112
+frequência vai aparecer uma coisa
+relativamente grande aqui em fs que não
+
+81
+00:05:23.112 --> 00:05:25.820
+necessariamente eu queria,
+lembra que eu falo que a minha
+
+82
+00:05:25.820 --> 00:05:30.392
+maior frequência de interesse do meu
+sinal aqui era esse fm ou ômega m né?
+
+83
+00:05:30.392 --> 00:05:32.300
+Ômega m é 2Pi vezes fm.
+
+84
+00:05:32.300 --> 00:05:37.312
+Então, eu não gostaria que aperecesse
+nada aqui, mas por causa do segurador
+
+85
+00:05:37.312 --> 00:05:42.532
+de ordem 0, a hora que faço esse produto
+aparecem frequências altas aqui.
+
+86
+00:05:42.532 --> 00:05:47.518
+No caso do segurador de ordem 1 em
+magenta, você vê que o a transformada
+
+87
+00:05:47.518 --> 00:05:51.710
+de Fourier dele ao redor dessas
+frequências aqui já é bem menor.
+
+88
+00:05:51.710 --> 00:05:56.780
+Então, aparecem bem menos componentes
+nessas altas frequências.
+
+89
+00:05:56.780 --> 00:06:01.862
+Então, a gente vê que
+a transformada de Fourier do
+
+90
+00:06:01.862 --> 00:06:06.825
+sinal reconstruído agora calculado
+na frequência f e não mais ômega,
+
+91
+00:06:06.825 --> 00:06:11.258
+lembra que eu fui tomar Pi m de ômega
+para f ou ômega igual a 2Pi f ela vai ter
+
+92
+00:06:11.258 --> 00:06:14.480
+duas distorções em relação ao desejado.
+
+93
+00:06:14.480 --> 00:06:18.146
+Primeiro, ela vai ter as altas
+frequências que a gente conversou aqui,
+
+94
+00:06:18.146 --> 00:06:19.639
+que a gente não gostaria.
+
+95
+00:06:19.639 --> 00:06:22.910
+Segundo, observa que eu
+vou multiplicar isso aqui,
+
+96
+00:06:22.910 --> 00:06:26.690
+que é o desejado, por isso aqui.
+
+97
+00:06:26.690 --> 00:06:30.890
+Pela transformada de Fourier do segurador
+de ordem 0 e do segurador de ordem 1.
+
+98
+00:06:30.890 --> 00:06:34.810
+Observa então, que eu vou dar ganho,
+mais ou menos igual a 1,
+
+99
+00:06:34.810 --> 00:06:39.436
+vamos dizer que isso aqui é igual a 1
+para essas frequências e as frequências
+
+100
+00:06:39.436 --> 00:06:43.480
+próximas de ômega m já vão receber
+ganho muito menor do que 1.
+
+101
+00:06:43.480 --> 00:06:47.858
+Então, em vez de ser uma linha reta,
+por exemplo, que era o que desejaria,
+
+102
+00:06:47.858 --> 00:06:51.330
+esse cara vai começar a cair mais
+rápido do que uma linha reta,
+
+103
+00:06:51.330 --> 00:06:53.309
+ele vai ter uma cara que cai assim.
+
+104
+00:06:53.309 --> 00:06:55.491
+Então, eu tenho duas distorções.
+
+105
+00:06:55.491 --> 00:07:00.818
+Primeiro, essa distorção dentro da faixa
+de interesse causada por isso aqui
+
+106
+00:07:00.818 --> 00:07:05.991
+e o aparecimento das altas
+frequências causada por isso aqui.
+
+107
+00:07:05.991 --> 00:07:10.235
+Ambos são causados pelo fato de que
+a transformada de Fourier do sinal
+
+108
+00:07:10.235 --> 00:07:14.050
+reconstruído é a transformada
+de Fourier do sinal digital,
+
+109
+00:07:14.050 --> 00:07:18.490
+desfazendo a regrinha de 3 vezes
+a transformada de Fourier do pulso.
+
+110
+00:07:18.490 --> 00:07:20.548
+Eu gero duas distorções.
+
+111
+00:07:20.548 --> 00:07:25.533
+Então, nos próximos vídeos,
+a gente vai começar a ver como a gente
+
+112
+00:07:25.533 --> 00:07:30.179
+pode combater essas duas distorções, quais
+são as técnicas que a gente tem à nossa
+
+113
+00:07:30.179 --> 00:07:35.044
+disposição, para combater
+essas duas distorções.
+
+114
+00:07:35.044 --> 00:07:35.901
+Até lá.
+
+115
+00:07:35.901 --> 00:07:37.130
+[MÚSICA]

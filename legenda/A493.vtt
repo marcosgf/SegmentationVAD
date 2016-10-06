@@ -1,0 +1,339 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.861
+[MÚSICA] Meu
+
+2
+00:00:07.861 --> 00:00:10.071
+nome é Eduardo Guerra.
+
+3
+00:00:10.071 --> 00:00:14.500
+Este é o curso de Orientação
+a Objetos com Java.
+
+4
+00:00:14.500 --> 00:00:18.298
+Hoje vamos estar falando
+sobre classes abstratas, tá?
+
+5
+00:00:18.298 --> 00:00:21.470
+Vamos entender como
+criar classes abstratas,
+
+6
+00:00:21.470 --> 00:00:27.030
+entender o seu conceito e que
+situações elas podem ser aplicadas.
+
+7
+00:00:27.030 --> 00:00:31.381
+Então, eu vou começar aqui fazendo
+pequeno exercício com vocês.
+
+8
+00:00:31.381 --> 00:00:32.590
+Pensa carro!
+
+9
+00:00:32.590 --> 00:00:36.020
+Vê aí o que vem na cabeça de vocês.
+
+10
+00:00:36.020 --> 00:00:39.770
+Talvez alguma coisa mais ou menos assim.
+
+11
+00:00:39.770 --> 00:00:45.900
+Agora imagina se eu chego para
+vocês e falo assim: Pensa veículo!
+
+12
+00:00:45.900 --> 00:00:51.040
+Aí, você vai falar assim: espera aí,
+veículo!
+
+13
+00:00:51.040 --> 00:00:55.770
+Tem avião, tem moto, tem carro,
+tem bicicleta, caminhão, tem barco,
+
+14
+00:00:55.770 --> 00:00:56.870
+tem monte de coisas.
+
+15
+00:00:56.870 --> 00:01:00.825
+Aí, você vai virar para mim e
+falar assim: espera aí, qual?
+
+16
+00:01:00.825 --> 00:01:05.668
+Qual veículo que você quer que eu pense?
+
+17
+00:01:05.668 --> 00:01:11.183
+Então, a gente vê que veículo é conceito,
+é uma abstração,
+
+18
+00:01:11.183 --> 00:01:17.470
+mas por outro lado é uma abstração que ela
+é abstrata demais para eu pensar veículo.
+
+19
+00:01:17.470 --> 00:01:22.761
+Para eu falar assim: " veículo",
+eu tenho que ter o veículo concreto.
+
+20
+00:01:22.761 --> 00:01:26.288
+Eu tenho que ter uma coisa
+pouco menos abstrata.
+
+21
+00:01:26.288 --> 00:01:28.976
+Então, existem alguns conceitos como
+
+22
+00:01:28.976 --> 00:01:32.824
+esse que são muito abstratos
+para você ir lá e criar objeto.
+
+23
+00:01:32.824 --> 00:01:37.597
+Daí imagina: " criei objeto aqui
+de veículo." Aí você vai dizer:
+
+24
+00:01:37.597 --> 00:01:41.384
+"qual?" É a mesma pergunta
+lá que você se fez, né?
+
+25
+00:01:41.384 --> 00:01:41.969
+Qual?
+
+26
+00:01:41.969 --> 00:01:45.965
+Então, para esses conceitos que, às vezes,
+
+27
+00:01:45.965 --> 00:01:51.199
+faz sentido você ter essa classificação,
+mas não faz muito sentido você ir
+
+28
+00:01:51.199 --> 00:01:56.457
+lá e criar objeto daquela classe, a gente
+tem as classes chamadas de abstratas.
+
+29
+00:01:56.457 --> 00:02:00.470
+Então, eu posso criar uma classe,
+eu coloco esse modificador abstract.
+
+30
+00:02:00.470 --> 00:02:05.310
+E é uma classe que ela não
+vai poder ser instanciada.
+
+31
+00:02:05.310 --> 00:02:10.004
+Ela vai ser uma classe que ela só pode ser
+utilizada para ser estendida por outras
+
+32
+00:02:10.004 --> 00:02:15.074
+classes, então eu posso ter, por exemplo,
+uma classe carro que estende o veículo.
+
+33
+00:02:15.074 --> 00:02:17.402
+Olha aí, agora eu posso ter o veículo.
+
+34
+00:02:17.402 --> 00:02:21.985
+Agora que eu tenho uma coisa pouco
+mais concreta, eu posso ter o veículo.
+
+35
+00:02:21.985 --> 00:02:25.048
+Agora eu não posso fazer
+Veiculo = new Veiculo,
+
+36
+00:02:25.048 --> 00:02:28.720
+porque uma classe abstrata
+ela não pode ser instanciada.
+
+37
+00:02:28.720 --> 00:02:29.344
+Por quê?
+
+38
+00:02:29.344 --> 00:02:33.480
+Não faz sentido eu falar veículo
+sem ele ser alguma coisa.
+
+39
+00:02:33.480 --> 00:02:37.763
+Então, por isso que é conceito que
+ele só pode ser, digamos assim,
+
+40
+00:02:37.763 --> 00:02:40.234
+instanciado através de uma subclasse.
+
+41
+00:02:40.234 --> 00:02:44.441
+Uma classe abstrata ela também
+pode ter métodos abstratos.
+
+42
+00:02:44.441 --> 00:02:45.137
+Ou seja,
+
+43
+00:02:45.137 --> 00:02:50.657
+eu posso falar assim: olha todo veículo
+ele tem uma posição e ele pode se mover.
+
+44
+00:02:50.657 --> 00:02:53.510
+Agora, como que ele faz isso, eu não sei.
+
+45
+00:02:53.510 --> 00:03:00.610
+Então, uma classe abstrata ela pode ter
+métodos abstratos, que ela define método.
+
+46
+00:03:00.610 --> 00:03:03.500
+Ou seja, olha,
+todo veículo sabe fazer isso aqui,
+
+47
+00:03:03.500 --> 00:03:05.610
+mas cada faz de jeito diferente.
+
+48
+00:03:05.610 --> 00:03:09.354
+Mais ou menos, isso que é o
+significado de método abstrato.
+
+49
+00:03:09.354 --> 00:03:13.610
+Ela falar que todos sabem fazer aquilo
+mas ela não sabe como eles fazem.
+
+50
+00:03:13.610 --> 00:03:17.855
+Então, é mais ou menos como
+método que você deixa para que as
+
+51
+00:03:17.855 --> 00:03:20.305
+subclasses implementem, né?
+
+52
+00:03:20.305 --> 00:03:25.410
+E por isso mesmo que não faz
+sentido você ter uma classe
+
+53
+00:03:25.410 --> 00:03:30.634
+abstrata sendo instanciada,
+porque ela pode ter métodos
+
+54
+00:03:30.634 --> 00:03:35.425
+que não têm definição ainda,
+que vão ser definidos só uma subclasse.
+
+55
+00:03:35.425 --> 00:03:37.765
+Então, para que que serve isso?
+
+56
+00:03:37.765 --> 00:03:42.696
+Essas classes abstratas,
+elas podem definir contrato, ou seja,
+
+57
+00:03:42.696 --> 00:03:47.840
+olha o veículo ele vai ter
+lá aqueles métodos abstratos
+
+58
+00:03:47.840 --> 00:03:52.880
+e quais as funcionalidades comuns
+que aquele grupo de classes vai ter.
+
+59
+00:03:52.880 --> 00:03:57.585
+Uma classe abstrata, ela pode ter métodos
+abstratos mas ela pode ter métodos normais
+
+60
+00:03:57.585 --> 00:03:59.855
+também, ela pode ter atributos.
+
+61
+00:03:59.855 --> 00:04:02.290
+Ela pode ter tudo que uma classe tem.
+
+62
+00:04:02.290 --> 00:04:06.796
+Só que, primeiro,
+ela não pode ser instanciada, e segundo,
+
+63
+00:04:06.796 --> 00:04:11.775
+pode ter métodos abstratos,
+que ela define só a assinatura do
+
+64
+00:04:11.775 --> 00:04:16.570
+método e deixa a implementação
+dele para a subclasse.
+
+65
+00:04:16.570 --> 00:04:21.677
+Então, eu espero que com isso você tenha
+entendido o que é uma classe abstrata, né?
+
+66
+00:04:21.677 --> 00:04:26.040
+É uma classe feita para outras
+classes estenderem aquele conceito,
+
+67
+00:04:26.040 --> 00:04:30.551
+mas ela si já consegue
+determinar certo protocolo,
+
+68
+00:04:30.551 --> 00:04:34.466
+certo contrato para as
+classes que vão estender ela.
+
+69
+00:04:34.466 --> 00:04:38.743
+E não pode ser instanciada por ser
+conceito muito abstrato ainda.
+
+70
+00:04:38.743 --> 00:04:39.386
+Tá certo?
+
+71
+00:04:39.386 --> 00:04:42.400
+Muito obrigado por assistir
+e até a próxima aula!
+
+72
+00:04:42.400 --> 00:04:48.180
+[MÚSICA]

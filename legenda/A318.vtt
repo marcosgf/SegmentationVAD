@@ -1,0 +1,208 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.834
+Olá!
+Neste vídeo você aprenderá a usar a carta
+
+2
+00:00:03.834 --> 00:00:09.905
+de Nichols-Black, uma ferramenta útil para
+obter rapidamente a magnitude da função de
+
+3
+00:00:09.905 --> 00:00:15.050
+transferência de malha fechada a partir da
+função de transferência de malha aberta.
+
+4
+00:00:15.050 --> 00:00:20.088
+A carta de Nichols-Black apresenta
+a fase da função de transferência de
+
+5
+00:00:20.088 --> 00:00:25.760
+malha aberta no eixo das abscissas e
+a magnitude no eixo das ordenadas.
+
+6
+00:00:25.760 --> 00:00:32.160
+Então, vez de dois gráficos como no
+diagrama de bode, tem-se apenas uma curva.
+
+7
+00:00:32.160 --> 00:00:36.960
+Com isso, perde-se a noção de qual
+frequência corresponde aquele par fase
+
+8
+00:00:36.960 --> 00:00:42.330
+magnitude, sendo necessário marcar
+algumas frequências de destaque na curva.
+
+9
+00:00:42.330 --> 00:00:45.130
+Então qual seria a vantagem?
+
+10
+00:00:45.130 --> 00:00:47.368
+A resposta é: Além disso,
+
+11
+00:00:47.368 --> 00:00:52.113
+na carta estão desenhados lugares
+geométricos da magnitude e da fase da
+
+12
+00:00:52.113 --> 00:00:57.667
+função de transferência de malha fechada
+com realimentação unitária, isto é,
+
+13
+00:00:57.667 --> 00:01:03.175
+as curvas de valores
+específicos de magnitude
+
+14
+00:01:03.175 --> 00:01:09.670
+e fase resultantes de T de J ômega para
+pares de fase e magnitude de G de J ômega.
+
+15
+00:01:09.670 --> 00:01:14.500
+Vamos mais uma vez ao exemplo do
+circuito RC com ganho unitário.
+
+16
+00:01:14.500 --> 00:01:19.220
+Vejamos como fica a carta
+de Nichols-Black.
+
+17
+00:01:19.220 --> 00:01:23.792
+Veja: O eixo das abscissas, a fase
+malha aberta; e no eixo das ordenadas,
+
+18
+00:01:23.792 --> 00:01:29.110
+a magnitude malha aberta,
+e aqui os lugares geométricos, marcados,
+
+19
+00:01:29.110 --> 00:01:34.845
+magnitude db e fase graus.
+
+20
+00:01:34.845 --> 00:01:38.178
+Assim, pode-se ver facilmente
+qual será a magnitude
+
+21
+00:01:38.178 --> 00:01:42.860
+de T de J ômega para pares de
+fases e magnitude de G de J ômega.
+
+22
+00:01:42.860 --> 00:01:48.770
+Por exemplo, podemos ver no gráfico ao
+lado que, quando a fase de G J ômega é 0,
+
+23
+00:01:48.770 --> 00:01:54.480
+o módulo vale 0db, então o módulo
+de T de J ômega será menos 6db.
+
+24
+00:01:54.480 --> 00:01:59.376
+Já a fase de T de J ômega é
+0; quando a fase de G de J
+
+25
+00:01:59.376 --> 00:02:04.714
+ômega tende a menos 90,
+a sua magnitude estará menos 40db, o
+
+26
+00:02:04.714 --> 00:02:09.920
+módulo de T de J ômega pode ser lido como
+menos 40db e a fase será menos 90 graus.
+
+27
+00:02:09.920 --> 00:02:14.898
+Isso pode ser confirmado colocando lado
+a lado os diagramas de bode vistos
+
+28
+00:02:14.898 --> 00:02:17.798
+anteriormente de G e de T.
+
+29
+00:02:17.798 --> 00:02:25.019
+Confirme: [SEM ÁUDIO] E para
+
+30
+00:02:25.019 --> 00:02:29.290
+sistema de segunda ordem, como ficaria
+o desenho da carta de Nichols-Black?
+
+31
+00:02:29.290 --> 00:02:33.170
+Vamos ver para par de polos
+reais no semiplano esquerdo.
+
+32
+00:02:33.170 --> 00:02:38.970
+G de S igual a 10 sobre S
+mais 1 vezes S mais 10.
+
+33
+00:02:38.970 --> 00:02:43.332
+Neste gráfico você pode observar que o
+
+34
+00:02:43.332 --> 00:02:48.356
+ganho de menos 6db e fase
+de 0 graus malha fechada
+
+35
+00:02:48.356 --> 00:02:53.430
+correspondem ao ganho de 0db e
+fase de 0 graus malha aberta.
+
+36
+00:02:53.430 --> 00:02:56.679
+Vamos confrontar isso com
+os diagramas de bode,
+
+37
+00:02:56.679 --> 00:02:59.540
+e compare para verificar se isso é válido.
+
+38
+00:02:59.540 --> 00:03:08.093
+[SEM ÁUDIO] Agora você viu como
+
+39
+00:03:08.093 --> 00:03:13.405
+usar a carta de Nichols-Black para obter
+o valores de módulo e fases de malha
+
+40
+00:03:13.405 --> 00:03:19.210
+fechada a partir dos valores malha aberta
+para dois tipos simples de sistemas.
+
+41
+00:03:19.210 --> 00:03:24.043
+No próximo vídeo, você aprenderá
+a usar a carta de Nichols-Black para
+
+42
+00:03:24.043 --> 00:03:29.153
+determinar margens de fase e de ganho e
+aprenderá a prever facilmente as mudanças
+
+43
+00:03:29.153 --> 00:03:34.160
+na função de transferência quando ocorre
+uma alteração no ganho de realimentação.

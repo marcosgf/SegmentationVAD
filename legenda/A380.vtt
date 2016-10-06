@@ -1,0 +1,469 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.324
+Após esse vídeo,
+
+2
+00:00:01.324 --> 00:00:06.900
+você será capaz de explicar o efeito
+do acréscimo de 0 e de polo no LGR.
+
+3
+00:00:06.900 --> 00:00:11.357
+Vamos mudar pouco nossa função de
+transferência e usar uma função de segunda
+
+4
+00:00:11.357 --> 00:00:16.500
+ordem mais o tipo 0, G de s é
+igual a 5 sobre s mais 1 s mais 5.
+
+5
+00:00:16.500 --> 00:00:21.352
+Você já sabe o que o LGR desta função de
+transferência é o eixo real entre menos
+
+6
+00:00:21.352 --> 00:00:25.410
+1 e menos 5 e a reta vertical
+com parte real igual a menos 3.
+
+7
+00:00:25.410 --> 00:00:29.790
+O que acontece com LGR se
+acrescentarmos polo e 0?
+
+8
+00:00:29.790 --> 00:00:30.996
+Vamos descobrir.
+
+9
+00:00:30.996 --> 00:00:35.136
+Vamos começar acrescetando
+polo menos 6 e 0 menos 8,
+
+10
+00:00:35.136 --> 00:00:40.222
+de modo que a função de transferência
+fica G1 de s igual 5 s mais 8 sobre,
+
+11
+00:00:40.222 --> 00:00:42.989
+s mais 1, s mais 5, s mais 6.
+
+12
+00:00:42.989 --> 00:00:45.910
+Vamos esboçar o LGR de G1.
+
+13
+00:00:45.910 --> 00:00:49.121
+No eixo real,
+os trechos entre menos 1 e menos 5,
+
+14
+00:00:49.121 --> 00:00:52.870
+e entre menos 6 e menos 8 fazem
+parte do lugar geométrico.
+
+15
+00:00:52.870 --> 00:00:59.240
+Temos duas assíntotas a mais e menos 90
+graus que cruzam o eixo real menos 2.
+
+16
+00:00:59.240 --> 00:01:03.183
+Creio que está claro que os
+ramos do LGR saem do eixo real
+
+17
+00:01:03.183 --> 00:01:07.307
+algum lugar entre menos 1 e menos 5,
+e tendem para as assíntotas.
+
+18
+00:01:07.307 --> 00:01:07.960
+Não está?
+
+19
+00:01:07.960 --> 00:01:12.453
+Se você quiser você pode calcular
+exatamente qual é esse ponto.
+
+20
+00:01:12.453 --> 00:01:17.006
+Para nosso esboço vamos considerar que
+ele está próximo do ponto médio isso é,
+
+21
+00:01:17.006 --> 00:01:17.620
+menos 3.
+
+22
+00:01:17.620 --> 00:01:23.350
+Vamos mudar a cor desse segundo LGR para
+vermelho e sobrepor ele ao anterior.
+
+23
+00:01:23.350 --> 00:01:28.047
+Note que para atender as novas assíntotas
+que foram deslocadas para direita
+
+24
+00:01:28.047 --> 00:01:30.760
+relação as assíntotas do sistema original,
+
+25
+00:01:30.760 --> 00:01:35.860
+os ramos do LGR do sistema com o polo
+e os 0 adicionais foram para direita.
+
+26
+00:01:35.860 --> 00:01:39.870
+Vamos fazer uma análise literal do que
+acontece com o ponto de cruzamento
+
+27
+00:01:39.870 --> 00:01:43.880
+das assíntotas ao adicionarmos
+polo e 0 ao sistema.
+
+28
+00:01:43.880 --> 00:01:50.010
+Vamos analisar Ga de s é igual a 5s mais
+a sobre, s mais b, s mais 1, s mais 5.
+
+29
+00:01:50.010 --> 00:01:56.140
+Note que como acrescentamos polo e 0,
+a diferença n menos m continua a mesma.
+
+30
+00:01:56.140 --> 00:01:59.907
+Antes tínhamos 2 menos 0,
+agora temos 3 menos 1,
+
+31
+00:01:59.907 --> 00:02:04.730
+e o ponto de cruzamento das
+assíntotas será menos 1, menos 5,
+
+32
+00:02:04.730 --> 00:02:10.180
+menos b mais a, sobre 2 o que dá menos 3,
+mais a menos b, sobre 2.
+
+33
+00:02:10.180 --> 00:02:14.190
+Se a maior que b como nesse caso,
+o cruzamento das assíntotas é
+
+34
+00:02:14.190 --> 00:02:18.329
+deslocado para a direita, e quanto
+maior for a diferença entre a e b,
+
+35
+00:02:18.329 --> 00:02:22.120
+maior é esse deslocamento do ponto
+de cruzamento das assíntotas.
+
+36
+00:02:22.120 --> 00:02:24.271
+Se a diferença for maior que 6,
+
+37
+00:02:24.271 --> 00:02:28.892
+o cruzamento das assíntotas estará
+no semi plano da direita e o sistema
+
+38
+00:02:28.892 --> 00:02:32.910
+ficará instável se ganho
+suficientemente grande for utilizado.
+
+39
+00:02:32.910 --> 00:02:33.790
+Será mesmo?
+
+40
+00:02:33.790 --> 00:02:38.130
+Como exercício considere a igual
+a 20 e b igual a 10, e analise o
+
+41
+00:02:38.130 --> 00:02:42.538
+denominador da função de transferência
+malha fechada usando Routh Hurwitz,
+
+42
+00:02:42.538 --> 00:02:45.690
+você verá que existe limitante
+superior para o ganho.
+
+43
+00:02:45.690 --> 00:02:50.537
+Mas então se a menor que b o ponto
+de cruzamento das assíntotas será
+
+44
+00:02:50.537 --> 00:02:52.660
+deslocado para a esquerda.
+
+45
+00:02:52.660 --> 00:02:56.908
+E poderiamos por exemplo atender
+a requisito de tempo de acomodação que não
+
+46
+00:02:56.908 --> 00:02:59.470
+poderia ser atendido
+pelo sistema original.
+
+47
+00:02:59.470 --> 00:03:02.530
+Vamos inverter as posições do polo e do 0.
+
+48
+00:03:02.530 --> 00:03:06.100
+Agora o polo será menos 8,
+e o zero será menos 6.
+
+49
+00:03:06.100 --> 00:03:10.071
+E a função de transferência fica,
+G2 de s igual a 5,
+
+50
+00:03:10.071 --> 00:03:13.595
+s mais 6 sobre s mais 1,
+s mais 5, s mais 8.
+
+51
+00:03:13.595 --> 00:03:15.808
+Vamos esboçar o LGR de G2.
+
+52
+00:03:15.808 --> 00:03:21.210
+No eixo real, os trechos entre menos 1
+e menos 5 e entre menos 6 e menos 8.
+
+53
+00:03:21.210 --> 00:03:26.550
+Duas assíntotas a mais e menos 90
+graus que cruzam o eixo real menos 4.
+
+54
+00:03:26.550 --> 00:03:33.030
+Completando o LGR mudando a cor para
+vermelho e sobrepondo ele ao original,
+
+55
+00:03:33.030 --> 00:03:37.050
+e como previsto os ramos do LGR
+foram mais para a esquerda.
+
+56
+00:03:37.050 --> 00:03:41.885
+Você pode confirmar essa
+alteração do LGR usando o Matlab.
+
+57
+00:03:41.885 --> 00:03:45.506
+Novamente nem vou me dar ao
+trabalho de executar o Matlab.
+
+58
+00:03:45.506 --> 00:03:50.558
+Digite as seguintes instruções na linha
+de comando G igual a zpk nenhum 0,
+
+59
+00:03:50.558 --> 00:03:56.469
+polos menos 1 e menos 5 e ganho 5,
+e G1 igual a zpk 0 menos 8,
+
+60
+00:03:56.469 --> 00:04:00.674
+polos menos 1 menos 5 e menos 6 ganho 5.
+
+61
+00:04:00.674 --> 00:04:03.645
+E então rlocus G, G1.
+
+62
+00:04:03.645 --> 00:04:09.270
+Você vai ver os lugares geométricos
+das raízes de G e G1 no mesmo gráfico.
+
+63
+00:04:09.270 --> 00:04:14.430
+Depois você pode digitar G2 igual a zpk,
+0 menos 6,
+
+64
+00:04:14.430 --> 00:04:21.110
+polos menos 1, menos 5 e menos 8 ganho 5,
+e rlocus G, G2.
+
+65
+00:04:21.110 --> 00:04:26.646
+Você notará que o ponto de saída também se
+desloca para a direita ou para a esquerda,
+
+66
+00:04:26.646 --> 00:04:30.160
+acompanhando o deslocamento do
+ponto de cruzamento das assíntotas.
+
+67
+00:04:30.160 --> 00:04:33.151
+Se quiser achar o ponto
+de saída do eixo real
+
+68
+00:04:33.151 --> 00:04:37.871
+função de a e b e verificar que ele se
+desloca para direita se a maior que b,
+
+69
+00:04:37.871 --> 00:04:41.050
+e para esquerda de a menor
+do que b fique a vontade.
+
+70
+00:04:41.050 --> 00:04:42.678
+Eu não vou fazer isso não,
+
+71
+00:04:42.678 --> 00:04:47.130
+crie também a função de transferência
+com a igual a 20 e b igual a 10.
+
+72
+00:04:47.130 --> 00:04:52.169
+E verifique que para k elevado o
+sistema terá polos malha fechada no
+
+73
+00:04:52.169 --> 00:04:57.944
+semi plano da direita,
+Ga igual a zpk menos 20 menos 10,
+
+74
+00:04:57.944 --> 00:05:01.640
+menos 1, menos 5 e 5, rlocus G, Ga.
+
+75
+00:05:01.640 --> 00:05:06.530
+Lembra do efeito do terceiro
+polo de 0 na resposta ao degrau?
+
+76
+00:05:06.530 --> 00:05:11.008
+O terceiro polo deixa a resposta mais
+lenta e mais amortecida e o 0 deixa
+
+77
+00:05:11.008 --> 00:05:16.033
+a resposta mais rápida e menos amortecida,
+se tivermos terceiro
+
+78
+00:05:16.033 --> 00:05:20.870
+polo e 0 quem está mais próximo da
+origem influencia mais a resposta.
+
+79
+00:05:20.870 --> 00:05:28.628
+No LGR temos efeito parecido ao
+adicionarmos polo e 0 alteramos o LGR.
+
+80
+00:05:28.628 --> 00:05:33.535
+O 0 tende a fazer com que LGR se
+deforme para a esquerda e enquanto o
+
+81
+00:05:33.535 --> 00:05:36.810
+polo tende a fazer com que ele
+se deforme para a direita.
+
+82
+00:05:36.810 --> 00:05:41.265
+E o elemento que estiver mais
+a direita ou mais próximo da origem,
+
+83
+00:05:41.265 --> 00:05:44.760
+se ambos forem negativos,
+influencia mais o LGR.
+
+84
+00:05:44.760 --> 00:05:49.584
+Assim, adicionando o polo mais a direita
+que o 0, o LGR vai ser deformado para
+
+85
+00:05:49.584 --> 00:05:54.411
+a direita e a adicionando o 0 mais
+a direita que o polo o LGR vai
+
+86
+00:05:54.411 --> 00:05:59.338
+ser deformado para a esquerda,
+uma forma fácil de lembrar esse efeito,
+
+87
+00:05:59.338 --> 00:06:02.400
+é pensar que o LGR se
+deforma na direção do polo.
+
+88
+00:06:02.400 --> 00:06:05.464
+Polo mais a direita
+deformação para a direita,
+
+89
+00:06:05.464 --> 00:06:09.000
+polo mais para a esquerda
+deformação para a esquerda.
+
+90
+00:06:09.000 --> 00:06:14.363
+Agora você já é capaz de explicar o efeito
+do acrescimo de 0 e de polo no LGR,
+
+91
+00:06:14.363 --> 00:06:19.402
+e você já deve ter imaginado que
+acrescentando polo e 0 podemos deformar o
+
+92
+00:06:19.402 --> 00:06:24.450
+LGR e fazer com que seus ramos passem
+pela região de desempenho desejado.
+
+93
+00:06:24.450 --> 00:06:28.860
+Assim, acrescentado polo e 0 de
+forma adequada seremos capazes
+
+94
+00:06:28.860 --> 00:06:33.249
+de atender requisitos que não poderiamos
+atender apenas ajustando o ganho de
+
+95
+00:06:33.249 --> 00:06:34.610
+controle proporcional.
+
+96
+00:06:34.610 --> 00:06:39.110
+No próximo vídeo, você verá como calcular
+a contribuição de fase necessária
+
+97
+00:06:39.110 --> 00:06:43.610
+para possibilitar que os requisitos
+de desempenho sejam atendidos.

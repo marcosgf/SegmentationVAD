@@ -1,0 +1,506 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.283
+[MÚSICA] E
+
+3
+00:00:13.283 --> 00:00:18.250
+aí pessoal, tudo bem?
+
+4
+00:00:18.250 --> 00:00:22.460
+Nessa aula iremos ver como salvar
+dados usando NSUserDefaults.
+
+5
+00:00:22.460 --> 00:00:26.767
+Criaremos aplicativo que tem uma tela
+inicial de configuração que em seguida
+
+6
+00:00:26.767 --> 00:00:28.640
+leva à tela normal do aplicativo.
+
+7
+00:00:28.640 --> 00:00:30.788
+Uma vez que o usuário
+salva as informações,
+
+8
+00:00:30.788 --> 00:00:33.990
+sempre que ele entrar no aplicativo
+já vai estar na segunda tela.
+
+9
+00:00:33.990 --> 00:00:37.650
+Vamos iniciar criando novo projeto
+com a opção single view application.
+
+10
+00:00:37.650 --> 00:00:41.270
+Escolha o nome de projeto e
+em Devices deixe Universal.
+
+11
+00:00:41.270 --> 00:00:45.050
+Com o projeto criado vamos
+criar alguns arquivos.
+
+12
+00:00:45.050 --> 00:00:47.638
+New file, Cocoa Touch Class,
+
+13
+00:00:47.638 --> 00:00:53.676
+UIViewController subclasse
+chame de ConfigViewController.
+
+14
+00:00:53.676 --> 00:00:56.860
+New file, Cocoa Touch Class,
+
+15
+00:00:56.860 --> 00:01:02.210
+UIViewController subclasse,
+chame de MainViewController.
+
+16
+00:01:02.210 --> 00:01:07.580
+Agora apague o view controller
+existente que não iremos usar.
+
+17
+00:01:07.580 --> 00:01:09.655
+Vamos ao storyboard.
+
+18
+00:01:09.655 --> 00:01:12.390
+Adicione o view controller.
+
+19
+00:01:12.390 --> 00:01:21.720
+[SEM_ÁUDIO] Selecione o
+primeiro view controller.
+
+20
+00:01:21.720 --> 00:01:26.360
+No inspetor de identidade
+escolha ConfigViewController.
+
+21
+00:01:26.360 --> 00:01:32.070
+No inspetor de conexões crie segue
+para o segundo view controller.
+
+22
+00:01:32.070 --> 00:01:38.870
+Vamos colocar o identificador donePrefs.
+
+23
+00:01:38.870 --> 00:01:43.320
+Agora vamos usar alguns elementos
+que já vimos no módulo passado.
+
+24
+00:01:43.320 --> 00:01:45.223
+Adicione 4 labels.
+
+25
+00:01:45.223 --> 00:01:49.990
+Modifique a primeira para
+Preferências de Usuário.
+
+26
+00:01:49.990 --> 00:01:55.910
+[SEM_ÁUDIO]
+
+27
+00:01:55.910 --> 00:02:01.830
+Adicionar constraints.
+
+28
+00:02:01.830 --> 00:02:10.428
+[SEM_ÁUDIO] Modifique
+
+29
+00:02:10.428 --> 00:02:16.050
+a segunda para Mensagem de Boas Vindas.
+
+30
+00:02:16.050 --> 00:02:24.320
+[SEM_ÁUDIO] Adicionar constraints.
+
+31
+00:02:24.320 --> 00:02:31.860
+Agora adicione text field.
+
+32
+00:02:31.860 --> 00:02:38.557
+[SEM_ÁUDIO] Colocar
+
+33
+00:02:38.557 --> 00:02:47.010
+o texto inicial Escreva aqui a sua
+mensagem para aparecer o botão de apagar.
+
+34
+00:02:47.010 --> 00:02:51.950
+Na aba de conexões, conetar o delegate.
+
+35
+00:02:51.950 --> 00:02:55.660
+Adicione constraints.
+
+36
+00:02:55.660 --> 00:03:03.660
+[SEM_ÁUDIO]
+
+37
+00:03:03.660 --> 00:03:12.510
+[SEM_ÁUDIO] Modifique a terceira label
+para Selecione uma cor de fundo.
+
+38
+00:03:12.510 --> 00:03:16.000
+Adicionar constraints.
+
+39
+00:03:16.000 --> 00:03:22.920
+Adicione picker view.
+
+40
+00:03:22.920 --> 00:03:28.610
+Coloque constraints.
+
+41
+00:03:28.610 --> 00:03:32.170
+Na aba de
+
+42
+00:03:32.170 --> 00:03:39.350
+conexões conete data source e o delegate.
+
+43
+00:03:39.350 --> 00:03:44.050
+Agora modifique
+
+44
+00:03:44.050 --> 00:03:47.680
+a última label para Escreva uma
+mensagem de boas vindas para finalizar.
+
+45
+00:03:47.680 --> 00:03:53.851
+Nesse caso vamos deixar ela pequena,
+centralizada, melhor aumentar
+
+46
+00:03:53.851 --> 00:03:59.120
+para duas linhas e adicionar uma
+quebra de linha depois de Boas vindas.
+
+47
+00:03:59.120 --> 00:04:04.223
+Para isso, basta pressionar control
+mais enter, modificar a cor também para
+
+48
+00:04:04.223 --> 00:04:09.330
+vermelho e vamos deixar
+essa label escondida.
+
+49
+00:04:09.330 --> 00:04:13.830
+Coloque constraints.
+
+50
+00:04:13.830 --> 00:04:20.970
+Adicione por último botão.
+
+51
+00:04:20.970 --> 00:04:25.020
+Modifique para finalizar,
+
+52
+00:04:25.020 --> 00:04:28.700
+ajuste o tamanho,
+
+53
+00:04:28.700 --> 00:04:34.970
+adicione constraint.
+
+54
+00:04:34.970 --> 00:04:40.300
+Nesse caso vou colocar constraint em
+relação à parte inferior da tela.
+
+55
+00:04:40.300 --> 00:04:45.677
+[SEM_ÁUDIO] Vamos
+
+56
+00:04:45.677 --> 00:04:50.000
+aproveitar para fazer as
+ligações com o código.
+
+57
+00:04:50.000 --> 00:04:55.763
+Crie outlet para o picker view,
+vou chamar de picker view.
+
+58
+00:04:55.763 --> 00:05:00.630
+Outlet para text field.
+
+59
+00:05:00.630 --> 00:05:06.530
+Tomar de text Field,
+uma última outlet para a label de erro,
+
+60
+00:05:06.530 --> 00:05:09.103
+tomar de error Label.
+
+61
+00:05:09.103 --> 00:05:12.630
+Criar uma action para o botão.
+
+62
+00:05:12.630 --> 00:05:14.406
+Tomar de end Button.
+
+63
+00:05:14.406 --> 00:05:17.670
+Selecione o segundo view controller.
+
+64
+00:05:17.670 --> 00:05:22.220
+No inspetor de identidade,
+escolha MainViewControler.
+
+65
+00:05:22.220 --> 00:05:23.860
+Adicione uma label.
+
+66
+00:05:23.860 --> 00:05:28.370
+Modifique para Mensagem de boas vindas.
+
+67
+00:05:28.370 --> 00:05:32.340
+Ajuste cor,
+
+68
+00:05:32.340 --> 00:05:37.805
+tamanho e adicone
+
+69
+00:05:37.805 --> 00:05:41.700
+constraints.
+
+70
+00:05:41.700 --> 00:05:49.080
+[SEM_ÁUDIO] Vamos
+
+71
+00:05:49.080 --> 00:05:54.792
+criar os outlets no código.
+
+72
+00:05:54.792 --> 00:06:01.630
+Para a label,
+chamar de welcome Message Label.
+
+73
+00:06:01.630 --> 00:06:06.919
+[SEM_ÁUDIO] Outlet
+
+74
+00:06:06.919 --> 00:06:11.798
+para a view principal,
+chamar de Main View.
+
+75
+00:06:11.798 --> 00:06:16.760
+Agora vamos código da main
+view controller primeiro.
+
+76
+00:06:16.760 --> 00:06:22.260
+Precisamos de duas variáveis para receber
+as informações da tela de configuração.
+
+77
+00:06:22.260 --> 00:06:24.545
+Uma variável para receber a cor de fundo,
+
+78
+00:06:24.545 --> 00:06:27.100
+outra para receber
+a mensagem de boas vindas.
+
+79
+00:06:27.100 --> 00:06:31.192
+Considerando que vamos receber essas
+variáveis antes de esse view controller
+
+80
+00:06:31.192 --> 00:06:35.013
+ser chamado, podemos fazer as
+alterações no viewDidLoad.
+
+81
+00:06:35.013 --> 00:06:38.410
+Aqui criamos uma função
+para cada inicialização.
+
+82
+00:06:38.410 --> 00:06:43.311
+A função updateColor verifica a cor
+que está na string recebida e
+
+83
+00:06:43.311 --> 00:06:45.500
+atualiza a cor da mainview.
+
+84
+00:06:45.500 --> 00:06:50.860
+A função updateText atualiza a label
+do outlet com a string recebida.
+
+85
+00:06:50.860 --> 00:06:55.095
+Agora vamos ao ConfigViewController.
+
+86
+00:06:55.095 --> 00:06:59.330
+Aqui precisamos adicionar data source
+e delegate para o picker view,
+
+87
+00:06:59.330 --> 00:07:01.375
+além de delegate para text field.
+
+88
+00:07:01.375 --> 00:07:06.558
+Para não ficar muita informação e
+organizar melhor o código, vamos adicionar
+
+89
+00:07:06.558 --> 00:07:11.917
+o UITextFieldDelegate, deixar
+separadas as funções do picker view.
+
+90
+00:07:11.917 --> 00:07:16.972
+Antes disso vamos apenas adicionar
+dados para o picker view nessa parte.
+
+91
+00:07:16.972 --> 00:07:19.820
+Monitor de string com o nome das cores.
+
+92
+00:07:19.820 --> 00:07:24.332
+Agora vou ao final do código e
+
+93
+00:07:24.332 --> 00:07:27.900
+adicione uma extensão para a nossa
+classe ConfigViewController.
+
+94
+00:07:27.900 --> 00:07:33.510
+Aqui vamos adicionar
+UIPickerViewDataSource
+
+95
+00:07:33.510 --> 00:07:38.595
+e UIPickerViewDelegate e colocamos as
+funções do picker view que já vimos
+
+96
+00:07:38.595 --> 00:07:43.630
+em aulas passadas usando o nosso
+vetor de dados picker view data.
+
+97
+00:07:43.630 --> 00:07:45.530
+Agora podemos voltar.
+
+98
+00:07:45.530 --> 00:07:49.570
+Ainda precisamos de algumas variáveis
+para ajudar no desenvolvimento.
+
+99
+00:07:49.570 --> 00:07:54.680
+SelectedColor para salvar e
+recuperar a cor de fundo escolhida,
+
+100
+00:07:54.680 --> 00:07:59.420
+selectedIntroText para salvar e
+recuperar o texto de boas vindas.
+
+101
+00:07:59.420 --> 00:08:04.921
+Defaults, com essa função recebemos
+o caminho padrão de dados
+
+102
+00:08:04.921 --> 00:08:10.010
+do NSUserDefaults, que é onde iremos
+salvar algumas informações dessa aula.
+
+103
+00:08:10.010 --> 00:08:11.839
+Sempre que iniciamos o picker view,
+
+104
+00:08:11.839 --> 00:08:14.910
+o primeiro elemento do vetor de
+dados é que será selecionado.
+
+105
+00:08:14.910 --> 00:08:17.796
+Caso não ocorra nenhuma
+alteração do picker view,
+
+106
+00:08:17.796 --> 00:08:22.698
+vamos deixar salvo na nossa varável
+local esse valor que no caso é o branco.
+
+107
+00:08:22.698 --> 00:08:26.780
+Podemos já adicionar as
+funções do text field,
+
+108
+00:08:26.780 --> 00:08:29.850
+as mesmas que já vimos em aula passada.
+
+109
+00:08:29.850 --> 00:08:33.500
+A diferença aqui é que quando
+termina de digitar texto,
+
+110
+00:08:33.500 --> 00:08:37.830
+salvamos esse texto na nossa
+variável local, selectedIntroText.
+
+111
+00:08:37.830 --> 00:08:43.017
+Na próxima aula iremos continuar
+explicando a partir desse ponto.
+
+112
+00:08:43.017 --> 00:08:43.659
+Até lá!

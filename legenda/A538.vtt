@@ -1,0 +1,350 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.589
+Bom, pessoal, vamos lá.
+
+2
+00:00:01.589 --> 00:00:05.190
+A gente vai explorar pouquinho
+mais o recurso Formulário.
+
+3
+00:00:05.190 --> 00:00:09.108
+Como eu disse anteriormente,
+para criar formulário, você precisa,
+
+4
+00:00:09.108 --> 00:00:16.295
+num primeiro momento, criar as questões,
+as perguntas que você vai utilizar.
+
+5
+00:00:16.295 --> 00:00:19.101
+Eu vou imaginar com vocês
+aqui uma situação hipotética.
+
+6
+00:00:19.101 --> 00:00:22.627
+Vamos imaginar que eu, professor
+de linguagens, quero saber o nome
+
+7
+00:00:22.627 --> 00:00:27.047
+do meu aluno, a idade dele e qual
+foi o último livro que ele leu.
+
+8
+00:00:27.047 --> 00:00:31.491
+Então, são três questões: nome,
+
+9
+00:00:31.491 --> 00:00:35.845
+idade e a pergunta
+
+10
+00:00:35.845 --> 00:00:40.916
+"qual foi o último livro".
+
+11
+00:00:40.916 --> 00:00:45.940
+Eu posso, a qualquer momento,
+
+12
+00:00:45.940 --> 00:00:51.435
+inserir novas questões,
+editar as questões dentro do formulário.
+
+13
+00:00:51.435 --> 00:00:53.683
+Mas eu gosto sempre de fazer isso antes.
+
+14
+00:00:53.683 --> 00:00:59.036
+Rascunhar, ter uma ideia geral do que está
+acontecendo, para que eu possa elaborar
+
+15
+00:00:59.036 --> 00:01:03.735
+o formulário com a certeza de
+que ele vai ser bem aplicado.
+
+16
+00:01:03.735 --> 00:01:07.546
+Então, a gente agora
+vai por a mão na massa.
+
+17
+00:01:07.546 --> 00:01:10.540
+Eu vou abrir a minha conta Google.
+
+18
+00:01:10.540 --> 00:01:15.260
+Eu vou vir aqui nas nove caixinhas
+e vou escolher a opção "Drive".
+
+19
+00:01:15.260 --> 00:01:20.570
+Ele vai pedir meu usuário e senha.
+
+20
+00:01:20.570 --> 00:01:23.840
+Eu vou entrar com a minha conta,
+
+21
+00:01:23.840 --> 00:01:28.440
+e eu vou entrar com a minha senha.
+
+22
+00:01:28.440 --> 00:01:30.324
+Vou desmarcar essa caixinha,
+
+23
+00:01:30.324 --> 00:01:34.170
+porque o computador que estou
+usando é computador público.
+
+24
+00:01:34.170 --> 00:01:38.675
+E aí eu vou fazer login.
+
+25
+00:01:38.675 --> 00:01:42.551
+Dentro do Drive, tem aquelas ferramentas
+que a gente já conhece, tenho as minhas
+
+26
+00:01:42.551 --> 00:01:47.440
+pastinhas, e eu vou criar o meu formulário
+aqui dentro da aula de Matemática.
+
+27
+00:01:47.440 --> 00:01:51.765
+Ó, eu tenho uma planilha, eu tenho uma
+imagem e tenho documento de texto.
+
+28
+00:01:51.765 --> 00:01:54.939
+Como é que eu faço para
+criar o formulário?
+
+29
+00:01:54.939 --> 00:01:56.090
+Ó, "Novo".
+
+30
+00:01:56.090 --> 00:02:02.109
+Ele não está aqui, mas você vai
+em "Mais" > "Formulários Google".
+
+31
+00:02:02.109 --> 00:02:03.700
+E aí eu vou clicar.
+
+32
+00:02:03.700 --> 00:02:09.730
+Primeira coisa que a gente faz,
+que a gente sempre fez: vamos dar nome.
+
+33
+00:02:09.730 --> 00:02:15.420
+Então eu vou colocar aqui o nome
+do meu questionário: "Livros".
+
+34
+00:02:15.420 --> 00:02:22.140
+Você pode, já nesse momento, clicar nesse
+outro campo e colocar uma descrição.
+
+35
+00:02:22.140 --> 00:02:24.906
+Observe que o meu
+formulário está sem nome.
+
+36
+00:02:24.906 --> 00:02:26.027
+Eu digitei aqui.
+
+37
+00:02:26.027 --> 00:02:31.189
+A hora que eu vou para outro campo,
+ele já preencheu isso aqui para mim.
+
+38
+00:02:31.189 --> 00:02:31.827
+Tá bom?
+
+39
+00:02:31.827 --> 00:02:36.465
+Eu não vou dar maiores descrições,
+mas vamos imaginar que eu
+
+40
+00:02:36.465 --> 00:02:40.790
+quisesse simplesmente que o
+meu aluno digitasse o nome.
+
+41
+00:02:40.790 --> 00:02:43.493
+É uma pergunta apenas de texto.
+
+42
+00:02:43.493 --> 00:02:49.917
+A ferramenta Formulário permite várias
+perguntas, ou vários tipos de perguntas.
+
+43
+00:02:49.917 --> 00:02:51.607
+Ó, "Tipo de pergunta".
+
+44
+00:02:51.607 --> 00:02:54.033
+Ele já colocou "Múltipla escolha",
+
+45
+00:02:54.033 --> 00:02:57.884
+mas vamos imaginar que eu
+quisesse escolher apenas "Texto".
+
+46
+00:02:57.884 --> 00:02:59.505
+Porque é só o nome do aluno.
+
+47
+00:02:59.505 --> 00:03:00.115
+Tá bom?
+
+48
+00:03:00.115 --> 00:03:05.526
+Então, pergunta sem título,
+eu vou colocar aqui "Pergunta 1",
+
+49
+00:03:05.526 --> 00:03:11.152
+e aí eu vou colocar aqui no texto
+de ajuda "Digite seu nome".
+
+50
+00:03:11.152 --> 00:03:15.111
+Isso aqui pode ser feito de
+várias maneiras diferentes,
+
+51
+00:03:15.111 --> 00:03:17.500
+você pode usar a linguagem
+que você quiser.
+
+52
+00:03:17.500 --> 00:03:22.155
+Você pode mudar o tipo de
+pergunta quando você quiser.
+
+53
+00:03:22.155 --> 00:03:22.870
+Tá bom?
+
+54
+00:03:22.870 --> 00:03:28.240
+Novamente, eu só gosto de começar
+com as coisas bem organizadas.
+
+55
+00:03:28.240 --> 00:03:32.369
+Então, acabou a pergunta, o nome,
+o texto e tal, "Concluído".
+
+56
+00:03:32.369 --> 00:03:34.435
+Como é que vai ficar o formulário?
+
+57
+00:03:34.435 --> 00:03:35.520
+Vai ficar assim.
+
+58
+00:03:35.520 --> 00:03:37.708
+A minha segunda pergunta?
+
+59
+00:03:37.708 --> 00:03:39.040
+Também é texto.
+
+60
+00:03:39.040 --> 00:03:42.470
+Eu vou clicar aqui, "Adicionar item",
+
+61
+00:03:42.470 --> 00:03:46.580
+setinha para baixo,
+e eu vou escolher "Texto".
+
+62
+00:03:46.580 --> 00:03:52.135
+"Pergunta 2".
+
+63
+00:03:52.135 --> 00:03:57.690
+Vou no texto de ajuda:
+"Qual é a sua idade?"
+
+64
+00:03:57.690 --> 00:04:01.970
+Vou concluir.
+
+65
+00:04:01.970 --> 00:04:05.724
+Vou adicionar a terceira pergunta.
+
+66
+00:04:05.724 --> 00:04:07.060
+"Texto".
+
+67
+00:04:07.060 --> 00:04:12.010
+"Pergunta 3",
+
+68
+00:04:12.010 --> 00:04:18.949
+"Qual foi o último livro que você leu?"
+
+69
+00:04:18.949 --> 00:04:24.708
+Eu vou rolar minha tela aqui,
+e vou dar "Concluir".
+
+70
+00:04:24.708 --> 00:04:29.744
+Ó, as minhas perguntas e o meu
+formulário já estão elaborados.
+
+71
+00:04:29.744 --> 00:04:33.295
+Se você quiser ver como
+o seu formulário ficou,
+
+72
+00:04:33.295 --> 00:04:38.530
+é só você clicar nesse botão aqui,
+"Ver formulário publicado".
+
+73
+00:04:38.530 --> 00:04:41.682
+Está aqui o formulário que você fez.
+
+74
+00:04:41.682 --> 00:04:46.293
+O aluno responde às perguntas
+e clica no botão "Enviar",
+
+75
+00:04:46.293 --> 00:04:49.930
+e aí você vai receber os
+dados que o aluno preencheu.
+
+76
+00:04:49.930 --> 00:04:51.100
+OK?
+
+77
+00:04:51.100 --> 00:04:53.150
+Valeu.

@@ -1,0 +1,290 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.096
+Olá!
+Neste vídeo você verá a relação entre
+
+2
+00:00:03.096 --> 00:00:08.022
+a função de transferência e o diagrama de
+Bode e aprenderá a desenhar o diagrama
+
+3
+00:00:08.022 --> 00:00:10.740
+a partir do conhecimento
+da função de transferência.
+
+4
+00:00:10.740 --> 00:00:15.480
+Se voltarmos rapidamente ao
+exemplo do circuito RC do vídeo 2,
+
+5
+00:00:15.480 --> 00:00:19.320
+veremos que G de j ômega,
+usualmente será número complexo.
+
+6
+00:00:19.320 --> 00:00:23.547
+A primeira maneira de representar G
+de j ômega é justamente escrever o
+
+7
+00:00:23.547 --> 00:00:27.650
+número complexo resultante para cada
+frequência ômega, como nessa tabela.
+
+8
+00:00:27.650 --> 00:00:31.465
+Essa tabela contém a resposta
+frequência do modelo do
+
+9
+00:00:31.465 --> 00:00:34.560
+circuito RC para 3 frequências distintas,
+
+10
+00:00:34.560 --> 00:00:39.400
+contudo, entre o que está na tabela e as
+figuras das senoides há uma lacuna enorme.
+
+11
+00:00:39.400 --> 00:00:43.778
+Como interpretar esses números complexos
+e saber esboçar a senoide na saída para
+
+12
+00:00:43.778 --> 00:00:45.720
+a entrada de amplitude conhecida?
+
+13
+00:00:45.720 --> 00:00:51.120
+Uma resposta seria pensar no seu número
+complexo termos de módulo e fase,
+
+14
+00:00:51.120 --> 00:00:53.472
+como já vimos no vídeo anterior.
+
+15
+00:00:53.472 --> 00:00:59.040
+Assim podemos usar a tabela e calcular o
+módulo e a fase de G de j ômega para cada
+
+16
+00:00:59.040 --> 00:01:05.850
+valor de ômega, obtendo módulo e fase como
+a terceira e quarta colunas dessa tabela.
+
+17
+00:01:05.850 --> 00:01:10.187
+Agora está muito mais fácil entender o
+que acontecerá com a senoide na saída.
+
+18
+00:01:10.187 --> 00:01:13.803
+Por exemplo, para a frequência
+de 10 radianos por segundo,
+
+19
+00:01:13.803 --> 00:01:18.410
+a senoide na saída terá amplitude de
+aproximadamente 0,7 vezes a da entrada
+
+20
+00:01:18.410 --> 00:01:23.010
+e defasagem de 0,8 radianos,
+que dá aproximadamente 46 graus.
+
+21
+00:01:23.010 --> 00:01:27.802
+[SEM_ÁUDIO] Então
+
+22
+00:01:27.802 --> 00:01:31.880
+usar módulo e fase de G de j ômega
+parece ser uma ideia interessante.
+
+23
+00:01:31.880 --> 00:01:35.708
+Como vimos no vídeo anterior,
+o diagrama de Bode é uma boa representação
+
+24
+00:01:35.708 --> 00:01:38.860
+da resposta frequência à parte
+de dados de módulo e fase.
+
+25
+00:01:38.860 --> 00:01:43.270
+Vamos traçar então o diagrama
+de Bode para o circuito RC.
+
+26
+00:01:43.270 --> 00:01:48.334
+O que essas figuras indicam?
+
+27
+00:01:48.334 --> 00:01:52.060
+Olhando para o módulo, azul,
+vemos que começa 0 dB.
+
+28
+00:01:52.060 --> 00:01:56.784
+A partir de cerca de 10 radianos por
+segundo começa a decrescer segundo algo
+
+29
+00:01:56.784 --> 00:02:03.615
+que parece ser uma reta,
+conforme aumentamos a frequência.
+
+30
+00:02:03.615 --> 00:02:08.910
+Já a fase decresce de próximo de 0 grau
+direção a valor próximo de menos 90 graus.
+
+31
+00:02:08.910 --> 00:02:15.750
+Será que podemos de alguma
+maneira prever essa tendência?
+
+32
+00:02:15.750 --> 00:02:19.630
+Vamos calcular o módulo e a fase de
+G de j ômega de maneira literal.
+
+33
+00:02:19.630 --> 00:02:25.790
+O módulo de G de j ômega será dado então
+pelo módulo de 1 sobre j ômega R C mais 1,
+
+34
+00:02:25.790 --> 00:02:30.280
+que é igual a 1 sobre a raiz de
+ômega R C ao quadrado mais 1.
+
+35
+00:02:30.280 --> 00:02:35.234
+Já a fase de
+
+36
+00:02:35.234 --> 00:02:39.800
+G de j ômega é dada pela fase
+de 1 sobre j ômega R C mais 1,
+
+37
+00:02:39.800 --> 00:02:43.100
+que é igual a menos o arco
+tangente de ômega R C.
+
+38
+00:02:43.100 --> 00:02:49.469
+Se tomarmos então ômega muito maior do
+que 1 sobre R C, veremos que o termo 1 na
+
+39
+00:02:49.469 --> 00:02:53.370
+raiz quadrada do módulo fica desprezível
+frente ao termo mais à esquerda,
+
+40
+00:02:53.370 --> 00:02:58.480
+assim o módulo de G de j ômega será
+aproximadamente 1 sobre ômega R C.
+
+41
+00:02:58.480 --> 00:03:03.389
+Calculando o módulo dB
+teremos módulo de G de
+
+42
+00:03:03.389 --> 00:03:08.113
+j ômega dB aproximadamente igual
+a 20 log de 1 sobre ômega R C,
+
+43
+00:03:08.113 --> 00:03:11.130
+que é igual a menos o 20 log de ômega R C.
+
+44
+00:03:11.130 --> 00:03:16.160
+Por sua vez, isto é igual a menos o
+20 log de R C menos 20 log de ômega.
+
+45
+00:03:16.160 --> 00:03:21.130
+Lembrando que a escala do eixo
+horizontal é log de ômega,
+
+46
+00:03:21.130 --> 00:03:26.100
+veremos que alta frequência o ganho desse
+10 cairá como uma reta com a frequência,
+
+47
+00:03:26.100 --> 00:03:31.105
+como vimos no diagrama de Bode.
+
+48
+00:03:31.105 --> 00:03:36.110
+Já para a fase, ômega muito maior que R C
+implica que o argumento tende a infinito,
+
+49
+00:03:36.110 --> 00:03:40.471
+o arco tangente então é pi sobre 2 com o
+sinal de menos e a fase de G de j ômega
+
+50
+00:03:40.471 --> 00:03:42.270
+tende para menos pi sobre 2.
+
+51
+00:03:42.270 --> 00:03:47.209
+Isso também pode ser percebido
+no diagrama de Bode, assim vemos
+
+52
+00:03:47.209 --> 00:03:51.040
+que é simples obter a resposta frequência
+a partir da função de transferência.
+
+53
+00:03:51.040 --> 00:03:51.692
+Para isso,
+
+54
+00:03:51.692 --> 00:03:55.833
+basta calcular o valor de G de j ômega
+para a frequência de interesse depois de
+
+55
+00:03:55.833 --> 00:03:59.670
+obter os módulos e fases para cada
+frequência e desenhar o diagrama de Bode.
+
+56
+00:03:59.670 --> 00:04:02.226
+Agora você já é capaz de obter a resposta
+
+57
+00:04:02.226 --> 00:04:05.960
+frequência a partir da função
+de transferência do sistema.
+
+58
+00:04:05.960 --> 00:04:10.326
+Nos próximos vídeos vamos fazer isso para
+algumas das principais classes de sistemas
+
+59
+00:04:10.326 --> 00:04:14.290
+que aparecem comumente projetos de
+controle e obter regras para fazer
+
+60
+00:04:14.290 --> 00:04:18.690
+esboço rápido de resposta frequência
+a partir da função de transferência.

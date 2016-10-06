@@ -1,0 +1,308 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.710
+[MÚSICA]
+
+2
+00:00:05.710 --> 00:00:11.085
+[MÚSICA] Olá.
+
+3
+00:00:11.085 --> 00:00:15.780
+Retomando o módulo inferindo propriedades
+e características de uma população,
+
+4
+00:00:15.780 --> 00:00:19.782
+eu gostaria de aprofundar
+na lição sobre correlação.
+
+5
+00:00:19.782 --> 00:00:24.789
+Você acabou de assistir o vídeo que
+trata de correlação, e a autora que é
+
+6
+00:00:24.789 --> 00:00:30.237
+uma professora de estatística, ela
+apresenta várias associações possíveis.
+
+7
+00:00:30.237 --> 00:00:35.150
+O interessante do vídeo, que eu
+gostaria de enfatizar nessa vídeoaula,
+
+8
+00:00:35.150 --> 00:00:38.194
+é que existem correlações espúrias,
+
+9
+00:00:38.194 --> 00:00:42.100
+e o fato de que correlação
+não é uma causalidade.
+
+10
+00:00:42.100 --> 00:00:45.730
+Eu quero aprofundar
+nestes dois temas agora.
+
+11
+00:00:45.730 --> 00:00:49.918
+Correlação é muito importante pra
+Marketing, como a gente viu na vídeoaula
+
+12
+00:00:49.918 --> 00:00:55.822
+anterior, porque nos permine explorar
+sobre a associação entre duas variaveis,
+
+13
+00:00:55.822 --> 00:00:59.137
+por exemplo,
+intensidade de promoção e vendas.
+
+14
+00:00:59.137 --> 00:01:03.306
+Existe ou não uma associação,
+uma relação entre essas duas variáveis?
+
+15
+00:01:03.306 --> 00:01:08.483
+Isso pra nós é muito importante uma
+vez que a gente consegue inferir
+
+16
+00:01:08.483 --> 00:01:13.866
+se a promoção afeta positivamente vendas,
+e dessa forma
+
+17
+00:01:13.866 --> 00:01:18.893
+você pode voltar lá na sua área
+financeira e pedir aumento de orçamento,
+
+18
+00:01:18.893 --> 00:01:23.920
+por exemplo,
+ou mesmo voltar na área de criação e rever
+
+19
+00:01:23.920 --> 00:01:28.545
+a maneira como essa promoção tá
+sendo executada no ponto de venda.
+
+20
+00:01:28.545 --> 00:01:29.380
+Muito bem.
+
+21
+00:01:29.380 --> 00:01:35.967
+Correlação espúria e,
+correlação não é causalidade,
+
+22
+00:01:35.967 --> 00:01:42.150
+nós temos que considerar que existem
+basicamente 4 aspectos relevantes.
+
+23
+00:01:42.150 --> 00:01:45.614
+Suponha que nós encontramos
+uma associação entre A e B,
+
+24
+00:01:45.614 --> 00:01:50.751
+fizemos lá o diagrama de dispersão,
+calculamos o coeficiente de relação,
+
+25
+00:01:50.751 --> 00:01:54.890
+e nós encontramos uma correlação
+positiva ou negativa.
+
+26
+00:01:54.890 --> 00:02:01.342
+Podem existir algumas explicações
+para essa associação, uma delas é
+
+27
+00:02:01.342 --> 00:02:06.960
+que a mudança de uma determinada variável
+acarreta na mudança de outra variável,
+
+28
+00:02:06.960 --> 00:02:12.880
+então, a mudança em promoção
+afeta a mudança em vendas.
+
+29
+00:02:12.880 --> 00:02:20.499
+Agora, a gente pode também inferir
+sobre essa associação de forma que,
+
+30
+00:02:20.499 --> 00:02:24.973
+na verdade, B afeta A, ou seja,
+
+31
+00:02:24.973 --> 00:02:30.880
+vendas pode afetar promoção,
+o que na verdade não faz muito sentido.
+
+32
+00:02:30.880 --> 00:02:35.520
+Nesse caso específico do
+exemplo a gente espera que
+
+33
+00:02:35.520 --> 00:02:40.347
+a ação que a gente faz no ponto de
+venda afete venda mas a correlação,
+
+34
+00:02:40.347 --> 00:02:46.339
+ela nos informa a associação, ou seja,
+tanto A leva a B, quanto B leva a A,
+
+35
+00:02:46.339 --> 00:02:51.739
+ou seja, promoção leva a vendas, vendas
+pode também estar levando à promoção,
+
+36
+00:02:51.739 --> 00:02:56.655
+o que não faz sentido e aí que a gente
+começa a ingressar a questão de que
+
+37
+00:02:56.655 --> 00:03:01.570
+correlação não nos informa
+sobre causalidade.
+
+38
+00:03:01.570 --> 00:03:07.486
+Na lição sobre regressão nós
+iremos enderaçar causalidade com
+
+39
+00:03:07.486 --> 00:03:12.570
+pouco mais de propriedade, uma técnica
+mais adequada para poder testar
+
+40
+00:03:12.570 --> 00:03:17.400
+o quanto que, por exemplo,
+promoção afeta vendas.
+
+41
+00:03:17.400 --> 00:03:18.507
+Muito bem.
+
+42
+00:03:18.507 --> 00:03:24.017
+No que diz respeito a correlação espúria,
+mudanças em outras
+
+43
+00:03:24.017 --> 00:03:29.620
+variáveis podem estar, na verdade,
+afetando o quanto que A leva a B.
+
+44
+00:03:29.620 --> 00:03:34.213
+No caso vocês viram o vídeo que
+
+45
+00:03:34.213 --> 00:03:39.994
+informava o número de
+mortes por afogamento
+
+46
+00:03:39.994 --> 00:03:45.540
+em piscinas com o consumo de sorvete.
+
+47
+00:03:45.540 --> 00:03:50.299
+Na verdade existem várias outras variáveis
+
+48
+00:03:50.299 --> 00:03:54.700
+que estão efetando essas duas váriaveis,
+ou seja,
+
+49
+00:03:54.700 --> 00:03:59.347
+esses dois fenômenos que
+estão sendo estudados então,
+
+50
+00:03:59.347 --> 00:04:05.091
+a relação observada é
+simplesmente uma coincidência,
+
+51
+00:04:05.091 --> 00:04:11.316
+e é nesse ponto que eu chamo
+atenção para você, toda vez que for
+
+52
+00:04:11.316 --> 00:04:17.295
+fazer uso dessa técnica
+no marketing analítico,
+
+53
+00:04:17.295 --> 00:04:21.093
+que esteja embasado de forma teórica,
+
+54
+00:04:21.093 --> 00:04:27.150
+tenha uma hipótese fundamentada seja
+com base na intuição que você tenha,
+
+55
+00:04:27.150 --> 00:04:32.386
+na experiência que a empresa de vocês tem,
+e que isso vai
+
+56
+00:04:32.386 --> 00:04:37.739
+ajudá-lo a olhar se a associação
+entre essas duas variáveis,
+
+57
+00:04:37.739 --> 00:04:40.970
+ela ocorre de maneira direta,
+não tem qualquer efeito espúrio,
+
+58
+00:04:40.970 --> 00:04:46.973
+ou mesmo se a associação
+entre as variaveis,
+
+59
+00:04:46.973 --> 00:04:50.427
+não quero dizer nada sobre causalidade.
+
+60
+00:04:50.427 --> 00:04:55.752
+Agora convido você a assistir à próxima
+videoaula que trata sobre regressão.
+
+61
+00:04:55.752 --> 00:05:01.462
+Iremos ingressar de maneira adequada
+o efeito que A pode estar tendo em B,
+
+62
+00:05:01.462 --> 00:05:07.010
+ou seja, a causalidade de A em B,
+ou seja, a causalidade de
+
+63
+00:05:07.010 --> 00:05:12.590
+promoção em vendas.
+
+64
+00:05:12.590 --> 00:05:18.790
+[SEM_ÁUDIO]

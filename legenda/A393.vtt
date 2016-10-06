@@ -1,0 +1,339 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.660
+[MÚSICA]
+
+2
+00:00:05.660 --> 00:00:11.320
+[MÚSICA]
+
+3
+00:00:11.320 --> 00:00:17.790
+[MÚSICA]
+
+4
+00:00:17.790 --> 00:00:26.496
+[MÚSICA] Muito bem,
+
+5
+00:00:26.496 --> 00:00:31.558
+chegamos a última semana do curso
+Controle de Sistemas do Plano s.
+
+6
+00:00:31.558 --> 00:00:34.070
+Vamos ver o que você já
+aprendeu nesse curso.
+
+7
+00:00:34.070 --> 00:00:37.832
+Você recordou a parametrização de sistemas
+de segunda ordem, e as fórmulas da
+
+8
+00:00:37.832 --> 00:00:41.165
+resposta ao degrau e talvez tenha
+até aprendido uma fórmula nova.
+
+9
+00:00:41.165 --> 00:00:45.445
+Seguida você aprendeu o que é o plano
+s e como representar os requisitos de
+
+10
+00:00:45.445 --> 00:00:47.980
+desempenho na forma de regiões do plano s.
+
+11
+00:00:47.980 --> 00:00:51.952
+Você também viu que se os polos e zeros
+de sistema estiverem suficientemente
+
+12
+00:00:51.952 --> 00:00:56.362
+afastados, podemos aproximar a resposta
+de sistema de ordem mais elevada pela
+
+13
+00:00:56.362 --> 00:00:59.200
+resposta de sistema de
+segunda ordem sem zeros,
+
+14
+00:00:59.200 --> 00:01:01.799
+ou até pela resposta de
+sistema de primeira ordem.
+
+15
+00:01:01.799 --> 00:01:05.230
+Você recordou como obter a função
+de transferência malha fechada,
+
+16
+00:01:05.230 --> 00:01:09.282
+e viu como como as posições dos polos
+malha fechada variam à medida que variamos
+
+17
+00:01:09.282 --> 00:01:11.260
+o ganho de controlador proporcional.
+
+18
+00:01:11.260 --> 00:01:15.710
+Você aprendeu o que é o lugar geométrico
+das raízes e que característica
+
+19
+00:01:15.710 --> 00:01:17.870
+utilizamos para determiná-lo.
+
+20
+00:01:17.870 --> 00:01:21.285
+Fase de G de quadradinho
+igual a menos 180 graus,
+
+21
+00:01:21.285 --> 00:01:25.331
+você também aprendeu as regras para
+esboçar o LGR e como determinar
+
+22
+00:01:25.331 --> 00:01:29.719
+alguns pontos ângulos específicos, e você
+também viu alguns exemplos de esboços do
+
+23
+00:01:29.719 --> 00:01:33.240
+LGR e projeto de controle
+proporcional usando o LGR.
+
+24
+00:01:33.240 --> 00:01:36.816
+Você viu que nem sempre podemos atender
+aos requisitos de desempenho com
+
+25
+00:01:36.816 --> 00:01:40.994
+simples controlador proporcional e
+que podemos alterar o LGR adicionando
+
+26
+00:01:40.994 --> 00:01:43.820
+controlador com polo e zero além do ganho.
+
+27
+00:01:43.820 --> 00:01:47.808
+Com isso, podemos fazer o LGR passar
+pela região de desempenho desejado,
+
+28
+00:01:47.808 --> 00:01:49.708
+o que ele não fazia originalmente.
+
+29
+00:01:49.708 --> 00:01:54.171
+Como estamos interessados apenas ponto
+e não no LGR inteiro, podemos reduzir
+
+30
+00:01:54.171 --> 00:01:58.530
+o projeto às características de único
+ponto o polo desejado, quadradinho d.
+
+31
+00:01:58.530 --> 00:02:02.552
+Se tivermos fase de G de quadradinho
+d igual a menos 180 graus,
+
+32
+00:02:02.552 --> 00:02:06.440
+o LGR passa pelo polo desejado e
+só precisamos ajustar o ganho.
+
+33
+00:02:06.440 --> 00:02:10.892
+Caso contrário projetamos controlador de
+avanço de fase de modo que a fase de C de
+
+34
+00:02:10.892 --> 00:02:14.320
+quadradinho d,
+G de quadradinho d seja menos 180 graus,
+
+35
+00:02:14.320 --> 00:02:19.110
+o que pode ser conseguido com infinitas
+combinações de polo e 0 do controlador.
+
+36
+00:02:19.110 --> 00:02:22.246
+Você viu as soluções mais adotadas,
+você aprendeu também,
+
+37
+00:02:22.246 --> 00:02:26.500
+que depois de determinar a posição do polo
+e do 0 do controlador de avanço de fase,
+
+38
+00:02:26.500 --> 00:02:30.187
+que também é chamado de controlador lead,
+é necessário determinar o ganho
+
+39
+00:02:30.187 --> 00:02:33.300
+para que o quadradinho d seja
+realmente polo malha fechada.
+
+40
+00:02:33.300 --> 00:02:37.608
+Você aprendeu o que é o controlador PD,
+e que ele deve ser usado com cautela ou
+
+41
+00:02:37.608 --> 00:02:42.063
+implementado como se fosse lead, você viu
+exemplos de projeto de controlador de
+
+42
+00:02:42.063 --> 00:02:46.120
+avanço de fase e deve estar apto agora
+a projetar seus próprios controladores.
+
+43
+00:02:46.120 --> 00:02:50.215
+Mas lembre, não faça avanços grandes
+demais e verifique se nenhum dos outros
+
+44
+00:02:50.215 --> 00:02:52.170
+polos está no semi plano da direita.
+
+45
+00:02:52.170 --> 00:02:56.522
+Você aprendeu que não deve modificar o
+ganho de controlador proporcional ou de
+
+46
+00:02:56.522 --> 00:03:00.190
+controlador de avanço de fase para
+atender a requisito de erro regime.
+
+47
+00:03:00.190 --> 00:03:03.476
+Ao invés disso, você deve usar
+controlador de atraso de fase,
+
+48
+00:03:03.476 --> 00:03:05.570
+também conhecido como controlador lag.
+
+49
+00:03:05.570 --> 00:03:10.162
+Você aprendeu como calcular a contribuição
+necessária do controlador lag e onde você
+
+50
+00:03:10.162 --> 00:03:12.420
+pode posicionar o 0 desse controlador.
+
+51
+00:03:12.420 --> 00:03:16.429
+Você também aprendeu o que é o controlador
+PI e viu que esses controladores
+
+52
+00:03:16.429 --> 00:03:20.394
+podem afetar outras características
+de resposta do sistema e como tentar
+
+53
+00:03:20.394 --> 00:03:21.643
+minimizar esse efeito.
+
+54
+00:03:21.643 --> 00:03:25.448
+E após ter visto alguns exemplos de
+projeto, você deve ser capaz de projetar
+
+55
+00:03:25.448 --> 00:03:28.185
+controladores de atraso de
+fase e controladores PI,
+
+56
+00:03:28.185 --> 00:03:30.311
+novamente, cuidado com a habilidade.
+
+57
+00:03:30.311 --> 00:03:32.935
+E de quebra,
+você aprendeu como usar o MATLAB,
+
+58
+00:03:32.935 --> 00:03:37.443
+dos melhores amigos do controleiro,
+você aprendeu a simular a resposta de
+
+59
+00:03:37.443 --> 00:03:41.833
+sistemas no MATLAB e no Simulink,
+a traçar o LGR com o MATLAB e a projetar
+
+60
+00:03:41.833 --> 00:03:45.754
+controladores com o auxílio do MATLAB,
+e isso é apenas uma mostra do quanto
+
+61
+00:03:45.754 --> 00:03:49.330
+o MATLAB pode ser útil na análise de
+projetos do controle de sistemas.
+
+62
+00:03:49.330 --> 00:03:51.364
+E nessa semana vamos radicalizar.
+
+63
+00:03:51.364 --> 00:03:56.465
+Vamos projetar controlador de avanço e
+atraso de fase ou controlador lead lag,
+
+64
+00:03:56.465 --> 00:04:00.643
+também veremos o projeto de
+controlador PID que normalmente e
+
+65
+00:04:00.643 --> 00:04:03.382
+implementado como PI lead e não como PID.
+
+66
+00:04:03.382 --> 00:04:07.245
+E finalmente você verá como podemos
+modelar o atraso de transporte,
+
+67
+00:04:07.245 --> 00:04:11.546
+fenômeno presente diversos sistemas e
+como podemos considerar seu efeito no
+
+68
+00:04:11.546 --> 00:04:13.103
+desempenho de sistema.
+
+69
+00:04:13.103 --> 00:04:17.955
+E você apenderá como contrapor esses
+efeitos no projeto de controlador.
+
+70
+00:04:17.955 --> 00:04:21.720
+Então como diria Ben Grimm
+"Está na hora do pau".
+
+71
+00:04:21.720 --> 00:04:26.630
+No próximo vídeo, você verá o projeto de
+controlador de avanço e atraso de fase.

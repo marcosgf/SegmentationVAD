@@ -1,0 +1,288 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.730
+[ÁUDIO_EM_BRANCO]
+
+2
+00:00:06.730 --> 00:00:12.600
+[ÁUDIO_EM_BRANCO]
+
+3
+00:00:12.600 --> 00:00:19.131
+[ÁUDIO_EM_BRANCO] Olá.
+
+4
+00:00:19.131 --> 00:00:22.440
+Nesta semana,
+
+5
+00:00:22.440 --> 00:00:27.020
+você verá outra maneira de se representar
+a resposta frequência de sistema,
+
+6
+00:00:27.020 --> 00:00:31.665
+a carta de Nichols-Back,
+que podemos obter a resposta frequência
+
+7
+00:00:31.665 --> 00:00:36.310
+do sistema malha fechada a partir do
+conhecimento da resposta malha aberta.
+
+8
+00:00:36.310 --> 00:00:40.068
+Com isso, você aprenderá outras
+maneiras de representar os
+
+9
+00:00:40.068 --> 00:00:43.170
+Requisitos de Projeto no
+domínio da frequência.
+
+10
+00:00:43.170 --> 00:00:50.138
+Contudo, antes disso, ainda vamos recorrer
+ao diagrama de Bode por dois motivos.
+
+11
+00:00:50.138 --> 00:00:54.170
+Você vai aprender como
+desenhar o diagrama de Bode de
+
+12
+00:00:54.170 --> 00:00:58.020
+sistema de segunda ordem com par
+de pólos complexos conjugados.
+
+13
+00:00:58.020 --> 00:01:02.900
+E dois, o diagrama de malha aberta do
+sistema é útil para traçar a curva na
+
+14
+00:01:02.900 --> 00:01:04.670
+carta de Nichols-Back.
+
+15
+00:01:04.670 --> 00:01:09.240
+Então, vamos agora ao tópico desse vídeo.
+
+16
+00:01:09.240 --> 00:01:12.054
+O Diagrama de Bode de
+sistema de segunda ordem com
+
+17
+00:01:12.054 --> 00:01:14.000
+par de polos complexos conjugados.
+
+18
+00:01:14.000 --> 00:01:19.717
+A função de transferência de sistema
+como esse é G de S igual a ômega
+
+19
+00:01:19.717 --> 00:01:26.830
+n ao quadrado sobre S ao quadrado mais 2
+Si ômega n S mais ômega n ao quadrado.
+
+20
+00:01:26.830 --> 00:01:31.961
+Esse formato foi escolhido porque resulta
+ganho unitário baixas frequências,
+
+21
+00:01:31.961 --> 00:01:34.180
+isto é, quando o ômega tende a zero.
+
+22
+00:01:34.180 --> 00:01:39.235
+Para generalizar, basta lembrar que a
+multiplicação por ganho positivo K apenas
+
+23
+00:01:39.235 --> 00:01:45.811
+translada o gráfico do módulo de G J ômega
+dB por uma quantidade de 20log de K.
+
+24
+00:01:45.811 --> 00:01:50.315
+O gráfico de magnitude de G J
+ômega é mostrado ao lado para Si
+
+25
+00:01:50.315 --> 00:01:54.270
+igual a 0,3 e ômega n igual
+a 1 radiano por segundo.
+
+26
+00:01:54.270 --> 00:01:58.440
+Veja só, temos aqui pico.
+
+27
+00:01:58.440 --> 00:02:01.909
+Nele, podemos ver o comportamento
+diferente da magnitude,
+
+28
+00:02:01.909 --> 00:02:05.920
+apresentando pico próximo da
+frequência de 1 radiano por segundo.
+
+29
+00:02:05.920 --> 00:02:09.360
+Esse pico, muitas vezes,
+é chamado de pico de ressonância.
+
+30
+00:02:09.360 --> 00:02:13.820
+A frequência associada é chamada
+de frequência de ressonância.
+
+31
+00:02:13.820 --> 00:02:16.741
+A sua fórmula exata pode ser
+obtida derivando a amplitude
+
+32
+00:02:16.741 --> 00:02:20.080
+relação à frequência e igualando
+a zero para obter o ponto de massa.
+
+33
+00:02:20.080 --> 00:02:26.480
+Ômega r igual a ômega n vezes a raiz
+quadrada de 1- 2 Si ao quadrado,
+
+34
+00:02:26.480 --> 00:02:33.970
+Para que si < ou = a 1 sobre raiz
+de 2 e é, aproximadamente, 0,707.
+
+35
+00:02:33.970 --> 00:02:38.952
+Nesse caso,
+com Si igual a 0,3 a frequência
+
+36
+00:02:38.952 --> 00:02:44.062
+de ressonância é ômega r
+igual a ómega n raiz de
+
+37
+00:02:44.062 --> 00:02:49.513
+1- 2 Si ao quadrado será
+igual à raiz de 1 -2
+
+38
+00:02:49.513 --> 00:02:54.893
+vezes 0,3 ao quadrado que é
+igual à raiz de 0,82 que dá,
+
+39
+00:02:54.893 --> 00:02:58.430
+aproximadamente, 0,9 radianos por segundo.
+
+40
+00:02:58.430 --> 00:03:04.805
+Se desenharmos o diagrama de Bode mantendo
+o ômega n igual a 1 radiano por segundo
+
+41
+00:03:04.805 --> 00:03:10.430
+e variando o Si tem-se o comportamento
+observado nesse outro gráfico.
+
+42
+00:03:10.430 --> 00:03:13.959
+Na legenda, você pode ver diversos
+valores de Si usados para obter a fuga
+
+43
+00:03:13.959 --> 00:03:14.920
+cada uma das cores.
+
+44
+00:03:14.920 --> 00:03:20.490
+Vemos que, quanto menor o valor
+do fator de amortecimento do Si,
+
+45
+00:03:20.490 --> 00:03:22.568
+maior o pico de ressonância.
+
+46
+00:03:22.568 --> 00:03:27.435
+A fórmula exata para essa relação pode
+ser obtida substituindo a frequência de
+
+47
+00:03:27.435 --> 00:03:29.310
+ressonância no valor do módulo.
+
+48
+00:03:29.310 --> 00:03:33.780
+Mr que é o valor do pico será igual a 1
+
+49
+00:03:33.780 --> 00:03:38.880
+sobre 2 vezes Si vezes a raiz
+quadrada de 1- Si ao quadrado,
+
+50
+00:03:38.880 --> 00:03:42.320
+novamente para que Si < ou = a 0,707.
+
+51
+00:03:42.320 --> 00:03:47.311
+[ÁUDIO_EM_BRANCO] Então,
+
+52
+00:03:47.311 --> 00:03:51.420
+dado que você já viu que o sobressinal
+tem relação com o fator de amortecimento
+
+53
+00:03:51.420 --> 00:03:54.440
+podemos relacionar o sobressinal
+ao pico de ressonância.
+
+54
+00:03:54.440 --> 00:03:59.234
+Dessa forma, desejando obter uma resposta
+com determinado sobressinal do sistema de
+
+55
+00:03:59.234 --> 00:04:04.060
+segunda ordem malha fechada basta ajustar
+a magnitude do pico de ressonância.
+
+56
+00:04:04.060 --> 00:04:06.587
+Aqui ao lado, para completar vemos o
+
+57
+00:04:06.587 --> 00:04:11.080
+gráfico da fase versus a frequência
+para diversos valores de Si.
+
+58
+00:04:11.080 --> 00:04:13.483
+Nos próximos vídeos,
+
+59
+00:04:13.483 --> 00:04:18.455
+você verá como obter o comportamento
+na frequência malha fechada dado
+
+60
+00:04:18.455 --> 00:04:23.221
+o comportamento malha aberta e aprenderá
+a relacionar requisitos no domínio do
+
+61
+00:04:23.221 --> 00:04:28.140
+tempo a características da resposta
+malha fechada no domínio da frequência.

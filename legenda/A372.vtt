@@ -1,0 +1,377 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.855
+Após esse video, você será capaz de
+projetar o ganho do controle proporcional
+
+2
+00:00:04.855 --> 00:00:08.801
+usando o lugar geométrico das raízes,
+ou outras palavras,
+
+3
+00:00:08.801 --> 00:00:13.911
+será capaz de obter o ganho necessário
+para que o polo malha fechada esteja
+
+4
+00:00:13.911 --> 00:00:16.181
+ponto específico do lugar geométrico.
+
+5
+00:00:16.181 --> 00:00:20.770
+Você já sabe que os polos malha fechada
+dependem do valor do ganho k e que polo
+
+6
+00:00:20.770 --> 00:00:25.589
+malha fechada, ou uma raíz do denominador
+da função de transferência malha fechada,
+
+7
+00:00:25.589 --> 00:00:29.923
+deve atender a uma restrição de
+fase e a uma restrição de módulo.
+
+8
+00:00:29.923 --> 00:00:34.443
+A fase de G de quadradinho k tem que
+ser igual a fase de menos 1 sobre k e o
+
+9
+00:00:34.443 --> 00:00:39.300
+módulo de G de quadradinho de k tem que
+ser igual ao módulo de menos 1 sobre k.
+
+10
+00:00:39.300 --> 00:00:43.571
+E você já viu, que a restrição de
+fase na verdade é: fase de G de
+
+11
+00:00:43.571 --> 00:00:47.810
+quadradinho k igual a menos
+180 graus mais l 360 graus.
+
+12
+00:00:47.810 --> 00:00:53.460
+Então para verificar se ponto no Plano-s
+pode ou não ser polo malha fechada,
+
+13
+00:00:53.460 --> 00:00:57.950
+basta verificar se a fase de G
+desse ponto é menos 180 graus.
+
+14
+00:00:57.950 --> 00:01:03.007
+Por exemplo, vamos considerar G
+de s igual a 1 sobre s s mais
+
+15
+00:01:03.007 --> 00:01:08.480
+6 e vamos testar 3 pontos e verificar se
+eles podem ou não ser polos malha fechada,
+
+16
+00:01:08.480 --> 00:01:13.230
+ou outras palavras, se eles fazem
+parte do lugar geométrico das raízes.
+
+17
+00:01:13.230 --> 00:01:18.590
+Os nosso 3 pontos são: s 1
+igual a menos 6 mais 6 j; s
+
+18
+00:01:18.590 --> 00:01:23.740
+2 é igual a menos 3 mais 3 j e
+s 3 igual a menos 3 mais 4 j.
+
+19
+00:01:23.740 --> 00:01:28.597
+Já sabemos que a fase de G de s vai
+ser igual a menos a fase de s menos
+
+20
+00:01:28.597 --> 00:01:30.080
+a fase de s mais 6.
+
+21
+00:01:30.080 --> 00:01:34.747
+Vamos calcular as fases de
+G de s para esses 3 pontos,
+
+22
+00:01:34.747 --> 00:01:41.660
+a fase de G de s 1 vai ser menos a fase
+de menos 6 mais 6 j menos a fase de 6 j.
+
+23
+00:01:41.660 --> 00:01:46.895
+E essas fases são: 135 graus e 90 graus,
+ou seja,
+
+24
+00:01:46.895 --> 00:01:51.778
+a fase de G de s 1 vai ser igual
+a menos 180 graus menos 90 graus,
+
+25
+00:01:51.778 --> 00:01:56.602
+que é igual a menos 225 graus,
+então o ponto s 1 não atende
+
+26
+00:01:56.602 --> 00:02:01.895
+a restrição de ângulo, e ele não faz
+parte do lugar geométrico das raízes.
+
+27
+00:02:01.895 --> 00:02:06.636
+Para o segundo, ponto temos a fase
+de G de s 2 igual a menos a fase de
+
+28
+00:02:06.636 --> 00:02:10.180
+menos 3 mais 3 j menos
+a fase de 3 mais 3 j.
+
+29
+00:02:10.180 --> 00:02:14.932
+Essas fases são 135 graus e 45 graus,
+ou seja,
+
+30
+00:02:14.932 --> 00:02:20.284
+a fase de G de s 2 vai ser
+menos 135 graus menos 45 graus
+
+31
+00:02:20.284 --> 00:02:26.635
+o que dá menos 180 graus e o ponto s 2
+faz parte do lugar geométrico das raízes.
+
+32
+00:02:26.635 --> 00:02:31.564
+Finalmente para o último ponto,
+temos a fase de G de s 3 é igual a menos
+
+33
+00:02:31.564 --> 00:02:35.950
+a fase de menos 3 mais 4 j
+menos a fase de 3 mais 4 j.
+
+34
+00:02:35.950 --> 00:02:42.316
+Essas fases são 126,87 graus
+e 53,13 graus, ou seja,
+
+35
+00:02:42.316 --> 00:02:49.013
+a fase de G de s 3 vai ser menos
+126,87 graus menos 53,13 graus,
+
+36
+00:02:49.013 --> 00:02:54.710
+o que dá menos 180 graus e o
+ponto s 3 faz parte do LGR.
+
+37
+00:02:54.710 --> 00:03:00.392
+Sabemos então que tanto o ponto s 2
+quanto o ponto s 3 fazem parte do LGR,
+
+38
+00:03:00.392 --> 00:03:03.150
+assim como outros infinitos pontos,
+
+39
+00:03:03.150 --> 00:03:08.294
+mas quando s 2 será polo malha fechada
+e quando s 3 será polo malha fechada?
+
+40
+00:03:08.294 --> 00:03:11.937
+Para responder essa questão
+usamos a restrição de módulo.
+
+41
+00:03:11.937 --> 00:03:16.890
+A restrição de ângulo nos diz se ponto
+pode ou não ser polo malha fechada,
+
+42
+00:03:16.890 --> 00:03:21.580
+enquanto a restrição de módulo nos diz
+qual deve ser o valor do ganho para que
+
+43
+00:03:21.580 --> 00:03:24.410
+ponto específico seja polo malha fechada.
+
+44
+00:03:24.410 --> 00:03:27.670
+Vamos então calcular o valor
+de k para que s 2 seja polo
+
+45
+00:03:27.670 --> 00:03:32.550
+malha fechada e depois para que
+s 3 seja polo malha fechada.
+
+46
+00:03:32.550 --> 00:03:37.052
+Lembrando então que o módulo de G de
+quadradinho de k é igual ao módulo de
+
+47
+00:03:37.052 --> 00:03:38.210
+menos 1 sobre k,
+
+48
+00:03:38.210 --> 00:03:43.020
+podemos escrever k igual a 1 sobre
+o módulo de G de quadradinho de k.
+
+49
+00:03:43.020 --> 00:03:47.794
+Escrevendo ainda, G de quadradinho de k
+igual a numerador de G de quadradinho de k
+
+50
+00:03:47.794 --> 00:03:52.640
+sobre denominador de G de quadradinho
+de k, temos que o k vai ser o módulo do
+
+51
+00:03:52.640 --> 00:03:58.209
+denominador do quadradinho de k sobre o
+módulo do numerador de quadradinho de k,
+
+52
+00:03:58.209 --> 00:04:03.428
+e nosso exemplo, com G de s igual a 1
+sobre s s mais 6, temos que o k vai
+
+53
+00:04:03.428 --> 00:04:09.390
+ser igual ao módulo do quadradinho de k
+vezes quadradinho de k mais 6 sobre 1.
+
+54
+00:04:09.390 --> 00:04:13.943
+Como o módulo do produto é o produto
+dos módulos, temos k igual a módulo de
+
+55
+00:04:13.943 --> 00:04:18.766
+quadradinho de k vezes o módulo
+de quadradinho de k mais 6.
+
+56
+00:04:18.766 --> 00:04:23.425
+Para s 2 igual a menos 3 mais
+3 j nós temos: k igual ao
+
+57
+00:04:23.425 --> 00:04:28.200
+módulo de menos 3 mais 3 j
+vezes o módulo de 3 mais 3 j,
+
+58
+00:04:28.200 --> 00:04:32.455
+ou seja, k igual a 18, vamos conferir?
+
+59
+00:04:32.455 --> 00:04:36.710
+O T de s é k sobre s ao
+quadrado mais 6 s mais k,
+
+60
+00:04:36.710 --> 00:04:42.116
+com k igual a 18 temos: T de s igual a 18
+sobre s ao quadrado mais 6 s mais 18
+
+61
+00:04:42.116 --> 00:04:47.835
+e as raízes de s ao quadrado mais 6 s
+mais 18 são menos 3 mais ou menos 3 j,
+
+62
+00:04:47.835 --> 00:04:52.140
+ou seja, s 2 é polo malha fechada,
+se k é igual a 18.
+
+63
+00:04:52.140 --> 00:04:55.720
+Vamos fazer o mesmo para s 3.
+
+64
+00:04:55.720 --> 00:05:00.850
+Para s 3 igual a menos 3 mais 4 j,
+
+65
+00:05:00.850 --> 00:05:05.980
+temos k igual ao módulo de menos 3
+mais 4 j vezes o módulo de 3 mais 4 j,
+
+66
+00:05:05.980 --> 00:05:08.189
+ou seja, k igual a 25.
+
+67
+00:05:08.189 --> 00:05:14.225
+Com k igual a 25 temos: T de s igual
+a 25 sobre s ao quadrado mais 6 s mais
+
+68
+00:05:14.225 --> 00:05:20.798
+25 e as raízes de s ao quadrado mais 6 s
+mais 25 são menos 3 ou mais ou menos 4 j,
+
+69
+00:05:20.798 --> 00:05:25.750
+ou seja, s 3 é polo malha
+fechada se k é igual a 25.
+
+70
+00:05:25.750 --> 00:05:30.617
+Recapitulando, nós usamos
+a condição de ângulo para verificar
+
+71
+00:05:30.617 --> 00:05:35.739
+se ponto pode ou não ser polo malha
+fechada e uma vez confirmada que o ponto é
+
+72
+00:05:35.739 --> 00:05:39.415
+potencial polo malha fechada,
+usamos a condição de módulo,
+
+73
+00:05:39.415 --> 00:05:43.140
+para fazer com que esse ponto seja
+realmente polo malha fechada.
+
+74
+00:05:43.140 --> 00:05:48.435
+Agora você já é capaz de projetar
+o ganho do controle proporcional,
+
+75
+00:05:48.435 --> 00:05:53.730
+usando o lugar geométrico das raízes,
+desde que o polo desejado faça parte dele.
+
+76
+00:05:53.730 --> 00:05:57.990
+No próximo vídeo,
+vamos ver exemplo completo do projeto de
+
+77
+00:05:57.990 --> 00:06:02.250
+ganho proporcional no Plano-s para
+sistema de segunda ordem do Tipo 1.

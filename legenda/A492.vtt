@@ -1,0 +1,569 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.180
+[MÚSICA] Este
+
+2
+00:00:08.180 --> 00:00:13.065
+é o curso de orientação
+a objetos com Java,
+
+3
+00:00:13.065 --> 00:00:18.343
+meu nome é Eduardo Guerra, e hoje
+vamos continuar vendo alguns conceitos
+
+4
+00:00:18.343 --> 00:00:23.464
+relacionados a herança e vamos falar
+sobre a sobrescrita de métodos,
+
+5
+00:00:23.464 --> 00:00:29.181
+que é quando você pega método da
+superclasse e modifica o comportamento
+
+6
+00:00:29.181 --> 00:00:34.967
+dele na subclasse, e a gente usa isso para
+especializar o comportamento da subclasse.
+
+7
+00:00:34.967 --> 00:00:37.697
+Vamos ver então como
+isso funciona nessa aula.
+
+8
+00:00:37.697 --> 00:00:41.043
+Imagina o seguinte: a gente
+tem ali a classe Empregado,
+
+9
+00:00:41.043 --> 00:00:45.748
+retomando aí o exemplo que a gente estava
+vendo e ela tem ali o método liquido,
+
+10
+00:00:45.748 --> 00:00:50.794
+que seria para calcular o salário líquido,
+que ele tem ali, pega o salário,
+
+11
+00:00:50.794 --> 00:00:57.913
+multiplica por 0.85, que aqui no
+nosso país seria até uma otimismo aí,
+
+12
+00:00:57.913 --> 00:01:03.091
+termos de,
+que a gente só perde 15% ali com imposto,
+
+13
+00:01:03.091 --> 00:01:08.240
+mas vamos por aí que seria
+85% do salário do empregado.
+
+14
+00:01:08.240 --> 00:01:09.590
+O que é que acontece?
+
+15
+00:01:09.590 --> 00:01:14.750
+Como a gente viu na outra aula, o Gerente
+estende a classe Empregado só que ele tem
+
+16
+00:01:14.750 --> 00:01:20.270
+ali o bônus, então no salário líquido eu
+tenho que levar consideração o bônus,
+
+17
+00:01:20.270 --> 00:01:24.004
+no caso o bônus,
+ele não vai incidir, não sei porquê,
+
+18
+00:01:24.004 --> 00:01:28.864
+mas vamos supor aqui que seja uma
+divisão de lucros e etc que ele tem uma
+
+19
+00:01:28.864 --> 00:01:33.720
+participação e esse imposto não
+vai incidir sobre este bônus.
+
+20
+00:01:33.720 --> 00:01:36.105
+Então o que é que acontece?
+
+21
+00:01:36.105 --> 00:01:41.154
+Eu posso pegar,
+criar aquele método liquido na subclasse
+
+22
+00:01:41.154 --> 00:01:47.035
+e redefinir o comportamento dela,
+então no caso ali eu estou calculando
+
+23
+00:01:47.035 --> 00:01:52.220
+ali o salário vezes 0.85 que é
+a mesma coisa que tem na superclasse,
+
+24
+00:01:52.220 --> 00:01:56.900
+só que estou somando o bônus,
+no caso a gente pegou exemplo simples
+
+25
+00:01:56.900 --> 00:02:01.864
+para entender o conceito, mas eu poderia,
+se fosse cálculo, se fosse uma lógica,
+
+26
+00:02:01.864 --> 00:02:07.163
+eu poderia substituir por uma lógica
+completamente diferente, então uma classe,
+
+27
+00:02:07.163 --> 00:02:12.281
+ela pode sobrescrever o método da
+superclasse, como assim sobescrever?
+
+28
+00:02:12.281 --> 00:02:16.459
+É como se ele estivesse
+escrevendo cima do outro método,
+
+29
+00:02:16.459 --> 00:02:21.157
+esse método liquido que eu estou
+criando na minha subclasse ele
+
+30
+00:02:21.157 --> 00:02:26.078
+está entrando no lugar daquele
+método liquido da superclasse,
+
+31
+00:02:26.078 --> 00:02:31.487
+lembra que uma classe quando herda outra
+ela herda todos os métodos, então se
+
+32
+00:02:31.487 --> 00:02:36.936
+eu não criasse método liquido, ele pegaria
+esse método liquido da superclasse.
+
+33
+00:02:36.936 --> 00:02:40.077
+Nesse caso, como eu estou criando aqui,
+
+34
+00:02:40.077 --> 00:02:43.590
+ele está entrando no
+lugar do método liquido.
+
+35
+00:02:43.590 --> 00:02:46.245
+Lembra que eu falei
+para vocês do contrato,
+
+36
+00:02:46.245 --> 00:02:51.653
+que uma subclasse ela tem que obedecer o
+contrato, nesse caso, o método liquido,
+
+37
+00:02:51.653 --> 00:02:56.724
+ele é igualzinho para quem está do
+lado de fora, para quem olha a classe
+
+38
+00:02:56.724 --> 00:03:01.282
+do lado de fora, é a mesma coisa,
+o que muda é a implementação.
+
+39
+00:03:01.282 --> 00:03:06.663
+Então o contrato é o mesmo só que
+o comportamento é diferente e essa
+
+40
+00:03:06.663 --> 00:03:11.641
+adaptação de comportamento é crucial,
+é extremamente importante
+
+41
+00:03:11.641 --> 00:03:16.574
+na orientação a objetos, a modelagem
+orientada a objetos usa isso muito.
+
+42
+00:03:16.574 --> 00:03:20.885
+Mas eu ainda não estou
+satisfeito com a implementação,
+
+43
+00:03:20.885 --> 00:03:26.810
+se a gente olhar ali essa parte do
+salário vezes 0.85 está duplicada,
+
+44
+00:03:26.810 --> 00:03:29.430
+então o que é que vai acontecer?
+
+45
+00:03:29.430 --> 00:03:34.485
+Se eu precisar alterar essa porcentagem,
+por uma lei que mudou
+
+46
+00:03:34.485 --> 00:03:39.540
+ou por causa de algum estado que
+tem imposto adicional e etc,
+
+47
+00:03:39.540 --> 00:03:44.767
+eu vou precisar alterar,
+tanto na superclasse, quanto na subclasse.
+
+48
+00:03:44.767 --> 00:03:48.663
+Eu já vi acontecer
+sistema que eu trabalhei,
+
+49
+00:03:48.663 --> 00:03:52.392
+a pessoa pegou o método lá da superclasse,
+
+50
+00:03:52.392 --> 00:03:57.700
+duplicou aquele método meio que
+modificando algumas coisinhas,
+
+51
+00:03:57.700 --> 00:04:01.130
+e aí depois quando alguém
+precisou alterar uma coisa,
+
+52
+00:04:01.130 --> 00:04:05.631
+modificou só lugar e aí ficou com
+problema, porquê no outro lugar ainda
+
+53
+00:04:05.631 --> 00:04:10.475
+estava com comportamento antigo, então
+essa duplicação aí não é interessante.
+
+54
+00:04:10.475 --> 00:04:16.118
+Felizmente, a gente pode utilizar
+a palavra super, para chamar
+
+55
+00:04:16.118 --> 00:04:22.228
+método que é da superclasse então se eu
+usar "super.liquido" eu vou estar chamando
+
+56
+00:04:22.228 --> 00:04:27.529
+o método liquido da minha superclasse,
+e aí então o que é que eu posso fazer?
+
+57
+00:04:27.529 --> 00:04:32.243
+Ao invés de calcular de
+novo o salário vezes 0.85,
+
+58
+00:04:32.243 --> 00:04:38.101
+eu posso chamar o super ou seja,
+olha o salário liquido aí do gerente,
+
+59
+00:04:38.101 --> 00:04:42.282
+ele é o salário que a superclasse
+calcula mais o bônus,
+
+60
+00:04:42.282 --> 00:04:47.069
+então assim se eu precisasse alterar por
+exemplo essa porcentagem de imposto,
+
+61
+00:04:47.069 --> 00:04:51.730
+eu alteraria só lugar não precisaria
+estar alterando vários lugares.
+
+62
+00:04:51.730 --> 00:04:56.977
+Pode ter o caso também que você não quer,
+que ninguém mexa na sua classe,
+
+63
+00:04:56.977 --> 00:05:02.261
+você pode falar assim: olha eu não quero
+que essa minha classe seja alterada,
+
+64
+00:05:02.261 --> 00:05:06.321
+seja estendida, não quero que ninguém
+use herança nesta classe, ou mais,
+
+65
+00:05:06.321 --> 00:05:11.430
+você pode falar assim: olha eu tenho essa
+classe a pessoa pode até usar a herança
+
+66
+00:05:11.430 --> 00:05:16.920
+dessa classe, mas eu não quero que ninguém
+sobescreva este método específico,
+
+67
+00:05:16.920 --> 00:05:19.841
+porquê ele é essencial
+aqui para minha classe.
+
+68
+00:05:19.841 --> 00:05:24.281
+Ás vezes por exemplo, eu já vi uma
+classe que utilizava lá uma thread,
+
+69
+00:05:24.281 --> 00:05:29.309
+para fazer processamento paralelo e tal,
+e aquilo era inicializado
+
+70
+00:05:29.309 --> 00:05:33.881
+no método daí ele falava: olha nesse
+método aqui você não mexe, então muitas
+
+71
+00:05:33.881 --> 00:05:37.964
+vezes a gente pode ter essa opção de
+falar: olha eu criei uma classe aqui mas
+
+72
+00:05:37.964 --> 00:05:42.120
+não é para ninguém estender, ou eu criei
+método e não é para ninguém sobescrever.
+
+73
+00:05:42.120 --> 00:05:43.669
+Como que a gente faz isso?
+
+74
+00:05:43.669 --> 00:05:48.252
+Existe a palavra chave: final,
+que você pode estar adiconando classes,
+
+75
+00:05:48.252 --> 00:05:53.180
+métodos e variáveis, e a gente vai ver
+que para variável é pouquinho diferente.
+
+76
+00:05:53.180 --> 00:05:57.554
+Então, quando a gente coloca o final
+uma classe, significa que ninguém
+
+77
+00:05:57.554 --> 00:06:02.203
+pode estender ela, significa que você
+não pode usar herança nessa classe,
+
+78
+00:06:02.203 --> 00:06:06.858
+pegando aí a API básica do Java a gente
+tem o exemplo da string então a classe
+
+79
+00:06:06.858 --> 00:06:11.434
+string é uma classe final,
+é uma classe que você não pode estender,
+
+80
+00:06:11.434 --> 00:06:17.538
+então você não pode ir lá e dar:
+a minha classe extends string, porquê?
+
+81
+00:06:17.538 --> 00:06:23.419
+Porquê ela tem esse modificador final
+você não pode criar sua string,
+
+82
+00:06:23.419 --> 00:06:25.787
+isso porque a máquina virtual,
+
+83
+00:06:25.787 --> 00:06:30.682
+ela tem todo ali uma forma específica
+de lidar com a string memória,
+
+84
+00:06:30.682 --> 00:06:37.182
+e ela não quer que ninguém vá lá e mexa
+e altere o funcionamento disso daí tá?
+
+85
+00:06:37.182 --> 00:06:40.985
+Porque pode dar problema
+sério na plataforma.
+
+86
+00:06:40.985 --> 00:06:46.504
+Agora se eu utilizar o método
+modificador final método, nesse caso,
+
+87
+00:06:46.504 --> 00:06:51.205
+eu estou falando que não quero que
+ninguém sobescreva aquele método,
+
+88
+00:06:51.205 --> 00:06:56.085
+ou seja, as vezes aquele método tem uma
+funcionalidade extremamente importante
+
+89
+00:06:56.085 --> 00:07:00.538
+que é fixa, que por mais que a pessoa
+de repente possa estender a classe,
+
+90
+00:07:00.538 --> 00:07:02.660
+aquele método ele não pode mudar.
+
+91
+00:07:02.660 --> 00:07:07.629
+Finalmente, o final variáveis,
+ele é pouquinho
+
+92
+00:07:07.629 --> 00:07:13.128
+diferente dos outros, ele tem significado
+diferente, o que é que acontece?
+
+93
+00:07:13.128 --> 00:07:14.363
+Quando eu tenho final,
+
+94
+00:07:14.363 --> 00:07:18.653
+significa que a referência daquela
+variável não pode mudar, ou seja,
+
+95
+00:07:18.653 --> 00:07:24.327
+eu não posso ir lá e pegar e atribuir
+outro valor para aquela variável,
+
+96
+00:07:24.327 --> 00:07:29.094
+então se eu criei ali uma variável
+"e = new Empregado" e ela é final,
+
+97
+00:07:29.094 --> 00:07:33.135
+significa que eu não vou mais
+poder trocar aquele objeto então,
+
+98
+00:07:33.135 --> 00:07:38.005
+eu não posso fazer "e ="
+a outro empregado outro objeto
+
+99
+00:07:38.005 --> 00:07:42.532
+da classe empregado, porquê nesse caso
+eu estaria trocando a referência.
+
+100
+00:07:42.532 --> 00:07:46.841
+Por outro lado, eu posso trabalhar
+com aquele objeto que está ali,
+
+101
+00:07:46.841 --> 00:07:51.418
+ou seja, eu posso por exemplo ir
+lá modificar o nome do empregado,
+
+102
+00:07:51.418 --> 00:07:54.630
+eu posso modificar o salário do empregado,
+
+103
+00:07:54.630 --> 00:07:59.040
+então significa que aquela variável
+ela não pode receber outro objeto,
+
+104
+00:07:59.040 --> 00:08:03.340
+mas eu posso modificar os valores
+do objeto que está ali dentro.
+
+105
+00:08:03.340 --> 00:08:08.702
+Muita gente ás vezes, se confunde de que
+o final é uma variável que você não pode
+
+106
+00:08:08.702 --> 00:08:14.075
+modificar, se for uma variável inteira,
+aí realmente, ou de tipo primitivo,
+
+107
+00:08:14.075 --> 00:08:19.228
+realmente você não pode modificar porque
+você estaria trocando aquela referência,
+
+108
+00:08:19.228 --> 00:08:23.297
+mas se o final está uma variável
+que é de tipo de objeto então,
+
+109
+00:08:23.297 --> 00:08:27.749
+você não pode é trocar aquele objeto,
+mas você pode trocar valores,
+
+110
+00:08:27.749 --> 00:08:32.333
+invocar métodos, dentro daquele
+objeto que está naquela variável.
+
+111
+00:08:32.333 --> 00:08:37.668
+Espero que com isso vocês tenham entendido
+como funciona a sobescrita de método e
+
+112
+00:08:37.668 --> 00:08:43.957
+como estar utilizando o final, para gente
+evitar que essa sobescrita aconteça,
+
+113
+00:08:43.957 --> 00:08:49.619
+vimos também o uso do super, poder
+estar acessando coisas da superclasse,
+
+114
+00:08:49.619 --> 00:08:54.069
+e estamos cada vez mais entendendo
+mais aí sobre a parte de herança.
+
+115
+00:08:54.069 --> 00:08:58.760
+Espero que essa parte tenha ficado claro,
+muito obrigado, até à próxima aula!
+
+116
+00:08:58.760 --> 00:09:04.760
+[MÚSICA]

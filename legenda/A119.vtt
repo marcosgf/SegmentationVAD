@@ -1,0 +1,234 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.115
+[MÚSICA] E
+
+3
+00:00:13.115 --> 00:00:17.930
+aí pessoal, tudo bem?
+
+4
+00:00:17.930 --> 00:00:22.522
+Nessa aula iremos ver como adicionar
+uma fonte externa além de ver
+
+5
+00:00:22.522 --> 00:00:25.160
+pouco mais sobre o funcionamento de botão.
+
+6
+00:00:25.160 --> 00:00:28.737
+Criaremos aplicativo que
+tenha apenas 2 botões que
+
+7
+00:00:28.737 --> 00:00:31.780
+se alternam entre ficarem
+ativos e inativos.
+
+8
+00:00:31.780 --> 00:00:35.970
+Vamos iniciar criando novo projeto
+com a opção single view application.
+
+9
+00:00:35.970 --> 00:00:40.820
+Por o nome do projecto
+Devices Deixe iPhone.
+
+10
+00:00:40.820 --> 00:00:46.435
+Com o projeto criado
+
+11
+00:00:46.435 --> 00:00:51.495
+importe o arquivo carousel.ttf
+disponível no arquivo zip desse
+
+12
+00:00:51.495 --> 00:01:00.050
+módulo para a pasta do projeto.
+
+13
+00:01:00.050 --> 00:01:09.320
+[SEM_ÁUDIO] Vamos ao storyboard.
+
+14
+00:01:09.320 --> 00:01:13.216
+Ajuste a opção de visualização
+para ser a mais próxima de
+
+15
+00:01:13.216 --> 00:01:15.450
+iPhone na orientação vertical.
+
+16
+00:01:15.450 --> 00:01:18.656
+Adicione uma label.
+
+17
+00:01:18.656 --> 00:01:21.510
+Ajuste o tamanho.
+
+18
+00:01:21.510 --> 00:01:28.920
+Agora selecione a fonte e
+escolha a fonte que adicionamos.
+
+19
+00:01:28.920 --> 00:01:37.721
+[SEM_ÁUDIO] Agora
+
+20
+00:01:37.721 --> 00:01:43.380
+adicione 2 botões.
+
+21
+00:01:43.380 --> 00:01:48.660
+Modificar o tamanho,
+
+22
+00:01:48.660 --> 00:01:53.645
+fonte.
+
+23
+00:01:53.645 --> 00:01:58.630
+O primeiro mude para Ativa Botão 2.
+
+24
+00:01:58.630 --> 00:02:06.630
+[SEM_ÁUDIO]
+
+25
+00:02:06.630 --> 00:02:14.383
+[SEM_ÁUDIO] O
+
+26
+00:02:14.383 --> 00:02:21.540
+segundo mude para Botão 2.
+
+27
+00:02:21.540 --> 00:02:26.910
+Ainda no segundo vamos
+deixar desabilitado.
+
+28
+00:02:26.910 --> 00:02:34.030
+Vamos fazer as conexões com o código.
+
+29
+00:02:34.030 --> 00:02:39.370
+A outlet para o primeiro botão,
+
+30
+00:02:39.370 --> 00:02:44.885
+button one.
+
+31
+00:02:44.885 --> 00:02:50.400
+A outlet para o segundo botão,
+
+32
+00:02:50.400 --> 00:02:53.800
+button two.
+
+33
+00:02:53.800 --> 00:02:58.280
+Action para o primeiro botão,
+
+34
+00:02:58.280 --> 00:03:01.470
+button one action.
+
+35
+00:03:01.470 --> 00:03:07.900
+Action para o segundo botão,
+button two action.
+
+36
+00:03:07.900 --> 00:03:15.213
+[SEM_ÁUDIO] Vamos
+
+37
+00:03:15.213 --> 00:03:18.870
+ao código.
+
+38
+00:03:18.870 --> 00:03:28.436
+[SEM_ÁUDIO] Quando inicializa
+a view vamos apenas
+
+39
+00:03:28.436 --> 00:03:33.150
+garantir que os valores que colocamos
+para o storyboard estão corretos.
+
+40
+00:03:33.150 --> 00:03:40.339
+O primeiro botão ativo, o segundo botão
+inativo e os títulos de cada botão.
+
+41
+00:03:40.339 --> 00:03:44.470
+Agora vamos alterar quando
+clicar no primeiro botão.
+
+42
+00:03:44.470 --> 00:03:49.670
+O segundo botão fica ativo
+e alteramos o texto,
+
+43
+00:03:49.670 --> 00:03:54.080
+o primeiro botão fica inativo e
+também alteramos o seu texto.
+
+44
+00:03:54.080 --> 00:03:59.766
+E quando clicar no segundo
+
+45
+00:03:59.766 --> 00:04:05.330
+botão o primeiro botão fica ativo,
+alteramos o texto,
+
+46
+00:04:05.330 --> 00:04:09.980
+o segundo botão fica inativo
+e alteramos o seu texto.
+
+47
+00:04:09.980 --> 00:04:13.160
+Pronto, já podemos executar.
+
+48
+00:04:13.160 --> 00:04:21.578
+[SEM_ÁUDIO] Veja
+
+49
+00:04:21.578 --> 00:04:28.750
+que a label e os botões estão
+usando a fonte importada.
+
+50
+00:04:28.750 --> 00:04:33.040
+O segundo botão está inicialmente inativo.
+
+51
+00:04:33.040 --> 00:04:38.030
+Quando clica no primeiro ele fica
+inativo e o segundo fica ativo.
+
+52
+00:04:38.030 --> 00:04:43.300
+Na próxima aula iremos
+ver como usar switches.
+
+53
+00:04:43.300 --> 00:04:46.350
+Até lá!

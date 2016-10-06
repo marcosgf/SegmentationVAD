@@ -1,0 +1,645 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.520
+[MÚSICA] Olá,
+
+2
+00:00:07.520 --> 00:00:10.370
+bem vindo ao curso sobre TDD!
+
+3
+00:00:10.370 --> 00:00:16.260
+Eu sou o Clovis Fernandes e hoje iremos
+dar continuidade à apresentação do
+
+4
+00:00:16.260 --> 00:00:21.540
+exemplo de refatoração para tratar
+mau cheiro para uma condicional,
+
+5
+00:00:21.540 --> 00:00:27.312
+comando condicional if then else tanto
+complicado e difícil de entender.
+
+6
+00:00:27.312 --> 00:00:32.484
+Para isso usamos o Decompose Conditional,
+que nós já
+
+7
+00:00:32.484 --> 00:00:39.510
+apresentamos na parte o início da
+refatoração Decompose Conditional
+
+8
+00:00:39.510 --> 00:00:44.460
+que foi tratar a expressão booleana,
+que era difícil de entender, está certo?
+
+9
+00:00:44.460 --> 00:00:49.748
+E, nessa 2ª parte, iremos tratar as
+duas expressões tanto na parte then,
+
+10
+00:00:49.748 --> 00:00:51.330
+quanto na parte else.
+
+11
+00:00:51.330 --> 00:00:55.370
+Relembrando então que tínhamos
+esse if then else aí.
+
+12
+00:00:55.370 --> 00:00:59.940
+É, nós extraímos a expressão
+booleana tanto complicada
+
+13
+00:00:59.940 --> 00:01:04.307
+para uma maneira bem mais simples,
+está certo?
+
+14
+00:01:04.307 --> 00:01:08.607
+Ficou aí if isNotVerao data, está certo?
+
+15
+00:01:08.607 --> 00:01:11.760
+Embaixo tem o método privado.
+
+16
+00:01:11.760 --> 00:01:17.250
+Feito esse extract, testamos a bateria
+de testes novamente, está certo?
+
+17
+00:01:17.250 --> 00:01:19.513
+E aí o que resta fazer?
+
+18
+00:01:19.513 --> 00:01:26.084
+É tratar o problema das expressões que não
+expressam a intenção ou finalidade, está?
+
+19
+00:01:26.084 --> 00:01:31.910
+Eu tenho lá 2 expressões que eu teria que
+gastar tempo para entender, está certo?
+
+20
+00:01:31.910 --> 00:01:36.641
+Quem vai ficar encarregado de fazer
+isso é usando isso que eu estou
+
+21
+00:01:36.641 --> 00:01:40.269
+chamando de extract
+the Expression into a Method.
+
+22
+00:01:40.269 --> 00:01:45.453
+Mas que não existe, isso não é uma
+técnica de refatoração oficial,
+
+23
+00:01:45.453 --> 00:01:50.014
+porque ela é parte do
+Replace Temp with Query,
+
+24
+00:01:50.014 --> 00:01:52.940
+query é como se fosse getter, está certo?
+
+25
+00:01:52.940 --> 00:01:57.749
+Então é a parte que eu simplesmente
+transformo essa expressão num
+
+26
+00:01:57.749 --> 00:01:58.863
+método, não é?
+
+27
+00:01:58.863 --> 00:02:02.690
+Que eu faço extract method da expressão,
+está certo?
+
+28
+00:02:02.690 --> 00:02:09.187
+Isso efetuou a expressão pelo código
+que eu acabei de criar, está certo?
+
+29
+00:02:09.187 --> 00:02:11.850
+É basicamente isso que eu vou fazer.
+
+30
+00:02:11.850 --> 00:02:16.872
+Então vejam aí que eu
+tenho duas expressões.
+
+31
+00:02:16.872 --> 00:02:23.758
+O certo é fazer uma expressão,
+fazer a refatoração da 1ª expressão,
+
+32
+00:02:23.758 --> 00:02:29.487
+testa a bateria, da 2ª expressão,
+testa a bateria e aí eu jogo iii aqui iii,
+
+33
+00:02:29.487 --> 00:02:34.156
+por questões didáticas,
+eu vou fazer das duas, está certo?
+
+34
+00:02:34.156 --> 00:02:35.510
+Ao mesmo tempo.
+
+35
+00:02:35.510 --> 00:02:41.582
+Então vocês percebam que eu tenho duas
+expressões aí e, quando eu vou extrair,
+
+36
+00:02:41.582 --> 00:02:46.199
+uma das coisas que eu tenho que prestar
+bastante atenção sempre, no extract
+
+37
+00:02:46.199 --> 00:02:51.153
+method isso é norma, eu vou olhar as
+variáveis temporárias, está certo?
+
+38
+00:02:51.153 --> 00:02:54.852
+Então usando aquela convenção
+de pôr underline nas
+
+39
+00:02:54.852 --> 00:02:57.697
+como prefixo das variáveis de instância,
+está certo?
+
+40
+00:02:57.697 --> 00:03:02.539
+É por isso que eu tenho três variáveis
+de instância e custo é uma temporária e
+
+41
+00:03:02.539 --> 00:03:05.046
+quantidade é temporária,
+
+42
+00:03:05.046 --> 00:03:10.088
+dentro do código na parte que eu
+vou refatorar, só tem quantidade.
+
+43
+00:03:10.088 --> 00:03:16.850
+Bom, se a temporária não é alterada dentro
+do trecho que eu vou refatorar, eu vou
+
+44
+00:03:16.850 --> 00:03:22.440
+extrair, é ela vai passar como parâmetro
+esse método que eu estou criando.
+
+45
+00:03:22.440 --> 00:03:25.530
+Se ela mudasse, alterasse algum valor,
+
+46
+00:03:25.530 --> 00:03:29.370
+então nós a devolveríamos
+através de return.
+
+47
+00:03:29.370 --> 00:03:35.400
+Então o método teria que devolver essa
+variável de alguma forma, está certo?
+
+48
+00:03:35.400 --> 00:03:38.304
+Então no caso aqui
+a temporária é inalterada,
+
+49
+00:03:38.304 --> 00:03:41.470
+então ela vai ser passada como parâmetro,
+não é?
+
+50
+00:03:41.470 --> 00:03:43.312
+A temporária quantidade.
+
+51
+00:03:43.312 --> 00:03:48.278
+Outra coisa, eu vou pegar cada uma
+dessas expressões e tentar entender o
+
+52
+00:03:48.278 --> 00:03:52.803
+significado dessa expressão porque o
+
+53
+00:03:52.803 --> 00:03:57.070
+problema dela é de não expressar
+a intenção, a sua finalidade.
+
+54
+00:03:57.070 --> 00:04:02.308
+Então no 1º caso eu estou
+querendo no fundo fazer cálculo
+
+55
+00:04:02.308 --> 00:04:08.100
+do custo de inverno pela quantidade
+que eu estiver gastando.
+
+56
+00:04:08.100 --> 00:04:12.230
+E na 2ª é o custo verão pela quantidade,
+está certo?
+
+57
+00:04:12.230 --> 00:04:18.220
+Então fazendo a refatoração veja como
+já ficou bastante mais simples, não é?
+
+58
+00:04:18.220 --> 00:04:22.762
+If isNotVerao data custo
+igual a custoInverno
+
+59
+00:04:22.762 --> 00:04:28.290
+quantidade else custo igual
+a custoVerão quantidade.
+
+60
+00:04:28.290 --> 00:04:34.249
+Veja que agora tudo está sendo expresso
+de uma maneira muito clara, não é?
+
+61
+00:04:34.249 --> 00:04:38.763
+O significado, a finalidade do que eu
+estou querendo expressar, o algoritmo
+
+62
+00:04:38.763 --> 00:04:42.898
+agora ficou claro, ou seja, se vocês lerem
+o de cima e lerem o de baixo, está certo?
+
+63
+00:04:42.898 --> 00:04:45.560
+Já ficou bem melhor, está certo?
+
+64
+00:04:45.560 --> 00:04:52.815
+O que está ocorrendo ainda de bom como é
+que ficaram esses esses métodos, não é?
+
+65
+00:04:52.815 --> 00:04:54.061
+Está certo?
+
+66
+00:04:54.061 --> 00:04:57.726
+Vocês percebam que os dois
+métodos são privados.
+
+67
+00:04:57.726 --> 00:05:02.199
+Então normalmente no extract method
+eu extraio métodos privados, não é?
+
+68
+00:05:02.199 --> 00:05:02.980
+está certo?
+
+69
+00:05:02.980 --> 00:05:09.733
+Vocês percebam que o código interno no
+return de cada deles é literalmente
+
+70
+00:05:09.733 --> 00:05:15.570
+a mesma coisa que estava no código que
+eu estava refatorando, está certo?
+
+71
+00:05:15.570 --> 00:05:20.493
+Então o que, esse trecho continua
+
+72
+00:05:20.493 --> 00:05:24.380
+não tendo expressão nenhuma,
+mas o quê que dá a expressão da intenção?
+
+73
+00:05:24.380 --> 00:05:27.383
+Os nomes dos métodos, está certo?
+
+74
+00:05:27.383 --> 00:05:32.381
+CustoInverno expressa intenção
+dessa expressão que está
+
+75
+00:05:32.381 --> 00:05:36.790
+ali do método custoInverno,
+a mesma coisa vale para o custoVerao.
+
+76
+00:05:36.790 --> 00:05:42.148
+Bom, como eu ia falando, aquele isNotverao
+
+77
+00:05:42.148 --> 00:05:47.547
+ainda está entalado aqui porque
+normalmente o cérebro humano,
+
+78
+00:05:47.547 --> 00:05:53.197
+eu já falei isso e vou repetir,
+ele não trata bem o not, está certo?
+
+79
+00:05:53.197 --> 00:05:56.193
+A negação ele lê como se
+fosse ali sem negação,
+
+80
+00:05:56.193 --> 00:06:00.152
+ele estaria lendo ali como se fosse verão,
+demora para calcular isso.
+
+81
+00:06:00.152 --> 00:06:04.838
+Isso é uma coisa que atrapalha o
+raciocínio, a leitura, quer dizer, ou
+
+82
+00:06:04.838 --> 00:06:09.980
+seja, o texto ainda não está bem legível
+exatamente por causa desse isNotVerao.
+
+83
+00:06:09.980 --> 00:06:15.040
+Então o quê que nós temos que
+fazer é torná-lo isVerao.
+
+84
+00:06:15.040 --> 00:06:20.281
+Tornar isVerao significaria o
+que está na parte then passa
+
+85
+00:06:20.281 --> 00:06:24.564
+para a parte else, o que está na parte
+else passa para a parte then, está certo?
+
+86
+00:06:24.564 --> 00:06:27.590
+E é isso que nós acabamos fazendo,
+olha aqui a transformação.
+
+87
+00:06:27.590 --> 00:06:32.690
+Eu ponho lá if isVerao,
+agora está isVerao, está certo?
+
+88
+00:06:32.690 --> 00:06:39.355
+Custo igual a custoVerao quantidade
+else igual a custoInverno quantidade.
+
+89
+00:06:39.355 --> 00:06:42.850
+Invertemos a ordem das, das expressões,
+
+90
+00:06:42.850 --> 00:06:48.000
+dos métodos que expressam a intenção
+do que eu quero, está certo?
+
+91
+00:06:48.000 --> 00:06:52.670
+Essas atribuições e agora
+a leitura está muito,
+
+92
+00:06:52.670 --> 00:06:55.059
+o código agora está muito mais legível,
+não é?
+
+93
+00:06:55.059 --> 00:06:55.716
+Está certo?
+
+94
+00:06:55.716 --> 00:06:58.970
+Vamos dar uma olhada como estava antes,
+está certo?
+
+95
+00:06:58.970 --> 00:07:02.683
+Antes disso vamos ver aí como é que ficou,
+não é?
+
+96
+00:07:02.683 --> 00:07:03.600
+O isVerao.
+
+97
+00:07:03.600 --> 00:07:07.086
+O quê que acontece,
+se eu quiser fazer de uma maneira rápida,
+
+98
+00:07:07.086 --> 00:07:11.569
+é isso o que eu iria fazer,
+eu crio o isverao fazendo o quê?
+
+99
+00:07:11.569 --> 00:07:15.420
+Is not isNotVerao, está certo?
+
+100
+00:07:15.420 --> 00:07:19.085
+Quer dizer, eu faço uma dupla negação,
+está certo?
+
+101
+00:07:19.085 --> 00:07:21.377
+Dentro do método privado isverao,
+
+102
+00:07:21.377 --> 00:07:25.040
+não tem problema algum ter essa
+dupla negação, está certo?
+
+103
+00:07:25.040 --> 00:07:29.335
+Porque a expressão da intenção desse
+
+104
+00:07:29.335 --> 00:07:33.630
+negativo está expresso pelo
+nome do método isVerao.
+
+105
+00:07:33.630 --> 00:07:34.939
+Não tem problema nenhum.
+
+106
+00:07:34.939 --> 00:07:37.022
+Agora eu posso também, é válido também,
+
+107
+00:07:37.022 --> 00:07:40.845
+se eu tivesse construído o
+isVerao do começo, está certo?
+
+108
+00:07:40.845 --> 00:07:44.673
+É só inverter aquela expressão
+booleana inicial, não é?
+
+109
+00:07:44.673 --> 00:07:45.522
+Está certo?
+
+110
+00:07:45.522 --> 00:07:51.934
+Então eu coloco lá o data after início
+do verão e data before fim do verão.
+
+111
+00:07:51.934 --> 00:07:56.272
+Eu estou limitando dizendo que
+é dentro do verão, está certo?
+
+112
+00:07:56.272 --> 00:07:57.727
+No espaço dentro do verão.
+
+113
+00:07:57.727 --> 00:07:59.688
+Antes eu limitava para fora, não é?
+
+114
+00:07:59.688 --> 00:08:00.400
+Está certo?
+
+115
+00:08:00.400 --> 00:08:06.042
+Supondo que fosse inverno, ou seja,
+hemisférios que você tem marcantemente
+
+116
+00:08:06.042 --> 00:08:11.020
+uma coisa que você pode chamar de inverno
+e de verão e de inverno, está certo?
+
+117
+00:08:11.020 --> 00:08:14.151
+E aí eu inverti, está certo?
+
+118
+00:08:14.151 --> 00:08:20.270
+Para efeito prático, os dois têm,
+expressam a intenção que é isVerao,
+
+119
+00:08:20.270 --> 00:08:26.750
+agora para efeito de rapidez,
+a anterior é melhor, está certo?
+
+120
+00:08:26.750 --> 00:08:30.739
+Porque você não perde muito tempo
+[INAUDÍVEL] tratar no caso aí essa
+
+121
+00:08:30.739 --> 00:08:33.579
+expressão booleana não é tão complicada,
+não é?
+
+122
+00:08:33.579 --> 00:08:37.772
+[INAUDÍVEL] expressões boolenas
+muito complicadas, está certo?
+
+123
+00:08:37.772 --> 00:08:42.000
+Lembrar que após cada refatoração
+que nós fizemos extraindo métodos,
+
+124
+00:08:42.000 --> 00:08:46.864
+nós testamos a bateria de
+testes que estava valendo para
+
+125
+00:08:46.864 --> 00:08:51.853
+o código antes de refatorar e
+não pode haver mudança nenhuma.
+
+126
+00:08:51.853 --> 00:08:57.916
+É inegável que o código agora ficou muito
+mais simples, não há nada que impeça
+
+127
+00:08:57.916 --> 00:09:02.999
+o entendimento da lógica de quem criou,
+do que ele queria fazer.
+
+128
+00:09:02.999 --> 00:09:06.300
+Está muito bem expresso dessa forma,
+está certo?
+
+129
+00:09:06.300 --> 00:09:11.065
+Com isso nós concluímos,
+não é, a refatoração,
+
+130
+00:09:11.065 --> 00:09:16.422
+mostramos agora completamos o
+Decompose Conditional, está certo?
+
+131
+00:09:16.422 --> 00:09:21.072
+E mostramos que o mau cheiro que
+você tem uma expressão if then
+
+132
+00:09:21.072 --> 00:09:24.992
+else tanto complicada de entender,
+
+133
+00:09:24.992 --> 00:09:31.293
+com três refatorações nós chegamos
+num código muito mais limpo,
+
+134
+00:09:31.293 --> 00:09:35.780
+muito mais claro,
+muito mais legível e fácil de entender.
+
+135
+00:09:35.780 --> 00:09:38.765
+Obrigado.
+
+136
+00:09:38.765 --> 00:09:41.750
+[MÚSICA]

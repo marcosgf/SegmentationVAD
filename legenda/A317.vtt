@@ -1,0 +1,313 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.502
+Olá!
+
+2
+00:00:00.502 --> 00:00:05.382
+Neste vídeo você verá como podemos
+obter o diagrama de Bode de
+
+3
+00:00:05.382 --> 00:00:09.650
+malha fechada a partir do de malha
+aberta para realimentação unitária.
+
+4
+00:00:09.650 --> 00:00:13.475
+Vamos começar relembrando
+a topologia de sistema
+
+5
+00:00:13.475 --> 00:00:17.310
+malha fechada com realimentação
+unitária negativa,
+
+6
+00:00:17.310 --> 00:00:22.490
+como visto na figura ao lado.
+
+7
+00:00:22.490 --> 00:00:27.670
+A partir dessa figura,
+usando pouco de álgebra de blocos,
+
+8
+00:00:27.670 --> 00:00:31.942
+você já viu que a função de
+transferência fechada é dada por: T
+
+9
+00:00:31.942 --> 00:00:36.810
+de s igual a K G de s
+sobre 1 mais K G de s.
+
+10
+00:00:36.810 --> 00:00:42.310
+Para obter a resposta frequência
+basta fazer s igual a j ômega,
+
+11
+00:00:42.310 --> 00:00:49.280
+obtendo T de j ômega igual a K G de
+j ômega sobre 1 mais K G de j ômega.
+
+12
+00:00:49.280 --> 00:00:53.617
+Se dispusermos de G de j
+ômega de maneira tabelada é
+
+13
+00:00:53.617 --> 00:00:57.800
+relativamente simples calcular T
+de j ômega e obter uma tabela,
+
+14
+00:00:57.800 --> 00:01:03.330
+extraindo depois o módulo dB e a fase
+de T de j ômega se conhecermos K.
+
+15
+00:01:03.330 --> 00:01:08.233
+Vamos mais uma vez recorrer
+ao exemplo do circuito RC,
+
+16
+00:01:08.233 --> 00:01:15.240
+mostrado ao lado para relembrar:
+temos a fonte, resistor e capacitor.
+
+17
+00:01:15.240 --> 00:01:19.986
+Então a tabela de G de
+j ômega para resistor
+
+18
+00:01:19.986 --> 00:01:24.920
+de 470 kilo ohms e capacitor
+de 220 nanofarads é
+
+19
+00:01:24.920 --> 00:01:30.060
+mostrado ao lado e T de j ômega
+foi calculado supondo K igual a 1.
+
+20
+00:01:30.060 --> 00:01:35.210
+[SEM ÁUDIO] E
+
+21
+00:01:35.210 --> 00:01:40.170
+podemos obter a magnitude dB e
+a fase de T de j ômega graus.
+
+22
+00:01:40.170 --> 00:01:45.535
+É claro que,
+
+23
+00:01:45.535 --> 00:01:50.270
+para construir diagrama detalhado teríamos
+que fazer esse cálculo para mais pontos.
+
+24
+00:01:50.270 --> 00:01:55.199
+O diagrama de T de j ômega ficaria
+então como ao lado: magnitude
+
+25
+00:01:55.199 --> 00:01:57.340
+azul e fase vermelho.
+
+26
+00:01:57.340 --> 00:02:01.800
+Seria também possível
+
+27
+00:02:01.800 --> 00:02:06.260
+obter uma expressão literal para T de s,
+dado que conhecemos G de s.
+
+28
+00:02:06.260 --> 00:02:11.110
+T de s igual a K G de s
+sobre 1 mais K G de s,
+
+29
+00:02:11.110 --> 00:02:16.235
+que é igual a K sobre sRC mais 1 sobre
+
+30
+00:02:16.235 --> 00:02:20.445
+1 mais K sobre sRC mais 1,
+
+31
+00:02:20.445 --> 00:02:25.570
+que é igual a K sobre sRC mais K mais 1,
+
+32
+00:02:25.570 --> 00:02:30.427
+de onde T de j ômega é igual a K
+
+33
+00:02:30.427 --> 00:02:34.640
+sobre j ômega RC mais K mais 1.
+
+34
+00:02:34.640 --> 00:02:39.553
+Assim podemos determinar
+facilmente módulo e fase de
+
+35
+00:02:39.553 --> 00:02:42.460
+T de j ômega inclusive com K variando.
+
+36
+00:02:42.460 --> 00:02:47.217
+Mas isso nem sempre é possível,
+por exemplo, você aprendeu que uma
+
+37
+00:02:47.217 --> 00:02:51.393
+das vantagens de se usar a resposta
+frequência é justamente obter
+
+38
+00:02:51.393 --> 00:02:55.920
+modelo sem necessitar saber explicitamente
+qual é a função de transferência.
+
+39
+00:02:55.920 --> 00:03:00.770
+Nesse caso o que temos pode ser somente
+o diagrama de Bode por exemplo.
+
+40
+00:03:00.770 --> 00:03:06.482
+Assim obter módulo e fase de T de j ômega,
+ponto a ponto a partir de módulo
+
+41
+00:03:06.482 --> 00:03:11.609
+e fase de G de j ômega pode ser
+processo muito tedioso e demorado.
+
+42
+00:03:11.609 --> 00:03:16.397
+As fórmulas para isso seriam:
+para magnitude módulo de T de j
+
+43
+00:03:16.397 --> 00:03:20.215
+ômega dB seria igual
+ao módulo de K vezes G
+
+44
+00:03:20.215 --> 00:03:25.100
+de j ômega sobre 1 mais K de G de j ômega,
+tudo isso dB.
+
+45
+00:03:25.100 --> 00:03:30.590
+Que é igual ao módulo de K de G de j ômega
+dB menos o módulo de 1 mais K de G de
+
+46
+00:03:30.590 --> 00:03:36.586
+j ômega dB, isso por sua vez será
+igual ao módulo de K de G de j ômega
+
+47
+00:03:36.586 --> 00:03:41.901
+dB menos 10 vezes o log de 1 mais módulo
+
+48
+00:03:41.901 --> 00:03:47.139
+de K de G de j ômega cosseno
+da fase de G de j ômega,
+
+49
+00:03:47.139 --> 00:03:52.718
+tudo isso ao quadrado, mais módulo
+de K de G de j ômega ao quadrado,
+
+50
+00:03:52.718 --> 00:03:55.720
+seno ao quadrado da fase de G de j ômega.
+
+51
+00:03:55.720 --> 00:04:00.665
+E para a fase, a fase de T de j ômega será
+
+52
+00:04:00.665 --> 00:04:05.610
+igual a fase de K G de j ômega
+sobre 1 mais K G de j ômega,
+
+53
+00:04:05.610 --> 00:04:12.690
+que é igual a fase de K de G de j ômega
+menos a fase de 1 mais de K G de j ômega.
+
+54
+00:04:12.690 --> 00:04:17.924
+Por sua vez, isso é igual a fase de G de
+j ômega para K maior do que 0 menos o
+
+55
+00:04:17.924 --> 00:04:23.570
+arco tangente de módulo de K G de j
+ômega vezes seno da fase G de j ômega
+
+56
+00:04:23.570 --> 00:04:29.350
+sobre 1 mais módulo de K G de j ômega
+vezes cosseno da fase de G de j ômega.
+
+57
+00:04:29.350 --> 00:04:30.825
+Complicado, não?
+
+58
+00:04:30.825 --> 00:04:35.420
+Imagine ter que ler ponto a ponto
+fase e módulo de G de j ômega para
+
+59
+00:04:35.420 --> 00:04:37.350
+aplicar essas fórmulas?
+
+60
+00:04:37.350 --> 00:04:41.180
+E ter que recalcular tudo para
+cada valor desejado do ganho K.
+
+61
+00:04:41.180 --> 00:04:45.958
+Certamente é uma alternativa, que na falta
+de qualquer outra resolveria o nosso
+
+62
+00:04:45.958 --> 00:04:50.756
+problema, mas como você já sabe, o uso
+das técnicas no domínio da frequência
+
+63
+00:04:50.756 --> 00:04:55.884
+permite evitar contas grandes usando
+mais resultados de gráficos e medidas.
+
+64
+00:04:55.884 --> 00:05:00.840
+Então, você verá no próximo vídeo
+como obter a fase e o ganho de T
+
+65
+00:05:00.840 --> 00:05:03.946
+de j ômega a partir de G de j ômega e
+
+66
+00:05:03.946 --> 00:05:08.800
+gráfico parametrizado nesses
+valores: a carta de Nichols-Black.

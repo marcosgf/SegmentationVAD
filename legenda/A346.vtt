@@ -1,0 +1,260 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.575
+Olá.
+
+2
+00:00:00.575 --> 00:00:06.110
+Vamos agora fazer projeto
+completo de avanço de fase,
+
+3
+00:00:06.110 --> 00:00:11.070
+de modo a satisfazer os requisitos
+de tempo de resposta e sobressinal.
+
+4
+00:00:11.070 --> 00:00:15.700
+O sistema é dado por G de s igual
+
+5
+00:00:15.700 --> 00:00:20.710
+a 0,005 sobre s vezes s mais 0,05
+
+6
+00:00:20.710 --> 00:00:25.358
+Os requisitos são: tempo
+de subida menor ou
+
+7
+00:00:25.358 --> 00:00:30.440
+igual a 18 segundos sobressinal
+menor ou igual a 0,3 ou 30%.
+
+8
+00:00:30.440 --> 00:00:36.076
+Esses requisitos resultam
+csi maior ou igual a 0,35,
+
+9
+00:00:36.076 --> 00:00:40.818
+o que implica uma margem de fase
+maior do que 35 graus e ómega c
+
+10
+00:00:40.818 --> 00:00:44.270
+maior ou igual a 0,11
+radianos por segundo.
+
+11
+00:00:44.270 --> 00:00:49.338
+Escolhemos os extremos
+dos intervalos csi igual
+
+12
+00:00:49.338 --> 00:00:54.330
+a 0,35 e ómega c igual
+a 0,11 radianos por segundo.
+
+13
+00:00:54.330 --> 00:01:00.040
+Para acomodar os efeitos de aproximações
+tomaremos 5 graus na margem de fase.
+
+14
+00:01:00.040 --> 00:01:04.580
+Margem de fase igual a 35 graus
+mais 5 graus, 40 graus no total.
+
+15
+00:01:04.580 --> 00:01:09.102
+O diagrama de Bode do sistema
+sem compensador é mostrado
+
+16
+00:01:09.102 --> 00:01:13.610
+a seguir que a frequência de cruzamento
+do zero desejada foi marcada.
+
+17
+00:01:13.610 --> 00:01:18.630
+Vemos que o ganho nessa frequência
+é de cerca de -9,2 dB e a fase
+
+18
+00:01:18.630 --> 00:01:25.089
+de aproximadamente menos 157 graus,
+resultando uma margem de fase de 23 graus.
+
+19
+00:01:25.089 --> 00:01:29.470
+Isto é, apenas com ganho é
+impossível atingir os requisitos.
+
+20
+00:01:29.470 --> 00:01:31.508
+Seguindo o nosso procedimento,
+
+21
+00:01:31.508 --> 00:01:35.520
+vamos calcular o avanço de fase
+que o compensador deve fornecer.
+
+22
+00:01:35.520 --> 00:01:40.461
+Fi é igual a margem de fase
+menos a fase de G de J ómega
+
+23
+00:01:40.461 --> 00:01:45.463
+c menos 180 graus que é
+igual a 4 graus mais 157
+
+24
+00:01:45.463 --> 00:01:50.867
+graus menos 180 graus,
+resultando 17 graus.
+
+25
+00:01:50.867 --> 00:01:56.034
+Para que o máximo seja de 17
+graus deve-se ter alfa igual
+
+26
+00:01:56.034 --> 00:02:03.150
+a 1 menos seno de 17 graus sobre 1 mais
+seno de 17 graus, que é igual a 0,54.
+
+27
+00:02:03.150 --> 00:02:08.292
+A fim de que a frequência
+para máximo avanço seja ómega
+
+28
+00:02:08.292 --> 00:02:13.472
+c é necessário que T igual a 1 sobre
+ómega c vezes raiz de alfa que
+
+29
+00:02:13.472 --> 00:02:19.546
+é igual a 1 sobre 0,11 vezes raiz de 0,54,
+que dá aproximadamente 12.
+
+30
+00:02:19.546 --> 00:02:24.339
+Então, o ganho do compensador nessa
+frequência será igual a 1 sobre
+
+31
+00:02:24.339 --> 00:02:26.820
+raiz de alfa que é igual a 1,35.
+
+32
+00:02:26.820 --> 00:02:31.979
+Assim, o ganho para fazer com que
+o cruzamento do zero ocorra 0,11
+
+33
+00:02:31.979 --> 00:02:36.982
+radianos por segundo será
+K dB igual a 10 log de
+
+34
+00:02:36.982 --> 00:02:41.871
+alfa menos módulo de G de j ómega c dB,
+
+35
+00:02:41.871 --> 00:02:47.822
+que é igual a 10 log de 0,54
+menos módulo de G de 0,11 j
+
+36
+00:02:47.822 --> 00:02:54.210
+dB que é igual a menos 2,7
+mais 9,2 resultando 6,5 dB.
+
+37
+00:02:54.210 --> 00:03:01.507
+Com isso,
+K será igual a 10 elevado a K dB sobre 20,
+
+38
+00:03:01.507 --> 00:03:06.918
+o que dá 2,1 e o compensador
+será C de s igual
+
+39
+00:03:06.918 --> 00:03:12.220
+a 2,1 vezes 12 s mais
+1 sobre 6,5 s mais 1.
+
+40
+00:03:12.220 --> 00:03:17.160
+Os diagramas de Bode para o sistema com
+compensador são mostrados a seguir.
+
+41
+00:03:17.160 --> 00:03:21.561
+Nestas figuras, pode-se ver que
+o projeto foi bem sucedido tanto
+
+42
+00:03:21.561 --> 00:03:25.700
+impor a margem de fase desejada quanto
+a frequência de cruzamento de 0 dB.
+
+43
+00:03:25.700 --> 00:03:30.885
+A seguir, botam-se os diagramas
+antes e depois da compensação
+
+44
+00:03:30.885 --> 00:03:35.773
+no mesmo gráfico para comparação Por fim,
+simulando a resposta do
+
+45
+00:03:35.773 --> 00:03:41.190
+sistema malha fechada para uma entrada
+de grau unitário, temos esse gráfico.
+
+46
+00:03:41.190 --> 00:03:45.691
+Nota-se que o sobressinal
+é de 0,3 e o tempo
+
+47
+00:03:45.691 --> 00:03:49.500
+de subida é de cerca de 16 segundos,
+atendendo os requisitos.
+
+48
+00:03:49.500 --> 00:03:55.500
+Agora, você já deve ser capaz de repetir
+esses passos para outros sistemas.
+
+49
+00:03:55.500 --> 00:03:59.750
+Construa outros exemplos e
+pratique com requisitos distintos,
+
+50
+00:03:59.750 --> 00:04:02.535
+como o tempo de acomodação
+e o tempo de pico.
+
+51
+00:04:02.535 --> 00:04:07.750
+No próximo vídeo, você verá como tratar
+do comportamento regime estacionário
+
+52
+00:04:07.750 --> 00:04:12.718
+alterando o ganho para baixas frequências
+de maneira a obter valor aceitável de
+
+53
+00:04:12.718 --> 00:04:17.899
+erro regime estacionário sem prejudicar
+o comportamento no regime transitório.

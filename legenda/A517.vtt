@@ -1,0 +1,529 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.601
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.601 --> 00:00:12.885
+Esse é o curso de orientação
+a objetos com Java,
+
+3
+00:00:12.885 --> 00:00:18.240
+eu sou Eduardo Guerra, hoje vamos
+falar do Stack Trace de uma exceção.
+
+4
+00:00:18.240 --> 00:00:23.660
+O Stake Trace é negócio extremamente
+importante para a detecção de erros.
+
+5
+00:00:23.660 --> 00:00:24.647
+Tá certo?
+
+6
+00:00:24.647 --> 00:00:30.375
+Então, entender Stack Trace,
+o que ele é e como ele funciona,
+
+7
+00:00:30.375 --> 00:00:34.744
+aprender a ler o Stack Trace é
+extremamente importante para uma das
+
+8
+00:00:34.744 --> 00:00:39.985
+atividades cruciais no desenvolvimento
+de qualquer software que é o debug, né?
+
+9
+00:00:39.985 --> 00:00:44.302
+Tirar os erros,
+achar onde os erros estão e eliminá-los.
+
+10
+00:00:44.302 --> 00:00:45.566
+Então vamos lá.
+
+11
+00:00:45.566 --> 00:00:48.842
+Toda exceção deixa rastro, certo?
+
+12
+00:00:48.842 --> 00:00:54.225
+Que é, digamos assim,
+a pilha de execução até aquele ponto.
+
+13
+00:00:54.225 --> 00:00:59.029
+Então vamos supor que você começou
+com o método main, chamou método,
+
+14
+00:00:59.029 --> 00:01:01.880
+chamou outro, outro e aí deu uma exceção.
+
+15
+00:01:01.880 --> 00:01:04.799
+A exceção, ele guarda todo esse caminho,
+
+16
+00:01:04.799 --> 00:01:08.620
+todo esse rastro até aquele
+ponto aonde ela foi criada.
+
+17
+00:01:08.620 --> 00:01:13.420
+Então, bom vamos entender
+direitinho aqui com exemplo, né?
+
+18
+00:01:13.420 --> 00:01:18.440
+Mas essa informação do Stack Trace
+ela é extremamente útil
+
+19
+00:01:18.440 --> 00:01:23.980
+pra você poder descobrir os erros,
+descobrir onde foi que ele aconteceu,
+
+20
+00:01:23.980 --> 00:01:29.140
+muitas vezes falar assim: " é só olhar
+lá o método onde aquele erro aconteceu".
+
+21
+00:01:29.140 --> 00:01:33.442
+Mas pode não ser isso, pode ser
+algum parâmetro que você passou para
+
+22
+00:01:33.442 --> 00:01:36.934
+aquele método que às vezes
+vem de outro método seu,
+
+23
+00:01:36.934 --> 00:01:41.434
+às vezes aquele parâmetro vem desde
+a interface gráfica do usuário.
+
+24
+00:01:41.434 --> 00:01:46.170
+É extremamente importante essa informação
+para você saber onde o erro aconteceu e
+
+25
+00:01:46.170 --> 00:01:50.210
+por onde aquela chamada ali passou.
+
+26
+00:01:50.210 --> 00:01:54.135
+Às vezes, por exemplo, você tem método
+que ele é invocado vários lugares.
+
+27
+00:01:54.135 --> 00:01:57.974
+Se este método dá erro, você vai querer
+saber de onde veio aquela chamada.
+
+28
+00:01:57.974 --> 00:02:01.428
+Então vamos pegar aqui esse exemplo:
+vamos supor que eu chamo ali,
+
+29
+00:02:01.428 --> 00:02:05.976
+eu tenho método main, ele chama método A,
+esse método A chama método B,
+
+30
+00:02:05.976 --> 00:02:12.090
+esse método B retorna, ele chama método C,
+esse método C chama método D e pá!
+
+31
+00:02:12.090 --> 00:02:14.760
+No método D acontece uma exceção.
+
+32
+00:02:14.760 --> 00:02:19.022
+Todo esse caminho percorrido do
+main até o D é o Stack Trace.
+
+33
+00:02:19.022 --> 00:02:23.700
+Então no Stack Trace você vai falar
+assim: "olha, a exceção aconteceu no D,
+
+34
+00:02:23.700 --> 00:02:28.145
+antes disso estava no C,
+antes disso estava no A e antes..." o B,
+
+35
+00:02:28.145 --> 00:02:32.020
+por exemplo, fica de fora,
+porque ele foi chamado e retornou.
+
+36
+00:02:32.020 --> 00:02:34.408
+Ele vai pegar é o C que invocou o D.
+
+37
+00:02:34.408 --> 00:02:38.221
+Então ele vai falar assim: "o D,
+o C, o A e o main,
+
+38
+00:02:38.221 --> 00:02:42.010
+este é o meu Stack Track,
+este é o meu caminho".
+
+39
+00:02:42.010 --> 00:02:42.811
+Tá certo?
+
+40
+00:02:42.811 --> 00:02:46.200
+Quando a gente manda
+imprimir o Stack Trace,
+
+41
+00:02:46.200 --> 00:02:50.390
+ele imprime mais ou menos isso daqui,
+eu vou sair pouquinho aqui da frente,
+
+42
+00:02:50.390 --> 00:02:54.592
+Para vocês verem aí o
+Stack Trace completo.
+
+43
+00:02:54.592 --> 00:03:00.033
+Então a classe que ele dá exceção,
+ela já ajuda bastante.
+
+44
+00:03:00.033 --> 00:03:04.501
+Então, por exemplo aqui
+está FBSWLException, né?
+
+45
+00:03:04.501 --> 00:03:09.189
+No caso é exceção do Firebird,
+então eu sei, opa, espera aí,
+
+46
+00:03:09.189 --> 00:03:12.926
+eu sei que esse erro é uma
+classe de exceção do Firebird,
+
+47
+00:03:12.926 --> 00:03:16.470
+então deve ter sido algum
+problema no banco de dados.
+
+48
+00:03:16.470 --> 00:03:21.308
+A segunda coisa que você olha
+depois da classe da exceção e agora
+
+49
+00:03:21.308 --> 00:03:25.970
+eu vou sair da frente mesmo,
+é o que está escrito, a mensagem de erro.
+
+50
+00:03:25.970 --> 00:03:28.061
+Bom, deixa eu sair aqui da frente.
+
+51
+00:03:28.061 --> 00:03:30.730
+Então no caso ele tá falando assim: "olha,
+
+52
+00:03:30.730 --> 00:03:35.315
+isso daí é índice inválido de coluna
+que você está tentando acessar".
+
+53
+00:03:35.315 --> 00:03:39.900
+Então eu já sei que eu tentei,
+fiz uma quarry, por exemplo,
+
+54
+00:03:39.900 --> 00:03:43.599
+e a coluna que eu estou
+tentando acessar é inválida.
+
+55
+00:03:43.599 --> 00:03:44.271
+Porquê?
+
+56
+00:03:44.271 --> 00:03:48.168
+Por causa da mensagem de erro
+que a exceção está dando.
+
+57
+00:03:48.168 --> 00:03:52.690
+Agora tem esse monte de rastro aqui,
+o que é que você vai fazer?
+
+58
+00:03:52.690 --> 00:03:55.597
+Eu vou entrar só pouquinho, já saio.
+
+59
+00:03:55.597 --> 00:04:00.284
+Olha aqui antes, que você vai
+ver antes dessa faixa amarela,
+
+60
+00:04:00.284 --> 00:04:06.540
+você vai estar vendo que [INAUDÍVEL]
+traços dos bancos de dados.
+
+61
+00:04:06.540 --> 00:04:09.846
+Esse aqui ó, my application e etc.
+
+62
+00:04:09.846 --> 00:04:13.404
+Tá?
+Vou sair de novo aqui para vocês verem,
+
+63
+00:04:13.404 --> 00:04:16.200
+é uma exceção da minha aplicação.
+
+64
+00:04:16.200 --> 00:04:19.320
+Tá?
+É esse AccessServlet aí.
+
+65
+00:04:19.320 --> 00:04:24.792
+E depois,
+tem monte aí de chamadas que são no caso
+
+66
+00:04:24.792 --> 00:04:29.739
+aí do Tomcat, que é o webserver
+que eu estava utilizando.
+
+67
+00:04:29.739 --> 00:04:31.510
+Então o que você vai fazer?
+
+68
+00:04:31.510 --> 00:04:35.832
+Você vai lá e vai procurar as
+suas classes do Stack Trace.
+
+69
+00:04:35.832 --> 00:04:38.622
+Pode ser que tenha classes
+que venham depois,
+
+70
+00:04:38.622 --> 00:04:40.949
+pode ser que tenham
+classes que venham antes.
+
+71
+00:04:40.949 --> 00:04:44.751
+O caso aqui, o exemplo que eu peguei,
+é de uma aplicação web.
+
+72
+00:04:44.751 --> 00:04:50.870
+Então, por exemplo, quando recebe
+a requisição, quem recebe é TomCat,
+
+73
+00:04:50.870 --> 00:04:53.755
+então ele vai processando isso
+daí até que chega na sua classe.
+
+74
+00:04:53.755 --> 00:04:56.255
+E aí no caso,
+essa classe chamou o banco de dados,
+
+75
+00:04:56.255 --> 00:05:01.195
+e aí também teve várias classes do
+banco de dados até acontecer esse erro.
+
+76
+00:05:01.195 --> 00:05:07.176
+Então você saber, entender esse
+Stack Trace, você saber olhar, procurar
+
+77
+00:05:07.176 --> 00:05:10.907
+suas classes é extremamente importante
+para você poder localizar o erro.
+
+78
+00:05:10.907 --> 00:05:14.312
+Deixa eu sair mais pouquinho da frente
+só para você reparar que ele tem
+
+79
+00:05:14.312 --> 00:05:19.625
+inclusive não só o nome da classe,
+mas também a linha de código.
+
+80
+00:05:19.625 --> 00:05:24.203
+Nesse exemplo você pode ver
+o que aconteceu na classe
+
+81
+00:05:24.203 --> 00:05:28.540
+AccessServlet no método
+do gat na linha 50.
+
+82
+00:05:28.540 --> 00:05:33.431
+E aí uma coisa que eu falo para os alunos,
+né, eu vejo que o cara,
+
+83
+00:05:33.431 --> 00:05:38.843
+principalmente quem está aprendendo
+programação o cara fala: " deu erro,
+
+84
+00:05:38.843 --> 00:05:41.740
+deu pau, e agora o que é que eu faço?
+
+85
+00:05:41.740 --> 00:05:43.385
+E aí levanta a mão".
+
+86
+00:05:43.385 --> 00:05:47.942
+Como vocês aí casa não têm, não tem a mim
+para levantar a mão e eu ir aí ajudar,
+
+87
+00:05:47.942 --> 00:05:50.100
+vocês precisam aprender a se virar.
+
+88
+00:05:50.100 --> 00:05:50.921
+Tá certo?
+
+89
+00:05:50.921 --> 00:05:56.761
+Então, gente, às vezes eu chego
+assim: " deu erro aqui, qual erro?
+
+90
+00:05:56.761 --> 00:06:01.970
+Não sei!" Ou seja, a pessoa nem pegou para
+olhar a exceção que estava acontecendo,
+
+91
+00:06:01.970 --> 00:06:06.597
+às vezes é só ler a mensagem de erro, é só
+olhar no Stack Trace aonde na sua classe
+
+92
+00:06:06.597 --> 00:06:11.520
+aconteceu aquele erro, às vezes já é óbvio
+qual o problema que está acontecendo.
+
+93
+00:06:11.520 --> 00:06:15.781
+Tá?
+Então, não se esqueça disso: acontecer
+
+94
+00:06:15.781 --> 00:06:18.998
+erros, ter que decifrar que erro é esse,
+
+95
+00:06:18.998 --> 00:06:23.240
+onde ele está, para arrumar o
+seu software, isso faz parte.
+
+96
+00:06:23.240 --> 00:06:27.010
+Pode ver aí às vezes nos
+hands on mesmo acontece erro.
+
+97
+00:06:27.010 --> 00:06:33.172
+Então faz parte você ver o erro que
+aconteceu e ter que interpretar isso daí.
+
+98
+00:06:33.172 --> 00:06:36.762
+Não se desespere,
+não desanime, isso é normal.
+
+99
+00:06:36.762 --> 00:06:40.728
+O que você não pode fazer é
+simplesmente deu erro, ponto.
+
+100
+00:06:40.728 --> 00:06:42.015
+Não!
+Deu erro?
+
+101
+00:06:42.015 --> 00:06:43.550
+Qual erro, onde deu?
+
+102
+00:06:43.550 --> 00:06:49.661
+E nesse caso, ler o Stack Trace da exceção
+é extremamente importante para isso daí.
+
+103
+00:06:49.661 --> 00:06:54.030
+Então eu espero que vocês tenham
+aprendido pouco mais sobre o Stack Trace,
+
+104
+00:06:54.030 --> 00:06:58.177
+entendido o que é que é,
+como ele funciona e principalmente,
+
+105
+00:06:58.177 --> 00:07:03.286
+quando imprimir erro no console ou
+num arquivo de log, por exemplo,
+
+106
+00:07:03.286 --> 00:07:08.005
+você saber pegar esse Stack Trace,
+interpretar e entender o
+
+107
+00:07:08.005 --> 00:07:12.830
+que está acontecendo,
+onde está tendo este erro e etc.
+
+108
+00:07:12.830 --> 00:07:13.608
+Tá certo?
+
+109
+00:07:13.608 --> 00:07:14.905
+Muito obrigado.
+
+110
+00:07:14.905 --> 00:07:16.380
+Até à próxima aula!
+
+111
+00:07:16.380 --> 00:07:22.410
+[MÚSICA]

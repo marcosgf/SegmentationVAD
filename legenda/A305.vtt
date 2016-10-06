@@ -1,0 +1,848 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.438
+Olá.
+Neste vídeo,
+
+2
+00:00:01.438 --> 00:00:06.268
+nós veremos precisamente o
+conceito de resposta frequência.
+
+3
+00:00:06.268 --> 00:00:11.061
+Particular, nosso enfoque será na
+resposta de sistemas lineares e
+
+4
+00:00:11.061 --> 00:00:16.098
+invariantes no tempo, os mesmos que
+você já viu no curso introdutório.
+
+5
+00:00:16.098 --> 00:00:21.220
+Mais especificamente, trabalharemos
+com sistemas estáveis malha aberta.
+
+6
+00:00:21.220 --> 00:00:26.048
+Após esse vídeo, você será capaz
+de obter a resposta frequência de
+
+7
+00:00:26.048 --> 00:00:30.840
+sistema experimentalmente e entenderá
+por que os sistemas não respondem
+
+8
+00:00:30.840 --> 00:00:34.440
+igualmente para entradas
+com diferentes frequências.
+
+9
+00:00:34.440 --> 00:00:38.870
+Vamos começar tentando obter
+a resposta frequência do carrinho.
+
+10
+00:00:38.870 --> 00:00:44.730
+Para isso, vamos aplicar uma entrada
+de tensão senoidal com amplitude
+
+11
+00:00:44.730 --> 00:00:50.600
+A e frequência ômega, isto é,
+u de t igual a A seno de ômega t.
+
+12
+00:00:50.600 --> 00:00:54.965
+O que faremos é variar a frequência ômega,
+
+13
+00:00:54.965 --> 00:00:59.330
+de forma a observar a saída do
+sistema para diferentes frequências.
+
+14
+00:00:59.330 --> 00:01:03.970
+Nesse caso, estaremos interessados
+na resposta da posição do carrinho,
+
+15
+00:01:03.970 --> 00:01:08.650
+isto é,
+a saída será y de t igual a teta de t.
+
+16
+00:01:08.650 --> 00:01:11.848
+Vamos ao laboratório de controle.
+
+17
+00:01:11.848 --> 00:01:16.826
+Voltamos ao laboratório de
+controle por computador do ITA.
+
+18
+00:01:16.826 --> 00:01:21.754
+O que precisamos para levantar
+a resposta frequência de sistema é
+
+19
+00:01:21.754 --> 00:01:26.922
+inserir uma entrada senoidal com
+amplitude e frequências conhecidas.
+
+20
+00:01:26.922 --> 00:01:32.066
+Nesse primeiro caso, vamos começar com
+uma frequência de ômega igual a três
+
+21
+00:01:32.066 --> 00:01:37.200
+radianos por segundo,
+e amplitude de dois volts, pico a pico.
+
+22
+00:01:37.200 --> 00:01:42.475
+Você pode observar que o carrinho
+também oscila como uma senoide.
+
+23
+00:01:42.475 --> 00:01:46.425
+Porém, sua amplitude é de cerca de 30
+
+24
+00:01:46.425 --> 00:01:51.200
+centímetros e a frequência é a mesma,
+três radianos por segundo.
+
+25
+00:01:51.200 --> 00:01:58.190
+As curvas nos gráficos estão vermelho
+para a entrada e azul para a saída.
+
+26
+00:01:58.190 --> 00:02:03.131
+Para este segundo ensaio, vamos manter
+
+27
+00:02:03.131 --> 00:02:08.358
+a amplitude de entrada de dois
+volts pico a pico e dobrar
+
+28
+00:02:08.358 --> 00:02:13.064
+a frequência, isto é,
+ômega igual a seis radianos por segundo.
+
+29
+00:02:13.064 --> 00:02:17.507
+Você pode observar que agora
+a frequência de resposta do carrinho
+
+30
+00:02:17.507 --> 00:02:20.249
+também é de seis radianos por segundo.
+
+31
+00:02:20.249 --> 00:02:25.398
+Porém, a amplitude ser bastante
+reduzida e a defasagem entre a senoide
+
+32
+00:02:25.398 --> 00:02:30.344
+do carrinho de saída e a senoide
+de entrada também aumentou.
+
+33
+00:02:30.344 --> 00:02:35.277
+Mais uma vez,
+vamos manter a amplitude de entrada de
+
+34
+00:02:35.277 --> 00:02:37.976
+dois volts pico a pico
+e dobrar a frequência.
+
+35
+00:02:37.976 --> 00:02:41.750
+Então, agora, ômega será igual
+a doze radianos por segundo.
+
+36
+00:02:41.750 --> 00:02:46.571
+Você pode ver que a amplitude
+da oscilação do carrinho diminui
+
+37
+00:02:46.571 --> 00:02:49.270
+mais ainda e a defasagem aumenta.
+
+38
+00:02:49.270 --> 00:02:55.150
+[SEM_ÁUDIO] Você
+
+39
+00:02:55.150 --> 00:02:59.455
+já viu que a característica
+entrada/saída de
+
+40
+00:02:59.455 --> 00:03:03.340
+sistema pode ser dada na forma
+de sua função de transferência.
+
+41
+00:03:03.340 --> 00:03:07.976
+Vamos usar essa representação
+para sistema qualquer: linear,
+
+42
+00:03:07.976 --> 00:03:10.180
+invariante no tempo e estável.
+
+43
+00:03:10.180 --> 00:03:15.488
+A função de transferência para esse
+sistema é: G de s igual a Y de s
+
+44
+00:03:15.488 --> 00:03:22.990
+sobre U de s que é igual a K sobre s
+menos p1 vezes s menos p2 até s menos pn.
+
+45
+00:03:22.990 --> 00:03:26.780
+Para sistema sem zeros e com
+polos reais não repetidos.
+
+46
+00:03:26.780 --> 00:03:32.191
+Para que o sistema seja estável,
+devemos ter todos os polos negativos,
+
+47
+00:03:32.191 --> 00:03:36.460
+ou seja, p1,
+p2 até pn menores do que zero.
+
+48
+00:03:36.460 --> 00:03:41.036
+A transformada de Laplace de
+sinal senoidal como aplicamos ao
+
+49
+00:03:41.036 --> 00:03:46.158
+carrinho é dada por: L de A seno de ômega
+t, que é a transformada de Laplace,
+
+50
+00:03:46.158 --> 00:03:50.690
+igual a A ômega sobre s ao
+quadrado mais ômega ao quadrado.
+
+51
+00:03:50.690 --> 00:03:54.831
+Utilizando este sinal como
+entrada do nosso sistema,
+
+52
+00:03:54.831 --> 00:04:01.289
+a transformada de Laplace da saída será
+Y de s igual a G de s vezes U de s,
+
+53
+00:04:01.289 --> 00:04:06.508
+que é igual a K sobre s menos p1,
+s menos p2 até
+
+54
+00:04:06.508 --> 00:04:12.430
+s menos pn vezes A ômega sobre s ao
+quadrado mais ômega ao quadrado.
+
+55
+00:04:12.430 --> 00:04:18.615
+Podemos expandir Y de s frações parciais,
+
+56
+00:04:18.615 --> 00:04:23.977
+ficando com a1 sobre s menos p1 mais
+
+57
+00:04:23.977 --> 00:04:29.465
+a2 sobre s menos p2 mais todos os termos
+
+58
+00:04:29.465 --> 00:04:35.374
+até an sobre s menos pn mais
+a0 sobre s menos j ômega,
+
+59
+00:04:35.374 --> 00:04:39.398
+mais a0 barra sobre s mais j ômega,
+
+60
+00:04:39.398 --> 00:04:43.260
+que a0 barra é o complexo conjugado de a0.
+
+61
+00:04:43.260 --> 00:04:47.590
+Agora, tomando a transformada
+inversa de Laplace,
+
+62
+00:04:47.590 --> 00:04:52.678
+temos que a resposta será uma somatória
+de exponenciais com expoentes
+
+63
+00:04:52.678 --> 00:04:57.810
+negativos devido aos polos, com excepção
+da resposta devido à entrada senoidal.
+
+64
+00:04:57.810 --> 00:05:03.195
+Y de t igual a a1,
+e elevado a p1t mais a2 e
+
+65
+00:05:03.195 --> 00:05:08.214
+elevado a p2t mais todos os termos até an,
+
+66
+00:05:08.214 --> 00:05:12.843
+e elevado a pnt mais a0,
+e elevado a j ômega t,
+
+67
+00:05:12.843 --> 00:05:16.810
+mais a0 barra e elevado a menos j ômega t.
+
+68
+00:05:16.810 --> 00:05:21.777
+Os termos envolvendo expoentes
+imaginários podem ser juntados usando
+
+69
+00:05:21.777 --> 00:05:26.408
+a usando a fórmula de Euler: e
+elevado a j ômega t igual a cosseno de
+
+70
+00:05:26.408 --> 00:05:28.821
+ômega t mais j seno de ômega t.
+
+71
+00:05:28.821 --> 00:05:31.830
+Note que para número complexo z,
+
+72
+00:05:31.830 --> 00:05:36.740
+temos que z mais z barra é igual
+a duas vezes a parte real de z.
+
+73
+00:05:36.740 --> 00:05:40.757
+Caso tenha dúvidas sobre as
+propriedades dos números complexos,
+
+74
+00:05:40.757 --> 00:05:43.490
+consulte o material adicional disponível.
+
+75
+00:05:43.490 --> 00:05:49.567
+Temos então: a0 vezes e
+elevado a j ômega t mais
+
+76
+00:05:49.567 --> 00:05:56.322
+a0barra vezes e elevado a menos j ômega
+t igual a duas vezes a parte real de a0,
+
+77
+00:05:56.322 --> 00:06:01.760
+cosseno de ômega t menos duas vezes
+a parte imaginária de a0 seno de ômega t.
+
+78
+00:06:01.760 --> 00:06:05.681
+Se esperarmos tempo
+suficientemente grande,
+
+79
+00:06:05.681 --> 00:06:08.937
+isto é, tomarmos o limite
+quando t tende ao infinito,
+
+80
+00:06:08.937 --> 00:06:12.940
+vemos que os termos associados aos
+polos do sistema, tenderão a zero,
+
+81
+00:06:12.940 --> 00:06:17.260
+não influenciando mais na resposta,
+porque os seus expoentes são negativos.
+
+82
+00:06:17.260 --> 00:06:21.630
+Contudo, o termo associado
+ao seno permanece.
+
+83
+00:06:21.630 --> 00:06:26.834
+Assim, para tempo longo,
+a saída será determinada pela senoide y
+
+84
+00:06:26.834 --> 00:06:33.439
+de t igual a duas vezes módulo de a0
+vezes seno de ômega t mais fi mais
+
+85
+00:06:33.439 --> 00:06:38.452
+pi sobre dois,
+que a chamada fase fi é dada
+
+86
+00:06:38.452 --> 00:06:43.710
+por: arco tangente da parte imaginária
+de a0 sobre a parte real de a0,
+
+87
+00:06:43.710 --> 00:06:47.870
+isto é, a saída também será uma
+senoide de frequência ômega.
+
+88
+00:06:47.870 --> 00:06:52.723
+Porém, sua amplitude e sua fase serão
+determinadas pela amplitude e pela
+
+89
+00:06:52.723 --> 00:06:53.590
+fase de a0.
+
+90
+00:06:53.590 --> 00:06:56.610
+Como determinar esse número?
+
+91
+00:06:56.610 --> 00:07:00.650
+Ora, você já viu isso no curso de
+Introdução aos Sistemas de Controle.
+
+92
+00:07:00.650 --> 00:07:04.280
+Relembrando a equação na
+transformada de Laplace da saída,
+
+93
+00:07:04.280 --> 00:07:06.578
+para obtermos o coeficiente a0,
+
+94
+00:07:06.578 --> 00:07:11.580
+basta multiplicar por s menos j ômega e
+tomarmos o limite com s td de j ômega.
+
+95
+00:07:11.580 --> 00:07:15.700
+Isso ainda não nos ajuda,
+porque não conhecemos y de s.
+
+96
+00:07:15.700 --> 00:07:19.046
+Mas lembremos que a entrada é senoidal.
+
+97
+00:07:19.046 --> 00:07:23.822
+Então, Y de s é igual a G de s vezes
+a ômega sobre s ao quadrado mais
+
+98
+00:07:23.822 --> 00:07:25.210
+ômega ao quadrado.
+
+99
+00:07:25.210 --> 00:07:31.890
+Voltando ao limite, temos que a0 será
+o limite quando s tende a j ômega,
+
+100
+00:07:31.890 --> 00:07:36.760
+de s menos j ômega vezes Y de s,
+que é igual ao limite
+
+101
+00:07:36.760 --> 00:07:41.630
+quando s vai para j ômega,
+de s menos j ômega vezes G de s,
+
+102
+00:07:41.630 --> 00:07:46.490
+vezes A ômega sobre s ao
+quadrado mais ômega ao quadrado,
+
+103
+00:07:46.490 --> 00:07:52.398
+que é igual ao limite quando s vai para
+j ômega de G de s vezes A ômega sobre
+
+104
+00:07:52.398 --> 00:07:57.540
+s mais j ômega, que é igual a G
+de j ômega sobre 2 j vezes a.
+
+105
+00:07:57.540 --> 00:08:05.190
+Dessa forma, precisamos agora determinar
+apenas o módulo e a fase de a0.
+
+106
+00:08:05.190 --> 00:08:10.621
+O módulo será dado por módulo
+de A0 igual a módulo de G de
+
+107
+00:08:10.621 --> 00:08:17.250
+j ômega sobre 2 j vezes a, que é igual a
+A sobre 2 vezes o módulo de G de j ômega.
+
+108
+00:08:17.250 --> 00:08:22.339
+E a fase fi será igual
+a fase de G de j ômega
+
+109
+00:08:22.339 --> 00:08:28.545
+sobre 2 j vezes A que é igual à fase
+de G de j ômega menos a fase de 2
+
+110
+00:08:28.545 --> 00:08:33.570
+j mais a fase de A que será igual à
+fase de G de j ômega menos pi sobre 2.
+
+111
+00:08:33.570 --> 00:08:39.390
+Voltando à expressão para saída y
+de t e substituindo esses valores,
+
+112
+00:08:39.390 --> 00:08:44.331
+teremos y de t igual a módulo
+de G de j ômega vezes
+
+113
+00:08:44.331 --> 00:08:48.150
+A seno de ômega t mais
+fase de G de j ômega.
+
+114
+00:08:48.150 --> 00:08:50.186
+O que isso significa?
+
+115
+00:08:50.186 --> 00:08:56.895
+Significa que depois de certo tempo,
+a saída para uma entrada senoidal,
+
+116
+00:08:56.895 --> 00:09:01.719
+de frequência ômega e amplitude
+A será uma senoide de amplitude
+
+117
+00:09:01.719 --> 00:09:06.526
+módulo de G de j ômega vezes A e
+defasada de fase de G de j ômega.
+
+118
+00:09:06.526 --> 00:09:09.730
+Porém, mantendo a frequência ômega.
+
+119
+00:09:09.730 --> 00:09:13.410
+Foi exatamente isso que
+observamos no nosso carrinho.
+
+120
+00:09:13.410 --> 00:09:18.036
+E mais, a amplitude da saída
+será função da frequência ômega,
+
+121
+00:09:18.036 --> 00:09:24.039
+pois dependerá do módulo de G de j ômega e
+a fase dependerá da fase de G de j ômega.
+
+122
+00:09:24.039 --> 00:09:27.060
+Também observamos isso no carrinho,
+
+123
+00:09:27.060 --> 00:09:30.960
+pois ao aumentar a frequência
+da senoide de entrada de tensão,
+
+124
+00:09:30.960 --> 00:09:35.720
+observamos que a amplitude da saída
+diminuía e a defasagem aumentava.
+
+125
+00:09:35.720 --> 00:09:40.010
+Vamos observar esse fenómeno
+com modelo bem simples?
+
+126
+00:09:40.010 --> 00:09:44.410
+Imagine que estamos lidando com
+circuito RC, mostrado ao lado,
+
+127
+00:09:44.410 --> 00:09:51.020
+cuja entrada é a tensão u fornecida pela
+fonte e a saída é a tensão y no capacitor.
+
+128
+00:09:51.020 --> 00:09:56.290
+A função de transferência
+que modela esse circuito é:
+
+129
+00:09:56.290 --> 00:10:03.640
+G de s igual a Y de s sobre U de s
+que é igual a 1 sobre sRC mais 1.
+
+130
+00:10:03.640 --> 00:10:08.589
+Para resistor com resistência
+de 470 kiloohms e
+
+131
+00:10:08.589 --> 00:10:12.000
+capacitor de capacitância 220 nanofarads,
+
+132
+00:10:12.000 --> 00:10:17.240
+teremos G de s igual 1 sobre 0,1 s mais 1.
+
+133
+00:10:17.240 --> 00:10:23.240
+Vamos calcular o módulo e a fase de G
+de j ômega para três frequências ômega.
+
+134
+00:10:23.240 --> 00:10:30.590
+Agora, vemos que G de j ômega pode
+ser calculado para ômega igual a 1,
+
+135
+00:10:30.590 --> 00:10:36.540
+10 e 100 radianos por segundo,
+resultando nos módulos 0.99,
+
+136
+00:10:36.540 --> 00:10:40.439
+0.7 e 0.10 e nas fases,
+
+137
+00:10:40.439 --> 00:10:45.360
+menos 0.1, menos 0.8 e menos 1.47.
+
+138
+00:10:45.360 --> 00:10:50.795
+Agora, de acordo com as
+nossas previsões para
+
+139
+00:10:50.795 --> 00:10:56.403
+entradas senoidais de amplitude 1 volt e
+fase zero devemos ter a saída dada por:
+
+140
+00:10:56.403 --> 00:11:03.460
+para ômega igual a 1 radiano por segundo a
+saída será 0,99 vezes seno de t menos 0,1.
+
+141
+00:11:03.460 --> 00:11:10.370
+Para ômega igual a 10 radianos por
+segundo, 0,7 vezes seno de 10 t menos 0,8.
+
+142
+00:11:10.370 --> 00:11:13.650
+Finalmente, para ômega igual
+a 100 radianos por segundo,
+
+143
+00:11:13.650 --> 00:11:17.890
+0,1 seno de 100 t menos 1,47.
+
+144
+00:11:17.890 --> 00:11:19.810
+Verificando simulação,
+
+145
+00:11:19.810 --> 00:11:24.770
+o que temos é o seguinte gráfico para
+ômega igual a 1 radiano por segundo.
+
+146
+00:11:24.770 --> 00:11:26.430
+Note que, neste primeiro caso,
+
+147
+00:11:26.430 --> 00:11:30.300
+as senoides de entrada e de saída
+encontram-se praticamente superpostas.
+
+148
+00:11:30.300 --> 00:11:35.270
+Isso está de acordo com a previsão feita
+usando a resposta frequência do modelo,
+
+149
+00:11:35.270 --> 00:11:40.240
+pois a amplitude de saída deve ser igual à
+da entrada, ganho de aproximadamente 0,99
+
+150
+00:11:40.240 --> 00:11:46.080
+e defasagem de, apenas, 0,10 radianos,
+isto é, aproximadamente 5,9 graus.
+
+151
+00:11:46.080 --> 00:11:50.870
+Já no segundo caso, para ômega
+igual a 10 radianos por segundo,
+
+152
+00:11:50.870 --> 00:11:55.660
+notamos uma clara discrepância entre
+os sinais de entrada e de saída.
+
+153
+00:11:55.660 --> 00:12:00.286
+Após alguns ciclos, a senoide da saída se
+estabelece com a amplitude da ordem de
+
+154
+00:12:00.286 --> 00:12:03.060
+0,7 vezes a amplitude unitária da entrada.
+
+155
+00:12:03.060 --> 00:12:04.744
+A defasagem também é notável.
+
+156
+00:12:04.744 --> 00:12:08.890
+Vemos que o pico de sinal de saída
+acontece consideravelmente depois do pico
+
+157
+00:12:08.890 --> 00:12:10.070
+de sinal de entrada.
+
+158
+00:12:10.070 --> 00:12:16.475
+Isso está de acordo com as previsões
+pela resposta frequência do modelo,
+
+159
+00:12:16.475 --> 00:12:21.818
+que ditam amplitude de 0,7 vezes a da
+entrada e defasagem de 0,8 radianos,
+
+160
+00:12:21.818 --> 00:12:23.950
+aproximadamente 46 graus.
+
+161
+00:12:23.950 --> 00:12:28.845
+Finalmente, observando o gráfico de
+simulação para a frequência ômega
+
+162
+00:12:28.845 --> 00:12:33.420
+igual a 100 radianos por segundo, notamos
+uma drástica diminuição da amplitude da
+
+163
+00:12:33.420 --> 00:12:37.310
+saída reduzindo-se a menos do que décimo
+da entrada, após alguns períodos.
+
+164
+00:12:37.310 --> 00:12:43.150
+Isso condiz com o valor de ganho de 0,1
+de G de j ômega para essa frequência.
+
+165
+00:12:43.150 --> 00:12:48.868
+Quanto à defasagem, é de quase quarto do
+período do gráfico, novamente consonância
+
+166
+00:12:48.868 --> 00:12:53.944
+com o valor de 1,47 radianos, que é,
+aproximadamente, pi sobre dois.
+
+167
+00:12:53.944 --> 00:12:58.955
+Agora, você já sabe que aplicando uma
+entrada senoidal a sistema linear,
+
+168
+00:12:58.955 --> 00:13:03.090
+após certo tempo, a saída será
+uma senoide de mesma frequência.
+
+169
+00:13:03.090 --> 00:13:06.200
+Este é o chamado regime
+permanente senoidal.
+
+170
+00:13:06.200 --> 00:13:11.043
+Viu também que a amplitude e a fase
+de saída dependem da resposta
+
+171
+00:13:11.043 --> 00:13:12.900
+frequência do sistema.
+
+172
+00:13:12.900 --> 00:13:16.782
+Você também sabe calcular o ganho
+de amplitude e a fase que o sistema
+
+173
+00:13:16.782 --> 00:13:20.470
+introduzirá ao sinal a partir
+de sua função de transferência.
+
+174
+00:13:20.470 --> 00:13:24.878
+Nos próximos vídeos,
+vamos discutir como representar a resposta
+
+175
+00:13:24.878 --> 00:13:28.466
+frequência de maneira conveniente
+e veremos as respostas
+
+176
+00:13:28.466 --> 00:13:33.147
+frequência para algumas categorias de
+sistemas mais comuns, bem como regras para
+
+177
+00:13:33.147 --> 00:13:37.850
+esboçar a resposta frequência
+dada uma função de transferência.

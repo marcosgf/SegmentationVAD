@@ -1,0 +1,1246 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.417
+[MÚSICA] [MÚSICA] Olá a todos.
+
+2
+00:00:09.417 --> 00:00:14.623
+Estamos seguindo aqui a nossa
+sequência de refatoração.
+
+3
+00:00:14.623 --> 00:00:17.454
+Eh, no último vídeo a gente moveu, não é,
+
+4
+00:00:17.454 --> 00:00:22.511
+esses métodos aqui para esse classe
+Movie e como eu falei eu estou tendo
+
+5
+00:00:22.511 --> 00:00:28.442
+pouquinho de coceira com esse switch case
+aqui, que está meio esquisito, está?
+
+6
+00:00:28.442 --> 00:00:34.048
+Se a gente olhar o Movie aqui,
+claramente tem 3 tipos de filme, não é?
+
+7
+00:00:34.048 --> 00:00:39.052
+E esses 2 métodos aqui,
+eles dependem bastante,
+
+8
+00:00:39.052 --> 00:00:43.235
+não é, do tipo de filme para
+retornar o resultado, não é?
+
+9
+00:00:43.235 --> 00:00:47.338
+Eu enxergo isso aqui como uma
+refatoração pouquinho mais complicada,
+
+10
+00:00:47.338 --> 00:00:51.302
+que a gente chama trocar condicional
+por polimorfismo, não é?
+
+11
+00:00:51.302 --> 00:00:53.344
+Então, o que é que eu vou fazer?
+
+12
+00:00:53.344 --> 00:00:56.766
+Eu vou criar novo, uma nova classe.
+
+13
+00:00:56.766 --> 00:01:02.026
+Eu vou criar subclasses de Movie, certo?
+
+14
+00:01:02.026 --> 00:01:06.088
+Para, para que elas cada uma, não é?
+
+15
+00:01:06.088 --> 00:01:12.221
+Vai ter uma subclasse CHILDRENS, uma
+classe REGULAR e a subclasse NEW RELEASE,
+
+16
+00:01:12.221 --> 00:01:17.893
+para que cada uma trate eh, eh,
+a forma que, que ele lida com isso.
+
+17
+00:01:17.893 --> 00:01:21.900
+E vamos fazer essa
+migração aqui aos poucos.
+
+18
+00:01:21.900 --> 00:01:23.405
+Está?
+Antes de fazer isso,
+
+19
+00:01:23.405 --> 00:01:24.657
+o que é que eu vou fazer?
+
+20
+00:01:24.657 --> 00:01:26.990
+Agora, eu não vou poder mais criar, não é?
+
+21
+00:01:26.990 --> 00:01:30.292
+Se eu tiver a subclasse,
+eu não vou criar mais a classe Movie,
+
+22
+00:01:30.292 --> 00:01:32.080
+eu vou criar uma das subclasses.
+
+23
+00:01:32.080 --> 00:01:36.086
+Então, o que eu vou fazer é
+criar método fábrica, está?
+
+24
+00:01:36.086 --> 00:01:38.687
+Para me auxiliar nesse
+processo de criação.
+
+25
+00:01:38.687 --> 00:01:43.312
+A princípio, ele vai simplesmente
+chamar o construtor, está?
+
+26
+00:01:43.312 --> 00:01:48.115
+Então, eu vou vir aqui,
+eu vou dar Control C,
+
+27
+00:01:48.115 --> 00:01:52.660
+Control V aqui e vou
+criar método estático.
+
+28
+00:01:52.660 --> 00:01:57.400
+É public static, eh.
+
+29
+00:01:57.400 --> 00:02:03.477
+Eh, botar assim oh: create Movie, está?
+
+30
+00:02:03.477 --> 00:02:08.675
+Ele vai receber os mesmos,
+os mesmos parâmetros, está?
+
+31
+00:02:08.675 --> 00:02:11.030
+Ele vai retornar o Movie.
+
+32
+00:02:11.030 --> 00:02:13.463
+Então, na verdade,
+
+33
+00:02:13.463 --> 00:02:18.928
+quem está chamando não precisa saber
+se é uma classe, se é uma subclasse.
+
+34
+00:02:18.928 --> 00:02:20.230
+Tem que ser Movie.
+
+35
+00:02:20.230 --> 00:02:20.927
+Está?
+
+36
+00:02:20.927 --> 00:02:25.470
+E aí, a princípio,
+ele vai retornar, não é?
+
+37
+00:02:25.470 --> 00:02:29.620
+return new Movie.
+
+38
+00:02:29.620 --> 00:02:30.199
+Está?
+
+39
+00:02:30.199 --> 00:02:34.650
+Aí, ele passa ali como
+parâmetro priceCode e o title.
+
+40
+00:02:34.650 --> 00:02:35.304
+Está?
+
+41
+00:02:35.304 --> 00:02:40.429
+Então, à medida que eu for
+adicionando as subclasses,
+
+42
+00:02:40.429 --> 00:02:46.790
+eu vou passando a retornar elas,
+eh, quando for priceCode delas.
+
+43
+00:02:46.790 --> 00:02:47.375
+Está?
+
+44
+00:02:47.375 --> 00:02:53.430
+Então feito isso, eu preciso agora
+fazer pequeno ajuste no meu teste.
+
+45
+00:02:53.430 --> 00:02:54.084
+Está?
+
+46
+00:02:54.084 --> 00:02:59.320
+Para que, ao invés dele vir
+aqui e chamar esse new Movie,
+
+47
+00:02:59.320 --> 00:03:01.168
+para ele chamar o create Movie.
+
+48
+00:03:01.168 --> 00:03:04.940
+Então, eu vou vir aqui,
+eu vou modificar o Movie aqui,
+
+49
+00:03:04.940 --> 00:03:08.600
+ele vai chamar o create Movie, está?
+
+50
+00:03:08.600 --> 00:03:13.751
+Eh, eh, onde ele vai estar
+passando ali o título e o type.
+
+51
+00:03:13.751 --> 00:03:14.382
+Está?
+
+52
+00:03:14.382 --> 00:03:19.375
+Note que, por exemplo, isso daqui,
+apesar de ter sido uma mudança
+
+53
+00:03:19.375 --> 00:03:23.320
+simples de fazer aqui no teste,
+é uma mudança de interface.
+
+54
+00:03:23.320 --> 00:03:25.504
+É uma mudança de API, ou seja,
+
+55
+00:03:25.504 --> 00:03:30.040
+a forma que eu crio o filme daqui
+para a frente, ela é diferente.
+
+56
+00:03:30.040 --> 00:03:30.578
+Está?
+
+57
+00:03:30.578 --> 00:03:34.795
+Então, normalmente,
+esse tipo de mudança que afeta,
+
+58
+00:03:34.795 --> 00:03:39.100
+não é só interna,
+que afeta como as outras classes,
+
+59
+00:03:39.100 --> 00:03:43.958
+eh, utilizam, criam a sua classe,
+elas costumam ter impacto maior.
+
+60
+00:03:43.958 --> 00:03:44.833
+Isso aqui no caso,
+
+61
+00:03:44.833 --> 00:03:48.807
+a gente está observando porque a gente
+está precisando alterar o teste, não é?
+
+62
+00:03:48.807 --> 00:03:53.974
+Felizmente, a gente tem, criou esse
+método rentMovie aqui, que facilita
+
+63
+00:03:53.974 --> 00:03:59.400
+isso para a gente, mas,
+eh, eh, precisamos,
+
+64
+00:03:59.400 --> 00:04:04.375
+a gente precisou alterar o teste
+para poder fazer isso aqui.
+
+65
+00:04:04.375 --> 00:04:08.410
+Então, vamos, vamos ver se o teste
+continua funcionando com essa alteração.
+
+66
+00:04:08.410 --> 00:04:09.244
+Okay.
+
+67
+00:04:09.244 --> 00:04:14.250
+Eu vou inclusive vir aqui na classe Movie.
+
+68
+00:04:14.250 --> 00:04:14.870
+Eh, eh.
+
+69
+00:04:14.870 --> 00:04:17.123
+Não, vou deixar ela assim mesmo.
+
+70
+00:04:17.123 --> 00:04:19.930
+Então, a primeira coisa que eu vou fazer,
+
+71
+00:04:19.930 --> 00:04:24.970
+eu vou vir aqui e vou
+criar uma nova classe,
+
+72
+00:04:24.970 --> 00:04:29.480
+que vai ser a classe do regular.
+
+73
+00:04:29.480 --> 00:04:32.505
+Então, eu vou vir aqui, New Class.
+
+74
+00:04:32.505 --> 00:04:34.660
+Eu vou chamar de regular.
+
+75
+00:04:34.660 --> 00:04:35.459
+Está?
+
+76
+00:04:35.459 --> 00:04:43.197
+A superclasse dele vai ser a classe eh,
+Movie.
+
+77
+00:04:43.197 --> 00:04:45.310
+Está?
+
+78
+00:04:45.310 --> 00:04:49.790
+Eh, pego uns construtores, abstract, okay.
+
+79
+00:04:49.790 --> 00:04:50.960
+Finish.
+
+80
+00:04:50.960 --> 00:04:51.837
+Está?
+
+81
+00:04:51.837 --> 00:04:54.330
+Então, aqui.
+
+82
+00:04:54.330 --> 00:04:58.880
+Por exemplo, nesse regular,
+eu não preciso do priceCode.
+
+83
+00:04:58.880 --> 00:04:59.502
+Está?
+
+84
+00:04:59.502 --> 00:05:04.630
+Eu posso passar aqui,
+direto para ele, o regular, não é?
+
+85
+00:05:04.630 --> 00:05:07.246
+Porque vai ser sempre o regular.
+
+86
+00:05:07.246 --> 00:05:12.998
+Então, aqui eu já posso tirar
+esse priceCode aqui do meu,
+
+87
+00:05:12.998 --> 00:05:15.980
+da minha classe, está?
+
+88
+00:05:15.980 --> 00:05:21.550
+Então, agora eu vou vir aqui,
+eu vou, eh, eh.
+
+89
+00:05:21.550 --> 00:05:26.640
+Ver aqui,
+oh: generate overwrite implement methods.
+
+90
+00:05:26.640 --> 00:05:31.797
+Eu vou colocar aqui na,
+na minha classe regular os métodos
+
+91
+00:05:31.797 --> 00:05:38.030
+getFrequentRenterPoints e o getAmount,
+está?
+
+92
+00:05:38.030 --> 00:05:43.331
+E aí, eu vou vir aqui na
+minha classe Movie, vou,
+
+93
+00:05:43.331 --> 00:05:48.589
+eh, copiar aqui, não é, a lógica, não é.
+
+94
+00:05:48.589 --> 00:05:51.940
+Pegar aqui, eh.
+
+95
+00:05:51.940 --> 00:05:58.170
+Aqui, eu não preciso mais do switch,
+nem do case.
+
+96
+00:05:58.170 --> 00:05:58.774
+Está?
+
+97
+00:05:58.774 --> 00:06:00.083
+Mais igual 2.
+
+98
+00:06:00.083 --> 00:06:03.578
+Eu posso já começar aqui com 2, não é?
+
+99
+00:06:03.578 --> 00:06:07.933
+Se a quantidade de dias for maior que 2,
+
+100
+00:06:07.933 --> 00:06:12.230
+então ele faz aquela continha ali.
+
+101
+00:06:12.230 --> 00:06:12.845
+Está?
+
+102
+00:06:12.845 --> 00:06:16.440
+E aqui, eu vou dar return thisAmount.
+
+103
+00:06:16.440 --> 00:06:19.748
+Ótimo.
+
+104
+00:06:19.748 --> 00:06:23.191
+Eh, vou salvar, está?
+
+105
+00:06:23.191 --> 00:06:29.140
+Eh, aqui, eu vou voltar na classe Movie,
+vou ver o FrequentRenterPoints.
+
+106
+00:06:29.140 --> 00:06:32.383
+Para o caso do regular,
+vai ser sempre 1, não é?
+
+107
+00:06:32.383 --> 00:06:35.318
+Então, eu vou simplesmente, vou vir aqui,
+
+108
+00:06:35.318 --> 00:06:40.220
+vou dar return 1 e vou salvar.
+
+109
+00:06:40.220 --> 00:06:42.972
+Está?
+Bom, eu já tenho a classe regular.
+
+110
+00:06:42.972 --> 00:06:46.106
+Eu preciso que o meu código
+utilize essa classe.
+
+111
+00:06:46.106 --> 00:06:48.180
+Então, o que é que eu vou fazer?
+
+112
+00:06:48.180 --> 00:06:52.460
+Eh, aqui, no meu createMovie.
+
+113
+00:06:52.460 --> 00:06:53.831
+Está?
+
+114
+00:06:53.831 --> 00:06:59.035
+Eu vou verificar se o priceCode
+
+115
+00:06:59.035 --> 00:07:06.150
+que ele está passando é igual a regular.
+
+116
+00:07:06.150 --> 00:07:10.732
+Então, ele vai vir aqui e vai dar
+
+117
+00:07:10.732 --> 00:07:15.928
+return new Regular, está?
+
+118
+00:07:15.928 --> 00:07:20.636
+E ele vai eh,
+colocar o title ali como parâmetro.
+
+119
+00:07:20.636 --> 00:07:22.740
+Será que está funcionando?
+
+120
+00:07:22.740 --> 00:07:25.320
+Está?
+Então, agora quando ele for regular,
+
+121
+00:07:25.320 --> 00:07:28.664
+ele já vai estar utilizando
+a minha subclasse.
+
+122
+00:07:28.664 --> 00:07:29.304
+Está?
+
+123
+00:07:29.304 --> 00:07:31.870
+Vamos rodar os testes aqui.
+
+124
+00:07:31.870 --> 00:07:37.200
+Eh, vamos lá, torcer para funcionar.
+
+125
+00:07:37.200 --> 00:07:41.149
+Tudo funcionando, podemos continuar.
+
+126
+00:07:41.149 --> 00:07:46.180
+Uma parte que eu gosto muito na
+refatoração é deletar código.
+
+127
+00:07:46.180 --> 00:07:46.682
+Está?
+
+128
+00:07:46.682 --> 00:07:54.110
+Então, eu posso vir aqui e destruir todo
+o case do regular no método getAmount.
+
+129
+00:07:54.110 --> 00:07:54.761
+Está?
+
+130
+00:07:54.761 --> 00:08:00.630
+Aqui no getFrequentRenterPoint,
+não consigo ainda, certo?
+
+131
+00:08:00.630 --> 00:08:04.110
+Então, eu vou vir aqui, vou salvar.
+
+132
+00:08:04.110 --> 00:08:05.958
+Eh, eh.
+
+133
+00:08:05.958 --> 00:08:10.625
+[SEM_ÁUDIO] Então,
+
+134
+00:08:10.625 --> 00:08:14.290
+seguindo o exemplo,
+
+135
+00:08:14.290 --> 00:08:19.700
+eu vou criar o método, a classe Childrens.
+
+136
+00:08:19.700 --> 00:08:21.068
+Vamos lá.
+
+137
+00:08:21.068 --> 00:08:22.740
+Childrens.
+
+138
+00:08:22.740 --> 00:08:23.582
+Para fazer.
+
+139
+00:08:23.582 --> 00:08:27.941
+Não, vou começar, vou seguir,
+vez de seguir para o Childrens,
+
+140
+00:08:27.941 --> 00:08:30.020
+vou seguir para New Release.
+
+141
+00:08:30.020 --> 00:08:30.764
+Está?
+
+142
+00:08:30.764 --> 00:08:37.460
+Eh, da mesma forma, eu já vou vir
+aqui dizer que a classe Movie.
+
+143
+00:08:37.460 --> 00:08:38.162
+Está?
+
+144
+00:08:38.162 --> 00:08:43.892
+Ele, que a superclasse dele é Movie,
+vou dar finish, está?
+
+145
+00:08:43.892 --> 00:08:48.533
+Aqui, da mesma forma que eu fiz,
+eu posso dizer aqui que
+
+146
+00:08:48.533 --> 00:08:52.993
+ele eh, que aqui, ele tem,
+
+147
+00:08:52.993 --> 00:08:57.730
+ele recebe como parâmetro o newRelease,
+está?
+
+148
+00:08:57.730 --> 00:09:04.350
+E posso apagar esse priceCode aqui, certo?
+
+149
+00:09:04.350 --> 00:09:05.949
+Eh, inclusive aqui.
+
+150
+00:09:05.949 --> 00:09:10.888
+Se eu quiser, eu vou fazer pouquinho
+diferente só para vocês verem como que
+
+151
+00:09:10.888 --> 00:09:14.996
+na refatoração é importante você
+dar pequenos passinhos onde tudo
+
+152
+00:09:14.996 --> 00:09:19.871
+continua funcionando e só,
+aos pouquinhos, você vai substituindo.
+
+153
+00:09:19.871 --> 00:09:23.652
+Observe que eu já posso aqui, nesse ponto.
+
+154
+00:09:23.652 --> 00:09:28.160
+Eu já consigo vir aqui na
+minha classe Movie, já,
+
+155
+00:09:28.160 --> 00:09:34.014
+já colocar aqui para retornar
+o NewRelease, não é?
+
+156
+00:09:34.014 --> 00:09:36.444
+Então, eh, eh.
+
+157
+00:09:36.444 --> 00:09:42.510
+Se o priceCode for igual a NewRelease,
+
+158
+00:09:42.510 --> 00:09:47.513
+ele já vai retornar aqui new
+
+159
+00:09:47.513 --> 00:09:51.750
+NewRelease com o
+
+160
+00:09:51.750 --> 00:09:56.910
+title ali, igual ao de cima ali.
+
+161
+00:09:56.910 --> 00:10:02.200
+Então, nos casos do NewRelease,
+ele já está utilizando
+
+162
+00:10:02.200 --> 00:10:09.390
+a subclasse e se eu rodar os
+testes eles vão estar funcionando.
+
+163
+00:10:09.390 --> 00:10:10.165
+Porquê?
+
+164
+00:10:10.165 --> 00:10:15.070
+Porque ele está passando esse
+NEW_RELEASE e ele está delegando
+
+165
+00:10:15.070 --> 00:10:20.044
+para a classe Movie, ele está chamando
+da classe Movie o getAmount e
+
+166
+00:10:20.044 --> 00:10:23.710
+o getFrequentRenterPoints que
+consideram aqui o NEW_RELEASE.
+
+167
+00:10:23.710 --> 00:10:27.640
+Então, eu vou vir aqui,
+
+168
+00:10:27.640 --> 00:10:33.080
+eu vou copiar aqui, fica até mais
+fácil do que usar ali o do Eclipse.
+
+169
+00:10:33.080 --> 00:10:34.170
+Está?
+
+170
+00:10:34.170 --> 00:10:40.030
+Então, no meu método getAmount eu vou
+
+171
+00:10:40.030 --> 00:10:45.203
+copiar aqui o que tem aqui no Movie,
+
+172
+00:10:45.203 --> 00:10:50.021
+que é simplesmente
+a quantidade de dias vezes 3,
+
+173
+00:10:50.021 --> 00:10:55.310
+nesse caso aqui é uma
+implementação até bem simples,
+
+174
+00:10:55.310 --> 00:10:58.173
+está?
+
+175
+00:10:58.173 --> 00:11:02.470
+E aqui,
+
+176
+00:11:02.470 --> 00:11:06.719
+na minha classe Movie,
+
+177
+00:11:06.719 --> 00:11:11.529
+eu posso colocar esse
+
+178
+00:11:11.529 --> 00:11:16.237
+if aqui com a diferença de
+que aqui eu vou tirar essa
+
+179
+00:11:16.237 --> 00:11:21.320
+verificação se ele é NEW_RELEASE,
+porque eu sei que ele é NEW_RELEASE.
+
+180
+00:11:21.320 --> 00:11:24.920
+Então, se for
+maior do que 1 retorna 2 se não retorna 1,
+
+181
+00:11:24.920 --> 00:11:29.813
+então ficando ali bastante simples, está?
+
+182
+00:11:29.813 --> 00:11:33.550
+Então vou rodar aqui agora.
+
+183
+00:11:33.550 --> 00:11:43.120
+Funcionou e aí então eu
+posso já remover aqui,
+
+184
+00:11:43.120 --> 00:11:47.041
+eu posso deixar só o return 1 aqui.
+
+185
+00:11:47.041 --> 00:11:53.485
+Aqui, o único caso que ele vai
+rodar vai ser no caso do CHILDRENS,
+
+186
+00:11:53.485 --> 00:11:58.981
+então eu posso também já excluir tudo ali.
+
+187
+00:11:58.981 --> 00:12:00.030
+Está?
+
+188
+00:12:00.030 --> 00:12:04.750
+Deixando inclusive aqui o igual a 1.5
+
+189
+00:12:04.750 --> 00:12:09.177
+e posso rodar aqui
+
+190
+00:12:09.177 --> 00:12:14.060
+de novo e vamos ver como é
+que vai ficar isso daqui.
+
+191
+00:12:14.060 --> 00:12:19.803
+[SEM ÁUDIO] Funcionou, está?
+
+192
+00:12:19.803 --> 00:12:23.393
+A gente pode observar aqui que o return 1,
+
+193
+00:12:23.393 --> 00:12:27.386
+essa implementação ela está
+igualzinha à do Regular,
+
+194
+00:12:27.386 --> 00:12:31.921
+eu posso deixar esse return 1 como
+implementação Default, ou seja,
+
+195
+00:12:31.921 --> 00:12:36.730
+nem preciso colocar aqui, só vou
+sobrescrever isso ali no meu NEW_RELEASE,
+
+196
+00:12:36.730 --> 00:12:41.286
+onde eu tenho comportamento diferente,
+o teste continua funcionando.
+
+197
+00:12:41.286 --> 00:12:43.813
+Olha que, é muito bom deletar código,
+
+198
+00:12:43.813 --> 00:12:48.990
+é muito bom você sai excluindo tudo e
+tudo continua funcionando a mesma coisa!
+
+199
+00:12:48.990 --> 00:12:52.940
+É muito bom, muito bom,
+adoro, adoro deletar código!
+
+200
+00:12:52.940 --> 00:12:57.910
+Bom, está faltando só
+agora aqui a nossa classe,
+
+201
+00:12:57.910 --> 00:13:01.620
+Childrens.
+
+202
+00:13:01.620 --> 00:13:10.570
+Então, vamos vir aqui,
+criar a nossa classe Childrens,
+
+203
+00:13:10.570 --> 00:13:18.790
+onde eu vou também colocar como
+Superclasse aqui a classe Movie.
+
+204
+00:13:18.790 --> 00:13:22.783
+E agora ficou bem fácil.
+
+205
+00:13:22.783 --> 00:13:27.198
+Então vou passar aqui esse,
+
+206
+00:13:27.198 --> 00:13:31.980
+como priceCode aqui o CHILDRENS,
+
+207
+00:13:31.980 --> 00:13:37.840
+e eu posso excluir aqui do meu construtor.
+
+208
+00:13:37.840 --> 00:13:42.860
+Aqui o meu, na minha classe Movie,
+
+209
+00:13:42.860 --> 00:13:49.730
+eu posso simplesmente copiar
+esse getAmount aqui [SEM
+
+210
+00:13:49.730 --> 00:13:56.290
+ÁUDIO] porque ele já é
+a implementação do CHILDRENS.
+
+211
+00:13:56.290 --> 00:13:59.490
+Vou salvar aqui.
+
+212
+00:13:59.490 --> 00:14:05.371
+E esse getAmount aqui ele sei lá,
+
+213
+00:14:05.371 --> 00:14:12.154
+não tem mais nada, a partir do
+momento que vir aqui e colocar aqui,
+
+214
+00:14:12.154 --> 00:14:18.410
+if priceCode igual a CHILDRENS
+
+215
+00:14:18.410 --> 00:14:22.630
+e retornar children aqui,
+
+216
+00:14:22.630 --> 00:14:28.773
+new, new Childrens,
+
+217
+00:14:28.773 --> 00:14:34.240
+com title, eu não preciso
+mais desse aqui baixo, não é?
+
+218
+00:14:34.240 --> 00:14:38.960
+Eu posso até jogar uma exceção aqui,
+dar throws
+
+219
+00:14:38.960 --> 00:14:44.548
+new Runtime Exception
+
+220
+00:14:44.548 --> 00:14:49.060
+e falar aqui,
+não existe esse tipo de filme.
+
+221
+00:14:49.060 --> 00:14:55.750
+Não existe, opa,
+não existe esse tipo de filme,
+
+222
+00:14:55.750 --> 00:15:01.080
+que é o priceCode que ele
+está passando ali, não é?
+
+223
+00:15:01.080 --> 00:15:04.194
+Eh, throw.
+
+224
+00:15:04.194 --> 00:15:08.323
+Então, com isso eu posso por exemplo,
+
+225
+00:15:08.323 --> 00:15:13.353
+vir aqui e dizer que a classe Movie é uma
+classe abstrata agora, porque ninguém
+
+226
+00:15:13.353 --> 00:15:18.480
+vai instanciar o Movie, vai instanciar
+sempre uma das suas subclasses, não é?
+
+227
+00:15:18.480 --> 00:15:23.245
+Então vou colocar aqui, abstract class
+
+228
+00:15:23.245 --> 00:15:28.228
+Movie e aí eu posso declarar por exemplo,
+
+229
+00:15:28.228 --> 00:15:33.267
+esse método getAmount também
+como método abstrato, não é?
+
+230
+00:15:33.267 --> 00:15:37.917
+Ou seja, cada filme
+
+231
+00:15:37.917 --> 00:15:44.194
+precisa ter o seu Aquele,
+
+232
+00:15:44.194 --> 00:15:48.040
+aquele seu,
+
+233
+00:15:48.040 --> 00:15:53.347
+o cálculo da quantidade,
+do seu preço, está?
+
+234
+00:15:53.347 --> 00:15:58.320
+Então vou rodar aqui,
+para ver se funcionou direitinho.
+
+235
+00:15:58.320 --> 00:16:01.275
+Opa, espera aí.
+
+236
+00:16:01.275 --> 00:16:05.610
+Vamos rodar aqui o teste.
+
+237
+00:16:05.610 --> 00:16:10.389
+Isso, muito bem.
+
+238
+00:16:10.389 --> 00:16:16.637
+E com isso eu percebo que a minha variável
+priceCode ela não é mais necessária,
+
+239
+00:16:16.637 --> 00:16:21.577
+porque eu não uso, se eu olhar aqui
+eu não uso ela mais para nada,
+
+240
+00:16:21.577 --> 00:16:24.065
+ela é uma coisa que ficou obsoleta.
+
+241
+00:16:24.065 --> 00:16:27.812
+Então, olha só,
+agora vai ser a festa de deletar coisas.
+
+242
+00:16:27.812 --> 00:16:34.030
+Eu posso deletar isso daqui, está,
+eu posso deletar isso daqui,
+
+243
+00:16:34.030 --> 00:16:38.286
+posso deletar esses 2 métodos aqui,
+
+244
+00:16:38.286 --> 00:16:43.600
+não são mais necessários, vou salvar aqui.
+
+245
+00:16:43.600 --> 00:16:48.850
+E aí o que eu vou precisar
+é simplesmente de
+
+246
+00:16:48.850 --> 00:16:54.112
+eliminar esse parâmetro aqui
+do construtor da superclasse,
+
+247
+00:16:54.112 --> 00:16:59.472
+que todo o regular é regular,
+todo o NEW_RELEASE é NEW_RELEASE,
+
+248
+00:16:59.472 --> 00:17:04.188
+então eu não preciso mais de passar
+isso para a superclasse porque ela
+
+249
+00:17:04.188 --> 00:17:07.937
+não utiliza mais isso para nada, está?
+
+250
+00:17:07.937 --> 00:17:13.013
+Salvo tudo e você pode ver
+que com essa quantidade
+
+251
+00:17:13.013 --> 00:17:17.790
+de código que eu excluí o teste
+continua passando com sucesso, está?
+
+252
+00:17:17.790 --> 00:17:20.896
+Então, fizemos aqui não é, uma, claro,
+
+253
+00:17:20.896 --> 00:17:26.526
+fala assim: mas você continua com o
+if aqui para criar o tipo do filme.
+
+254
+00:17:26.526 --> 00:17:31.427
+Sim, dependemos da forma,
+eu preciso me ater a isso daqui,
+
+255
+00:17:31.427 --> 00:17:37.458
+porque o resto do meu sistema, no caso,
+o que o resto do meu sistema aqui?
+
+256
+00:17:37.458 --> 00:17:43.600
+É o teste, ele utiliza aqui esse esse
+
+257
+00:17:43.600 --> 00:17:49.281
+código não é,
+como base para criar os filmes.
+
+258
+00:17:49.281 --> 00:17:55.077
+Se depois eu refatorar os meus,
+a minha aplicação como todo,
+
+259
+00:17:55.077 --> 00:18:01.033
+para que ele crie regular,
+que ao invés de criar filme,
+
+260
+00:18:01.033 --> 00:18:06.546
+não é, eu posso de repente
+eliminar essa necessidade
+
+261
+00:18:06.546 --> 00:18:10.914
+de eu ter esse esse método
+de criação aqui, está?
+
+262
+00:18:10.914 --> 00:18:15.549
+Mas a gente vê que ele é bem mais
+organizado do aquele código que eu
+
+263
+00:18:15.549 --> 00:18:16.909
+tinha antes, não é?
+
+264
+00:18:16.909 --> 00:18:23.547
+Se a gente quer saber como é que
+funciona determinado tipo de filme,
+
+265
+00:18:23.547 --> 00:18:28.132
+é só eu vir aqui e as regras
+cada deles são muito claras,
+
+266
+00:18:28.132 --> 00:18:32.480
+não é mais aquela bagunça toda misturada
+que a gente tinha antes, está?
+
+267
+00:18:32.480 --> 00:18:37.192
+E outra coisa que a gente percebe
+essa melhoria é que se a gente
+
+268
+00:18:37.192 --> 00:18:41.435
+quiser acrescentar novo tipo de filme,
+sei lá,
+
+269
+00:18:41.435 --> 00:18:46.852
+filme promocional ou super lançamento
+como tem algumas locadoras por aí,
+
+270
+00:18:46.852 --> 00:18:52.266
+a gente também é só criar uma nova
+subclasse e no caso aqui está incluindo
+
+271
+00:18:52.266 --> 00:18:58.370
+ela nesse, nesse método aqui de criação,
+está certo?
+
+272
+00:18:58.370 --> 00:19:02.014
+Então, essa aula foi isso,
+sei que foi uma refatoração complicada,
+
+273
+00:19:02.014 --> 00:19:06.181
+o Eclipse não faz ela automática para a
+gente, mas dá para ver como é que a gente
+
+274
+00:19:06.181 --> 00:19:10.762
+através da refatoração a gente consegue
+mudar bastante a cara de código.
+
+275
+00:19:10.762 --> 00:19:15.331
+Mas não acabou não, tem mais pedacinho
+e eu espero você no próximo vídeo para
+
+276
+00:19:15.331 --> 00:19:17.455
+a gente terminar essa refatoração.
+
+277
+00:19:17.455 --> 00:19:22.920
+[MÚSICA]

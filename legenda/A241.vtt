@@ -1,0 +1,163 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:16.540
+[MÚSICA] E aí, pessoal, tudo bem?
+
+3
+00:00:16.540 --> 00:00:21.330
+Nessa aula iremos conhecer alguns
+dos comandos básicos em SWIFT.
+
+4
+00:00:21.330 --> 00:00:25.060
+Crie novo aplicativo de playground
+como vimos na aula anterior.
+
+5
+00:00:25.060 --> 00:00:29.615
+As estruturas condicionais e
+operadores de comparação são iguais
+
+6
+00:00:29.615 --> 00:00:31.980
+a muitas linguagens existentes.
+
+7
+00:00:31.980 --> 00:00:35.623
+A diferença no SWIFT é que não é
+necessário o uso de parênteses,
+
+8
+00:00:35.623 --> 00:00:39.080
+mas a linguagem também aceita,
+caso você queira colocar.
+
+9
+00:00:39.080 --> 00:00:41.263
+Se modificarmos o valor da variável,
+
+10
+00:00:41.263 --> 00:00:44.410
+você pode ver em tempo real
+qual condição é executada.
+
+11
+00:00:44.410 --> 00:00:50.630
+Vamos ver agora o comando de laço for.
+
+12
+00:00:50.630 --> 00:00:55.190
+O comando for também pode ser escrito da
+mesma forma como muitas outras linguagens
+
+13
+00:00:55.190 --> 00:00:56.190
+de programação.
+
+14
+00:00:56.190 --> 00:00:59.310
+E também não é necessário
+o uso de parênteses.
+
+15
+00:00:59.310 --> 00:01:02.753
+Do lado direito você pode ver
+quantas vezes o laço foi executado e
+
+16
+00:01:02.753 --> 00:01:04.520
+quais foram os valores impressos.
+
+17
+00:01:04.520 --> 00:01:10.237
+Outro modo de utilizar o for
+
+18
+00:01:10.237 --> 00:01:13.419
+no SWIFT é usando
+a combinação dos comandos for
+
+19
+00:01:13.419 --> 00:01:18.020
+e in e determinando o intervalo de
+valores através desses três pontos.
+
+20
+00:01:18.020 --> 00:01:22.160
+Nesse exemplo,
+esse intervalo inclui o 1 e o 7.
+
+21
+00:01:22.160 --> 00:01:26.300
+Esses dois laços são exatamente iguais,
+mas escritos de formas diferentes.
+
+22
+00:01:26.300 --> 00:01:31.489
+O comando SWIFT não necessita
+do comando BREAK em cada caso,
+
+23
+00:01:31.489 --> 00:01:33.940
+como em outras linguagens.
+
+24
+00:01:33.940 --> 00:01:37.142
+E é obrigatória a definição
+do caso default.
+
+25
+00:01:37.142 --> 00:01:40.987
+Você pode definir casos
+comuns usando vírgula ou até
+
+26
+00:01:40.987 --> 00:01:44.164
+definindo intervalo de valores.
+
+27
+00:01:44.164 --> 00:01:47.177
+No SWIFT o switch aceita
+qualquer tipo de variável,
+
+28
+00:01:47.177 --> 00:01:49.430
+tornando assim comando muito poderoso.
+
+29
+00:01:49.430 --> 00:01:52.710
+Nesse exemplo estamos
+fazendo o switch com strings.
+
+30
+00:01:52.710 --> 00:01:59.412
+Lembre-se de pausar o vídeo em qualquer
+
+31
+00:01:59.412 --> 00:02:03.220
+momento para você digitar e copiar o
+código, testando no seu playground.
+
+32
+00:02:03.220 --> 00:02:06.799
+É muito importante que você não
+apenas assista às videoaulas,
+
+33
+00:02:06.799 --> 00:02:09.780
+mas que bote a mão na massa
+e teste no seu próprio Mac.
+
+34
+00:02:09.780 --> 00:02:14.946
+Na próxima aula veremos
+manipulação de strings.
+
+35
+00:02:14.946 --> 00:02:15.810
+Até lá.

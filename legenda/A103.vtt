@@ -1,0 +1,310 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.126
+[MÚSICA] E
+
+3
+00:00:13.126 --> 00:00:17.950
+aí pessoal, tudo bem?
+
+4
+00:00:17.950 --> 00:00:23.055
+Nessa aula iremos utilizar
+o Tab Bar Controller.
+
+5
+00:00:23.055 --> 00:00:27.419
+Criaremos aplicativo que utiliza diversos
+view controllers disponíveis em abas
+
+6
+00:00:27.419 --> 00:00:28.160
+de tab bar.
+
+7
+00:00:28.160 --> 00:00:32.790
+Vamos iniciar criando novo projeto
+com a opção Single View Application.
+
+8
+00:00:32.790 --> 00:00:38.390
+Escolha o nome do projeto e
+em devices vamos usar iPad.
+
+9
+00:00:38.390 --> 00:00:43.760
+[SEM_ÁUDIO] Com
+
+10
+00:00:43.760 --> 00:00:48.460
+o projeto criado vamos
+trabalhar no storyboard.
+
+11
+00:00:48.460 --> 00:00:53.790
+Selecione o View Controller existente.
+
+12
+00:00:53.790 --> 00:00:59.990
+Agora vá em Editor,
+Embeded In e selecione Tab Bar Controller.
+
+13
+00:00:59.990 --> 00:01:03.834
+Isso já adiciona o Tab Bar Controller
+automaticamente no
+
+14
+00:01:03.834 --> 00:01:07.052
+seu projeto nesse
+View Controller selecionado.
+
+15
+00:01:07.052 --> 00:01:09.320
+Adicione novo View Controller.
+
+16
+00:01:09.320 --> 00:01:16.040
+[SEM_ÁUDIO] Repare
+
+17
+00:01:16.040 --> 00:01:21.210
+que o primeiro View Controller
+tem uma Tab Bar.
+
+18
+00:01:21.210 --> 00:01:25.850
+Selecionando essa barra
+podemos fazer algumas adições.
+
+19
+00:01:25.850 --> 00:01:31.040
+Coloque System Item existente,
+o Favorites.
+
+20
+00:01:31.040 --> 00:01:35.520
+Além disso
+
+21
+00:01:35.520 --> 00:01:40.000
+adicione uma label no meio desse View
+Controller e modifique para Favoritos.
+
+22
+00:01:40.000 --> 00:01:48.000
+[SEM_ÁUDIO]
+
+23
+00:01:48.000 --> 00:01:53.792
+[SEM_ÁUDIO] Agora
+
+24
+00:01:53.792 --> 00:01:58.060
+selecione o Tab Bar Controller.
+
+25
+00:01:58.060 --> 00:02:04.090
+Na aba de conexões temos que o Favorites
+View Controller já está conetado.
+
+26
+00:02:04.090 --> 00:02:09.970
+Clique e arraste até ao segundo
+View Controller para conetá-lo também.
+
+27
+00:02:09.970 --> 00:02:16.840
+Com essa conexão feita podemos
+mudar o ícone da barra também.
+
+28
+00:02:16.840 --> 00:02:23.660
+Nesse caso use o item More.
+
+29
+00:02:23.660 --> 00:02:30.630
+Aproveite também para adicionar uma
+label no centro desse View Controller.
+
+30
+00:02:30.630 --> 00:02:39.080
+[SEM_ÁUDIO] Modifique para Outros.
+
+31
+00:02:39.080 --> 00:02:45.261
+[SEM_ÁUDIO] Agora
+
+32
+00:02:45.261 --> 00:02:50.560
+vamos adicionar mais View Controller
+entre esses dois existentes.
+
+33
+00:02:50.560 --> 00:02:55.980
+Arraste o primeiro para cima
+e o segundo para baixo,
+
+34
+00:02:55.980 --> 00:02:59.670
+apenas para deixar o
+storyboard organizado.
+
+35
+00:02:59.670 --> 00:03:07.670
+[SEM_ÁUDIO]
+
+36
+00:03:07.670 --> 00:03:15.670
+[SEM_ÁUDIO]
+
+37
+00:03:15.670 --> 00:03:23.670
+[SEM_ÁUDIO]
+
+38
+00:03:23.670 --> 00:03:32.717
+[SEM_ÁUDIO] Em seguida
+conete esse View Controller
+
+39
+00:03:32.717 --> 00:03:37.030
+ao Tab Bar Controller, como já
+fizemos com o segundo View Controller.
+
+40
+00:03:37.030 --> 00:03:42.693
+[SEM_ÁUDIO] Além
+
+41
+00:03:42.693 --> 00:03:47.450
+disso vamos adicionar uma
+label como nos outros.
+
+42
+00:03:47.450 --> 00:03:54.664
+[SEM_ÁUDIO] Modifique
+
+43
+00:03:54.664 --> 00:03:57.550
+para Social.
+
+44
+00:03:57.550 --> 00:04:03.740
+Vou colocar uma imagem importada
+como ícone desse View Controller.
+
+45
+00:04:03.740 --> 00:04:08.590
+Para isso importe uma imagem
+
+46
+00:04:08.590 --> 00:04:13.440
+que seja 128x128 pixeis
+para a pasta xcassets.
+
+47
+00:04:13.440 --> 00:04:16.483
+No material de apoio para esse módulo tem
+
+48
+00:04:16.483 --> 00:04:20.720
+arquivo .zip com a imagem que
+iremos utilizar nessa aula.
+
+49
+00:04:20.720 --> 00:04:25.548
+Descompacte o arquivo e arraste a imagem
+
+50
+00:04:25.548 --> 00:04:31.980
+SocialIcon.png para a pasta xcassets.
+
+51
+00:04:31.980 --> 00:04:36.280
+Com isso feito podemos
+voltar ao storyboard,
+
+52
+00:04:36.280 --> 00:04:43.409
+selecionar o Tab Bar do
+Social View Controller e mudar
+
+53
+00:04:43.409 --> 00:04:49.660
+a imagem para SocialIcon.
+
+54
+00:04:49.660 --> 00:04:57.540
+Veja que a imagem está com tamanho
+maior do que a aba de navegação.
+
+55
+00:04:57.540 --> 00:05:03.286
+[SEM_ÁUDIO] Vá para
+
+56
+00:05:03.286 --> 00:05:09.380
+a pasta xcassets e mova
+a imagem para a posição 3x.
+
+57
+00:05:09.380 --> 00:05:15.036
+[SEM_ÁUDIO] Repare
+
+58
+00:05:15.036 --> 00:05:19.750
+que apesar de estar entre os dois
+outros View Controllers no storyboard
+
+59
+00:05:19.750 --> 00:05:24.630
+esse último View Controller foi
+colocado na última aba do Tab Bar.
+
+60
+00:05:24.630 --> 00:05:29.180
+Para mudar a posição, primeiramente
+selecione o Tab Bar Controller.
+
+61
+00:05:29.180 --> 00:05:34.570
+Agora clique no ícone que adicionamos
+e arraste para o centro do Tab Bar.
+
+62
+00:05:34.570 --> 00:05:37.890
+Vamos executar e ver
+como está o aplicativo.
+
+63
+00:05:37.890 --> 00:05:45.890
+[SEM_ÁUDIO]
+
+64
+00:05:45.890 --> 00:05:51.479
+[SEM_ÁUDIO] Veja
+
+65
+00:05:51.479 --> 00:05:56.420
+que cada ícone da barra está associado
+a View Controller do storyboard
+
+66
+00:05:56.420 --> 00:06:01.355
+o que corresponde a uma
+tela do aplicativo.
+
+67
+00:06:01.355 --> 00:06:05.657
+Na próxima aula você vai ver
+como utilizar constraints.
+
+68
+00:06:05.657 --> 00:06:06.290
+Até lá!

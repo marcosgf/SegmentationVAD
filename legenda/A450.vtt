@@ -1,0 +1,291 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.952
+[MÚSICA] [MÚSICA] Esse
+
+2
+00:00:08.952 --> 00:00:15.570
+é o curso de programação orientada a
+objetos com Java, eu sou o Eduardo Guerra.
+
+3
+00:00:15.570 --> 00:00:19.630
+Na aula de hoje vamos estar falando aí
+sobre o comportamento e o estado de
+
+4
+00:00:19.630 --> 00:00:20.375
+classes.
+
+5
+00:00:20.375 --> 00:00:23.690
+O objetivo aí é que vocês,
+no final dessa aula,
+
+6
+00:00:23.690 --> 00:00:27.967
+saibam diferenciar aí o estado duma
+classe e do seu comportamento,
+
+7
+00:00:27.967 --> 00:00:32.100
+sabendo como é cada o que que diferencia,
+pra que quando formos
+
+8
+00:00:32.100 --> 00:00:36.430
+criar classes a gente saiba exatamente o
+que que vai ser o estado, o que que vai
+
+9
+00:00:36.430 --> 00:00:40.759
+ser o comportamento e como que isso
+daí vai afetar o nosso programa, está?
+
+10
+00:00:40.759 --> 00:00:43.062
+Vocês lembram dessa nossa amiga aqui?
+
+11
+00:00:43.062 --> 00:00:44.178
+A classe cadeira.
+
+12
+00:00:44.178 --> 00:00:47.493
+A gente falou, não é,
+a cadeira é uma abstração,
+
+13
+00:00:47.493 --> 00:00:50.503
+mas o que que tem essa abstração cadeira?
+
+14
+00:00:50.503 --> 00:00:53.728
+Por exemplo ela tem aí o encosto, certo?
+
+15
+00:00:53.728 --> 00:00:57.538
+A gente sabe como toda cadeira ela tem
+
+16
+00:00:57.538 --> 00:01:01.176
+assento e toda cadeira ela tem os pés,
+não é?
+
+17
+00:01:01.176 --> 00:01:05.639
+E a gente sabe que cada cadeira tem
+isso de uma forma diferente, não é?
+
+18
+00:01:05.639 --> 00:01:10.064
+Por exemplo,
+a cadeira aqui de madeira ela tem 4 pés,
+
+19
+00:01:10.064 --> 00:01:15.956
+a cadeira azul aqui ela já tem esse pé
+de rodinhas, não é, com o pedestalzinho.
+
+20
+00:01:15.956 --> 00:01:20.125
+Então cada,
+apesar da classe cadeira ela ter aí essas
+
+21
+00:01:20.125 --> 00:01:24.601
+características não é de encosto,
+assento e pés,
+
+22
+00:01:24.601 --> 00:01:29.568
+cada cadeira pode ter isso daí
+de uma forma diferente está?
+
+23
+00:01:29.568 --> 00:01:34.240
+E essas características aí
+de objeto da classe, não é,
+
+24
+00:01:34.240 --> 00:01:38.586
+que diferenciam do outro são o que
+nós chamamos de atributos da classe.
+
+25
+00:01:38.586 --> 00:01:42.162
+Uma classe ela não só tem
+essas características,
+
+26
+00:01:42.162 --> 00:01:44.918
+mas ela pode realizar ações certo?
+
+27
+00:01:44.918 --> 00:01:50.682
+Então por exemplo uma cadeira nós
+podemos mover ela e, inclusive,
+
+28
+00:01:50.682 --> 00:01:56.020
+uma ação da classe ela pode mudar
+os valores dos atributos do objeto,
+
+29
+00:01:56.020 --> 00:02:01.873
+Então por exemplo imagina que a minha
+classe cadeira ela tenha aí esse atributo
+
+30
+00:02:01.873 --> 00:02:07.433
+posição não é, no momento que eu chamar
+esse comportamento de movimento, não é,
+
+31
+00:02:07.433 --> 00:02:13.355
+de mover isso daí vai tá trocando o
+atributo posição da minha classe, está?
+
+32
+00:02:13.355 --> 00:02:17.848
+E como a gente viu as características
+da classe são os atributos,
+
+33
+00:02:17.848 --> 00:02:23.418
+o comportamento da classe, dentro não
+é da programação orientada a objetos,
+
+34
+00:02:23.418 --> 00:02:25.430
+a gente chama de métodos.
+
+35
+00:02:25.430 --> 00:02:31.830
+Então uma classe ela basicamente vai
+ter o estado e vai ter o comportamento.
+
+36
+00:02:31.830 --> 00:02:36.459
+O estado ela vai ser representada pelos
+atributos e o comportamento vai ser
+
+37
+00:02:36.459 --> 00:02:38.784
+representado pelos métodos, certo?
+
+38
+00:02:38.784 --> 00:02:42.090
+Então vamos pegar aqui por
+exemplo uma classe exemplo,
+
+39
+00:02:42.090 --> 00:02:44.323
+imagina uma classe carro, não é?
+
+40
+00:02:44.323 --> 00:02:47.251
+Lembrando que a classe
+é uma abstração está?
+
+41
+00:02:47.251 --> 00:02:52.099
+Ela pode ter ali a potência do motor e
+a velocidade, não é, são partes do estado
+
+42
+00:02:52.099 --> 00:02:56.287
+dessa classe e eu posso ter por
+exemplo métodos como acelerar e frear.
+
+43
+00:02:56.287 --> 00:02:59.514
+E aí eu pego por exemplo o carrão
+que o meu sogro tem não é,
+
+44
+00:02:59.514 --> 00:03:06.150
+que ele nunca me empresta e eu tenho por
+exemplo ali a potência do motor 2.0,
+
+45
+00:03:06.150 --> 00:03:11.203
+está ali numa velocidade de 60 km/h, não
+é, e eu posso tá chamando por exemplo o
+
+46
+00:03:11.203 --> 00:03:16.735
+acelerar pra aumentar essa velocidade ou
+frear para poder reduzir essa velocidade.
+
+47
+00:03:16.735 --> 00:03:20.499
+Então recapitulando aqui
+a questão de classe e objeto,
+
+48
+00:03:20.499 --> 00:03:24.500
+não é, a classe ela é abstrata
+enquanto o objeto é concreto.
+
+49
+00:03:24.500 --> 00:03:28.180
+A classe ela tem atributos enquanto
+o objeto ele tem valores, não é?
+
+50
+00:03:28.180 --> 00:03:32.260
+Então lembra lá, por exemplo, a classe
+carro ela tem a potência do motor,
+
+51
+00:03:32.260 --> 00:03:34.251
+mas o carro do meu sogro é 2.0.
+
+52
+00:03:34.251 --> 00:03:37.379
+Então ele já tem valor
+para essa característica.
+
+53
+00:03:37.379 --> 00:03:41.799
+E a classe ela tem ações enquanto o
+objeto ele efetivamente executa as ações.
+
+54
+00:03:41.799 --> 00:03:47.009
+Então enquanto carro ele pode frear, ele
+pode acelerar, eu posso efetivamente lá,
+
+55
+00:03:47.009 --> 00:03:50.626
+se eu conseguir pegar o carro
+do meu sogro emprestado,
+
+56
+00:03:50.626 --> 00:03:55.536
+realmente lá ir aumentar a velocidade
+dele acelerando e diminuir freando, está?
+
+57
+00:03:55.536 --> 00:04:00.168
+Então com isso a gente conclui aqui a aula
+que a gente falou sobre o comportamento e
+
+58
+00:04:00.168 --> 00:04:01.264
+estado de classe.
+
+59
+00:04:01.264 --> 00:04:05.579
+Espero que vocês tenham aprendido
+a diferenciar o estado duma classe do seu
+
+60
+00:04:05.579 --> 00:04:06.620
+comportamento.
+
+61
+00:04:06.620 --> 00:04:14.300
+Muito obrigado e até a próxima aula.

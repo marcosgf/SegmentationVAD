@@ -1,0 +1,367 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.575
+Olá!
+
+2
+00:00:00.575 --> 00:00:06.440
+Neste vídeo você verá que podemos
+estimar a margem de estabilidade
+
+3
+00:00:06.440 --> 00:00:11.270
+do sistema malha fechada a partir dos
+diagramas de Bode do sistema malha aberta.
+
+4
+00:00:11.270 --> 00:00:16.195
+Aprenderá também a computar como uma
+alteração no ganho do sistema afeta essas
+
+5
+00:00:16.195 --> 00:00:17.920
+margens de estabilidade.
+
+6
+00:00:17.920 --> 00:00:23.160
+Vamos começar aprofundando a nossa
+discussão sobre a resposta frequência.
+
+7
+00:00:23.160 --> 00:00:27.360
+Você já viu que os polos de
+sistema são números complexos,
+
+8
+00:00:27.360 --> 00:00:29.955
+podem ou não ter parte imaginária nula.
+
+9
+00:00:29.955 --> 00:00:34.930
+Quando os polos estão do lado esquerdo
+do plano complexo o sistema é estável,
+
+10
+00:00:34.930 --> 00:00:40.960
+porém quando estão do lado direito do eixo
+imaginário ou mesmo sobre o próprio eixo,
+
+11
+00:00:40.960 --> 00:00:42.527
+o sistema é instável.
+
+12
+00:00:42.527 --> 00:00:47.229
+Os polos do sistema com realimentação
+unitária são as soluções de 1
+
+13
+00:00:47.229 --> 00:00:51.128
+mais G de s igual 0,
+visto que a função de transferência de
+
+14
+00:00:51.128 --> 00:00:54.090
+malha fechada tem
+denominador 1 mais G de s.
+
+15
+00:00:54.090 --> 00:00:59.125
+Para encontrar os polos devemos
+ter G de s igual a menos 1 que é
+
+16
+00:00:59.125 --> 00:01:04.670
+número real negativo,
+isto é tem módulo 1 e fase menos 180.
+
+17
+00:01:04.670 --> 00:01:09.338
+Então devemos ter módulo de G de s
+igual a 1 e fase de G de s igual
+
+18
+00:01:09.338 --> 00:01:11.090
+a menos 180 graus.
+
+19
+00:01:11.090 --> 00:01:16.069
+ao avaliar G de jota ômega estamos
+verificando o valor de G na
+
+20
+00:01:16.069 --> 00:01:19.172
+reta entre os semiplanos
+estável e instável,
+
+21
+00:01:19.172 --> 00:01:23.080
+isto é, quando o sistema está
+no limiar da estabilidade.
+
+22
+00:01:23.080 --> 00:01:27.940
+Se houver algum valor de ômega para
+p qual módulo de G de jota ômega
+
+23
+00:01:27.940 --> 00:01:32.050
+igual a 1 e fase de G de jota
+ômega igual a menos 180 graus,
+
+24
+00:01:32.050 --> 00:01:36.983
+então os polos do sistema malha fechada
+com realimentação unitária podem
+
+25
+00:01:36.983 --> 00:01:40.710
+cruzar o eixo imaginário,
+este é ponto crítico.
+
+26
+00:01:40.710 --> 00:01:46.901
+Tipicamente teremos o diagrama de Bode do
+sistema com 2 frequências distintas: ômega
+
+27
+00:01:46.901 --> 00:01:53.298
+c, quando o módulo vale 1 (módulo de G de
+jota ômega c igual a 1) e ômega f, quando
+
+28
+00:01:53.298 --> 00:01:59.080
+a fase vale menos 180 graus (fase de G de
+jota ômega f igual a menos 180 graus).
+
+29
+00:01:59.080 --> 00:02:04.079
+Como neste gráfico ao lado que ômega
+c é menor que ômega f No gráfico do
+
+30
+00:02:04.079 --> 00:02:09.415
+módulo marcamos ômega c quando o módulo
+vale 0 dB, que equivale a ganho de 1.
+
+31
+00:02:09.415 --> 00:02:14.100
+No gráfico da fase marcamos ômega f
+quando a fase vale menos 180 graus.
+
+32
+00:02:14.100 --> 00:02:17.848
+A medida do ângulo que
+falta para que ômega c seja
+
+33
+00:02:17.848 --> 00:02:20.890
+ponto crítico é chamada margem de fase.
+
+34
+00:02:20.890 --> 00:02:25.847
+No caso de ômega f,
+a fase já é menos 180 graus mas o quanto
+
+35
+00:02:25.847 --> 00:02:29.440
+falta para o ganho ser unitário
+é a chamada margem de ganho.
+
+36
+00:02:29.440 --> 00:02:33.689
+Lembre que o diagrama de Bode
+que construímos tem ganho dB,
+
+37
+00:02:33.689 --> 00:02:36.480
+então o módulo unitário aqui vale 0 dB,
+
+38
+00:02:36.480 --> 00:02:41.344
+veja as imagens na figura ao lado.
+
+39
+00:02:41.344 --> 00:02:46.749
+A margem de fase nesse caso
+é dado por PM igual a fase
+
+40
+00:02:46.749 --> 00:02:52.822
+de G de jota ômega c mais 180 graus,
+que é igual a 77 graus,
+
+41
+00:02:52.822 --> 00:02:56.982
+que PM vem do inglês "Phase Margin".
+
+42
+00:02:56.982 --> 00:03:03.474
+Já a margem de ganho é GM igual a menos
+módulo de G de jota ômega f dB,
+
+43
+00:03:03.474 --> 00:03:09.770
+que é igual a 30 dB, que GM vem
+da expressão Gain Margin, inglês.
+
+44
+00:03:09.770 --> 00:03:16.450
+Nesse sistema a margem de fase positiva
+significa que o sistema ainda tem
+
+45
+00:03:16.450 --> 00:03:21.544
+alguma folga antes de se tornar instável,
+já a margem de ganho positiva indica
+
+46
+00:03:21.544 --> 00:03:26.609
+que o ganho pode ser aumentado até
+30 dB sem instabilizar o sistema.
+
+47
+00:03:26.609 --> 00:03:31.653
+Essas medidas nos dão uma ideia do
+grau de estabilidade de sistema.
+
+48
+00:03:31.653 --> 00:03:35.772
+É claro que, como estamos considerando
+uma de cada vez separadamente,
+
+49
+00:03:35.772 --> 00:03:37.200
+isto é uma aproximação.
+
+50
+00:03:37.200 --> 00:03:44.650
+O que acontece se multiplicarmos G
+de s por ganho K maior do que 0?
+
+51
+00:03:44.650 --> 00:03:50.005
+Para fazer o diagrama de Bode
+teremos: módulo de K vezes G
+
+52
+00:03:50.005 --> 00:03:55.360
+de jota ômega dB que é igual ao módulo de
+K dB mais o módulo de G de jota ômega dB,
+
+53
+00:03:55.360 --> 00:04:00.620
+que é igual a 20 log de K mais
+módulo de G de jota ômega dB.
+
+54
+00:04:00.620 --> 00:04:05.543
+Isso significa que o diagrama de
+Bode de ganho é o mesmo de G de jota
+
+55
+00:04:05.543 --> 00:04:08.560
+ômega mas transladado de 20 log de K.
+
+56
+00:04:08.560 --> 00:04:13.656
+Quanto à fase, a fase de K vezes de
+G de jota ômega é igual à fase de
+
+57
+00:04:13.656 --> 00:04:18.717
+K mais a fase de G de jota ômega,
+que será igual à fase de G de jota ômega
+
+58
+00:04:18.717 --> 00:04:24.468
+visto que a fase de K é 0 para K positivo,
+então o gráfico de fase não
+
+59
+00:04:24.468 --> 00:04:29.600
+se altera Vamos investigar o que acontece
+se eu aplicar ganho K maior do que 1.
+
+60
+00:04:29.600 --> 00:04:31.650
+Como o valor do logaritmo é positivo,
+
+61
+00:04:31.650 --> 00:04:35.742
+a curva de ganho será transladada para
+cima como vemos na figura ao lado.
+
+62
+00:04:35.742 --> 00:04:41.620
+Azul a curva antes da translação e cores
+laranja a curva depois da translação.
+
+63
+00:04:41.620 --> 00:04:46.187
+Como a forma da curva não muda,
+nem a curva de fase se altera,
+
+64
+00:04:46.187 --> 00:04:50.438
+a frequência ômega c é aumentada e
+a margem de fase PM é diminuída,
+
+65
+00:04:50.438 --> 00:04:52.740
+nesse caso para cerca de 45 graus.
+
+66
+00:04:52.740 --> 00:04:54.891
+como vemos nos gráficos ao lado,
+
+67
+00:04:54.891 --> 00:04:58.270
+que mantivemos as antigas
+ômega c e PM para comparação.
+
+68
+00:04:58.270 --> 00:05:03.030
+De maneira similar,
+se tivéssemos usado K menor do
+
+69
+00:05:03.030 --> 00:05:07.294
+que 1 a curva seria transladada para
+baixo, causando uma diminuição na
+
+70
+00:05:07.294 --> 00:05:11.600
+frequência de cruzamento de 0
+dB e aumento na margem de fase.
+
+71
+00:05:11.600 --> 00:05:16.035
+Agora você já sabe como medir
+a margem de fase e de ganho no
+
+72
+00:05:16.035 --> 00:05:20.606
+diagrama de Bode e também sabe como
+uma alteração no ganho do sistema
+
+73
+00:05:20.606 --> 00:05:24.166
+afeta as curvas de ganho e
+fase e também suas margens.
+
+74
+00:05:24.166 --> 00:05:28.882
+No próximo vídeo você vai ser capaz
+de relacionar a margem de fase malha
+
+75
+00:05:28.882 --> 00:05:33.578
+aberta com sobre sinal malha fechada,
+passando a poder usar o diagrama de Bode
+
+76
+00:05:33.578 --> 00:05:38.080
+de malha aberta para prever qual será o
+sobre sinal da resposta malha fechada.

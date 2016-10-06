@@ -1,0 +1,691 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.710
+[MÚSICA]
+
+2
+00:00:05.710 --> 00:00:13.515
+Olá!
+
+3
+00:00:13.515 --> 00:00:18.758
+Retomando o módulo "Inferindo propriedades
+e caraterísticas de uma população",
+
+4
+00:00:18.758 --> 00:00:24.425
+nós iremos hoje praticar nessa videoaula
+a estimação de uma equação de regressão,
+
+5
+00:00:24.425 --> 00:00:27.633
+nós faremos isso em Stata.
+
+6
+00:00:27.633 --> 00:00:32.622
+Os dados para esse
+exercício estão aqui nessa
+
+7
+00:00:32.622 --> 00:00:36.655
+planilha em Excel,
+chamada regressão em Stata.
+
+8
+00:00:36.655 --> 00:00:41.554
+Nosso roteiro, nós vamos primeiro abrir
+o Stata, depois nós vamos abrir o
+
+9
+00:00:41.554 --> 00:00:46.374
+editor de dados do Stata, abrir a base
+de dados, chamada Regressão Stata xls,
+
+10
+00:00:46.374 --> 00:00:49.535
+que na verdade é essa que nós
+já estamos com ela aberta.
+
+11
+00:00:49.535 --> 00:00:52.879
+Nós teremos uma pequena
+etapa aqui no Excel,
+
+12
+00:00:52.879 --> 00:00:58.474
+nós devemos converter o
+separador de decimal para ponto,
+
+13
+00:00:58.474 --> 00:01:04.434
+pois o Stata apenas reconhece
+número no formato de decimal ponto.
+
+14
+00:01:04.434 --> 00:01:09.620
+Nós vamos então copiar os dados
+para o Stata e nós iremos
+
+15
+00:01:09.620 --> 00:01:14.713
+rodar duas regressões,
+uma delas o efeito de display em venda,
+
+16
+00:01:14.713 --> 00:01:19.154
+então existe uma causalidade
+que a gente está testando aqui,
+
+17
+00:01:19.154 --> 00:01:25.190
+de que quanto mais display maior a venda e
+nós vamos também incluir outras variáveis,
+
+18
+00:01:25.190 --> 00:01:27.730
+para verificar o efeito em vendas.
+
+19
+00:01:27.730 --> 00:01:31.731
+Muito bem,
+nessa planilha em Excel nós temos 3 guias,
+
+20
+00:01:31.731 --> 00:01:34.200
+uma delas é roteiro a outra trata
+
+21
+00:01:34.200 --> 00:01:38.756
+pouco mais dos detalhes dos dados e a
+outra é a base de dados propriamente dita.
+
+22
+00:01:38.756 --> 00:01:41.540
+Que dados são esses que
+nós estamos utilizando?
+
+23
+00:01:41.540 --> 00:01:44.770
+São os dados de uma agência
+de trade marketing,
+
+24
+00:01:44.770 --> 00:01:48.740
+que tem interesse em testar
+essas ações no ponto de venda.
+
+25
+00:01:48.740 --> 00:01:54.419
+Foram coletados 594
+respostas de respondentes,
+
+26
+00:01:54.419 --> 00:01:59.353
+dada as vendas em reais por
+semana em aquele respondente,
+
+27
+00:01:59.353 --> 00:02:03.624
+os displays com diferentes
+números de frentes de produtos,
+
+28
+00:02:03.624 --> 00:02:08.280
+a atitude com relação à marca,
+que é uma média de 2 itens numa escala
+
+29
+00:02:08.280 --> 00:02:13.283
+Likert de 1 a 7,
+a renda do domicílio do respondente em
+
+30
+00:02:13.283 --> 00:02:18.147
+reais e o desconto oferecido
+pelo principal concorrente
+
+31
+00:02:18.147 --> 00:02:22.513
+daquela marca e a variável aí captura
+a diferença de preço em reais.
+
+32
+00:02:22.513 --> 00:02:27.360
+Chamo a atenção aí para o instrumento que
+nós utilizamos para capturar a atitude,
+
+33
+00:02:27.360 --> 00:02:32.552
+basicamente 2 itens duas questões,
+eu gosto do produto
+
+34
+00:02:32.552 --> 00:02:37.276
+oferecido por essa marca e eu
+prefiro os produtos dessa marca.
+
+35
+00:02:37.276 --> 00:02:39.787
+O respondente então responde,
+
+36
+00:02:39.787 --> 00:02:44.940
+discordo totalmente quando é 1,
+concordo totalmente quado é 7.
+
+37
+00:02:44.940 --> 00:02:49.075
+É uma escala Likert nós vimos
+isso na videoaula sobre escalas,
+
+38
+00:02:49.075 --> 00:02:53.522
+uma escala intervalar,
+muito utilizada em marketing.
+
+39
+00:02:53.522 --> 00:02:57.215
+Nosso banco de dados, 5 colunas,
+
+40
+00:02:57.215 --> 00:03:01.990
+cada uma delas com os
+dados dessa pesquisa.
+
+41
+00:03:01.990 --> 00:03:07.648
+Chamo a atenção então para a questão
+do separador decimal que é vírgula,
+
+42
+00:03:07.648 --> 00:03:10.924
+para a gente converter
+os dados para Stata,
+
+43
+00:03:10.924 --> 00:03:15.180
+nós temos então que fazer uma
+pequena alteração no Excel.
+
+44
+00:03:15.180 --> 00:03:19.815
+A gente vem aqui no menu arquivo,
+
+45
+00:03:19.815 --> 00:03:25.957
+opções, em opções a gente olha
+
+46
+00:03:25.957 --> 00:03:30.963
+no avançado, usar separadores do sistema,
+
+47
+00:03:30.963 --> 00:03:35.779
+essa caixinha deve estar
+sem o tique e a gente tem
+
+48
+00:03:35.779 --> 00:03:40.476
+que colocar o separador
+decimal aqui ponto.
+
+49
+00:03:40.476 --> 00:03:44.891
+Eu dou ok, a partir de agora
+então a gente tem os dados,
+
+50
+00:03:44.891 --> 00:03:50.324
+onde era antes apresentado em
+vírgula agora está com ponto.
+
+51
+00:03:50.324 --> 00:03:54.060
+O que eu faço então é marcar os dados,
+
+52
+00:03:54.060 --> 00:03:59.736
+para que eu possa trazê-lo para o Stata,
+
+53
+00:03:59.736 --> 00:04:03.030
+eu tiro do Excel e vou para o Stata.
+
+54
+00:04:03.030 --> 00:04:07.370
+Eu clico no Stata duas vezes
+ele inicia o programa,
+
+55
+00:04:07.370 --> 00:04:12.958
+eu venho aqui no editor de dados,
+abro essa
+
+56
+00:04:12.958 --> 00:04:18.051
+janela e eu copio os dados para o Stata.
+
+57
+00:04:18.051 --> 00:04:19.057
+Muito bem,
+
+58
+00:04:19.057 --> 00:04:25.073
+tem uma pergunta aqui que é muito
+importante responder de maneira adequada.
+
+59
+00:04:25.073 --> 00:04:29.391
+Está me perguntando se a primeira
+linha da minha base de dados,
+
+60
+00:04:29.391 --> 00:04:32.882
+se refere aos nomes ou
+rótulos dados aos dados.
+
+61
+00:04:32.882 --> 00:04:34.934
+Eu tenho que falar que sim,
+
+62
+00:04:34.934 --> 00:04:39.477
+é para tratar essa primeira
+linha como nome de variáveis,
+
+63
+00:04:39.477 --> 00:04:44.450
+eu clico aqui em cima e
+ele já copia os dados
+
+64
+00:04:44.450 --> 00:04:49.443
+com os rótulos assim
+como eu tinha no Excel.
+
+65
+00:04:49.443 --> 00:04:54.028
+Muito bem, agora que os dados
+já estão no Stata e que eu posso
+
+66
+00:04:54.028 --> 00:04:58.703
+utilizá-los as variáveis elas
+aparecem aqui para mim nessa janela,
+
+67
+00:04:58.703 --> 00:05:02.222
+o que a gente vai fazer
+no menu estatística,
+
+68
+00:05:02.222 --> 00:05:05.978
+modelos lineares, regressão linear.
+
+69
+00:05:05.978 --> 00:05:10.794
+Então eu clico em regressão linear,
+ele me apresenta uma
+
+70
+00:05:10.794 --> 00:05:15.206
+janela que solicita
+a variável dependente e
+
+71
+00:05:15.206 --> 00:05:20.100
+a gente quer justamente testar
+o efeito de display em vendas,
+
+72
+00:05:20.100 --> 00:05:24.410
+então a nossa variável dependente é vendas
+e a nossa variável independente é display.
+
+73
+00:05:24.410 --> 00:05:28.838
+Aí a gente clica no ok e volta
+
+74
+00:05:28.838 --> 00:05:33.918
+para a nossa janela dos resultados
+
+75
+00:05:33.918 --> 00:05:38.523
+e o que a gente consegue observar,
+
+76
+00:05:38.523 --> 00:05:45.070
+o r quadrado ajustado,
+muito próximo de ponto 10.
+
+77
+00:05:45.070 --> 00:05:49.957
+Em marketing esse é r ajustado aceitável,
+a gente pode ir em frente
+
+78
+00:05:49.957 --> 00:05:54.722
+analisar os coeficientes e aí
+tem efeito de display em vendas,
+
+79
+00:05:54.722 --> 00:05:58.433
+coeficiente de 11.24 uma constante de 206,
+
+80
+00:05:58.433 --> 00:06:02.990
+ou seja onde toca o eixo Y e a parte mais
+
+81
+00:06:02.990 --> 00:06:07.590
+importante é esse p valor.
+
+82
+00:06:07.590 --> 00:06:12.895
+O que mostra para mim,
+p valor menor que 5% ou seja,
+
+83
+00:06:12.895 --> 00:06:18.322
+esse coeficiente de display
+positivo ele é significativo,
+
+84
+00:06:18.322 --> 00:06:23.558
+o efeito de display em venda é
+significativo, quanto mais frentes
+
+85
+00:06:23.558 --> 00:06:30.196
+do meu produto eu tenho nesse
+display maior é a venda.
+
+86
+00:06:30.196 --> 00:06:35.589
+Muito bem, uma outra forma que
+eu também posso calcular essa,
+
+87
+00:06:35.589 --> 00:06:40.103
+estimar a equação de regressão,
+é simplesmente escrever o
+
+88
+00:06:40.103 --> 00:06:44.234
+comando de regressão que é regress,
+
+89
+00:06:44.234 --> 00:06:49.988
+eu escolho a variável que é a minha
+variável dependente e nesse caso a ordem
+
+90
+00:06:49.988 --> 00:06:54.800
+das variáveis é muito importante, a
+primeira variável após a linha de comando
+
+91
+00:06:54.800 --> 00:06:59.950
+é a variável dependente e aí eu
+coloco as variáveis explicativas.
+
+92
+00:06:59.950 --> 00:07:04.431
+No caso aqui nós estamos rodando
+apenas com o display e os
+
+93
+00:07:04.431 --> 00:07:09.870
+resultados são apresentados
+aqui na janela de resultados.
+
+94
+00:07:09.870 --> 00:07:14.018
+A gente pode então
+
+95
+00:07:14.018 --> 00:07:19.466
+testar o efeito de outras
+variáveis em vendas.
+
+96
+00:07:19.466 --> 00:07:23.231
+Então o que eu vou fazer, eu vou no menu,
+primeiro pelo menu suspenso, eu vou lá em
+
+97
+00:07:23.231 --> 00:07:29.430
+modelos lineares, estatística,
+modelo linear, regressão linear.
+
+98
+00:07:29.430 --> 00:07:35.619
+Eu já tenho, como eu já fiz uma
+primeira estimação ele registrou aqui,
+
+99
+00:07:35.619 --> 00:07:41.081
+manteve o venda com variável dependente
+e o display com variável independente.
+
+100
+00:07:41.081 --> 00:07:45.518
+O que eu pretendo agora é
+verificar se display e o que eu
+
+101
+00:07:45.518 --> 00:07:50.480
+quero é que saia nessa ordem, display,
+
+102
+00:07:50.480 --> 00:07:54.995
+atitude, renda e o
+desconto do concorrente.
+
+103
+00:07:54.995 --> 00:08:00.151
+Então eu vou verificar qual o
+efeito de display, atitude,
+
+104
+00:08:00.151 --> 00:08:06.670
+renda e desconto do concorrente, o efeito
+desse conjunto de variáveis em venda.
+
+105
+00:08:06.670 --> 00:08:11.920
+Eu clico no ok e o que eu
+tenho é que o r quadrado
+
+106
+00:08:11.920 --> 00:08:16.834
+ajustado, ponto 15 aumenta em relação à
+
+107
+00:08:16.834 --> 00:08:21.925
+equação anterior que dava ponto 10,
+isso significa
+
+108
+00:08:21.925 --> 00:08:26.920
+que eu inclui algumas variáveis,
+que elas são importantes no modelo.
+
+109
+00:08:26.920 --> 00:08:35.315
+Essa equação contendo essas
+4 variáveis explicativas,
+
+110
+00:08:35.315 --> 00:08:40.180
+ela tem poder maior do que aquela
+equação que contém apenas display e o
+
+111
+00:08:40.180 --> 00:08:45.055
+que eu consigo observar é que,
+a variável display e atitude elas
+
+112
+00:08:45.055 --> 00:08:50.179
+têm efeito significativo em venda,
+ambas são positivas.
+
+113
+00:08:50.179 --> 00:08:55.119
+Então quanto maior é a atitude
+com relação à marca daquele
+
+114
+00:08:55.119 --> 00:08:59.462
+respondente maior é a venda,
+quanto maior o número de produtos
+
+115
+00:08:59.462 --> 00:09:03.722
+expostos naquele display
+maior é a venda também.
+
+116
+00:09:03.722 --> 00:09:07.612
+Nós incluímos uma variável
+demográfica de renda.
+
+117
+00:09:07.612 --> 00:09:12.266
+A variável demográfica de renda,
+o coeficiente é muito próximo de 0,
+
+118
+00:09:12.266 --> 00:09:16.846
+apesar de ter dado negativo é
+muito próximo de 0 e o efeito,
+
+119
+00:09:16.846 --> 00:09:19.963
+o p valor aqui ele é maior do que 5%,
+
+120
+00:09:19.963 --> 00:09:24.013
+portanto renda não afeta
+significativamente venda.
+
+121
+00:09:24.013 --> 00:09:29.251
+O desconto do concorrente,
+esse diferente do renda,
+
+122
+00:09:29.251 --> 00:09:34.310
+o coeficiente ele já é
+diferente de 0 e ele é
+
+123
+00:09:34.310 --> 00:09:39.640
+negativo, porém também
+não é significativo.
+
+124
+00:09:39.640 --> 00:09:46.017
+Então a gente, o que explica a venda dessa
+nossa pesquisa, apenas display e atitude.
+
+125
+00:09:46.017 --> 00:09:53.049
+Eu também poderia simplesmente escrever
+na linha de comando o comando regress,
+
+126
+00:09:53.049 --> 00:09:57.845
+eu identifico a minha variável
+dependente como a primeira delas,
+
+127
+00:09:57.845 --> 00:10:02.790
+display, atitude, renda e desconto no
+concorrente como as variáveis que eu
+
+128
+00:10:02.790 --> 00:10:05.460
+vou testar como explicativas no modelo.
+
+129
+00:10:05.460 --> 00:10:10.457
+Assim como eu fiz pelo menu eu
+posso fazer pela linha de comando
+
+130
+00:10:10.457 --> 00:10:13.060
+e os resultados aparecem aqui.
+
+131
+00:10:13.060 --> 00:10:20.149
+Alguma coisa que pode ser muito útil
+é utilizar esses dados em Excel.
+
+132
+00:10:20.149 --> 00:10:26.998
+Então para a gente utilizar esses dados,
+transferi-los para o Excel,
+
+133
+00:10:26.998 --> 00:10:32.885
+marca a área que você pretende
+copiar copia ela como tabela,
+
+134
+00:10:32.885 --> 00:10:41.103
+abra o Excel numa nova
+guia e cola os seus dados.
+
+135
+00:10:41.103 --> 00:10:46.351
+O que acontece é que a formatação
+não é das melhores, por outro lado
+
+136
+00:10:46.351 --> 00:10:52.426
+os dados estão aqui para a gente poder
+utilizar e consultar quando nós quisermos.
+
+137
+00:10:52.426 --> 00:10:57.187
+Então aqui mostra o p valor significativo
+essas duas variáveis afetam
+
+138
+00:10:57.187 --> 00:11:01.888
+significativamente vendas e eu tenho
+esses dados aqui de forma que eu posso
+
+139
+00:11:01.888 --> 00:11:04.687
+trabalhar à hora que a gente quiser.
+
+140
+00:11:04.687 --> 00:11:09.359
+Então esse foi o vídeo de regressão,
+utilizamos o Stata,
+
+141
+00:11:09.359 --> 00:11:13.018
+convido vocês a continuarem no
+módulo "inferindo propriedades e
+
+142
+00:11:13.018 --> 00:11:14.790
+caraterísticas de uma população".
+
+143
+00:11:14.790 --> 00:11:18.496
+Espero vocês nos próximos vídeos.
+
+144
+00:11:18.496 --> 00:11:19.365
+Até lá.
+
+145
+00:11:19.365 --> 00:11:23.940
+[SEM ÁUDIO]

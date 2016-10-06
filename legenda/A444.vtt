@@ -1,0 +1,649 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.184
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.184 --> 00:00:13.587
+Então vamos começar a nossa
+refatoração da classe Customer.
+
+3
+00:00:13.587 --> 00:00:18.378
+No vídeo anterior eu expliquei para vocês
+como que isso tudo aqui funcionava,
+
+4
+00:00:18.378 --> 00:00:20.844
+não é, nós passamos aqui pelos testes,
+
+5
+00:00:20.844 --> 00:00:25.829
+rodamos eles aqui, para ver que está
+tudo funcionando bem direitinho,
+
+6
+00:00:25.829 --> 00:00:31.088
+e vamos começar aqui a refatorar
+a classe Customer, está?
+
+7
+00:00:31.088 --> 00:00:35.517
+De cara a gente olha aqui
+e pensa "Onde eu começo?
+
+8
+00:00:35.517 --> 00:00:38.340
+Por onde eu começo isso aqui?".
+
+9
+00:00:38.340 --> 00:00:38.967
+Está?
+
+10
+00:00:38.967 --> 00:00:43.669
+Bom, de cara eu já vejo aqui switch/case,
+não é,
+
+11
+00:00:43.669 --> 00:00:48.294
+onde ele basicamente está calculando,
+não é,
+
+12
+00:00:48.294 --> 00:00:51.950
+quanto que custa a locação, não é?
+
+13
+00:00:51.950 --> 00:00:58.170
+Eu vejo que ele está,
+ele cria aqui essa variável thisAmount,
+
+14
+00:00:58.170 --> 00:01:02.388
+não é, e depois essa variável,
+ela é usada para,
+
+15
+00:01:02.388 --> 00:01:06.549
+a gente pode ver aqui que o Eclipse
+faz highlighting para a gente,
+
+16
+00:01:06.549 --> 00:01:12.706
+ele cria essa variável aqui cima,
+não é, e depois, baseado aqui no filme,
+
+17
+00:01:12.706 --> 00:01:16.828
+ele depois soma, não é,
+esse thisAmount aqui no total.
+
+18
+00:01:16.828 --> 00:01:18.315
+Ele imprime e soma.
+
+19
+00:01:18.315 --> 00:01:26.090
+está, então eu vou começar extraindo
+esse pedacinho aqui, está?
+
+20
+00:01:26.090 --> 00:01:32.250
+Então eu vou vir aqui
+e vou extrair método.
+
+21
+00:01:32.250 --> 00:01:32.766
+Está?
+
+22
+00:01:32.766 --> 00:01:35.604
+Nessa, dei uma pausa aqui para falar.
+
+23
+00:01:35.604 --> 00:01:39.904
+Mas assim, nessa aula a gente
+vai ver pouquinho também,
+
+24
+00:01:39.904 --> 00:01:44.411
+né, das ferramentas que o Eclipse dá
+para a gente para fazer a refatoração.
+
+25
+00:01:44.411 --> 00:01:48.520
+Então a gente vai ver que nem tudo, né,
+muitas vezes a gente precisa de vários
+
+26
+00:01:48.520 --> 00:01:52.838
+passos, né, de refatorações aqui
+do Eclipse, alguns passos manuais,
+
+27
+00:01:52.838 --> 00:01:56.719
+a gente vai ver que nem sempre
+a refatoração que ele faz é exatamente
+
+28
+00:01:56.719 --> 00:01:59.758
+aquela que a gente precisa mas
+com certeza ajuda bastante.
+
+29
+00:01:59.758 --> 00:02:04.299
+Então eu vou estar mostrando aqui, vou
+estar utilizando, então, também serve como
+
+30
+00:02:04.299 --> 00:02:08.779
+uma forma de você conhecer pouquinho
+mais as refatorações aqui do Eclipse.
+
+31
+00:02:08.779 --> 00:02:13.800
+Bom, então eu vou vir aqui nesse
+pedaço e vou extrair o método.
+
+32
+00:02:13.800 --> 00:02:14.628
+Está?
+
+33
+00:02:14.628 --> 00:02:22.075
+Ele vai me perguntar aqui qual que seria
+o nome do método; eu vou dizer aqui,
+
+34
+00:02:22.075 --> 00:02:26.366
+eu vou seguir a mesma nomenclatura
+que está sendo utilizada, né,
+
+35
+00:02:26.366 --> 00:02:32.700
+vou chamar de "getAmount",
+tem "u" aqui, e vou dar o "OK".
+
+36
+00:02:32.700 --> 00:02:33.750
+Está?
+
+37
+00:02:33.750 --> 00:02:40.410
+Será que continua funcionando aqui, roda?
+
+38
+00:02:40.410 --> 00:02:41.335
+Continua.
+
+39
+00:02:41.335 --> 00:02:41.890
+Está?
+
+40
+00:02:41.890 --> 00:02:44.848
+Então, que é que vai acontecer?
+
+41
+00:02:44.848 --> 00:02:51.310
+Ele pega esse "thisAmount" aqui que tá 0,
+né, e atribui e passa ele como parâmetro.
+
+42
+00:02:51.310 --> 00:02:53.108
+Ele sempre vai passar 0.
+
+43
+00:02:53.108 --> 00:02:59.415
+Então esse "thisAmount" aqui, ele não
+precisa ser passado como parâmetro.
+
+44
+00:02:59.415 --> 00:03:00.040
+Está?
+
+45
+00:03:00.040 --> 00:03:07.160
+E aqui ele vai virar é uma
+variável do meu método.
+
+46
+00:03:07.160 --> 00:03:08.350
+Está?
+
+47
+00:03:08.350 --> 00:03:14.280
+Então, "double thisAmount = 0",
+
+48
+00:03:14.280 --> 00:03:21.392
+ele vai receber ali "Rental",
+Está correto,
+
+49
+00:03:21.392 --> 00:03:27.150
+e aí no final ele retorna o "thisAmount".
+
+50
+00:03:27.150 --> 00:03:27.765
+Está?
+
+51
+00:03:27.765 --> 00:03:31.867
+Então, eu vou rodar aqui
+o teste para ver se está
+
+52
+00:03:31.867 --> 00:03:34.977
+tudo funcionando ainda, opa, beleza!
+
+53
+00:03:34.977 --> 00:03:40.440
+Bom, já consegui dar uma reduzida aqui
+no statement e consegui separar a lógica
+
+54
+00:03:40.440 --> 00:03:45.230
+para calcular o quanto custa
+cada tipo de filme ali.
+
+55
+00:03:45.230 --> 00:03:45.806
+Está?
+
+56
+00:03:45.806 --> 00:03:50.606
+Vamos ver aqui agora,
+se a gente olhar ele fala assim,
+
+57
+00:03:50.606 --> 00:03:55.536
+olha: "determinar os
+'amounts' para cada linha".
+
+58
+00:03:55.536 --> 00:03:59.798
+Isso daqui,
+eu acho que não precisa mais, né?
+
+59
+00:03:59.798 --> 00:04:02.566
+Já não é mais necessário esse comentário,
+
+60
+00:04:02.566 --> 00:04:05.969
+porque agora isso que era
+pedação agora é uma linha só.
+
+61
+00:04:05.969 --> 00:04:08.611
+Então esse comentário
+não é mais necessário.
+
+62
+00:04:08.611 --> 00:04:12.895
+Está?
+Então eu posso excluir isso daqui, está?
+
+63
+00:04:12.895 --> 00:04:17.935
+Se eu olhar aqui esse, essa variável aqui,
+
+64
+00:04:17.935 --> 00:04:25.311
+eu vou perceber que o,
+eu não precisaria dessas duas linhas, né?
+
+65
+00:04:25.311 --> 00:04:31.770
+Eu posso simplesmente passar a declaração
+dessa variável aqui para baixo,
+
+66
+00:04:31.770 --> 00:04:38.915
+né, e eliminar aqui cima que
+ficaria código mais simples.
+
+67
+00:04:38.915 --> 00:04:39.516
+Está?
+
+68
+00:04:39.516 --> 00:04:41.530
+Então, eu salvo aqui,
+
+69
+00:04:41.530 --> 00:04:46.230
+sempre rodando os testes para ver
+se eu não fiz nenhuma besteira, né?
+
+70
+00:04:46.230 --> 00:04:49.620
+OK.
+
+71
+00:04:49.620 --> 00:04:55.141
+O que eu fiz aqui para
+recuperar os para separar,
+
+72
+00:04:55.141 --> 00:04:59.830
+né, esse cálculo aqui dos "amounts", né,
+
+73
+00:04:59.830 --> 00:05:06.010
+eu posso fazer também, né,
+para o cálculo do "frequentRenterPoints".
+
+74
+00:05:06.010 --> 00:05:06.658
+Está?
+
+75
+00:05:06.658 --> 00:05:13.306
+Então, se eu olhar, é basicamente
+o que calcula é esse pedaço aqui,
+
+76
+00:05:13.306 --> 00:05:18.757
+então, oh: adiciona o
+"frequentRenterPoints" e adiciona
+
+77
+00:05:18.757 --> 00:05:25.232
+o bônus se forem para dois dias,
+né, com o "NEW_RELEASE".
+
+78
+00:05:25.232 --> 00:05:30.142
+Então eu vou marcar essa parte
+aqui responsável pelo cálculo, né,
+
+79
+00:05:30.142 --> 00:05:36.048
+dos "frequentRenterPoints" e
+vou extrair aqui o método, né.
+
+80
+00:05:36.048 --> 00:05:40.640
+Vou vir "Refactor", "Extract method",
+
+81
+00:05:40.640 --> 00:05:48.793
+então eu vou chamar aqui de
+"getFrequent RenterPoints".
+
+82
+00:05:48.793 --> 00:05:51.410
+Então, OK.
+
+83
+00:05:51.410 --> 00:05:56.707
+Ele tem mais ou menos
+aquela mesma ideia ali,
+
+84
+00:05:56.707 --> 00:06:01.800
+né, que ele também passa como parâmetro,
+será que dá certo aqui?
+
+85
+00:06:01.800 --> 00:06:03.495
+Eu vou rodar, Está?
+
+86
+00:06:03.495 --> 00:06:07.748
+Aqui, olha o que que ele tá fazendo, olha
+como é que é estranho, né: ele tem aqui
+
+87
+00:06:07.748 --> 00:06:12.350
+esse "frequentRenterPoints" que
+seria o total de pontos, está?
+
+88
+00:06:12.350 --> 00:06:18.015
+E aí aqui, ele está pegando esse total,
+quando ele dá o "get",
+
+89
+00:06:18.015 --> 00:06:23.160
+ele passa a quantidade que ele tem,
+aqui eu vou somar e
+
+90
+00:06:23.160 --> 00:06:30.010
+vou retornar essa a quantidade já somada.
+
+91
+00:06:30.010 --> 00:06:32.738
+Está?
+Então eu também vou modificar isso,
+
+92
+00:06:32.738 --> 00:06:35.475
+apesar de eu rodar aqui
+e está funcionando,
+
+93
+00:06:35.475 --> 00:06:37.542
+porque não é uma forma
+legal de fazer isso.
+
+94
+00:06:37.542 --> 00:06:39.208
+Né, então ao invés de fazer isso,
+
+95
+00:06:39.208 --> 00:06:44.099
+eu vou fazer aqui, eu quero que o
+"frequentRenterPoints", eu faço aqui,
+
+96
+00:06:44.099 --> 00:06:49.990
+mais igual e eu pego quantos "renter
+points" é para aquela locação.
+
+97
+00:06:49.990 --> 00:06:54.613
+Não passar valor para ele somar
+e me retornar o valor somado,
+
+98
+00:06:54.613 --> 00:06:57.656
+que isso aí seria código mais confuso, né?
+
+99
+00:06:57.656 --> 00:07:01.280
+Então eu vou vir aqui,
+vou pegar essa definição de inteiro,
+
+100
+00:07:01.280 --> 00:07:06.020
+que eu vou precisar dessa variável,
+só não preciso que ela seja parâmetro,
+
+101
+00:07:06.020 --> 00:07:11.170
+e vou inicializar ela aqui com o valor 1,
+porque eu sempre somo 1, né?
+
+102
+00:07:11.170 --> 00:07:14.823
+O "renter points",
+ele sempre começa com 1.
+
+103
+00:07:14.823 --> 00:07:19.449
+Então, ele verifica aqui,
+se eu já posso tirar aquilo, né,
+
+104
+00:07:19.449 --> 00:07:22.640
+porque agora o meu método
+ficou bem mais simples,
+
+105
+00:07:22.640 --> 00:07:25.970
+então não preciso mais também
+de tantos comentários, né?
+
+106
+00:07:25.970 --> 00:07:30.795
+Ele está verificando aqui se o "priceCode"
+é "NEW_RELEASE", quantidade de dias é
+
+107
+00:07:30.795 --> 00:07:38.210
+maior do que 1, né, e eu somo 1 aqui
+no "frequentRenterPoints" e retorno.
+
+108
+00:07:38.210 --> 00:07:38.853
+Está?
+
+109
+00:07:38.853 --> 00:07:41.106
+E aqui eu estou somando.
+
+110
+00:07:41.106 --> 00:07:46.160
+Vamos ver se funcionou essa
+minha nova abordagem aqui?
+
+111
+00:07:46.160 --> 00:07:47.271
+Está?
+
+112
+00:07:47.271 --> 00:07:49.680
+Então eu rodo.
+
+113
+00:07:49.680 --> 00:07:50.666
+Perfeito.
+
+114
+00:07:50.666 --> 00:07:56.240
+Poderia inclusive, até, simplificar
+muito mais, né, isso daqui, né?
+
+115
+00:07:56.240 --> 00:08:00.260
+Então ele vai verificar,
+se é "NEW_RELEASE" e os dias
+
+116
+00:08:00.260 --> 00:08:04.290
+são maiores que 1, "return 2".
+
+117
+00:08:04.290 --> 00:08:09.160
+Senão, "return 1".
+
+118
+00:08:09.160 --> 00:08:10.780
+Faltou ponto e vírgula ali.
+
+119
+00:08:10.780 --> 00:08:14.030
+Eu nem preciso, na verdade,
+dessa variável aqui.
+
+120
+00:08:14.030 --> 00:08:14.958
+Está?
+
+121
+00:08:14.958 --> 00:08:18.830
+Muito, muito mais simples.
+
+122
+00:08:18.830 --> 00:08:20.545
+Tem que funcionar, né?
+
+123
+00:08:20.545 --> 00:08:23.366
+Vamos ver, rodou, funcionou, está?
+
+124
+00:08:23.366 --> 00:08:27.930
+Então aos pouquinhos eu vou
+simplificando aqui o meu código.
+
+125
+00:08:27.930 --> 00:08:29.350
+Está?
+Olha aqui,
+
+126
+00:08:29.350 --> 00:08:31.622
+o meu statement já cabe na minha tela!
+
+127
+00:08:31.622 --> 00:08:34.504
+Isso para mim é parâmetro importante,
+está?
+
+128
+00:08:34.504 --> 00:08:38.590
+O método, para mim, não pode ser maior
+do que o que cabe na minha tela.
+
+129
+00:08:38.590 --> 00:08:41.628
+Está?
+Está certo que antigamente eu usava ali
+
+130
+00:08:41.628 --> 00:08:45.038
+monitor de 17 polegadas
+para caber bastante coisa,
+
+131
+00:08:45.038 --> 00:08:50.152
+mas hoje dia eu tenho o meu pequenininho
+aqui e tem que caber na tela mesmo.
+
+132
+00:08:50.152 --> 00:08:55.278
+Está?
+Bom, com isso a gente começa aqui a nossa
+
+133
+00:08:55.278 --> 00:09:01.282
+refatoração, tá,
+já extraindo aqui alguns métodos,
+
+134
+00:09:01.282 --> 00:09:05.750
+e a gente pode ver aqui, que esse
+
+135
+00:09:05.750 --> 00:09:11.167
+método aqui não tem muito
+a ver com a classe "Customer".
+
+136
+00:09:11.167 --> 00:09:12.730
+Tanto esse quanto esse.
+
+137
+00:09:12.730 --> 00:09:13.307
+Está?
+
+138
+00:09:13.307 --> 00:09:19.561
+Só que essa continuação aí vai ficar para
+o nosso próximo vídeo, aí, na sequência.
+
+139
+00:09:19.561 --> 00:09:22.950
+Muito obrigado por assistir,
+espero você no próximo.
+
+140
+00:09:22.950 --> 00:09:28.310
+[MÚSICA]

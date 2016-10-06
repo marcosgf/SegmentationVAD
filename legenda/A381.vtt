@@ -1,0 +1,641 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.877
+Após esse video, você será capaz de
+calcular a contribuição de fase necessária
+
+2
+00:00:04.877 --> 00:00:09.011
+para possibilitar que os requisitos
+de desempenho sejam atendidos.
+
+3
+00:00:09.011 --> 00:00:13.863
+Vamos reciclar o exemplo de requisitos
+conflitantes de overshooting e de instante
+
+4
+00:00:13.863 --> 00:00:14.423
+de pico.
+
+5
+00:00:14.423 --> 00:00:19.226
+A função de transferência malha aberta
+é G de s é igual a 4 sobre s, s mais 4.
+
+6
+00:00:19.226 --> 00:00:23.554
+E os requisitos de desempenho
+são overshooting máximo de 5% e
+
+7
+00:00:23.554 --> 00:00:26.065
+instante de pico de no máximo 1 segundo.
+
+8
+00:00:26.065 --> 00:00:30.781
+Já vimos que esses requisitos serão
+atendidos se tivermos csi maior ou
+
+9
+00:00:30.781 --> 00:00:34.410
+igual a 0,69 e ômega d
+maior ou igual a pi.
+
+10
+00:00:34.410 --> 00:00:39.260
+Vamos utilizar csi igual
+a 0,7 e ômega d igual a 3,2.
+
+11
+00:00:39.260 --> 00:00:42.132
+Com isso nossos polos desejados
+
+12
+00:00:42.132 --> 00:00:47.090
+malha fechada são: menos
+3,14 mais ou menos 3,2 j.
+
+13
+00:00:47.090 --> 00:00:52.927
+Caramba, tentei fugir do pi,
+mas ele apareceu de novo.
+
+14
+00:00:52.927 --> 00:00:54.150
+Medo do Pi!
+
+15
+00:00:54.150 --> 00:00:58.785
+Vamos chamar o conjugado complexo,
+com parte imaginária positiva,
+
+16
+00:00:58.785 --> 00:01:00.600
+de quadradinho desejado.
+
+17
+00:01:00.600 --> 00:01:06.750
+Então o quadradinho desejado é
+igual a menos 3,14 mais 3,2 j.
+
+18
+00:01:06.750 --> 00:01:11.523
+Quadradinho d nesse curso é sempre o
+polo com parte imaginária positiva
+
+19
+00:01:11.523 --> 00:01:13.440
+desejada malha fechada.
+
+20
+00:01:13.440 --> 00:01:17.670
+Nos próximos videos você verá o
+quadradinho d com bastante frequência.
+
+21
+00:01:17.670 --> 00:01:22.074
+Mas então, se o polo malha fechada
+estiver nessa posição a resposta
+
+22
+00:01:22.074 --> 00:01:25.670
+ao degrau deverá atender aos
+requisitos de desempenho.
+
+23
+00:01:25.670 --> 00:01:30.632
+Mas já sabemos que o LGR não passa
+na região de desempenho desejado,
+
+24
+00:01:30.632 --> 00:01:33.157
+mesmo assim vamos verificar se por acaso,
+
+25
+00:01:33.157 --> 00:01:37.350
+o polo desejado malha fechada não faz
+parte do lugar geométrico das raízes.
+
+26
+00:01:37.350 --> 00:01:38.938
+E como fazemos isso?
+
+27
+00:01:38.938 --> 00:01:42.830
+Já esqueceu o que todos os
+pontos do LGR têm comum?
+
+28
+00:01:42.830 --> 00:01:46.560
+Quadradinho, onde é que
+eu já ouvi e vi isso?
+
+29
+00:01:46.560 --> 00:01:50.843
+Fase de G de quadradinho tem que ser
+igual a mais ou menos 180 graus,
+
+30
+00:01:50.843 --> 00:01:52.670
+mais ou menos l 360 graus.
+
+31
+00:01:52.670 --> 00:01:57.276
+Então, para que o
+quadradinho d esteja no LGR,
+
+32
+00:01:57.276 --> 00:02:02.882
+precisamos ter fase de G de quadradinho
+d igual a mais ou menos 180 graus,
+
+33
+00:02:02.882 --> 00:02:04.900
+mais ou menos l 360 graus.
+
+34
+00:02:04.900 --> 00:02:10.703
+Só precisamos então calcular a fase de g
+de quadradinho d e para nosso exemplo,
+
+35
+00:02:10.703 --> 00:02:15.640
+a fase de g de quadradinho d é igual
+a fase de 4 menos a fase do quadradinho
+
+36
+00:02:15.640 --> 00:02:18.710
+d menos a fase do quadradinho d mais 4.
+
+37
+00:02:18.710 --> 00:02:21.526
+A fase de número real positivo é zero.
+
+38
+00:02:21.526 --> 00:02:26.431
+E você pode calcular a fase de
+quadradinho d e de quadradinho d mais 4
+
+39
+00:02:26.431 --> 00:02:29.115
+usando calculadora ou o MATLAB.
+
+40
+00:02:29.115 --> 00:02:34.435
+No MATLAB comece definindo
+o quadradinho d: q barrinha
+
+41
+00:02:34.435 --> 00:02:39.067
+d ou só q d ou só q, você é quem escolhe,
+
+42
+00:02:39.067 --> 00:02:43.860
+vai ser igual a menos
+3,14 mais 3,2 vezes j.
+
+43
+00:02:43.860 --> 00:02:48.982
+Note que como esse número complexo tem
+parte real negativa e parte imaginária
+
+44
+00:02:48.982 --> 00:02:53.720
+positiva, sua fase estará
+entre 90 e 180 graus.
+
+45
+00:02:53.720 --> 00:02:58.158
+Então se for achar essa fase usando
+a função arco tangente uma calculadora,
+
+46
+00:02:58.158 --> 00:03:02.910
+não esqueça que a fase correta é
+180 graus menos o arco tangente da
+
+47
+00:03:02.910 --> 00:03:05.980
+parte imaginária sobre a parte real.
+
+48
+00:03:05.980 --> 00:03:12.370
+Nesse caso 180 menos arco
+tangente 3,2 dividido por 3,14.
+
+49
+00:03:12.370 --> 00:03:19.422
+No MATLAB digite atan, abre parênteses 3,2
+dividido por 3,14 fecha parênteses, enter.
+
+50
+00:03:19.422 --> 00:03:23.590
+O resultado de atan é dado
+radianos e não graus.
+
+51
+00:03:23.590 --> 00:03:28.420
+Se quiser obter o ângulo graus,
+utilize a função atand,
+
+52
+00:03:28.420 --> 00:03:32.220
+atan degrees, ou arco tangente graus.
+
+53
+00:03:32.220 --> 00:03:37.840
+E passe os mesmos parâmetros, a parte
+imaginária dividida pela parte real.
+
+54
+00:03:37.840 --> 00:03:41.978
+Ou faça conversão de radianos para graus,
+dividindo o resultado de atan por pi e
+
+55
+00:03:41.978 --> 00:03:47.308
+multiplicando por 180 atan
+de 3,2 dividido por 3,14,
+
+56
+00:03:47.308 --> 00:03:50.644
+dividido por pi vezes 180.
+
+57
+00:03:50.644 --> 00:03:55.707
+Mas lembre essa ainda não é
+a fase de quadradinho desejado.
+
+58
+00:03:55.707 --> 00:03:58.430
+A fase é 180 graus menos esse resultado.
+
+59
+00:03:58.430 --> 00:04:03.695
+Felizmente o MATLAB já tem uma função
+que considera todos os quadrantes.
+
+60
+00:04:03.695 --> 00:04:05.606
+É a função atan2.
+
+61
+00:04:05.606 --> 00:04:10.355
+A função atan2 e a função
+atan2d recebem a parte
+
+62
+00:04:10.355 --> 00:04:15.190
+imaginária vírgula a parte
+real do número complexo.
+
+63
+00:04:15.190 --> 00:04:21.200
+Por exemplo,
+atan2d 3,2 vírgula menos 3,14.
+
+64
+00:04:21.200 --> 00:04:29.373
+Note que esse resultado é o mesmo de
+180 menos atand 3,2 dividido por 3,14.
+
+65
+00:04:29.373 --> 00:04:33.829
+Podemos ainda usar a função
+angle do MATLAB diretamente com
+
+66
+00:04:33.829 --> 00:04:35.880
+a variável q d que criamos.
+
+67
+00:04:35.880 --> 00:04:39.887
+O único problema é que o MATLAB
+ainda não tem uma função angle d,
+
+68
+00:04:39.887 --> 00:04:44.670
+então se você quiser saber ângulo graus,
+precisa fazer a conversão.
+
+69
+00:04:44.670 --> 00:04:48.430
+Angle q d dividido por pi vezes 180.
+
+70
+00:04:48.430 --> 00:04:51.764
+Muito bem, agora você já sabe
+como calcular o ângulo de
+
+71
+00:04:51.764 --> 00:04:56.439
+número complexo de diferentes maneiras
+no MATLA você pode calcular o ângulo de
+
+72
+00:04:56.439 --> 00:05:01.025
+quadradinho desejado mais 4 da
+forma que achar mais conveniente.
+
+73
+00:05:01.025 --> 00:05:06.730
+Eu prefiro usar o angle, angle de q
+d mais 4 dividido por pi vezes 180.
+
+74
+00:05:06.730 --> 00:05:10.630
+Voltando então ao cálculo de
+fase de g de quadradinho d.
+
+75
+00:05:10.630 --> 00:05:15.970
+Vai ser 0 grau menos a fase de quadradinho
+d menos a fase de quadradinho d mais 4.
+
+76
+00:05:15.970 --> 00:05:20.061
+Com o MATLAB, uma calculadora ou
+outro programa de sua preferência,
+
+77
+00:05:20.061 --> 00:05:24.946
+ou ainda com régua e transferidor ou
+régua e compasso, você pode obter as
+
+78
+00:05:24.946 --> 00:05:29.655
+fases de quadradinho d e
+de quadradinho d mais 4,
+
+79
+00:05:29.655 --> 00:05:32.952
+que são: 134,5 graus e 75 graus.
+
+80
+00:05:32.952 --> 00:05:37.507
+Note que quadradinho d mais
+4 é igual a 0,86 mais 3,2
+
+81
+00:05:37.507 --> 00:05:41.030
+j e sua fase deve estar
+entre 0 e 90 graus.
+
+82
+00:05:41.030 --> 00:05:47.270
+Temos então a fase de quadradinho d
+vai ser aproximadamente menos 134,5
+
+83
+00:05:47.270 --> 00:05:53.013
+graus menos 75 graus que é
+igual a menos 209,5 graus,
+
+84
+00:05:53.013 --> 00:05:56.812
+que está razoavelmente
+longe de menos 180 graus.
+
+85
+00:05:56.812 --> 00:06:02.736
+Para ser mais exato está a menos 29,5
+graus para lá de menos 180 graus.
+
+86
+00:06:02.736 --> 00:06:08.398
+Assim confirmamos que quadradinho
+d não faz parte do LGR ou entre
+
+87
+00:06:08.398 --> 00:06:13.415
+outras palavras, o LGR não passa pelo
+polo desejado malha fechada e portanto,
+
+88
+00:06:13.415 --> 00:06:17.770
+só com o controlador proporcional,
+não conseguimos posicionar dos polos
+
+89
+00:06:17.770 --> 00:06:21.970
+malha fechada de modo a atender
+aos requisitos de desempenho.
+
+90
+00:06:21.970 --> 00:06:25.094
+E isso por causa de menos 29,5 graus.
+
+91
+00:06:25.094 --> 00:06:29.860
+Se a fase de g de quadradinho
+fosse 29,5 graus maior,
+
+92
+00:06:29.860 --> 00:06:33.297
+o LGR passaria por quadradinho
+d e ajustando o ganho k,
+
+93
+00:06:33.297 --> 00:06:37.650
+os polos malha fechada atenderiam
+aos requisitos de desempenho.
+
+94
+00:06:37.650 --> 00:06:38.886
+Mas espere aí.
+
+95
+00:06:38.886 --> 00:06:42.600
+Eu não posso mudar a fase
+de g de quadradinho d.
+
+96
+00:06:42.600 --> 00:06:46.730
+Mas e se eu pudesse
+acrescentar polo e 0 à g de s?
+
+97
+00:06:46.730 --> 00:06:51.719
+Que tal no lugar do ganho k usarmos
+uma função de transferência C de
+
+98
+00:06:51.719 --> 00:06:54.180
+s igual a k s mais a sobre s mais b.
+
+99
+00:06:54.180 --> 00:07:00.830
+Desse modo teremos T de s é igual a C
+de s G de s sobre 1 mais C de s G de s.
+
+100
+00:07:00.830 --> 00:07:04.488
+Podemos agora fazer L de
+s igual a C de s G de
+
+101
+00:07:04.488 --> 00:07:08.685
+s e temos T de s igual a L
+de s sobre 1 mais L de s.
+
+102
+00:07:08.685 --> 00:07:13.648
+E os polos malha fechada
+estão no LGR de 1 mais L de
+
+103
+00:07:13.648 --> 00:07:17.180
+s ao invés de estarem no LGR de 1 mais k,
+G de s.
+
+104
+00:07:17.180 --> 00:07:21.954
+Note ainda que podemos
+escrever L de s como: K s
+
+105
+00:07:21.954 --> 00:07:25.132
+mais a sobre s mais b vezes G de s.
+
+106
+00:07:25.132 --> 00:07:30.660
+E definindo G1 de s como,
+s mais a sobre s mais b vezes G de s,
+
+107
+00:07:30.660 --> 00:07:35.230
+teremos T de s igual a k G1
+de s sobre 1 mais k G1 de s,
+
+108
+00:07:35.230 --> 00:07:39.800
+onde G 1 de s é G de s
+com polo e 0 a mais.
+
+109
+00:07:39.800 --> 00:07:45.290
+E você já sabe qual é o efeito no LGR
+do acréscimo de polo e de 0 a mais.
+
+110
+00:07:45.290 --> 00:07:49.877
+Note ainda que a fase de L de s
+vai ser igual a fase de G1 de s,
+
+111
+00:07:49.877 --> 00:07:53.310
+que é igual a fase de S de
+s mais a fase de G de s.
+
+112
+00:07:53.310 --> 00:07:58.990
+E portanto a fase de L de quadradinho d
+é igual a fase de G1 de quadradinho d,
+
+113
+00:07:58.990 --> 00:08:02.960
+que é igual a fase de C de quadradinho
+d mais a fase de G de quadradinho d.
+
+114
+00:08:02.960 --> 00:08:04.538
+E para nosso exemplo,
+
+115
+00:08:04.538 --> 00:08:09.280
+já sabemos que a fase de G de
+quadradinho d é menos 209,5 graus.
+
+116
+00:08:09.280 --> 00:08:16.151
+Ou seja, se a fase de C de quadradinho d
+for 29,5 graus, a fase de L de quadradinho
+
+117
+00:08:16.151 --> 00:08:21.060
+d será menos 180 graus e o polo desejado
+malha fechada fará parte do LGR.
+
+118
+00:08:21.060 --> 00:08:25.036
+Note ainda que podemos generalizar
+esse resultado para qualquer função de
+
+119
+00:08:25.036 --> 00:08:25.990
+transferência.
+
+120
+00:08:25.990 --> 00:08:29.759
+Dado o requisito de desempenho para
+resposta ao degrau do sistema malha
+
+121
+00:08:29.759 --> 00:08:34.650
+fechada, calculamos csi ômega nN e
+temos o polo desejado malha fechada.
+
+122
+00:08:34.650 --> 00:08:39.356
+E calculando a fase de G de quadradinho d,
+saberemos se conseguiremos ou não atender
+
+123
+00:08:39.356 --> 00:08:43.160
+aos requisitos de desempenho apenas
+com controlador proporcional.
+
+124
+00:08:43.160 --> 00:08:46.918
+Se o polo desejado malha
+fechada não fizer parte do LGR,
+
+125
+00:08:46.918 --> 00:08:52.039
+podemos projetar controlador de modo a
+termos fase de C de quadradinho desejada,
+
+126
+00:08:52.039 --> 00:08:55.910
+mais a fase de G de quadradinho
+desejado igual a menos 180 graus.
+
+127
+00:08:55.910 --> 00:09:00.691
+Ou seja, precisamos que o controlador
+tenha uma contribuição de fase de fase de
+
+128
+00:09:00.691 --> 00:09:05.071
+C de quadradinho desejado igual a menos
+a fase de G de quadradinho desejado,
+
+129
+00:09:05.071 --> 00:09:06.310
+menos 180 graus.
+
+130
+00:09:06.310 --> 00:09:10.773
+Agora você já é capaz de calcular
+a contribuição de fase necessária para
+
+131
+00:09:10.773 --> 00:09:14.670
+possibilitar que os requisitos
+de desempenho sejam atendidos.
+
+132
+00:09:14.670 --> 00:09:19.608
+No próximo video, você verá que existem
+infinitas possibilidades para posicionar
+
+133
+00:09:19.608 --> 00:09:23.407
+polo e 0 de modo a ter a contribuição
+de fase necessária e irá
+
+134
+00:09:23.407 --> 00:09:25.780
+conhecer as soluções mais adotadas.

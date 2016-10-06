@@ -1,0 +1,643 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.966
+[MÚSICA] Este
+
+2
+00:00:07.966 --> 00:00:12.980
+é o Curso de Programação Orientada
+a Objetos com Java.
+
+3
+00:00:12.980 --> 00:00:15.215
+Meu nome é Eduardo Guerra.
+
+4
+00:00:15.215 --> 00:00:18.430
+Hoje vamos valor sobre polimorfismo.
+
+5
+00:00:18.430 --> 00:00:22.575
+Não sei se vocês já ouviram essa palavra,
+é uma palavra bacana.
+
+6
+00:00:22.575 --> 00:00:27.490
+A gente vai ver que a gente já viu pouco
+de polimorfismo nas aulas anteriores,
+
+7
+00:00:27.490 --> 00:00:31.276
+quando a gente falou de herança,
+quando a gente falou de interfaces,
+
+8
+00:00:31.276 --> 00:00:36.359
+mas eu gostaria de falar pouco
+de uma forma mais específica
+
+9
+00:00:36.359 --> 00:00:41.090
+para vocês sobre o polimorfismo si, para
+vocês entenderem como que ele pode ser
+
+10
+00:00:41.090 --> 00:00:45.670
+utilizado para poder criar código
+mais otimizado, mais flexível.
+
+11
+00:00:45.670 --> 00:00:51.443
+Bom, a natureza às vezes faz os animais
+poderem assumirem várias formas,
+
+12
+00:00:51.443 --> 00:00:54.819
+de acordo com a necessidade
+estágio de vida.
+
+13
+00:00:54.819 --> 00:00:59.160
+Por exemplo, a gente tem o caso
+clássico da lagarta, borboleta,
+
+14
+00:00:59.160 --> 00:01:03.838
+onde ele começa ali sua vida como
+uma lagarta, aí vira casulo,
+
+15
+00:01:03.838 --> 00:01:08.814
+onde também é uma outra forma que
+vai dar condições, por exemplo,
+
+16
+00:01:08.814 --> 00:01:13.830
+de desenvolver uma nova proteção,
+até virar a borboleta,
+
+17
+00:01:13.830 --> 00:01:18.080
+que também vai poder voar, e tudo mais,
+
+18
+00:01:18.080 --> 00:01:22.206
+que condiz com a necessidade
+daquele estágio de vida.
+
+19
+00:01:22.206 --> 00:01:25.268
+Então, software orientado a objeto,
+
+20
+00:01:25.268 --> 00:01:29.813
+as classes também podem assumir
+a forma da superclasse,
+
+21
+00:01:29.813 --> 00:01:34.531
+ou da suas interfaces,
+de acordo com a necessidade.
+
+22
+00:01:34.531 --> 00:01:40.070
+Esse é conceito extremamente importante,
+no momento que eu falar assim que,
+
+23
+00:01:40.070 --> 00:01:43.290
+olha eu tenho uma classe que
+ela estende uma outra classe,
+
+24
+00:01:43.290 --> 00:01:49.380
+ela também é uma dessa outra classe, e ela
+pode assumir a forma dessa outra classe.
+
+25
+00:01:49.380 --> 00:01:54.546
+Se eu falar assim, olha uma classe
+ela implementa uma interface?
+
+26
+00:01:54.546 --> 00:01:56.860
+Ela é uma daquela interface!
+
+27
+00:01:56.860 --> 00:02:02.402
+E objeto de uma classe,
+ele é objeto da superclasse dela,
+
+28
+00:02:02.402 --> 00:02:06.128
+objeto de uma classe,
+ele é objeto da interface dela.
+
+29
+00:02:06.128 --> 00:02:09.880
+Então, esse objeto ele pode
+assumir todas essas formas.
+
+30
+00:02:09.880 --> 00:02:15.220
+Essa, digamos assim,
+essa mudança de forma que o objeto
+
+31
+00:02:15.220 --> 00:02:20.435
+pode fazer, essa mudança da
+forma que você enxerga ele,
+
+32
+00:02:20.435 --> 00:02:25.430
+é o que a gente chama na orientação
+a objeto de polimorfismo, tá?
+
+33
+00:02:25.430 --> 00:02:30.710
+A gente falou pouco disso, quando
+a gente estava lá na aula de herança,
+
+34
+00:02:30.710 --> 00:02:35.320
+eu mostrei para vocês que uma
+subclasse ela pode ser passada,
+
+35
+00:02:35.320 --> 00:02:38.111
+métodos que aceitam a superclasse.
+
+36
+00:02:38.111 --> 00:02:43.001
+A gente falou pouco disso lá,
+quando a gente falou de interface,
+
+37
+00:02:43.001 --> 00:02:48.872
+eu mostrei para vocês que objeto de
+uma classe que implementa a interface,
+
+38
+00:02:48.872 --> 00:02:52.000
+pode ser passado para o método,
+por exemplo,
+
+39
+00:02:52.000 --> 00:02:56.396
+que aceita aquela interface e
+o nome disso é polimorfismo.
+
+40
+00:02:56.396 --> 00:02:59.922
+Então é isso que é o
+tal polimorfismo que às
+
+41
+00:02:59.922 --> 00:03:03.820
+vezes a gente escuta tanto
+na orientação a objetos.
+
+42
+00:03:03.820 --> 00:03:08.435
+Se eu tenho uma instância ali de cavalo,
+
+43
+00:03:08.435 --> 00:03:12.016
+eu vi lá: "Cavalo c = new Cavalo",
+
+44
+00:03:12.016 --> 00:03:16.260
+eu posso pegar e atribuir
+essa variável cavalo,
+
+45
+00:03:16.260 --> 00:03:21.700
+para uma variável do tipo animal
+que é a superclasse de cavalo.
+
+46
+00:03:21.700 --> 00:03:26.703
+Da mesma forma,
+eu posso pegar esse objeto cavalo e
+
+47
+00:03:26.703 --> 00:03:34.090
+atribuir para uma variável do tipo móvel,
+que é uma das interfaces de cavalo,
+
+48
+00:03:34.090 --> 00:03:38.753
+e esse objeto de uma certa forma,
+vai assumir essa forma de móvel.
+
+49
+00:03:38.753 --> 00:03:42.105
+Lembra que essa variável pode
+ser o atributo de uma classe,
+
+50
+00:03:42.105 --> 00:03:44.060
+pode ser o parâmetro de método.
+
+51
+00:03:44.060 --> 00:03:48.619
+Então todos esses lugares onde ele vai
+aceitar o móvel, vai aceitar animal,
+
+52
+00:03:48.619 --> 00:03:51.295
+eu posso estar passando
+essa classe cavalo.
+
+53
+00:03:51.295 --> 00:03:52.601
+Então como eu faria?
+
+54
+00:03:52.601 --> 00:03:57.570
+Se eu tenho por exemplo,
+método classificar, que ele aceita animal,
+
+55
+00:03:57.570 --> 00:04:02.653
+eu posso estar passando para ele
+cavalo ou posso estar passando
+
+56
+00:04:02.653 --> 00:04:06.681
+pássaro ou aracnídeo, escorpião, né?
+
+57
+00:04:06.681 --> 00:04:12.630
+Então eu posso passar qualquer objeto que,
+de alguma forma,
+
+58
+00:04:12.630 --> 00:04:17.116
+é de uma classe que estende
+aquela classe animal,
+
+59
+00:04:17.116 --> 00:04:22.441
+mesmo que não seja às vezes diretamente,
+ou eu posso ter por exemplo, sei lá,
+
+60
+00:04:22.441 --> 00:04:27.240
+a classe bem-te-vi que estende pássaro,
+que estende animal, por exemplo.
+
+61
+00:04:27.240 --> 00:04:31.796
+Da mesma forma,
+eu posso ir lá no método adicionar
+
+62
+00:04:31.796 --> 00:04:37.090
+corrida que recebe móvel,
+eu posso adicionar cavalo,
+
+63
+00:04:37.090 --> 00:04:42.278
+posso adicionar carro,
+posso estar adicionando até uma bicicleta,
+
+64
+00:04:42.278 --> 00:04:46.914
+desde que cada desses objetos
+implementem aí a interface móvel.
+
+65
+00:04:46.914 --> 00:04:52.405
+No momento que eu tenho esses métodos,
+eu só posso usar aqueles
+
+66
+00:04:52.405 --> 00:04:58.224
+objetos que são definidos
+na classe ou na interface.
+
+67
+00:04:58.224 --> 00:05:05.260
+Então por exemplo, o método corrida,
+o método corrida recebe ali cavalo,
+
+68
+00:05:05.260 --> 00:05:10.174
+ele não pode pegar e sair usando
+os métodos específicos de cavalo,
+
+69
+00:05:10.174 --> 00:05:14.285
+ele vai usar os métodos de cavalo
+que foram definidos no móvel.
+
+70
+00:05:14.285 --> 00:05:19.730
+Da mesma forma ele estar recebendo
+ali escorpião, ali no classificar,
+
+71
+00:05:19.730 --> 00:05:25.243
+ele não pode usar o método ferroar
+porque é só o escorpião que tem,
+
+72
+00:05:25.243 --> 00:05:29.583
+ele vai usar os métodos da classe
+animal que é comum a todos.
+
+73
+00:05:29.583 --> 00:05:33.650
+Se eu por exemplo,
+no adicionar da corrida,
+
+74
+00:05:33.650 --> 00:05:39.200
+eu recebo móvel, e falo assim,
+eu vou mover esse cara até a largada.
+
+75
+00:05:39.200 --> 00:05:40.925
+Então o que que ele vai fazer?
+
+76
+00:05:40.925 --> 00:05:43.736
+Se eu passo para esse método cavalo,
+
+77
+00:05:43.736 --> 00:05:48.264
+ele vai chamar o método
+mover da classe cavalo.
+
+78
+00:05:48.264 --> 00:05:52.854
+Então note que o método ele
+está definindo a interface,
+
+79
+00:05:52.854 --> 00:05:56.255
+mas ele está implementado
+na classe cavalo,
+
+80
+00:05:56.255 --> 00:06:01.643
+então ele vai chamar a implementação
+do mover, da classe cavalo.
+
+81
+00:06:01.643 --> 00:06:06.451
+Da mesma forma,
+se eu pegar exatamente o mesmo método e
+
+82
+00:06:06.451 --> 00:06:09.460
+passar para ele a classe carro,
+
+83
+00:06:09.460 --> 00:06:14.606
+ele vai chamar o método mover,
+não o da classe cavalo, o da classe carro.
+
+84
+00:06:14.606 --> 00:06:17.530
+Então ele sempre vai chamar
+o mesmo método mover,
+
+85
+00:06:17.530 --> 00:06:21.720
+aquele método mover que
+foi definido na interface,
+
+86
+00:06:21.720 --> 00:06:26.920
+só que ele vai executar a implementação
+que foi definida naquela classe.
+
+87
+00:06:26.920 --> 00:06:32.549
+Então se eu passo Cavalo ele vai mudar
+o mover do Cavalo, se eu passo carro,
+
+88
+00:06:32.549 --> 00:06:36.337
+ele vai executar o mover do carro.
+
+89
+00:06:36.337 --> 00:06:40.528
+Esse método ele é definido no contrato,
+ou seja,
+
+90
+00:06:40.528 --> 00:06:46.550
+ou na interface ou na subclasse, mas
+a implementação é definida pela classe.
+
+91
+00:06:46.550 --> 00:06:52.736
+Eu posso dizer que o comportamento
+do meu método, ele é de acordo com
+
+92
+00:06:52.736 --> 00:06:57.903
+a classe que eu estou passando para ele,
+o objeto que eu estou passando para ele.
+
+93
+00:06:57.903 --> 00:07:02.050
+Apesar de ser o mesmo método,
+quando eu chamar lá o mover do cavalo,
+
+94
+00:07:02.050 --> 00:07:05.240
+esse mover vai ser diferente
+do mover lá do carro.
+
+95
+00:07:05.240 --> 00:07:08.355
+Então o comportamento desse método,
+
+96
+00:07:08.355 --> 00:07:14.019
+ele vai variar de acordo com o objeto que
+foi passado, e ele nem está sabendo disso,
+
+97
+00:07:14.019 --> 00:07:18.412
+ele simplesmente está falando,
+amigo que eu recebi aí, move, como esse
+
+98
+00:07:18.412 --> 00:07:22.742
+cara se move, qual o comportamento
+do mover, ele não sabe, está?
+
+99
+00:07:22.742 --> 00:07:26.860
+Então eu posso inclusive ir lá, criar uma
+nova classe, ter uma nova implementação
+
+100
+00:07:26.860 --> 00:07:31.429
+de mover, que quando eu passar para esse
+método, ele vai ser comportar dessa forma.
+
+101
+00:07:31.429 --> 00:07:35.708
+No exemplo que a gente viu lá do
+comparable, se a gente pegar, por exemplo,
+
+102
+00:07:35.708 --> 00:07:40.826
+duas classes, que às vezes podem ter as
+mesmas informações, mas tem implementações
+
+103
+00:07:40.826 --> 00:07:45.966
+diferentes do comparable, ele vai
+ordenar de forma diferente, porquê?
+
+104
+00:07:45.966 --> 00:07:49.506
+Porque quando ele chamar
+aquele método compare to,
+
+105
+00:07:49.506 --> 00:07:52.900
+ele vai chamar dos objetos
+que foram passados ali.
+
+106
+00:07:52.900 --> 00:07:57.630
+Como falei, é possível estender o
+comportamento de uma classe ou do método,
+
+107
+00:07:57.630 --> 00:08:02.599
+simplesmente às vezes passando uma nova
+implementação daquela abstração que
+
+108
+00:08:02.599 --> 00:08:03.326
+ele recebe.
+
+109
+00:08:03.326 --> 00:08:08.035
+Então, se eu tenho uma classe que ela é
+composta por objeto que é do tipo de uma
+
+110
+00:08:08.035 --> 00:08:13.495
+interface, e algum momento essa classe
+chama métodos ali, variando qual é o
+
+111
+00:08:13.495 --> 00:08:18.890
+objeto que está ali, eu posso variar
+o comportamento daquela classe.
+
+112
+00:08:18.890 --> 00:08:23.709
+Às vezes, passando objetos de classes
+diferentes para o mesmo método,
+
+113
+00:08:23.709 --> 00:08:26.858
+eu posso variar o
+comportamento desse método.
+
+114
+00:08:26.858 --> 00:08:30.109
+E isso é extremamente
+interessante e importante.
+
+115
+00:08:30.109 --> 00:08:34.782
+A gente vai ver que, quando a gente for
+ver os padrões de projeto, vão ter vários
+
+116
+00:08:34.782 --> 00:08:39.747
+que vão explorar justamente essa
+característica da orientação a objetos,
+
+117
+00:08:39.747 --> 00:08:45.080
+para conseguir implementar soluções
+flexíveis e extremamente reutilizáveis.
+
+118
+00:08:45.080 --> 00:08:48.167
+Então eu gosto de dizer, com certeza,
+
+119
+00:08:48.167 --> 00:08:53.798
+que grande parte do poder da orientação
+a objetos, está no polimorfismo,
+
+120
+00:08:53.798 --> 00:08:58.355
+está no facto de eu poder ter,
+às vezes, várias classes assumindo
+
+121
+00:08:58.355 --> 00:09:02.403
+a forma de uma interface,
+ou da sua superclasse, está certo?
+
+122
+00:09:02.403 --> 00:09:07.270
+Então, eu espero que nessa aula aqui
+vocês tenham entendido melhor o
+
+123
+00:09:07.270 --> 00:09:10.648
+polimorfismo, como isso aí funciona,
+certo?
+
+124
+00:09:10.648 --> 00:09:15.170
+A gente já estava dando umas pinceladas
+antes, aí na classe de interface,
+
+125
+00:09:15.170 --> 00:09:20.173
+na aula de interface,
+na aula de herança, mas agora,
+
+126
+00:09:20.173 --> 00:09:25.220
+a ideia era realmente fechar
+esse assunto para que vocês
+
+127
+00:09:25.220 --> 00:09:30.317
+entendam como que essa característica é
+importante para a orientação a objetos
+
+128
+00:09:30.317 --> 00:09:35.694
+e como que isso daí pode ser utilizado
+para se obter toda essa flexibilidade,
+
+129
+00:09:35.694 --> 00:09:40.700
+toda essa, reutilização de código
+que se fala na orientação a objetos.
+
+130
+00:09:40.700 --> 00:09:41.514
+É isso aí.
+
+131
+00:09:41.514 --> 00:09:43.233
+Terminamos por aqui.
+
+132
+00:09:43.233 --> 00:09:45.590
+Muito obrigado por assistir!
+
+133
+00:09:45.590 --> 00:09:51.880
+[MÚSICA]

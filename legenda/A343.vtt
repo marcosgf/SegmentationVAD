@@ -1,0 +1,276 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.686
+Olá!
+Neste vídeo você aprenderá a computar o
+
+2
+00:00:03.686 --> 00:00:06.402
+efeito de se acrescentar 0 e
+
+3
+00:00:06.402 --> 00:00:09.970
+polo com a frequência de quebra
+do 0 menor do que a do polo.
+
+4
+00:00:09.970 --> 00:00:16.570
+Vamos continuar nos restringindo aos
+casos de 0 e polo no semiplano esquerdo.
+
+5
+00:00:16.570 --> 00:00:21.830
+A função de transferência será
+G de s igual a Gn de s vezes
+
+6
+00:00:21.830 --> 00:00:28.030
+s menos z1 sobre s menos p1, com módulo
+de z1 menor do que módulo de p1.
+
+7
+00:00:28.030 --> 00:00:33.536
+O que você precisa fazer para realizar
+o esboço é desenvolver as expressões de
+
+8
+00:00:33.536 --> 00:00:38.683
+módulo e fase a seguir: o
+módulo de G de j ômega dB será
+
+9
+00:00:38.683 --> 00:00:43.877
+igual a módulo de Gn de j
+ômega dB mais módulo de
+
+10
+00:00:43.877 --> 00:00:50.160
+j ômega menos z1 dB menos
+módulo de j ômega menos p1 dB.
+
+11
+00:00:50.160 --> 00:00:55.845
+Isto é, o módulo da função de
+transferência resultante será o módulo
+
+12
+00:00:55.845 --> 00:01:02.170
+da função sem o 0 e o polo mais o módulo
+devido ao 0 menos o módulo devido ao polo.
+
+13
+00:01:02.170 --> 00:01:08.072
+Já para fase,
+fase de G de j ômega será igual a fase
+
+14
+00:01:08.072 --> 00:01:15.360
+de Gn de j ômega mais fase de j ômega
+menos z1 menos fase de j ômega menos p1.
+
+15
+00:01:15.360 --> 00:01:20.330
+Mais uma vez,
+isso equivale à fase sem o par, 0 polo,
+
+16
+00:01:20.330 --> 00:01:24.860
+mais a fase devido ao 0 menos
+a fase por conta do polo.
+
+17
+00:01:24.860 --> 00:01:30.370
+Isto indica que é muito simples computar
+o efeito da adição do par 0 polo.
+
+18
+00:01:30.370 --> 00:01:33.149
+Basta juntar as contribuições
+do 0 e do polo,
+
+19
+00:01:33.149 --> 00:01:36.370
+como fizemos com as assíntotas
+nas figuras a seguir.
+
+20
+00:01:36.370 --> 00:01:39.792
+A contribuição do 0 será
+colocada laranja na figura,
+
+21
+00:01:39.792 --> 00:01:43.230
+enquanto a contribuição do
+polo pode ser vista verde.
+
+22
+00:01:43.230 --> 00:01:47.138
+Somando ambas, teremos o resultado azul.
+
+23
+00:01:47.138 --> 00:01:51.992
+Com o 0 e polo separados por 2 décadas,
+temos que o ganho é diminuído de 40 dB
+
+24
+00:01:51.992 --> 00:01:56.460
+baixas frequências, por causa da
+razão entre o módulo do 0 e do polo.
+
+25
+00:01:56.460 --> 00:01:59.841
+Ao passar pela frequência
+ômega igual ao módulo de z1,
+
+26
+00:01:59.841 --> 00:02:03.200
+o ganho começa a crescer com 20
+dB por década por causa do 0.
+
+27
+00:02:03.200 --> 00:02:08.410
+Ao atingir ômega igual a módulo de p1,
+o polo faz com que esse crescimento pare.
+
+28
+00:02:08.410 --> 00:02:12.057
+Por causa da separação de 2
+décadas entre o 0 e o polo,
+
+29
+00:02:12.057 --> 00:02:14.450
+o valor de ganho estaciona 0 dB.
+
+30
+00:02:14.450 --> 00:02:20.140
+Quanto à fase,
+começa a crescer ômega igual
+
+31
+00:02:20.140 --> 00:02:25.207
+ao módulo de z1 sobre 5 por conta do 0,
+atingindo 45 graus ômega igual
+
+32
+00:02:25.207 --> 00:02:30.240
+ao módulo de z1 e, finalmente,
+90 graus ômega igual a 5 módulo de z1.
+
+33
+00:02:30.240 --> 00:02:34.824
+Depois, devido ao polo,
+começa a decrescer ômega igual
+
+34
+00:02:34.824 --> 00:02:40.000
+a módulo de p1 sobre 5,
+atinge novamente 45 graus ômega igual
+
+35
+00:02:40.000 --> 00:02:45.010
+a módulo de p1 e volta a 0
+ômega igual a 5 módulo de p1.
+
+36
+00:02:45.010 --> 00:02:49.820
+Resumo, você pode notar que
+a introdução do par 0 polo,
+
+37
+00:02:49.820 --> 00:02:53.481
+com o 0 com frequência de
+quebra menor do que a do polo,
+
+38
+00:02:53.481 --> 00:02:58.819
+é responsável por: primeiro,
+diminuir o ganho DC do sistema.
+
+39
+00:02:58.819 --> 00:03:04.315
+Segundo, aumentar a fase entre as
+frequências de quebra do 0 e do polo.
+
+40
+00:03:04.315 --> 00:03:09.417
+Particular, o aumento máximo se
+dá na frequência intermediária
+
+41
+00:03:09.417 --> 00:03:15.520
+entre as frequências de quebra do 0
+e do polo e a sua média geométrica.
+
+42
+00:03:15.520 --> 00:03:20.528
+Pois essa frequência ômega max será
+tal que log de ômega max é igual
+
+43
+00:03:20.528 --> 00:03:25.060
+a meio do log do módulo de z1
+mais o log do módulo de p1,
+
+44
+00:03:25.060 --> 00:03:29.310
+visto que no gráfico com escala
+logarítmica é a média aritmética.
+
+45
+00:03:29.310 --> 00:03:34.431
+Desenvolvendo, o log de ômega max é igual
+a meio do log do módulo de z1 mais o
+
+46
+00:03:34.431 --> 00:03:40.470
+log do módulo de p1, que é igual a meio do
+log do módulo de z1 vezes o módulo de p1.
+
+47
+00:03:40.470 --> 00:03:45.307
+O quer dizer que ômega max é igual à raiz
+quadrada do módulo de z1 vezes o módulo
+
+48
+00:03:45.307 --> 00:03:45.840
+de p1.
+
+49
+00:03:45.840 --> 00:03:49.891
+Por fim,
+note que se a frequência de quebra do
+
+50
+00:03:49.891 --> 00:03:54.677
+polo estivesse mais próxima da do 0,
+o efeito seria capaz
+
+51
+00:03:54.677 --> 00:03:59.270
+de não atingir o valor máximo de 90 graus,
+mas sim valor menor.
+
+52
+00:03:59.270 --> 00:04:04.162
+Esse efeito de aumentar a fase algumas
+frequências é conhecido como avanço
+
+53
+00:04:04.162 --> 00:04:04.770
+de fase.
+
+54
+00:04:04.770 --> 00:04:08.684
+O elemento constituído pelo 0 e
+polo que produzem esse efeito,
+
+55
+00:04:08.684 --> 00:04:14.108
+quando multiplicado por ganho,
+é chamado compensador de avanço de fase.
+
+56
+00:04:14.108 --> 00:04:20.500
+Nos próximos vídeos vamos determinar
+fórmulas exatas para o avanço de fase.

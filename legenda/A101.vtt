@@ -1,0 +1,33 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA}
+
+2
+00:00:07.820 --> 00:00:16.519
+[MÚSICA} Oi pessoal, tudo bem?
+
+3
+00:00:16.519 --> 00:00:21.710
+Nesse módulo iremos ver como criar
+aplicativo de múltiplas telas.
+
+4
+00:00:21.710 --> 00:00:25.588
+Cada tela de aplicativo geralmente
+é view controller, portanto,
+
+5
+00:00:25.588 --> 00:00:29.540
+nesse módulo iremos trabalhar com os
+diferentes tipos desses view controllers
+
+6
+00:00:29.540 --> 00:00:34.966
+para entender as diferentes transições
+de telas que podemos criar com eles.
+
+7
+00:00:34.966 --> 00:00:36.060
+Bons estudos!

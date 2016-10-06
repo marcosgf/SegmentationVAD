@@ -1,0 +1,1076 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.258
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:09.258 --> 00:00:13.933
+bem vindo ao curso de
+Orientação a Objetos com Java.
+
+3
+00:00:13.933 --> 00:00:18.830
+Meu nome é Clovis Fernandes e hoje
+iremos trabalhar com modelagem CRC.
+
+4
+00:00:18.830 --> 00:00:23.594
+Na sua parte 1 iremos
+tratar da identificação
+
+5
+00:00:23.594 --> 00:00:27.342
+de classes no contexto da modelagem CRC.
+
+6
+00:00:27.342 --> 00:00:32.430
+Anteriormente mostrei a vocês
+os conceitos do Cartão CRC,
+
+7
+00:00:32.430 --> 00:00:39.650
+onde C significa classe,
+o R significa responsabilidade e o C,
+
+8
+00:00:39.650 --> 00:00:44.080
+o segundo C, corresponde a colaboração.
+
+9
+00:00:44.080 --> 00:00:51.113
+Na aula de hoje iremos dar aplicações
+orientadas a objetos usando Cartões CRC.
+
+10
+00:00:51.113 --> 00:00:54.290
+É diferente do que a gente
+vinha fazendo anteriormente.
+
+11
+00:00:54.290 --> 00:00:59.500
+Anteriormente eu simplesmente
+mostrava para vocês algumas
+
+12
+00:00:59.500 --> 00:01:04.398
+classes e mostrava como identificar
+as responsabilidades e as
+
+13
+00:01:04.398 --> 00:01:10.317
+colaborações classes pré-definidas,
+que eu apresentava.
+
+14
+00:01:10.317 --> 00:01:13.865
+Já na modelagem CRC, CRC modeling,
+
+15
+00:01:13.865 --> 00:01:19.507
+nós iremos entrar no mundo da modelagem
+no desenvolvimento de aplicações.
+
+16
+00:01:19.507 --> 00:01:23.238
+Nós teremos que dada uma
+especificação de uma aplicação,
+
+17
+00:01:23.238 --> 00:01:26.009
+descobrir quais são essas classes,
+
+18
+00:01:26.009 --> 00:01:30.930
+como essas classes estão relacionadas
+com outras através de colaboração,
+
+19
+00:01:30.930 --> 00:01:36.193
+quais são as responsabilidades, é para
+isso que a modelagem CRC: vai facilitar
+
+20
+00:01:36.193 --> 00:01:41.910
+descobrir e modelar as classes
+de uma determinada aplicação,
+
+21
+00:01:41.910 --> 00:01:47.032
+porque eu não saberei de antemão quais
+são essas classes, eu tenho que fazer uma
+
+22
+00:01:47.032 --> 00:01:52.286
+modelagem descobrir e
+identificar e no caso vamos usar
+
+23
+00:01:52.286 --> 00:01:57.572
+o contexto de Cartões CRC
+responsabilidades e colaborações.
+
+24
+00:01:57.572 --> 00:02:02.135
+A modelagem CRC que nós adaptamos
+para apresentação neste curso
+
+25
+00:02:02.135 --> 00:02:03.716
+consta de 6 passos.
+
+26
+00:02:03.716 --> 00:02:08.050
+Nesta aula iremos apresentar
+apenas até ao passo 2,
+
+27
+00:02:08.050 --> 00:02:13.343
+que identificaremos as classes
+de uma aplicação fictícia.
+
+28
+00:02:13.343 --> 00:02:17.830
+Os passos de 3 a 6 serão
+vistos na próxima aula.
+
+29
+00:02:17.830 --> 00:02:21.880
+Antes de começar o passo 1,
+eu tenho uma suposição,
+
+30
+00:02:21.880 --> 00:02:26.963
+que eu estou chamando de passo 0 aqui,
+que é ter a especificação
+
+31
+00:02:26.963 --> 00:02:32.571
+de uma dada aplicação, no caso aqui
+eu estou fazendo uma especificação,
+
+32
+00:02:32.571 --> 00:02:37.761
+apresentando uma especificação de
+sistema de automação de uma biblioteca.
+
+33
+00:02:37.761 --> 00:02:42.330
+Para fazer a modelagem CRC então
+é primordial, é essencial,
+
+34
+00:02:42.330 --> 00:02:48.635
+que a especificação dos requisitos
+da aplicação alvo já esteja pronta.
+
+35
+00:02:48.635 --> 00:02:53.210
+Com base nesta especificação
+então poderemos seguir os
+
+36
+00:02:53.210 --> 00:02:55.359
+passos da modelagem CRC.
+
+37
+00:02:55.359 --> 00:02:59.871
+Neste caso vamos trabalhar num
+sistema de automação de biblioteca.
+
+38
+00:02:59.871 --> 00:03:03.179
+Eu vou mostrar só o começo
+dessa especificação.
+
+39
+00:03:03.179 --> 00:03:03.879
+Porquê?
+
+40
+00:03:03.879 --> 00:03:08.980
+Mais à frente iremos ver hands on
+que eu vou trabalhar com a mesma
+
+41
+00:03:08.980 --> 00:03:13.980
+especificação para exemplificar
+com mais detalhes como se
+
+42
+00:03:13.980 --> 00:03:19.002
+faz uma modelagem CRC cima de uma
+especificação prévia de sistema.
+
+43
+00:03:19.002 --> 00:03:22.934
+No caso aqui eu tenho o sistema
+de automação da biblioteca,
+
+44
+00:03:22.934 --> 00:03:28.123
+a biblioteca tem nome, mantém catálogo
+de livros, onde cada livro tem título,
+
+45
+00:03:28.123 --> 00:03:32.879
+autor e número único de catálogo,
+há usuários da biblioteca registrados,
+
+46
+00:03:32.879 --> 00:03:37.954
+há uma bibliotecária que realmente
+vai ficar responsável por fazer
+
+47
+00:03:37.954 --> 00:03:42.640
+toda a entrada de dados,
+a transação com o sistema,
+
+48
+00:03:42.640 --> 00:03:46.700
+a bibliotecária vai poder
+criar os usuários e registrar
+
+49
+00:03:46.700 --> 00:03:51.130
+esses usuários no sistema,
+vai poder adicionar novos livros,
+
+50
+00:03:51.130 --> 00:03:55.940
+vai poder listar os livros
+disponíveis para empréstimos,
+
+51
+00:03:55.940 --> 00:04:02.590
+o usuário vai poder tirar livros,
+emprestar livros e vai poder também
+
+52
+00:04:02.590 --> 00:04:07.606
+devolver esses livros e outros requisitos
+que podem ter num sistema de biblioteca,
+
+53
+00:04:07.606 --> 00:04:13.507
+mas que simplificadamente nós reduzimos só
+para ter uma apresentação mais didática.
+
+54
+00:04:13.507 --> 00:04:21.638
+Na modelagem CRC o passo 1 significa
+identificar as classes da minha aplicação.
+
+55
+00:04:21.638 --> 00:04:23.339
+E como é que eu faço isso?
+
+56
+00:04:23.339 --> 00:04:29.285
+De uma maneira bastante simples, embora
+seja engenhosa: no texto da especificação
+
+57
+00:04:29.285 --> 00:04:34.710
+da aplicação eu procuro os substantivos
+e os nomes e eu marco esses nomes.
+
+58
+00:04:34.710 --> 00:04:39.694
+Esses substantivos que eu encontro
+na especificação podem ser
+
+59
+00:04:39.694 --> 00:04:42.949
+considerados potenciais
+objetos ou classes,
+
+60
+00:04:42.949 --> 00:04:46.658
+vai depender de uma análise
+que eu vou exemplificar aqui.
+
+61
+00:04:46.658 --> 00:04:51.107
+Vamos exemplificar cima do trecho
+da especificação do sistema de
+
+62
+00:04:51.107 --> 00:04:55.380
+automação da biblioteca,
+que carinhosamente eu chamo de SAB,
+
+63
+00:04:55.380 --> 00:04:57.886
+S de sistema,
+A de automação e B de biblioteca.
+
+64
+00:04:57.886 --> 00:05:01.165
+Então quais são os substantivos
+que eu encontro neste texto?
+
+65
+00:05:01.165 --> 00:05:06.950
+Eu marquei aí amarelo: biblioteca,
+nome, catálogo de livros,
+
+66
+00:05:06.950 --> 00:05:11.021
+livro, título, autor,
+número único de catálogo,
+
+67
+00:05:11.021 --> 00:05:18.054
+usuários de biblioteca e outros que estão
+no resto do texto que eu não apresento,
+
+68
+00:05:18.054 --> 00:05:22.657
+mas que eu poderia listar aí para vocês,
+
+69
+00:05:22.657 --> 00:05:26.717
+bibliotecária e assim por diante.
+
+70
+00:05:26.717 --> 00:05:32.490
+Então eu separei,
+fiz uma lista dos substantivos.
+
+71
+00:05:32.490 --> 00:05:36.350
+Eles são potenciais classes,
+nem todas vão ser consideradas classes.
+
+72
+00:05:36.350 --> 00:05:41.460
+Então eu tenho lá biblioteca,
+nome, catálogo de livros, livro,
+
+73
+00:05:41.460 --> 00:05:47.083
+título, autor, número único de catálogo,
+usuários de biblioteca e etc.
+
+74
+00:05:47.083 --> 00:05:52.696
+No passo 2 a primeira coisa que eu
+tenho que fazer é refinar a lista.
+
+75
+00:05:52.696 --> 00:05:57.484
+Às vezes nomes diferentes podem
+significar a mesma coisa,
+
+76
+00:05:57.484 --> 00:06:01.137
+posso ter sinônimos ou nomes parecidos,
+análogos,
+
+77
+00:06:01.137 --> 00:06:06.669
+eu vou ter que ter esse cuidado na hora de
+refinar os substantivos que eu encontrei.
+
+78
+00:06:06.669 --> 00:06:11.634
+Outra coisa que eu tenho que fazer é
+retirar os nomes que vão corresponder
+
+79
+00:06:11.634 --> 00:06:12.638
+a atributos.
+
+80
+00:06:12.638 --> 00:06:17.626
+No nosso exemplo anterior nós
+tínhamos lá o nome da biblioteca,
+
+81
+00:06:17.626 --> 00:06:22.379
+então esse nome vai ser atributo
+de biblioteca provavelmente,
+
+82
+00:06:22.379 --> 00:06:25.928
+nós iremos então desconsiderar
+o nome da biblioteca,
+
+83
+00:06:25.928 --> 00:06:30.171
+nesse momento que eu estou querendo
+descobrir objetos e classes.
+
+84
+00:06:30.171 --> 00:06:34.715
+Outra coisa que eu vou fazer é
+olhar se os substantivos têm algum
+
+85
+00:06:34.715 --> 00:06:37.640
+relacionamento uns com os outros.
+
+86
+00:06:37.640 --> 00:06:44.090
+Por exemplo se eu tiver
+substantivo pessoa e tiver
+
+87
+00:06:44.090 --> 00:06:49.869
+substantivo soldado por exemplo, existe
+relacionamento entre soldado e pessoa,
+
+88
+00:06:49.869 --> 00:06:55.136
+soldado é uma pessoa,
+então existe relacionamento de herança.
+
+89
+00:06:55.136 --> 00:06:59.320
+Então eu posso identificar que uma classe,
+
+90
+00:06:59.320 --> 00:07:03.030
+se soldado é uma classe e
+pessoa também é uma classe,
+
+91
+00:07:03.030 --> 00:07:08.614
+eu posso então identificar que
+soldado é subclasse de pessoa.
+
+92
+00:07:08.614 --> 00:07:13.272
+Por fim, ao eliminar,
+refinar, encontrar as
+
+93
+00:07:13.272 --> 00:07:18.013
+possíveis classes eliminando os sinônimos,
+
+94
+00:07:18.013 --> 00:07:22.430
+eliminando classes que
+não devem fazer parte,
+
+95
+00:07:22.430 --> 00:07:26.970
+que não devem ser considerados classes
+nesse sistema que eu estiver fazendo,
+
+96
+00:07:26.970 --> 00:07:31.492
+identificar as associações de
+herança entre uma classe e outra,
+
+97
+00:07:31.492 --> 00:07:36.125
+as potenciais classes,
+eu vou descrever o que é que elas fazem,
+
+98
+00:07:36.125 --> 00:07:38.684
+eu tenho que dizer o que elas fazem.
+
+99
+00:07:38.684 --> 00:07:42.472
+É uma maneira de representar
+cada uma dessas classes
+
+100
+00:07:42.472 --> 00:07:45.061
+descrevendo o que é que elas fazem.
+
+101
+00:07:45.061 --> 00:07:50.786
+Bom eu estou apresentando agora para
+vocês a lista de todos os substantivos
+
+102
+00:07:50.786 --> 00:07:56.150
+ou locuções substantivas que eu
+encontrei na minha especificação,
+
+103
+00:07:56.150 --> 00:08:00.570
+como todo, não nesse trechinho apenas
+que eu apresentei anteriormente.
+
+104
+00:08:00.570 --> 00:08:05.935
+Então eu tenho potenciais classes:
+biblioteca, nome, catálogo de livros,
+
+105
+00:08:05.935 --> 00:08:12.170
+livro, título, autor, número único
+de catálogo, usuários da biblioteca,
+
+106
+00:08:12.170 --> 00:08:17.397
+nome único de usuário,
+sistema, bibliotecária e SAB.
+
+107
+00:08:17.397 --> 00:08:23.135
+SAB é a abreviatura do sistema
+de automação de biblioteca,
+
+108
+00:08:23.135 --> 00:08:25.385
+é o acrônimo para isso.
+
+109
+00:08:25.385 --> 00:08:29.668
+Com essa lista de
+substantivos eu levantei isso
+
+110
+00:08:29.668 --> 00:08:34.375
+cima da especificação como todo,
+não está na minha apresentação,
+
+111
+00:08:34.375 --> 00:08:38.922
+posteriormente nós iremos ver
+essa especificação como todo.
+
+112
+00:08:38.922 --> 00:08:45.110
+O passo seguinte é examinar as
+relações entre esses nomes,
+
+113
+00:08:45.110 --> 00:08:49.485
+se o nome realmente pode ser
+uma classe potencial ou não.
+
+114
+00:08:49.485 --> 00:08:54.886
+O primeiro ponto que eu coloco para vocês,
+que é uma coisa básica: classe
+
+115
+00:08:54.886 --> 00:09:00.129
+corresponde a uma abstração de objetos
+que têm características comuns,
+
+116
+00:09:00.129 --> 00:09:04.342
+características tanto
+de atributos quanto de
+
+117
+00:09:04.342 --> 00:09:09.850
+comportamento e eles devem ser
+registados sempre no singular.
+
+118
+00:09:09.850 --> 00:09:14.363
+Nós vemos aqui que eu levantei
+usuários da biblioteca,
+
+119
+00:09:14.363 --> 00:09:19.377
+está no plural, então o nome de
+classe deve vir sempre no singular.
+
+120
+00:09:19.377 --> 00:09:24.630
+Então a primeira providência que eu
+faço é transformar os nomes das classes,
+
+121
+00:09:24.630 --> 00:09:30.486
+se aparecer algum no plural,
+como era o caso de usuários da biblioteca,
+
+122
+00:09:30.486 --> 00:09:32.913
+eu deixo ele na forma singular.
+
+123
+00:09:32.913 --> 00:09:37.874
+A segunda coisa que eu vou examinar,
+nesse passo 2, nesse refinamento,
+
+124
+00:09:37.874 --> 00:09:40.610
+são nomes que representam atributos.
+
+125
+00:09:40.610 --> 00:09:45.646
+Então por exemplo: o nome de
+catálogo de livros que estava lá na
+
+126
+00:09:45.646 --> 00:09:50.721
+especificação, se referiam à
+biblioteca Eles possivelmente,
+
+127
+00:09:50.721 --> 00:09:55.500
+nós não precisamos ter uma certeza
+se estamos fazendo certo ou não,
+
+128
+00:09:55.500 --> 00:10:00.505
+total nesse momento, possivelmente
+eles serão atributo de biblioteca.
+
+129
+00:10:00.505 --> 00:10:04.243
+Então eu já posso eliminar,
+por isso é que eles aparecem ai riscados.
+
+130
+00:10:04.243 --> 00:10:08.610
+Com relação aos outros substantivos,
+título do livro, título que aparecia,
+
+131
+00:10:08.610 --> 00:10:12.479
+autor e número único de catálogo
+estavam associados lá no texto da
+
+132
+00:10:12.479 --> 00:10:15.062
+especificação ao substantivo livro.
+
+133
+00:10:15.062 --> 00:10:22.117
+Então eu suponho que eles são atributos ou
+serão atributos da potencial classe livro.
+
+134
+00:10:22.117 --> 00:10:27.461
+Já o usuário da biblioteca,
+o nome único de usuário estava também
+
+135
+00:10:27.461 --> 00:10:32.360
+associado no texto da especificação
+ao usuário da biblioteca.
+
+136
+00:10:32.360 --> 00:10:35.148
+Possivelmente também vai ser atributo.
+
+137
+00:10:35.148 --> 00:10:36.351
+O que é que eu faço?
+
+138
+00:10:36.351 --> 00:10:39.141
+Elimino todos esses possíveis atributos.
+
+139
+00:10:39.141 --> 00:10:43.534
+Ficamos então aqui apenas com biblioteca,
+livro, sistema,
+
+140
+00:10:43.534 --> 00:10:46.716
+usuário da biblioteca,
+bibliotecária e SAB.
+
+141
+00:10:46.716 --> 00:10:50.330
+Então os nomes que representam
+atributos são eliminados.
+
+142
+00:10:50.330 --> 00:10:53.871
+Eu estou identificando neste
+momento que existem sinônimos.
+
+143
+00:10:53.871 --> 00:10:55.080
+Existem sinônimos.
+
+144
+00:10:55.080 --> 00:10:59.987
+Por exemplo: a biblioteca, quando na minha
+especificação me refiro a biblioteca
+
+145
+00:10:59.987 --> 00:11:04.231
+estou-me referindo ao sistema que
+vai automatizar a biblioteca.
+
+146
+00:11:04.231 --> 00:11:04.762
+O SAB,
+
+147
+00:11:04.762 --> 00:11:09.970
+que é acrônimo para Sistema de Automação
+de Biblioteca significa a mesma coisa.
+
+148
+00:11:09.970 --> 00:11:13.640
+Então no meu sistema eu escolho: qual é
+que seria o mais apropriado para essa
+
+149
+00:11:13.640 --> 00:11:14.260
+aplicação?
+
+150
+00:11:14.260 --> 00:11:15.667
+Podia ser qualquer dos 3.
+
+151
+00:11:15.667 --> 00:11:17.933
+Sistema é uma coisa muito geral,
+talvez não.
+
+152
+00:11:17.933 --> 00:11:22.000
+SAB também poderia ser mas é uma sigla,
+quem é que vai saber o que é isso?
+
+153
+00:11:22.000 --> 00:11:25.005
+Então biblioteca talvez
+seja o melhor nome.
+
+154
+00:11:25.005 --> 00:11:27.693
+Mas não existe uma coisa muito precisa.
+
+155
+00:11:27.693 --> 00:11:29.840
+Tem que ser avaliado com calma.
+
+156
+00:11:29.840 --> 00:11:34.736
+Após eliminar sistema e SAB,
+eu fiquei com as potenciais
+
+157
+00:11:34.736 --> 00:11:40.264
+classes biblioteca, livro,
+usuário da biblioteca e bibliotecária.
+
+158
+00:11:40.264 --> 00:11:43.624
+Esses 4, a bibliotecária é ator.
+
+159
+00:11:43.624 --> 00:11:49.598
+É alguém que vive papel,
+que vai interagir com o sistema SAB.
+
+160
+00:11:49.598 --> 00:11:55.349
+Eu não vou manter informações no
+sistema sobre a bibliotecária.
+
+161
+00:11:55.349 --> 00:12:01.863
+Se o meu sistema mantivesse os nomes das
+bibliotecárias que eles precisassem,
+
+162
+00:12:01.863 --> 00:12:06.469
+por exemplo, serem reconhecidos
+e entrarem com senha, etc.
+
+163
+00:12:06.469 --> 00:12:10.346
+e tal, ai eu precisaria
+representá-los no meu sistema.
+
+164
+00:12:10.346 --> 00:12:15.930
+Nesse meu exemplo é só para mostrar que
+quando eu tenho alguém que vai interagir
+
+165
+00:12:15.930 --> 00:12:21.160
+com o sistema mas não preciso,
+eu não preciso guardar informação nenhuma
+
+166
+00:12:21.160 --> 00:12:26.444
+sobre essa pessoa que vai interagir com o
+sistema, quando eu não sei o nome dessa
+
+167
+00:12:26.444 --> 00:12:31.870
+pessoa eu chamo genericamente de ator,
+ele está fora do sistema.
+
+168
+00:12:31.870 --> 00:12:35.578
+É o contrário, por exemplo,
+do usuário da biblioteca,
+
+169
+00:12:35.578 --> 00:12:40.413
+aquele que vai na biblioteca para
+retirar o livro, emprestar o livro.
+
+170
+00:12:40.413 --> 00:12:46.240
+Eu preciso identificar esse usuário
+da biblioteca para diferenciar
+
+171
+00:12:46.240 --> 00:12:51.585
+qual usuário pegou tal livro, outro
+pegou outro livro, se devolveu ou não.
+
+172
+00:12:51.585 --> 00:12:54.210
+Então eu preciso gerenciar no sistema.
+
+173
+00:12:54.210 --> 00:12:57.157
+Usuário da biblioteca
+está dentro do sistema.
+
+174
+00:12:57.157 --> 00:12:59.450
+Biblioteca é o sistema como todo.
+
+175
+00:12:59.450 --> 00:13:04.165
+Livro, eu preciso gerenciar também
+os livros porque eu vou ter livros
+
+176
+00:13:04.165 --> 00:13:09.170
+sobre física 1, livros sobre física 2,
+livros sobre computação 1,
+
+177
+00:13:09.170 --> 00:13:13.965
+computação 2, eu preciso autores
+diferentes, eu preciso gerenciar isso.
+
+178
+00:13:13.965 --> 00:13:19.050
+Que livro vai ser emprestado para
+algum usuário, e assim por diante?
+
+179
+00:13:19.050 --> 00:13:23.895
+Então biblioteca,
+livro e usuário estão dentro do sistema.
+
+180
+00:13:23.895 --> 00:13:25.920
+Bibliotecária está fora.
+
+181
+00:13:25.920 --> 00:13:30.693
+Chegamos então ao conjunto de
+classes que identificamos para o
+
+182
+00:13:30.693 --> 00:13:33.670
+sistema de automação da biblioteca.
+
+183
+00:13:33.670 --> 00:13:39.320
+Então temos as 3 classes: biblioteca,
+livro e usuário.
+
+184
+00:13:39.320 --> 00:13:44.950
+As 3 classes que nós conseguimos
+identificar usando a modelagem CRC.
+
+185
+00:13:44.950 --> 00:13:52.886
+Aproveito para realçar que a imagem
+do fundo é a biblioteca do ITA.
+
+186
+00:13:52.886 --> 00:13:59.984
+Prédio iii pelo património histórico
+nacional que foi projetado por Niemeyer.
+
+187
+00:13:59.984 --> 00:14:04.750
+O próximo item dentro do passo
+2 é descrever as classes.
+
+188
+00:14:04.750 --> 00:14:10.295
+Para cada uma das classes nós
+vamos apresentar a sua descrição:
+
+189
+00:14:10.295 --> 00:14:15.111
+o que foi planejado ou
+planejaremos para essas classes?
+
+190
+00:14:15.111 --> 00:14:18.912
+Então no caso da classe biblioteca,
+por exemplo,
+
+191
+00:14:18.912 --> 00:14:22.600
+ela representa o sistema
+de automação da biblioteca.
+
+192
+00:14:22.600 --> 00:14:27.621
+Vai ter a interação do
+usuário com o sistema
+
+193
+00:14:27.621 --> 00:14:32.070
+SAB e vai passar pela classe biblioteca.
+
+194
+00:14:32.070 --> 00:14:38.430
+Não estou considerando aqui as classes
+de interface que vão ficar realmente,
+
+195
+00:14:38.430 --> 00:14:42.640
+interface com o usuário que vai ficar
+realmente entre o usuário e o sistema.
+
+196
+00:14:42.640 --> 00:14:47.877
+Já a classe livros, ela representa livros
+
+197
+00:14:47.877 --> 00:14:53.721
+que serão emprestados
+a usuários da biblioteca.
+
+198
+00:14:53.721 --> 00:14:59.365
+Por sua vez a classe usuário
+representa os usuários
+
+199
+00:14:59.365 --> 00:15:05.240
+que desejam fazer empréstimos
+de livros da biblioteca.
+
+200
+00:15:05.240 --> 00:15:10.640
+Antes de completar o passo 2 nós temos que
+
+201
+00:15:10.640 --> 00:15:16.360
+representar essas classes que foram
+identificadas na forma de cartões CRC.
+
+202
+00:15:16.360 --> 00:15:20.220
+Nós temos aqui a representação
+de cartão CRC.
+
+203
+00:15:20.220 --> 00:15:25.850
+Diferentemente do que a gente apresentou
+até agora, que o cartão CRC tinha apenas
+
+204
+00:15:25.850 --> 00:15:31.647
+o nome da classe,
+as responsabilidades e as colaborações,
+
+205
+00:15:31.647 --> 00:15:38.854
+agora nós introduzimos uma informação
+adicional que é a descrição da classe.
+
+206
+00:15:38.854 --> 00:15:43.776
+Ela vai ser muito importante quando
+estivermos trabalhando com outros
+
+207
+00:15:43.776 --> 00:15:45.922
+princípios de projeto de classes.
+
+208
+00:15:45.922 --> 00:15:49.330
+Saber essa informação vai
+ser muito importante,
+
+209
+00:15:49.330 --> 00:15:55.190
+saber como é que se descreve uma classe.
+
+210
+00:15:55.190 --> 00:16:00.063
+Isso vai ser importante inclusive,
+por exemplo, para você decidir se vai
+
+211
+00:16:00.063 --> 00:16:05.020
+dividir a classe duas
+ou coisas desse gênero.
+
+212
+00:16:05.020 --> 00:16:09.820
+Neste caso nós temos então o cartão CRC
+
+213
+00:16:09.820 --> 00:16:14.935
+para a classe biblioteca,
+que eu tenho a descrição do que
+
+214
+00:16:14.935 --> 00:16:20.150
+a biblioteca ela representa o
+sistema de automação da biblioteca.
+
+215
+00:16:20.150 --> 00:16:27.072
+Nós temos a outra classe, cartão para
+outra classe que é a classe livro.
+
+216
+00:16:27.072 --> 00:16:31.400
+E por fim, o cartão para a classe usuário.
+
+217
+00:16:31.400 --> 00:16:35.860
+Concluímos a parte 1 da modelagem CRC.
+
+218
+00:16:35.860 --> 00:16:41.907
+Nesta parte nós identificamos
+as classes que conseguimos
+
+219
+00:16:41.907 --> 00:16:47.475
+iii da especificação dos requisitos do
+sistema de automação da biblioteca.
+
+220
+00:16:47.475 --> 00:16:52.670
+Os demais items que vão ser
+trabalhados na modelagem CRC,
+
+221
+00:16:52.670 --> 00:16:56.229
+descobrir as responsabilidades
+e as colaborações,
+
+222
+00:16:56.229 --> 00:17:00.009
+nós iremos ver na próxima
+aula nos passos 3 a 6.
+
+223
+00:17:00.009 --> 00:17:01.696
+Muito obrigado!
+
+224
+00:17:01.696 --> 00:17:07.440
+[MÚSICA] [MÚSICA]

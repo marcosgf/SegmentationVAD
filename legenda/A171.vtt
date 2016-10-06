@@ -1,0 +1,406 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.168
+[MÚSICA] E aí
+
+2
+00:00:05.168 --> 00:00:09.840
+pessoal, tudo bem?
+
+3
+00:00:09.840 --> 00:00:14.146
+Nessa aula vamos ver como adicionar
+sprites animados no jogo que fizemos no
+
+4
+00:00:14.146 --> 00:00:15.180
+módulo passado.
+
+5
+00:00:15.180 --> 00:00:19.760
+Primeiro faça download do arquivo zip
+que iremos utilizar nesse módulo.
+
+6
+00:00:19.760 --> 00:00:26.820
+Importe todas as imagens para
+a pasta Assets.XCAssets.
+
+7
+00:00:26.820 --> 00:00:33.629
+[SEM ÁUDIO] No
+
+8
+00:00:33.629 --> 00:00:39.970
+editor de cena clique na seta ao
+lado esquerdo do botão Animate.
+
+9
+00:00:39.970 --> 00:00:43.930
+Você verá uma lista de nós dessa
+cena em uma linha do tempo.
+
+10
+00:00:43.930 --> 00:00:47.680
+Vamos animar o inimigo primeiro.
+
+11
+00:00:47.680 --> 00:00:52.150
+Na biblioteca de objetos encontre
+a ação Animate with textures.
+
+12
+00:00:52.150 --> 00:00:56.810
+Clique e arraste na linha
+do tempo para o inimigo.
+
+13
+00:00:56.810 --> 00:01:01.470
+Clique na biblioteca de mídia para ver
+os sons e imagens importados no projeto.
+
+14
+00:01:01.470 --> 00:01:05.485
+Encontre as duas texturas do inimigo.
+
+15
+00:01:05.485 --> 00:01:09.500
+Para selecionar mais de uma imagem por
+vez deixe a tecla shift pressionada.
+
+16
+00:01:09.500 --> 00:01:12.312
+Clique e arraste para a área Textures.
+
+17
+00:01:12.312 --> 00:01:16.494
+Nessa área, você pode reordenar
+a ordem dos sprites que vão compor
+
+18
+00:01:16.494 --> 00:01:18.370
+a sua animação quadro a quadro.
+
+19
+00:01:18.370 --> 00:01:25.080
+Deixe Start Time como zero e para
+Duration coloque 0.4 segundo.
+
+20
+00:01:25.080 --> 00:01:29.872
+Como temos duas imagens que irão se
+alternar isso significa que cada imagem
+
+21
+00:01:29.872 --> 00:01:32.090
+irá aparecer por 0.2 segundo.
+
+22
+00:01:32.090 --> 00:01:37.590
+Agora temos que fazer com que essa
+animação se repita infinitamente.
+
+23
+00:01:37.590 --> 00:01:41.872
+Selecione a animação na linha do
+tempo e clique na seta circular que
+
+24
+00:01:41.872 --> 00:01:44.330
+aparece no canto inferior esquerdo.
+
+25
+00:01:44.330 --> 00:01:48.610
+Aqui podemos definir quantas vezes
+essa animação vai se repetir
+
+26
+00:01:48.610 --> 00:01:51.630
+clicando em mais e menos.
+
+27
+00:01:51.630 --> 00:01:55.569
+Como queremos que essa animação
+se repita infinitamente
+
+28
+00:01:55.569 --> 00:01:58.530
+clique no botão com o símbolo de infinito.
+
+29
+00:01:58.530 --> 00:02:03.520
+Vamos fazer o mesmo para
+o jogador e para a moeda.
+
+30
+00:02:03.520 --> 00:02:10.416
+[SEM ÁUDIO] Para
+
+31
+00:02:10.416 --> 00:02:17.981
+o jogador configure a duração para
+0.5 segundo para que a animação fique
+
+32
+00:02:17.981 --> 00:02:22.883
+pouco mais lenta que a do
+inimigo e coloque para
+
+33
+00:02:22.883 --> 00:02:28.060
+repetir infinitamente.
+
+34
+00:02:28.060 --> 00:02:34.284
+[SEM ÁUDIO] Na
+
+35
+00:02:34.284 --> 00:02:40.920
+moeda vamos adicionar essas
+seis imagens e vamos repetir
+
+36
+00:02:40.920 --> 00:02:46.420
+no final a imagem 1 para que a moeda fique
+dois quadros da animação nessa imagem.
+
+37
+00:02:46.420 --> 00:02:51.718
+Configure a duração para 0.7 segundo,
+
+38
+00:02:51.718 --> 00:02:54.810
+assim cada imagem
+aparecerá por 0.1 segundo.
+
+39
+00:02:54.810 --> 00:02:58.250
+Coloque também para repetir infinitamente.
+
+40
+00:02:58.250 --> 00:03:02.753
+Para visualizar as animações
+sem ter que rodar no simulador
+
+41
+00:03:02.753 --> 00:03:04.740
+clique no botão Animate.
+
+42
+00:03:04.740 --> 00:03:08.686
+Você pode ir ajustando o tempo
+de duração das animações
+
+43
+00:03:08.686 --> 00:03:11.360
+para atingir o resultado desejado.
+
+44
+00:03:11.360 --> 00:03:12.211
+Muito bem!
+
+45
+00:03:12.211 --> 00:03:16.650
+Vamos ver agora como adicionar
+sprites animados por código.
+
+46
+00:03:16.650 --> 00:03:21.571
+Você pode criar o sprite node
+por código também como vimos nos
+
+47
+00:03:21.571 --> 00:03:25.733
+módulos passados,
+ou pode criá-lo pelo editor de cena,
+
+48
+00:03:25.733 --> 00:03:30.690
+achar a referência deste nó pelo nome
+e adicionar a animação das texturas.
+
+49
+00:03:30.690 --> 00:03:34.900
+Crie novo sprite com a imagem da moeda.
+
+50
+00:03:34.900 --> 00:03:41.050
+[SEM ÁUDIO] Redimensione
+
+51
+00:03:41.050 --> 00:03:46.450
+para ficar do tamanho do
+label de pontuação e mude
+
+52
+00:03:46.450 --> 00:03:52.610
+o nome para CoinHUD.
+
+53
+00:03:52.610 --> 00:04:00.610
+[SEM ÁUDIO]
+
+54
+00:04:00.610 --> 00:04:08.610
+[SEM ÁUDIO]
+
+55
+00:04:08.610 --> 00:04:14.885
+[SEM ÁUDIO] No código
+
+56
+00:04:14.885 --> 00:04:20.010
+crie uma variável SKSpriteNode
+chamada coinHUD e dois
+
+57
+00:04:20.010 --> 00:04:26.970
+vetores de SKTexture chamados
+coinIdleFrames e coinFlipFrames.
+
+58
+00:04:26.970 --> 00:04:31.710
+Esses vetores terão as imagens quadro
+a quadro das nossas animações.
+
+59
+00:04:31.710 --> 00:04:37.357
+Na função didMoveToView encontre
+a referência de coinHUD pelo nome com
+
+60
+00:04:37.357 --> 00:04:42.410
+a função childNodeWithName e
+crie os vetores de SKTexture.
+
+61
+00:04:42.410 --> 00:04:46.580
+coinIdleFrames contém quatro texturas.
+
+62
+00:04:46.580 --> 00:04:51.900
+gold1, gold2, gold1 e gold5 Dessa forma
+
+63
+00:04:51.900 --> 00:04:56.910
+o ícone da moeda ficará girando pouco
+para a direita e para a esquerda,
+
+64
+00:04:56.910 --> 00:05:01.805
+mas sem fazer a animação de giro completa
+
+65
+00:05:01.805 --> 00:05:06.700
+e coinFlipFrames contém as mesmas sete
+texturas que fizemos pelo editor de cena.
+
+66
+00:05:06.700 --> 00:05:13.630
+Vamos criar agora aquela ação Animate with
+textures que fizemos no editor de cena.
+
+67
+00:05:13.630 --> 00:05:17.470
+idleAnimation igual
+
+68
+00:05:17.470 --> 00:05:23.387
+SKAction.animateWithTextures que
+recebe como argumento
+
+69
+00:05:23.387 --> 00:05:29.020
+o vetor de texturas coinIdleFrame e
+a duração por frame de 0.3 segundo.
+
+70
+00:05:29.020 --> 00:05:33.400
+Precisamos agora indicar que essa é
+uma ação que se repete infinitamente.
+
+71
+00:05:33.400 --> 00:05:38.077
+Crie uma nova constante chamada
+loopIdleAnimation igual
+
+72
+00:05:38.077 --> 00:05:44.510
+SKAction.repeatActionForever que recebe
+como argumento a ação idleAnimation.
+
+73
+00:05:44.510 --> 00:05:49.975
+Para iniciar essa ação de animação
+em loop, chame a variável coinHUD
+
+74
+00:05:49.975 --> 00:05:55.440
+e execute a função runAction passando como
+argumento a função loopIdleAnimation.
+
+75
+00:05:55.440 --> 00:05:58.940
+Assim, quando rodarmos o jogo
+esse sprite ficará animado.
+
+76
+00:05:58.940 --> 00:06:03.775
+Por fim, vamos fazer que quando o
+contador da pontuação subir essa moeda do
+
+77
+00:06:03.775 --> 00:06:06.320
+ícone faz a animação de giro completo.
+
+78
+00:06:06.320 --> 00:06:11.550
+Na função addScore crie uma
+constante chamada flipAnimation
+
+79
+00:06:11.550 --> 00:06:16.111
+que recebe uma animação com as
+texturas do vetor coinFlipFrames e
+
+80
+00:06:16.111 --> 00:06:21.124
+0.1 segundo de duração do
+frame e rode a animação
+
+81
+00:06:21.124 --> 00:06:25.940
+com a linha
+coinHD.runAction(flipAnimation).
+
+82
+00:06:25.940 --> 00:06:29.500
+Rode no simulador para ver o resultado.
+
+83
+00:06:29.500 --> 00:06:37.330
+[SEM ÁUDIO] Repare que,
+
+84
+00:06:37.330 --> 00:06:43.310
+quando a animação flipAction é chamada ela
+substitui temporariamente a ação Idle.
+
+85
+00:06:43.310 --> 00:06:47.429
+Porém quando acaba,
+a animação Idle continua a ser executada,
+
+86
+00:06:47.429 --> 00:06:49.650
+pois ela é uma animação infinita.
+
+87
+00:06:49.650 --> 00:06:56.081
+Na próxima aula, você verá pouco
+mais sobre animações com SKAction.
+
+88
+00:06:56.081 --> 00:06:57.750
+Até lá!

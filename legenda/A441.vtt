@@ -1,0 +1,823 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.857
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.857 --> 00:00:12.040
+bem vindo ao curso sobre TDD.
+
+3
+00:00:12.040 --> 00:00:17.550
+Eu sou Clovis Fernandes e hoje iremos
+falar sobre os Princípios SOLID,
+
+4
+00:00:17.550 --> 00:00:20.868
+que são usados para os
+projetos de classes.
+
+5
+00:00:20.868 --> 00:00:24.787
+Os princípios SOLID ajudam
+a [INCOMPREENSÍVEL]
+
+6
+00:00:24.787 --> 00:00:27.360
+dependências entre as classes.
+
+7
+00:00:27.360 --> 00:00:32.320
+o nível que a gente vai trabalhar com
+esses princípios é no nível das classes.
+
+8
+00:00:32.320 --> 00:00:36.218
+Embora envolva a refatoração
+de alguns métodos também,
+
+9
+00:00:36.218 --> 00:00:39.800
+mover método para lá ou
+para cá e assim por diante.
+
+10
+00:00:39.800 --> 00:00:46.050
+Olha o que vocês estão vendo aqui,
+isto é os princípios SOLID.
+
+11
+00:00:46.050 --> 00:00:52.270
+Quer dizer, português,
+SOLID é uma [INCOMPREENSÍVEL]
+
+12
+00:00:52.270 --> 00:00:57.218
+correspondem a uma coisa
+[INCOMPREENSÍVEL] desenvolver
+
+13
+00:00:57.218 --> 00:01:02.070
+e dar mais solidez ao seu processo
+de desenvolver, está certo?
+
+14
+00:01:02.070 --> 00:01:07.632
+Na verdade, o que a gente obtém no
+[INCOMPREENSÍVEL] é o contrário do SOLID,
+
+15
+00:01:07.632 --> 00:01:12.533
+nós vamos encontrar software mais
+flexível, mais fácil de gerenciar.
+
+16
+00:01:12.533 --> 00:01:14.198
+Essa é a ideia na verdade.
+
+17
+00:01:14.198 --> 00:01:16.030
+Os princípios SOLID são 5,
+
+18
+00:01:16.030 --> 00:01:21.330
+são 5 princípios que foram
+proposto pelo Uncle Bob.
+
+19
+00:01:21.330 --> 00:01:25.455
+O objetivo é trabalhar no
+nível do projeto de classes,
+
+20
+00:01:25.455 --> 00:01:30.897
+eu vou examinar se as classes estão
+adequadas a esses princípios, está certo?
+
+21
+00:01:30.897 --> 00:01:31.930
+Essa é a ideia.
+
+22
+00:01:31.930 --> 00:01:36.400
+Nós já vimos que existem
+3 grandes problemas,
+
+23
+00:01:36.400 --> 00:01:40.380
+no desenvolvimento de
+software orientado a objetos.
+
+24
+00:01:40.380 --> 00:01:45.035
+Expressar a intenção,
+que você tem que dar nomes
+
+25
+00:01:45.035 --> 00:01:49.690
+apropriados a métodos,
+variáveis de instância,
+
+26
+00:01:49.690 --> 00:01:54.520
+classes, interfaces,
+variáveis temporárias também, está certo?
+
+27
+00:01:54.520 --> 00:02:00.051
+A parte de duplicação de código, você
+ter código redundante, e obviamente que
+
+28
+00:02:00.051 --> 00:02:04.321
+ter código redundante significa que você
+vai ter muitas dependências quando alguma
+
+29
+00:02:04.321 --> 00:02:09.540
+mudança nesses códigos ocorreu, você tem
+que mudar cada desses lugares, está certo?
+
+30
+00:02:09.540 --> 00:02:14.490
+Mas a existem outras dependências
+que não são decorrentes apenas
+
+31
+00:02:14.490 --> 00:02:17.484
+de código duplicado, está certo?
+
+32
+00:02:17.484 --> 00:02:22.390
+Então, o SOLID vai ajudar
+a trabalhar com isso, está certo?
+
+33
+00:02:22.390 --> 00:02:28.010
+Dos pontos principais que a gente usa,
+
+34
+00:02:28.010 --> 00:02:31.990
+é o conceito de abstração,
+acoplamento abstrato.
+
+35
+00:02:31.990 --> 00:02:37.380
+O uso de classes abstratas,
+o uso de interfaces de JAVA, está certo?
+
+36
+00:02:37.380 --> 00:02:43.170
+É que isso é que vai ajudar a reduzir
+as dependências entre as classes.
+
+37
+00:02:43.170 --> 00:02:50.572
+Outro ponto importante, é balancear a
+coesão da classe com as suas dependências.
+
+38
+00:02:50.572 --> 00:02:56.170
+A coesão da classe significa que você,
+para uma dada
+
+39
+00:02:56.170 --> 00:03:02.029
+tarefa que você,
+vocês lembram lá do CRC, não é?
+
+40
+00:03:02.029 --> 00:03:08.130
+Eu descrevia o que uma classe, ou cartão
+CRC [INCOMPREENSÍVEL] está certo?
+
+41
+00:03:08.130 --> 00:03:13.050
+E essa descrição,
+a gente pode chamar de tarefa, está certo?
+
+42
+00:03:13.050 --> 00:03:19.262
+A coesão significa que para
+atingir essas tarefas,
+
+43
+00:03:19.262 --> 00:03:24.100
+desfazer [INCOMPREENSÍVEL] para
+que uma classe era responsável,
+
+44
+00:03:24.100 --> 00:03:29.634
+nós definimos conjunto de
+responsabilidades que estavam
+
+45
+00:03:29.634 --> 00:03:34.720
+de acordo com essa tarefa, está certo?
+
+46
+00:03:34.720 --> 00:03:39.813
+Então, a coesão que nós queremos,
+é uma coesão alta,
+
+47
+00:03:39.813 --> 00:03:44.609
+ou seja,
+grau maior de fazer com que o grupo de
+
+48
+00:03:44.609 --> 00:03:49.437
+responsabilidades da classe correspondam à
+
+49
+00:03:49.437 --> 00:03:54.120
+finalidade da classe,
+à tarefa da classe, está certo?
+
+50
+00:03:54.120 --> 00:03:57.410
+Isso é a coesão,
+então a gente quer uma coesão alta.
+
+51
+00:03:57.410 --> 00:03:59.893
+Por outro lado, ao desenvolver software,
+
+52
+00:03:59.893 --> 00:04:04.000
+nós distribuímos a inteligência
+desse software entre várias classes.
+
+53
+00:04:04.000 --> 00:04:08.160
+Então, vai existir
+dependências entre as classes.
+
+54
+00:04:08.160 --> 00:04:12.347
+O grande desejo nosso é que
+as dependências sejam baixas,
+
+55
+00:04:12.347 --> 00:04:15.152
+o que se chama de baixo acoplamento.
+
+56
+00:04:15.152 --> 00:04:19.270
+Que ter dependências é o acoplamento,
+num baixo acoplamento.
+
+57
+00:04:19.270 --> 00:04:25.797
+E ao longo que vamos desenvolvendo isso
+no TDD, nós vamos estar balanceado,
+
+58
+00:04:25.797 --> 00:04:29.638
+alguns momentos a gente não é tão coeso,
+está certo?
+
+59
+00:04:29.638 --> 00:04:35.481
+Talvez menos acoplamento,
+mais acoplamento e assim por diante,
+
+60
+00:04:35.481 --> 00:04:41.104
+mas a ideia é que você tenha
+mais coesão e menos acoplamento.
+
+61
+00:04:41.104 --> 00:04:46.210
+Os princípios SOLID
+ajudam a trabalhar isso.
+
+62
+00:04:46.210 --> 00:04:51.300
+Como consequência,
+dado que eu já tenho usado,
+
+63
+00:04:51.300 --> 00:04:55.246
+continuo usando aquela expressão da
+
+64
+00:04:55.246 --> 00:05:00.090
+intenção dos nomes que
+aparecem no meu programa,
+
+65
+00:05:00.090 --> 00:05:04.361
+variáveis de instância,
+variáveis temporárias, nomes dos métodos,
+
+66
+00:05:04.361 --> 00:05:09.490
+nomes das classes, nomes das interfaces,
+e seguindo os princípios,
+
+67
+00:05:09.490 --> 00:05:14.880
+vocês vão ver através de outros
+materiais do nosso curso,
+
+68
+00:05:14.880 --> 00:05:19.305
+e o programa fica mais legível,
+está certo?
+
+69
+00:05:19.305 --> 00:05:24.457
+Quer dizer, ele vai ajudar ao
+programa a ficar mais legível,
+
+70
+00:05:24.457 --> 00:05:27.580
+mais extensível, não é, está certo?
+
+71
+00:05:27.580 --> 00:05:30.165
+O que significa ser mais extensível?
+
+72
+00:05:30.165 --> 00:05:33.798
+Significa que vai ser mais
+fácil de manter, ou seja,
+
+73
+00:05:33.798 --> 00:05:38.351
+quando eu adicionar novo requisito,
+uma nova responsabilidade,
+
+74
+00:05:38.351 --> 00:05:42.500
+ou mudar requisito ou
+responsabilidade antiga, está certo,
+
+75
+00:05:42.500 --> 00:05:46.996
+o sistema vai estar muito mais pronto
+
+76
+00:05:46.996 --> 00:05:51.425
+para permitir que você
+tenha uma facilidade maior
+
+77
+00:05:51.425 --> 00:05:56.240
+fazer essas mudanças e nós sabemos
+que no desenvolvimento de software,
+
+78
+00:05:56.240 --> 00:06:00.170
+a mudança é inerente,
+aparece a cada instante.
+
+79
+00:06:00.170 --> 00:06:03.789
+Bom, quais são esses 5 princípios,
+está certo?
+
+80
+00:06:03.789 --> 00:06:05.304
+SOLID é acrônimo,
+
+81
+00:06:05.304 --> 00:06:10.503
+cada letra dele corresponde
+a nome do princípio, está certo?
+
+82
+00:06:10.503 --> 00:06:16.391
+Então, o S é para Single,
+Responsability Principle,
+
+83
+00:06:16.391 --> 00:06:19.755
+também se vocês estão vendo na tabela,
+
+84
+00:06:19.755 --> 00:06:24.182
+se faz uso também muitas vezes
+da sigla da responsabilidade.
+
+85
+00:06:24.182 --> 00:06:28.810
+A gente fala o conjunto do SOLID
+como o conjunto dos 5 princípios,
+
+86
+00:06:28.810 --> 00:06:33.150
+e cada uma delas tem a sua sigla que ás
+vezes vai ser usada e nós iremos usar.
+
+87
+00:06:33.150 --> 00:06:38.830
+O O do SOLID é o Open Closed Principle.
+
+88
+00:06:38.830 --> 00:06:40.953
+Na sigla fica OCP.
+
+89
+00:06:40.953 --> 00:06:45.340
+O L é o Liskov Substitution Principle.
+
+90
+00:06:45.340 --> 00:06:49.603
+Liskov é uma grande
+cientista de computação,
+
+91
+00:06:49.603 --> 00:06:53.426
+que 1988 propôs esse princípio,
+
+92
+00:06:53.426 --> 00:06:57.540
+que depois acabou ficando com o nome dela.
+
+93
+00:06:57.540 --> 00:06:59.998
+Então, ele é o LSP.
+
+94
+00:06:59.998 --> 00:07:06.510
+O I do SOLID, é o Interface
+Segregation Principle, está certo?
+
+95
+00:07:06.510 --> 00:07:08.283
+Ele é o ISP.
+
+96
+00:07:08.283 --> 00:07:14.957
+E o D é o Dependency Inversion Principle,
+ou DIP.
+
+97
+00:07:14.957 --> 00:07:19.844
+Bom, eu vou estar fazendo
+uma descrição aqui,
+
+98
+00:07:19.844 --> 00:07:25.480
+bastante sumária do que nós depois
+iremos apresentar outros materiais,
+
+99
+00:07:25.480 --> 00:07:30.609
+vídeo e [INCOMPREENSÍVEL] detalhando
+cada desses princípios e como eles podem
+
+100
+00:07:30.609 --> 00:07:37.652
+ser usados para você descobrir esses
+maus cheiros relacionados com a classe,
+
+101
+00:07:37.652 --> 00:07:41.827
+e aplicar técnicas para
+cada dos princípios,
+
+102
+00:07:41.827 --> 00:07:45.770
+que vão tirar esses maus cheiros,
+está certo?
+
+103
+00:07:45.770 --> 00:07:52.371
+Então, no SRP,
+no Single Responsability Principle,
+
+104
+00:07:52.371 --> 00:07:57.840
+a gente tem que lembrar e
+a responsabilidade que o Uncle Bob usa aí,
+
+105
+00:07:57.840 --> 00:07:59.785
+neste caso deste princípio,
+
+106
+00:07:59.785 --> 00:08:03.760
+não é a responsabilidade que
+a gente falava anteriormente.
+
+107
+00:08:03.760 --> 00:08:07.234
+Quer dizer,
+quando eu falava responsabilidade,
+
+108
+00:08:07.234 --> 00:08:10.410
+eu estava falando de o que
+uma classe faz ou sabe.
+
+109
+00:08:10.410 --> 00:08:14.390
+A responsabilidade do
+Uncle Bob aqui neste caso,
+
+110
+00:08:14.390 --> 00:08:19.220
+corresponde aquela finalidade da classe,
+à descrição da classe, está certo?
+
+111
+00:08:19.220 --> 00:08:25.210
+Ou seja, a tarefa que a classe deve fazer,
+é a isso que ele deve corresponder.
+
+112
+00:08:25.210 --> 00:08:30.546
+Então, nesse sentido,
+uma classe ela deve ter,
+
+113
+00:08:30.546 --> 00:08:33.292
+segundo esse princípio,
+
+114
+00:08:33.292 --> 00:08:38.420
+uma e apenas uma razão
+para haver alguma mudança.
+
+115
+00:08:38.420 --> 00:08:41.625
+Ou seja, o que significa isso?
+
+116
+00:08:41.625 --> 00:08:47.917
+Se eu tiver, duas tarefas que estão
+incorporadas numa classe e isso
+
+117
+00:08:47.917 --> 00:08:53.188
+fica bem claro quando eu estou descrevendo
+uma classe e eu vou dizer: essa
+
+118
+00:08:53.188 --> 00:08:58.280
+classe faz isso e aquilo e aquilo outro,
+se tiver mais do que duas, está certo?
+
+119
+00:08:58.280 --> 00:09:01.840
+Então, quando eu estiver falando,
+eu descubro isso.
+
+120
+00:09:01.840 --> 00:09:07.090
+E significa que, quanto mais
+
+121
+00:09:07.090 --> 00:09:12.020
+finalidades es estiver
+incorporando na mesma classe,
+
+122
+00:09:12.020 --> 00:09:17.055
+eu tenho acoplamento desnecessários,
+porque eu posso estar mudando
+
+123
+00:09:17.055 --> 00:09:22.339
+alguma coisa por causa de uma razão, por
+causa de uma finalidade e aí eu tenho que,
+
+124
+00:09:22.339 --> 00:09:26.340
+isso afeta todo o mundo que
+depende da minha classe.
+
+125
+00:09:26.340 --> 00:09:28.498
+Está certo?
+
+126
+00:09:28.498 --> 00:09:33.765
+Já o OCP, ele expressa,
+isso aí foi o Meyer,
+
+127
+00:09:33.765 --> 00:09:39.544
+disse que deve ser possível
+estender o comportamento
+
+128
+00:09:39.544 --> 00:09:45.048
+de uma classe sem alterar o
+comportamento existente, está certo?
+
+129
+00:09:45.048 --> 00:09:51.163
+Quer dizer se eu estendo e mudo o
+comportamento existente anterior,
+
+130
+00:09:51.163 --> 00:09:53.413
+os comportamentos anteriores,
+
+131
+00:09:53.413 --> 00:09:57.840
+comportamentos vão corresponder
+a responsabilidades, não é?
+
+132
+00:09:57.840 --> 00:10:02.820
+Eu estou violando esse princípio do OCP.
+
+133
+00:10:02.820 --> 00:10:07.600
+Já a LSP, ela garante
+
+134
+00:10:07.600 --> 00:10:12.455
+que o polimorfismo esteja ocorrendo
+de uma maneira mais adequada.
+
+135
+00:10:12.455 --> 00:10:14.420
+O que é que significa isso?
+
+136
+00:10:14.420 --> 00:10:20.015
+Significa que objetos de uma classe,
+que você declarou
+
+137
+00:10:20.015 --> 00:10:25.570
+uma variável como sendo de uma classe,
+eles podem ser substituíveis,
+
+138
+00:10:25.570 --> 00:10:31.016
+está certo por objetos de subclasses
+[INCOMPREENSÍVEL] mas garantindo
+
+139
+00:10:31.016 --> 00:10:36.040
+que não vai haver nenhuma alteração
+algum resultado, está certo?
+
+140
+00:10:36.040 --> 00:10:40.796
+Então isso é importante a gente ver.
+
+141
+00:10:40.796 --> 00:10:47.050
+Já o ISP isso tem a ver com
+interfaces que são muito gordas,
+
+142
+00:10:47.050 --> 00:10:52.669
+ou seja,
+você tem uma interface que faz muita coisa
+
+143
+00:10:52.669 --> 00:10:57.803
+distinta isso pode ser problema,
+a ideia é ter interfaces mais magras.
+
+144
+00:10:57.803 --> 00:10:59.511
+O que é que isso significa?
+
+145
+00:10:59.511 --> 00:11:03.681
+Vamos fazer uma analogia com
+o facto de você usar casaco.
+
+146
+00:11:03.681 --> 00:11:07.986
+Você pode usar casaco que
+aguenta mais frio está certo?
+
+147
+00:11:07.986 --> 00:11:14.057
+Então, eu posso usar esse casaco quando eu
+estiver o tempo estiver com menos frio,
+
+148
+00:11:14.057 --> 00:11:15.120
+está certo?
+
+149
+00:11:15.120 --> 00:11:18.144
+Mas eu posso sentir calor
+se estiver com menos frio,
+
+150
+00:11:18.144 --> 00:11:23.206
+então ele não está me atendendo
+totalmente, porque ele foi feito para
+
+151
+00:11:23.206 --> 00:11:28.715
+atender com pouco frio e muito
+frio também, ele atende,
+
+152
+00:11:28.715 --> 00:11:34.020
+mas tem efeito colateral
+que não é muito bom.
+
+153
+00:11:34.020 --> 00:11:34.815
+Está certo?
+
+154
+00:11:34.815 --> 00:11:37.780
+Então a ideia era que
+eu tivesse por exemplo,
+
+155
+00:11:37.780 --> 00:11:42.295
+casaco para pouco frio e
+casaco para muito frio.
+
+156
+00:11:42.295 --> 00:11:46.034
+É isso que a gente faria
+com essa interface gorda,
+
+157
+00:11:46.034 --> 00:11:51.701
+partiarimos de tal forma,
+que você possa usar a interface,
+
+158
+00:11:51.701 --> 00:11:56.262
+o casaco, para o frio que esteja fazendo,
+está certo?
+
+159
+00:11:56.262 --> 00:12:00.501
+Se eu usar casaco para pouco frio
+com muito frio, eu vou sentir frio,
+
+160
+00:12:00.501 --> 00:12:01.250
+está certo?
+
+161
+00:12:01.250 --> 00:12:04.480
+Então eu tenho que usar
+no momento adequado.
+
+162
+00:12:04.480 --> 00:12:09.097
+E o DIP, ele tem que ver muito
+com a abstração, ou seja,
+
+163
+00:12:09.097 --> 00:12:14.370
+você tem uma classe que depende da
+outra classe, da dependência, porquê?
+
+164
+00:12:14.370 --> 00:12:19.381
+Eu vou acabar colocando uma
+interface que eu vou fazer que
+
+165
+00:12:19.381 --> 00:12:24.802
+a minha classe dependa dessa interface
+e agora a classe da qual eu dependia,
+
+166
+00:12:24.802 --> 00:12:27.345
+ela agora depende dessa interface.
+
+167
+00:12:27.345 --> 00:12:29.443
+O que se chama de inversão, está certo?
+
+168
+00:12:29.443 --> 00:12:32.420
+A gente vai mostrar isso com
+mais detalhes, está certo?
+
+169
+00:12:32.420 --> 00:12:38.030
+Espero que você tenha
+gostado dos princípios SOLID,
+
+170
+00:12:38.030 --> 00:12:42.800
+nós iremos descrever e detalhar
+nos materiais educacionais,
+
+171
+00:12:42.800 --> 00:12:48.478
+ou vídeo ou material de
+leitura no nosso curso.
+
+172
+00:12:48.478 --> 00:12:50.606
+Obrigado.
+
+173
+00:12:50.606 --> 00:12:52.740
+[MÚSICA]

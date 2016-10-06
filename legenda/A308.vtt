@@ -1,0 +1,433 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.101
+Olá, neste vídeo você aprenderá a esboçar
+rapidamente o diagrama de Bode de
+
+2
+00:00:05.101 --> 00:00:06.580
+sistema de 1ª ordem.
+
+3
+00:00:06.580 --> 00:00:11.097
+Relembrando, sistema de primeira
+ordem é aquele cuja função de
+
+4
+00:00:11.097 --> 00:00:15.636
+transferência tem apenas polo isto é,
+G(s)=
+
+5
+00:00:15.636 --> 00:00:22.330
+k/(s-p1) com p1<0 pois estamos
+trabalhando com sistema estável.
+
+6
+00:00:22.330 --> 00:00:26.950
+Uma maneira de se traçar o diagrama
+de Bode é repetir o procedimento
+
+7
+00:00:26.950 --> 00:00:31.777
+do vídeo anterior, ou seja, calcular os
+valores do módulo e da fase de G de Jω
+
+8
+00:00:31.777 --> 00:00:36.610
+para diversos valores de ω, usando os
+pontos obtidos para desenhar o diagrama.
+
+9
+00:00:36.610 --> 00:00:40.770
+Por exemplo,
+no caso do circuito RC do vídeo anterior,
+
+10
+00:00:40.770 --> 00:00:46.242
+G(s) = Y(s)/U(s) = 1/(sRC
+
+11
+00:00:46.242 --> 00:00:52.467
++ 1) Para resistor de resistência 470kΩ e
+
+12
+00:00:52.467 --> 00:00:57.605
+capacitor de capacidade
+220nF teremos G(s) =
+
+13
+00:00:57.605 --> 00:01:03.675
+1/0,1034s + 1 e poderemos
+obter a tabela ao lado.
+
+14
+00:01:03.675 --> 00:01:08.640
+Você também já viu os gráficos
+obtidos no vídeo anterior.
+
+15
+00:01:08.640 --> 00:01:13.881
+Vimos também que para ω suficientemente
+grande o módulo tende a decair
+
+16
+00:01:13.881 --> 00:01:18.890
+com 20dB por década e a fase tende a -90°,
+como nesses dois
+
+17
+00:01:18.890 --> 00:01:23.950
+gráficos ao lado,
+e módulo azul e fase vermelho.
+
+18
+00:01:23.950 --> 00:01:29.120
+Contudo, o que significa
+esse suficientemente grande?
+
+19
+00:01:29.120 --> 00:01:32.079
+Vamos voltar para fórmula
+geral de G(s) para
+
+20
+00:01:32.079 --> 00:01:36.134
+sistema qualquer de
+primeira ordem e estável.
+
+21
+00:01:36.134 --> 00:01:41.231
+G(s) = K/ s- p1 Ao substituir
+
+22
+00:01:41.231 --> 00:01:46.120
+S por Jω teremos: K/ (jω- p1).
+
+23
+00:01:46.120 --> 00:01:51.110
+Tomando o módulo, ficamos com
+
+24
+00:01:51.110 --> 00:01:56.100
+|G(jω)| = |K| / √ω² + p1².
+
+25
+00:01:56.100 --> 00:02:01.255
+Com ω variando,
+podemos ver que a contribuição de ω
+
+26
+00:02:01.255 --> 00:02:06.410
+para o módulo é menos significativa do que
+p1, para ω menor do que o módulo de p1.
+
+27
+00:02:06.410 --> 00:02:10.410
+Para ω igual ao módulo de p1
+as contribuições se igualam.
+
+28
+00:02:10.410 --> 00:02:13.058
+Já para ω maior do que o módulo de p1,
+
+29
+00:02:13.058 --> 00:02:18.110
+o valor de ω passa a ser mais relevante
+na soma que está no denominador.
+
+30
+00:02:18.110 --> 00:02:23.108
+Assim, ω igual ao módulo de p1 parece
+ser uma frequência que o comportamento
+
+31
+00:02:23.108 --> 00:02:27.590
+se altera, deixando de ser dominado
+por p1 e passando a ser ditado por ω.
+
+32
+00:02:27.590 --> 00:02:33.399
+Dessa forma,
+podemos aproximar o módulo por |G (jω)|
+
+33
+00:02:33.399 --> 00:02:40.912
+≡ |K| / |p1| para ω < |p1| Por outro lado,
+
+34
+00:02:40.912 --> 00:02:45.355
+|G (jω)| ≡ |K| / ω para ω >
+
+35
+00:02:45.355 --> 00:02:50.792
+|p1| Nesse caso temos que,
+tomando o módulo dB,
+
+36
+00:02:50.792 --> 00:02:56.763
+o módulo de G(jω) dB terá
+aproximadamente 20log|K|-
+
+37
+00:02:56.763 --> 00:03:01.812
+20log|p1| para ω> |p1|
+O que é a constante,
+
+38
+00:03:01.812 --> 00:03:08.290
+e o módulo de G(jω) será
+aproximadamente 20log|K|- 20lo|ω
+
+39
+00:03:08.290 --> 00:03:14.710
+para ω>|p1| que é uma reta no diagrama de
+Bode, com inclinação de 20dB por década.
+
+40
+00:03:14.710 --> 00:03:18.221
+Desenhando essas aproximações
+no diagrama de Bode,
+
+41
+00:03:18.221 --> 00:03:23.050
+teremos o gráfico ao lado, onde as
+assíntotas para baixas frequências,
+
+42
+00:03:23.050 --> 00:03:27.640
+quando ω < |p1|, e para altas frequências,
+quando ω > |p1|,
+
+43
+00:03:27.640 --> 00:03:31.818
+foram desenhadas com
+linhas verdes tracejadas.
+
+44
+00:03:31.818 --> 00:03:36.771
+Podemos ver que para frequências bem
+abaixo de módulo de p1 e bem acima
+
+45
+00:03:36.771 --> 00:03:40.888
+de módulo de p1, cerca de meia
+década para menos ou para mais,
+
+46
+00:03:40.888 --> 00:03:43.968
+o maior dos casamentos
+ocorre para ω = |p1|.
+
+47
+00:03:43.968 --> 00:03:48.240
+Por essa característica de ser o
+divisor de águas entre as assíntotas,
+
+48
+00:03:48.240 --> 00:03:51.574
+a frequência p1 é chamada
+de frequência de quebra.
+
+49
+00:03:51.574 --> 00:03:56.673
+Vamos calcular qual é dos casamentos entre
+o valor da intersecção das assíntotas,
+
+50
+00:03:56.673 --> 00:03:59.630
+e o valor calculado a partir
+do módulo de G(jω).
+
+51
+00:03:59.630 --> 00:04:05.285
+Para isso, basta fazer ω = p1
+na expressão do módulo e G(jp1),
+
+52
+00:04:05.285 --> 00:04:10.155
+então o |G(jp1)| será igual ao |K| /
+
+53
+00:04:10.155 --> 00:04:16.340
+√2*p1², o que dá 1/√2 * |K/p1|,
+
+54
+00:04:16.340 --> 00:04:22.826
+que é aproximadamente
+igual a 0,07 |K| / |p1|.
+
+55
+00:04:22.826 --> 00:04:29.360
+DB o |G(jp1) | ≡ 20log0,07
+
+56
+00:04:29.360 --> 00:04:34.871
++ 20log|K|- 20log|p1| O que
+
+57
+00:04:34.871 --> 00:04:40.290
+dá ≡ -3 + 20log|K|- 20log |p1|,
+
+58
+00:04:40.290 --> 00:04:46.410
+ou seja, aproximando pela a assíntota
+constante 20log|K|- 20log|p1|,
+
+59
+00:04:46.410 --> 00:04:50.120
+o maior erro que ocorre na frequência
+de quebra é de 3dB para mais.
+
+60
+00:04:50.120 --> 00:04:53.357
+Agora que já vimos
+aproximação para o módulo,
+
+61
+00:04:53.357 --> 00:04:55.930
+vamos obter assíntotas para a fase.
+
+62
+00:04:55.930 --> 00:05:03.960
+A fase pode ser calculada por fase
+de G(jω) = fase de K/ G(jω)- p1,
+
+63
+00:05:03.960 --> 00:05:09.420
+que é igual a -arctan(ω/p1) Fazendo
+
+64
+00:05:09.420 --> 00:05:15.080
+o mesmo procedimento
+para ω<|p1| o arctan≡0,
+
+65
+00:05:15.080 --> 00:05:19.946
+para ω=|p1| temos o arctan ≡ 1,
+
+66
+00:05:19.946 --> 00:05:27.470
+que é π/4 Finalmente,
+para ω>|p1| o arcotangente tende a π/2.
+
+67
+00:05:27.470 --> 00:05:32.176
+Temos duas assíntotas: 0
+para altas frequências,
+
+68
+00:05:32.176 --> 00:05:35.110
+e π/2 para altas frequências.
+
+69
+00:05:35.110 --> 00:05:41.420
+No ponto ω=|p1| o valor da fase é π/4,
+isto é, o valor médio das assíntotas.
+
+70
+00:05:41.420 --> 00:05:44.673
+Dessa forma,
+podemos interpolar as assíntotas,
+
+71
+00:05:44.673 --> 00:05:49.070
+começando meia década antes de p1
+e terminando meia década depois.
+
+72
+00:05:49.070 --> 00:05:54.351
+Dessa maneira, a reta interpolando esses
+valores terá fase igual ao valor exato
+
+73
+00:05:54.351 --> 00:05:59.325
+ω=|p1| [SEM_ÁUDIO]
+
+74
+00:05:59.325 --> 00:06:03.540
+Observemos o gráfico com o valor obtido
+calculando a fase, e pelas assíntotas.
+
+75
+00:06:03.540 --> 00:06:07.565
+Novamente o erro máximo ocorre na
+transição entre as assíntotas,
+
+76
+00:06:07.565 --> 00:06:11.590
+e é de cerca de 0,19rad,
+isto é, aproximadamente 11graus.
+
+77
+00:06:11.590 --> 00:06:16.328
+Essas assíntotas representam
+o comportamento da fase bem,
+
+78
+00:06:16.328 --> 00:06:20.340
+para frequências meia década acima
+ou meia década abaixo de p1,
+
+79
+00:06:20.340 --> 00:06:23.900
+e a interpolação é tangente
+à curva no ponto p1.
+
+80
+00:06:23.900 --> 00:06:27.513
+Agora você aprendeu a esboçar
+rapidamente o diagrama de Bode de
+
+81
+00:06:27.513 --> 00:06:31.270
+sistema de primeria ordem a partir
+da sua função de transferência.
+
+82
+00:06:31.270 --> 00:06:35.209
+O ponto importante para determinar as
+assíntotas é a frequência de quebra,
+
+83
+00:06:35.209 --> 00:06:36.570
+que corresponde ao polo.
+
+84
+00:06:36.570 --> 00:06:40.525
+Com esse esboço é mais fácil verificar
+rapidamente características de resposta
+
+85
+00:06:40.525 --> 00:06:41.830
+frequência de sistema.
+
+86
+00:06:41.830 --> 00:06:45.941
+Essa capacidade será útil quando você for
+fazer o projeto de controlador.
+
+87
+00:06:45.941 --> 00:06:50.882
+Chamaremos esse curso de compensador, para
+alterar a resposta frequência do sistema,
+
+88
+00:06:50.882 --> 00:06:55.028
+pois você poderá entender rapidamente que
+alteração se dará na resposta frequência
+
+89
+00:06:55.028 --> 00:06:56.530
+com a inclusão do compensador.
+
+90
+00:06:56.530 --> 00:06:59.790
+Nos próximos vídeos
+vamos estudar a resposta
+
+91
+00:06:59.790 --> 00:07:04.690
+frequência de sistemas de segunda ordem,
+muito comuns projetos de controle.

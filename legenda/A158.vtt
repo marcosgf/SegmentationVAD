@@ -1,0 +1,136 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.070
+[MÚSICA] [SEM_ÁUDIO] E aí,
+
+2
+00:00:09.070 --> 00:00:10.134
+pessoal, tudo bem?
+
+3
+00:00:10.134 --> 00:00:13.160
+Nessa aula vamos ver como
+adicionar labels de texto na cena.
+
+4
+00:00:13.160 --> 00:00:17.090
+Assim como Sprites,
+podem adicionar label pelo editor.
+
+5
+00:00:17.090 --> 00:00:21.942
+Clique e arraste label para a sua cena.
+
+6
+00:00:21.942 --> 00:00:25.000
+Mude o nome para Label1.
+
+7
+00:00:25.000 --> 00:00:28.640
+Você pode configurar os alinhamentos,
+
+8
+00:00:28.640 --> 00:00:33.720
+mudar o texto,
+
+9
+00:00:33.720 --> 00:00:41.720
+a fonte,
+
+10
+00:00:41.720 --> 00:00:48.065
+[SEM_ÁUDIO]
+
+11
+00:00:48.065 --> 00:00:55.473
+[SEM_ÁUDIO] e
+
+12
+00:00:55.473 --> 00:01:01.855
+a cor.
+
+13
+00:01:01.855 --> 00:01:09.300
+Vamos agora adicionar label pelo código.
+
+14
+00:01:09.300 --> 00:01:13.390
+Crie uma constante,
+inicialize objeto da classe
+
+15
+00:01:13.390 --> 00:01:17.480
+SKLabelNode passando como
+argumento o nome da fonte,
+
+16
+00:01:17.480 --> 00:01:22.300
+mude o texto pelo atributo text,
+
+17
+00:01:22.300 --> 00:01:26.398
+o tamanho da fonte por fontSize escolha
+
+18
+00:01:26.398 --> 00:01:31.020
+posição e adicione como
+filho de objeto da cena.
+
+19
+00:01:31.020 --> 00:01:36.240
+Do mesmo modo que fizemos na
+aula anterior para os Sprites,
+
+20
+00:01:36.240 --> 00:01:41.460
+podemos recuperar a referência do label
+criada pelo editor procurando pelo nome.
+
+21
+00:01:41.460 --> 00:01:48.595
+Crie uma variável da classe SKLabelNode
+e procure pelo nome utilizando a função
+
+22
+00:01:48.595 --> 00:01:53.400
+childNodeWithName e passe como argumento
+o nome que escolhemos no editor de cena.
+
+23
+00:01:53.400 --> 00:01:58.430
+Precisamos fazer iii também,
+para dizer qual é a classe do nó.
+
+24
+00:01:58.430 --> 00:02:00.540
+Neste caso é SKLabelNode.
+
+25
+00:02:00.540 --> 00:02:06.140
+Deste modo podemos modificar os atributos
+desse nó, assim como no criado por código.
+
+26
+00:02:06.140 --> 00:02:10.410
+Por fim,
+rode no simulador para ver o resultado.
+
+27
+00:02:10.410 --> 00:02:15.961
+Aqui temos o label criado pelo
+editor de cena e que modificamos
+
+28
+00:02:15.961 --> 00:02:20.870
+o texto por código e outro
+criado totalmente por código.
+
+29
+00:02:20.870 --> 00:02:27.989
+Na próxima aula veremos como
+adicionar jogabilidade com toques.
+
+30
+00:02:27.989 --> 00:02:28.930
+Até lá.

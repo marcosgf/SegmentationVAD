@@ -1,0 +1,498 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.694
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.694 --> 00:00:13.190
+Esse é o curso de Orientação
+a Objetos com Java.
+
+3
+00:00:13.190 --> 00:00:20.715
+Eu sou o Eduardo Guerra e hoje vamos estar
+falando aqui sobre níveis de abstração.
+
+4
+00:00:20.715 --> 00:00:28.240
+A gente aprendeu aí a parte de classes,
+como funciona ali objeto, abstração.
+
+5
+00:00:28.240 --> 00:00:32.496
+Hoje vamos ver como é que acontece
+quando essa abstração acontece
+
+6
+00:00:32.496 --> 00:00:34.167
+vários níveis diferentes.
+
+7
+00:00:34.167 --> 00:00:39.267
+Então, espero que vocês lembrem aí das
+outras aulas, o nosso exemplo dos nossos
+
+8
+00:00:39.267 --> 00:00:44.760
+gatinhos, aí, o gatinho abstrato,
+o gatinho concreto.
+
+9
+00:00:44.760 --> 00:00:47.755
+Tem se você pegar aí por exemplo,
+o Garfield é gato concreto,
+
+10
+00:00:47.755 --> 00:00:51.548
+se eu falar gato, de uma forma geral,
+eu estou falando da abstração,
+
+11
+00:00:51.548 --> 00:00:56.320
+então a gente apredeu esse nível
+que é o abstrato e o concreto,
+
+12
+00:00:56.320 --> 00:00:59.477
+dentro de Orientação a Objetos
+como é que funciona.
+
+13
+00:00:59.477 --> 00:01:03.220
+A questão, é que a gente pode
+ter vários níveis de abstração.
+
+14
+00:01:03.220 --> 00:01:08.552
+Então, se eu estou falando por exemplo,
+felino, eu estou pensando numa coisa que
+
+15
+00:01:08.552 --> 00:01:14.354
+também é uma abstração,
+e ela é mais genérico do que o gato,
+
+16
+00:01:14.354 --> 00:01:19.243
+apesar de o gato ser felino
+ele também não é concreto.
+
+17
+00:01:19.243 --> 00:01:23.835
+Por outro lado se eu pegar aí por exemplo,
+e falar assim por exemplo, eu tenho gato
+
+18
+00:01:23.835 --> 00:01:28.801
+de rua, não é todo o gato, de repente,
+o gato de rua ele tem ali comportamento
+
+19
+00:01:28.801 --> 00:01:34.014
+diferenciado, ele tem características
+diferenciadas do gato normal,
+
+20
+00:01:34.014 --> 00:01:39.640
+só que eu estou especializando o gato,
+eu estou pegando aquele conceito,
+
+21
+00:01:39.640 --> 00:01:43.845
+aquela abstração que eu tinha e
+estou tornando ela mais específica.
+
+22
+00:01:43.845 --> 00:01:49.710
+Então, eu tenho que por exemplo, todo o
+gato é felino e todo o gato de rua é gato,
+
+23
+00:01:49.710 --> 00:01:55.262
+mas são todos são abstrações, se eu pensar
+termos de classes, eu teria por exemplo,
+
+24
+00:01:55.262 --> 00:01:59.278
+todos ali poderiam ser classes
+do meu sistema e até instâncias,
+
+25
+00:01:59.278 --> 00:02:02.700
+só que são classes diferentes
+níveis de abstração.
+
+26
+00:02:02.700 --> 00:02:07.085
+Vou pegar num exemplo aqui mais concreto
+e olhar pouquinho para o código.
+
+27
+00:02:07.085 --> 00:02:11.470
+Então imagina o seguinte,
+eu tenho aqui a classe Empregado,
+
+28
+00:02:11.470 --> 00:02:15.505
+tem nome, idade,
+salário e tenho também a classe Gerente,
+
+29
+00:02:15.505 --> 00:02:19.470
+que além do nome, idade e salário,
+ele tem também o bónus.
+
+30
+00:02:19.470 --> 00:02:22.738
+Ou seja,
+ele tem uma característica adicional ali.
+
+31
+00:02:22.738 --> 00:02:27.610
+Se eu olhar, essas duas classes
+aqui estão com o código duplicado,
+
+32
+00:02:27.610 --> 00:02:33.770
+apesar de não ser código,
+assim de método, de comportamento,
+
+33
+00:02:33.770 --> 00:02:39.025
+eu tenho ali grupo de
+dados que está duplicado,
+
+34
+00:02:39.025 --> 00:02:44.176
+apesar de por exemplo,
+na classe Gerente eu ter ali o bónus.
+
+35
+00:02:44.176 --> 00:02:49.374
+Então, vamos tentar pensar, como é que
+a gente conseguiria, a gente poderia
+
+36
+00:02:49.374 --> 00:02:54.544
+estar criando uma situação ou uma solução
+que evitaria eu duplicar esse código.
+
+37
+00:02:54.544 --> 00:02:58.847
+Uma solução, que eu acredito que
+alguns de vocês tenham pensado,
+
+38
+00:02:58.847 --> 00:03:03.050
+é de repente estar colocando tudo
+isso dentro de uma classe só.
+
+39
+00:03:03.050 --> 00:03:07.747
+Então falou assim, eu vou colocar ali,
+vou chamar a classe de Emprego e aí o
+
+40
+00:03:07.747 --> 00:03:11.368
+Gerentes que também são
+empregados eu vou colocar ali,
+
+41
+00:03:11.368 --> 00:03:17.022
+só que eu vou ter a informação de bónus
+e essa informação para quando eu tiver
+
+42
+00:03:17.022 --> 00:03:22.652
+funcionário comum vai ser 0 e aí
+quando for gerente ela vai ter valor,
+
+43
+00:03:22.652 --> 00:03:28.150
+seria meio que como se fosse atributo
+opcional, dependendo se é gerente ou não.
+
+44
+00:03:28.150 --> 00:03:32.560
+E aí, agora eu vou falar para vocês porque
+é que isso dai não é uma boa ideia.
+
+45
+00:03:32.560 --> 00:03:37.639
+Imagine por exemplo, se você tem métodos
+específicos do gerente, por exemplo,
+
+46
+00:03:37.639 --> 00:03:43.341
+método para contratar empregado,
+ou método para demitir empregado.
+
+47
+00:03:43.341 --> 00:03:47.925
+Não seria legal que todo o
+empregado tivesse esses métodos,
+
+48
+00:03:47.925 --> 00:03:52.192
+ou que de repente eu tivesse
+ali tipo e por exemplo,
+
+49
+00:03:52.192 --> 00:03:57.047
+verificasse, então se o bónus não for
+0 então eu não
+
+50
+00:03:57.047 --> 00:04:01.128
+vou deixar ele executar aquele método,
+porque nesse caso ele é gerente.
+
+51
+00:04:01.128 --> 00:04:02.290
+Isso daí não é legal.
+
+52
+00:04:02.290 --> 00:04:08.170
+Você tem métodos numa classe que você
+não pode usar para todos os objetos.
+
+53
+00:04:08.170 --> 00:04:13.118
+Outro motivo pelo qual isso aí não
+seria uma boa ideia, por exemplo,
+
+54
+00:04:13.118 --> 00:04:16.557
+a questão se eu tiver
+outro tipo de empregado,
+
+55
+00:04:16.557 --> 00:04:22.022
+então imagina que eu tenho ali tipo
+supervisor, então ele fala assim,
+
+56
+00:04:22.022 --> 00:04:27.400
+então vamos colocar ali mais
+algumas informações opcionais e aí
+
+57
+00:04:27.400 --> 00:04:32.567
+vai lá por exemplo, tem ali o período de
+supervisão e tem a sessão de supervisão.
+
+58
+00:04:32.567 --> 00:04:34.269
+Então o que é que acontece?
+
+59
+00:04:34.269 --> 00:04:39.254
+Para todo o supervisor e todo o
+empregado normal, o bónus seria 0,
+
+60
+00:04:39.254 --> 00:04:43.543
+aí para todo o gerente e para
+todo o empregado o período de
+
+61
+00:04:43.543 --> 00:04:48.214
+supervisão e a sessão de
+supervisão também ficariam vazios,
+
+62
+00:04:48.214 --> 00:04:52.991
+e aí se surgisse mais a gente
+teria mais uma série de
+
+63
+00:04:52.991 --> 00:04:58.130
+informações que se aplicaria
+só a tipo e ficaria vazio.
+
+64
+00:04:58.130 --> 00:05:02.514
+Eu, uma experiência minha,
+que eu tive dessa parte,
+
+65
+00:05:02.514 --> 00:05:07.906
+eu já vi por exemplo, sistemas que
+utilizavam isso, que tinham 5, 6 tipos,
+
+66
+00:05:07.906 --> 00:05:12.786
+que você de repente tinha ali uma classe,
+isso aí acontece muito por exemplo,
+
+67
+00:05:12.786 --> 00:05:18.546
+com tabela de banco de dados, e aí por
+exemplo, talvez umas 20 informações ali,
+
+68
+00:05:18.546 --> 00:05:24.096
+umas 15 são opcionais e aí a grande,
+a maioria dos objetos
+
+69
+00:05:24.096 --> 00:05:27.680
+que você vai ter daquela classe vão ficar
+com a maioria das informações vazias.
+
+70
+00:05:27.680 --> 00:05:31.030
+Isso aí não é interessante, porque ás
+vezes a pessoa está pegando uma classe,
+
+71
+00:05:31.030 --> 00:05:33.984
+"que informações é que eu
+posso obter daqui?" " não,
+
+72
+00:05:33.984 --> 00:05:38.443
+mas não é sempre que eu consigo",
+isso daí acaba confundindo bastante.
+
+73
+00:05:38.443 --> 00:05:43.255
+Eu já participei de projetos,
+já entrei projetos que isso
+
+74
+00:05:43.255 --> 00:05:47.765
+estava acontecendo e realmente acaba
+confundindo muito todo o mundo.
+
+75
+00:05:47.765 --> 00:05:52.751
+Uma informação que é importate e
+a gente não parou para pensar tanto,
+
+76
+00:05:52.751 --> 00:05:57.608
+é que o empregado, ele,
+o gerente ele é empregado, então,
+
+77
+00:05:57.608 --> 00:06:02.742
+por mais que eu possa representar eles
+separado, ele é como se fosse tipo
+
+78
+00:06:02.742 --> 00:06:07.662
+especial de empregado, assim como
+o supervisor seria tipo especial
+
+79
+00:06:07.662 --> 00:06:12.475
+de empregado, que pode ter informações
+a mais, que pode ter métodos a mais,
+
+80
+00:06:12.475 --> 00:06:17.102
+ou talvez o método para o gerente que
+tem lá no empregado funciona pouco
+
+81
+00:06:17.102 --> 00:06:22.242
+diferente e essa relação de que é 1,
+ela é extremamente importante.
+
+82
+00:06:22.242 --> 00:06:27.465
+Então, a herança é recurso que a gente
+tem na Orientação a Objetos, que permite
+
+83
+00:06:27.465 --> 00:06:33.379
+que nós trabalhemos com diferentes
+níveis de abstração dentro de sistema.
+
+84
+00:06:33.379 --> 00:06:36.550
+Então, eu poderia ter por exemplo,
+
+85
+00:06:36.550 --> 00:06:41.600
+o Gerente estendendo a classe Empregado
+
+86
+00:06:41.600 --> 00:06:47.489
+e com isso especializando o comportamento,
+adicionando informações próprias.
+
+87
+00:06:47.489 --> 00:06:51.442
+Então nessa aula,
+a gente não vai ver a herança si,
+
+88
+00:06:51.442 --> 00:06:56.908
+ela está logo seguida na aula seguinte,
+mas antes de pensar herança,
+
+89
+00:06:56.908 --> 00:07:00.490
+a gente tem que entender
+porque é que ela é necessária.
+
+90
+00:07:00.490 --> 00:07:05.910
+Que é essa a questão de você poder ter
+vários níveis de abstração dentro de
+
+91
+00:07:05.910 --> 00:07:11.680
+sistema, ou seja, determinado momento
+você quer uma coisa mais geral,
+
+92
+00:07:11.680 --> 00:07:16.055
+e outro momento você quer
+coisas mais específicas.
+
+93
+00:07:16.055 --> 00:07:20.729
+E aí você tem como encadear, por exemplo,
+eu posso querer terno meu empregado mais
+
+94
+00:07:20.729 --> 00:07:26.106
+genérico e posso querer ter o gerente que
+pode ter comportamentos mais específicos,
+
+95
+00:07:26.106 --> 00:07:29.645
+o supervisor que tem
+comportamentos mais específicos.
+
+96
+00:07:29.645 --> 00:07:34.215
+Espero que com isso, a gente tenha ficado
+claro, o que é que são esses níveis
+
+97
+00:07:34.215 --> 00:07:39.072
+de abstração que a gente pode ter
+entre as classes e entender como é que
+
+98
+00:07:39.072 --> 00:07:44.013
+isso daí é importante e necessário
+quando estamos representando domínio.
+
+99
+00:07:44.013 --> 00:07:47.351
+Muito obrigado,
+fique ligado na próxima aula, que aí sim,
+
+100
+00:07:47.351 --> 00:07:49.260
+vamos entrar na parte da herança.
+
+101
+00:07:49.260 --> 00:07:55.060
+[MÚSICA]

@@ -1,0 +1,231 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.058
+Após esse vídeo,
+
+2
+00:00:01.058 --> 00:00:04.945
+você será capaz de explicar o que
+é o Lugar Geométrico das Raízes.
+
+3
+00:00:04.945 --> 00:00:10.429
+Você já sabe como o polo malha fechada
+de sistema de primeira ordem com e sem
+
+4
+00:00:10.429 --> 00:00:15.369
+zeros varia à medida que variamos o ganho
+e você sabe também como os polos malha
+
+5
+00:00:15.369 --> 00:00:20.310
+fechada de sistema de segunda ordem sem
+zeros variam conforme variamos o ganho.
+
+6
+00:00:20.310 --> 00:00:25.275
+E os polos malha fechada são as
+raízes do denominador da função de
+
+7
+00:00:25.275 --> 00:00:30.240
+transferência malha fechada ou as
+raízes de 1 mais k G de s igual a 0.
+
+8
+00:00:30.240 --> 00:00:35.855
+Então o Lugar Geométrico das Raízes,
+LGR, também chamado de Root Locus,
+
+9
+00:00:35.855 --> 00:00:40.153
+nada mais é do que o conjunto das
+possíveis posições das raízes de 1
+
+10
+00:00:40.153 --> 00:00:44.467
+mais kG de s igual a 0 para o valor
+de k variando de 0 a infinito.
+
+11
+00:00:44.467 --> 00:00:49.942
+Por exemplo, para o seguinte polinômio
+s mais ks mais a mais kb igual a 0.
+
+12
+00:00:49.942 --> 00:00:53.150
+Você já sabe que as raízes vão de menos a,
+
+13
+00:00:53.150 --> 00:00:57.130
+para k igual a 0, até menos b,
+quando k tende a infinito.
+
+14
+00:00:57.130 --> 00:01:00.753
+E o Lugar Geométrico das
+Raízes nesse caso é o trecho
+
+15
+00:01:00.753 --> 00:01:05.669
+da reta real que vai de menos a até menos
+b, como nesta ilustração no Plano s,
+
+16
+00:01:05.669 --> 00:01:09.730
+onde o Lugar Geométrico das Raízes
+é demarcado pela linha azul grossa.
+
+17
+00:01:09.730 --> 00:01:14.760
+Para o polinômio s ao quadrado
+mais as mais k igual a 0,
+
+18
+00:01:14.760 --> 00:01:19.690
+as raízes vão de menos a e 0 para menos
+a sobre 2 e depois passam a ter uma
+
+19
+00:01:19.690 --> 00:01:24.694
+parte imaginária, que vai para infinito
+à medida que k tende a infinito.
+
+20
+00:01:24.694 --> 00:01:29.862
+E o Lugar Geométrico das Raízes nesse
+caso é o trecho da reta real que vai
+
+21
+00:01:29.862 --> 00:01:35.025
+de 0 até menos a mais a reta com
+a parte real igual a menos a sobre
+
+22
+00:01:35.025 --> 00:01:40.340
+2 e parte imaginária variando de
+menos infinito a mais infinito.
+
+23
+00:01:40.340 --> 00:01:45.440
+Vamos dar uma olhada no Lugar Geométrico
+das Raízes para mais alguns polinômios.
+
+24
+00:01:45.440 --> 00:01:50.940
+Por exemplo, s vezes s mais 1
+vezes s mais 2 mais k igual a 0,
+
+25
+00:01:50.940 --> 00:01:56.450
+s vezes s mais 1 vezes s mais 3 mais
+
+26
+00:01:56.450 --> 00:02:03.224
+k s mais 2 igual a 0 e s s mais 1 s
+mais 2 s mais 5 mais k igual a 0.
+
+27
+00:02:03.224 --> 00:02:08.740
+E para isso vou usar conjunto de
+instruções Matlab arquivo ponto m.
+
+28
+00:02:08.740 --> 00:02:13.490
+O arquivo ponto m está disponibilizado
+no material de leitura dentro de
+
+29
+00:02:13.490 --> 00:02:14.793
+arquivo ponto zip.
+
+30
+00:02:14.793 --> 00:02:19.801
+Descompacte o arquivo lgr ponto m
+para a pasta de trabalho do Matlab,
+
+31
+00:02:19.801 --> 00:02:24.651
+que é a pasta onde você salvou o
+modelo e o template controlita.
+
+32
+00:02:24.651 --> 00:02:29.198
+Deve ser algo como C dois
+pontos barra Usuários barra seu
+
+33
+00:02:29.198 --> 00:02:32.801
+nome barra Documentos barra Matlab.
+
+34
+00:02:32.801 --> 00:02:37.628
+Depois basta digitar lgr e teclar
+enter na linha de comando do Matlab
+
+35
+00:02:37.628 --> 00:02:42.080
+para executar o conjunto de instruções
+do arquivo e ver os gráficos a seguir.
+
+36
+00:02:42.080 --> 00:02:49.410
+Aqui temos o Lugar Geométrico das Raízes
+de s s mais 1 s mais 2 mais k igual a 0,
+
+37
+00:02:49.410 --> 00:02:55.120
+sendo desenhado à medida que k varia
+de 0 a 100 para alguns valores de k.
+
+38
+00:02:55.120 --> 00:02:59.690
+E esse é o Lugar Geométrico
+das Raízes de s
+
+39
+00:02:59.690 --> 00:03:04.260
+vezes s mais 1 vezes s mais
+3 mais k s mais 2 igual a 0,
+
+40
+00:03:04.260 --> 00:03:09.500
+sendo desenhado à medida que k varia
+de 0 a 100 para alguns valores de k.
+
+41
+00:03:09.500 --> 00:03:15.681
+E esse é o Lugar Geométrico das Raízes
+de s s mais 1 s mais 2 s mais 5 mais k
+
+42
+00:03:15.681 --> 00:03:21.900
+igual a 0, sendo desenhado à medida que k
+varia de 0 a 100 para alguns valores de k.
+
+43
+00:03:21.900 --> 00:03:27.360
+Agora você já é capaz de explicar o
+que é o Lugar Geométrico das Raízes,
+
+44
+00:03:27.360 --> 00:03:31.447
+que nada mais é do que o conjunto
+das possíveis posições das raízes de
+
+45
+00:03:31.447 --> 00:03:36.329
+1 mais kG de s igual a 0 para o
+valor de k variando de 0 a infinito.
+
+46
+00:03:36.329 --> 00:03:40.927
+No próximo vídeo, você verá que
+característica comum dos polos
+
+47
+00:03:40.927 --> 00:03:45.120
+malha fechada é utilizada para o
+traçado do Lugar Geométrico das Raízes.

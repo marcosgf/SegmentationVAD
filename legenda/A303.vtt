@@ -1,0 +1,371 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.318
+[SOM] Fato, o ator Rowan Atkinson,
+
+2
+00:00:07.318 --> 00:00:13.080
+o eterno Mr. Bean, é engenheiro
+eletricista e mestre Engenharia Elétrica,
+
+3
+00:00:13.080 --> 00:00:17.890
+sua tese de mestrado foi sobre
+Sistema de Controle Autoajustáveis.
+
+4
+00:00:17.890 --> 00:00:22.040
+Eu sou o Jackman e você
+está no mundo do Controle!
+
+5
+00:00:22.040 --> 00:00:27.786
+[MÚSICA] Bem vindo,
+
+6
+00:00:27.786 --> 00:00:33.470
+você chegou bem na hora
+do Desafio do Jackman!
+
+7
+00:00:33.470 --> 00:00:36.660
+Olha quem está aqui, professor Rubens.
+
+8
+00:00:36.660 --> 00:00:38.668
+Caro professor Rubens,
+
+9
+00:00:38.668 --> 00:00:44.510
+eu o desafio a projetar controlador
+proporcional para este sistema!
+
+10
+00:00:44.510 --> 00:00:49.515
+A saída do sistema é a posição
+do carrinho e a entrada é uma
+
+11
+00:00:49.515 --> 00:00:54.742
+tensão aplicada ao motor do carrinho
+e o requisito de desempenho
+
+12
+00:00:54.742 --> 00:00:59.290
+é que a resposta ao degrau
+tenha overshoot de 30%.
+
+13
+00:00:59.290 --> 00:01:04.410
+Mas espere, o desafio não é tão
+fácil assim, existem algumas
+
+14
+00:01:04.410 --> 00:01:09.537
+restrições: você não pode usar modelo
+matemático na forma de equações
+
+15
+00:01:09.537 --> 00:01:14.499
+diferenciais e nem pode usar a função
+de transferência de sistema.
+
+16
+00:01:14.499 --> 00:01:17.090
+Além disso você só tem uma chance,
+
+17
+00:01:17.090 --> 00:01:21.520
+isso é você não pode ficar
+testando ganho malha fechada.
+
+18
+00:01:21.520 --> 00:01:26.450
+Você precisa projetar o ganho e só
+com esse ganho projetado você pode
+
+19
+00:01:26.450 --> 00:01:31.380
+fechar a malha e verificar se o requisito
+de overshoot é ou não atendido.
+
+20
+00:01:31.380 --> 00:01:36.280
+Mas você pode testar o sistema
+malha aberta com quaisquer
+
+21
+00:01:36.280 --> 00:01:41.180
+entradas que quiser e analisar tanto
+a entrada quanto a saída malha aberta.
+
+22
+00:01:41.180 --> 00:01:44.420
+E então, aceita o desafio?
+
+23
+00:01:44.420 --> 00:01:48.470
+Muito bem, mãos a obra e boa sorte!
+
+24
+00:01:48.470 --> 00:01:54.292
+Crianças, não tentem isso casa, o
+
+25
+00:01:54.292 --> 00:01:59.950
+professor Rubens é especialista altamente
+treinado e sabe o que está fazendo.
+
+26
+00:01:59.950 --> 00:02:06.480
+[MÚSICA]
+
+27
+00:02:06.480 --> 00:02:14.580
+[MÚSICA] [MÚSICA]
+
+28
+00:02:14.580 --> 00:02:19.425
+E então professor Rubens,
+
+29
+00:02:19.425 --> 00:02:24.270
+cumpriu o desafio do Jackman?
+
+30
+00:02:24.270 --> 00:02:29.110
+Muito bem, vamos testar o sistema.
+
+31
+00:02:29.110 --> 00:02:34.738
+Vou colocar aqui o indicador de referência
+e o indicador do requesito de overshoot,
+
+32
+00:02:34.738 --> 00:02:35.460
+vamos lá.
+
+33
+00:02:35.460 --> 00:02:38.441
+E jadabim, jadabá!
+
+34
+00:02:38.441 --> 00:02:44.080
+Muito bem professor Rubens,
+agora conte pra gente como você fez isso.
+
+35
+00:02:44.080 --> 00:02:48.110
+Espere, estou ouvindo alguma coisa.
+
+36
+00:02:48.110 --> 00:02:53.610
+Parece que é novo Desafio do Jackman!
+
+37
+00:02:53.610 --> 00:02:58.720
+E nesse novo desafio as condições
+são basicamente as mesmas.
+
+38
+00:02:58.720 --> 00:03:03.401
+Nada de equações diferenciais e
+nada de função de transferência e
+
+39
+00:03:03.401 --> 00:03:05.110
+você só tem uma chance.
+
+40
+00:03:05.110 --> 00:03:10.100
+Você vai poder testar o sistema
+malha aberta à vontade novamente
+
+41
+00:03:10.100 --> 00:03:14.300
+e a resposta ao degrau do sistema
+vai ter que ter o mesmo overshoot,
+
+42
+00:03:14.300 --> 00:03:18.500
+só que o instante de pico
+deve ser reduzido a metade.
+
+43
+00:03:18.500 --> 00:03:22.987
+E você agora agora vai poder usar
+controlador mais elaborado e
+
+44
+00:03:22.987 --> 00:03:25.000
+controlador proporcional.
+
+45
+00:03:25.000 --> 00:03:27.345
+Aceita o novo desafio?
+
+46
+00:03:27.345 --> 00:03:29.930
+Muito bem, vá frente.
+
+47
+00:03:29.930 --> 00:03:33.268
+Crianças, não tentem isso casa.
+
+48
+00:03:33.268 --> 00:03:36.830
+Blá blá blá, blá blá blá, blá blá blá.
+
+49
+00:03:36.830 --> 00:03:43.720
+[MÚSICA]
+
+50
+00:03:43.720 --> 00:03:51.476
+[MÚSICA] Então
+
+51
+00:03:51.476 --> 00:03:56.360
+professor Rubens,
+
+52
+00:03:56.360 --> 00:03:59.207
+vamos testar o sistema malha fechada?
+
+53
+00:03:59.207 --> 00:04:01.490
+Lembre, você só tem uma chance.
+
+54
+00:04:01.490 --> 00:04:06.080
+E jadabim, jadabá!
+
+55
+00:04:06.080 --> 00:04:08.528
+Muito bem, meus parabéns.
+
+56
+00:04:08.528 --> 00:04:10.980
+Você conseguiu novamente.
+
+57
+00:04:10.980 --> 00:04:14.971
+Vamos dar uma olhada nas respostas
+ao degrau ao mesmo tempo.
+
+58
+00:04:14.971 --> 00:04:18.030
+Acima a anterior e abaixo
+as novas respostas.
+
+59
+00:04:18.030 --> 00:04:25.630
+E agora câmera lenta.
+
+60
+00:04:25.630 --> 00:04:33.570
+E agora
+
+61
+00:04:33.570 --> 00:04:41.510
+o professor Rubens vai nos dizer como
+conseguiu vencer o Desafio do Jackman!
+
+62
+00:04:41.510 --> 00:04:46.200
+Mas espere,
+na verdade o nosso tempo acabou,
+
+63
+00:04:46.200 --> 00:04:51.920
+mas você vai poder acompanhar o professor
+Rubens nas próximas cinco semanas.
+
+64
+00:04:51.920 --> 00:04:56.293
+Ele vai explicar como foi capaz de
+projetar o controle proporcional
+
+65
+00:04:56.293 --> 00:04:58.680
+sem o modelo matemático do sistema.
+
+66
+00:04:58.680 --> 00:05:03.872
+Você também vai ver como projetar
+controlador de avanço de fase que
+
+67
+00:05:03.872 --> 00:05:09.910
+é capaz de fazer com que o sistema atenda
+ao mesmo tempo requisitos de velocidade
+
+68
+00:05:09.910 --> 00:05:14.900
+e de overshoot, algo que você não consegue
+fazer com simples controle proporcional.
+
+69
+00:05:14.900 --> 00:05:19.730
+Você vai conhecer também o
+controlador de atraso de fase,
+
+70
+00:05:19.730 --> 00:05:24.560
+que é capaz de melhorar o erro regime
+sem alterar a estabilidade do sistema.
+
+71
+00:05:24.560 --> 00:05:29.640
+Você também vai conhecer os
+controladores PI, PD e PID.
+
+72
+00:05:29.640 --> 00:05:34.150
+Tudo isso Controle Usando
+a Resposta Frequência.
+
+73
+00:05:34.150 --> 00:05:39.310
+E agora eu deixo você nas competentes
+mãos do professor Rubens,
+
+74
+00:05:39.310 --> 00:05:45.100
+que guiará você mais esta jornada pelo
+maravilhoso mundo do controle de sistemas.
+
+75
+00:05:45.100 --> 00:05:51.020
+E jadabim jadabá até o
+próximo mundo do controle!
+
+76
+00:05:51.020 --> 00:05:53.617
+>> Ei Djan você vai fazer esse curso?
+
+77
+00:05:53.617 --> 00:05:56.940
+>> É claro Djau,
+eu não perderia ele por nada.
+
+78
+00:05:56.940 --> 00:05:58.692
+>> Olá Rubens!
+
+79
+00:05:58.692 --> 00:06:03.160
+>> Oi Jackson, quem é aquele cara?
+
+80
+00:06:03.160 --> 00:06:05.857
+Parece que eu conheço ele.
+
+81
+00:06:05.857 --> 00:06:06.912
+>> Jackman?
+
+82
+00:06:06.912 --> 00:06:09.380
+Não, nunca ouvi falar.

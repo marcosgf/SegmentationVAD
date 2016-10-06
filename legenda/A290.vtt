@@ -1,0 +1,640 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.560
+[MÚSICA] [SOM]
+
+2
+00:00:08.560 --> 00:00:12.557
+Após esse vídeo,
+você será capaz de descrever
+
+3
+00:00:12.557 --> 00:00:17.534
+as duas facetas do controle de
+sistemas: a análise e o projeto.
+
+4
+00:00:17.534 --> 00:00:22.388
+Você será capaz também de descrever
+o controle malha aberta e o controle
+
+5
+00:00:22.388 --> 00:00:23.370
+malha fechada.
+
+6
+00:00:23.370 --> 00:00:27.585
+Você também será capaz de perceber
+a utilização natural do controle com
+
+7
+00:00:27.585 --> 00:00:32.385
+realimentação por parte dos seres humanos
+e de citar exemplos de controle malha
+
+8
+00:00:32.385 --> 00:00:37.272
+aberta e controle malha fechada
+encontrados seu dia-a-dia.
+
+9
+00:00:37.272 --> 00:00:43.004
+Muito bem, agora que você já sabe o que
+são requisitos de desempenho, podemos
+
+10
+00:00:43.004 --> 00:00:47.931
+falar das duas facetas do controle de
+sistemas, que são a análise e o projeto.
+
+11
+00:00:47.931 --> 00:00:51.054
+Na análise, nosso foco está verificar se
+
+12
+00:00:51.054 --> 00:00:54.840
+sistema atende ou não aos
+requisitos de desempenho.
+
+13
+00:00:54.840 --> 00:01:00.151
+Uma maneira de fazer isso é testar
+o sistema fazendo test-drive.
+
+14
+00:01:00.151 --> 00:01:04.971
+Se queremos carro que acelere
+rápido podemos simplesmente
+
+15
+00:01:04.971 --> 00:01:08.920
+testá-lo e verificar se ele é
+rápido o suficiente ou não.
+
+16
+00:01:08.920 --> 00:01:16.622
+Note no entanto que a cada teste que
+fazemos estamos desgastando o veículo,
+
+17
+00:01:16.622 --> 00:01:20.260
+consumindo combustível e
+gastando nosso precioso tempo.
+
+18
+00:01:20.260 --> 00:01:25.440
+E lembram que eu falei que controle
+de sistemas é coisa de preguiçoso?
+
+19
+00:01:25.440 --> 00:01:31.110
+Seria então o teste a forma
+mais eficiente de análise?
+
+20
+00:01:31.110 --> 00:01:36.231
+Ou poderíamos analisar o
+sistema com menos esforço,
+
+21
+00:01:36.231 --> 00:01:38.860
+menos gasto e menos tempo?
+
+22
+00:01:38.860 --> 00:01:42.060
+Deixemos essa pergunta
+aberto por enquanto.
+
+23
+00:01:42.060 --> 00:01:49.290
+Bem, se o sistema passar na nossa análise,
+
+24
+00:01:49.290 --> 00:01:54.357
+ou seja, se verificarmos que o sistema
+atende aos requisitos de desempenho,
+
+25
+00:01:54.357 --> 00:01:56.520
+não precisamos fazer mais nada.
+
+26
+00:01:56.520 --> 00:02:01.286
+Mas se ao realizarmos a análise,
+constatarmos que o nosso
+
+27
+00:02:01.286 --> 00:02:06.702
+sistema não atende aos requisitos
+precisamos de alguma forma alterar
+
+28
+00:02:06.702 --> 00:02:11.710
+o desempenho do sistema ou a relação
+entre a sua entrada e a sua saída.
+
+29
+00:02:11.710 --> 00:02:20.037
+Fazemos isso com o uso do
+que chamamos de Controle!
+
+30
+00:02:20.037 --> 00:02:25.680
+E o processo de definição
+do controle é o projeto.
+
+31
+00:02:25.680 --> 00:02:30.352
+O controle consiste na modificação do
+
+32
+00:02:30.352 --> 00:02:36.894
+comportamento do sistema ou na
+alteração de sua relação entrada/saída,
+
+33
+00:02:36.894 --> 00:02:41.801
+de modo que a nova relação passe
+a atender requisitos de desempenho que
+
+34
+00:02:41.801 --> 00:02:45.780
+o sistema não atenderia naturalmente.
+
+35
+00:02:45.780 --> 00:02:50.110
+Esse controle pode ser realizado
+malha aberta ou malha fechada.
+
+36
+00:02:50.110 --> 00:02:52.676
+No controle malha aberta,
+
+37
+00:02:52.676 --> 00:02:58.422
+ajustamos o valor da entrada com
+base exclusivamente na referência.
+
+38
+00:02:58.422 --> 00:03:03.209
+Nós não nos preocupamos verificar
+se a saída está realmente indo para
+
+39
+00:03:03.209 --> 00:03:04.500
+o valor desejado.
+
+40
+00:03:04.500 --> 00:03:07.700
+Nós confiamos cegamente nosso projeto.
+
+41
+00:03:07.700 --> 00:03:15.443
+Desse modo, se tudo ocorre perfeitamente
+bem temos a saída desejada.
+
+42
+00:03:15.443 --> 00:03:20.760
+Mas se qualquer coisa não é exatamente
+como previmos, teremos problema.
+
+43
+00:03:20.760 --> 00:03:27.309
+Digamos que é mais ou menos como planejar
+ir ao cinema saindo cima da hora.
+
+44
+00:03:27.309 --> 00:03:30.080
+Se não pegarmos trânsito nenhum, tudo bem.
+
+45
+00:03:30.080 --> 00:03:34.914
+Mas se dermos o azar de pegar
+congestionamento ou muitos
+
+46
+00:03:34.914 --> 00:03:39.410
+sinais fechados,
+ou até mesmo uma obra no caminho, já era.
+
+47
+00:03:39.410 --> 00:03:44.515
+No controle malha fechada,
+realimentamos o sinal
+
+48
+00:03:44.515 --> 00:03:50.195
+de saída e subtraímos esse sinal da
+referência, gerando sinal de erro.
+
+49
+00:03:50.195 --> 00:03:54.620
+E esse sinal de erro é então usado
+para ajustar a entrada do sistema.
+
+50
+00:03:54.620 --> 00:04:02.127
+Por usar uma realimentação do sinal de
+saída para definir o valor da entrada,
+
+51
+00:04:02.127 --> 00:04:06.450
+o controle malha fechada é também
+chamado de Controle com Realimentação.
+
+52
+00:04:06.450 --> 00:04:10.791
+Algumas pessoas preferem
+chamar a realimentação de
+
+53
+00:04:10.791 --> 00:04:13.720
+retroação ou de retroalimentação.
+
+54
+00:04:13.720 --> 00:04:19.155
+Eu não gosto muito do termo retro,
+então eu uso realimentação.
+
+55
+00:04:19.155 --> 00:04:23.282
+Recapitulando, no controle malha aberta,
+
+56
+00:04:23.282 --> 00:04:27.150
+a entrada depende diretamente
+da referência, mas não da saída.
+
+57
+00:04:27.150 --> 00:04:32.029
+No controle malha fechada, a entrada
+depende tanto da referência quanto
+
+58
+00:04:32.029 --> 00:04:34.940
+do sinal de saída,
+através do sinal de erro.
+
+59
+00:04:34.940 --> 00:04:39.010
+Vamos ver exemplo prático
+da diferença do controle
+
+60
+00:04:39.010 --> 00:04:42.310
+malha aberta e do controle malha fechada.
+
+61
+00:04:42.310 --> 00:04:50.729
+[MÚSICA] Este é o servomecanismo
+didático de nosso laboratório.
+
+62
+00:04:50.729 --> 00:04:56.428
+Sua saída é a velocidade de rotação e sua
+entrada é uma tensão aplicada ao motor.
+
+63
+00:04:56.428 --> 00:05:00.824
+Aqui ele está operando malha
+aberta onde o sinal de entrada foi
+
+64
+00:05:00.824 --> 00:05:04.030
+ajustado de acordo com a saída desejada.
+
+65
+00:05:04.030 --> 00:05:06.830
+Acrescentando alguns pesos
+
+66
+00:05:06.830 --> 00:05:11.039
+ao servomecanismo nós aumentamos
+seu momento de inércia.
+
+67
+00:05:11.039 --> 00:05:15.592
+Mas como o sistema está operando malha
+aberta ele não percebe essa mudança e
+
+68
+00:05:15.592 --> 00:05:18.900
+continua usando exatamente
+o mesmo sinal de entrada.
+
+69
+00:05:18.900 --> 00:05:23.500
+E, por isso, a velocidade diminui.
+
+70
+00:05:23.500 --> 00:05:28.100
+Aqui temos o servo malha fechada.
+
+71
+00:05:28.100 --> 00:05:33.035
+O sinal de entrada para o motor
+é ajustado de acordo com o erro,
+
+72
+00:05:33.035 --> 00:05:37.970
+que é a diferença entre o valor
+desejado e a velocidade real do servo.
+
+73
+00:05:37.970 --> 00:05:46.150
+O efeito do aumento do momento de
+inércia malha fechada é muito menor.
+
+74
+00:05:46.150 --> 00:05:51.148
+Isso porque a tendência de perder
+velocidade aumenta o sinal de erro e esse
+
+75
+00:05:51.148 --> 00:05:55.330
+aumento do sinal de erro aumenta
+o sinal de entrada do sistema
+
+76
+00:05:55.330 --> 00:05:59.785
+corrigindo essa velocidade.
+
+77
+00:05:59.785 --> 00:06:04.240
+Vamos dar uma olhada nos gráficos
+da saída do servo função do tempo.
+
+78
+00:06:04.240 --> 00:06:09.890
+Aqui nós temos a saída do servo malha
+aberta sem as massas adicionais.
+
+79
+00:06:09.890 --> 00:06:12.594
+Como o ganho foi ajustado perfeitamente,
+
+80
+00:06:12.594 --> 00:06:17.260
+a saída acompanha bem o valor desejado,
+que é de 2 radianos por segundo.
+
+81
+00:06:17.260 --> 00:06:25.964
+Com as massas, vemos que a saída do
+servo diminuiu bastante malha aberta,
+
+82
+00:06:25.964 --> 00:06:31.038
+caindo quase pela metade,
+devido ao momento de inércia muito maior.
+
+83
+00:06:31.038 --> 00:06:35.595
+Malha fechada,
+a saída não consegue acompanhar exatamente
+
+84
+00:06:35.595 --> 00:06:40.489
+a nossa referência mas é esse sinal
+de erro que é amplificado pela
+
+85
+00:06:40.489 --> 00:06:44.410
+realimentação e consegue
+manter o servo girando.
+
+86
+00:06:44.410 --> 00:06:49.665
+E podemos notar que,
+com o acréscimo das massas,
+
+87
+00:06:49.665 --> 00:06:55.310
+a diferença na saída para o sistema
+malha fechada é muito pequena.
+
+88
+00:06:55.310 --> 00:07:00.550
+Esse aumento do erro faz com que o
+sinal de entrada também aumente.
+
+89
+00:07:00.550 --> 00:07:06.190
+Vamos ver novamente o servo,
+mas agora simultaneamente.
+
+90
+00:07:06.190 --> 00:07:09.166
+Na parte de cima,
+temos o servo malha aberta.
+
+91
+00:07:09.166 --> 00:07:11.940
+Na parte de baixo, o servo malha fechada.
+
+92
+00:07:11.940 --> 00:07:17.570
+E você nota claramente que a diferença de
+velocidade é muito maior malha aberta.
+
+93
+00:07:17.570 --> 00:07:22.411
+[MÚSICA] Os seres
+
+94
+00:07:22.411 --> 00:07:27.287
+humanos utilizam o controle com
+realimentação intuitivamente e é
+
+95
+00:07:27.287 --> 00:07:32.470
+muito fácil perceber a utilização desse
+tipo de controle nosso dia-a-dia.
+
+96
+00:07:32.470 --> 00:07:37.389
+Se, de alguma forma,
+a saída do sistema estiver sendo comparada
+
+97
+00:07:37.389 --> 00:07:42.515
+com o valor desejado e a entrada do
+sistema for ajustada com base nesse erro,
+
+98
+00:07:42.515 --> 00:07:49.076
+estamos diante do controle malha fechada
+com o ser humano executando controle.
+
+99
+00:07:49.076 --> 00:07:53.243
+Por exemplo, ao verificar constantemente
+
+100
+00:07:53.243 --> 00:07:57.765
+a velocidade no velocímetro e fazer
+ajustes no pedal do acelerador,
+
+101
+00:07:57.765 --> 00:08:02.170
+o motorista está realizando o controle
+malha fechada da velocidade do veículo.
+
+102
+00:08:02.170 --> 00:08:07.067
+Já no caso de forno a gás,
+temos o controle malha aberta.
+
+103
+00:08:07.067 --> 00:08:09.305
+A entrada, que é o fluxo de gás,
+
+104
+00:08:09.305 --> 00:08:13.870
+depende da temperatura desejada mas
+não da temperatura real do forno.
+
+105
+00:08:13.870 --> 00:08:18.837
+Se alguém ficasse medindo constantemente
+a temperatura real do forno e
+
+106
+00:08:18.837 --> 00:08:23.854
+ajustasse o fluxo de gás a partir da
+diferença entre a temperatura desejada
+
+107
+00:08:23.854 --> 00:08:28.762
+e a temperatura real do forno,
+aí teríamos também controle malha fechada,
+
+108
+00:08:28.762 --> 00:08:31.350
+novamente com o ser
+humano fechando a malha.
+
+109
+00:08:31.350 --> 00:08:36.873
+Voltando ao projeto,
+projetar nada mais é que definir como
+
+110
+00:08:36.873 --> 00:08:42.490
+o sinal de entrada será gerado a partir da
+referência ou a partir do sinal de erro,
+
+111
+00:08:42.490 --> 00:08:46.774
+de modo que o sistema passe a atender
+aos requisitos de desempenho.
+
+112
+00:08:46.774 --> 00:08:51.646
+Outras palavras, projetar é definir
+como esse bloco que chamamos
+
+113
+00:08:51.646 --> 00:08:54.350
+de ajuste realmente irá funcionar.
+
+114
+00:08:54.350 --> 00:08:59.590
+Assim como na análise,
+podemos fazer isso experimentalmente
+
+115
+00:08:59.590 --> 00:09:04.830
+testando diferentes opções e verificando
+a saída para cada uma delas.
+
+116
+00:09:04.830 --> 00:09:09.660
+Mas isso parece ser menos eficiente
+no projeto do que já era na análise.
+
+117
+00:09:09.660 --> 00:09:16.181
+De qualquer forma, agora você já
+entendeu o que é o Controle de Sistemas.
+
+118
+00:09:16.181 --> 00:09:21.536
+Ele basicamente consiste na análise do
+projeto, com o objetivo de verificar
+
+119
+00:09:21.536 --> 00:09:26.630
+e adequar o desempenho ou o comportamento
+de sistema aos requisitos de desempenho.
+
+120
+00:09:26.630 --> 00:09:33.330
+Na análise, verificamos se o
+sistema atende aos requisitos.
+
+121
+00:09:33.330 --> 00:09:38.022
+No projeto, ajustamos o desempenho
+para que ele atenda aos
+
+122
+00:09:38.022 --> 00:09:42.230
+requisitos e fazemos isso
+projetando o controle do sistema.
+
+123
+00:09:42.230 --> 00:09:49.730
+E esse controle pode ser realizado
+malha aberta ou malha fechada.
+
+124
+00:09:49.730 --> 00:09:56.660
+Agora você já deve ser capaz de descrever
+as duas facetas do controle de sistemas.
+
+125
+00:09:56.660 --> 00:09:57.975
+A análise e o projeto.
+
+126
+00:09:57.975 --> 00:10:02.610
+Você também deve ser capaz de descrever
+o controle malha aberta e o controle
+
+127
+00:10:02.610 --> 00:10:03.590
+malha fechada.
+
+128
+00:10:03.590 --> 00:10:07.803
+Além disso, você deve ser capaz de
+
+129
+00:10:07.803 --> 00:10:12.462
+perceber a utilização
+natural do controle com
+
+130
+00:10:12.462 --> 00:10:16.634
+realimentação por parte dos seres
+humanos e de citar exemplos de controle
+
+131
+00:10:16.634 --> 00:10:20.320
+malha fechada e de controle malha
+aberta encontrados no seu dia-a-dia.
+
+132
+00:10:20.320 --> 00:10:26.720
+No próximo vídeo veremos exemplo de
+controle malha fechada mais detalhes.
+
+133
+00:10:26.720 --> 00:10:32.110
+Até lá!
+
+134
+00:10:32.110 --> 00:10:37.500
+[SOM]

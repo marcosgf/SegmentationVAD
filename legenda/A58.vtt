@@ -1,0 +1,436 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.700
+[MÚSICA]
+
+2
+00:00:05.700 --> 00:00:13.605
+Olá!
+
+3
+00:00:13.605 --> 00:00:18.044
+Retomando o módulo "Inferindo Propriedades
+e Caraterísticas de uma População",
+
+4
+00:00:18.044 --> 00:00:21.510
+nessa videoaula nós faremos uma
+aplicação da regressão simples.
+
+5
+00:00:21.510 --> 00:00:25.700
+Convido vocês a abrirem
+o arquivo Regressão.xls.
+
+6
+00:00:25.700 --> 00:00:30.855
+Esse arquivo tem basicamente
+3 guias: o Roteiro,
+
+7
+00:00:30.855 --> 00:00:35.924
+a Descrição dos dados e o Banco de dados,
+propriamente dito.
+
+8
+00:00:35.924 --> 00:00:40.512
+No Roteiro são basicamente
+4 passos que nós iremos
+
+9
+00:00:40.512 --> 00:00:44.505
+tomar para poder rodar essa regressão.
+
+10
+00:00:44.505 --> 00:00:48.146
+Então a primeira delas, abrir o Excel,
+nós já temos ela aberta,
+
+11
+00:00:48.146 --> 00:00:49.934
+carregar a opção Suplementos.
+
+12
+00:00:49.934 --> 00:00:54.850
+Aqueles que vêm aqui em Dados,
+nesse menu Dados do Excel,
+
+13
+00:00:54.850 --> 00:00:58.648
+aqui à direita,
+deve aparecer Análise de Dados.
+
+14
+00:00:58.648 --> 00:01:01.786
+O meu Excel não tem esse
+suplemento instalado,
+
+15
+00:01:01.786 --> 00:01:06.757
+então o que a gente tem de fazer é
+vir aqui no menu Arquivo, Opções,
+
+16
+00:01:06.757 --> 00:01:12.902
+em Opções nós temos que
+clicar em Suplementos,
+
+17
+00:01:12.902 --> 00:01:19.545
+Suplementos do Excel, Ir,
+Ferramentas de análise.
+
+18
+00:01:19.545 --> 00:01:23.720
+Então marquem essa caixinha aqui ao
+lado de Ferramentas de Análise e dá OK,
+
+19
+00:01:23.720 --> 00:01:27.350
+e aí esse Suplementos,
+se eu voltar aqui no menu Dados,
+
+20
+00:01:27.350 --> 00:01:31.668
+ele já aparece aqui para eu poder
+rodar a análise de regressão.
+
+21
+00:01:31.668 --> 00:01:35.023
+Então o arquivo que nós
+temos que abrir é esse
+
+22
+00:01:35.023 --> 00:01:39.360
+Regressão.xls e nós vamos então rodar,
+
+23
+00:01:39.360 --> 00:01:44.705
+estimar o efeito de display em vendas.
+
+24
+00:01:44.705 --> 00:01:48.009
+Aqui a gente já tem uma
+causalidade esperada,
+
+25
+00:01:48.009 --> 00:01:52.065
+a gente acha que quanto maior o display,
+maior será vendas,
+
+26
+00:01:52.065 --> 00:01:56.693
+e nós precisamos agora testar para
+verificar se os dados demostram isso.
+
+27
+00:01:56.693 --> 00:01:57.439
+Muito bem.
+
+28
+00:01:57.439 --> 00:01:59.394
+Que dados são esses que nós coletamos?
+
+29
+00:01:59.394 --> 00:02:03.198
+Basicamente uma agência de trade marketing
+que tem interesse em testar ações
+
+30
+00:02:03.198 --> 00:02:04.502
+em pontos de venda.
+
+31
+00:02:04.502 --> 00:02:08.273
+O que eles fizeram foi
+variar o tamanho de display.
+
+32
+00:02:08.273 --> 00:02:12.940
+Coletaram aproximadamente
+ai 600 respondentes,
+
+33
+00:02:12.940 --> 00:02:18.588
+há dados desses 600 respondentes,
+as vendas deles na semana,
+
+34
+00:02:18.588 --> 00:02:24.170
+os displays com os diferentes
+números de frentes de produtos,
+
+35
+00:02:24.170 --> 00:02:29.090
+está em unidade, foram coletados também
+
+36
+00:02:29.090 --> 00:02:34.010
+dados relacionados à atitude dele,
+com relalação à marca do fabricante,
+
+37
+00:02:34.010 --> 00:02:40.657
+a renda do domicílio e o desconto
+oferecido pelo principal concorrente.
+
+38
+00:02:40.657 --> 00:02:44.072
+Então, eventualmente algum concorrente
+pode vir a ter feito alguma
+
+39
+00:02:44.072 --> 00:02:48.727
+ação específica e a gente acompanhou para
+verificar se tem algum efeito nas vendas
+
+40
+00:02:48.727 --> 00:02:50.010
+daquele fabricante.
+
+41
+00:02:50.010 --> 00:02:54.661
+Chamo a atenção para
+a questão utilizada para
+
+42
+00:02:54.661 --> 00:02:59.603
+capturar atitude,
+o instrumento ele tem basicame te 2
+
+43
+00:02:59.603 --> 00:03:04.512
+itens: "Eu gosto do produto oferecido
+por essa marca" o respondente então
+
+44
+00:03:04.512 --> 00:03:09.495
+teria que responder: "Discordo totalmente-
+Concordo totalmente" numa escala de 1 a 7,
+
+45
+00:03:09.495 --> 00:03:13.630
+e responder também: "Eu prefiro
+os produtos dessa marca".
+
+46
+00:03:13.630 --> 00:03:19.300
+Como a gente informou aqui, no final
+a gente está usando a média dessas duas
+
+47
+00:03:19.300 --> 00:03:25.665
+questões que foram utilizadas junto a esse
+respondente que participou da pesquisa.
+
+48
+00:03:25.665 --> 00:03:31.749
+O banco de dados, nós temos aqui,
+basicamente na coluna A,
+
+49
+00:03:31.749 --> 00:03:37.680
+vendas em reais por semana,
+na coluna B, display,
+
+50
+00:03:37.680 --> 00:03:42.705
+a quantidade de unidades que
+aquele produto que a gente
+
+51
+00:03:42.705 --> 00:03:47.730
+está fazendo a ação
+recebeu naquela ocasião,
+
+52
+00:03:47.730 --> 00:03:52.671
+a atitude do respondente com relação
+à marca desse produto que está sendo
+
+53
+00:03:52.671 --> 00:03:57.083
+exposto no display e que está
+aqui relacionado na venda,
+
+54
+00:03:57.083 --> 00:04:03.284
+a renda dele do domicílio e algum tipo
+de desconto, para baixo ou para cima,
+
+55
+00:04:03.284 --> 00:04:08.380
+então esse produto recebeu
+0.98 centavos de desconto no
+
+56
+00:04:08.380 --> 00:04:13.299
+concorrente, aqui o nosso
+produto estava mais barato.
+
+57
+00:04:13.299 --> 00:04:14.330
+Muito bem.
+
+58
+00:04:14.330 --> 00:04:19.865
+Para gente poder então saber
+se display afeta a venda,
+
+59
+00:04:19.865 --> 00:04:23.950
+o que nós temos que fazer é
+estimar uma equação de regressão,
+
+60
+00:04:23.950 --> 00:04:27.560
+onde o X é o meu display e
+o meu Y é a minha venda.
+
+61
+00:04:27.560 --> 00:04:34.947
+Então eu fui lá no menu Dados,
+Análise de dados, e eu procuro Regressão,
+
+62
+00:04:34.947 --> 00:04:40.188
+aí existe regressão aqui, eu clico em OK.
+
+63
+00:04:40.188 --> 00:04:44.360
+Qual é o intervalo Y de entrada?
+
+64
+00:04:44.360 --> 00:04:50.544
+Eu coloco, eu marco a coluna de A1 a 595,
+
+65
+00:04:50.544 --> 00:04:54.480
+eu informo que existem rótulos,
+
+66
+00:04:54.480 --> 00:05:00.345
+eu vou também marcar a coluna X,
+a coluna B,
+
+67
+00:05:00.345 --> 00:05:05.570
+que é a minha variável que explica Y,
+que é display.
+
+68
+00:05:05.570 --> 00:05:10.357
+Eu vou pedir para ele
+reproduzir os resultados
+
+69
+00:05:10.357 --> 00:05:14.700
+para mim na célula G2.
+
+70
+00:05:14.700 --> 00:05:19.411
+Eu clico em OK e aí eu tenho resumo
+
+71
+00:05:19.411 --> 00:05:24.192
+da equação de regressão estimada.
+
+72
+00:05:24.192 --> 00:05:27.833
+Aqui nós temos o R quadrado.
+
+73
+00:05:27.833 --> 00:05:32.847
+Na videoaula de regressão, nós vimos R
+
+74
+00:05:32.847 --> 00:05:38.150
+quadrado ajustado de aproximadamente .10,
+
+75
+00:05:38.150 --> 00:05:42.917
+o que é aceitável em ciências sociais,
+
+76
+00:05:42.917 --> 00:05:47.644
+em marketing,
+é R quadrado aceitável e o que
+
+77
+00:05:47.644 --> 00:05:52.605
+a gente tem que olhar na tabela
+de regessão é justamente
+
+78
+00:05:52.605 --> 00:05:57.620
+a variável display,
+qual é o efeito que ela tem em vendas.
+
+79
+00:05:57.620 --> 00:06:02.794
+É efeito positivo e
+a parte mais importante é
+
+80
+00:06:02.794 --> 00:06:08.466
+verificar se esse efeito ele é
+estatísticamente significativo.
+
+81
+00:06:08.466 --> 00:06:13.865
+E a gente vai checar no P valor,
+a gente sempre considera o bicaudal,
+
+82
+00:06:13.865 --> 00:06:19.760
+e o que acontece aqui é que ele
+é significativo a menos de 5%.
+
+83
+00:06:19.760 --> 00:06:23.331
+A amostra então que esse
+coeficiente de display,
+
+84
+00:06:23.331 --> 00:06:28.947
+quanto mais eu aumento o número de frentes
+no display, maior é a minha venda.
+
+85
+00:06:28.947 --> 00:06:32.972
+Então aqui considerando uma
+regressão linear simples,
+
+86
+00:06:32.972 --> 00:06:36.550
+uma variável testando
+a causalidade de display em vendas.
+
+87
+00:06:36.550 --> 00:06:40.314
+Essa videoaula tinha o objetivo de
+
+88
+00:06:40.314 --> 00:06:45.273
+ensinar como utilizar
+regressão utilizando o Excel.
+
+89
+00:06:45.273 --> 00:06:50.179
+Convido você a continuar no módulo
+"Inferindo Propriedades e Caraterísticas
+
+90
+00:06:50.179 --> 00:06:56.203
+de uma População" no qual
+também iremos ensinar como
+
+91
+00:06:56.203 --> 00:07:02.720
+fazer a estimativa da regressão utilizando
+o software estatístico, chamado Stata.
+
+92
+00:07:02.720 --> 00:07:08.450
+Até lá!

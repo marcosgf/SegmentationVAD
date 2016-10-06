@@ -1,0 +1,522 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.362
+[MÚSICA] [SEM
+
+2
+00:00:08.362 --> 00:00:12.445
+ÁUDIO] Olá,
+
+3
+00:00:12.445 --> 00:00:17.628
+retomando o módulo "Inferindo propriedades
+e características de uma população",
+
+4
+00:00:17.628 --> 00:00:23.341
+eu gostaria de utilizar essa videoaula
+para aplicar a correlação utilizando
+
+5
+00:00:23.341 --> 00:00:29.004
+uma base de dados que está nessa planilha
+em Excel aqui, chamada Correlação.
+
+6
+00:00:29.004 --> 00:00:32.209
+Convido vocês a clicarem na planilha.
+
+7
+00:00:32.209 --> 00:00:35.715
+A planilha basicamente tem 3 guias.
+
+8
+00:00:35.715 --> 00:00:41.322
+A primeira delas Roteiro, a segunda vai
+tratar dos detalhes dos dados, que a gente
+
+9
+00:00:41.322 --> 00:00:45.630
+vai utilizar para rodar a correlação
+e aí os dados propriamente dito.
+
+10
+00:00:45.630 --> 00:00:52.955
+Então o Roteiro, nós vamos abrir o Excel,
+nós vamos carregar a Opções e Suplementos.
+
+11
+00:00:52.955 --> 00:00:56.529
+Alguns de vocês talvez
+já tenha isso instalado,
+
+12
+00:00:56.529 --> 00:01:02.018
+aqueles que não eu peço para
+vocês verificarem em Dados,
+
+13
+00:01:02.018 --> 00:01:08.368
+aqui no canto deve aparecer uma,
+botão chamado análise de dados.
+
+14
+00:01:08.368 --> 00:01:12.758
+Aqueles que não tiverem,
+clica em Opções, Arquivo,
+
+15
+00:01:12.758 --> 00:01:19.640
+Opções clica na sequência em Suplementos,
+
+16
+00:01:19.640 --> 00:01:24.510
+aí vocês vão encontrar
+
+17
+00:01:24.510 --> 00:01:29.380
+Suplementos do Excel, clicar em Ir,
+
+18
+00:01:29.380 --> 00:01:33.840
+marca esse,
+
+19
+00:01:33.840 --> 00:01:37.690
+essa caixinha de Ferramentas de Análise,
+dá ok.
+
+20
+00:01:37.690 --> 00:01:42.610
+Uma vez ok, a gente vai voltar lá em Dados
+e a gente encontra Análise de Dados.
+
+21
+00:01:42.610 --> 00:01:48.686
+Então, uma vez instalada aqui, a gente
+consegue então calcular a correlação.
+
+22
+00:01:48.686 --> 00:01:53.785
+Muito bem, então o arquivo é o
+arquivo de Correlação, nós vamos fazer
+
+23
+00:01:53.785 --> 00:01:58.790
+primeiro de tudo gráfico de dispersão
+e depois nós vamos fazer a correlação
+
+24
+00:01:58.790 --> 00:02:03.992
+de display em vendas, para a gente poder
+verificar aí o coeficiente de correlação.
+
+25
+00:02:03.992 --> 00:02:07.289
+Muito bem,
+que dados que nós estaremos utilizando?
+
+26
+00:02:07.289 --> 00:02:07.947
+Os dados,
+
+27
+00:02:07.947 --> 00:02:13.205
+basicamente no nível de consumidor
+cruzado aí com algumas variáveis, dados
+
+28
+00:02:13.205 --> 00:02:18.458
+que foram coletados diretamente no ponto
+de venda em que a ação foi realizada.
+
+29
+00:02:18.458 --> 00:02:22.808
+Então tem lá uma agência de trade
+marketing que tem interesse de testar
+
+30
+00:02:22.808 --> 00:02:26.767
+ações de ponto de venda, o tamanho de,
+o número de frentes, ou seja,
+
+31
+00:02:26.767 --> 00:02:31.827
+o tamanho do display, números de frentes
+de produto que vão aparecer lá no,
+
+32
+00:02:31.827 --> 00:02:33.785
+naquele ponto de venda.
+
+33
+00:02:33.785 --> 00:02:39.447
+Os dados foram 594, dá,
+respondentes e tenham em mente,
+
+34
+00:02:39.447 --> 00:02:44.994
+que isto daqui são dados gerados, não
+são dados reais, agora eles refletem uma
+
+35
+00:02:44.994 --> 00:02:50.960
+certa realidade e servem o propósito
+de a gente calcular a correlação.
+
+36
+00:02:50.960 --> 00:02:53.564
+Nós temos vendas em real por semana,
+
+37
+00:02:53.564 --> 00:02:58.060
+nós temos displays com
+diferentes números de frentes,
+
+38
+00:02:58.060 --> 00:03:03.362
+são as unidades, nós temos uma
+questão a respeito de atitude,
+
+39
+00:03:03.362 --> 00:03:08.608
+com relação à marca do fabricante,
+nós temos uma questão também sobre,
+
+40
+00:03:08.608 --> 00:03:14.933
+renda do domicílio do respondente
+em reais e finalmente uma variável
+
+41
+00:03:14.933 --> 00:03:19.079
+de desconto oferecido pelo principal
+concorrente, justamente para a gente poder
+
+42
+00:03:19.079 --> 00:03:23.165
+verificar se existe alguma correlação
+entre o tamanho do display e o desconto,
+
+43
+00:03:23.165 --> 00:03:28.493
+ou seja, alguma ação que o concorrente
+tenha colocado em prática naquela ocasião.
+
+44
+00:03:28.493 --> 00:03:32.210
+Eu chamo atenção para o instrumento de,
+
+45
+00:03:32.210 --> 00:03:38.770
+para capturar a atitude,
+nós utilizamos duas,
+
+46
+00:03:38.770 --> 00:03:43.395
+2 itens,
+duas perguntas e os respondentes eles têm
+
+47
+00:03:43.395 --> 00:03:48.147
+que marcar de 1 a 7 se discorda
+totalmente ou se concorda totalmente,
+
+48
+00:03:48.147 --> 00:03:53.057
+numa escala Likert, nós vimos isso
+na videoaula de escalas, são umas
+
+49
+00:03:53.057 --> 00:03:58.287
+escalas intervalares e o respondente
+tinha que responder: "Eu gosto do
+
+50
+00:03:58.287 --> 00:04:03.445
+produto oferecido por essa marca" ou mesmo
+"Eu prefiro os produtos dessa marca".
+
+51
+00:04:03.445 --> 00:04:07.261
+O que nós fizemos foi calcular
+a média dessas duas perguntas para
+
+52
+00:04:07.261 --> 00:04:10.065
+poder ter uma variável só,
+no banco de dados.
+
+53
+00:04:10.065 --> 00:04:14.490
+Muito bem, e aí a gente vai para o
+banco de dados, propriamente dita,
+
+54
+00:04:14.490 --> 00:04:18.678
+vendas na coluna A, display na coluna B,
+atitude na coluna C,
+
+55
+00:04:18.678 --> 00:04:23.406
+renda na coluna D e o desconto
+do concorrente na coluna E.
+
+56
+00:04:23.406 --> 00:04:28.356
+Agora nós vamos estimar aí gráfico de
+
+57
+00:04:28.356 --> 00:04:32.880
+dispersão, aqui na guia Inserir,
+
+58
+00:04:32.880 --> 00:04:38.076
+tenho o gráfico de dispersão, primeiro
+de tudo a gente vem e marca a área,
+
+59
+00:04:38.076 --> 00:04:43.920
+que nós queremos dos dados que aparecam
+lá na no gráfico de dispersão,
+
+60
+00:04:43.920 --> 00:04:48.820
+aí eu tenho o gráfico de dispersão,
+ele vai colocar aqui para mim.
+
+61
+00:04:48.820 --> 00:04:55.266
+A gente pode eliminar esses,
+
+62
+00:04:55.266 --> 00:05:00.417
+essas informações que elas não são úteis,
+de forma que a gente pode aproveitar
+
+63
+00:05:00.417 --> 00:05:05.725
+bastante o espaço do gráfico
+e o que a gente pode afirmar,
+
+64
+00:05:05.725 --> 00:05:10.752
+é que existe uma tendência positiva,
+ou seja,
+
+65
+00:05:10.752 --> 00:05:15.468
+a associação entre vendas e display,
+
+66
+00:05:15.468 --> 00:05:21.210
+ela aparentemente tem uma
+tendência aí positiva, ou seja,
+
+67
+00:05:21.210 --> 00:05:26.824
+quanto mais display mais venda, ou por
+consequência mais venda mais display,
+
+68
+00:05:26.824 --> 00:05:31.572
+o que essa segunda casualidade aí,
+não faz muito sentido nesse momento,
+
+69
+00:05:31.572 --> 00:05:36.103
+mas o que nos importa é saber
+que tem uma correlação e
+
+70
+00:05:36.103 --> 00:05:39.829
+ela vai apresentar alguma
+coisa como positiva.
+
+71
+00:05:39.829 --> 00:05:44.537
+Muito bem, uma vez que olhamos
+o gráfico de dispersão a gente
+
+72
+00:05:44.537 --> 00:05:48.900
+pode calcular o coeficiente de correlação.
+
+73
+00:05:48.900 --> 00:05:55.868
+Nós vamos aqui no menu Dados, Análise
+de dados, aí ele vai aparecer para nós,
+
+74
+00:05:55.868 --> 00:06:00.654
+uma janelinha onde a gente escolhe
+a correlação, clique em ok,
+
+75
+00:06:00.654 --> 00:06:05.790
+eu preciso informar onde
+que estão os dados,
+
+76
+00:06:05.790 --> 00:06:10.120
+eu marco vendas e display,
+
+77
+00:06:10.120 --> 00:06:16.484
+marco essa área toda,
+eu informo que a primeira coluna é uma,
+
+78
+00:06:16.484 --> 00:06:21.159
+rótulo dos dados e eu peço para
+
+79
+00:06:21.159 --> 00:06:25.360
+ele colocar para mim os
+resultados aqui em cima.
+
+80
+00:06:25.360 --> 00:06:31.212
+Dou ok e assim como a gente viu no gráfico
+de dispersão, de fato tem uma correlação,
+
+81
+00:06:31.212 --> 00:06:36.900
+o coeficiente é positivo, o coeficiente
+de correlação ele varia de -1 a 1 e
+
+82
+00:06:36.900 --> 00:06:42.722
+aqui mostra ele mais próximo da correlação
+1, a associação entre vendas e display.
+
+83
+00:06:42.722 --> 00:06:47.874
+Nós podemos até fazer outro
+exercício de correlação,
+
+84
+00:06:47.874 --> 00:06:52.040
+onde vamos analisar se
+existe a correlação,
+
+85
+00:06:52.040 --> 00:06:56.460
+entre as diferentes variáveis
+que eu tenho no banco de dados.
+
+86
+00:06:56.460 --> 00:07:01.297
+Eu segui o mesmo procedimento,
+fui lá no menu Dados, Análise de dados,
+
+87
+00:07:01.297 --> 00:07:06.309
+marquei correlação e aí
+eu vou agora informar que
+
+88
+00:07:06.309 --> 00:07:11.729
+os meus dados,
+para serem analisados a correlação,
+
+89
+00:07:11.729 --> 00:07:16.250
+devem incluir aí todas as
+variáveis que eu tenho.
+
+90
+00:07:16.250 --> 00:07:20.985
+E eu quero que os
+resultados apareçam aqui,
+
+91
+00:07:20.985 --> 00:07:24.855
+logo abaixo da outra correlação
+que a gente estimou.
+
+92
+00:07:24.855 --> 00:07:25.720
+muito bem.
+
+93
+00:07:25.720 --> 00:07:27.682
+Aí o que a gente percebe,
+
+94
+00:07:27.682 --> 00:07:32.812
+é que vendas também tem uma
+correlação positiva com atitude,
+
+95
+00:07:32.812 --> 00:07:38.680
+então a associação entre atitude
+e vendas existente é positivo.
+
+96
+00:07:38.680 --> 00:07:42.592
+Existem coeficientes negativos,
+
+97
+00:07:42.592 --> 00:07:47.290
+mas aqui eu afirmaria que eles
+estão muito próximos de 0,
+
+98
+00:07:47.290 --> 00:07:52.525
+seria muito forte a gente
+falar que é negativo
+
+99
+00:07:52.525 --> 00:07:59.660
+e as demais correlações estimadas aqui,
+elas também estão muito próximas de 0.
+
+100
+00:07:59.660 --> 00:08:04.833
+As correlações que eu realmente posso
+afirmar que existe associação, justamente
+
+101
+00:08:04.833 --> 00:08:10.140
+a associação entre, a correlação entre
+display e vendas, atitude e vendas.
+
+102
+00:08:10.140 --> 00:08:14.680
+Acabamos de aprender então,
+como calcular o
+
+103
+00:08:14.680 --> 00:08:19.926
+coeficiente de correlação e utilizar
+também o diagrama de dispersão,
+
+104
+00:08:19.926 --> 00:08:23.433
+para poder ter uma noção da
+associação entre duas variáveis.
+
+105
+00:08:23.433 --> 00:08:31.335
+Eu convido vocês agora a darem sequência
+e assistirem a videoaula sobre regressão,
+
+106
+00:08:31.335 --> 00:08:36.385
+que vem tratar de regressão simples e
+regressão múltipla e depois nós teremos
+
+107
+00:08:36.385 --> 00:08:41.351
+também, uma aplicação
+em Excel de regressão.
+
+108
+00:08:41.351 --> 00:08:42.545
+Até lá.
+
+109
+00:08:42.545 --> 00:08:47.140
+[SEM ÁUDIO]

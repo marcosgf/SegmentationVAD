@@ -1,0 +1,480 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.051
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:09.051 --> 00:00:11.355
+meu nome é Eduardo Guerra.
+
+3
+00:00:11.355 --> 00:00:15.760
+Estamos aqui no curso de
+Desenvolvimento Guiado por Testes.
+
+4
+00:00:15.760 --> 00:00:20.320
+Hoje eu vou falar para vocês, hoje eu
+tenho uma grande surpresa para vocês.
+
+5
+00:00:20.320 --> 00:00:20.956
+Está?
+
+6
+00:00:20.956 --> 00:00:22.228
+Posso falar?
+
+7
+00:00:22.228 --> 00:00:23.818
+Está preparado?
+
+8
+00:00:23.818 --> 00:00:26.150
+Eu gosto muito de chapéu.
+
+9
+00:00:26.150 --> 00:00:29.231
+Só que a surpresa não é essa não.
+
+10
+00:00:29.231 --> 00:00:35.540
+A surpresa é que: Eu não sou careca,
+como muitas pessoas pensam.
+
+11
+00:00:35.540 --> 00:00:36.260
+Está certo?
+
+12
+00:00:36.260 --> 00:00:40.130
+E você sabe que para eu tirar o chapéu
+tem que ter motivo muito forte.
+
+13
+00:00:40.130 --> 00:00:45.460
+E é justamente essa aula eu vou
+mostrar para vocês o chapéu do TDD.
+
+14
+00:00:45.460 --> 00:00:46.401
+Está certo?
+
+15
+00:00:46.401 --> 00:00:48.538
+É esse chapéu aqui está?
+
+16
+00:00:48.538 --> 00:00:52.140
+É chapéu meio esquisito
+que tem essas 3 cores.
+
+17
+00:00:52.140 --> 00:00:52.672
+Está?
+
+18
+00:00:52.672 --> 00:00:54.976
+O que é que é esse chapéu do TDD?
+
+19
+00:00:54.976 --> 00:00:59.908
+O chapéu do TDD é para mostrar para
+a gente que no TDD a gente não
+
+20
+00:00:59.908 --> 00:01:03.380
+pode fazer as coisas ao mesmo tempo.
+
+21
+00:01:03.380 --> 00:01:06.431
+Está?
+Então no momento que eu boto o meu chapéu
+
+22
+00:01:06.431 --> 00:01:11.655
+vermelho, significa que eu
+estou criando o teste ou seja,
+
+23
+00:01:11.655 --> 00:01:15.860
+que eu estou deixando a minha
+barrinha de teste vermelha.
+
+24
+00:01:15.860 --> 00:01:20.220
+Então eu coloquei o meu chapéu vermelho,
+agora eu vou criar teste.
+
+25
+00:01:20.220 --> 00:01:24.580
+No momento que eu estou criando teste,
+eu não vou refatorar código,
+
+26
+00:01:24.580 --> 00:01:27.191
+e eu não vou criar código de produção.
+
+27
+00:01:27.191 --> 00:01:31.360
+Eu posso até de repente ir lá
+e criar método que não existe.
+
+28
+00:01:31.360 --> 00:01:32.252
+Está?
+Mas eu,
+
+29
+00:01:32.252 --> 00:01:35.220
+não vai ser meu objetivo
+fazer o código funcionar.
+
+30
+00:01:35.220 --> 00:01:40.230
+Quando eu boto o chapéu vermelho
+eu estou criando o teste.
+
+31
+00:01:40.230 --> 00:01:45.573
+Depois que eu botei o meu chapéu
+vermelho e criei com sucesso
+
+32
+00:01:45.573 --> 00:01:51.740
+teste que não funciona,
+eu vou botar o meu chapéu verde.
+
+33
+00:01:51.740 --> 00:01:52.375
+Certo?
+
+34
+00:01:52.375 --> 00:01:56.004
+Esse chapéu verde,
+ele vai ser para o momento
+
+35
+00:01:56.004 --> 00:02:00.870
+que eu estou criando
+a funcionalidade da minha classe.
+
+36
+00:02:00.870 --> 00:02:05.310
+Eu estou transformando o meu
+teste de vermelho para verde.
+
+37
+00:02:05.310 --> 00:02:10.958
+E no momento que eu estou mexendo no
+verde, eu não vou mexer no meu teste.
+
+38
+00:02:10.958 --> 00:02:11.472
+Está?
+
+39
+00:02:11.472 --> 00:02:12.158
+Porquê?
+
+40
+00:02:12.158 --> 00:02:17.179
+Aqui olha, quando eu estava aqui a minha
+preocupação era: Eu tenho que criar
+
+41
+00:02:17.179 --> 00:02:20.758
+novo requisito para eu
+implementar a partir desse teste.
+
+42
+00:02:20.758 --> 00:02:25.386
+Agora os requisitos estão fixados,
+então eu não vou mexer mais no teste,
+
+43
+00:02:25.386 --> 00:02:27.410
+eu vou mexer no código de produção.
+
+44
+00:02:27.410 --> 00:02:31.970
+Então, o meu objetivo agora
+é deixar a barrinha verde.
+
+45
+00:02:31.970 --> 00:02:38.730
+Se eu depois que eu deixei a barrinha
+verde, eu posso ir lá criar novo teste.
+
+46
+00:02:38.730 --> 00:02:42.684
+E aí eu boto meu chapéu
+vermelho e nesse momento
+
+47
+00:02:42.684 --> 00:02:47.118
+que eu estou criando o teste eu
+não vou mais mexer no código de
+
+48
+00:02:47.118 --> 00:02:51.290
+produção que é o que eu faço quando
+eu estou com o meu chapéu verde.
+
+49
+00:02:51.290 --> 00:02:54.287
+E esse azul aqui, que chapéu é esse?
+
+50
+00:02:54.287 --> 00:02:57.300
+Esse aqui é o chapéu da refatoração.
+
+51
+00:02:57.300 --> 00:03:03.646
+Então, a ideia é que,
+você veio no vermelho, você criou o teste,
+
+52
+00:03:03.646 --> 00:03:10.740
+você passa para o verde que é onde
+você está, você cria a funcionalidade.
+
+53
+00:03:10.740 --> 00:03:16.500
+Antes de voltar para o vermelho a ideia é
+você ir para o chapéu azul da refatoração.
+
+54
+00:03:16.500 --> 00:03:18.729
+Está?
+O que é que você vai fazer aqui?
+
+55
+00:03:18.729 --> 00:03:23.330
+Você pode tanto refatorar o código de
+teste quanto você pode refatorar o código
+
+56
+00:03:23.330 --> 00:03:24.180
+de produção.
+
+57
+00:03:24.180 --> 00:03:29.231
+O chapéu da refatoração,
+você não vai criar funcionalidade,
+
+58
+00:03:29.231 --> 00:03:34.827
+você não vai modificar funcionalidade,
+não vai criar teste nem modificar teste,
+
+59
+00:03:34.827 --> 00:03:40.061
+você simplesmente vai reformular
+a sua classe, reestruturar,
+
+60
+00:03:40.061 --> 00:03:44.100
+mas o comportamento dela
+tem que ser o mesmo.
+
+61
+00:03:44.100 --> 00:03:49.375
+Você também pode reestruturar e trabalhar
+nos seus testes mas o comportamento do
+
+62
+00:03:49.375 --> 00:03:54.919
+teste ou seja, as coisas que ele verifica
+precisam também ser as mesmas, está?
+
+63
+00:03:54.919 --> 00:03:57.436
+E no momento que eu estou refatorando,
+
+64
+00:03:57.436 --> 00:04:00.920
+eu não estou nem criando o teste
+nem criando funcionalidade.
+
+65
+00:04:00.920 --> 00:04:06.170
+Eu estou simplesmente melhorando
+a estrutura do meu software.
+
+66
+00:04:06.170 --> 00:04:08.933
+A gente vai fazer hands
+on com este chapéu,
+
+67
+00:04:08.933 --> 00:04:11.420
+mostrando quando eu assumo cada papel.
+
+68
+00:04:11.420 --> 00:04:15.280
+E é extremamente importante de
+você não misturar as coisas.
+
+69
+00:04:15.280 --> 00:04:19.674
+Querer botar mais ou menos assim né,
+de refatorar enquanto você
+
+70
+00:04:19.674 --> 00:04:23.933
+está criando o teste,
+aí você já não consegue rodar o teste,
+
+71
+00:04:23.933 --> 00:04:29.299
+ou então querer criar teste ao mesmo tempo
+que você está fazendo funcionalidade,
+
+72
+00:04:29.299 --> 00:04:33.195
+ou modificar a funcionalidade que já está
+funcionando enquanto você está criando
+
+73
+00:04:33.195 --> 00:04:34.776
+outra nova, isso não funciona.
+
+74
+00:04:34.776 --> 00:04:38.266
+Está?
+O chapéu é para você colocar de cada vez
+
+75
+00:04:38.266 --> 00:04:43.004
+na sua cabeça ou você refatora,
+ou você cria teste ou
+
+76
+00:04:43.004 --> 00:04:47.410
+você cria código de produção,
+você faz o teste funcionar.
+
+77
+00:04:47.410 --> 00:04:48.335
+Está certo?
+
+78
+00:04:48.335 --> 00:04:54.584
+É extremamente importante você entender
+isso e não querer misturar as atividade.
+
+79
+00:04:54.584 --> 00:04:58.344
+Você pode e deve alternar
+esses chapéus com frequência.
+
+80
+00:04:58.344 --> 00:05:02.507
+Agora eu estou refatorando,
+agora eu estou rodando o teste,
+
+81
+00:05:02.507 --> 00:05:06.760
+mas existe marco muito
+claro entre as transições.
+
+82
+00:05:06.760 --> 00:05:09.267
+Né?
+Por exemplo, no momento que eu estou
+
+83
+00:05:09.267 --> 00:05:14.080
+criando o teste, eu estou fazendo teste
+para que a barrinha fique vermelha.
+
+84
+00:05:14.080 --> 00:05:16.480
+Está?
+Depois que ela ficou vermelha aí eu posso
+
+85
+00:05:16.480 --> 00:05:19.730
+vir para o chapéu verde,
+que aí ia fazer a barrinha ficar verde,
+
+86
+00:05:19.730 --> 00:05:23.336
+antes dela ficar verde eu não vou
+voltar para o vermelho nem para o azul.
+
+87
+00:05:23.336 --> 00:05:27.290
+A partir do momento que a barrinha ficou
+verde aí eu posso ir para a refatoração.
+
+88
+00:05:27.290 --> 00:05:30.692
+E eu só vou para a refatoração
+quando a barrinha estiver verde,
+
+89
+00:05:30.692 --> 00:05:36.060
+e ela tem que continuar verde pra eu
+poder ir criar o meu próximo teste.
+
+90
+00:05:36.060 --> 00:05:36.915
+Está certo?
+
+91
+00:05:36.915 --> 00:05:42.277
+Espero que vocês tenham entendido essa
+questão dos papeis que você assume durante
+
+92
+00:05:42.277 --> 00:05:47.190
+uma sessão de TDD,
+e tenha gostado aí do nosso chapéu.
+
+93
+00:05:47.190 --> 00:05:51.830
+Você pode ver o texto complementar aí que
+fala pouquinho sobre quem criou o chapéu,
+
+94
+00:05:51.830 --> 00:05:56.295
+e se você quiser criar o seu,
+a licença é uma licença livre.
+
+95
+00:05:56.295 --> 00:05:59.790
+Você pode criar tranquilo
+o seu chapéu do TDD.
+
+96
+00:05:59.790 --> 00:06:00.495
+Está certo?
+
+97
+00:06:00.495 --> 00:06:03.893
+Então, além disso você ainda
+descobriu que eu não sou careca.
+
+98
+00:06:03.893 --> 00:06:05.229
+[RISOS] Está bom?
+
+99
+00:06:05.229 --> 00:06:07.226
+Então, até à próxima aula,
+
+100
+00:06:07.226 --> 00:06:11.150
+que a gente vai fazer o nosso
+hands on com o chapéu do TDD.
+
+101
+00:06:11.150 --> 00:06:14.995
+Muito obrigado.
+
+102
+00:06:14.995 --> 00:06:17.560
+[MÚSICA]

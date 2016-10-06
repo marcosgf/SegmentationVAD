@@ -1,0 +1,499 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.209
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.209 --> 00:00:14.083
+Após esse vídeo você será capaz de
+esboçar e interpretar gráficos da saída
+
+3
+00:00:14.083 --> 00:00:19.444
+função do tempo e será capaz de descrever
+a referência e o erro de sistema.
+
+4
+00:00:19.444 --> 00:00:23.630
+Para facilitar a visualização e
+a interpretação do comportamento da saída,
+
+5
+00:00:23.630 --> 00:00:25.730
+é comum utilizarmos gráfico da saída,
+
+6
+00:00:25.730 --> 00:00:29.690
+comummente chamada y,
+função do tempo denotado por t.
+
+7
+00:00:29.690 --> 00:00:34.215
+Este gráfico nada mais é do que
+a representação dos valores da variável de
+
+8
+00:00:34.215 --> 00:00:36.625
+interesse à medida que o tempo passa.
+
+9
+00:00:36.625 --> 00:00:38.440
+Vamos ver alguns exemplos.
+
+10
+00:00:38.440 --> 00:00:44.302
+Nossa grandeza de interesse pode ser
+a altura de drone e o gráfico da
+
+11
+00:00:44.302 --> 00:00:48.720
+saída função do tempo representa a altura
+do drone à medida que o tempo passa.
+
+12
+00:00:48.720 --> 00:00:53.462
+No eixo vertical,
+também chamado de eixo das ordenadas,
+
+13
+00:00:53.462 --> 00:00:57.290
+temos a altura do drone
+metros e no eixo horizontal,
+
+14
+00:00:57.290 --> 00:01:01.910
+também chamado de eixo das abcissas,
+temos o tempo decorrido minutos.
+
+15
+00:01:01.910 --> 00:01:06.790
+Nesse exemplo vemos que o drone fica no
+chão por cerca de 1 minuto depois sobe
+
+16
+00:01:06.790 --> 00:01:12.319
+para cerca de 2 metros, altura na qual
+permanece por cerca de 2 minutos e depois
+
+17
+00:01:12.319 --> 00:01:17.800
+sobe para cerca de 4 metros ficando
+nesta altura por mais 2 minutos.
+
+18
+00:01:17.800 --> 00:01:21.424
+O drone então desce até ao
+chão cerca de 6 minutos,
+
+19
+00:01:21.424 --> 00:01:23.930
+permanecendo no chão depois disso.
+
+20
+00:01:23.930 --> 00:01:28.282
+Note que não podemos falar nada sobre
+o movimento horizontal do drone,
+
+21
+00:01:28.282 --> 00:01:31.920
+esse gráfico só nos mostra
+a vairação da altitude do drone.
+
+22
+00:01:31.920 --> 00:01:36.096
+Ele pode ter subido e descido
+sem se mover na horizontal,
+
+23
+00:01:36.096 --> 00:01:41.100
+ou seja sobrevoando exatamente o
+mesmo ponto, ou pode ter saído de
+
+24
+00:01:41.100 --> 00:01:46.795
+ponto e pousado outro, ou ainda pode
+ter ido até ponto diferente e voltado.
+
+25
+00:01:46.795 --> 00:01:48.173
+Ao invés de drone,
+
+26
+00:01:48.173 --> 00:01:53.620
+podemos estar interessados na altura de
+uma camada de ar de levitador magnético.
+
+27
+00:01:53.620 --> 00:01:56.675
+Este levitador pode ser
+levitador didático,
+
+28
+00:01:56.675 --> 00:02:00.410
+usado laboratório,
+ou trem de levitação magnética.
+
+29
+00:02:00.410 --> 00:02:05.142
+e o gráfico da saída pelo tempo
+representa essa altura ou a espessura de
+
+30
+00:02:05.142 --> 00:02:07.800
+camada de ar à medida que o tempo passa.
+
+31
+00:02:07.800 --> 00:02:12.400
+Nesse exemplo temos uma camada de
+ar de 1 centímetro que aumenta
+
+32
+00:02:12.400 --> 00:02:17.000
+para cerca de 2 centímetros e
+volta para cerca de 1 centímetro.
+
+33
+00:02:17.000 --> 00:02:22.443
+Podemos ter como grandeza de
+interesse a velocidade de carro, por
+
+34
+00:02:22.443 --> 00:02:27.440
+exemplo e o gráfico da saída representa
+a velocidade à medida que o tempo passa.
+
+35
+00:02:27.440 --> 00:02:31.481
+Nesse exemplo o carro acelerou
+de 0 a 100 quilômetros por hora
+
+36
+00:02:31.481 --> 00:02:35.950
+cerca de 10 segundos e depois
+freou cerca de 5 segundos.
+
+37
+00:02:35.950 --> 00:02:39.926
+Nossa grandeza de interesse pode
+também ser a posição angular de
+
+38
+00:02:39.926 --> 00:02:44.250
+motor ou a direção de apontamento
+de uma antena, ou de navio, ou de
+
+39
+00:02:44.250 --> 00:02:49.150
+avião e o gráfico da saída nos mostra
+o ângulo, à medida que o tempo passa.
+
+40
+00:02:49.150 --> 00:02:53.911
+Nesse exemplo o avião mudou sua direção
+para 30 graus à esquerda depois
+
+41
+00:02:53.911 --> 00:02:58.626
+para 30 graus à direita e depois
+voltou para apontar diretamente
+
+42
+00:02:58.626 --> 00:03:00.800
+para a frente ou para o norte.
+
+43
+00:03:00.800 --> 00:03:03.748
+Voltando à referência,
+se vamos trabalhar com
+
+44
+00:03:03.748 --> 00:03:07.480
+sistema estamos interessados
+no comportamento de sua saída.
+
+45
+00:03:07.480 --> 00:03:11.736
+Mais que isso, normalmente gostaríamos
+que a saída do sistema acompanhasse
+
+46
+00:03:11.736 --> 00:03:14.160
+valor desejado que chamamos de referência.
+
+47
+00:03:14.160 --> 00:03:19.294
+Este valor de referência,
+ou simplesmente referência, é utilizado
+
+48
+00:03:19.294 --> 00:03:24.068
+na definição do valor de entrada e
+chamamos de erro de rastreamento,
+
+49
+00:03:24.068 --> 00:03:29.140
+ou simplesmente erro, à diferença entre
+o valor desejado e o valor da saída,
+
+50
+00:03:29.140 --> 00:03:32.417
+ou à diferença entre
+a referência e a saída.
+
+51
+00:03:32.417 --> 00:03:37.242
+Aqui está o nosso sistema e aqui está
+o valor da nossa saída desejada,
+
+52
+00:03:37.242 --> 00:03:38.511
+ou nossa referência.
+
+53
+00:03:38.511 --> 00:03:43.340
+Normalmente a partir de nossa referência
+definiremos o valor da entrada do sistema.
+
+54
+00:03:43.340 --> 00:03:47.430
+Por exemplo, no caso de forno a gás,
+onde a saída é a temperatura
+
+55
+00:03:47.430 --> 00:03:51.112
+e a entrada é o fluxo de gás,
+digamos que a nossa referência,
+
+56
+00:03:51.112 --> 00:03:55.820
+a temperatura desejada, seja de 180
+graus Celsius ou graus centígrados.
+
+57
+00:03:55.820 --> 00:04:01.645
+A partir de nossa referência, os 180 graus
+Celsius, definimos a entrada do sistema,
+
+58
+00:04:01.645 --> 00:04:04.840
+que é o fluxo de gás,
+usando o ângulo do botão do fogão.
+
+59
+00:04:04.840 --> 00:04:09.884
+Esse ângulo por sua vez afeta o
+fluxo de gás que será queimado,
+
+60
+00:04:09.884 --> 00:04:14.026
+produzindo calor e aumentando
+a temperatura do forno.
+
+61
+00:04:14.026 --> 00:04:18.645
+A saída do sistema é a temperatura real
+do forno e o erro é a diferença entre
+
+62
+00:04:18.645 --> 00:04:21.618
+a temperatura desejada
+e a temperatura real.
+
+63
+00:04:21.618 --> 00:04:26.769
+Por exemplo, num dia muito frio de
+Inverno, o ajuste de 180 graus do botão do
+
+64
+00:04:26.769 --> 00:04:31.860
+forno pode ser suficiente para
+termos uma temperatura de 160 graus,
+
+65
+00:04:31.860 --> 00:04:35.574
+nesse caso temos erro de 20 graus.
+
+66
+00:04:35.574 --> 00:04:40.109
+No caso de automóvel,
+onde a saída é a velocidade do
+
+67
+00:04:40.109 --> 00:04:43.596
+automóvel e a entrada é o
+ângulo do pedal do acelerador,
+
+68
+00:04:43.596 --> 00:04:48.956
+a referência será a velocidade desejada,
+por exemplo 100 quilômetros por hora.
+
+69
+00:04:48.956 --> 00:04:53.416
+A partir da velocidade desejada
+define-se a força aplicada ao pedal do
+
+70
+00:04:53.416 --> 00:04:58.299
+acelerador que por sua vez define o ângulo
+do pedal e determina a quantidade de
+
+71
+00:04:58.299 --> 00:05:03.158
+combustível utilizada, que determina
+a velocidade de rotação do motor
+
+72
+00:05:03.158 --> 00:05:06.979
+do carro e assim sua velocidade
+real que é a a nossa saída.
+
+73
+00:05:06.979 --> 00:05:12.100
+E o erro é a diferença entre a velocidade
+desejada e a velocidade real do automóvel.
+
+74
+00:05:12.100 --> 00:05:17.673
+De forma geral temos então: a referência,
+ou valor desejado,
+
+75
+00:05:17.673 --> 00:05:21.758
+uma entrada,
+o sistema propriamente dito e uma saída.
+
+76
+00:05:21.758 --> 00:05:26.745
+Normalmente denotamos a referência por r,
+a entrada por u e a saída por y,
+
+77
+00:05:26.745 --> 00:05:34.900
+como nesse diagrama ilustrativo e nosso
+erro denotado por e será r menos y.
+
+78
+00:05:34.900 --> 00:05:40.789
+Sendo pouco mais rigoroso devemos
+denotar essas grandezas por e(t),
+
+79
+00:05:40.789 --> 00:05:45.230
+r(t) e y(t) já que essas
+grandezas variam com o tempo.
+
+80
+00:05:45.230 --> 00:05:48.677
+Voltando aos requisitos,
+vamos ver exemplo.
+
+81
+00:05:48.677 --> 00:05:54.771
+Gostaríamos de ter sistema que seguisse
+uma referência degrau, valor constante
+
+82
+00:05:54.771 --> 00:06:00.180
+diferente de 0, com uma certa velocidade
+e que o erro fosse menor do que 10%.
+
+83
+00:06:00.180 --> 00:06:04.429
+Podemos visualizar isso graficamente
+pensando no exemplo da velocidade
+
+84
+00:06:04.429 --> 00:06:05.182
+de carro.
+
+85
+00:06:05.182 --> 00:06:10.057
+A referência é a velocidade desejada,
+digamos 100 quilômetros por hora,
+
+86
+00:06:10.057 --> 00:06:14.865
+e a saída é a velocidade real do veículo
+e queremos que o carro acelere de de
+
+87
+00:06:14.865 --> 00:06:17.837
+0 a 100 quilômetros por hora 8 segundos.
+
+88
+00:06:17.837 --> 00:06:22.675
+Temos aqui a referência que é degrau
+com valor de 100 quilômetros por
+
+89
+00:06:22.675 --> 00:06:27.060
+hora e podemos delimitar os
+10% de erro torno desse valor.
+
+90
+00:06:27.060 --> 00:06:33.230
+Também podemos visualizar o requisito de
+tempo de aceleração que é de 8 segundos.
+
+91
+00:06:33.230 --> 00:06:38.076
+E temos aqui uma saída que atende
+aos requisitos de desempenho e
+
+92
+00:06:38.076 --> 00:06:40.550
+uma outra saída que não atende.
+
+93
+00:06:40.550 --> 00:06:47.180
+O sistema, ou sua saída ou sua resposta,
+é lenta demais e o erro é grande demais.
+
+94
+00:06:47.180 --> 00:06:52.152
+Também podemos ter uma saída que atende
+parcialmente mas não totalmente aos
+
+95
+00:06:52.152 --> 00:06:53.090
+requisitos.
+
+96
+00:06:53.090 --> 00:06:57.970
+Nesse caso o erro é menor que
+10% mas o sistema é muito lento.
+
+97
+00:06:57.970 --> 00:07:02.642
+Muito bem, agora além de poder citar
+exemplos de sistemas com suas entradas
+
+98
+00:07:02.642 --> 00:07:05.583
+e suas saídas,
+você também é capaz de dizer
+
+99
+00:07:05.583 --> 00:07:09.220
+quem é a referência e quem
+é o erro de cada sistema.
+
+100
+00:07:09.220 --> 00:07:14.064
+E agora você já deve ser capaz de
+esboçar e interpretar gráficos da saída
+
+101
+00:07:14.064 --> 00:07:18.580
+função do tempo e de descrever
+a referência e o erro de sistema.
+
+102
+00:07:18.580 --> 00:07:23.350
+[MÚSICA] [SOM]
+
+103
+00:07:23.350 --> 00:07:28.120
+[SOM]

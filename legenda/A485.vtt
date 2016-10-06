@@ -1,0 +1,582 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.170
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:09.170 --> 00:00:15.403
+bem vindo ao curso de Orientação a Objetos
+com Java, eu sou Clovis Fernandes.
+
+3
+00:00:15.403 --> 00:00:19.850
+Vamos dar continuidade ao que vínhamos
+falando sobre responsabilidade pública e
+
+4
+00:00:19.850 --> 00:00:20.440
+privada.
+
+5
+00:00:20.440 --> 00:00:24.730
+Nesta parte 2 você vai poder
+ver caracterizado o conceito de
+
+6
+00:00:24.730 --> 00:00:29.685
+responsabilidade privada e também
+vamos concluir falando de contrato.
+
+7
+00:00:29.685 --> 00:00:32.275
+E o que vem a ser
+responsabilidade privada?
+
+8
+00:00:32.275 --> 00:00:34.795
+Responsabilidade pública a gente já viu.
+
+9
+00:00:34.795 --> 00:00:39.035
+Toda a responsabilidade que é colaboradora
+de uma classe servidora que é
+
+10
+00:00:39.035 --> 00:00:44.088
+a colaboradora de outra classe ela
+é uma responsabilidade pública.
+
+11
+00:00:44.088 --> 00:00:49.658
+Agora definir se uma responsabilidade
+que não seja pública é privada,
+
+12
+00:00:49.658 --> 00:00:54.875
+nós precisamos tomar certo cuidado e
+é isso que nós vamos mostrar aqui.
+
+13
+00:00:54.875 --> 00:01:00.255
+Eventualmente a responsabilidade que não
+seja, pode existir uma responsabilidade
+
+14
+00:01:00.255 --> 00:01:04.560
+que não seja nem pública nem privada e aí
+ela deve ser retirada da nossa classe.
+
+15
+00:01:04.560 --> 00:01:08.880
+Então respondendo à pergunta "O que
+é uma responsabilidade privada?"
+
+16
+00:01:08.880 --> 00:01:12.945
+Responsabilidade privada faz parte
+do funcionamento interno da classe,
+
+17
+00:01:12.945 --> 00:01:17.745
+ela não vai ser colaboradora
+de nenhuma classe externa.
+
+18
+00:01:17.745 --> 00:01:21.936
+No diagrama UML a gente representa
+através do sinal de menos.
+
+19
+00:01:21.936 --> 00:01:25.520
+Vocês lembram que na pública era mais,
+agora é menos.
+
+20
+00:01:25.520 --> 00:01:29.549
+Na linguagem Java a gente usa
+a palavra reservada private,
+
+21
+00:01:29.549 --> 00:01:32.506
+é dessa forma que ela vai ficar conhecida.
+
+22
+00:01:32.506 --> 00:01:34.038
+Vamos avançar mais.
+
+23
+00:01:34.038 --> 00:01:39.747
+Uma coisa que tem que ficar bem clara
+desde o início é que uma responsabilidade
+
+24
+00:01:39.747 --> 00:01:44.280
+privada ela não pode ser
+colaboradora de outras classes,
+
+25
+00:01:44.280 --> 00:01:47.360
+inclusive nem de instâncias
+da própria classe.
+
+26
+00:01:47.360 --> 00:01:50.581
+Eu vou exemplificar: voltamos
+à nossa classe Livro,
+
+27
+00:01:50.581 --> 00:01:55.569
+nós temos duas responsabilidades públicas,
+o anexaUsuario e o desanexaUsuario,
+
+28
+00:01:55.569 --> 00:01:59.926
+eu estou acrescentando aí uma
+responsabilidade privada exemplo, que eu
+
+29
+00:01:59.926 --> 00:02:04.909
+estou chamando de método privado, então
+ele está lá representado nesse diagrama,
+
+30
+00:02:04.909 --> 00:02:09.470
+nessa representação de classe
+UML com o sinal menos.
+
+31
+00:02:09.470 --> 00:02:16.331
+Eu estou exemplificando também,
+dentro da lógica do método anexaUsuario,
+
+32
+00:02:16.331 --> 00:02:22.267
+eu estou fazendo uso do método privado,
+fazendo uso do método privado.
+
+33
+00:02:22.267 --> 00:02:27.379
+Então vocês vejam que consta
+dentro da lógica do anexaUsuario,
+
+34
+00:02:27.379 --> 00:02:31.080
+eu posso falar this.metodoPrivado.
+
+35
+00:02:31.080 --> 00:02:36.500
+O this está representando o que
+é naquela instância de Livro,
+
+36
+00:02:36.500 --> 00:02:39.236
+não de outra é daquela instância de livro.
+
+37
+00:02:39.236 --> 00:02:43.568
+Vamos ampliar pouco mais o escopo agora,
+só para exemplificar.
+
+38
+00:02:43.568 --> 00:02:45.871
+Então eu tenho a classe Biblioteca,
+
+39
+00:02:45.871 --> 00:02:51.030
+vocês lembram que ela não estava associada
+à classe Livro, ela dependia de Livro.
+
+40
+00:02:51.030 --> 00:02:56.075
+Então a classe Biblioteca eu
+posso mandar uma mensagem para,
+
+41
+00:02:56.075 --> 00:03:01.434
+o objeto da classe Biblioteca pode
+mandar uma mensagem para objeto Livro01
+
+42
+00:03:01.434 --> 00:03:06.635
+que é da classe Livro, eu estou aqui
+aproveitando para exemplificar antes
+
+43
+00:03:06.635 --> 00:03:12.168
+a gente falou do diagrama de classes aqui
+já é diagrama de objetos, a gente chama de
+
+44
+00:03:12.168 --> 00:03:17.030
+diagrama de colaboração ou de comunicação,
+que eu exemplifico os objetos.
+
+45
+00:03:17.030 --> 00:03:22.257
+Então eu tenho objeto Biblioteca,
+vai logo depois do nome, de dois pontos,
+
+46
+00:03:22.257 --> 00:03:27.000
+eu estou querendo dizer que pouco me
+importa aí qual é o nome desse objeto
+
+47
+00:03:27.000 --> 00:03:32.538
+Biblioteca, e tenho o objeto
+Livro01 e objeto Livro02.
+
+48
+00:03:32.538 --> 00:03:38.178
+Então o objeto Biblioteca envia
+uma mensagem para o Livro01,
+
+49
+00:03:38.178 --> 00:03:43.730
+o anexaUsuario, que ele passa qual é o
+usuário que o Livro01 tem que anexar.
+
+50
+00:03:43.730 --> 00:03:48.770
+Nessa mensagem,
+Livro01 o método que vai tratar
+
+51
+00:03:48.770 --> 00:03:53.569
+disso é o anexaUsuario e lá
+dentro dele ele vai poder usar o
+
+52
+00:03:53.569 --> 00:03:58.460
+método privado, agora o objeto
+Biblioteca se quiser mandar,
+
+53
+00:03:58.460 --> 00:04:03.078
+se quiser enviar a mensagem
+método privado direto por
+
+54
+00:04:03.078 --> 00:04:08.033
+exemplo para o objeto Livro02,
+isso já não é possível,
+
+55
+00:04:08.033 --> 00:04:13.513
+por isso que tem X cortando essa
+tentativa de envio de mensagem,
+
+56
+00:04:13.513 --> 00:04:20.240
+ele não pode se comunicar mandando
+uma mensagem para método privado.
+
+57
+00:04:20.240 --> 00:04:25.224
+Inclusive o próprio objeto Livro01,
+que internamente ele pode usar o
+
+58
+00:04:25.224 --> 00:04:29.200
+método privado,
+se ele quiser enviar método privado,
+
+59
+00:04:29.200 --> 00:04:33.521
+uma mensagem com o método
+privado para o Livro02 que é
+
+60
+00:04:33.521 --> 00:04:37.851
+objeto da classe Livro portanto
+ele é diferente do Livro01,
+
+61
+00:04:37.851 --> 00:04:42.456
+ele tem vida própria, se ele quiser
+enviar ele também não pode enviar.
+
+62
+00:04:42.456 --> 00:04:43.090
+Porquê?
+
+63
+00:04:43.090 --> 00:04:47.482
+É método privado, só posso usar
+internamente dentro de cada objeto,
+
+64
+00:04:47.482 --> 00:04:49.360
+então ele não pode fazer isso.
+
+65
+00:04:49.360 --> 00:04:53.979
+Outra coisa importante de recordar
+é que o método privado não pode
+
+66
+00:04:53.979 --> 00:04:59.250
+colaborar com instâncias de subclasse,
+ou seja, que significa isso?
+
+67
+00:04:59.250 --> 00:05:06.655
+Significa que método privado não é
+herdado, ele não é visível por subclasses,
+
+68
+00:05:06.655 --> 00:05:10.943
+então ele não é herdado, isso é uma coisa
+que tem que ficar bem claro também.
+
+69
+00:05:10.943 --> 00:05:15.577
+Então exemplificar essa situação:
+eu estou mostrando para vocês uma
+
+70
+00:05:15.577 --> 00:05:20.980
+especialização da classe Livro,
+que é o LivroInfantil,
+
+71
+00:05:20.980 --> 00:05:27.924
+que no método público,
+método Infantil para exemplificar,
+
+72
+00:05:27.924 --> 00:05:34.380
+a lógica desse método está tentando
+usar o método privado da superclasse,
+
+73
+00:05:34.380 --> 00:05:38.380
+da classe LivroInfantil
+que é a classe Livro.
+
+74
+00:05:38.380 --> 00:05:42.350
+Isso não é possível fazer, porquê?
+
+75
+00:05:42.350 --> 00:05:47.352
+Porque o método privado da classe Livro,
+ele é privado com
+
+76
+00:05:47.352 --> 00:05:53.040
+isso ele não é herdado pela classe
+LivroInfantil, você não pode fazer isso.
+
+77
+00:05:53.040 --> 00:05:58.133
+Concluindo, o método privado
+ele é colaboração exclusiva
+
+78
+00:05:58.133 --> 00:06:05.050
+de responsabilidade privada ou pública
+de instância da própria classe, nós
+
+79
+00:06:05.050 --> 00:06:09.931
+vimos que não dá para fazer com instância
+de outra classe, da mesma classe,
+
+80
+00:06:09.931 --> 00:06:13.963
+uma outra instância da mesma classe,
+essa restrição tem que ser seguida.
+
+81
+00:06:13.963 --> 00:06:19.045
+Bom, a gente tem responsabilidade pública
+e a gente tem responsabilidade privada,
+
+82
+00:06:19.045 --> 00:06:23.474
+de alguma maneira
+a responsabilidade privada,
+
+83
+00:06:23.474 --> 00:06:28.403
+ela tem que ser colaboração
+direta ou indiretamente de
+
+84
+00:06:28.403 --> 00:06:32.017
+responsabilidades públicas da classe.
+
+85
+00:06:32.017 --> 00:06:38.370
+Se ela não for não faz sentido existir,
+ela tem que ser removida da nossa classe.
+
+86
+00:06:38.370 --> 00:06:43.290
+No nosso exemplo aqui,
+vamos supor o método privado
+
+87
+00:06:43.290 --> 00:06:48.210
+não seja mais necessário por uma mudança
+qualquer de lógica do anexaUsuario,
+
+88
+00:06:48.210 --> 00:06:51.326
+então eu não estou usando
+mais anexaUsuario.
+
+89
+00:06:51.326 --> 00:06:54.625
+Suponha também que nenhum
+outro método público,
+
+90
+00:06:54.625 --> 00:07:00.374
+como no caso o desanexaUsuario,
+também não faça uso desse método privado.
+
+91
+00:07:00.374 --> 00:07:02.708
+O que vai acontecer então?
+
+92
+00:07:02.708 --> 00:07:07.091
+O método privado ele deve ser eliminado,
+
+93
+00:07:07.091 --> 00:07:10.377
+removido da classe Livro.
+
+94
+00:07:10.377 --> 00:07:11.437
+Porquê?
+
+95
+00:07:11.437 --> 00:07:18.055
+Ele não é usado, ele não é colaboração
+interna da classe Livro nem para
+
+96
+00:07:18.055 --> 00:07:23.270
+o anexaUsuario, nem para o desanexaUsuario
+e nem para nenhum outro método público.
+
+97
+00:07:23.270 --> 00:07:27.603
+Então nem interessa se
+ele fosse usado como
+
+98
+00:07:27.603 --> 00:07:32.720
+colaboração de algum outro método privado,
+não interessa.
+
+99
+00:07:32.720 --> 00:07:37.791
+Não está colaborando com nenhum
+responsabilidade ou método público,
+
+100
+00:07:37.791 --> 00:07:39.910
+então ele deve ser removido.
+
+101
+00:07:39.910 --> 00:07:44.690
+Dado que nós já definimos o que é
+responsabilidade pública e o que é que é
+
+102
+00:07:44.690 --> 00:07:50.584
+responsabilidade privada, nós podemos
+então definir o que é que é o contrato.
+
+103
+00:07:50.584 --> 00:07:55.778
+O contrato é conjunto de serviços,
+de comportamentos, que uma
+
+104
+00:07:55.778 --> 00:08:03.110
+classe oferece para colaborar com outras
+classes e com a própria classe inclusive.
+
+105
+00:08:03.110 --> 00:08:08.161
+Com isso, esse contrato ele
+pode ser usado por outras
+
+106
+00:08:08.161 --> 00:08:14.020
+classes para colaborar com
+responsabilidades dessas outras classes.
+
+107
+00:08:14.020 --> 00:08:16.252
+O que é que vai fazer
+parte desse contrato?
+
+108
+00:08:16.252 --> 00:08:19.588
+Todas as responsabilidades públicas,
+simplesmente isso,
+
+109
+00:08:19.588 --> 00:08:24.190
+o contrato vai consistir de todas
+as responsabilidades públicas.
+
+110
+00:08:24.190 --> 00:08:27.943
+Normalmente a gente chama o
+contrato também de protocolo,
+
+111
+00:08:27.943 --> 00:08:32.163
+de interface padrão,
+de interface da classe,
+
+112
+00:08:32.163 --> 00:08:37.173
+interface externa, então todos esses
+nomes correspondem a esse contrato,
+
+113
+00:08:37.173 --> 00:08:42.162
+que no fundo está querendo dizer o
+seguinte: "Olha esse é o conjunto de
+
+114
+00:08:42.162 --> 00:08:47.234
+métodos públicos que
+estão disponíveis para
+
+115
+00:08:47.234 --> 00:08:53.883
+uso por qualquer classe que esteja
+necessitando dessa colaboração." Com isso
+
+116
+00:08:53.883 --> 00:09:00.050
+concluímos os aspectos relativos à
+colaboração responsabilidade pública,
+
+117
+00:09:00.050 --> 00:09:04.302
+responsabilidade privada e contrato.
+
+118
+00:09:04.302 --> 00:09:10.000
+Ou seja você agora é capaz
+de caracterizar e entender
+
+119
+00:09:10.000 --> 00:09:15.769
+todos esses conceitos e saber
+quando usá-los de maneira adequada.
+
+120
+00:09:15.769 --> 00:09:16.770
+Obrigado!

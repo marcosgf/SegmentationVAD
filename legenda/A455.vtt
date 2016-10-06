@@ -1,0 +1,585 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.018
+[MÚSICA] Olá,
+
+2
+00:00:08.018 --> 00:00:11.787
+bem vindo ao curso Orientação
+a Objetos com Java.
+
+3
+00:00:11.787 --> 00:00:14.030
+Meu nome é Clovis Fernandes.
+
+4
+00:00:14.030 --> 00:00:17.816
+A aula de hoje é sobre
+identificação de responsabilidades.
+
+5
+00:00:17.816 --> 00:00:21.845
+O objetivo então é caracterizar e
+identificar responsabilidades de uma
+
+6
+00:00:21.845 --> 00:00:22.373
+classe.
+
+7
+00:00:22.373 --> 00:00:27.139
+Vimos anteriormente como diferenciar
+estado de uma classe de seu comportamento.
+
+8
+00:00:27.139 --> 00:00:31.920
+Agora queremos facilitar a identificação
+de atributos e comportamentos de uma
+
+9
+00:00:31.920 --> 00:00:32.500
+classe.
+
+10
+00:00:32.500 --> 00:00:33.740
+Como faremos isso?
+
+11
+00:00:33.740 --> 00:00:36.534
+Através do conceito de antropomorfismo.
+
+12
+00:00:36.534 --> 00:00:38.707
+O que vem a ser antropomorfismo?
+
+13
+00:00:38.707 --> 00:00:44.162
+Antropomorfismo é essa capacidade de
+aplicar conceitos e características
+
+14
+00:00:44.162 --> 00:00:48.988
+do ser humano objetos inanimados,
+animais irracionais.
+
+15
+00:00:48.988 --> 00:00:53.616
+No nosso exemplo estamos vendo feijão
+que está caracterizado como ser humano.
+
+16
+00:00:53.616 --> 00:00:57.738
+Ele tem chapéu, ele carrega uma bolsa,
+ele tem braços, ele tem pernas.
+
+17
+00:00:57.738 --> 00:01:00.135
+Isso é dar esse olhar de antropomorfismo.
+
+18
+00:01:00.135 --> 00:01:05.458
+Antropomorfismo é conceito, para quem
+veio de programação estruturada, como eu,
+
+19
+00:01:05.458 --> 00:01:10.540
+antes de orientação a objetos, foi muito
+importante para mim para eu entender
+
+20
+00:01:10.540 --> 00:01:14.166
+como é que era realmente trabalhar com
+os conceitos de orientação a objetos.
+
+21
+00:01:14.166 --> 00:01:16.675
+Isso foi muito importante,
+foi crucial para mim.
+
+22
+00:01:16.675 --> 00:01:20.547
+Orientação a objetos antropomorfismo
+significa aplicar objetos e classes,
+
+23
+00:01:20.547 --> 00:01:22.918
+conceitos e comportamentos de ser humano.
+
+24
+00:01:22.918 --> 00:01:26.493
+Para exemplificar a identificação
+de atributos e comportamentos de
+
+25
+00:01:26.493 --> 00:01:31.023
+uma classe vamos aplicar o conceito
+de antropomorfismo à classe homem.
+
+26
+00:01:31.023 --> 00:01:35.550
+Para isso duas perguntas devem ser
+respondidas: Quais são as ações que
+
+27
+00:01:35.550 --> 00:01:36.670
+homem sabe ou faz?
+
+28
+00:01:36.670 --> 00:01:39.470
+Vamos lá, diga você,
+o que é que homem sabe?
+
+29
+00:01:39.470 --> 00:01:40.731
+Pense pouquinho.
+
+30
+00:01:40.731 --> 00:01:43.385
+O homem sabe o seu nome,
+a data de nascimento,
+
+31
+00:01:43.385 --> 00:01:45.270
+endereço e muitas outras coisas.
+
+32
+00:01:45.270 --> 00:01:47.675
+Agora vamos de novo: O
+que é que o homem faz?
+
+33
+00:01:47.675 --> 00:01:51.978
+Será que você vai conseguir pensar e
+coincidir com alguns nomes que eu vou
+
+34
+00:01:51.978 --> 00:01:52.864
+apresentar?
+
+35
+00:01:52.864 --> 00:01:58.228
+O homem, por exemplo, fala, anda, pula,
+dança, pensa e muitas outras coisas mais.
+
+36
+00:01:58.228 --> 00:02:01.135
+Para a classe Homem o
+antropomorfismo funcionou.
+
+37
+00:02:01.135 --> 00:02:05.604
+Responder às duas perguntas, o que é que o
+Homem sabe ou faz, ficou muito tranquilo.
+
+38
+00:02:05.604 --> 00:02:07.953
+Será que vai funcionar
+para ser irracional?
+
+39
+00:02:07.953 --> 00:02:10.426
+Vamos pensar, por exemplo, num cachorro.
+
+40
+00:02:10.426 --> 00:02:13.605
+Quais são as ações que
+cachorro sabe ou faz?
+
+41
+00:02:13.605 --> 00:02:18.013
+Vamos lá, dou tempo para você,
+pense aí o que é cachorro sabe?
+
+42
+00:02:18.013 --> 00:02:22.049
+Por exemplo, o cachorro sabe o seu nome,
+você pode chamar o cachorro,
+
+43
+00:02:22.049 --> 00:02:26.710
+o cachorro sabe onde fica a sua casinha,
+o cachorro sabe quem é o seu dono,
+
+44
+00:02:26.710 --> 00:02:30.995
+ele reconhece o seu dono e muitas
+outras coisas mais que ele sabe.
+
+45
+00:02:30.995 --> 00:02:33.808
+E agora diga você o que
+é que o cachorro faz?
+
+46
+00:02:33.808 --> 00:02:34.695
+Pense aí.
+
+47
+00:02:34.695 --> 00:02:39.608
+Cachorro ele late, ele anda,
+da mesma maneira que ser humano,
+
+48
+00:02:39.608 --> 00:02:43.208
+ele protege a casa e faz
+inúmeras outras também.
+
+49
+00:02:43.208 --> 00:02:45.702
+Para as classes homem e cachorro,
+
+50
+00:02:45.702 --> 00:02:49.486
+identificar as ações que
+cada uma delas sabe ou faz,
+
+51
+00:02:49.486 --> 00:02:54.388
+cada uma delas é responsável pelo que ela
+sabe, é responsável pelo que ela faz.
+
+52
+00:02:54.388 --> 00:02:57.861
+Isso dá origem ao termo
+de responsabilidade.
+
+53
+00:02:57.861 --> 00:03:03.038
+Então o que uma classe sabe ou faz,
+nós chamamos de responsabilidade.
+
+54
+00:03:03.038 --> 00:03:05.326
+Por exemplo: O que é que objeto sabe?
+
+55
+00:03:05.326 --> 00:03:09.948
+Isso vai constituir conhecimento que
+ele mantém, se é conhecimento que ele
+
+56
+00:03:09.948 --> 00:03:14.202
+mantém isso se refere aos atributos ou
+ao estado dessa classe e no final num
+
+57
+00:03:14.202 --> 00:03:19.117
+programa vai corresponder às
+variáveis de instância dessa classe.
+
+58
+00:03:19.117 --> 00:03:21.777
+Agora, o que é que objeto faz?
+
+59
+00:03:21.777 --> 00:03:25.090
+Isso corresponde à ação que ele realiza,
+ou seja,
+
+60
+00:03:25.090 --> 00:03:30.718
+isso está atrelado ao seu comportamento e,
+ao final, aos métodos de uma dada classe.
+
+61
+00:03:30.718 --> 00:03:35.478
+Nós conseguimos definir as
+responsabilidades, o que é que uma classe
+
+62
+00:03:35.478 --> 00:03:39.827
+sabe ou faz para as classes homem,
+cachorro e funcionou muito bem.
+
+63
+00:03:39.827 --> 00:03:43.650
+Agora será que para uma coisa
+inanimada vai funcionar também?
+
+64
+00:03:43.650 --> 00:03:46.720
+Então na tela vocês estão
+vendo aí ponto gráfico.
+
+65
+00:03:46.720 --> 00:03:49.580
+Quais são as responsabilidade
+de ponto gráfico?
+
+66
+00:03:49.580 --> 00:03:53.610
+Agora eu não preciso mais ficar
+perguntando quais as ações que objeto ou
+
+67
+00:03:53.610 --> 00:03:58.890
+classe sabe ou faz, basta perguntar quais
+são as responsabilidades que objeto tem.
+
+68
+00:03:58.890 --> 00:04:02.469
+Então nesse caso quais são as
+responsabilidades do objeto gráfico.
+
+69
+00:04:02.469 --> 00:04:04.388
+Vou deixar para você pensar pouquinho.
+
+70
+00:04:04.388 --> 00:04:05.880
+O que é que ponto gráfico sabe?
+
+71
+00:04:05.880 --> 00:04:08.859
+O ponto gráfico sabe a cor,
+ele sabe a posição,
+
+72
+00:04:08.859 --> 00:04:12.223
+ele sabe o tamanho e
+muitas outras coisas mais.
+
+73
+00:04:12.223 --> 00:04:12.895
+Ou seja,
+
+74
+00:04:12.895 --> 00:04:18.052
+eu estou atribuindo esses conceitos
+típicos do ser humano a objeto gráfico.
+
+75
+00:04:18.052 --> 00:04:22.423
+Agora veja você, mesma coisa,
+pense você o que ponto gráfico faz?
+
+76
+00:04:22.423 --> 00:04:26.757
+Vou atribuir então essas características
+como se ele fosse ser humano.
+
+77
+00:04:26.757 --> 00:04:30.693
+O ponto gráfico ele move-se,
+ele compara-se a outro ponto,
+
+78
+00:04:30.693 --> 00:04:36.045
+ele devolve qual é a sua posição ou
+a sua coordenada e outras coisas mais.
+
+79
+00:04:36.045 --> 00:04:38.401
+Essas são as coisas que ponto gráfico faz.
+
+80
+00:04:38.401 --> 00:04:42.010
+Estou atribuindo a ele,
+assim como a ser humano era andar e pular,
+
+81
+00:04:42.010 --> 00:04:46.150
+o ponto gráfico é mover-se,
+comparar-se e apresentar posição.
+
+82
+00:04:46.150 --> 00:04:50.614
+Nós vimos então que através das
+responsabilidades nós podemos definir o
+
+83
+00:04:50.614 --> 00:04:53.483
+estado e o comportamento
+de uma dada classe.
+
+84
+00:04:53.483 --> 00:04:57.436
+O estado, como nós já sabemos,
+ele corresponde aos atributos,
+
+85
+00:04:57.436 --> 00:04:59.955
+o comportamente corresponde aos métodos.
+
+86
+00:04:59.955 --> 00:05:04.550
+Esse conjunto todo eu encontro perguntando
+quais são as responsabilidades desse
+
+87
+00:05:04.550 --> 00:05:05.804
+objeto dessa classe.
+
+88
+00:05:05.804 --> 00:05:07.718
+Então basta fazer essa pergunta,
+
+89
+00:05:07.718 --> 00:05:12.826
+eu estaria respondendo quando eu pergunto
+o que objeto sabe, vou responder
+
+90
+00:05:12.826 --> 00:05:17.518
+e conseguir encontrar os seus atributos,
+as suas variáveis de instância.
+
+91
+00:05:17.518 --> 00:05:21.590
+Quando eu pergunto o que objeto faz,
+eu vou encontrar o seu comportamento,
+
+92
+00:05:21.590 --> 00:05:22.530
+os seus métodos.
+
+93
+00:05:22.530 --> 00:05:24.611
+Por exemplo, temos a classe carro.
+
+94
+00:05:24.611 --> 00:05:27.633
+Quais são essas responsabilidades
+da classe carro?
+
+95
+00:05:27.633 --> 00:05:32.139
+Eu vou exemplificar aqui com relação
+ao que a classe carro sabe apenas pela
+
+96
+00:05:32.139 --> 00:05:36.967
+potência do motor e pela velocidade,
+e pelo que a classe carro faz,
+
+97
+00:05:36.967 --> 00:05:40.808
+o comportamento de frear o
+carro e acelerar o carro.
+
+98
+00:05:40.808 --> 00:05:44.990
+Objeto da classe carro,
+por exemplo, o carro do meu sogro,
+
+99
+00:05:44.990 --> 00:05:49.752
+ele vai ter as mesma características
+e atributos da classe carro só que
+
+100
+00:05:49.752 --> 00:05:52.298
+agora esses atributos vão ter valores.
+
+101
+00:05:52.298 --> 00:05:57.266
+Então nesse exemplo nós temos a potência
+do motor é 2.0 e a velocidade do carro,
+
+102
+00:05:57.266 --> 00:05:59.143
+num dado instante, é 60 km.
+
+103
+00:05:59.143 --> 00:06:02.015
+Obviamente eu posso
+aplicar o comportamento,
+
+104
+00:06:02.015 --> 00:06:06.463
+eu posso frear que vai diminuir a
+velocidade de 60 para 50 por exemplo, e eu
+
+105
+00:06:06.463 --> 00:06:11.440
+posso também acelerar fazendo com que o
+carro de 60 passe por exemplo para 70 km.
+
+106
+00:06:11.440 --> 00:06:16.418
+Tudo isso constitui as responsabilidades
+que foram definidas na classe carro e
+
+107
+00:06:16.418 --> 00:06:19.550
+que caracterizam objeto dessa classe.
+
+108
+00:06:19.550 --> 00:06:25.104
+Gostaria de enfatizar que o conceito de
+responsabilidade vai ser muito importante,
+
+109
+00:06:25.104 --> 00:06:30.290
+crucial mesmo, para ter bom
+entendimento de classes e objetos.
+
+110
+00:06:30.290 --> 00:06:33.640
+Vai me ajudar a definir classes e objetos.
+
+111
+00:06:33.640 --> 00:06:37.671
+Eu consigo identificar os seus
+atributos e o seu comportamento.
+
+112
+00:06:37.671 --> 00:06:42.538
+O conceito responsabilidade vai ser muito
+usado ao longo de todo o curso por isso
+
+113
+00:06:42.538 --> 00:06:47.144
+ele é muito importante que vocês prestem
+bastante atenção e tentem entendê-lo
+
+114
+00:06:47.144 --> 00:06:49.195
+o máximo possível a partir de agora.
+
+115
+00:06:49.195 --> 00:06:52.309
+Relembrando: A responsabilidade
+ela tem 2 tipos.
+
+116
+00:06:52.309 --> 00:06:54.475
+A responsabilidade do tipo sabe,
+
+117
+00:06:54.475 --> 00:06:58.803
+que vai fazer com que eu possa
+identificar o estado, os atributos e no
+
+118
+00:06:58.803 --> 00:07:03.616
+final que vai corresponder às variáveis de
+instância da minha classe e o tipo faz,
+
+119
+00:07:03.616 --> 00:07:08.457
+responsabilidades do tipo faz, que vão me
+ajudar a definir o comportamento dessa
+
+120
+00:07:08.457 --> 00:07:12.513
+classe e no final vai ser representado
+pelos métodos de uma classe.
+
+121
+00:07:12.513 --> 00:07:17.154
+O objetivo dessa aula foi identificar
+responsabilidades e foi o que mostramos
+
+122
+00:07:17.154 --> 00:07:17.919
+para vocês.
+
+123
+00:07:17.919 --> 00:07:18.970
+Muito obrigado!
+
+124
+00:07:18.970 --> 00:07:23.920
+[MÚSICA]

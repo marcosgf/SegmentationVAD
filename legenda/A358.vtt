@@ -1,0 +1,428 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.710
+Olá, neste vídeo vou falar
+sobre o uso do Matlab no curso.
+
+2
+00:00:04.710 --> 00:00:08.611
+Se você já está familiarizado e se
+sente confortável com o Matlab,
+
+3
+00:00:08.611 --> 00:00:11.480
+fique à vontade para pular
+para o próximo vídeo.
+
+4
+00:00:11.480 --> 00:00:16.141
+A MathWorks cedeu uma versão trial
+do Matlab pra que você possa usá-la
+
+5
+00:00:16.141 --> 00:00:17.090
+nesse curso.
+
+6
+00:00:17.090 --> 00:00:19.952
+Você vai vai encontrar
+o link para download,
+
+7
+00:00:19.952 --> 00:00:22.750
+os recursos do curso download do Matlab.
+
+8
+00:00:22.750 --> 00:00:29.341
+Se você tiver qualquer problema com o
+download, instalação, ou usando o trial,
+
+9
+00:00:29.341 --> 00:00:34.503
+por favor, crie tópico de discussão
+aqui embaixo, e digite sua mensagem,
+
+10
+00:00:34.503 --> 00:00:38.270
+preferencialmente inglês,
+para obter uma resposta mais rápida.
+
+11
+00:00:38.270 --> 00:00:42.544
+A equipe da MathWorks irá monitorar
+as mensagens criadas neste fórum
+
+12
+00:00:42.544 --> 00:00:45.280
+e responderá diretamente às suas duvidas.
+
+13
+00:00:45.280 --> 00:00:49.312
+Se você tiver duvidas sobre o uso
+do Matlab uma aula específica,
+
+14
+00:00:49.312 --> 00:00:52.120
+crie novo tópico no vídeo correspondente.
+
+15
+00:00:52.120 --> 00:00:56.911
+Os tópicos de discussão deste vídeo
+são apenas para dúvidas gerais sobre
+
+16
+00:00:56.911 --> 00:00:58.960
+a instalação e o uso do Matlab.
+
+17
+00:00:58.960 --> 00:01:02.160
+E como o Matlab será usado nesse curso?
+
+18
+00:01:02.160 --> 00:01:06.624
+Bem, ao invés de eu simplesmente
+apresentar os gráficos da saída do sistema
+
+19
+00:01:06.624 --> 00:01:11.450
+obtidos via simulação, você poderá criar
+seus próprios gráficos me acompanhando e
+
+20
+00:01:11.450 --> 00:01:13.460
+fazendo exatamente o que eu fizer.
+
+21
+00:01:13.460 --> 00:01:17.542
+Mas se preferir ficar só observando
+também, fique à vontade,
+
+22
+00:01:17.542 --> 00:01:21.170
+embora eu recomende que você
+instale o Matlab e use ele.
+
+23
+00:01:21.170 --> 00:01:25.946
+Para exemplificar, vou mostrar como
+obter o gráfico da resposta ao degrau de
+
+24
+00:01:25.946 --> 00:01:30.450
+uma função de transferência de segunda
+ordem subamortecida usando o Matlab.
+
+25
+00:01:30.450 --> 00:01:32.629
+Não precisa me acompanhar agora.
+
+26
+00:01:32.629 --> 00:01:36.470
+Esse exemplo é apenas para
+ilustrar a utilização do Matlab.
+
+27
+00:01:36.470 --> 00:01:40.720
+Execute o Matlab e espere ele carregar.
+
+28
+00:01:40.720 --> 00:01:45.648
+Você saberá que ele está pronto quando
+ver os dois sinais de maior que na linha
+
+29
+00:01:45.648 --> 00:01:46.500
+de comando.
+
+30
+00:01:46.500 --> 00:01:54.530
+Agora, na linha de
+comando digite: xi = 0.5.
+
+31
+00:01:54.530 --> 00:01:59.130
+O Matlab usa o ponto como
+separador decimal, e tecle enter.
+
+32
+00:01:59.130 --> 00:02:04.350
+Agora digite: wn igual a 1, e tecle enter.
+
+33
+00:02:04.350 --> 00:02:06.813
+Na verdade é w mas eu chamo de ômega.
+
+34
+00:02:06.813 --> 00:02:11.624
+E agora vamos criar uma função de
+transferência de segunda ordem
+
+35
+00:02:11.624 --> 00:02:13.793
+com estes parâmetros.
+
+36
+00:02:13.793 --> 00:02:19.220
+Digite: sys igual a tf abre parêntesis,
+abre colchete, ômega n ao quadrado,
+
+37
+00:02:19.220 --> 00:02:25.273
+fecha colchete, vírgula, abre colchete
+espaço duas vezes xi, vezes ômega n,
+
+38
+00:02:25.273 --> 00:02:30.860
+espaço ômega n ao quadrado, fecha
+colchete, fecha parêntesis e tecle enter.
+
+39
+00:02:30.860 --> 00:02:35.740
+Muito bem, você acabou de criar uma
+função de transferência no Matlab.
+
+40
+00:02:35.740 --> 00:02:39.381
+A função tf recebe os coeficientes
+do numerador e os coeficiente do
+
+41
+00:02:39.381 --> 00:02:42.060
+denominardor, e cria
+a função de transferência.
+
+42
+00:02:42.060 --> 00:02:47.224
+Note que o Matlab já efetuou os
+cálculos com base xi e ômega n,
+
+43
+00:02:47.224 --> 00:02:53.670
+e a função de transferência é 1 sobre
+sobre s ao quadrado mais s, mais 1.
+
+44
+00:02:53.670 --> 00:02:57.879
+Agora digite step, abre parêntesis, sys,
+
+45
+00:02:57.879 --> 00:03:03.008
+fecha parêntesis e tecle enter e você
+verá o resultado da simulação da
+
+46
+00:03:03.008 --> 00:03:09.030
+resposta ao degrau deste sistema,
+com xi = 0.5 e wn = 1.
+
+47
+00:03:09.030 --> 00:03:14.010
+Então, ao invés de apenas ver o gráfico
+final, você irá construir o seu próprio
+
+48
+00:03:14.010 --> 00:03:19.030
+gráfico, e depois você poderá alterar
+valores e ver o que acontece.
+
+49
+00:03:19.030 --> 00:03:23.795
+Por exemplo, você pode repetir o que
+acabamos de ver com diferentes valores de
+
+50
+00:03:23.795 --> 00:03:28.253
+xi e de ômega n e pode verificar que
+ao variar xi, alteramos overshoot,
+
+51
+00:03:28.253 --> 00:03:32.190
+e ao variarmos ômega n,
+alteramos a velocidade da resposta.
+
+52
+00:03:32.190 --> 00:03:35.171
+Você poderá também confirmar
+que ao mudarmos o numerador
+
+53
+00:03:35.171 --> 00:03:39.905
+da função de transferência, estamos
+apenas alterando o valor final da saída,
+
+54
+00:03:39.905 --> 00:03:41.270
+mas não a forma dela.
+
+55
+00:03:41.270 --> 00:03:45.402
+Basta usar por exemplo 0.5 vezes ômega
+n ao quadrado ou 10 vezes ômega n
+
+56
+00:03:45.402 --> 00:03:46.200
+ao quadrado,
+
+57
+00:03:46.200 --> 00:03:51.130
+no numerador ao invés de ômega n ao
+quadrado e ver o que acontece com a saída.
+
+58
+00:03:51.130 --> 00:03:56.010
+Desse modo, depois de projetar ganho
+ou controlador mais elaborado,
+
+59
+00:03:56.010 --> 00:04:00.360
+você poderá testar o desempenho do
+seu projeto apenas mudando alguns
+
+60
+00:04:00.360 --> 00:04:04.122
+valores nos exemplos que você vai ver.
+
+61
+00:04:04.122 --> 00:04:07.057
+E vamos usar também o Simulink,
+
+62
+00:04:07.057 --> 00:04:11.340
+ambiente muito mais intuitivo do
+Matlab para simulação de sistemas.
+
+63
+00:04:11.340 --> 00:04:14.450
+Novamente, não precisa
+me acompanhar agora.
+
+64
+00:04:14.450 --> 00:04:20.060
+No menu superior, na aba Home,
+clique New Simulink Model.
+
+65
+00:04:20.060 --> 00:04:24.255
+Escolha Blank Model.
+
+66
+00:04:24.255 --> 00:04:28.450
+Na nova janela,
+clique no menu View e Library Browser.
+
+67
+00:04:28.450 --> 00:04:34.030
+Uma janela com os blocos que você
+pode usar no Simulink vai abrir.
+
+68
+00:04:34.030 --> 00:04:36.251
+Clique Continuous.
+
+69
+00:04:36.251 --> 00:04:41.112
+Clique e arraste o bloco Transfer
+Function, função de transferência,
+
+70
+00:04:41.112 --> 00:04:42.920
+para a janela branco, solte.
+
+71
+00:04:42.920 --> 00:04:46.052
+Dê duplo clique no bloco que foi criado,
+
+72
+00:04:46.052 --> 00:04:50.150
+e edite os coeficientes do
+numerador e do denominador.
+
+73
+00:04:50.150 --> 00:04:53.918
+Você pode usar valores numéricos
+ou expressões matemáticas, por
+
+74
+00:04:53.918 --> 00:04:58.640
+exemplo usando os valores de xi ômega n
+que já foram criados na linha de comando.
+
+75
+00:04:58.640 --> 00:05:04.315
+Vamos deixar o 1 no numerador e usar 1,
+1 e 1 no denominador.
+
+76
+00:05:04.315 --> 00:05:06.110
+Agora clique OK.
+
+77
+00:05:06.110 --> 00:05:12.920
+Clique Sources, fontes, e arraste
+o bloco Step Degrau para o modelo.
+
+78
+00:05:12.920 --> 00:05:16.290
+Posicione ele à esquerda
+da função de transferência.
+
+79
+00:05:16.290 --> 00:05:22.080
+Agora clique Syncs e arraste bloco Scope
+para a direita da função de transferência.
+
+80
+00:05:22.080 --> 00:05:26.820
+Agora clique na saída de bloco e
+arraste até a entrada do seguinte.
+
+81
+00:05:26.820 --> 00:05:32.296
+[SEM_ÁUDIO] Agora
+
+82
+00:05:32.296 --> 00:05:36.930
+é só apertar o ícone Play,
+triângulo apontado para a direita.
+
+83
+00:05:36.930 --> 00:05:42.620
+Dê duplo clique no Scope
+e você verá a saída.
+
+84
+00:05:42.620 --> 00:05:47.568
+Mais tarde você poderá modificar
+
+85
+00:05:47.568 --> 00:05:50.750
+os modelos Simulink para fazer
+as suas próprias simulações.
+
+86
+00:05:50.750 --> 00:05:55.522
+Neste curso eu vou mostrar apenas
+a utilização básica do Matlab,
+
+87
+00:05:55.522 --> 00:05:59.650
+mas eu recomendo que você explore
+mais essa ferramenta excepcional.
+
+88
+00:05:59.650 --> 00:06:04.413
+A MathWorks disponibiliza diversos
+tutoriais e fazendo eles você terá
+
+89
+00:06:04.413 --> 00:06:07.280
+uma ideia melhor do potencial do Mathlab.
+
+90
+00:06:07.280 --> 00:06:13.255
+[SEM_ÁUDIO]
+
+91
+00:06:13.255 --> 00:06:19.230
+>> Até a próxima aula.

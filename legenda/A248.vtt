@@ -1,0 +1,412 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.073
+[MÚSICA] E
+
+3
+00:00:13.073 --> 00:00:17.850
+aí pessoal, tudo bem?
+
+4
+00:00:17.850 --> 00:00:22.476
+Nessa aula vamos conhecer
+pouco mais sobre o XCode.
+
+5
+00:00:22.476 --> 00:00:23.690
+Abra o XCode.
+
+6
+00:00:23.690 --> 00:00:30.416
+[SEM_AÚDIO] Nessa tela inicial,
+
+7
+00:00:30.416 --> 00:00:34.190
+você pode criar novo projeto
+através desse atalho.
+
+8
+00:00:34.190 --> 00:00:37.940
+Ao clicar em File, New, Project.
+
+9
+00:00:37.940 --> 00:00:43.670
+No XCode você pode criar
+aplicativos e bibliotecas para iOS,
+
+10
+00:00:43.670 --> 00:00:46.730
+e para Mac OS X.
+
+11
+00:00:46.730 --> 00:00:51.433
+Ao clicar em Application para iOS,
+o XCode mostra
+
+12
+00:00:51.433 --> 00:00:55.440
+alguns tipos de templates para você
+começar o desenvolvimento de aplicativo.
+
+13
+00:00:55.440 --> 00:01:01.090
+Vamos começar com o mais simples deles,
+que é o Single View Application.
+
+14
+00:01:01.090 --> 00:01:05.380
+Nessa tela devemos escolher
+o nome do aplicativo,
+
+15
+00:01:05.380 --> 00:01:08.560
+Vamos colocar como PrimeiroProjeto.
+
+16
+00:01:08.560 --> 00:01:14.030
+Em Organization Name você deve digitar
+o seu nome ou o nome da sua empresa.
+
+17
+00:01:14.030 --> 00:01:18.781
+Organization Identifier é o
+identificador da sua empresa para
+
+18
+00:01:18.781 --> 00:01:20.940
+todos os seus aplicativos.
+
+19
+00:01:20.940 --> 00:01:23.630
+Você pode colocar o que
+quiser nesse campo,
+
+20
+00:01:23.630 --> 00:01:27.930
+mas a Apple recomenda que esse
+identificador seja uma URL invertida.
+
+21
+00:01:27.930 --> 00:01:31.750
+Então digamos que eu tenho
+site rodrigotakase.com.
+
+22
+00:01:31.750 --> 00:01:35.160
+O meu identificador é com.rodrigotakase.
+
+23
+00:01:35.160 --> 00:01:40.000
+Bundle Identifier é identificador
+único para o seu aplicativo.
+
+24
+00:01:40.000 --> 00:01:44.454
+O XCode automáticamente une o seu
+Organization Identifier e o nome
+
+25
+00:01:44.454 --> 00:01:49.080
+do aplicativo, mas você pode modificar
+manualmente nas configurações do projeto.
+
+26
+00:01:49.080 --> 00:01:53.483
+Em Language o XCode dá a opção
+de desenvolvermos nas linguagens
+
+27
+00:01:53.483 --> 00:01:55.070
+Objective C ou Swift.
+
+28
+00:01:55.070 --> 00:02:00.004
+Nesse programas de cursos integrados,
+iremos utilizar apenas o Swift e na
+
+29
+00:02:00.004 --> 00:02:04.510
+opção Devices é possível fazer
+aplicativo exclusivamente para o iPad,
+
+30
+00:02:04.510 --> 00:02:09.296
+para o iPhone ou o Universal,
+que roda tanto em iPhones e iPads.
+
+31
+00:02:09.296 --> 00:02:11.790
+Para esse curso escolha iPhone.
+
+32
+00:02:11.790 --> 00:02:14.284
+Essa última opção Use Core Data,
+
+33
+00:02:14.284 --> 00:02:18.840
+serve para utilizar a biblioteca
+de persistência de dados.
+
+34
+00:02:18.840 --> 00:02:20.340
+Clique em Next.
+
+35
+00:02:20.340 --> 00:02:25.490
+Selecione a pasta onde você
+deseja gravar o seu projeto.
+
+36
+00:02:25.490 --> 00:02:31.044
+Deixe a opção de Source Control
+desativada, pois não utilizaremos control
+
+37
+00:02:31.044 --> 00:02:36.095
+de inversão e clique em Create.
+
+38
+00:02:36.095 --> 00:02:40.270
+O XCode é separado em 6 partes principais,
+uma barra superior,
+
+39
+00:02:40.270 --> 00:02:47.144
+uma barra lateral esquerda, uma área
+central, uma barra lateral direita,
+
+40
+00:02:47.144 --> 00:02:51.481
+uma área no canto inferior
+direito e uma área inferior.
+
+41
+00:02:51.481 --> 00:02:56.299
+A barra superior contém botão
+para executar o aplicativo.
+
+42
+00:02:56.299 --> 00:03:01.283
+Botão para parar a execução
+e uma opção para escolher
+
+43
+00:03:01.283 --> 00:03:04.200
+qual device ou simulador você
+quer testar o seu aplicativo.
+
+44
+00:03:04.200 --> 00:03:09.234
+Contém uma área dizendo Status
+do seu Projeto e no canto
+
+45
+00:03:09.234 --> 00:03:14.080
+superior direito, botões para mudar
+a organização das áreas do XCode.
+
+46
+00:03:14.080 --> 00:03:18.860
+Esse 1.º botão serve para mostrar
+o modo padrão da área central.
+
+47
+00:03:18.860 --> 00:03:24.141
+O 2.º botão serve para dividir
+a área central ao meio, para que de
+
+48
+00:03:24.141 --> 00:03:28.350
+lado você possa ver a tela do aplicativo
+e no outro, o código, por exemplo.
+
+49
+00:03:28.350 --> 00:03:33.160
+O 3.º botão serve para comparar arquivos
+quando é usado o control de inversão.
+
+50
+00:03:33.160 --> 00:03:38.180
+Como não estamos utilizando nesse projeto,
+essa mensagem de alerta é mostrada.
+
+51
+00:03:38.180 --> 00:03:42.901
+E por fim esses 3 botões servem
+para mostrar ou ocultar uma barra
+
+52
+00:03:42.901 --> 00:03:44.570
+lateral ou inferior.
+
+53
+00:03:44.570 --> 00:03:49.729
+[SEM_AÚDIO] A barra
+
+54
+00:03:49.729 --> 00:03:53.840
+lateral esquerda mostra todos
+os arquivos do projeto.
+
+55
+00:03:53.840 --> 00:03:56.622
+Nesse template de Single View Application,
+
+56
+00:03:56.622 --> 00:04:01.210
+foram criados 2 arquivos Swift,
+arquivo de Storyboard, que serve para
+
+57
+00:04:01.210 --> 00:04:06.250
+montarmos a interface gráfica do
+aplicativo, uma pasta Image.XCassets,
+
+58
+00:04:06.250 --> 00:04:11.374
+para importarmos os arquivos de
+imagem que iremos usar no projeto e
+
+59
+00:04:11.374 --> 00:04:16.840
+arquivo de configuração da tela inicial
+que é mostrada logo que o aplicativo abre.
+
+60
+00:04:16.840 --> 00:04:22.110
+A barra lateral direita mostra informações
+e configurações de arquivos e elementos.
+
+61
+00:04:22.110 --> 00:04:27.050
+A área no canto inferior direito da tela,
+contém bibliotecas.
+
+62
+00:04:27.050 --> 00:04:32.550
+Uma biblioteca de arquivos,
+uma biblioteca de trechos de códigos,
+
+63
+00:04:32.550 --> 00:04:37.077
+uma biblioteca de objetos de
+interface e uma biblioteca de
+
+64
+00:04:37.077 --> 00:04:40.320
+arquivos de media que foram
+importados no projeto.
+
+65
+00:04:40.320 --> 00:04:46.069
+A área central mostra o conteúdo do
+arquivo que está selecionado no momento,
+
+66
+00:04:46.069 --> 00:04:49.130
+no caso, ela está mostrando
+as configurações do projeto.
+
+67
+00:04:49.130 --> 00:04:51.854
+Se clicarmos em arquivo Swift,
+por exemplo,
+
+68
+00:04:51.854 --> 00:04:54.920
+a área central mostra editor
+de texto para o código.
+
+69
+00:04:54.920 --> 00:04:59.081
+A área inferior nos auxilia no
+processo de debug do aplicativo,
+
+70
+00:04:59.081 --> 00:05:02.170
+mostrando erros,
+valores de variáveis e etc.
+
+71
+00:05:02.170 --> 00:05:06.030
+Vamos rodar esse aplicativo
+teste num simulador de iPhone
+
+72
+00:05:06.030 --> 00:05:11.135
+5s [SEM_AÚDIO]
+
+73
+00:05:11.135 --> 00:05:16.000
+O Xcode automaticamente abre o
+simulador e roda o aplicativo.
+
+74
+00:05:16.000 --> 00:05:18.752
+Como não adicionamos
+nenhum componente gráfico,
+
+75
+00:05:18.752 --> 00:05:21.380
+o nosso aplicativos é
+apenas uma tela em branco.
+
+76
+00:05:21.380 --> 00:05:26.370
+Temos algumas opções para interagir
+com o simulador de iPhone.
+
+77
+00:05:26.370 --> 00:05:28.417
+Clique na opção Hardware.
+
+78
+00:05:28.417 --> 00:05:32.070
+Podemos rotacionar o
+aparelho para a esquerda,
+
+79
+00:05:32.070 --> 00:05:36.560
+rotacionar à direita,
+
+80
+00:05:36.560 --> 00:05:39.946
+simular o movimento de
+chacoalhar o aparelho,
+
+81
+00:05:39.946 --> 00:05:44.990
+com a opção Shake Gesture e podemos
+simular o botão Home do aparelho.
+
+82
+00:05:44.990 --> 00:05:51.620
+[SEM_AÚDIO] Você também pode mudar
+
+83
+00:05:51.620 --> 00:05:55.920
+o tamanho do simulador, caso ele esteja
+muito pequeno ou muito grande na sua tela.
+
+84
+00:05:55.920 --> 00:05:58.881
+Basta selecionar uma dessas opções,
+
+85
+00:05:58.881 --> 00:06:03.700
+ou utilizar os atalhos Command 1,
+Command 2, Command 3.
+
+86
+00:06:03.700 --> 00:06:08.575
+Na próxima aula veremos
+pouco mais sobre Storyboard.
+
+87
+00:06:08.575 --> 00:06:09.290
+Até lá!

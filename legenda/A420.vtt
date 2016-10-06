@@ -1,0 +1,1013 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.670
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.670 --> 00:00:11.540
+bem vindo ao curso sobre TDD,
+
+3
+00:00:11.540 --> 00:00:17.349
+eu sou Clóvis Fernandes e hoje
+iremos falar de uma coisa muito,
+
+4
+00:00:17.349 --> 00:00:23.769
+não sei se vocês vão gostar, eu vou falar
+do papel do mau cheiro, está certo?
+
+5
+00:00:23.769 --> 00:00:29.074
+Aí, na verdade o que nós estamos
+falando aqui é sobre o que refatorar,
+
+6
+00:00:29.074 --> 00:00:33.620
+quer dizer, como é que eu
+descubro o que eu devo refatorar?
+
+7
+00:00:33.620 --> 00:00:40.580
+A ideia é simples, siga o mau cheiro e
+descubra o que precisa ser refatorado.
+
+8
+00:00:40.580 --> 00:00:45.552
+Quer dizer esse mau cheiro
+vai ser alguma coisa que se
+
+9
+00:00:45.552 --> 00:00:50.669
+encontra errado ou mal projetado
+no seu programa, está certo,
+
+10
+00:00:50.669 --> 00:00:56.480
+que você vai identificar e vai associar
+algumas técnicas de refatoração.
+
+11
+00:00:56.480 --> 00:00:59.512
+Então como fazemos para refatorar?
+
+12
+00:00:59.512 --> 00:01:04.124
+Bom, primeiro nós vamos estar na fase,
+no ciclo de TDD,
+
+13
+00:01:04.124 --> 00:01:08.812
+na fase de refatoração,
+está certo, e iremos seguir
+
+14
+00:01:08.812 --> 00:01:13.495
+uma abordagem de analisar o nosso código,
+
+15
+00:01:13.495 --> 00:01:18.690
+está certo, cuidadosamente para
+ver o que é que pode ser feito.
+
+16
+00:01:18.690 --> 00:01:26.013
+Então nós examinamos o código
+busca de alguma coisa,
+
+17
+00:01:26.013 --> 00:01:30.000
+o que é que é essa coisa
+que nós estamos busca?
+
+18
+00:01:30.000 --> 00:01:35.225
+São indícios, sintomas na nossa área aqui,
+
+19
+00:01:35.225 --> 00:01:38.510
+nós vamos chamar de mau cheiro,
+
+20
+00:01:38.510 --> 00:01:43.985
+bad smell inglês ou
+simplesmente smell está certo?
+
+21
+00:01:43.985 --> 00:01:47.990
+Ou seja isso é o que nós vamos
+estar procurando no código.
+
+22
+00:01:47.990 --> 00:01:49.914
+E o que vai consistir isso?
+
+23
+00:01:49.914 --> 00:01:54.269
+São coisas que suspeitamos que
+não estão muito bem no código,
+
+24
+00:01:54.269 --> 00:02:00.811
+por exemplo quando eu deixo uma
+variável de instância pública,
+
+25
+00:02:00.811 --> 00:02:04.545
+ou deixo uma variável de
+instância mesmo que seja privada,
+
+26
+00:02:04.545 --> 00:02:08.950
+exposta através de getters
+e setters públicos.
+
+27
+00:02:08.950 --> 00:02:14.222
+Isso é sintoma de que alguma
+coisa pode estar errada.
+
+28
+00:02:14.222 --> 00:02:19.177
+O programa vai estar funcionando,
+está certo, mas é que eu dou margem a que
+
+29
+00:02:19.177 --> 00:02:24.781
+pessoas cometam erros subtis, difíceis
+de serem descobertos e assim por diante.
+
+30
+00:02:24.781 --> 00:02:29.450
+Bad smell também, mau cheiro,
+
+31
+00:02:29.450 --> 00:02:34.163
+ele pode ser uma coisa complicada,
+que se a gente não tomar cuidado com ele,
+
+32
+00:02:34.163 --> 00:02:39.096
+pode nos dar trabalho, dor de cabeça,
+preocupação se não corrigirmos,
+
+33
+00:02:39.096 --> 00:02:42.640
+ou eliminarmos esse bad smell, está certo?
+
+34
+00:02:42.640 --> 00:02:47.420
+Então se eu estou deixando dado
+exposto ou se eu estou deixando
+
+35
+00:02:47.420 --> 00:02:51.830
+como a gente viu lá na Law of Demeter,
+
+36
+00:02:51.830 --> 00:02:58.839
+que eu deixo exposto através
+de getter que me devolve
+
+37
+00:02:58.839 --> 00:03:04.523
+objeto e dali eu posso obter outro
+objeto e aí eu começo a trabalhar
+
+38
+00:03:04.523 --> 00:03:09.464
+e criar muitas dependências,
+acoplamentos complicados está certo?
+
+39
+00:03:09.464 --> 00:03:14.284
+Então se eu não cuidar disso,
+eu vou algum momento ficar
+
+40
+00:03:14.284 --> 00:03:18.725
+tomado como se fosse monte de lixo,
+
+41
+00:03:18.725 --> 00:03:23.460
+monte de sujeira que vai
+atravancar o meu desenvolvimento.
+
+42
+00:03:23.460 --> 00:03:28.554
+Normalmente a gente vai olhar então, isso
+como sintoma de que algo está podre no
+
+43
+00:03:28.554 --> 00:03:34.020
+meu reino da Dinamarca, então o meu código
+é o meu reino da Dinamarca está certo?
+
+44
+00:03:34.020 --> 00:03:39.946
+Bad smell vai ser sintoma de que algo
+está podre no meu reino está certo,
+
+45
+00:03:39.946 --> 00:03:44.110
+e eu não vou deixar, não devo
+deixar isso acontecer, está certo?
+
+46
+00:03:44.110 --> 00:03:48.558
+Já o Fowler no seu livro,
+que eu já citei, de 2009,
+
+47
+00:03:48.558 --> 00:03:52.456
+que é o tradicional livro
+dele de refatoração,
+
+48
+00:03:52.456 --> 00:03:57.581
+mas que foi feito uma edição para
+a linguagem Ruby, está certo?
+
+49
+00:03:57.581 --> 00:04:01.518
+Mas isso que ele fala serve
+sempre para qualquer linguagem,
+
+50
+00:04:01.518 --> 00:04:03.940
+eu estou falando de conceitos
+que são genéricos não é?
+
+51
+00:04:03.940 --> 00:04:08.111
+Então ele fala que são pedaços de código
+que estão errados algum sentido não é,
+
+52
+00:04:08.111 --> 00:04:12.851
+está certo, como eu falei naquele exemplo
+da variável de instância ou público ou
+
+53
+00:04:12.851 --> 00:04:17.638
+exposta através de getters e setters,
+não é, públicos, está certo?
+
+54
+00:04:17.638 --> 00:04:22.400
+Agora ele acrescenta uma coisa que
+é bastante interessante e que são
+
+55
+00:04:22.400 --> 00:04:24.894
+feios de ver, não é, está certo?
+
+56
+00:04:24.894 --> 00:04:30.281
+Isso que está escrito aí é ele dizendo
+isso, depois que você se acostuma
+
+57
+00:04:30.281 --> 00:04:35.360
+com isso, você vai ver que realmente
+o código fica feio de ver.
+
+58
+00:04:35.360 --> 00:04:41.350
+Você depois que eliminou, você fala
+"Nossa o código ficou com uma beleza",
+
+59
+00:04:41.350 --> 00:04:46.920
+você vai ser capaz,
+enquanto você está vendo aquela sujeira,
+
+60
+00:04:46.920 --> 00:04:51.440
+que são esses smells, não é,
+bad smells e que você não faz nada,
+
+61
+00:04:51.440 --> 00:04:55.960
+você não dá muita importância a que eles
+são realmente feios, mas depois que você
+
+62
+00:04:55.960 --> 00:05:01.040
+começa a eliminar, reestruturar seu
+programa, refatorar, está certo?
+
+63
+00:05:01.040 --> 00:05:06.240
+E eliminar esses bad smells,
+vocês vão ver que o código que
+
+64
+00:05:06.240 --> 00:05:11.547
+tem mau cheiro, ele é feio,
+é isso mesmo, ele é feio.
+
+65
+00:05:11.547 --> 00:05:16.226
+Você vai acabar olhando e já percebe,
+já sente incomodo com isso.
+
+66
+00:05:16.226 --> 00:05:20.730
+Exemplo é quando você tem muito
+código duplicado, está certo?
+
+67
+00:05:20.730 --> 00:05:25.913
+Sendo que existiriam maneiras
+mais simples de eliminar
+
+68
+00:05:25.913 --> 00:05:30.814
+essa duplicação e você não faz, os códigos
+ficam grandes, feios, redundantes,
+
+69
+00:05:30.814 --> 00:05:34.553
+toda a vez que dá algum problema que
+você tem que mudar alguma coisa,
+
+70
+00:05:34.553 --> 00:05:39.845
+você tem que mudar montes de lugar, porque
+você vai duplicando as coisas, está certo?
+
+71
+00:05:39.845 --> 00:05:43.585
+Então isso acaba ficando feio mesmo não é,
+está certo?
+
+72
+00:05:43.585 --> 00:05:49.584
+Então isso, o que o Fowler está falando
+aí é uma coisa que realmente acaba sendo
+
+73
+00:05:49.584 --> 00:05:55.790
+verdadeira, vocês vão olhar ver o sintoma
+e já vai falar "Nossa que código feio".
+
+74
+00:05:55.790 --> 00:06:00.713
+Uma coisa importante que o Fowler fez,
+eu acho que isso é fundamental e
+
+75
+00:06:00.713 --> 00:06:06.117
+chamar a atenção disso,
+é que ele caracterizou conjunto,
+
+76
+00:06:06.117 --> 00:06:09.870
+junto com uns colegas deles no
+primeiro livro, está certo?
+
+77
+00:06:09.870 --> 00:06:16.964
+Ele caracterizou dando nomes aos
+tipos de mau cheiro você entendeu?
+
+78
+00:06:16.964 --> 00:06:22.448
+Porque isso fica didaticamente
+até fácil para você identificar "
+
+79
+00:06:22.448 --> 00:06:27.705
+esse tipo é o nome inadequado"
+como está aí na transparência,
+
+80
+00:06:27.705 --> 00:06:30.558
+é código duplicado, está certo?
+
+81
+00:06:30.558 --> 00:06:34.213
+Você conversa com outras pessoas e fala
+" isso é apenas problema de código",
+
+82
+00:06:34.213 --> 00:06:39.124
+então a comunicação fica mais fácil e
+também tem o outro lado: cada desses mau
+
+83
+00:06:39.124 --> 00:06:44.141
+cheiro depois vão estar associados
+a uma ou mais técnicas de refatoração
+
+84
+00:06:44.141 --> 00:06:49.657
+para eliminar esse mau cheiro,
+então eu consigo relacionar essas coisas.
+
+85
+00:06:49.657 --> 00:06:56.064
+Então esse, essa coisa de dar nomes
+foi uma coisa muito importante,
+
+86
+00:06:56.064 --> 00:07:00.108
+está certo, e os nomes são
+normalmente bem interessantes.
+
+87
+00:07:00.108 --> 00:07:04.458
+Então o nome inadequado, está certo,
+é aquilo que a gente falou,
+
+88
+00:07:04.458 --> 00:07:06.768
+precisamos expressar a intenção.
+
+89
+00:07:06.768 --> 00:07:11.722
+Para mim existe ranks aí
+mostrando os 10 tipos mais comuns
+
+90
+00:07:11.722 --> 00:07:16.605
+de mau cheiro, não é,
+normalmente esses 8 que eu vou citar,
+
+91
+00:07:16.605 --> 00:07:21.964
+esses 4 agora e os 4 daqui a pouco,
+estão esses 10 está certo,
+
+92
+00:07:21.964 --> 00:07:26.251
+normalmente, mas eu
+considero o nome inadequado,
+
+93
+00:07:26.251 --> 00:07:31.560
+aquilo que você não está expressando
+a sua intenção, dos piores,
+
+94
+00:07:31.560 --> 00:07:36.833
+horrorosa, porque ele deixa
+o código muito ilegível,
+
+95
+00:07:36.833 --> 00:07:41.440
+muito difícil de compreender e de
+fazer modificações, está certo?
+
+96
+00:07:41.440 --> 00:07:46.042
+O código duplicado é aquilo que a gente
+já falou, você tem códigos que se repetem
+
+97
+00:07:46.042 --> 00:07:50.806
+vários lugares, está certo,
+às vezes são só variáveis que estão
+
+98
+00:07:50.806 --> 00:07:55.890
+duas subclasses de uma classe
+que você simplesmente vai fazer,
+
+99
+00:07:55.890 --> 00:08:00.649
+está havendo uma redundância,
+ela pode então subir e ir
+
+100
+00:08:00.649 --> 00:08:05.258
+para a sua super classe não é,
+está certo, e aí você pode fazer
+
+101
+00:08:05.258 --> 00:08:10.316
+tratamento das variáveis usando getter
+e setter só para subclasses, não é,
+
+102
+00:08:10.316 --> 00:08:15.243
+está certo, não precisa nem expôr
+também isso, só para subclasses.
+
+103
+00:08:15.243 --> 00:08:19.688
+Então isso, essa questão do código
+duplicado tem variadas fórmulas,
+
+104
+00:08:19.688 --> 00:08:23.424
+vamos ver algumas delas, está certo,
+e como isso pode ser resolvido.
+
+105
+00:08:23.424 --> 00:08:27.243
+Outro grande problema é o método grande,
+o que é que é método grande?
+
+106
+00:08:27.243 --> 00:08:31.920
+Método grande, se você estiver com código
+estruturado ele pode ser bem grande,
+
+107
+00:08:31.920 --> 00:08:39.526
+mais de 10 linhas por exemplo, mas se o
+seu código é totalmente desestruturado,
+
+108
+00:08:39.526 --> 00:08:44.690
+nem 5 linhas você vai conseguir entender,
+está certo?
+
+109
+00:08:44.690 --> 00:08:51.082
+Então usa-se critério que os
+métodos devem ser sempre pequenos,
+
+110
+00:08:51.082 --> 00:08:56.990
+o mais pequenos possíveis,
+está certo, com menos de 10 linhas
+
+111
+00:08:56.990 --> 00:09:02.100
+desde que o código seja todo
+totalmente estruturado, está certo?
+
+112
+00:09:02.100 --> 00:09:07.896
+Agora outro grande problema, é a classe
+grande, ela é chamada carinhosamente
+
+113
+00:09:07.896 --> 00:09:13.733
+de classe God,
+porque ela vai juntar tudo numa classe.
+
+114
+00:09:13.733 --> 00:09:18.223
+Vez de eu como desenvolvedor
+distribuir isso,
+
+115
+00:09:18.223 --> 00:09:23.101
+essa inteligência do meu sistema
+várias classes pequenas, não é,
+
+116
+00:09:23.101 --> 00:09:26.660
+está certo, então uma classe é grande,
+quando ela tem muitas variáveis,
+
+117
+00:09:26.660 --> 00:09:32.010
+quando ela tem muitos métodos, não é, está
+certo, geral uma classe boa para nós no,
+
+118
+00:09:32.010 --> 00:09:35.901
+na refatoração é uma classe com
+poucas variáveis de instância,
+
+119
+00:09:35.901 --> 00:09:38.430
+com poucos métodos, não é, está certo?
+
+120
+00:09:38.430 --> 00:09:42.010
+E uma classe God o que é que ela faz?
+
+121
+00:09:42.010 --> 00:09:46.901
+Ela não, você não distribui a inteligência
+do seu sistema nas várias classes,
+
+122
+00:09:46.901 --> 00:09:49.680
+você deixa tudo numa classe só,
+está certo?
+
+123
+00:09:49.680 --> 00:09:54.363
+Eu lembro que uma vez professor meu
+
+124
+00:09:54.363 --> 00:09:59.177
+fez uma tese de Mestrado que
+era para fazer uma classe,
+
+125
+00:09:59.177 --> 00:10:02.751
+para fazer uma planilha,
+quando o Excel foi lançado, não é,
+
+126
+00:10:02.751 --> 00:10:07.742
+isso à muito tempo atrás
+Quando o Excel foi lançado,
+
+127
+00:10:07.742 --> 00:10:14.215
+ele fez uma classe que fazia
+toda a planilha com uma classe,
+
+128
+00:10:14.215 --> 00:10:18.759
+e ele ficava, ficou orgulhoso
+de ter sido feito isso, não é?
+
+129
+00:10:18.759 --> 00:10:23.468
+Nós achamos na terra, porque não existia
+esses critérios de boa qualidade nós
+
+130
+00:10:23.468 --> 00:10:27.545
+achamos bastante estranho isso,
+porque nós costumamos fazer
+
+131
+00:10:27.545 --> 00:10:31.955
+programas com várias classes distribuindo
+inteligência que, já naquela época,
+
+132
+00:10:31.955 --> 00:10:36.288
+a gente já trabalhava com responsabilidade
+e responsabilidade nos induz a isso,
+
+133
+00:10:36.288 --> 00:10:41.730
+principalmente porque você inclui
+o tell don't ask, está certo?
+
+134
+00:10:41.730 --> 00:10:45.047
+E aí você vai distribuindo a inteligência,
+está certo?
+
+135
+00:10:45.047 --> 00:10:47.130
+Classe God, nunca usar por favor.
+
+136
+00:10:47.130 --> 00:10:53.660
+A outra coisa que também pega
+bastante são comandos de if e switch.
+
+137
+00:10:53.660 --> 00:10:57.584
+Há comandos condicionais,
+de maneira geral, não é?
+
+138
+00:10:57.584 --> 00:10:58.522
+Está certo?
+
+139
+00:10:58.522 --> 00:11:00.650
+Vocês vão ver que há abuso.
+
+140
+00:11:00.650 --> 00:11:04.340
+Nós usamos de forma muito inadequada,
+está certo?
+
+141
+00:11:04.340 --> 00:11:08.730
+Às vezes, você resolve isso
+através de polimorfismos,
+
+142
+00:11:08.730 --> 00:11:13.037
+às vezes de algum padrão de projecto,
+às vezes uma maneira de
+
+143
+00:11:13.037 --> 00:11:17.560
+subclasse de polimorfismo, e às vezes uma
+maneira bem mais simples, está certo?
+
+144
+00:11:17.560 --> 00:11:18.940
+Coisas bem simples.
+
+145
+00:11:18.940 --> 00:11:22.698
+É uma coisa que nós vamos
+mostrar alguns exemplos também.
+
+146
+00:11:22.698 --> 00:11:25.010
+Outra é Inveja de Característica.
+
+147
+00:11:25.010 --> 00:11:27.499
+Que é que é isso de
+Inveja de Característica?
+
+148
+00:11:27.499 --> 00:11:30.000
+É aquilo que a gente
+usava no tell don't ask.
+
+149
+00:11:30.000 --> 00:11:37.003
+Você está se referindo a alguma
+coisa que está exposta,
+
+150
+00:11:37.003 --> 00:11:41.466
+vez de você pedir para essa classe
+fazer alguma coisa para você,
+
+151
+00:11:41.466 --> 00:11:45.806
+você vai lá, pega essa coisa,
+está vendo, trás para você, faz aqui,
+
+152
+00:11:45.806 --> 00:11:49.030
+sendo que você não precisava
+estar fazendo aqui, está certo?
+
+153
+00:11:49.030 --> 00:11:52.649
+Então, essa Característica
+que está ocorrendo aqui,
+
+154
+00:11:52.649 --> 00:11:56.662
+mas ela deveria ser método que deveria
+estar lá, não aqui, está certo?
+
+155
+00:11:56.662 --> 00:11:59.648
+Então nós vamos mostrar
+exemplo também sobre isso.
+
+156
+00:11:59.648 --> 00:12:02.042
+A outra é a Intimidade Imprópria.
+
+157
+00:12:02.042 --> 00:12:05.190
+A Intimidade Imprópria, algum momento,
+
+158
+00:12:05.190 --> 00:12:09.690
+ela vai se tornar uma classe God,
+se você deixar.
+
+159
+00:12:09.690 --> 00:12:15.400
+Mas a Intimidade Imprópria é: vez de eu
+distribuir, como na própria classe God,
+
+160
+00:12:15.400 --> 00:12:19.784
+a inteligência do meu sistema
+por outras classes eu pego,
+
+161
+00:12:19.784 --> 00:12:25.096
+trago essas, essas informações e
+métodos que estariam dentro dessa outra
+
+162
+00:12:25.096 --> 00:12:31.220
+classe e dentro da minha, está certo, mas
+numa escala menor do que com a classe God.
+
+163
+00:12:31.220 --> 00:12:37.162
+A outra coisa que, na modelagem age nós,
+
+164
+00:12:37.162 --> 00:12:44.533
+não que proibimos, mas a restrição é muito
+forte, é sobre comentários, está certo?
+
+165
+00:12:44.533 --> 00:12:48.682
+Os comentários, eles devem ser bastante
+
+166
+00:12:48.682 --> 00:12:53.681
+limitados a descrever o quê
+e porquê alguma coisa está
+
+167
+00:12:53.681 --> 00:12:58.690
+ocorrendo e ainda assim muitas
+dessas explicações vão ficar,
+
+168
+00:12:58.690 --> 00:13:03.901
+vão ficar resolvidas quando eu,
+eu faço uma, uma expresso a minha intenção
+
+169
+00:13:03.901 --> 00:13:09.210
+de uma maneira muito boa nos nomes de,
+de variáveis, métodos, e assim por diante.
+
+170
+00:13:09.210 --> 00:13:15.992
+De qualquer maneira, os comentários,
+eles são sintomas muito fortes do,
+
+171
+00:13:15.992 --> 00:13:20.970
+de algum desses problemas anteriores que
+eu acabei de mostrar aí, está certo?
+
+172
+00:13:20.970 --> 00:13:25.752
+Esses 8 problemas que, esses 4
+anteriores e esses 4 aí, está certo?
+
+173
+00:13:25.752 --> 00:13:32.590
+Os comentários acabam servindo de sintoma,
+indício de alguma coisa, está certo?
+
+174
+00:13:32.590 --> 00:13:35.255
+E pode até ser usado, o comentário acaba,
+
+175
+00:13:35.255 --> 00:13:40.056
+pode acabar sendo o nome de método que eu
+vou acabar fazendo e assim por diante,
+
+176
+00:13:40.056 --> 00:13:45.290
+ou seja, não se perde o que, que,
+o que estava lá quando se usou comentário.
+
+177
+00:13:45.290 --> 00:13:50.740
+Eu vou mostrar aqui agora
+para vocês o ciclo,
+
+178
+00:13:50.740 --> 00:13:54.400
+desde o momento que eu,
+vocês estão vendo ali?
+
+179
+00:13:54.400 --> 00:13:57.788
+Tem cachorro farejando.
+
+180
+00:13:57.788 --> 00:13:59.282
+Sintoma, não é?
+
+181
+00:13:59.282 --> 00:14:00.390
+Está certo?
+
+182
+00:14:00.390 --> 00:14:05.350
+Mau cheiro, bad smell, está certo?
+
+183
+00:14:05.350 --> 00:14:11.781
+Eu começo a farejar isso e usando
+a facilidade que o Fowler nos deu,
+
+184
+00:14:11.781 --> 00:14:17.490
+eu consigo então encaixar numa
+das categorias dos tipos de,
+
+185
+00:14:17.490 --> 00:14:20.414
+bad smell, está certo?
+
+186
+00:14:20.414 --> 00:14:26.150
+De mau cheiro, isso ajuda muito a entender
+porque, dado tipo do bad smell,
+
+187
+00:14:26.150 --> 00:14:32.383
+eu posso relacionar com os tipos,
+eu posso relacionar com,
+
+188
+00:14:32.383 --> 00:14:37.184
+com as técnicas para resolver
+esse problema do mau cheiro.
+
+189
+00:14:37.184 --> 00:14:40.480
+Então, eu tenho lá sintoma, está certo?
+
+190
+00:14:40.480 --> 00:14:49.176
+Eu consigo dar nome para
+ele e associar a ou mais,
+
+191
+00:14:49.176 --> 00:14:53.580
+a ou mais técnicas de refaturação.
+
+192
+00:14:53.580 --> 00:14:57.727
+Eu vou olhar com cuidado o meu código
+naquele momento e escolher a que
+
+193
+00:14:57.727 --> 00:15:00.508
+seja mais apropriada
+para aquele dado momento.
+
+194
+00:15:00.508 --> 00:15:03.320
+Isso pode ser, uma que seja,
+por restrição de tempo,
+
+195
+00:15:03.320 --> 00:15:06.269
+eu vou usar uma que seja
+mais rápida de resolver.
+
+196
+00:15:06.269 --> 00:15:09.460
+Não resolve totalmente, está certo?
+
+197
+00:15:09.460 --> 00:15:11.499
+O problema do mau cheiro e,
+assim por diante.
+
+198
+00:15:11.499 --> 00:15:13.810
+Vai ser uma questão que eu vou,
+vou decidir na hora.
+
+199
+00:15:13.810 --> 00:15:19.590
+Com isso, então,
+mostramos o papel do mau cheiro, não é?
+
+200
+00:15:19.590 --> 00:15:25.821
+Ele responde o que é que eu vou refaturar.
+
+201
+00:15:25.821 --> 00:15:28.893
+Quer dizer,
+eu vou refaturar aquilo que for
+
+202
+00:15:28.893 --> 00:15:32.005
+apresentado pelo mau
+cheiro que eu encontrar.
+
+203
+00:15:32.005 --> 00:15:32.870
+Está certo?
+
+204
+00:15:32.870 --> 00:15:38.238
+O fato de eu ter catalogados tipos
+de mau cheiro, isso me ajuda
+
+205
+00:15:38.238 --> 00:15:42.825
+didaticamente até na hora de conversar com
+outras pessoas sobre o tipo do mau cheiro.
+
+206
+00:15:42.825 --> 00:15:45.391
+Eu vou falar: eu estou
+com código duplicado,
+
+207
+00:15:45.391 --> 00:15:49.272
+eu estou com uma intimidade
+inapropriada aqui, está certo?
+
+208
+00:15:49.272 --> 00:15:55.705
+As pessoas vão entender por causa disso e,
+com isso, eu consigo então,
+
+209
+00:15:55.705 --> 00:16:00.560
+associar algumas técnicas de
+refaturação àquele tipo de mau cheiro.
+
+210
+00:16:00.560 --> 00:16:07.000
+Obrigado.

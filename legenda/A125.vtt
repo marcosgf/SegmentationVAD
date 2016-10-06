@@ -1,0 +1,467 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.000
+[MÚSICA] Olá!
+
+2
+00:00:05.000 --> 00:00:07.654
+Bem-vindos ao nosso último
+módulo desse curso,
+
+3
+00:00:07.654 --> 00:00:10.000
+onde nós vamos falar sobre a reconstrução,
+
+4
+00:00:10.000 --> 00:00:14.675
+sobre o processo que passa sinal do
+mundo digital para o mundo analógico.
+
+5
+00:00:14.675 --> 00:00:18.227
+Nesse módulo a gente vai fazer uma coisa
+muito parecida com o que a gente fez no
+
+6
+00:00:18.227 --> 00:00:21.456
+último, a gente vai ver o
+efeito de vários parâmetros,
+
+7
+00:00:21.456 --> 00:00:24.576
+a gente vai ver as
+distorções que são causadas,
+
+8
+00:00:24.576 --> 00:00:28.855
+como a gente pode controlar algumas dessas
+distorções, porque é que a gente vai
+
+9
+00:00:28.855 --> 00:00:32.951
+escolher parâmetro maior ou menor de
+período de amostragem e coisas assim.
+
+10
+00:00:32.951 --> 00:00:36.593
+Então vamos começar retomando
+exemplo que a gente já falou
+
+11
+00:00:36.593 --> 00:00:40.833
+pouco dele na introdução desse curso,
+que é o exemplo da imagem.
+
+12
+00:00:40.833 --> 00:00:45.240
+Eu dei exemplo mais ou menos porque
+a gente não faz exatamente uma
+
+13
+00:00:45.240 --> 00:00:47.816
+reconstrução aqui, a gente passa da,
+
+14
+00:00:47.816 --> 00:00:53.892
+do tamanho da imagem pra uma tela e
+a sua tela continua sendo digital.
+
+15
+00:00:53.892 --> 00:00:59.568
+Lembra que eu falei pra vocês que a tela,
+ela tem uma série de pixels,
+
+16
+00:00:59.568 --> 00:01:04.321
+ela tem uma série de pontinhos
+aqui onde cada pontinho
+
+17
+00:01:04.321 --> 00:01:07.570
+tem uma luzinha vermelha, verde e azul.
+
+18
+00:01:07.570 --> 00:01:11.901
+E esses pontinhos acendem de acordo com
+a cor que você quer mostrar naquele ponto.
+
+19
+00:01:11.901 --> 00:01:15.310
+Mas ainda assim você tem estudo
+interessante pra fazer aqui,
+
+20
+00:01:15.310 --> 00:01:21.228
+que é o seguinte: a hora que
+você olha pra sua imagem,
+
+21
+00:01:21.228 --> 00:01:26.479
+retomando o exemplo que a gente já falou
+lá atrás, a sua imagem então desse
+
+22
+00:01:26.479 --> 00:01:31.720
+cameraman, é conjunto de 256 valores na
+horizontal e 256 valores na vertical.
+
+23
+00:01:31.720 --> 00:01:35.619
+Se eu quero colocar isso aqui num
+conjunto maior de pixels na sua tela,
+
+24
+00:01:35.619 --> 00:01:39.748
+eu quero botar eles, por exemplo,
+em 512 por 512 pixels na sua tela,
+
+25
+00:01:39.748 --> 00:01:41.920
+para ela ocupar espaço maior da tela,
+
+26
+00:01:41.920 --> 00:01:46.504
+se eu botasse cada ponto correspondesse
+a ponto ela teria tamanho pequenininho.
+
+27
+00:01:46.504 --> 00:01:50.787
+Se eu dobro, em vez de botar 256 por
+256 eu boto 512 por 512, eu dobrei na
+
+28
+00:01:50.787 --> 00:01:54.760
+horizontal, dobrei na vertical também,
+ela ocupa pedaço maior na sua tela.
+
+29
+00:01:54.760 --> 00:01:58.602
+Mas pra fazer isso eu
+só tenho 256 valores,
+
+30
+00:01:58.602 --> 00:02:02.060
+eu tenho que agora criar 512 valores.
+
+31
+00:02:02.060 --> 00:02:06.039
+Eu tenho que criar algum valor entre
+esse primeiro pixel e o segundo aqui.
+
+32
+00:02:06.039 --> 00:02:08.100
+Eu tenho que adivinhar alguma coisa.
+
+33
+00:02:08.100 --> 00:02:11.451
+Que é que a gente pode fazer
+pra criar esses novos valores?
+
+34
+00:02:11.451 --> 00:02:16.105
+Bom, a gente pode, por exemplo,
+mandar ele simplesmente repetir o valor.
+
+35
+00:02:16.105 --> 00:02:19.818
+Então aquele 156,
+deixa eu voltar lá, esse 156,
+
+36
+00:02:19.818 --> 00:02:24.950
+eu vou repetir o 156 aqui,
+o 159 repito, o 158 repito.
+
+37
+00:02:24.950 --> 00:02:27.501
+Aqui na realidade,
+pra gente ver direitinho,
+
+38
+00:02:27.501 --> 00:02:32.368
+eu tou mandando ele repetir 11 vezes
+ou 21 vezes, não lembra mais ao certo.
+
+39
+00:02:32.368 --> 00:02:34.447
+Mas o que a gente vê é o seguinte,
+
+40
+00:02:34.447 --> 00:02:37.860
+quando eu repito o valor eu
+crio esses quadradinhos aqui.
+
+41
+00:02:37.860 --> 00:02:42.050
+Esse quadradinho então significa que
+todo mundo aqui dentro tem o mesmo valor
+
+42
+00:02:42.050 --> 00:02:42.640
+de cinza.
+
+43
+00:02:42.640 --> 00:02:44.601
+Esse outro quadradinho de lado,
+
+44
+00:02:44.601 --> 00:02:47.752
+significa que todo o mundo
+tem o mesmo valor de cinza.
+
+45
+00:02:47.752 --> 00:02:51.300
+Então eu crio aqui uma imagem
+com esses quadrados todos.
+
+46
+00:02:51.300 --> 00:02:56.422
+Por outro lado, eu poderia dizer o
+seguinte: olha não, não vou fazer o 156
+
+47
+00:02:56.422 --> 00:03:01.960
+repetir, eu vou fazer o valor do meio
+aqui ser a média entre 156 e 159.
+
+48
+00:03:01.960 --> 00:03:08.180
+O valor no meio aqui eu vou fazer
+ser a média entre 156 e o 160.
+
+49
+00:03:08.180 --> 00:03:11.051
+Nesse caso eu obtenho
+já uma imagem melhor,
+
+50
+00:03:11.051 --> 00:03:13.612
+eu não tenho aqueles quadrados todos.
+
+51
+00:03:13.612 --> 00:03:17.780
+Então nesse módulo a gente vai
+entender porque é que isso acontece,
+
+52
+00:03:17.780 --> 00:03:20.925
+como a gente pode-se
+beneficiar desse fenómeno, de,
+
+53
+00:03:20.925 --> 00:03:26.050
+dessa diferença entre repetir todo o mundo
+e fazer a média entre os caras, a gente
+
+54
+00:03:26.050 --> 00:03:30.935
+vai ver quais são os efeitos disso e como
+isso pode-nos ajudar em outras aplicações.
+
+55
+00:03:30.935 --> 00:03:35.540
+Então basicamente, onde a gente se
+encontra agora pra esse módulo?
+
+56
+00:03:35.540 --> 00:03:41.254
+A gente tem que o processo de reconstrução
+é o processo então de converter
+
+57
+00:03:41.254 --> 00:03:46.462
+sinal digital, x de n, que ao passar por
+conversor digital pra analógico, isto
+
+58
+00:03:46.462 --> 00:03:52.680
+aqui é DAC, Digital to Analogue Convertor,
+ele vai criar sinal reconstruído x de t.
+
+59
+00:03:52.680 --> 00:03:57.048
+E o que é que é a função desse
+conversor digital pra analógico?
+
+60
+00:03:57.048 --> 00:04:02.810
+Bom, eu tenho aqui, por exemplo, o sinal x
+de n ele vale no instante 0 ele vale 3,1,
+
+61
+00:04:02.810 --> 00:04:06.640
+no instante -1 ele vale 0,
+no instante 1 ele vale 2,5.
+
+62
+00:04:06.640 --> 00:04:11.520
+Bom, esses valores correspondem
+aos instantes de amostragem.
+
+63
+00:04:11.520 --> 00:04:15.870
+Então eu sei que eu quero que o meu
+sinal reconstruído, no instante 0,
+
+64
+00:04:15.870 --> 00:04:20.220
+ele valha a mesma coisa que a amostra
+0 do meu sinal digital, 3,1.
+
+65
+00:04:20.220 --> 00:04:24.624
+No primeiro instante de amostragem
+eu quero que ele valha a mesma coisa
+
+66
+00:04:24.624 --> 00:04:28.211
+que a primeira amostra do
+meu sinal digital, 2,5.
+
+67
+00:04:28.211 --> 00:04:32.611
+No segundo instante de amostragem
+eu quero que ele valha a mesma
+
+68
+00:04:32.611 --> 00:04:36.724
+coisa que a segunda amostra
+do meu sinal digital, -1,2.
+
+69
+00:04:36.724 --> 00:04:41.492
+Então o que o conversor digital pra
+analógico tem que fazer nos instantes de
+
+70
+00:04:41.492 --> 00:04:42.897
+amostragem é fácil.
+
+71
+00:04:42.897 --> 00:04:46.655
+O problema é o que é que ele
+faz entre esses 2 instantes.
+
+72
+00:04:46.655 --> 00:04:51.050
+O que é que por exemplo,
+quando você tá ouvindo a minha voz aí,
+
+73
+00:04:51.050 --> 00:04:54.237
+você tem as 48000 amostras por segundo.
+
+74
+00:04:54.237 --> 00:04:57.422
+O que é que ele tá
+colocando entre 2 amostras?
+
+75
+00:04:57.422 --> 00:04:59.578
+No caso, muito possivelmente,
+
+76
+00:04:59.578 --> 00:05:03.979
+o que ele tá colocando entre 2 amostras
+é aquilo que acontece na imagem.
+
+77
+00:05:03.979 --> 00:05:07.739
+Ele tá mantendo o valor
+contínuo entre as 2 amostras.
+
+78
+00:05:07.739 --> 00:05:12.770
+Então entre a primeira e a segunda
+amostra ele mantém o 3,1,
+
+79
+00:05:12.770 --> 00:05:18.434
+entre a segunda e a terceira
+amostra ele mantém o 2,5,
+
+80
+00:05:18.434 --> 00:05:22.820
+entre essa amostra e
+a próxima eu mantenho o 1,2.
+
+81
+00:05:22.820 --> 00:05:27.914
+Em figurinhas,
+isso aqui vira o seguinte: eu tenho entre,
+
+82
+00:05:27.914 --> 00:05:33.598
+eu tenho o sinal aqui original em azul,
+em magenta aqui,
+
+83
+00:05:33.598 --> 00:05:39.853
+eu tenho o sinal reconstruído dessa
+forma mantendo constante o valor
+
+84
+00:05:39.853 --> 00:05:44.760
+da amostra até chegar a próxima amostra,
+aqui em vermelho eu tenho as amostras.
+
+85
+00:05:44.760 --> 00:05:49.411
+Isso aqui se chama na prática
+segurador de ordem 0 e esse é o
+
+86
+00:05:49.411 --> 00:05:54.053
+tipo mais comum de conversor digital
+pra analógico que existe aí,
+
+87
+00:05:54.053 --> 00:05:57.040
+que você mantém o valor,
+você segura o valor.
+
+88
+00:05:57.040 --> 00:06:00.752
+Existe outro segurador,
+que não é tão comum na prática,
+
+89
+00:06:00.752 --> 00:06:06.540
+que em vez de segurar o valor ele
+cria uma linha reta entre 2 amostras.
+
+90
+00:06:06.540 --> 00:06:08.179
+Tá?
+Isso aqui a gente vai estudar
+
+91
+00:06:08.179 --> 00:06:11.183
+pouquinho sobre o que é que ele faz,
+quais são as vantagens dele.
+
+92
+00:06:11.183 --> 00:06:16.098
+A gente vê aqui claramente que ele,
+que ele se aproxima mais,
+
+93
+00:06:16.098 --> 00:06:20.676
+a forma de onda se aproxima
+mais do seno e a gente vai
+
+94
+00:06:20.676 --> 00:06:24.565
+estudar qual é a vantagem dele e se é
+possível fazer melhor do que ele, como
+
+95
+00:06:24.565 --> 00:06:28.983
+agente pode fazer melhor e quais são os
+efeitos dessa reconstrução sobre o sinal.
+
+96
+00:06:28.983 --> 00:06:36.200
+Então eu espero ver vocês nesse
+módulo e até ao próximo video.

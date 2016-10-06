@@ -1,0 +1,647 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.949
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.949 --> 00:00:17.298
+Meu nome é Eduardo Guerra e estamos no
+curso de Orientação a Objetos com Java.
+
+3
+00:00:17.298 --> 00:00:23.660
+Hoje eu estou aqui para falar para
+você se é importante testar software.
+
+4
+00:00:23.660 --> 00:00:30.094
+Talvez vocês estejam estranhando "Que é
+que num curso de Orientação a Objetos ele
+
+5
+00:00:30.094 --> 00:00:35.692
+veio falar para a gente de teste?" Teste
+é uma coisa extremamente importante,
+
+6
+00:00:35.692 --> 00:00:40.350
+espero que com essa aula eu
+consigo mostrar para vocês,
+
+7
+00:00:40.350 --> 00:00:43.330
+que vocês compreendam
+a importância de testes,
+
+8
+00:00:43.330 --> 00:00:48.796
+que vamos aprender logo agora nas
+primeiras semanas do curso a fazer
+
+9
+00:00:48.796 --> 00:00:53.988
+testes automatizados de software
+e eu quero antes de ensinar isso
+
+10
+00:00:53.988 --> 00:00:59.190
+para vocês que vocês reconheçam e
+entendam a importância de fazer testes.
+
+11
+00:00:59.190 --> 00:01:02.224
+Vamos começar aqui com
+situação: imagina que
+
+12
+00:01:02.224 --> 00:01:05.406
+alguém peça a você para
+alimentar aí crocodilo.
+
+13
+00:01:05.406 --> 00:01:09.477
+A pergunta que você vai fazer é
+"Será que alguém já fez isso antes?
+
+14
+00:01:09.477 --> 00:01:11.560
+Será que alguém testou isso?".
+
+15
+00:01:11.560 --> 00:01:15.930
+Se nos, se a gente testasse mais as
+coisas antes de realmente ir lá e fazer,
+
+16
+00:01:15.930 --> 00:01:18.606
+talvez menos coisas dessem errado.
+
+17
+00:01:18.606 --> 00:01:23.843
+Já partindo aí para o mundo dos softwares,
+a Nasa ela teve prejuízo
+
+18
+00:01:23.843 --> 00:01:28.283
+de 125 milhões num caso
+que ficou bem famoso,
+
+19
+00:01:28.283 --> 00:01:33.074
+numa sonda que ela tinha erro
+de conversão de unidades e aí
+
+20
+00:01:33.074 --> 00:01:37.172
+ela acabou indo para
+lado que não deveria ir.
+
+21
+00:01:37.172 --> 00:01:41.979
+É o típico do erro que, com,
+se fosse testado, não é,
+
+22
+00:01:41.979 --> 00:01:45.000
+facilmente seria detectado esse problema.
+
+23
+00:01:45.000 --> 00:01:50.773
+Então a gente vê que a falta de testes
+ela pode gerar grandes prejuízos,
+
+24
+00:01:50.773 --> 00:01:56.255
+nesse caso aí financeiro, mas muitas
+vezes até a própria imagem da empresa
+
+25
+00:01:56.255 --> 00:02:01.810
+a ideia que os clientes têm do seu
+produto e muitas vezes esses danos eles
+
+26
+00:02:01.810 --> 00:02:07.427
+podem acabar sendo irreparáveis ou
+muito difíceis de serem consertados.
+
+27
+00:02:07.427 --> 00:02:12.152
+Não só o erro do software si,
+mas as consequências desse erro,
+
+28
+00:02:12.152 --> 00:02:14.088
+elas podem ser muito sérias.
+
+29
+00:02:14.088 --> 00:02:19.197
+Então eu vou contar aqui para vocês pouco
+da minha experiência com testes, não é?
+
+30
+00:02:19.197 --> 00:02:24.054
+Nos primeiros locais que eu trabalhei
+o teste era meio que como se fosse
+
+31
+00:02:24.054 --> 00:02:27.928
+patinho feio,
+no desenvolvimento de software.
+
+32
+00:02:27.928 --> 00:02:30.931
+Era aquela coisa que era
+meio deixada de lado,
+
+33
+00:02:30.931 --> 00:02:33.313
+ninguém dava muita importância, está?
+
+34
+00:02:33.313 --> 00:02:36.626
+Vou falar pouquinho para
+vocês dessa experiência
+
+35
+00:02:36.626 --> 00:02:39.506
+e como que o teste é enxergado hoje.
+
+36
+00:02:39.506 --> 00:02:41.330
+O que é que acontecia?
+
+37
+00:02:41.330 --> 00:02:45.628
+O teste ele era deixado para ser
+feito por último não é, ou seja,
+
+38
+00:02:45.628 --> 00:02:49.153
+tinha todo aquele processo
+de desenvolvimento,
+
+39
+00:02:49.153 --> 00:02:55.076
+muitas vezes o desenvolvimento si
+atrasava e aí só se desse tempo,
+
+40
+00:02:55.076 --> 00:02:59.670
+quando desse tempo que
+ia ter lá uma equipa
+
+41
+00:02:59.670 --> 00:03:03.766
+dedicada para os testes que
+iria testar o software.
+
+42
+00:03:03.766 --> 00:03:08.293
+Ou seja era aquela coisa assim
+sem importância que só era
+
+43
+00:03:08.293 --> 00:03:10.658
+feita se desse tempo, está?
+
+44
+00:03:10.658 --> 00:03:16.200
+Outra coisa, eu percebia que o teste ele
+era feito por aquelas pessoas iniciantes,
+
+45
+00:03:16.200 --> 00:03:19.979
+ou seja a pessoa está chegando
+" não consegue programar,
+
+46
+00:03:19.979 --> 00:03:24.791
+não sabe fazer tal coisa, então manda para
+o teste" como se testar fosse uma coisa
+
+47
+00:03:24.791 --> 00:03:26.805
+extremamente trivial e não é.
+
+48
+00:03:26.805 --> 00:03:31.745
+E muitas vezes as pessoas que
+estavam no teste, independente
+
+49
+00:03:31.745 --> 00:03:36.564
+de serem iniciantes ou não, muitas
+vezes elas não tinham o treinamento,
+
+50
+00:03:36.564 --> 00:03:41.807
+não tinha preparo para fazer testes,
+elas simplesmente ficavam usando
+
+51
+00:03:41.807 --> 00:03:47.062
+o software sem nenhuma técnica,
+sem nenhum método e verificando
+
+52
+00:03:47.062 --> 00:03:52.797
+ali quais eram os problemas que
+elas estavam encontrando ali.
+
+53
+00:03:52.797 --> 00:03:56.702
+E para piorar, toda a vez que dava algum
+
+54
+00:03:56.702 --> 00:04:01.520
+problema adivinha perto de
+quem que a bomba estourava?
+
+55
+00:04:01.520 --> 00:04:05.049
+Do nosso patinho feio, está?
+
+56
+00:04:05.049 --> 00:04:10.208
+Então sempre a culpa de alguma coisa ter
+dado errado " mas como que o teste não
+
+57
+00:04:10.208 --> 00:04:15.845
+encontrou esse problema?" "Como que
+isso aí não foi detectado antes?"
+
+58
+00:04:15.845 --> 00:04:21.136
+Então realmente era uma coisa
+muito ruim fazer parte do teste,
+
+59
+00:04:21.136 --> 00:04:25.816
+não é, porque você não tinha treinamento,
+não tinha condições, não
+
+60
+00:04:25.816 --> 00:04:30.720
+tinha tempo suficiente e se desse algum
+problema a culpa ainda ia ser sua, não é?
+
+61
+00:04:30.720 --> 00:04:33.824
+Então chega, pára com esse negócio!
+
+62
+00:04:33.824 --> 00:04:38.318
+Teste não é isso,
+teste é extremamente importante.
+
+63
+00:04:38.318 --> 00:04:43.357
+Bom, felizmente os métodos
+ágeis eles começaram a dar
+
+64
+00:04:43.357 --> 00:04:48.366
+foco muito grande para teste,
+está, e hoje dia eu vejo
+
+65
+00:04:48.366 --> 00:04:53.790
+que no mercado as empresas não enxergam
+mais a pessoa que faz teste como
+
+66
+00:04:53.790 --> 00:04:59.282
+profissional de segunda linha mas
+muito pelo contrário, ele deixou
+
+67
+00:04:59.282 --> 00:05:04.421
+de ser aquele patinho feio e passou a ser
+o patinho ali dos ovos de ouro, não é?
+
+68
+00:05:04.421 --> 00:05:08.740
+Antes que você bote alguma coisa algum
+comentário aí, eu sei que na história
+
+69
+00:05:08.740 --> 00:05:12.952
+é ganso, está, mas vamos seguir
+com a minha metáfora aqui do pato.
+
+70
+00:05:12.952 --> 00:05:17.523
+[RISOS] Então agora o teste ele é aquele,
+
+71
+00:05:17.523 --> 00:05:22.995
+quem faz o teste é aquele que
+coloca os ovos de ouro ali dentro
+
+72
+00:05:22.995 --> 00:05:28.350
+da equipa e na verdade a gente
+vai ver que nos métodos
+
+73
+00:05:28.350 --> 00:05:33.615
+ágeis não tem mais só uma pessoa testando
+e nem o teste é feito só no final.
+
+74
+00:05:33.615 --> 00:05:38.956
+Na verdade toda a equipe ela é
+responsável por fazer testes,
+
+75
+00:05:38.956 --> 00:05:43.799
+não é, então os patinhos eles
+estão por toda a parte da equipe,
+
+76
+00:05:43.799 --> 00:05:47.817
+não é, toda a equipe agora é
+responsável por fazer teste.
+
+77
+00:05:47.817 --> 00:05:52.946
+A gente tem o cara que vai lá e cria uma
+classe ele vai lá e vai testar aquela
+
+78
+00:05:52.946 --> 00:05:58.291
+classe, quem está pegando aquela classe e
+juntando com outras para fazer componente
+
+79
+00:05:58.291 --> 00:06:02.361
+ou para criar uma funcionalidade,
+ele vai fazer teste de integração,
+
+80
+00:06:02.361 --> 00:06:07.040
+aquela pessoa que está olhando para o
+software como todo, vai teste funcional,
+
+81
+00:06:07.040 --> 00:06:12.543
+quem trabalha com a arquitetura vai testar
+atributos não funcionais como segurança,
+
+82
+00:06:12.543 --> 00:06:16.682
+desempenho, então o teste ele é
+extremamente importante e ele é
+
+83
+00:06:16.682 --> 00:06:21.198
+extremamente importante também para
+dar o feedback para a equipa, não é,
+
+84
+00:06:21.198 --> 00:06:25.725
+para saber se aquilo que ela está
+fazendo está de acordo ou não está.
+
+85
+00:06:25.725 --> 00:06:31.638
+Inclusive a cobertura de testes,
+saber o quanto do seu código está coberto
+
+86
+00:06:31.638 --> 00:06:38.083
+pelos testes é de extrema importância
+para você ter uma ideia da qualidade
+
+87
+00:06:38.083 --> 00:06:43.030
+daquele código, do quanto daquele
+código realmente está sendo testado.
+
+88
+00:06:43.030 --> 00:06:46.871
+E falando manutibilidade de sistemas,
+
+89
+00:06:46.871 --> 00:06:51.534
+os testes eles também dão
+uma segurança muito grande,
+
+90
+00:06:51.534 --> 00:06:55.250
+na hora de você fazer
+qualquer modificação,
+
+91
+00:06:55.250 --> 00:06:59.808
+principalmente se esses testes
+estiverem automatizados, certo?
+
+92
+00:06:59.808 --> 00:07:04.170
+Então por exemplo imagina só você vai lá,
+não é, modifica o software
+
+93
+00:07:04.170 --> 00:07:08.250
+e aí fica aquela tensão não é,
+eu já tive essa experiência, não é?
+
+94
+00:07:08.250 --> 00:07:11.995
+Muitas vezes você está trabalhando
+com pedaço de código e aí até você
+
+95
+00:07:11.995 --> 00:07:16.784
+conseguir mudar tudo para fazer aquele
+código rodar o aplicativo inteiro, não é,
+
+96
+00:07:16.784 --> 00:07:19.925
+você passa às vezes 2 ou
+3 dias naquela tensão,
+
+97
+00:07:19.925 --> 00:07:22.734
+toda a hora você olha o código
+de novo para ver se está certo,
+
+98
+00:07:22.734 --> 00:07:26.120
+se não está e às vezes na hora que
+você roda é aquele problema não é?
+
+99
+00:07:26.120 --> 00:07:30.632
+Quando você tem testes principalmente
+automatizados como eu disse,
+
+100
+00:07:30.632 --> 00:07:35.515
+você pode fazer uma alteração,
+rodar esses testes para saber se o
+
+101
+00:07:35.515 --> 00:07:39.636
+software modificou ou não
+a partir daquilo ali.
+
+102
+00:07:39.636 --> 00:07:44.324
+Se você tem que por exemplo fazer uma
+alteração que vai realmente mudar o
+
+103
+00:07:44.324 --> 00:07:49.244
+software você pode ir lá mudar o teste
+para como você quer que seja e utilizar
+
+104
+00:07:49.244 --> 00:07:54.525
+aquilo ali como uma base para
+saber como você está andando.
+
+105
+00:07:54.525 --> 00:07:59.837
+Inclusive uma das principais técnicas
+de design utilizados nos métodos ágeis
+
+106
+00:07:59.837 --> 00:08:04.920
+que é o TDD, Test Driven Development
+ou Desenvolvimento Guiado por Testes,
+
+107
+00:08:04.920 --> 00:08:10.592
+está, ele se baseia na criação dos testes
+automatizados antes do próprio código.
+
+108
+00:08:10.592 --> 00:08:15.492
+Isso que eu vou falar agora pode
+parecer muito drástico mas é a forma
+
+109
+00:08:15.492 --> 00:08:17.200
+que eu enxergo, não é?
+
+110
+00:08:17.200 --> 00:08:22.447
+Hoje com todas as técnicas, todas as
+ferramentas de teste que a gente tem,
+
+111
+00:08:22.447 --> 00:08:27.440
+você criar software sem testes hoje
+é uma coisa inaceitável, está?
+
+112
+00:08:27.440 --> 00:08:32.570
+Para mim estaria no mesmo nível
+por exemplo de médico que vai lá
+
+113
+00:08:32.570 --> 00:08:37.976
+e vai operar paciente sem estar
+monitorando os sinais vitais dele, certo?
+
+114
+00:08:37.976 --> 00:08:42.540
+Porque se o médico está no meio da
+operação e dá algum problema ele sabe na
+
+115
+00:08:42.540 --> 00:08:48.171
+hora que o paciente está com problema e de
+repente ele tem tempo para ir lá, ele sabe
+
+116
+00:08:48.171 --> 00:08:53.488
+onde que ele mexeu, ele sabe o que está
+acontecendo para saber o que aconteceu.
+
+117
+00:08:53.488 --> 00:08:58.428
+Imagina se a cada 5 minutos vai o médico
+lá escutar o coração do paciente.
+
+118
+00:08:58.428 --> 00:09:03.536
+Às vezes vai olhar e já morreu faz
+tempo " estava morto aí às uns
+
+119
+00:09:03.536 --> 00:09:08.322
+3 minutos atrás" de repente se ele tivesse
+visto na hora ele poderia salvar não é?
+
+120
+00:09:08.322 --> 00:09:13.322
+Com o software, digamos assim,
+o nosso monitor desses sinais
+
+121
+00:09:13.322 --> 00:09:18.318
+vitais são os testes, não é, se a gente
+modifica alguma coisa e isso faz
+
+122
+00:09:18.318 --> 00:09:23.585
+com que o nosso teste falhe a gente
+sabe que aquela modificação é,
+
+123
+00:09:23.585 --> 00:09:27.669
+está alterando o comportamento
+do software, certo?
+
+124
+00:09:27.669 --> 00:09:32.542
+Então hoje dia com todos os recursos
+e técnicas que tem não é mais
+
+125
+00:09:32.542 --> 00:09:37.835
+aceitável desenvolvedor profissional
+fazer o seu software sem testes.
+
+126
+00:09:37.835 --> 00:09:42.425
+Pode parecer pouco drástico mas dá uma
+pensada nisso e vê se o que eu estou
+
+127
+00:09:42.425 --> 00:09:44.434
+falando não faz sentido, está?
+
+128
+00:09:44.434 --> 00:09:48.918
+Eu espero que com essa aula você tenha
+entendido a importância de testar o
+
+129
+00:09:48.918 --> 00:09:53.759
+software, entendido num contexto geral
+do desenvolvimento a importância
+
+130
+00:09:53.759 --> 00:09:56.558
+que isso tem e fique ligado
+nas próximas aulas que
+
+131
+00:09:56.558 --> 00:09:59.370
+vamos aprender como criar
+testes automatizados.
+
+132
+00:09:59.370 --> 00:10:03.485
+Muito obrigado.
+
+133
+00:10:03.485 --> 00:10:06.230
+[MÚSICA]

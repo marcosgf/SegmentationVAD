@@ -1,0 +1,1367 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.017
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:09.017 --> 00:00:13.260
+bem vindo ao curso de
+Orientação a Objetos com Java.
+
+3
+00:00:13.260 --> 00:00:15.409
+Eu sou o Clovis Fernandes.
+
+4
+00:00:15.409 --> 00:00:21.617
+Hoje iremos mostrar a Law of Demeter,
+a Lei de Demeter para abaixar ou
+
+5
+00:00:21.617 --> 00:00:27.450
+impedir que acoplamentos ou dependências
+indevidas sejam feitas entre classes.
+
+6
+00:00:27.450 --> 00:00:32.261
+Esse é o objetivo então,
+mostrar a lei, Law of Demeter,
+
+7
+00:00:32.261 --> 00:00:37.194
+mostrar como é que ela, o que é que ela,
+esse princípio o que que é
+
+8
+00:00:37.194 --> 00:00:42.212
+que ele propugna e como isso
+pode ser feito na prática para
+
+9
+00:00:42.212 --> 00:00:46.749
+diminuir esse, acoplamentos desse tipo.
+
+10
+00:00:46.749 --> 00:00:51.990
+Anteriormente nós examinamos
+o uso indevido de getters
+
+11
+00:00:51.990 --> 00:00:57.002
+que devolvem objetos da sua
+classe de aplicação e mostramos
+
+12
+00:00:57.002 --> 00:01:01.550
+que isso causa número
+grande de dependências.
+
+13
+00:01:01.550 --> 00:01:08.300
+A ideia é não criar essas dependências
+assim que você produz o seu software,
+
+14
+00:01:08.300 --> 00:01:12.771
+ou se algum momento você produzir
+vai precisar fazer uma refaturação,
+
+15
+00:01:12.771 --> 00:01:18.195
+mexer no seu código para aperfeiçoá-lo,
+para retirar essas dependências.
+
+16
+00:01:18.195 --> 00:01:23.900
+Uma solução para casos desse tipo é
+aplicar uma combinação dos princípios
+
+17
+00:01:23.900 --> 00:01:30.197
+Tell, don't ask, redirecionamento
+ou delegação, e a Law of Demeter.
+
+18
+00:01:30.197 --> 00:01:35.749
+Quer dizer essas 3 coisas
+vão ajudar você a produzir
+
+19
+00:01:35.749 --> 00:01:41.130
+software com menos dependências, só com
+aquilo que é extremamente essencial,
+
+20
+00:01:41.130 --> 00:01:46.566
+ou aperfeiçoar código antigo
+ou código já feito que tinha
+
+21
+00:01:46.566 --> 00:01:52.694
+essas dependências e mostra então como
+você pode eliminar essas dependências.
+
+22
+00:01:52.694 --> 00:01:58.520
+A Law of Demeter, foi criada num projeto
+do mesmo nome, final da década de 80,
+
+23
+00:01:58.520 --> 00:02:03.175
+e o artigo, foram pioneiros nessa área de
+
+24
+00:02:03.175 --> 00:02:07.830
+orientação a objetos,
+o link está logo ali baixo.
+
+25
+00:02:07.830 --> 00:02:12.290
+É projeto que teve uma duração muito
+grande e eles tiveram impacto muito grande
+
+26
+00:02:12.290 --> 00:02:19.354
+na área de desenvolvimento de objetos
+adaptativos e flexíveis e etc.,
+
+27
+00:02:19.354 --> 00:02:25.120
+mas dos grandes legados
+deles foi a publicação
+
+28
+00:02:25.120 --> 00:02:30.294
+de 1988 explicando, depois de uma pesquisa
+
+29
+00:02:30.294 --> 00:02:36.101
+intensa de uso e verificação
+do que estava atrapalhando,
+
+30
+00:02:36.101 --> 00:02:40.340
+fazer o desenvolvimento, a manutenção,
+
+31
+00:02:40.340 --> 00:02:46.825
+o reuso e mudanças de requisitos,
+eles perceberam,
+
+32
+00:02:46.825 --> 00:02:51.825
+não é,
+concluíram que alguma coisa tinha sido
+
+33
+00:02:51.825 --> 00:02:57.180
+descoberto e essa coisa é o que
+eles denominaram de Law of Demeter.
+
+34
+00:02:57.180 --> 00:03:03.009
+Eles perceberam que o que estava causando
+essas problemas todos, essa dificuldade,
+
+35
+00:03:03.009 --> 00:03:08.131
+dependências muito grandes, acoplamentos
+muito grandes entre as classes,
+
+36
+00:03:08.131 --> 00:03:14.840
+era a forma desordenada de passar
+mensagens de objeto para outro objeto.
+
+37
+00:03:14.840 --> 00:03:19.990
+Então eles perceberam que ao limitar,
+para dado método,
+
+38
+00:03:19.990 --> 00:03:24.900
+poderia lá dentro do seu código,
+da sua lógica ali dentro, poderia mandar
+
+39
+00:03:24.900 --> 00:03:30.724
+mensagens para outro objeto, para quais
+objetos poderia ser mandado mensagens?
+
+40
+00:03:30.724 --> 00:03:35.445
+Então isso foi uma coisa muito
+importante porque ajuda a definir,
+
+41
+00:03:35.445 --> 00:03:40.863
+tanto na hora quando você, usando uma
+metodologia CRC ou usando qualquer
+
+42
+00:03:40.863 --> 00:03:47.322
+metodologia para projetar as classes, você
+consegue seguindo esse princípio, você não
+
+43
+00:03:47.322 --> 00:03:52.680
+vai produzir dependências está muito bom,
+isso é ótimo, uma coisa bem clara.
+
+44
+00:03:52.680 --> 00:03:56.612
+E de outra forma, se você já tem código,
+que já está cheio de dependências,
+
+45
+00:03:56.612 --> 00:04:00.611
+feito por alguém ou por você mesmo
+sem ter aplicado esse princípio,
+
+46
+00:04:00.611 --> 00:04:05.570
+você vai ter uma forma bem clara
+do que é que está ocorrendo.
+
+47
+00:04:05.570 --> 00:04:11.379
+No caso, uma coisa que fica patente,
+é que eles perceberam
+
+48
+00:04:11.379 --> 00:04:17.372
+que quando você manda
+mensagens indiscriminadamente
+
+49
+00:04:17.372 --> 00:04:23.214
+e você tem acesso a classes
+que não deveria ter acesso,
+
+50
+00:04:23.214 --> 00:04:28.250
+por causa da exposição que
+acaba ocorrendo, principalmente
+
+51
+00:04:28.250 --> 00:04:33.770
+de getters de objetos, você acaba então
+se comunicando com quem não deveria.
+
+52
+00:04:33.770 --> 00:04:37.901
+Então, se você vai se comunicar
+você vai ter conjunto de amigos,
+
+53
+00:04:37.901 --> 00:04:39.360
+quem são esses amigos?
+
+54
+00:04:39.360 --> 00:04:44.440
+É isso que a gente vai mostrar agora,
+examinando o que é que é a Law of Demeter,
+
+55
+00:04:44.440 --> 00:04:50.230
+carinhosamente chamada de
+LoD aqui por nós, determina.
+
+56
+00:04:50.230 --> 00:04:56.000
+Então nós vamos nos centrar
+mostrar os envios de mensagens,
+
+57
+00:04:56.000 --> 00:04:59.775
+as invocações de serviços
+de outras classes.
+
+58
+00:04:59.775 --> 00:05:08.290
+Quais são os objetos que dado método
+de dado objeto, pode invocar?
+
+59
+00:05:08.290 --> 00:05:15.100
+Então, a LoD determina que ele só pode
+invocar métodos de 5 tipos de objetos.
+
+60
+00:05:15.100 --> 00:05:19.248
+Desses 5,
+4 são ainda considerados próprios,
+
+61
+00:05:19.248 --> 00:05:23.472
+o quinto a gente vai descartar,
+eu vou mostrar e falar daqui a pouco.
+
+62
+00:05:23.472 --> 00:05:28.176
+Então, o primeiro é o próprio objeto, se
+eu preciso da colaboração de algum método
+
+63
+00:05:28.176 --> 00:05:32.029
+da minha própria classe, isso,
+fora de dúvida, eu posso usar.
+
+64
+00:05:32.029 --> 00:05:36.600
+Tanto métodos privados, protegidos
+ou públicos da minha própria classe,
+
+65
+00:05:36.600 --> 00:05:37.656
+eu posso usar.
+
+66
+00:05:37.656 --> 00:05:39.931
+O segundo tipo que eu posso usar,
+
+67
+00:05:39.931 --> 00:05:43.520
+são os parâmetros do método
+que eu estou definindo.
+
+68
+00:05:43.520 --> 00:05:49.640
+Então, se o método define que uma classe
+A vai ser passada como parâmetro,
+
+69
+00:05:49.640 --> 00:05:54.287
+então, eu posso mandar mensagens
+para objetos dessa classe A que eu
+
+70
+00:05:54.287 --> 00:05:56.652
+estou recebendo como parâmetro.
+
+71
+00:05:56.652 --> 00:06:00.293
+E o terceiro, quaisquer objetos
+que você pode instanciar.
+
+72
+00:06:00.293 --> 00:06:04.165
+Por exemplo, a qualquer momento
+eu posso usar por exemplo,
+
+73
+00:06:04.165 --> 00:06:07.720
+String que é objeto de uma
+classe String de Java.
+
+74
+00:06:07.720 --> 00:06:11.695
+Se eu posso usar de Java, eu posso usar
+de outros métodos da minha aplicação.
+
+75
+00:06:11.695 --> 00:06:16.010
+Geral, naquele momento,
+eles vão ser objetos auxiliares,
+
+76
+00:06:16.010 --> 00:06:19.550
+eles fazem alguma colaboração
+e eu vou usá-los,
+
+77
+00:06:19.550 --> 00:06:24.264
+não está impedido de fazer esse uso,
+de acordo com a necessidade.
+
+78
+00:06:24.264 --> 00:06:29.223
+O quarto tipo, são os objetos que
+estão lá nas variáveis de instância e
+
+79
+00:06:29.223 --> 00:06:33.543
+que são variáveis de instância
+de relacionamento, ou seja,
+
+80
+00:06:33.543 --> 00:06:36.669
+são objetos de classes da minha aplicação,
+
+81
+00:06:36.669 --> 00:06:41.120
+não valem aqueles objetos que
+são auxiliares da classe Java.
+
+82
+00:06:41.120 --> 00:06:46.330
+O quinto,
+que hoje não é mais considerado aceitável,
+
+83
+00:06:46.330 --> 00:06:50.705
+não é uma boa prática,
+seriam o uso de objetos globais.
+
+84
+00:06:50.705 --> 00:06:55.080
+Como o professor Guerra
+já mostrou outras aulas,
+
+85
+00:06:55.080 --> 00:07:00.457
+usar objetos globais não é uma
+coisa aceitável atualmente,
+
+86
+00:07:00.457 --> 00:07:03.720
+porque embaralha muita coisa no programa,
+
+87
+00:07:03.720 --> 00:07:09.230
+causa problema muito sério,
+então isso não se usa.
+
+88
+00:07:09.230 --> 00:07:12.582
+Eu vou exemplificar aqui,
+estou exemplificando aqui,
+
+89
+00:07:12.582 --> 00:07:17.071
+conjunto de classes são, é conjunto
+fictício, mas é só para mostrar,
+
+90
+00:07:17.071 --> 00:07:21.982
+que eu tenho aqui as classes A está
+se relacionando explicitamente
+
+91
+00:07:21.982 --> 00:07:25.942
+com a classe B, ou seja, a classe B,
+
+92
+00:07:25.942 --> 00:07:31.590
+vocês percebam que ele é atributo lá de A,
+não é,
+
+93
+00:07:31.590 --> 00:07:36.602
+está certo, tem relacionamento explícito.
+
+94
+00:07:36.602 --> 00:07:41.265
+A classe E, aliás,
+o A tem relacionamento com o próprio A,
+
+95
+00:07:41.265 --> 00:07:45.660
+está certo,
+com a classe E e com a classe D.
+
+96
+00:07:45.660 --> 00:07:52.122
+Ele não tem relacionamento
+explícito com as classes F, C e G.
+
+97
+00:07:52.122 --> 00:07:57.670
+Logo aí baixo,
+eu mostro a lógica do método mA1,
+
+98
+00:07:57.670 --> 00:08:02.372
+como parâmetro da classe D,
+na classe A, é o método mA1,
+
+99
+00:08:02.372 --> 00:08:05.970
+parâmetro D, nesse momento é argumento D,
+
+100
+00:08:05.970 --> 00:08:10.520
+que não volta nada, na classe A,
+vamos examinar isso mais de perto.
+
+101
+00:08:10.520 --> 00:08:14.194
+Eu aproveitei para numerar de 1,
+2, 3, 4 e 5,
+
+102
+00:08:14.194 --> 00:08:19.672
+que o 5 eu já estou dizendo: não é para
+usar porque se refere a varável global.
+
+103
+00:08:19.672 --> 00:08:25.623
+Então, enquanto na época de 1988,
+isso ainda era comum,
+
+104
+00:08:25.623 --> 00:08:30.677
+se usar muito variável global,
+e era herança da programação
+
+105
+00:08:30.677 --> 00:08:37.010
+estruturada e de linguagens da época, que
+favoreciam esse uso de variáveis globais,
+
+106
+00:08:37.010 --> 00:08:41.950
+hoje não é recomendado, então isso está
+fora e não vou mais comentar sobre isso.
+
+107
+00:08:41.950 --> 00:08:46.213
+Eu numerei então, 1, 2,
+3 e 4, para exemplificar.
+
+108
+00:08:46.213 --> 00:08:51.202
+O número 1 é porque a regra lá do LoD,
+estava dizendo que
+
+109
+00:08:51.202 --> 00:08:56.197
+eu posso mandar mensagens para o
+próprio objeto, então está aí this,
+
+110
+00:08:56.197 --> 00:09:00.280
+eu estou mandando para o mA2,
+esse método é o mA1, como está aí no topo.
+
+111
+00:09:00.280 --> 00:09:03.795
+Eu estou mandando para
+outro objeto da classe A.
+
+112
+00:09:03.795 --> 00:09:10.421
+O 2, eu vou mostrar daqui a pouco, ele se
+refere a atributo, está aí cima, não é?
+
+113
+00:09:10.421 --> 00:09:13.143
+Como a gente viu o mA1, o atributo D,
+
+114
+00:09:13.143 --> 00:09:16.990
+então ele é atributo e eu posso
+mandar mensagens para ele.
+
+115
+00:09:16.990 --> 00:09:21.760
+O 3, a classe E, eu estou criando,
+porque eu preciso
+
+116
+00:09:21.760 --> 00:09:26.836
+fazer algum serviço que o E presta para
+mim, ele vai me fazer uma colaboração,
+
+117
+00:09:26.836 --> 00:09:31.220
+que só ele pode me fazer essa colaboração,
+então eu estou usando, eu posso.
+
+118
+00:09:31.220 --> 00:09:36.310
+E o 4, é usando o objeto B que é objeto,
+
+119
+00:09:36.310 --> 00:09:39.826
+que é uma variável de
+instância da classe A.
+
+120
+00:09:39.826 --> 00:09:44.694
+Então, agora identificando no diagrama,
+pelo número 1,
+
+121
+00:09:44.694 --> 00:09:49.854
+vocês percebem que existe uma
+dependência recursiva, ou seja,
+
+122
+00:09:49.854 --> 00:09:54.788
+o objeto A depende do próprio A,
+que sentido é que ele depende?
+
+123
+00:09:54.788 --> 00:10:01.383
+Na lógica dele, o método mA1
+está fazendo uso do método mA2.
+
+124
+00:10:01.383 --> 00:10:06.307
+Então, isso é uso reflexivo
+relação à classe, não é,
+
+125
+00:10:06.307 --> 00:10:09.062
+está certo, é outro método da classe.
+
+126
+00:10:09.062 --> 00:10:14.475
+O 2 vocês percebam que o D é argumento
+
+127
+00:10:14.475 --> 00:10:19.217
+lá do método mA1 então eu
+posso enviar mensagens
+
+128
+00:10:19.217 --> 00:10:23.710
+para o objeto que está sendo
+passado como parâmetro para mim.
+
+129
+00:10:23.710 --> 00:10:30.397
+O 3 é é uma dependência que eu
+tenho do objeto da classe E,
+
+130
+00:10:30.397 --> 00:10:34.971
+simplesmente ele tem serviço que eu
+quero realizar e eu posso realizar,
+
+131
+00:10:34.971 --> 00:10:37.653
+isso está perfeitamente, é aceitável.
+
+132
+00:10:37.653 --> 00:10:40.829
+E o 4 é quando,
+é uma variável de instância.
+
+133
+00:10:40.829 --> 00:10:44.991
+Então B, vocês podem dizer que
+o bêzinho ali, ele é do tipo B,
+
+134
+00:10:44.991 --> 00:10:50.535
+então existe relacionamento forte, ele
+é uma variável de instância então essa,
+
+135
+00:10:50.535 --> 00:10:53.133
+essa dependência aí é explícita.
+
+136
+00:10:53.133 --> 00:10:57.779
+Na classe mA1 eu só estou colocando
+aquilo que eu posso fazer,
+
+137
+00:10:57.779 --> 00:11:03.378
+eu só posso me comunicar com o que eu vou
+chamar os amigos do A, aqueles que o,
+
+138
+00:11:03.378 --> 00:11:08.388
+a Lei de Demeter, a Law de Demeter
+me permite que é próprio B,
+
+139
+00:11:08.388 --> 00:11:11.880
+o E e o D, eu não posso falar com F,
+o C e o G.
+
+140
+00:11:11.880 --> 00:11:16.456
+Mas, vejam aí essas setas
+vermelhas apontando aí,
+
+141
+00:11:16.456 --> 00:11:22.595
+existem métodos que devolvem E por
+exemplo, logo cima a classe E,
+
+142
+00:11:22.595 --> 00:11:28.520
+o método mE2 ele me devolve alguma coisa,
+objeto da classe F.
+
+143
+00:11:28.520 --> 00:11:33.560
+Na classe B,
+o método mB3 me devolve alguma coisa
+
+144
+00:11:33.560 --> 00:11:38.978
+que é objeto da classe C
+e o método na classe D,
+
+145
+00:11:38.978 --> 00:11:43.200
+o mD2 me devolve uma, objeto da classe G.
+
+146
+00:11:43.200 --> 00:11:49.381
+Normalmente eles são getters de objetos
+não necessariamente getters simples,
+
+147
+00:11:49.381 --> 00:11:53.751
+às vezes são métodos mais
+complicados que voltam,
+
+148
+00:11:53.751 --> 00:11:58.712
+devolvem como parâmetro
+os objetos da classe F,
+
+149
+00:11:58.712 --> 00:12:02.982
+C e G, então não necessariamente
+são getters puros.
+
+150
+00:12:02.982 --> 00:12:08.179
+Vocês vejam aí que os dados,
+se eu usar esses
+
+151
+00:12:08.179 --> 00:12:12.700
+getters eu acabo tendo
+uma exposição de quem é,
+
+152
+00:12:12.700 --> 00:12:18.356
+quem são as classes F,
+objeto da classe F, objeto da classe G,
+
+153
+00:12:18.356 --> 00:12:23.247
+porque os dados que são no caso objetos,
+estão expostos,
+
+154
+00:12:23.247 --> 00:12:27.798
+então lá na classe A eu vou ter
+acesso a todos esses dados.
+
+155
+00:12:27.798 --> 00:12:32.619
+Eu vou exemplificar aqui
+só criando a classe A,
+
+156
+00:12:32.619 --> 00:12:38.451
+E e F exemplificando que
+o método mA1 da classe
+
+157
+00:12:38.451 --> 00:12:44.381
+A ele tem uma ação desejada
+que é realizada pelo,
+
+158
+00:12:44.381 --> 00:12:51.131
+se eu considerar que E é o amigo de A,
+ou seja tem acesso direto ao E,
+
+159
+00:12:51.131 --> 00:12:56.300
+aí por intermédio do E e através
+do getters que é o mE2, eu obtenho
+
+160
+00:12:56.300 --> 00:13:02.262
+objeto da classe F que faz a minha ação
+desejada, ele faz o que eu desejo.
+
+161
+00:13:02.262 --> 00:13:07.771
+Posso chamar o mF1 já
+que o mE.mE2 me devolve
+
+162
+00:13:07.771 --> 00:13:15.480
+objeto da classe F e aí eu posso
+então mandar a mensagem mF maiúsculo.
+
+163
+00:13:15.480 --> 00:13:20.999
+Então se eu considerar que o E é amigo
+do A, porque é nele que eu tenho acesso
+
+164
+00:13:20.999 --> 00:13:27.710
+direto, o F é o amigo do amigo de
+A e isso aqui não é uma coisa boa,
+
+165
+00:13:27.710 --> 00:13:32.622
+eu não posso considerar que o amigo
+do amigo do A seja uma coisa boa,
+
+166
+00:13:32.622 --> 00:13:35.401
+no nosso projeto aqui não é coisa boa.
+
+167
+00:13:35.401 --> 00:13:41.281
+O LoD tem outro nome que é o Don't Talk
+to Strangers, Não Fale com Estranhos e
+
+168
+00:13:41.281 --> 00:13:46.291
+o amigo do amigo vai ser estranho para
+você porque você vai ter uma dependência.
+
+169
+00:13:46.291 --> 00:13:51.085
+Vocês percebe que existe uma
+seta saindo do A até ao F que é
+
+170
+00:13:51.085 --> 00:13:56.109
+uma dependência indevida,
+redundante, porque eu estou,
+
+171
+00:13:56.109 --> 00:14:01.470
+eu tenho uma forma de acessá-lo através do
+E, porque é que eu vou precisar ter essa
+
+172
+00:14:01.470 --> 00:14:06.741
+redundância de dependências
+entre o A e o E e o A e F se
+
+173
+00:14:06.741 --> 00:14:13.611
+eu precisei do E só para acessar direto F,
+não tem sentido isso.
+
+174
+00:14:13.611 --> 00:14:20.310
+Então a gente vai carimbar isso
+como sendo Não fale com Estranhos.
+
+175
+00:14:20.310 --> 00:14:26.010
+Isso é a essência da Lei,
+da Law of Demeter, da LoD.
+
+176
+00:14:26.010 --> 00:14:30.443
+é o, na verdade muitos chamam
+que o princípio é Don't Talk
+
+177
+00:14:30.443 --> 00:14:33.800
+to Strangers ou Princípio
+a Law of Demeter.
+
+178
+00:14:33.800 --> 00:14:41.057
+O princípio Don't Talk to Strangers
+que personifica a Law of Demeter,
+
+179
+00:14:41.057 --> 00:14:47.766
+a LoD, ele deve ser seguido tanto para
+eliminar essas dependências quando elas já
+
+180
+00:14:47.766 --> 00:14:52.973
+existem já estão colocadas no meu código,
+mas principalmente,
+
+181
+00:14:52.973 --> 00:14:58.072
+isso é muito importante,
+principalmente para eu
+
+182
+00:14:58.072 --> 00:15:03.508
+evitar produzir isso quando estiver
+projetando as minhas classes,
+
+183
+00:15:03.508 --> 00:15:08.159
+quando estiver projetando as
+responsabilidades, as colaborações,
+
+184
+00:15:08.159 --> 00:15:12.490
+as classes,
+as lógicas das responsabilidades.
+
+185
+00:15:12.490 --> 00:15:17.683
+Nessa hora de estar pensando a lógica da
+responsabilidade eu vou estar pensando
+
+186
+00:15:17.683 --> 00:15:22.865
+seriamente nesses princípios: Tell,
+Don't ask, Law of Demeter
+
+187
+00:15:22.865 --> 00:15:28.169
+porque vou estar organizando e
+automaticamente produzindo código melhor,
+
+188
+00:15:28.169 --> 00:15:34.295
+de qualidade melhor,
+Então isso é importante.
+
+189
+00:15:34.295 --> 00:15:38.910
+diagrama do meu exemplo,
+no fundo o que ele está querendo dizer é,
+
+190
+00:15:38.910 --> 00:15:42.895
+eu coloquei aí quadrado reticulado
+
+191
+00:15:42.895 --> 00:15:47.777
+separando quem pode conversar
+com o A e quem não pode.
+
+192
+00:15:47.777 --> 00:15:50.975
+Quem está dentro desse quadrado,
+que é o próprio A,
+
+193
+00:15:50.975 --> 00:15:54.344
+eu posso conversar com ele mesmo,
+não é, está certo?
+
+194
+00:15:54.344 --> 00:15:58.828
+Na verdade eu posso conversar também
+com as super classes do A, que eu não
+
+195
+00:15:58.828 --> 00:16:03.658
+estou colocando aqui, a Law of Demeter
+faz uma certa separação sobre isso,
+
+196
+00:16:03.658 --> 00:16:07.245
+nós estamos usando a forma
+mais fraca da Law of Demeter.
+
+197
+00:16:07.245 --> 00:16:12.177
+A classe E, a classe B e a classe D
+são os amigos do A então estão aqui,
+
+198
+00:16:12.177 --> 00:16:14.180
+esses eu posso conversar.
+
+199
+00:16:14.180 --> 00:16:19.004
+Agora conversar com lá fora eu não posso,
+então do jeito que o código está aqui,
+
+200
+00:16:19.004 --> 00:16:23.793
+por convenção eu não estaria usando
+algumas coisas, como por exemplo na classe
+
+201
+00:16:23.793 --> 00:16:28.408
+E o método mE2 que me
+volta objeto da classe F.
+
+202
+00:16:28.408 --> 00:16:32.712
+Espera mas se eu estou fazendo
+isso por convenção, não vou usar,
+
+203
+00:16:32.712 --> 00:16:40.460
+porque é que eu pus então esse método
+lá não ter esse tipo de coisa.
+
+204
+00:16:40.460 --> 00:16:45.101
+Então o LoD oferece uma solução
+de 2 passos que você vai ficar
+
+205
+00:16:45.101 --> 00:16:47.838
+aplicando todas as ocorrências.
+
+206
+00:16:47.838 --> 00:16:52.722
+Eu vou mostrar no exemplo de leitura
+a aplicação naquele sistema de
+
+207
+00:16:52.722 --> 00:16:57.779
+logística que eu vou mostrar isso
+sendo aplicado passo a passo
+
+208
+00:16:57.779 --> 00:17:02.951
+e você vai usar o princípio Tell Don't Ask
+e o Redirecionamento Delegação.
+
+209
+00:17:02.951 --> 00:17:05.305
+O que é que é o
+Redirecionamento Delegação?
+
+210
+00:17:05.305 --> 00:17:10.111
+Normalmente você vai encontrar isso sendo
+tratado como delegação, que é alguém
+
+211
+00:17:10.111 --> 00:17:14.973
+faz alguma coisa para você, ou seja, você
+precisa de uma colaboração você passa para
+
+212
+00:17:14.973 --> 00:17:20.681
+a outra classe fazer isso para você,
+então a gente chama de delegação.
+
+213
+00:17:20.681 --> 00:17:25.696
+Normalmente quando o método que você
+está delegando tem o mesmo nome
+
+214
+00:17:25.696 --> 00:17:31.202
+do método que está invocando aquele outro,
+aí é redirecionamento,
+
+215
+00:17:31.202 --> 00:17:36.560
+é o mesmo nome, então pode ocorrer
+as duas coisas na verdade.
+
+216
+00:17:36.560 --> 00:17:40.989
+Determinado momento eu uso
+redirecionamento porque eu vou chamar o
+
+217
+00:17:40.989 --> 00:17:44.596
+próprio, no meu exemplo a seguir
+eu vou usar redirecionamento
+
+218
+00:17:44.596 --> 00:17:48.170
+porque eu vou usar o mesmo nome do método,
+quando eu for
+
+219
+00:17:48.170 --> 00:17:53.126
+resolver no Tell Don't Ask porque eu
+tenho lá uma ação desejada, não é,
+
+220
+00:17:53.126 --> 00:17:57.100
+eu quero transferir isso para outro
+lugar e aí eu faço redirecionamento,
+
+221
+00:17:57.100 --> 00:18:02.270
+eu simplesmente chamo o mesmo nome
+do método e aí fica mais simples.
+
+222
+00:18:02.270 --> 00:18:08.330
+Então essa combinação,
+isso e a Law of Demeter quando o código
+
+223
+00:18:08.330 --> 00:18:15.795
+já está cheio ou corre o risco de estar
+cheio de acoplamentos, dependências.
+
+224
+00:18:15.795 --> 00:18:20.938
+A Law of Demeter também tem o lado
+de projeto, quando eu vou criar
+
+225
+00:18:20.938 --> 00:18:26.255
+pensando nessas restrições e não
+produz essas dependências indevidas.
+
+226
+00:18:26.255 --> 00:18:30.558
+Voltando aqui no meu exemplo
+das classes A, E e F,
+
+227
+00:18:30.558 --> 00:18:36.320
+se vocês olharem antes do jeito que
+estava eu tenho duas dependências, não é?
+
+228
+00:18:36.320 --> 00:18:42.819
+Nesse exemplo que estou dando aqui,
+que eu faço com que o mA1,
+
+229
+00:18:42.819 --> 00:18:48.887
+o método mA1 do A, ele acessa a classe E,
+
+230
+00:18:48.887 --> 00:18:54.174
+manda uma mensagem mE2 e volta objeto F,
+
+231
+00:18:54.174 --> 00:18:59.559
+aí eu posso mandar o método
+mF1 para esse objeto F, que
+
+232
+00:18:59.559 --> 00:19:05.150
+é essa segunda seta que tenho, vermelha
+que está apontando a dependência aí.
+
+233
+00:19:05.150 --> 00:19:08.891
+Então eu tenho duas dependências,
+então se eu estiver no meu sistema como
+
+234
+00:19:08.891 --> 00:19:11.883
+todo isso aí eu posso ter
+muitas dependências desse tipo,
+
+235
+00:19:11.883 --> 00:19:14.630
+a toda a hora pode ocorrer
+dependências desse tipo.
+
+236
+00:19:14.630 --> 00:19:16.657
+Como é que eu resolvo?
+
+237
+00:19:16.657 --> 00:19:21.139
+O Tell Don't Ask,
+a ação desejada que está aqui na
+
+238
+00:19:21.139 --> 00:19:26.116
+lógica do mA1 eu passo para o E
+e é redirecionamento que eu vou
+
+239
+00:19:26.116 --> 00:19:31.215
+chamar lá o novo método
+que vai encampar esse
+
+240
+00:19:31.215 --> 00:19:38.164
+E.mE2.mF1 eu vou dar o mesmo nome que é
+no mA1 só que vai estar lá na classe E.
+
+241
+00:19:38.164 --> 00:19:41.822
+Eu estou supondo aqui só que
+é nome qualquer, está certo,
+
+242
+00:19:41.822 --> 00:19:46.409
+ou seja há uma repetição desse nome,
+porque ao repetir o nome você está
+
+243
+00:19:46.409 --> 00:19:53.160
+repetindo a responsabilidade daquele,
+correspondente aquele método.
+
+244
+00:19:53.160 --> 00:19:57.785
+e a responsabilidade do mA1
+vai ser a mesma do, de A,
+
+245
+00:19:57.785 --> 00:20:01.570
+vai ser a mesma do mA1 e eu
+estou transferindo para E.
+
+246
+00:20:01.570 --> 00:20:05.370
+Como é que eu faço isso agora,
+olha, se vocês olharem agora aqui,
+
+247
+00:20:05.370 --> 00:20:07.988
+que é que aconteceu
+comparação ao anterior?
+
+248
+00:20:07.988 --> 00:20:11.178
+Olha, tinha 2 dependências
+setas vermelhas,
+
+249
+00:20:11.178 --> 00:20:15.924
+agora eu tenho uma dependência
+só se vocês olharem,
+
+250
+00:20:15.924 --> 00:20:20.916
+vamos olhar para a lógica
+do mA1 da classe A,
+
+251
+00:20:20.916 --> 00:20:25.897
+agora ele simplesmente faz assim E.ma1,
+
+252
+00:20:25.897 --> 00:20:28.950
+ou seja eu transferi lá para o E,
+
+253
+00:20:28.950 --> 00:20:34.604
+vocês podem ver que lá no E agora tem
+método mA1, e esse mA1 faz exatamente
+
+254
+00:20:34.604 --> 00:20:39.634
+aquilo que eu estava fazendo na minha
+classe anterior no método de A.
+
+255
+00:20:39.634 --> 00:20:45.700
+Está aí do lado, na nota,
+mostrando o código do mA1 de E.
+
+256
+00:20:45.700 --> 00:20:50.589
+E no código de mA1 da
+classe A eu simplesmente
+
+257
+00:20:50.589 --> 00:20:55.000
+redireciono por isso que eu estou chamando
+de redirecionamento, eu redireciono.
+
+258
+00:20:55.000 --> 00:20:59.695
+Pronto, simples,
+ou seja eu estou aplicando,
+
+259
+00:20:59.695 --> 00:21:04.437
+ao fazer essa,
+esse redirecionamento eu estou aplicando
+
+260
+00:21:04.437 --> 00:21:09.676
+simultaneamente o princípio Tell Don't Ask
+lembrando que às vezes pode valer
+
+261
+00:21:09.676 --> 00:21:15.246
+a pena não fazer redirecionamento, ser uma
+delegação quando o método é diferente.
+
+262
+00:21:15.246 --> 00:21:22.100
+Aí eu mostro o antes no mA1(D) e o
+depois no mA1(D), todos da classe A.
+
+263
+00:21:22.100 --> 00:21:27.229
+Pode ver que claramente houve
+uma mudança não é, eu estou
+
+264
+00:21:27.229 --> 00:21:31.452
+simplesmente fazendo redirecionamento
+lá para a classe E do método mA1.
+
+265
+00:21:31.452 --> 00:21:35.269
+Eu estou simbolizando que chamo o mesmo
+método da classe A só para dizer que é
+
+266
+00:21:35.269 --> 00:21:37.925
+redirecionamento o nome é o mesmo.
+
+267
+00:21:37.925 --> 00:21:42.783
+Com isso pessoal nós
+mostramos a Lei de Demeter,
+
+268
+00:21:42.783 --> 00:21:49.069
+Law of Demeter, a LoD, ela tem papel de
+diminuir o acoplamento entre classes.
+
+269
+00:21:49.069 --> 00:21:53.809
+Eu posso fazer isso desde o projeto
+projetando seguindo aquelas regras,
+
+270
+00:21:53.809 --> 00:21:58.560
+que aí eu já vou só conversando com os
+amigos daquele objeto do qual eu estou
+
+271
+00:21:58.560 --> 00:22:03.755
+projetando, daquela classe da qual estou
+projetando as suas responsabilidades,
+
+272
+00:22:03.755 --> 00:22:08.458
+as lógicas das suas responsabilidades,
+vendo quem são as suas colaborações,
+
+273
+00:22:08.458 --> 00:22:14.037
+seguindo isso e o princípio
+Tell Don't Ask, eu estou num bom caminho.
+
+274
+00:22:14.037 --> 00:22:18.689
+Agora se eu não, não seguir isso
+eu estou com código na mão que tem
+
+275
+00:22:18.689 --> 00:22:23.257
+muitas dependências eu vou aplicar agora,
+como eu mostrei,
+
+276
+00:22:23.257 --> 00:22:29.100
+uma combinação do Tell Don't Ask
+e do Redirecionamento Delegação
+
+277
+00:22:29.100 --> 00:22:32.601
+e faço com que a minha
+aplicação seja mais flexível,
+
+278
+00:22:32.601 --> 00:22:37.597
+tenha menos dependência e seja,
+tenha código mais fácil de manter.
+
+279
+00:22:37.597 --> 00:22:38.448
+Obrigado!
+
+280
+00:22:38.448 --> 00:22:44.330
+[MÚSICA] [MÚSICA]

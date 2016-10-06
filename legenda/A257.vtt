@@ -1,0 +1,163 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.997
+[MÚSICA] E aí,
+
+3
+00:00:13.997 --> 00:00:17.970
+pessoal, tudo bem?
+
+4
+00:00:17.970 --> 00:00:22.119
+Agora que temos todos os objetos
+conectados com o código vamos criar
+
+5
+00:00:22.119 --> 00:00:24.320
+a estrutura de dados do nosso quiz.
+
+6
+00:00:24.320 --> 00:00:29.630
+A primeira coisa que nós vamos fazer
+vai ser criar novo arquivo swift.
+
+7
+00:00:29.630 --> 00:00:35.951
+Para isso clique com o botão
+direito na pasta Quiz, New File,
+
+8
+00:00:35.951 --> 00:00:40.130
+Swift File, Next.
+
+9
+00:00:40.130 --> 00:00:46.050
+Nomeie esse arquivo como QuizModel.
+
+10
+00:00:46.050 --> 00:00:50.690
+Vamos criar a classe de
+questão do nosso quiz.
+
+11
+00:00:50.690 --> 00:00:55.070
+Essa classe contém uma string
+de texto para a questão,
+
+12
+00:00:55.070 --> 00:01:00.240
+uma imagem do tipo UIImage
+e vetor de respostas.
+
+13
+00:01:00.240 --> 00:01:04.780
+Você pode notar que a nossa classe
+não reconhece o tipo UIImage.
+
+14
+00:01:04.780 --> 00:01:10.510
+Isso porque nós não importamos
+a biblioteca UIKit, vamos fazer isso.
+
+15
+00:01:10.510 --> 00:01:14.970
+Essa biblioteca contém as referências
+dos objetos de interface.
+
+16
+00:01:14.970 --> 00:01:19.900
+Você pode notar também que o nosso
+código não reconhece a classe Answer.
+
+17
+00:01:19.900 --> 00:01:22.330
+Vamos criar essa nova classe.
+
+18
+00:01:22.330 --> 00:01:28.132
+A classe Answer contém uma string para
+o texto de resposta, uma variável do
+
+19
+00:01:28.132 --> 00:01:33.230
+tipo boolean que vai dizer se a nossa
+resposta está correta ou errada.
+
+20
+00:01:33.230 --> 00:01:39.270
+Ela contém também inicializador que recebe
+como parâmetro uma string e uma boolean.
+
+21
+00:01:39.270 --> 00:01:43.670
+Agora a nossa classe Question está
+pronta para ser inicializada.
+
+22
+00:01:43.670 --> 00:01:48.330
+O primeiro parâmetro é uma
+string com texto de questão,
+
+23
+00:01:48.330 --> 00:01:53.013
+o segundo parâmetro é uma string
+com o nome do arquivo de imagem da
+
+24
+00:01:53.013 --> 00:01:57.600
+questão e o terceiro parâmetro
+é vetor de respostas.
+
+25
+00:01:57.600 --> 00:02:01.980
+O objeto de imagem é criado
+através do construtor UIImage,
+
+26
+00:02:01.980 --> 00:02:05.198
+que recebe como parâmetro
+o nome do arquivo.
+
+27
+00:02:05.198 --> 00:02:13.060
+Vamos voltar para o ViewController.swift
+e vamos declarar o vetor de questões.
+
+28
+00:02:13.060 --> 00:02:18.100
+Na função viewDidLoad vamos
+criar esse vetor de questões.
+
+29
+00:02:18.100 --> 00:02:25.450
+Primeiro criamos objetos de respostas
+e depois criamos objetos de questões,
+
+30
+00:02:25.450 --> 00:02:30.780
+que recebem como parâmetro o vetor
+dessas respostas que acabamos de criar.
+
+31
+00:02:30.780 --> 00:02:35.396
+Fizemos isso para 4 questões
+exemplo e no final criamos
+
+32
+00:02:35.396 --> 00:02:39.180
+o vetor Questions com esses
+4 objetos de questão.
+
+33
+00:02:39.180 --> 00:02:44.867
+Na próxima aula nós vamos
+criar a lógica do nosso quiz.
+
+34
+00:02:44.867 --> 00:02:45.740
+Até lá!

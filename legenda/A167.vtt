@@ -1,0 +1,209 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.515
+[MÚSICA] E aí,
+
+2
+00:00:05.515 --> 00:00:09.570
+pessoal, tudo bem?
+
+3
+00:00:09.570 --> 00:00:12.261
+Agora que já temos a base
+do nosso jogo criada,
+
+4
+00:00:12.261 --> 00:00:14.750
+vamos adicionar sistema de pontuação.
+
+5
+00:00:14.750 --> 00:00:20.015
+Adicione mais uma Label na cena.
+
+6
+00:00:20.015 --> 00:00:25.280
+Renomeie para Score.
+
+7
+00:00:25.280 --> 00:00:29.710
+Ajuste o alinhamento para Left Center
+
+8
+00:00:29.710 --> 00:00:37.206
+[SEM_ÁUDIO] e mude
+
+9
+00:00:37.206 --> 00:00:42.360
+a cor e o tamanho da fonte.
+
+10
+00:00:42.360 --> 00:00:50.260
+[SEM_ÁUDIO]
+
+11
+00:00:50.260 --> 00:00:55.045
+Adicione, também,
+
+12
+00:00:55.045 --> 00:00:58.160
+Color Sprite.
+
+13
+00:00:58.160 --> 00:01:05.855
+[SEM_ÁUDIO] Renomeie
+
+14
+00:01:05.855 --> 00:01:10.731
+para Coin e escolha a imagem gold_1.
+
+15
+00:01:10.731 --> 00:01:14.990
+Redimensione para tamanho
+próximo do player node.
+
+16
+00:01:14.990 --> 00:01:20.161
+Vamos implementar sistema de pontuação
+que o jogador ao coletar uma moeda,
+
+17
+00:01:20.161 --> 00:01:24.650
+a pontuação sobe em 1 e a moeda
+aparece em lugar aleatório da tela.
+
+18
+00:01:24.650 --> 00:01:30.766
+[SEM_ÁUDIO] No código,
+
+19
+00:01:30.766 --> 00:01:35.030
+crie uma variável SKSpriteNode,
+chamada coinNode,
+
+20
+00:01:35.030 --> 00:01:38.960
+Uma variável SKLabelNode,
+chamada scoreNode,
+
+21
+00:01:38.960 --> 00:01:43.750
+e uma variável inteira,
+chamada nCoins, com valor 0.
+
+22
+00:01:43.750 --> 00:01:47.940
+Vamos criar uma função chamada AddScore,
+
+23
+00:01:47.940 --> 00:01:52.906
+que incrementa em 1 o valor de nCoins,
+atualiza o texto
+
+24
+00:01:52.906 --> 00:01:58.100
+do Label score node, transformando
+o valor do inteiro em String,
+
+25
+00:01:58.100 --> 00:02:02.190
+e muda a posição X Y para
+valor aleatório da tela.
+
+26
+00:02:02.190 --> 00:02:09.156
+A função arc4random_uniform retorna
+
+27
+00:02:09.156 --> 00:02:14.447
+número aleatório entre 0 e o
+número passado como argumento.
+
+28
+00:02:14.447 --> 00:02:18.283
+Essa função lida com
+números do tipo UInt32.
+
+29
+00:02:18.283 --> 00:02:24.130
+Por isso, precisamos fazer a conversão
+entre os tipos UInt32 e CGFloat.
+
+30
+00:02:24.130 --> 00:02:28.506
+Primeiro, sorteamos valor para o eixo X,
+de 0,
+
+31
+00:02:28.506 --> 00:02:31.600
+ao valor da largura do frame dessa cena.
+
+32
+00:02:31.600 --> 00:02:37.200
+E sorteamos valor para o eixo Y, de 0,
+ao valor da altura do frame dessa cena.
+
+33
+00:02:37.200 --> 00:02:43.270
+Então, atualizamos a posição X e Y,
+convertendo esses valores para CGFloat.
+
+34
+00:02:43.270 --> 00:02:49.480
+Na função Update, vamos verificar
+a colisão entre o playerNode e o coinNode.
+
+35
+00:02:49.480 --> 00:02:53.456
+Se for verdadeiro,
+chamamos a função AddScore,
+
+36
+00:02:53.456 --> 00:02:57.630
+e precisamos executar esse código apenas
+se o jogo não estiver no estado gameOver.
+
+37
+00:02:57.630 --> 00:03:01.580
+Ou seja, somente se a bolhinha
+da gameOver estiver como false.
+
+38
+00:03:01.580 --> 00:03:06.382
+Por fim,
+vamos fazer com que a função de recomeçar
+
+39
+00:03:06.382 --> 00:03:09.846
+o jogo a pontuação seja "resetada",
+também,
+
+40
+00:03:09.846 --> 00:03:15.378
+atualizando o valor de nCoins para 0
+e atualizando o texto do scoreNode.
+
+41
+00:03:15.378 --> 00:03:18.710
+Rode no simulador para ver o resultado.
+
+42
+00:03:18.710 --> 00:03:23.956
+[SEM_ÁUDIO] Temos
+
+43
+00:03:23.956 --> 00:03:28.110
+aqui o nosso jogo simples, quase completo.
+
+44
+00:03:28.110 --> 00:03:32.572
+Precisamos, apenas,
+adicionar alguns efeitos sonoros,
+
+45
+00:03:32.572 --> 00:03:35.019
+e é o que faremos na próxima aula.
+
+46
+00:03:35.019 --> 00:03:35.640
+Até lá.

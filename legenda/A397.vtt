@@ -1,0 +1,601 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.483
+Após esse vídeo, você será capaz de
+estimar a influência do atraso de
+
+2
+00:00:03.483 --> 00:00:07.192
+transporte na resposta ao degrau do
+sistema e de projetar o avanço de fase
+
+3
+00:00:07.192 --> 00:00:09.503
+de modo a compensar o
+atraso de transporte.
+
+4
+00:00:09.503 --> 00:00:12.760
+Primeiro, note que se tivermos G
+de s igual a 1 sobre s mais a,
+
+5
+00:00:12.760 --> 00:00:16.235
+teremos T de s é igual a k sobre s
+mais a mais k e se a for maior que 0,
+
+6
+00:00:16.235 --> 00:00:20.760
+o sistema malha fechada será estável para
+qualquer valor de ganho k maior que 0.
+
+7
+00:00:20.760 --> 00:00:25.295
+No entanto, se tivermos G a de
+s igual a G de s menos s mais 2
+
+8
+00:00:25.295 --> 00:00:29.407
+sobre tau sobre s mais 2 sobre tau,
+que é a função de transferência com atraso
+
+9
+00:00:29.407 --> 00:00:33.985
+aproximado por Padé de primeira ordem,
+teremos: T a de s é igual a k menos s mais
+
+10
+00:00:33.985 --> 00:00:38.833
+2 sobre tau sobre s mais a s mais 2 sobre
+tau mais k menos s mais 2 sobre tau e o
+
+11
+00:00:38.833 --> 00:00:43.350
+denominador da função de transferência
+malha fechada será s ao quadrado mais
+
+12
+00:00:43.350 --> 00:00:48.470
+a mais 2 sobre tau menos ks mais a vezes
+2 sobre tau mais k vezes 2 sobre tau.
+
+13
+00:00:48.470 --> 00:00:52.860
+E, se k for maior do que a mais 2
+sobre tau, o sistema ficará instável.
+
+14
+00:00:52.860 --> 00:00:56.911
+Então o atraso de transporte pode fazer
+com que sistema, que era estável para
+
+15
+00:00:56.911 --> 00:01:00.250
+qualquer ganho k, passe a ficar
+instável para ganhos elevados.
+
+16
+00:01:00.250 --> 00:01:02.685
+E, quanto maior o atraso de transporte,
+
+17
+00:01:02.685 --> 00:01:05.467
+menor será o ganho k que
+instabilize o sistema.
+
+18
+00:01:05.467 --> 00:01:08.969
+Isso quer dizer que, mantendo o
+mesmo ganho e aumentando o atraso,
+
+19
+00:01:08.969 --> 00:01:11.260
+sistema estável também
+pode ficar instável.
+
+20
+00:01:11.260 --> 00:01:14.188
+Nesse caso só precisamos
+ter k maior que a e teremos
+
+21
+00:01:14.188 --> 00:01:17.260
+valor de atraso para o qual
+o sistema ficará instável.
+
+22
+00:01:17.260 --> 00:01:21.165
+Vamos agora considerar atraso
+de 0,1 segundo e uma função de
+
+23
+00:01:21.165 --> 00:01:23.940
+transferência sem atraso
+2 sobre s s mais 4.
+
+24
+00:01:23.940 --> 00:01:28.675
+Temos então: o G com atraso de
+s é igual a 2 sobre s s mais 4
+
+25
+00:01:28.675 --> 00:01:33.667
+vezes menos s mais 2 sobre
+0,1 sobre s mais 2 sobre 0,1,
+
+26
+00:01:33.667 --> 00:01:38.980
+ou melhor, 2 sobre s s mais 4 vezes
+menos s mais 20 sobre s mais 20.
+
+27
+00:01:38.980 --> 00:01:41.228
+Sem atraso e com ganho k igual a 10,
+
+28
+00:01:41.228 --> 00:01:45.242
+temos malha fechada: 20 sobre
+s ao quadrado mais 4s mais 20,
+
+29
+00:01:45.242 --> 00:01:50.590
+o que nos leva a ksi de aproximadamente
+0,447 e overshoot de 20,1%.
+
+30
+00:01:50.590 --> 00:01:53.230
+E com o atraso qual será o overshoot?
+
+31
+00:01:53.230 --> 00:01:57.830
+Malha fechada com o mesmo ganho k,
+temos: T a de s é igual a 20 menos s
+
+32
+00:01:57.830 --> 00:02:02.430
+mais 20 sobre s s mais 4 s mais
+20 mais 20 vezes menos s mais 20.
+
+33
+00:02:02.430 --> 00:02:08.394
+Expandindo o denominador, temos: s ao cubo
+mais 24 s ao quadrado mais 60s mais 400.
+
+34
+00:02:08.394 --> 00:02:12.505
+Os polos são menos 22,1
+e menos 0,95 mais 4,1j.
+
+35
+00:02:12.505 --> 00:02:17.594
+O fator de amortecimento dos polos
+complexos conjugados é 0,223,
+
+36
+00:02:17.594 --> 00:02:20.706
+o que resultaria num overshoot de 48,7%.
+
+37
+00:02:20.706 --> 00:02:26.267
+Simulando o sistema com atraso no
+Simulink, obtemos overshoot de 49,5%.
+
+38
+00:02:26.267 --> 00:02:31.000
+Essa pequena diferença se deve
+ao zero 20 e ao polo menos 22,1,
+
+39
+00:02:31.000 --> 00:02:34.142
+que cancela parcialmente mas não
+totalmente o efeito do zero,
+
+40
+00:02:34.142 --> 00:02:37.467
+e também à aproximação do efeito
+do atraso por uma função racional.
+
+41
+00:02:37.467 --> 00:02:41.117
+Simule a função de transferência obtida
+com a aproximação de Padé e compare os
+
+42
+00:02:41.117 --> 00:02:41.800
+resultados.
+
+43
+00:02:41.800 --> 00:02:44.118
+Você vai encontrar o atraso de transporte,
+
+44
+00:02:44.118 --> 00:02:47.010
+transport delay,
+Continuous na Library Browser.
+
+45
+00:02:47.010 --> 00:02:51.475
+Pode colocar atraso de 0,1 segundo
+qualquer lugar da malha de controle.
+
+46
+00:02:51.475 --> 00:02:56.010
+Se preferir, pode dividir o
+atraso dois atrasos de 0,05 e
+
+47
+00:02:56.010 --> 00:03:00.172
+colocar na entrada e outro na saída
+do sistema ou na realimentação.
+
+48
+00:03:00.172 --> 00:03:03.332
+Dica rápida de Simulink:
+para alterar a direção de
+
+49
+00:03:03.332 --> 00:03:08.141
+bloco e deixar o diagrama mais agradável,
+basta clicar com o botão direito sobre o
+
+50
+00:03:08.141 --> 00:03:10.905
+bloco e escolher Rotate in flip,
+Flip block.
+
+51
+00:03:10.905 --> 00:03:15.809
+Alternativamente clique no bloco para
+selecioná-lo e use a combinação de teclas
+
+52
+00:03:15.809 --> 00:03:16.530
+control i.
+
+53
+00:03:16.530 --> 00:03:19.500
+Você notará que o
+overshoot é sempre o mesmo,
+
+54
+00:03:19.500 --> 00:03:21.823
+não importa onde você coloque o atraso.
+
+55
+00:03:21.823 --> 00:03:25.300
+Mas os tempos de resposta ao degrau
+são afetados pela posição do atraso.
+
+56
+00:03:25.300 --> 00:03:29.671
+Veja a diferença por exemplo entre colocar
+todo o atraso na realimentação e todo o
+
+57
+00:03:29.671 --> 00:03:31.285
+atraso na entrada do sistema.
+
+58
+00:03:31.285 --> 00:03:34.830
+Caso não esteja observando a diferença,
+aumente o valor do atraso.
+
+59
+00:03:34.830 --> 00:03:37.190
+Mas não demais,
+ou o sistema ficará instável.
+
+60
+00:03:37.190 --> 00:03:37.780
+Muito bem!
+
+61
+00:03:37.780 --> 00:03:41.484
+Agora você já sabe como estimar o efeito
+do atraso na resposta do sistema,
+
+62
+00:03:41.484 --> 00:03:42.559
+mas isso é análise.
+
+63
+00:03:42.559 --> 00:03:45.470
+Com a análise verificamos se
+o sistema atende ou não aos
+
+64
+00:03:45.470 --> 00:03:47.000
+requisitos de desempenho.
+
+65
+00:03:47.000 --> 00:03:51.242
+E nesse caso, com overshoot de quase 50%,
+ele não atende.
+
+66
+00:03:51.242 --> 00:03:56.291
+O sistema sem atraso com k igual a 10
+teoricamente teria overshoot de 20% e
+
+67
+00:03:56.291 --> 00:03:59.757
+tempo de subida de 0 a 100%
+próximo de 0,5 segundo.
+
+68
+00:03:59.757 --> 00:04:03.281
+Vamos aproveitar e já alterar
+pouco a resposta do sistema.
+
+69
+00:04:03.281 --> 00:04:08.320
+Vamos manter o tempo de subida de 0,5
+segundo e diminuir o overshoot para 15%.
+
+70
+00:04:08.320 --> 00:04:13.324
+Precisamos então de ksi de
+0,517 e de ômega d de 4,23
+
+71
+00:04:13.324 --> 00:04:19.551
+e temos então quadradinho d
+igual a menos 2,55 mais 4,23j.
+
+72
+00:04:19.551 --> 00:04:24.170
+Vamos usar quadradinho d
+igual a menos 2,6 mais 4,2j.
+
+73
+00:04:24.170 --> 00:04:27.635
+Podemos agora calcular o
+avanço de fase necessário,
+
+74
+00:04:27.635 --> 00:04:31.402
+que será de 13,4 graus,
+mas isso para o sistema sem atraso.
+
+75
+00:04:31.402 --> 00:04:35.240
+Já sabemos que temos atraso de transporte
+de 0,1 segundo e que ele irá afetar
+
+76
+00:04:35.240 --> 00:04:36.490
+o overshoot da resposta.
+
+77
+00:04:36.490 --> 00:04:39.874
+Então vamos considerar no
+projeto do avanço de fase.
+
+78
+00:04:39.874 --> 00:04:40.550
+Mas como?
+
+79
+00:04:40.550 --> 00:04:44.964
+Simples: vamos incluir o atraso no
+cálculo de fase de G de quadradinho d e
+
+80
+00:04:44.964 --> 00:04:45.980
+no cálculo de k.
+
+81
+00:04:45.980 --> 00:04:51.129
+E podemos fazer isso usando a aproximação
+de Padé ou a exponencial de menos s tau.
+
+82
+00:04:51.129 --> 00:04:55.879
+Temos: G a de s igual a G de s vezes
+menos s mais 2 sobre tau sobre s
+
+83
+00:04:55.879 --> 00:04:57.360
+mais 2 sobre tau.
+
+84
+00:04:57.360 --> 00:05:03.825
+Para o nosso exemplo, G de s vezes menos
+s mais 20 sobre s mais 20 e a fase
+
+85
+00:05:03.825 --> 00:05:08.675
+de G com atraso de quadradinho d é a fase
+de G de quadradinho d mais a fase de e
+
+86
+00:05:08.675 --> 00:05:13.460
+a menos 0,1 quadradinho d, que pode ser
+aproximada pela fase de G de quadradinho d
+
+87
+00:05:13.460 --> 00:05:17.720
+mais a fase de menos quadradinho d mais
+20 menos a fase de quadradinho d mais 20.
+
+88
+00:05:17.720 --> 00:05:22.598
+Vamos então calcular a fase de e elevado
+a menos 0,1 quadradinho d e as fases
+
+89
+00:05:22.598 --> 00:05:26.277
+de menos quadradinho d mais
+20 e quadradinho d mais 20.
+
+90
+00:05:26.277 --> 00:05:30.695
+Temos: fase de e elevado a menos
+quadradinho d tau aproximadamente menos
+
+91
+00:05:30.695 --> 00:05:35.370
+24,1 graus e fase de menos quadradinho
+d mais 20 menos fase de quadradinho d
+
+92
+00:05:35.370 --> 00:05:40.200
+mais 20 aproximadamente menos
+10,5 graus menos 13,6 graus,
+
+93
+00:05:40.200 --> 00:05:43.018
+o que também dá menos 24,1 graus, ou seja,
+
+94
+00:05:43.018 --> 00:05:47.610
+a aproximação de Padé nos dá a mesma
+fase que a calculada usando exponencial.
+
+95
+00:05:47.610 --> 00:05:53.021
+Somando esses 24,1 graus para contrapor
+o atraso aos 13,4 graus do avanço para
+
+96
+00:05:53.021 --> 00:05:58.616
+posicionar os polos no lugar desejado,
+temos avanço total de 37,5 graus.
+
+97
+00:05:58.616 --> 00:06:00.998
+Vamos cancelar o polo menos 4.
+
+98
+00:06:00.998 --> 00:06:05.826
+Assim temos, fase de quadradinho mais
+a igual a 71,6 graus e precisamos de
+
+99
+00:06:05.826 --> 00:06:09.563
+fase de quadradinho desejado
+mais b igual a 34,1 graus.
+
+100
+00:06:09.563 --> 00:06:13.420
+A essa altura, você já deve ser capaz
+de calcular b sem a minha ajuda, não?
+
+101
+00:06:13.420 --> 00:06:16.604
+Chegamos a b aproximadamente 8,8.
+
+102
+00:06:16.604 --> 00:06:21.307
+Se quiser, pode conferir agora se a fase
+de G a de quadradinho d está próxima de
+
+103
+00:06:21.307 --> 00:06:22.500
+menos 21 degraus.
+
+104
+00:06:22.500 --> 00:06:24.901
+Pode pausar o vídeo, que eu espero.
+
+105
+00:06:24.901 --> 00:06:29.522
+[SEM_ÁUDIO] Falta apenas calcular
+o ganho k, que será 14,26.
+
+106
+00:06:29.522 --> 00:06:33.609
+Você pode calcular k usando o módulo
+da exponencial ou usando o módulo da
+
+107
+00:06:33.609 --> 00:06:34.910
+aproximação de Padé.
+
+108
+00:06:34.910 --> 00:06:39.058
+E nosso controlador de avanço de fase que,
+além de contrapor o efeito do atraso,
+
+109
+00:06:39.058 --> 00:06:42.193
+ainda ajusta a posição
+dos polos malha fechada,
+
+110
+00:06:42.193 --> 00:06:46.760
+é C de s é igual a 14,26 s
+mais 4 sobre s mais 8,8.
+
+111
+00:06:46.760 --> 00:06:50.794
+Simulando o sistema com o atraso e
+controlador projetado, obtemos overshoot
+
+112
+00:06:50.794 --> 00:06:56.270
+de 14,3% e tempo de subida de 0
+a 100% do valor final de 0,5 segundo.
+
+113
+00:06:56.270 --> 00:06:58.694
+Isso se o atraso estiver na realimentação.
+
+114
+00:06:58.694 --> 00:07:02.881
+Se o atraso estiver entre a entrada e
+o scope, o tempo de subida será de 0,6
+
+115
+00:07:02.881 --> 00:07:07.261
+segundo e, nesse caso, seria necessário
+alterar o polo desejado para tempo de
+
+116
+00:07:07.261 --> 00:07:12.300
+subida de 0,4 segundo, que com o atraso
+resultaria tempo de subida de 0,5 segundo.
+
+117
+00:07:12.300 --> 00:07:16.010
+Se o atraso estivesse dividido entre
+a realimentação e a malha direta,
+
+118
+00:07:16.010 --> 00:07:18.413
+erro, controlador, sistema, saída e scope,
+
+119
+00:07:18.413 --> 00:07:22.039
+teríamos que levar conta o atraso todo
+para ajustar o overshoot e apenas
+
+120
+00:07:22.039 --> 00:07:24.763
+o atraso da malha direta para
+compensar o tempo de subida.
+
+121
+00:07:24.763 --> 00:07:27.374
+Agora você já é capaz de estimar
+a influência do atraso de
+
+122
+00:07:27.374 --> 00:07:30.975
+transporte na resposta ao degrau do
+sistema e de projetar o avanço de fase,
+
+123
+00:07:30.975 --> 00:07:33.123
+de modo a compensar o
+atraso de transporte.
+
+124
+00:07:33.123 --> 00:07:36.886
+E, no próximo vídeo,
+encerramos mais esse curso.
+
+125
+00:07:36.886 --> 00:07:38.710
+Está quase acabando!

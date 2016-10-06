@@ -1,0 +1,394 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.260
+Após esse video, você será capaz de
+determinar os pontos de cruzamento do eixo
+
+2
+00:00:05.260 --> 00:00:10.520
+imaginário e os pontos de saída e de
+entrada dos ramos do LGR no eixo real.
+
+3
+00:00:10.520 --> 00:00:13.356
+Caso os ramos do LGR
+cruzem o eixo imaginário,
+
+4
+00:00:13.356 --> 00:00:17.950
+eles podem ser determinados com o
+auxílio do critério de Routh-Hurwitz.
+
+5
+00:00:17.950 --> 00:00:22.495
+Você deve se lembrar que par de polos
+complexos conjugados sobre o eixo
+
+6
+00:00:22.495 --> 00:00:26.410
+imaginário, leva a uma ocorrência de
+uma linha de zeros na tabela de Routh
+
+7
+00:00:26.410 --> 00:00:29.501
+e as raízes do polinômio
+par da linha anterior,
+
+8
+00:00:29.501 --> 00:00:32.680
+são justamente esses
+polos imaginários puros.
+
+9
+00:00:32.680 --> 00:00:37.008
+Para refrescar a memória, vamos ver
+exemplo de terceira ordem sem zeros.
+
+10
+00:00:37.008 --> 00:00:42.320
+A função malha aberta do sistema é:
+1 sobre s mais 1 s mais 2 s mais 3.
+
+11
+00:00:42.320 --> 00:00:47.311
+Usando as regras já vistas, sabemos que no
+eixo real o trecho entre menos 1 e menos 2
+
+12
+00:00:47.311 --> 00:00:50.950
+e o trecho à esquerda de
+menos 3 fazem parte do LGR.
+
+13
+00:00:50.950 --> 00:00:55.924
+E com n igual a 3 e m igual a 0,
+sabemos que temos 3 assíntotas,
+
+14
+00:00:55.924 --> 00:00:59.732
+uma a 180 graus que é o próprio
+eixo real negativo e as outras duas
+
+15
+00:00:59.732 --> 00:01:04.720
+com ângulos mais e menos 60 graus e
+essas assíntotas se cruzam menos 2.
+
+16
+00:01:04.720 --> 00:01:09.908
+Como os ramos começam nos polos e 2
+deles tendem à assíntotas que vão para o
+
+17
+00:01:09.908 --> 00:01:14.480
+semiplano direito, mais cedo ou mais tarde
+esses ramos irão cruzar o eixo imaginário.
+
+18
+00:01:14.480 --> 00:01:18.989
+Vamos então construir a tabela de Routh e
+determinar esses pontos de cruzamento do
+
+19
+00:01:18.989 --> 00:01:20.045
+eixo imaginário.
+
+20
+00:01:20.045 --> 00:01:25.610
+Temos delta de s igual a s ao cubo mais
+6 s ao quadrado mais 11 s mais 6 mais k.
+
+21
+00:01:25.610 --> 00:01:29.774
+Construindo a tabela,
+na linha s 3 temos 1 e 11,
+
+22
+00:01:29.774 --> 00:01:36.626
+na linha s 2 6 e 6 mais k e na linha s
+1 temos, 66 menos 6 menos k sobre 6.
+
+23
+00:01:36.626 --> 00:01:41.199
+Para k igual a 60, a linha s 1 é
+uma linha de zeros e o polinômio
+
+24
+00:01:41.199 --> 00:01:45.440
+auxiliar da linha anterior 6
+s ao quadrado mais 6 mais 60,
+
+25
+00:01:45.440 --> 00:01:49.170
+que pode ser simplificado
+para s ao quadrado mais 11,
+
+26
+00:01:49.170 --> 00:01:53.770
+nos dá os polos sobre o eixo imaginário,
+que são mais ou menos raiz de 11 j.
+
+27
+00:01:53.770 --> 00:01:58.330
+Então, determinamos os pontos de
+cruzamento do eixo imaginário,
+
+28
+00:01:58.330 --> 00:02:00.728
+usando Routh-Hurwitz e de quebra,
+
+29
+00:02:00.728 --> 00:02:05.240
+descobrimos qual o ganho k que deixa
+o sistema no linear da estabilidade.
+
+30
+00:02:05.240 --> 00:02:10.265
+E temos mais uma regra: os ramos
+que começam nos polos menos 1
+
+31
+00:02:10.265 --> 00:02:15.290
+e menos 2 devem sair do eixo real
+algum ponto entre menos 1 e menos 2,
+
+32
+00:02:15.290 --> 00:02:19.517
+para cruzar o eixo imaginário
+mais ou menos raiz quadrada de 11
+
+33
+00:02:19.517 --> 00:02:22.840
+j e tender as assíntotas
+com mais e menos 60 graus.
+
+34
+00:02:22.840 --> 00:02:25.418
+Como podemos determinar esse ponto?
+
+35
+00:02:25.418 --> 00:02:30.650
+Para determinar os pontos de saída e de
+entrada no eixo real, o que ocorre no caso
+
+36
+00:02:30.650 --> 00:02:36.180
+de trechos do LGR entre os zeros reais,
+usamos pequeno truque matemático,
+
+37
+00:02:36.180 --> 00:02:41.210
+lembre que temos G de s igual a menos
+1 sobre k e podemos escrever,
+
+38
+00:02:41.210 --> 00:02:44.120
+k igual a menos 1 sobre G de s ou ainda,
+
+39
+00:02:44.120 --> 00:02:48.620
+k igual menos denominador de G
+de s sobre numerador de G de s.
+
+40
+00:02:48.620 --> 00:02:53.930
+E agora, se considerarmos que essa é
+uma função real de uma variável real.
+
+41
+00:02:53.930 --> 00:02:56.939
+É eu sei, s é número complexo,
+
+42
+00:02:56.939 --> 00:03:01.516
+mas se fingirmos que tanto k
+quanto s são números reais,
+
+43
+00:03:01.516 --> 00:03:06.200
+os pontos de saída do eixo real,
+são pontos onde o valor de k é máximo.
+
+44
+00:03:06.200 --> 00:03:07.239
+Para s real.
+
+45
+00:03:07.239 --> 00:03:11.999
+E os pontos de entrada são pontos
+onde o valor de k é mínimo.
+
+46
+00:03:11.999 --> 00:03:13.830
+Também pare s real.
+
+47
+00:03:13.830 --> 00:03:17.800
+E você lembra como determinar
+os pontos de máximo e mínimo,
+
+48
+00:03:17.800 --> 00:03:19.880
+de uma função real de variável real?
+
+49
+00:03:19.880 --> 00:03:25.680
+Basta derivarmos a função com relação
+a variável e igualar o resultado a 0.
+
+50
+00:03:25.680 --> 00:03:30.560
+E você lembra de como obter a derivada
+da divisão de duas funções?
+
+51
+00:03:30.560 --> 00:03:37.347
+Então os pontos de saída e de entrada no
+eixo real, são as raízes reais da equação,
+
+52
+00:03:37.347 --> 00:03:43.738
+menos derivada de denominador de G de
+s relação a s vezes 1 sobre numerador
+
+53
+00:03:43.738 --> 00:03:48.933
+de G de s mais denominador de G de s
+sobre numerador de G de s ao quadrado,
+
+54
+00:03:48.933 --> 00:03:53.631
+vezes denominador do numerador de
+G de s com relação a s igual a 0.
+
+55
+00:03:53.631 --> 00:03:59.761
+Nosso exemplo, nós temos k igual
+a menos s ao cubo mais 6 s ao quadrado
+
+56
+00:03:59.761 --> 00:04:05.210
+mais 11 s mais 6 e nem precisamos usar
+a fórmula completa que acabamos de ver,
+
+57
+00:04:05.210 --> 00:04:10.000
+basta derivar o polinômio de terceiro
+grau com relação a s e igualar a 0.
+
+58
+00:04:10.000 --> 00:04:15.415
+E para facilitar podemos multiplicar o
+polinômio por menos 1 e depois derivar,
+
+59
+00:04:15.415 --> 00:04:20.830
+obtendo assim a equação: 3 s ao
+quadrado mais 12 s mais 11 igual a 0.
+
+60
+00:04:20.830 --> 00:04:27.120
+As raízes dessa equação são:
+menos 2,58 e menos 1 ,42.
+
+61
+00:04:27.120 --> 00:04:31.614
+E como o ponto de saída precisa
+estar entre menos 1 e menos 2,
+
+62
+00:04:31.614 --> 00:04:35.000
+o ponto de saída do
+eixo real é menos 1,42.
+
+63
+00:04:35.000 --> 00:04:40.055
+Então a última regra é:
+Regra 8: determine os
+
+64
+00:04:40.055 --> 00:04:45.590
+pontos de saída e entrada do eixo
+real derivando menos 1 sobre G de s.
+
+65
+00:04:45.590 --> 00:04:51.815
+Os ramos saem ou entram no eixo real,
+da forma mais afastada possível,
+
+66
+00:04:51.815 --> 00:04:57.076
+então, se são 2 ramos saindo ou entrando
+do eixo real, os ramos formam ângulos
+
+67
+00:04:57.076 --> 00:05:01.950
+de mais e menos 90 graus com eixo real,
+180 graus entre eles.
+
+68
+00:05:01.950 --> 00:05:05.546
+Se forem 3 ramos saindo ou
+entrando no mesmo ponto,
+
+69
+00:05:05.546 --> 00:05:10.515
+esses ramos farão ângulos de 120
+graus entre si e assim por diante.
+
+70
+00:05:10.515 --> 00:05:16.288
+Alguns casos mais simples, a aplicação
+dessas regras já resulta no LGR completo.
+
+71
+00:05:16.288 --> 00:05:18.299
+Casos pouco mais complicados,
+
+72
+00:05:18.299 --> 00:05:22.890
+é necessário completar o LGR respeitando
+o que foi determinado pelas regras.
+
+73
+00:05:22.890 --> 00:05:27.710
+A dica é: complete o LGR da
+maneira mais simples possível,
+
+74
+00:05:27.710 --> 00:05:32.686
+sem mudanças bruscas, os ramos do
+LGR não gostam muito de agitação.
+
+75
+00:05:32.686 --> 00:05:34.250
+Casos mais complexos,
+
+76
+00:05:34.250 --> 00:05:38.950
+use programa como MATLAB para traçar
+o Lugar Geométrico das Raízes.
+
+77
+00:05:38.950 --> 00:05:42.500
+Lembre ele também é chamado de root locus.
+
+78
+00:05:42.500 --> 00:05:47.497
+Agora você já é capaz de determinar os
+pontos de cruzamento do eixo imaginário
+
+79
+00:05:47.497 --> 00:05:51.221
+e os pontos de saída e de entrada
+dos ramos do LGR no eixo real.
+
+80
+00:05:51.221 --> 00:05:57.188
+No próximo video você verá exemplo
+de esboço de LGR de terceira ordem,
+
+81
+00:05:57.188 --> 00:05:59.120
+sem zeros e com o 0.

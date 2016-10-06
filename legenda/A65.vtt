@@ -1,0 +1,608 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.764
+[MÚSICA] [SEM
+
+2
+00:00:07.764 --> 00:00:11.936
+ÁUDIO] Olá!
+
+3
+00:00:11.936 --> 00:00:16.813
+Nesta videoaula eu quero mostrar para
+
+4
+00:00:16.813 --> 00:00:20.895
+você como calcular distâncias
+Euclidianas usando o software Excel.
+
+5
+00:00:20.895 --> 00:00:25.817
+Primeiro passo eu vou
+abrir uma base de dados
+
+6
+00:00:25.817 --> 00:00:29.881
+que chama-se Gastos Diários e
+
+7
+00:00:29.881 --> 00:00:34.677
+que tem basicamente 2 planilhas.
+
+8
+00:00:34.677 --> 00:00:39.511
+Na primeira planilha, Roteiro,
+tem os passos que nós
+
+9
+00:00:39.511 --> 00:00:44.499
+vamos dar para chegar no cálculo
+da distância Euclidiana.
+
+10
+00:00:44.499 --> 00:00:50.513
+Na segunda planilha tem os, a base de
+dados, que é aquela mesma que nós usamos
+
+11
+00:00:50.513 --> 00:00:55.960
+na nossa videoaula bastante simples,
+onde nós temos 5 pessoas,
+
+12
+00:00:55.960 --> 00:01:02.320
+quanto que eles gastam por dia em comida e
+quanto que eles gastam por dia em roupas,
+
+13
+00:01:02.320 --> 00:01:06.690
+na média estimada por mês.
+
+14
+00:01:06.690 --> 00:01:12.580
+O roteiro que nós vamos seguir
+consiste em montar 2 tabelas com
+
+15
+00:01:12.580 --> 00:01:17.800
+5 colunas e 5 linhas para
+os respondentes a a e,
+
+16
+00:01:17.800 --> 00:01:23.174
+depois nós queremos calcular a distância
+entre cada par de respondentes,
+
+17
+00:01:23.174 --> 00:01:27.265
+depois nós vamos calcular
+também a distância entre cada
+
+18
+00:01:27.265 --> 00:01:32.260
+par de respondentes da variável X2_Roupas,
+primeiro comida,
+
+19
+00:01:32.260 --> 00:01:37.021
+depois roupas e depois nós vamos fazer o
+cálculo da distãncia Euclidiana segundo
+
+20
+00:01:37.021 --> 00:01:40.994
+esta fórmula que ela assusta pouco,
+mas na verdade na prática,
+
+21
+00:01:40.994 --> 00:01:45.060
+com dados reais, você vai ver
+que não muito é tão complicado.
+
+22
+00:01:45.060 --> 00:01:49.983
+E depois nós vamos também
+fazer o gráfico de dispersão.
+
+23
+00:01:49.983 --> 00:01:54.927
+Eu vou mostrar só o comecinho de
+como a gente poderia fazer aqui em
+
+24
+00:01:54.927 --> 00:01:57.997
+dados para que você
+acompanhe o raciocínio.
+
+25
+00:01:57.997 --> 00:02:03.360
+Se eu colocasse aqui a, b,
+c d e e eu colocaria aqui nas
+
+26
+00:02:03.360 --> 00:02:08.348
+colunas também a, b, c, d e e.
+
+27
+00:02:08.348 --> 00:02:13.580
+Ora a distância entre o a para
+
+28
+00:02:13.580 --> 00:02:18.868
+a variável comida e o próprio
+a obviamente a distância
+
+29
+00:02:18.868 --> 00:02:23.603
+entre o a com a vai ser 0
+porque é o próprio ponto.
+
+30
+00:02:23.603 --> 00:02:28.420
+Já a distância do a para o
+b eu deveria subir e tirar
+
+31
+00:02:28.420 --> 00:02:32.910
+a célula B2 e dela subtrair a célula B3,
+
+32
+00:02:32.910 --> 00:02:40.910
+onde você tem a variável comida para o
+respondente 3 e você vê que eu obtenho -6.
+
+33
+00:02:40.910 --> 00:02:45.715
+Eu poderia fazer isso por exemplo agora
+entre a e c pegando o valor da variável
+
+34
+00:02:45.715 --> 00:02:51.154
+comida para o a e subtraindo o valor
+da variável comida para o c, -7.
+
+35
+00:02:51.154 --> 00:02:57.276
+Esse processo, eu gostaria que você
+depois até praticasse sozinho,
+
+36
+00:02:57.276 --> 00:03:02.824
+mas como ele toma pouco de tempo,
+para ganharmos alguns minutos
+
+37
+00:03:02.824 --> 00:03:08.927
+eu queria então ir direto para a solução
+do problema que está numa outra
+
+38
+00:03:08.927 --> 00:03:14.323
+base de dados chamada
+Gastos Diários Solução.
+
+39
+00:03:14.323 --> 00:03:18.290
+Nesta, neste outro arquivo,
+
+40
+00:03:18.290 --> 00:03:22.912
+também Excel,
+você está vendo o roteiro exatamente
+
+41
+00:03:22.912 --> 00:03:27.600
+igual ao anterior mas agora você
+vai encontrar a solução pronta.
+
+42
+00:03:27.600 --> 00:03:31.740
+Você se lembra que a gente
+estava fazendo aqueles cálculos
+
+43
+00:03:31.740 --> 00:03:34.801
+de pegar o valor da
+variável e subtrair o valor
+
+44
+00:03:34.801 --> 00:03:39.240
+da outra variável para saber
+a distância entre aquele parzinho.
+
+45
+00:03:39.240 --> 00:03:44.412
+A mesma coisa você está vendo aqui só que
+agora você está vendo com uma estética
+
+46
+00:03:44.412 --> 00:03:49.531
+mais bonita, pouco de cores para
+facilitar o seu aprendizado.
+
+47
+00:03:49.531 --> 00:03:53.289
+Aquele -6 é exatamente o valor da variável
+
+48
+00:03:53.289 --> 00:03:58.270
+a para comida menos o valor
+da variável b para comida,
+
+49
+00:03:58.270 --> 00:04:03.058
+aquele -7 que a gente já tinha
+calculado antes e assim por diante.
+
+50
+00:04:03.058 --> 00:04:07.275
+Quando a gente calcula aqui
+a parte de cima dessa matriz,
+
+51
+00:04:07.275 --> 00:04:12.957
+na realidade esta célula é exatamente
+igual a esta porque a distãncia de
+
+52
+00:04:12.957 --> 00:04:18.093
+a e b é -6 e portanto de
+a e b a distância é -6.
+
+53
+00:04:18.093 --> 00:04:22.673
+Lembre-se que a gente
+sempre calcula a subtração
+
+54
+00:04:22.673 --> 00:04:27.529
+partindo da mesma base,
+ou seja é a menos b e não b menos a.
+
+55
+00:04:27.529 --> 00:04:32.765
+Então esta matriz ela é
+exatamente refletida na parte
+
+56
+00:04:32.765 --> 00:04:39.422
+da diagonal superior em relação à diagonal
+inferior, você está vendo aqui 1 e 1.
+
+57
+00:04:39.422 --> 00:04:40.605
+E a diagonal?
+
+58
+00:04:40.605 --> 00:04:45.834
+A diagonal necessariamente nós
+temos que colocar 0 e 0 porque
+
+59
+00:04:45.834 --> 00:04:50.995
+é a distância do ponto a ele mesmo,
+portanto a distância de ponto
+
+60
+00:04:50.995 --> 00:04:57.102
+e ou b ou c qualquer que seja ele
+a ele mesmo é 0, é o próprio ponto.
+
+61
+00:04:57.102 --> 00:05:02.830
+Fizemos então esta planilha,
+nessa matriz o cálculo das
+
+62
+00:05:02.830 --> 00:05:09.372
+distâncias da variável comida, ainda não
+estamos falando de distâncias Euclidianas,
+
+63
+00:05:09.372 --> 00:05:13.953
+simplesmente a distância entre os
+pontos para uma das variáveis.
+
+64
+00:05:13.953 --> 00:05:19.091
+Agora nós temos que repetir o
+procedimento para a segunda variável que
+
+65
+00:05:19.091 --> 00:05:24.110
+é a variável X2_Roupas.
+
+66
+00:05:24.110 --> 00:05:28.250
+E então, como eu calcularia o b menos a?
+
+67
+00:05:28.250 --> 00:05:34.220
+É muito simples, é só você pegar
+a distância entre esses 2 pontos,
+
+68
+00:05:34.220 --> 00:05:39.231
+esta é a fórmula, você pega 4 menos 2, 2.
+
+69
+00:05:39.231 --> 00:05:47.978
+A distância do a com o c, a fórmula que
+eu estou aqui iluminando é 4 menos 3, 1.
+
+70
+00:05:47.978 --> 00:05:53.320
+Muito bem,
+agora que você já tem as duas tabelas
+
+71
+00:05:53.320 --> 00:06:01.061
+de distâncias entre as variáveis
+X1_Comida e X2_Roupas,
+
+72
+00:06:01.061 --> 00:06:06.025
+nós estamos em condições
+de calcular a distância
+
+73
+00:06:06.025 --> 00:06:11.285
+Euclidiana entre as variáveis,
+que seria, seria a distância combinada,
+
+74
+00:06:11.285 --> 00:06:17.179
+a distância dos pontos de uma maneira,
+como nós mostramos naqueles slides,
+
+75
+00:06:17.179 --> 00:06:23.177
+como se a gente estivesse calculando
+a hipotenusa de triângulo retângulo
+
+76
+00:06:23.177 --> 00:06:28.680
+seguindo a fórmula de Pitágoras porque
+aqui nós temos apenas duas variáveis.
+
+77
+00:06:28.680 --> 00:06:32.710
+Ou genericamente a fórmula Euclidiana
+
+78
+00:06:32.710 --> 00:06:36.740
+que pode ser aplicada para
+conjunto maior de variáveis.
+
+79
+00:06:36.740 --> 00:06:42.774
+Ora como é que eu cálculo agora este,
+esta distância combinada?
+
+80
+00:06:42.774 --> 00:06:48.059
+A fórmula de Euclides diz que eu
+tenho que pegar a distância a e b,
+
+81
+00:06:48.059 --> 00:06:54.255
+elevar ao quadrado mais
+
+82
+00:06:54.255 --> 00:07:01.168
+a distância entre o a com
+b da variável segunda,
+
+83
+00:07:01.168 --> 00:07:06.290
+elevar ao quadrado e no final
+extrair a raiz quadrada.
+
+84
+00:07:06.290 --> 00:07:09.464
+Basicamente o que eu estou
+fazendo é exatamente isto,
+
+85
+00:07:09.464 --> 00:07:14.304
+eu estou fazendo a distância
+entre 2 pontos como sendo a raiz
+
+86
+00:07:14.304 --> 00:07:19.904
+quadrada da soma das distâncias de
+cada parzinho elevado ao quadrado.
+
+87
+00:07:19.904 --> 00:07:22.400
+Vamos fazer mais exemplo aqui.
+
+88
+00:07:22.400 --> 00:07:26.860
+Eu vou apagar este e vamos fazer juntos.
+
+89
+00:07:26.860 --> 00:07:31.259
+Primeira coisa, eu vou dar sinal de igual,
+vou abrir parênteses,
+
+90
+00:07:31.259 --> 00:07:35.633
+eu tenho que pegar a distância
+do c com o a, c com a é -7.
+
+91
+00:07:35.633 --> 00:07:39.720
+Este número eu vou elevar ao quadrado,
+
+92
+00:07:39.720 --> 00:07:44.524
+inclusive note que ele é número negativo
+
+93
+00:07:44.524 --> 00:07:49.273
+mas ao quadrado ele vai ficar positivo,
+ele vai dar 49.
+
+94
+00:07:49.273 --> 00:07:54.113
+Eu tenho que somar com
+a distância do mesmo ponto c com
+
+95
+00:07:54.113 --> 00:07:59.385
+a mas agora para a segunda
+variável que é a variável roupas.
+
+96
+00:07:59.385 --> 00:08:04.320
+Elevo este número ao quadrado e
+agora eu tenho a soma dos quadrados.
+
+97
+00:08:04.320 --> 00:08:05.100
+Terminei?
+
+98
+00:08:05.100 --> 00:08:07.986
+Não, o que diz a minha
+fórmula de Euclides?
+
+99
+00:08:07.986 --> 00:08:11.301
+Que eu tenho que agora
+fazer a raiz quadrada.
+
+100
+00:08:11.301 --> 00:08:14.130
+Como que eu faço a raiz quadrada?
+
+101
+00:08:14.130 --> 00:08:19.063
+Basta elevar a número 0,5 ou se você
+
+102
+00:08:19.063 --> 00:08:23.881
+preferir você pode elevar
+a 1 dividido por 2
+
+103
+00:08:23.881 --> 00:08:28.041
+que é a mesma coisa, meio.
+
+104
+00:08:28.041 --> 00:08:33.445
+Opa, temos problema na nossa fórmula,
+vamos consertar,
+
+105
+00:08:33.445 --> 00:08:39.637
+faltamos temos que colocar
+parênteses também aqui porque senão
+
+106
+00:08:39.637 --> 00:08:44.725
+ele faz a conta não do
+jeito que a gente gostaria.
+
+107
+00:08:44.725 --> 00:08:49.797
+A raiz quadrada de 50
+é aproximadamente 7,1.
+
+108
+00:08:49.797 --> 00:08:55.693
+De novo estas distâncias estão refletidas
+na parte superior e agora eu quero que
+
+109
+00:08:55.693 --> 00:09:01.602
+você seguindo o roteiro observe após os
+cálculos as distância que nós obtivemos.
+
+110
+00:09:01.602 --> 00:09:07.077
+Você está vendo aqui claramente que o
+ponto a e o ponto d estão muito próximos,
+
+111
+00:09:07.077 --> 00:09:11.157
+a distância entre eles é 1,4,
+igualmente aqui
+
+112
+00:09:11.157 --> 00:09:16.064
+que é o reflexo daquela mesma célula.
+
+113
+00:09:16.064 --> 00:09:18.910
+Já os pontos b,
+
+114
+00:09:18.910 --> 00:09:24.600
+c e e coloridos em verde você vê
+que também são muito próximos.
+
+115
+00:09:24.600 --> 00:09:29.939
+Isso tudo poderia ser visto, caso você
+quisesse, através de gráfico como nós
+
+116
+00:09:29.939 --> 00:09:36.982
+fizemos já através de gráfico que pode
+ser feito tanto em Excel quanto em STATA,
+
+117
+00:09:36.982 --> 00:09:40.874
+que nós vamos depois voltar
+a esse exercício em STATA.
+
+118
+00:09:40.874 --> 00:09:43.536
+Basta você iluminar esses pontos,
+
+119
+00:09:43.536 --> 00:09:48.828
+vir aqui inserir gráfico
+chamado gráfico de dispersão.
+
+120
+00:09:48.828 --> 00:09:55.470
+Esse gráfico vai mostrar os pontos.
+
+121
+00:09:55.470 --> 00:09:59.774
+Aqui não saiu uma legenda
+mas é possível colocar,
+
+122
+00:09:59.774 --> 00:10:04.376
+aqui estão os pontos a e d e aqui estão os
+
+123
+00:10:04.376 --> 00:10:08.845
+pontos b, c e e.
+
+124
+00:10:08.845 --> 00:10:15.490
+Você está vendo claramente que
+esses pontos são próximos do outro,
+
+125
+00:10:15.490 --> 00:10:20.730
+enquanto que esses pontos são próximos
+também formando 2 agrupamentos,
+
+126
+00:10:20.730 --> 00:10:24.520
+que era o que a gente
+queria que você entendesse.
+
+127
+00:10:24.520 --> 00:10:29.955
+Até à próxima videoaula!
+
+128
+00:10:29.955 --> 00:10:35.390
+[SEM ÁUDIO]

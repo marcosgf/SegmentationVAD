@@ -1,0 +1,810 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.727
+[MÚSICA] [MÚSICA] Olá.
+
+2
+00:00:08.727 --> 00:00:11.925
+Bem-vindo ao curso sobre TDD.
+
+3
+00:00:11.925 --> 00:00:17.782
+Eu sou o Clóvis Fernandes e hoje iremos
+falar sobre o ciclo da refatoração.
+
+4
+00:00:17.782 --> 00:00:26.160
+Nós estamos apresentando essa fase de
+refatoração do ciclo do TDD, está certo?
+
+5
+00:00:26.160 --> 00:00:32.155
+E a refatoração também tem seu,
+ciclo interno que,
+
+6
+00:00:32.155 --> 00:00:38.140
+vai ser guiado pela,
+maus cheiros que forem identificados.
+
+7
+00:00:38.140 --> 00:00:43.970
+Então, bem-vindo ao nosso espetáculo
+da Refatoração Guiada Por Mau Cheiro.
+
+8
+00:00:43.970 --> 00:00:48.561
+É isso que nós iremos fazer através do,
+
+9
+00:00:48.561 --> 00:00:53.957
+da apresentação do ciclo de
+refatoração que vai ser guiado,
+
+10
+00:00:53.957 --> 00:00:56.520
+então, pelo mau cheiro.
+
+11
+00:00:56.520 --> 00:01:01.618
+Normalmente, nós definimos teste com base
+
+12
+00:01:01.618 --> 00:01:08.310
+num caso de teste dentre os vários
+casos de teste de uma responsabilidade.
+
+13
+00:01:08.310 --> 00:01:13.537
+Fazemos com que ele falhe, depois
+fazemos com que ele seja bem sucedido.
+
+14
+00:01:13.537 --> 00:01:17.630
+Para isso, construímos código de produção
+que faça com que ele seja bem sucedido.
+
+15
+00:01:17.630 --> 00:01:22.154
+Ele é testado com,
+para ser bem sucedido e esse
+
+16
+00:01:22.154 --> 00:01:26.912
+código é retestado relação a todo
+o código anterior, todos os testes
+
+17
+00:01:26.912 --> 00:01:31.040
+anteriores da minha bateria de testes
+que eu tenho até ao dado momento.
+
+18
+00:01:31.040 --> 00:01:32.020
+Está certo?
+
+19
+00:01:32.020 --> 00:01:35.674
+Então, quando eu entro
+na fase de refatoração,
+
+20
+00:01:35.674 --> 00:01:39.200
+eu tenho código que
+funciona e foi testado.
+
+21
+00:01:39.200 --> 00:01:40.308
+Não garante.
+
+22
+00:01:40.308 --> 00:01:45.676
+Não se garante que ele tenha
+código muito bem estruturado.
+
+23
+00:01:45.676 --> 00:01:51.456
+Podemos recusar fazer alguma refatoração,
+como nós mostramos, não é?
+
+24
+00:01:51.456 --> 00:01:54.613
+Usando a regra de 3,
+a gente pode pular algumas coisas.
+
+25
+00:01:54.613 --> 00:02:00.530
+Só fazer determinados momentos,
+mas normalmente, quando nós começamos,
+
+26
+00:02:00.530 --> 00:02:04.979
+vamos começar os casos
+de testes de uma nova
+
+27
+00:02:04.979 --> 00:02:09.520
+responsabilidade, de uma
+nova funcionalidade.
+
+28
+00:02:09.520 --> 00:02:14.353
+Aí, garantidamente, a gente vai fazer
+a refatoração, para deixar o código mais
+
+29
+00:02:14.353 --> 00:02:19.330
+flexível e propício
+a incorporar novos códigos,
+
+30
+00:02:19.330 --> 00:02:26.330
+com base nos casos de teste que,
+que estivermos trabalhando.
+
+31
+00:02:26.330 --> 00:02:27.660
+Bom.
+Com isso,
+
+32
+00:02:27.660 --> 00:02:33.170
+construímos então essa lista e com
+base nessa lista de maus cheiros.
+
+33
+00:02:33.170 --> 00:02:34.195
+Está certo?
+
+34
+00:02:34.195 --> 00:02:38.960
+Nós iremos trabalhar cima de
+cada desses maus cheiros.
+
+35
+00:02:38.960 --> 00:02:44.804
+Eu posso escolher o pior mau cheiro,
+aquele mais problemático ou então,
+
+36
+00:02:44.804 --> 00:02:48.458
+olhando eles eu posso ver aquele
+que seja mais conveniente porque,
+
+37
+00:02:48.458 --> 00:02:52.651
+às vezes, mau cheiro sendo eliminado,
+removido,
+
+38
+00:02:52.651 --> 00:02:58.050
+ajuda na eliminação ou no
+tratamento dum próximo mau cheiro.
+
+39
+00:02:58.050 --> 00:03:03.843
+Então, a gente não, necessariamente, vamos
+escolher o pior mau cheiro, nesse momento.
+
+40
+00:03:03.843 --> 00:03:07.346
+Nós vamos, então,
+examinar e fazer uma escolha.
+
+41
+00:03:07.346 --> 00:03:11.776
+Se não encontrarmos nenhum mau cheiro,
+está certo?
+
+42
+00:03:11.776 --> 00:03:17.671
+Nós já saímos do ciclo, ou seja,
+aquele código que estava funcionando,
+
+43
+00:03:17.671 --> 00:03:23.230
+não encontramos mau cheiro, significa
+que ele já estava bem estruturado.
+
+44
+00:03:23.230 --> 00:03:28.180
+Não estava necessitando,
+realmente, de uma refatoração.
+
+45
+00:03:28.180 --> 00:03:28.851
+Está certo?
+
+46
+00:03:28.851 --> 00:03:30.498
+O código está bem estruturado.
+
+47
+00:03:30.498 --> 00:03:35.536
+Então, a gente bate carimbo nele, de que,
+é como se ele tivesse sido refatorado.
+
+48
+00:03:35.536 --> 00:03:38.333
+Algum momento,
+ele pode ter sido e testado.
+
+49
+00:03:38.333 --> 00:03:39.876
+Ele está as duas coisas.
+
+50
+00:03:39.876 --> 00:03:40.690
+Está certo?
+
+51
+00:03:40.690 --> 00:03:44.770
+Caso haja, pelo menos, mau cheiro, não é,
+
+52
+00:03:44.770 --> 00:03:50.360
+nessa lista eu vou identificar,
+dentre aqueles nomes de
+
+53
+00:03:50.360 --> 00:03:55.437
+maus cheiros do,
+definidos pelo Fowler, está certo?
+
+54
+00:03:55.437 --> 00:04:00.040
+Eu vou escolher deles,
+de acordo com a minha lógica
+
+55
+00:04:00.040 --> 00:04:03.890
+de trabalhar com os maus cheiros,
+está certo?
+
+56
+00:04:03.890 --> 00:04:07.912
+Dependendo, então,
+do tipo de mau cheiro, eh,
+
+57
+00:04:07.912 --> 00:04:12.580
+eu já tenho uma previsão de quais
+refatorações eu posso fazer.
+
+58
+00:04:12.580 --> 00:04:15.675
+Eu posso trabalhar, está certo?
+
+59
+00:04:15.675 --> 00:04:17.457
+Então, eu vou,
+
+60
+00:04:17.457 --> 00:04:21.770
+qual técnica de refatoração eu vou
+usar para remover aquele mau cheiro?
+
+61
+00:04:21.770 --> 00:04:25.880
+Então, eu vou escolher uma técnica,
+está certo?
+
+62
+00:04:25.880 --> 00:04:28.785
+Que seja mais apropriada na,
+
+63
+00:04:28.785 --> 00:04:32.197
+para a situação daquele momento,
+daquele mau cheiro.
+
+64
+00:04:32.197 --> 00:04:36.806
+Às vezes, mau cheiro numa situação, num
+contexto o mesmo mau cheiro pode ter uma,
+
+65
+00:04:36.806 --> 00:04:38.280
+uma forma de solução.
+
+66
+00:04:38.280 --> 00:04:44.080
+Num outro contexto, o mesmo mau cheiro
+pode ter outra técnica de refatoração.
+
+67
+00:04:44.080 --> 00:04:48.930
+Seguida, o próximo passo é fazer a,
+
+68
+00:04:48.930 --> 00:04:52.844
+a aplicação da técnica de refatoração.
+
+69
+00:04:52.844 --> 00:04:59.435
+A técnica de refatoração, ela pode ter
+passos internos diversos, está certo?
+
+70
+00:04:59.435 --> 00:05:04.973
+Mas, normalmente,
+muitas das técnicas você aplica apenas
+
+71
+00:05:04.973 --> 00:05:09.592
+passo interno e já faz,
+gera código, não é?
+
+72
+00:05:09.592 --> 00:05:10.870
+Está certo?
+
+73
+00:05:10.870 --> 00:05:13.300
+Que ainda não foi testado.
+
+74
+00:05:13.300 --> 00:05:16.468
+Então, a próxima tarefa é testar.
+
+75
+00:05:16.468 --> 00:05:18.380
+Então, você testa.
+
+76
+00:05:18.380 --> 00:05:23.856
+Então, supondo que, eu esteja usando
+uma técnica de refatoração que
+
+77
+00:05:23.856 --> 00:05:30.304
+só não tinha passos internos,
+eu já chego lá no,
+
+78
+00:05:30.304 --> 00:05:35.269
+no ponto onde eu examino
+de novo a minha lista,
+
+79
+00:05:35.269 --> 00:05:40.370
+pego a, a próximo a, o próximo tipo,
+não é, de mau cheiro,
+
+80
+00:05:40.370 --> 00:05:45.035
+escolho as técnicas ou
+a técnica de refatoração mais
+
+81
+00:05:45.035 --> 00:05:49.119
+apropriada para esse mau cheiro e,
+assim, prossigo nesse ciclo.
+
+82
+00:05:49.119 --> 00:05:49.825
+Está certo?
+
+83
+00:05:49.825 --> 00:05:55.130
+Até o momento que, realmente, não tenha
+mais nenhum mau cheiro a ser tratado.
+
+84
+00:05:55.130 --> 00:05:58.713
+O que acontece é que, às vezes,
+o mesmo tipo de mau cheiro,
+
+85
+00:05:58.713 --> 00:06:00.292
+ele ocorre várias vezes.
+
+86
+00:06:00.292 --> 00:06:02.960
+Então, eu vou ciclar várias vezes, não é?
+
+87
+00:06:02.960 --> 00:06:09.498
+Para resolver, para cada tipo de mau
+cheiro, eu elimino ele e faço o teste,
+
+88
+00:06:09.498 --> 00:06:13.709
+elimino o, o outro mau cheiro
+análogo e faço o teste de novo.
+
+89
+00:06:13.709 --> 00:06:15.690
+Então, fico passando isso.
+
+90
+00:06:15.690 --> 00:06:20.420
+O que pode acontecer também é
+que a técnica de refatoração
+
+91
+00:06:20.420 --> 00:06:25.484
+possa implicar; isso é muito
+comum quando eu estou fazendo
+
+92
+00:06:25.484 --> 00:06:28.910
+técnicas que vão levar
+para padrões de projeto.
+
+93
+00:06:28.910 --> 00:06:33.530
+Então, eu, às vezes,
+eu tenho muitos passos ou então,
+
+94
+00:06:33.530 --> 00:06:36.831
+algum princípio como o Law Of Demeter,
+não é?
+
+95
+00:06:36.831 --> 00:06:37.634
+Está certo?
+
+96
+00:06:37.634 --> 00:06:39.970
+O LOD, eu vou ter mais do que passo.
+
+97
+00:06:39.970 --> 00:06:44.969
+Então, esses passos internos,
+todos eles, eu, eu testo,
+
+98
+00:06:44.969 --> 00:06:48.280
+nunca fico fazendo sem testar.
+
+99
+00:06:48.280 --> 00:06:51.228
+Eu vou testando esse passo interno, não é?
+
+100
+00:06:51.228 --> 00:06:52.105
+Está certo?
+
+101
+00:06:52.105 --> 00:06:53.790
+A cada desses passos.
+
+102
+00:06:53.790 --> 00:06:57.062
+Quando terminar, eventualmente,
+eu já testei tudo,
+
+103
+00:06:57.062 --> 00:07:01.019
+posso ir direto lá para ver a lista do,
+dos maus cheiros,
+
+104
+00:07:01.019 --> 00:07:06.496
+mas normalmente, eu dou uma
+última testada para fechar isso.
+
+105
+00:07:06.496 --> 00:07:09.767
+Ou seja, esse ciclo que eu fico fazendo,
+
+106
+00:07:09.767 --> 00:07:15.634
+vai acontecer algumas técnicas
+de refatoração que eu escolher.
+
+107
+00:07:15.634 --> 00:07:21.582
+Quando eu vou testar, antes de ir
+para olhar a lista de maus cheiros,
+
+108
+00:07:21.582 --> 00:07:24.985
+se eu já completei ou não, eh,
+pode ser que não funcione.
+
+109
+00:07:24.985 --> 00:07:26.310
+O que é que aconteceu?
+
+110
+00:07:26.310 --> 00:07:28.570
+Eu fiz uma refatoração de forma errada.
+
+111
+00:07:28.570 --> 00:07:31.170
+De alguma forma,
+eu fiz alguma coisa errada.
+
+112
+00:07:31.170 --> 00:07:36.040
+Então, cada desses pontos onde tem,
+onde estou testando os ciclos,
+
+113
+00:07:36.040 --> 00:07:41.159
+os passos internos dentro da técnica
+de refatoração ou quando a técnica toda
+
+114
+00:07:41.159 --> 00:07:46.377
+já foi feita e eu vou testar como todo,
+eu posso cometer algum erro.
+
+115
+00:07:46.377 --> 00:07:47.360
+Está certo?
+
+116
+00:07:47.360 --> 00:07:49.177
+E aí, o que é que eu faço?
+
+117
+00:07:49.177 --> 00:07:53.000
+Eu retomo o passo anterior
+que estava funcionando.
+
+118
+00:07:53.000 --> 00:07:58.271
+Refaço com mais cuidado, tento descobrir
+o que foi que causou o problema.
+
+119
+00:07:58.271 --> 00:07:59.200
+Está certo?
+
+120
+00:07:59.200 --> 00:08:01.268
+Conserto e vou frente.
+
+121
+00:08:01.268 --> 00:08:05.220
+Se começar a demorar muito isso,
+esse processo,
+
+122
+00:08:05.220 --> 00:08:09.830
+eu paro a refatoração desse mau
+cheiro e vou para os outros.
+
+123
+00:08:09.830 --> 00:08:11.835
+Vou tratar disso uma outra hora.
+
+124
+00:08:11.835 --> 00:08:15.811
+Eu, normalmente, não posso perder
+mais do que 10 minutos, por exemplo,
+
+125
+00:08:15.811 --> 00:08:16.788
+nessa tarefa, não é?
+
+126
+00:08:16.788 --> 00:08:20.840
+As coisas têm que ser muito rápidas
+e eu deixo para uma outra hora.
+
+127
+00:08:20.840 --> 00:08:25.873
+Bom, ciclei, passei por todos
+os maus cheiros, está certo?
+
+128
+00:08:25.873 --> 00:08:30.480
+Removi todos os maus cheiros
+aplicando técnicas de refatoração,
+
+129
+00:08:30.480 --> 00:08:35.252
+chega dado momento que esgotei todos
+os maus cheiros que tinha identificado.
+
+130
+00:08:35.252 --> 00:08:40.171
+Pode acontecer, quando eu estou lá
+aplicando a técnica de refatoração, surjam
+
+131
+00:08:40.171 --> 00:08:44.630
+alguns novos maus cheiros, que eles são
+decorrentes das aplicações das técnicas.
+
+132
+00:08:44.630 --> 00:08:49.350
+Mas aí, eu posso fazer como,
+fosse passo interno ali e resolver.
+
+133
+00:08:49.350 --> 00:08:54.319
+Ou então, eu posso colocá-la
+na lista e fazer mais tarde,
+
+134
+00:08:54.319 --> 00:08:57.584
+se for conveniente com novo passo.
+
+135
+00:08:57.584 --> 00:09:00.712
+Remover esse,
+esse mau cheiro que apareceu,
+
+136
+00:09:00.712 --> 00:09:03.842
+decorrência da aplicação das técnicas,
+não é?
+
+137
+00:09:03.842 --> 00:09:04.700
+Está certo?
+
+138
+00:09:04.700 --> 00:09:09.116
+Mas, no final quando eu não percebo,
+mas veja: eu não percebo.
+
+139
+00:09:09.116 --> 00:09:11.446
+Não quer dizer que não
+exista mau cheiro ali.
+
+140
+00:09:11.446 --> 00:09:14.660
+Eu não estou percebendo,
+ou então, por questão de tempo,
+
+141
+00:09:14.660 --> 00:09:17.720
+eu não estou querendo eliminar
+todos os maus cheiros.
+
+142
+00:09:17.720 --> 00:09:23.610
+Eu saio e ai eu vou ter código,
+razoavelmente, bem estruturado.
+
+143
+00:09:23.610 --> 00:09:27.454
+Se eu conseguir passar por todos os maus
+cheiros que eu reconheci, possivelmente
+
+144
+00:09:27.454 --> 00:09:32.417
+ele vai estar bem estruturado,
+bem flexível para aceitar as novas,
+
+145
+00:09:32.417 --> 00:09:39.658
+a inclusão de novas responsabilidades,
+novas funcionalidades para novos testes.
+
+146
+00:09:39.658 --> 00:09:42.657
+Os dois livros que a gente, normalmente,
+
+147
+00:09:42.657 --> 00:09:47.045
+encontra na praça principalmente
+para Java, está certo?
+
+148
+00:09:47.045 --> 00:09:54.113
+Tem o livro do Fowler de refatoração
+e do William Wake o Bill Wake,
+
+149
+00:09:54.113 --> 00:09:57.915
+são dois livros muito interessantes,
+bastante completos.
+
+150
+00:09:57.915 --> 00:10:02.520
+Esse ciclo, por exemplo,
+ele fica implícito no, no livro do,
+
+151
+00:10:02.520 --> 00:10:08.110
+do Fowler, mas fica explícito,
+o, o Bill Wake,
+
+152
+00:10:08.110 --> 00:10:13.876
+ele apresenta explicitamente o ciclo
+e é de lá que eu tive a inspiração
+
+153
+00:10:13.876 --> 00:10:19.320
+de fazer esse trabalho de
+apresentação educacional para vocês.
+
+154
+00:10:19.320 --> 00:10:26.496
+Com isso então, mostramos como o ciclo
+de refatoração funciona, está certo?
+
+155
+00:10:26.496 --> 00:10:31.120
+Ele está dentro do, do do ciclo do TDD.
+
+156
+00:10:31.120 --> 00:10:34.064
+Nós já havíamos mostrado
+que o ciclo do TDD tem
+
+157
+00:10:34.064 --> 00:10:38.380
+ciclo para consumir os casos de
+teste de uma responsabilidade,
+
+158
+00:10:38.380 --> 00:10:41.558
+para consumir depois as responsabilidades,
+não é?
+
+159
+00:10:41.558 --> 00:10:42.340
+Está certo?
+
+160
+00:10:42.340 --> 00:10:44.975
+E, quando eu chego na refatoração,
+
+161
+00:10:44.975 --> 00:10:49.951
+internamente eu tenho esse ciclo
+que nós acabamos de mostrar, que,
+
+162
+00:10:49.951 --> 00:10:55.900
+de uma forma bastante interessante ele,
+ele é guiado pelos maus cheiros.
+
+163
+00:10:55.900 --> 00:11:00.081
+Então, se eu tiver essa capacidade de
+identificar os maus cheiros, eu tenho uma
+
+164
+00:11:00.081 --> 00:11:04.438
+facilidade muito grande de identificar
+as técnicas que eu vou aplicar.
+
+165
+00:11:04.438 --> 00:11:08.534
+Eu não, não preciso ficar assim:
+não sei o que eu vou fazer.
+
+166
+00:11:08.534 --> 00:11:09.337
+Está certo?
+
+167
+00:11:09.337 --> 00:11:13.520
+Você vai ter alguma ideia de
+como aplicar e com o tempo,
+
+168
+00:11:13.520 --> 00:11:18.090
+com o uso, com a aplicação,
+a identificação desses maus cheiros e
+
+169
+00:11:18.090 --> 00:11:21.260
+a aplicação de técnicas para
+resolver esses maus cheiros,
+
+170
+00:11:21.260 --> 00:11:26.800
+você vai conseguindo fazer isso de uma
+maneira muito mais rápida e confiável.
+
+171
+00:11:26.800 --> 00:11:29.970
+Obrigado.
+
+172
+00:11:29.970 --> 00:11:33.140
+[MÚSICA]

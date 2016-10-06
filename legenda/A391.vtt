@@ -1,0 +1,438 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.662
+Nesse vídeo, você verá exemplo de projeto
+de controlador de atraso de fase para
+
+2
+00:00:04.662 --> 00:00:06.710
+sistema de segunda ordem do tipo 1.
+
+3
+00:00:06.710 --> 00:00:07.396
+Muito bem!
+
+4
+00:00:07.396 --> 00:00:11.787
+Dessa vez não iremos reciclar exemplo,
+vamos começar exemplo do zero,
+
+5
+00:00:11.787 --> 00:00:15.920
+melhor que isso, vamos fazer exemplo com
+uma função de transferência literal.
+
+6
+00:00:15.920 --> 00:00:22.326
+G de s vai ser igual a b sobre s s mais a,
+requisito de desempenho 1: com
+
+7
+00:00:22.326 --> 00:00:27.426
+controlador proporcional obter overshoot
+de 15%, requisito de desempenho 2: reduzir
+
+8
+00:00:27.426 --> 00:00:32.420
+o erro regime permanente para quarto
+do obtido mantendo os 15% de overshoot.
+
+9
+00:00:32.420 --> 00:00:38.505
+Para atender o requisito de overshoot,
+precisamos ter ksi igual a 0,517.
+
+10
+00:00:38.505 --> 00:00:43.652
+Função de transferência malha fechada:
+kb sobre s ao quadrado mais a s mais
+
+11
+00:00:43.652 --> 00:00:49.390
+kb e temos 2 ksi ômega n igual a a e
+ômega n igual a a sobre 1,034.
+
+12
+00:00:49.390 --> 00:00:52.594
+Então como kb é igual
+a ômega n ao quadrado,
+
+13
+00:00:52.594 --> 00:00:56.070
+temos k igual a a ao quadrado sobre 1,07b.
+
+14
+00:00:56.070 --> 00:00:57.113
+Não acredita?
+
+15
+00:00:57.113 --> 00:01:01.810
+Pause o vídeo e confira para alguns
+valores de a e b, eu espero.
+
+16
+00:01:01.810 --> 00:01:03.298
+Convencido?
+
+17
+00:01:03.298 --> 00:01:05.902
+Então vamos continuar.
+
+18
+00:01:05.902 --> 00:01:10.615
+Temos k igual a a ao quadrado
+sobre 1,07b e podemos calcular
+
+19
+00:01:10.615 --> 00:01:13.649
+a constante de erro kv
+igual a k vezes b sobre a.
+
+20
+00:01:13.649 --> 00:01:17.670
+O sistema é do tipo 1, então temos
+uma constante de erro de velocidade.
+
+21
+00:01:17.670 --> 00:01:22.610
+Substituindo o k,
+temos kv igual a a sobre 1,07
+
+22
+00:01:22.610 --> 00:01:26.964
+e o erro regime permanente para
+uma entrada rampa é 1,07 sobre a.
+
+23
+00:01:26.964 --> 00:01:28.800
+Não está acreditando de novo?
+
+24
+00:01:28.800 --> 00:01:32.280
+E se eu te disser que o erro
+regime permanente para uma entrada
+
+25
+00:01:32.280 --> 00:01:34.130
+rampa é 4 ksi ao quadrado sobre a?
+
+26
+00:01:34.130 --> 00:01:34.929
+Melhora?
+
+27
+00:01:34.929 --> 00:01:36.083
+Não acredita?
+
+28
+00:01:36.083 --> 00:01:40.890
+Pause novamente e faça alguns
+exemplos numéricos, eu espero.
+
+29
+00:01:40.890 --> 00:01:41.940
+Convencido?
+
+30
+00:01:41.940 --> 00:01:43.514
+Podemos continuar?
+
+31
+00:01:43.514 --> 00:01:44.388
+Muito bem!
+
+32
+00:01:44.388 --> 00:01:48.213
+Queremos reduzir o erro
+a quarto desse valor, ou seja,
+
+33
+00:01:48.213 --> 00:01:52.970
+queremos erro de ksi ao quadrado sobre a,
+mas queremos manter o overshoot 15%.
+
+34
+00:01:52.970 --> 00:01:56.907
+Então você já sabe que não podemos
+simplesmente multiplicar o ganho por
+
+35
+00:01:56.907 --> 00:01:57.570
+4, não é?
+
+36
+00:01:57.570 --> 00:02:02.084
+Isso atenderia ao nosso requisito de erro,
+mas não de overshoot.
+
+37
+00:02:02.084 --> 00:02:04.590
+E agora, quem poderá nos defender?
+
+38
+00:02:04.590 --> 00:02:07.621
+O controlador de atraso de fase.
+
+39
+00:02:07.621 --> 00:02:12.403
+Sigam-me os bons, ou melhor,
+sigam-me os muito bons.
+
+40
+00:02:12.403 --> 00:02:13.075
+Muito bem!
+
+41
+00:02:13.075 --> 00:02:17.784
+Vamos projetar controlador de atraso de
+fase para aumentar a constante de erro de
+
+42
+00:02:17.784 --> 00:02:19.466
+velocidade 4 vezes.
+
+43
+00:02:19.466 --> 00:02:24.127
+Para isso o nosso controlador vai
+ser k s mais c sobre s mais d,
+
+44
+00:02:24.127 --> 00:02:28.102
+onde k é o ganho proporcional,
+que já calculamos,
+
+45
+00:02:28.102 --> 00:02:31.827
+e d é igual a c sobre 4 para
+aumentarmos a constante de erro.
+
+46
+00:02:31.827 --> 00:02:35.990
+Estamos usando c e d no controlador de
+atraso de fase para não confundir com a e
+
+47
+00:02:35.990 --> 00:02:37.630
+b do sistema malha aberta.
+
+48
+00:02:37.630 --> 00:02:40.550
+Nos resta apenas determinar o valor de c.
+
+49
+00:02:40.550 --> 00:02:45.070
+Como temos 2 ksi ômega n igual a a,
+a parte real dos polos complexos
+
+50
+00:02:45.070 --> 00:02:48.330
+conjugados é menos sigma
+igual a menos a sobre 2.
+
+51
+00:02:48.330 --> 00:02:52.640
+Colocando o zero do controlador de atraso
+de fase décimo da parte real dos polos
+
+52
+00:02:52.640 --> 00:02:56.950
+complexos, temos c igual a a sobre
+20 e d igual a a sobre 80.
+
+53
+00:02:56.950 --> 00:03:01.350
+E nosso controlador fica: C de
+s é igual a a ao quadrado sobre
+
+54
+00:03:01.350 --> 00:03:05.750
+1,07 b vezes s mais a sobre
+20 sobre s mais a sobre 80.
+
+55
+00:03:05.750 --> 00:03:08.802
+Se o overshoot com esse
+controlador ficar grande demais,
+
+56
+00:03:08.802 --> 00:03:11.240
+podemos diminuir os
+valores do polo e do zero.
+
+57
+00:03:11.240 --> 00:03:16.790
+Por exemplo, podemos usar s mais
+a sobre 100 sobre s mais a sobre 400.
+
+58
+00:03:16.790 --> 00:03:20.700
+Note no entanto que, ao diminuirmos
+o polo e o zero do controlador,
+
+59
+00:03:20.700 --> 00:03:23.322
+o erro irá mais lentamente
+para o seu valor final.
+
+60
+00:03:23.322 --> 00:03:27.395
+Uma alternativa é diminuir o valor de
+ganho, de modo a diminuir o overshoot.
+
+61
+00:03:27.395 --> 00:03:29.085
+Mas diminuir para quanto?
+
+62
+00:03:29.085 --> 00:03:33.643
+Podemos por exemplo reprojetar o
+controlador para termos overshoot de
+
+63
+00:03:33.643 --> 00:03:38.475
+10% e para isso precisamos
+de ksi igual a 0,591,
+
+64
+00:03:38.475 --> 00:03:42.860
+o que nos leva a ganho de
+a ao quadrado sobre 1,4b
+
+65
+00:03:42.860 --> 00:03:47.475
+e a erro regime permanente de 1,4 sobre a.
+
+66
+00:03:47.475 --> 00:03:52.090
+Note que o erro aumentou, então não basta
+aumentarmos a constante de erro 4 vezes.
+
+67
+00:03:52.090 --> 00:03:59.670
+O erro anterior era de 1,07 sobre
+a e queremos erro de 0,2675 sobre a.
+
+68
+00:03:59.670 --> 00:04:05.015
+O fator pelo qual devemos aumentar
+a constante de erro é então,
+
+69
+00:04:05.015 --> 00:04:10.360
+1,4 sobre 0,2675 que dá
+aproximadamente 5,234.
+
+70
+00:04:10.360 --> 00:04:15.237
+Vamos usar 5,3 por segurança e posicionar
+o zero do controlador de atraso
+
+71
+00:04:15.237 --> 00:04:18.431
+de fase décimo da parte
+real dos polos complexos.
+
+72
+00:04:18.431 --> 00:04:22.570
+Note que a parte real dos polos não mudou,
+continua sendo menos a sobre 2.
+
+73
+00:04:22.570 --> 00:04:27.027
+Apenas a parte imaginária foi alterada,
+quando diminuímos o ganho.
+
+74
+00:04:27.027 --> 00:04:31.615
+Temos então c igual a a sobre 20 e
+d igual a a sobre 106 e nosso novo
+
+75
+00:04:31.615 --> 00:04:36.307
+controlador de atraso de fase é C
+de s é igual a a ao quadrado sobre
+
+76
+00:04:36.307 --> 00:04:41.220
+1,4b vezes s mais a sobre 20
+sobre s mais a sobre 106.
+
+77
+00:04:41.220 --> 00:04:45.462
+Acho que você já sabe simular o sistema
+com o controlador proporcional e com os
+
+78
+00:04:45.462 --> 00:04:49.060
+três controladores de atraso de
+fase que projetamos, não sabe?
+
+79
+00:04:49.060 --> 00:04:51.244
+Simule a resposta ao
+degrau e verifique que,
+
+80
+00:04:51.244 --> 00:04:55.285
+com os dois primeiros controladores de
+atraso de fase, o overshoot aumenta e que
+
+81
+00:04:55.285 --> 00:05:00.810
+com o último controlador conseguimos
+fazer com que ele não aumente tanto.
+
+82
+00:05:00.810 --> 00:05:05.781
+Mas temos também efeito colateral: os dois
+primeiros controladores, não afetam muito
+
+83
+00:05:05.781 --> 00:05:09.420
+a velocidade de resposta, mas o
+terceiro deixa a resposta mais lenta.
+
+84
+00:05:09.420 --> 00:05:13.061
+Então temos uma solução de
+compromisso entre o amortecimento,
+
+85
+00:05:13.061 --> 00:05:16.780
+a velocidade de convergência do
+erro e a velocidade de resposta.
+
+86
+00:05:16.780 --> 00:05:21.552
+Se tivéssemos também requisito de tempo
+de resposta, precisaríamos acrescentar
+
+87
+00:05:21.552 --> 00:05:24.900
+controlador de avanço de fase,
+mas deixemos isso para a semana que vem.
+
+88
+00:05:24.900 --> 00:05:29.146
+Agora, você já é capaz de projetar
+controlador de atraso de fase para
+
+89
+00:05:29.146 --> 00:05:33.660
+sistema de segunda ordem do tipo 1
+literal, e sabe ainda como compensar
+
+90
+00:05:33.660 --> 00:05:37.194
+o efeito do controlador de
+atraso de fase no overshoot.
+
+91
+00:05:37.194 --> 00:05:41.623
+No próximo vídeo, você verá exemplo
+de projeto de controlador PI para
+
+92
+00:05:41.623 --> 00:05:43.890
+sistema de terceira ordem do tipo 0.

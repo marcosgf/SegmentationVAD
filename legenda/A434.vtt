@@ -1,0 +1,507 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.064
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.064 --> 00:00:12.745
+Bem-vindo de volta ao nosso hands-on,
+certo?
+
+3
+00:00:12.745 --> 00:00:18.065
+Estávamos aqui pensando como
+vamos fazer aqui o teste
+
+4
+00:00:18.065 --> 00:00:23.913
+para verificar aí se a gente
+consegue fazer com que,
+
+5
+00:00:23.913 --> 00:00:28.330
+fazer esse teste, né,
+se o Mock der problema,
+
+6
+00:00:28.330 --> 00:00:32.841
+se o Mock jogar uma exceção,
+eu quero que os próximos, né,
+
+7
+00:00:32.841 --> 00:00:36.565
+se o Mock não, se observador
+do carrinho jogar uma exceção,
+
+8
+00:00:36.565 --> 00:00:41.410
+eu quero que os próximos
+continuem a ser notificados, tá?
+
+9
+00:00:41.410 --> 00:00:45.170
+Então, eu vou fazer o seguinte,
+
+10
+00:00:45.170 --> 00:00:51.380
+eu vou copiar aqui, né,
+eu vou colocar aqui
+
+11
+00:00:51.380 --> 00:00:56.800
+o nome do teste vai ser:
+continua notificando
+
+12
+00:00:56.800 --> 00:01:01.590
+com erro observador.
+
+13
+00:01:01.590 --> 00:01:05.253
+Tá?
+Os meus nomes não são os melhores do
+
+14
+00:01:05.253 --> 00:01:10.445
+mundo, mas são nomes que conseguem
+me remeter ali o que o teste,
+
+15
+00:01:10.445 --> 00:01:12.497
+o cenário do teste está verificando, tá?
+
+16
+00:01:12.497 --> 00:01:18.610
+Então, vamos fazer o seguinte: eu vou
+adicionar 3 observadores na minha classe,
+
+17
+00:01:18.610 --> 00:01:21.680
+então, 1, 2, 3, tá?
+
+18
+00:01:21.680 --> 00:01:26.555
+Eu vou chamar aqui o mock2, né,
+
+19
+00:01:26.555 --> 00:01:31.675
+quando eu criar ele,
+eu vou colocar aqui, mock2 ponto
+
+20
+00:01:31.675 --> 00:01:36.900
+[SEM_ÁUDIO] vou botar aqui
+
+21
+00:01:36.900 --> 00:01:42.580
+quero QueVoceDePau, certo?
+
+22
+00:01:42.580 --> 00:01:48.300
+Não é nome muito convencional,
+né, mas fica aí uma...
+
+23
+00:01:48.300 --> 00:01:52.476
+para você refletir aí nome melhor, tá?
+
+24
+00:01:52.476 --> 00:01:56.080
+Então, eu quero que o mock2 dê pau.
+
+25
+00:01:56.080 --> 00:01:58.782
+Tá?
+Então, eu vou adicionar né,
+
+26
+00:01:58.782 --> 00:02:02.404
+os 3 mocks aqui no meu carrinho, tá?
+
+27
+00:02:02.404 --> 00:02:07.377
+[SEM_ÁUDIO] E aí eu quero
+
+28
+00:02:07.377 --> 00:02:11.960
+que o mock1 e o mock3, né,
+o 2, ele vai dar pau ali,
+
+29
+00:02:11.960 --> 00:02:18.650
+mas eu quero que o mock1 e o mock3,
+eles tenham recebido ali o produto, tá?
+
+30
+00:02:18.650 --> 00:02:23.716
+Então, vou salvar como eu falei,
+fazer aqui o mock faz parte, né,
+
+31
+00:02:23.716 --> 00:02:28.940
+então, vou vir aqui,
+vou criar esse método queroQueVoceDePau,
+
+32
+00:02:28.940 --> 00:02:34.790
+né, e vou colocar aqui
+uma variável booleana,
+
+33
+00:02:34.790 --> 00:02:39.570
+que é, darpau.
+
+34
+00:02:39.570 --> 00:02:47.029
+Só que o darpau vai ser falso a princípio,
+tá?
+
+35
+00:02:47.029 --> 00:02:52.280
+Então, quando eu falar que eu
+quero que aquele mock dê pau,
+
+36
+00:02:52.280 --> 00:02:57.944
+então, eu vou fazer o darPau igual a true.
+
+37
+00:02:57.944 --> 00:03:03.630
+Então, quando o produto,
+ele for adicionado,
+
+38
+00:03:03.630 --> 00:03:08.470
+né, eu vou vir aqui eu vou verificar,
+se for para dar pau,
+
+39
+00:03:08.470 --> 00:03:13.550
+então, eu vou dar throw
+
+40
+00:03:13.550 --> 00:03:20.410
+new RuntimeException.
+
+41
+00:03:20.410 --> 00:03:25.143
+E aí eu vou colocar aqui uma mensagem, né,
+
+42
+00:03:25.143 --> 00:03:31.080
+Problema simulado pelo mock.
+
+43
+00:03:31.080 --> 00:03:32.044
+Certo?
+
+44
+00:03:32.044 --> 00:03:37.023
+Então, eu posso salvar aqui, rodo aqui,
+
+45
+00:03:37.023 --> 00:03:41.104
+ele está dando erro,
+qual que é o problema dele?
+
+46
+00:03:41.104 --> 00:03:47.030
+Ele está dando aquela exceção, certo?
+
+47
+00:03:47.030 --> 00:03:50.323
+Então, vou vir aqui,
+no meu carrinho de compras,
+
+48
+00:03:50.323 --> 00:03:54.936
+vou ter que fazer ele não jogar
+aquela exceção, né, então,
+
+49
+00:03:54.936 --> 00:04:01.097
+nessa parte que ele notifica aqui
+eu vou colocar aqui por exemplo,
+
+50
+00:04:01.097 --> 00:04:05.896
+vamos ver aqui, Surround With,
+Try/catch Block,
+
+51
+00:04:05.896 --> 00:04:10.660
+né, então se der uma exceção,
+eu não quero que ele faça nada, né,
+
+52
+00:04:10.660 --> 00:04:15.450
+por enquanto é lógico que não é uma
+boa prática deixar catch vazio,
+
+53
+00:04:15.450 --> 00:04:19.590
+mas eu deveria guardar esse
+problema algum lugar, né,
+
+54
+00:04:19.590 --> 00:04:23.730
+por enquanto eu não tenho nenhum
+requisito relação àquilo.
+
+55
+00:04:23.730 --> 00:04:26.658
+De repente poderia guardar,
+
+56
+00:04:26.658 --> 00:04:32.721
+mas o que é importante para mim é que
+o fato de observador dar problema,
+
+57
+00:04:32.721 --> 00:04:37.121
+não quero que os outros parem de receber,
+então, aqui,
+
+58
+00:04:37.121 --> 00:04:42.317
+eu estava tendo, o meu teste estava
+dando esse problema simulado pelo mock,
+
+59
+00:04:42.317 --> 00:04:47.953
+vou rodar de novo, agora né, ele mudou,
+ele está, continua dando pau,
+
+60
+00:04:47.953 --> 00:04:52.500
+mas o problema agora é que o mock3
+não está recebendo a notificação.
+
+61
+00:04:52.500 --> 00:04:53.457
+Tá?
+Então,
+
+62
+00:04:53.457 --> 00:04:56.770
+o que é que será que
+eu fiz aqui errado né?
+
+63
+00:04:56.770 --> 00:05:01.619
+Quando ele estava fazendo o try/catch,
+né, ele sai do for,
+
+64
+00:05:01.619 --> 00:05:06.219
+então, eu quero que esse for aqui,
+
+65
+00:05:06.219 --> 00:05:10.298
+seja fora, né, aqui então,
+
+66
+00:05:10.298 --> 00:05:16.258
+o meu try/catch vai ser só com o que
+está dentro do for, aí começou a ficar
+
+67
+00:05:16.258 --> 00:05:21.303
+complicado aqui essa questão do que é
+que está dentro, o que é que está fora.
+
+68
+00:05:21.303 --> 00:05:25.394
+Então, vou vou colocar aqui,
+
+69
+00:05:25.394 --> 00:05:30.370
+né, o, as chaves aqui,
+será que agora vai dar certo?
+
+70
+00:05:30.370 --> 00:05:34.746
+Então, salvo aqui, rodo, vamos ver.
+
+71
+00:05:34.746 --> 00:05:36.600
+Agora funcionou!
+
+72
+00:05:36.600 --> 00:05:39.332
+Tá?
+Então, o objetivo aí desse hands-on foi
+
+73
+00:05:39.332 --> 00:05:44.600
+mostrar pouquinho para vocês essa parte da
+criação do mock, como é que isso funciona,
+
+74
+00:05:44.600 --> 00:05:49.745
+né, e mostrar aqui por exemplo, esse
+último teste, eu acho bem interessante,
+
+75
+00:05:49.745 --> 00:05:54.390
+né, onde a gente tem a presença ali de
+vários mocks que são instâncias do mesmo,
+
+76
+00:05:54.390 --> 00:05:59.295
+né, você viu que a gente criou primeiro o
+mock, depois a gente conseguiu reutilizar
+
+77
+00:05:59.295 --> 00:06:03.440
+ele exatamente da forma que ele
+tinha sido criado no próximo teste,
+
+78
+00:06:03.440 --> 00:06:10.406
+já para esse teste,
+a gente precisou de mock diferente, tá?
+
+79
+00:06:10.406 --> 00:06:18.444
+E com isso a gente vai fazendo
+aí a nossa implementação.
+
+80
+00:06:18.444 --> 00:06:22.414
+Só para mostrar aqui para vocês,
+para a gente poder
+
+81
+00:06:22.414 --> 00:06:26.460
+fechar aqui mesmo com chave de ouro,
+né, o que eu fiz aqui foi...
+
+82
+00:06:26.460 --> 00:06:31.227
+eu tenho duas alternativas quando
+eu precisar de mock diferente,
+
+83
+00:06:31.227 --> 00:06:37.053
+eu posso tanto vir aqui,
+e criar, né, uma configuração
+
+84
+00:06:37.053 --> 00:06:42.225
+que eu diga que eu quero que dê pau,
+etcetera,
+
+85
+00:06:42.225 --> 00:06:47.068
+ou eu posso criar novo mock,
+uma nova classe, né?
+
+86
+00:06:47.068 --> 00:06:53.317
+Eu posso criar, por exemplo,
+aqui só para a gente ilustrar a classe
+
+87
+00:06:53.317 --> 00:06:59.630
+que seria aqui o
+MockObservadorComProblema.
+
+88
+00:06:59.630 --> 00:07:00.166
+Tá?
+
+89
+00:07:00.166 --> 00:07:06.086
+Ele ia implementar a classe
+ObservadorCarrinho
+
+90
+00:07:06.086 --> 00:07:10.790
+implementar a interface
+ObservadorCarrinho, tá?
+
+91
+00:07:10.790 --> 00:07:15.110
+E aí aqui, eu simplesmente
+
+92
+00:07:15.110 --> 00:07:19.660
+jogaria essa exceção.
+
+93
+00:07:19.660 --> 00:07:24.830
+[SEM_ÁUDIO] Certo?
+
+94
+00:07:24.830 --> 00:07:30.028
+Então, o que eu faria aqui no teste ao
+invés de eu criar o mock e dizer que
+
+95
+00:07:30.028 --> 00:07:37.330
+eu quero que ele dê pau,
+eu criaria o MockObservadorComProblema.
+
+96
+00:07:37.330 --> 00:07:38.553
+Tá?
+E aí aqui,
+
+97
+00:07:38.553 --> 00:07:41.770
+simplesmente observador carrinho.
+
+98
+00:07:41.770 --> 00:07:44.812
+Tá?
+Funcionaria exatamente da mesma forma e de
+
+99
+00:07:44.812 --> 00:07:47.330
+repente eu não precisaria ficar...
+
+100
+00:07:47.330 --> 00:07:54.392
+Está faltando ponto e vírgula aqui,
+eu não precisaria ficar...
+
+101
+00:07:54.392 --> 00:07:57.884
+A gente pode rodar aqui,
+ele funciona igualzinho, tá?
+
+102
+00:07:57.884 --> 00:08:06.415
+A gente não precisaria ficar criando
+aqui monte de if e etcetera no mock.
+
+103
+00:08:06.415 --> 00:08:11.906
+A gente tem essas duas formas de fazer,
+eu deixo aí a opção para você utilizar,
+
+104
+00:08:11.906 --> 00:08:16.025
+né, verificar que cada cenário o
+que é que é mais adequado ou não.
+
+105
+00:08:16.025 --> 00:08:20.740
+Então, foi isso, espero que vocês tenham
+aprendido aí com esse hands-on de uma
+
+106
+00:08:20.740 --> 00:08:24.160
+forma mais prática como
+trabalhar com Mock Object.
+
+107
+00:08:24.160 --> 00:08:30.695
+Muito obrigado,
+continue assistindo o nosso curso.
+
+108
+00:08:30.695 --> 00:08:32.120
+[MÚSICA]

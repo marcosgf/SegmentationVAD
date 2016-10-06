@@ -1,0 +1,364 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.660
+[MÚSICA]
+
+2
+00:00:05.660 --> 00:00:11.320
+[MÚSICA]
+
+3
+00:00:11.320 --> 00:00:17.790
+[MÚSICA]
+
+4
+00:00:17.790 --> 00:00:25.940
+[MÚSICA] Olá,
+
+5
+00:00:25.940 --> 00:00:30.900
+bem-vindo ao Controle
+de Sistemas no Plano-s.
+
+6
+00:00:30.900 --> 00:00:36.284
+Se você nunca estudou nada sobre Controle
+de Sistemas, eu recomendo fortemente que
+
+7
+00:00:36.284 --> 00:00:41.159
+você faça o curso Introdução ao Controle
+de Sistemas antes de fazer esse curso.
+
+8
+00:00:41.159 --> 00:00:44.735
+Seria interessante também,
+mas não estritamente necessário,
+
+9
+00:00:44.735 --> 00:00:49.800
+que você fizesse o curso Controle Usando
+a Resposta Frequência antes deste curso.
+
+10
+00:00:49.800 --> 00:00:50.807
+Mas se preferir,
+
+11
+00:00:50.807 --> 00:00:55.590
+pode fazer esse curso primeiro e depois
+o Controle Usando a Resposta Frequência.
+
+12
+00:00:55.590 --> 00:01:00.140
+Neste curso vou considerar que você
+já está familiarizado com números
+
+13
+00:01:00.140 --> 00:01:03.022
+complexos e com suas
+principais propriedades,
+
+14
+00:01:03.022 --> 00:01:05.960
+e que você sabe o que é uma
+função de transferência.
+
+15
+00:01:05.960 --> 00:01:10.234
+Vou considerar também que você já
+sabe o que é e como fazer a expansão
+
+16
+00:01:10.234 --> 00:01:13.420
+frações parciais de uma
+transformada de Laplace.
+
+17
+00:01:13.420 --> 00:01:18.018
+Você também já deve ser capaz de verificar
+a estabilidade de sistema sem ter que
+
+18
+00:01:18.018 --> 00:01:22.247
+calcular os polos da função de
+transferência e de calcular o erro regime
+
+19
+00:01:22.247 --> 00:01:27.270
+de sistema malha fechada usando sua
+constante de erro calculada malha aberta.
+
+20
+00:01:27.270 --> 00:01:31.114
+Finalmente, dada uma função de
+transferência de segunda ordem
+
+21
+00:01:31.114 --> 00:01:33.772
+subamortecida sem zeros,
+você deve ser capaz
+
+22
+00:01:33.772 --> 00:01:37.700
+de determinar as principais
+características de sua resposta ao degrau.
+
+23
+00:01:37.700 --> 00:01:42.659
+Se você já sabe fazer tudo isso, está no
+lugar certo para continuar a sua jornada
+
+24
+00:01:42.659 --> 00:01:45.630
+no maravilhoso mundo do
+controle de sistemas.
+
+25
+00:01:45.630 --> 00:01:50.285
+Muito bem, as coisas vão ficar
+mais interessantes a partir de
+
+26
+00:01:50.285 --> 00:01:55.022
+agora e acho que você já sabe que
+quando professor diz ''interessantes''
+
+27
+00:01:55.022 --> 00:01:58.560
+ele está querendo dizer mais
+complicadas ou mais difíceis.
+
+28
+00:01:58.560 --> 00:02:03.020
+No século passado, ou melhor,
+no milênio passado,
+
+29
+00:02:03.020 --> 00:02:08.267
+eu poderia dizer [MÚSICA] mas se eu
+falar isso agora na era do politicamente
+
+30
+00:02:08.267 --> 00:02:14.660
+correto e do "mimimi" [MÚSICA],
+então, não vou falar [MÚSICA].
+
+31
+00:02:14.660 --> 00:02:19.435
+Ao invés disso, eu pensei dizer [MÚSICA].
+
+32
+00:02:19.435 --> 00:02:23.359
+Então, eu vou dizer que está na
+hora de separar os ''muito bons
+
+33
+00:02:23.359 --> 00:02:26.240
+controle'' dos ''não muito bons ainda''.
+
+34
+00:02:26.240 --> 00:02:30.770
+E se você for dos não muito bons ainda,
+não se preocupe, com tempo,
+
+35
+00:02:30.770 --> 00:02:36.340
+esforço e pouco de talento todo mundo pode
+ficar muito bom no que realmente deseja.
+
+36
+00:02:36.340 --> 00:02:40.087
+Então, se você não conseguir
+acompanhar o curso, faça
+
+37
+00:02:40.087 --> 00:02:44.800
+de novo Introdução ao Controle de Sistemas
+e o Controle Usando a Resposta Frequência,
+
+38
+00:02:44.800 --> 00:02:47.747
+e depois tente esse curso mais uma vez.
+
+39
+00:02:47.747 --> 00:02:51.459
+Tenho certeza que com pouco
+mais de tempo e de esforço,
+
+40
+00:02:51.459 --> 00:02:54.280
+você passará a ser dos
+muito bons controle.
+
+41
+00:02:54.280 --> 00:03:00.504
+Mas eu também tenho boas notícias: neste
+curso faremos o uso extensivo do MATLAB,
+
+42
+00:03:00.504 --> 00:03:04.190
+uns dos melhores amigos do
+controleiro e de vários engenheiros.
+
+43
+00:03:04.190 --> 00:03:09.103
+Graças à parceria do Coursera com
+a MathWorks você terá acesso a uma
+
+44
+00:03:09.103 --> 00:03:13.590
+versão trial do MATLAB com tudo que
+precisará para acompanhar este curso.
+
+45
+00:03:13.590 --> 00:03:18.720
+Falarei mais a respeito disso
+outro vídeo e vou aproveitar para
+
+46
+00:03:18.720 --> 00:03:24.052
+pedir que sempre que você encontrar
+algum problema ou erro nos vídeos,
+
+47
+00:03:24.052 --> 00:03:27.507
+no material de leitura ou nas atividades,
+nos avise.
+
+48
+00:03:27.507 --> 00:03:31.610
+Se tiver alguma dúvida,
+não exite entrar contato também.
+
+49
+00:03:31.610 --> 00:03:36.927
+Se você não quiser se identificar,
+ou se for erro, problema ou dúvida
+
+50
+00:03:36.927 --> 00:03:42.090
+muito específica, use a bandeirinha de
+"relatar problema" aqui no canto direito.
+
+51
+00:03:42.090 --> 00:03:47.770
+Se quiser xingar o professor sem ser
+identificado, esse é o lugar também.
+
+52
+00:03:47.770 --> 00:03:51.422
+Basta clicar na bandeirinha,
+escolher o assunto,
+
+53
+00:03:51.422 --> 00:03:54.500
+digitar a mensagem e clicar "enviar".
+
+54
+00:03:54.500 --> 00:03:59.303
+As mensagem enviadas pelo "relatar
+problema" não são identificadas, isto é,
+
+55
+00:03:59.303 --> 00:04:02.790
+eu não fico sabendo
+quem enviou a mensagem,
+
+56
+00:04:02.790 --> 00:04:05.931
+mas eu posso respondê-la
+através do Cousera.
+
+57
+00:04:05.931 --> 00:04:10.054
+Se você não curtiu alguma coisa,
+por favor, envie relato de
+
+58
+00:04:10.054 --> 00:04:15.050
+aperfeiçoamento de conteúdo para sabermos
+exatamente o que você não curtiu.
+
+59
+00:04:15.050 --> 00:04:19.103
+Mas se você não fizer questão de
+se manter anônimo, e se o erro,
+
+60
+00:04:19.103 --> 00:04:23.130
+o problema ou dúvida for
+de caráter mais geral, isto é,
+
+61
+00:04:23.130 --> 00:04:29.630
+puder beneficiar outros alunos, por favor,
+use o fórum de discussão aqui baixo.
+
+62
+00:04:29.630 --> 00:04:32.965
+Basta clicar "novo tópico",
+
+63
+00:04:32.965 --> 00:04:38.720
+dar título para sua mensagem,
+digitá-la e clicar "publicar".
+
+64
+00:04:38.720 --> 00:04:42.490
+Sua mensagem vai aparecer aqui
+e nas discussões do curso.
+
+65
+00:04:42.490 --> 00:04:45.264
+E o que você irá aprender neste curso?
+
+66
+00:04:45.264 --> 00:04:49.364
+Você irá conhecer o lugar
+geométrico das raízes e verá como
+
+67
+00:04:49.364 --> 00:04:53.430
+projetar controladores de avanço
+de fase e de atraso de fase,
+
+68
+00:04:53.430 --> 00:04:59.066
+e controladores PI e PD para atender
+simultaneamente requisitos de overshoot,
+
+69
+00:04:59.066 --> 00:05:02.750
+de velocidade de resposta e
+de erro regime permanente.
+
+70
+00:05:02.750 --> 00:05:08.085
+Você também verá como modelar o
+atraso de transporte, considerar
+
+71
+00:05:08.085 --> 00:05:12.180
+seus efeitos no desempenho do sistema
+e compensar esse atraso de transporte,
+
+72
+00:05:12.180 --> 00:05:16.745
+e verá tudo isso usando o MATLAB,
+uma ferramenta computacional extremamente
+
+73
+00:05:16.745 --> 00:05:21.310
+útil e poderosa para análise e para
+o projeto de controle de sistemas.
+
+74
+00:05:21.310 --> 00:05:26.520
+Então, aperte bem os cintos porque
+vamos entrar velocidade de dobra.
+
+75
+00:05:26.520 --> 00:05:32.050
+Senhor Sulu, engage.

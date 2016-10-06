@@ -1,0 +1,603 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.077
+[MÚSICA] Esse
+
+2
+00:00:08.077 --> 00:00:15.570
+é o curso de Orientação a Objetos
+com Java, meu nome é Eduardo Guerra,
+
+3
+00:00:15.570 --> 00:00:20.925
+e hoje vamos estar falando aí sobre,
+modificadores de acesso.
+
+4
+00:00:20.925 --> 00:00:22.103
+Que que é isso?
+
+5
+00:00:22.103 --> 00:00:27.199
+Os modificadores de acesso permitem
+que você controle o acesso,
+
+6
+00:00:27.199 --> 00:00:33.189
+aos pedacinhos de uma classe a método,
+a atributo para que ninguém vá
+
+7
+00:00:33.189 --> 00:00:38.348
+lá e modifique aquilo, ou acesse aquilo
+de uma forma que você não gostaria,
+
+8
+00:00:38.348 --> 00:00:43.336
+que você não queria, então vamos
+entender porque que isso é necessário e
+
+9
+00:00:43.336 --> 00:00:48.098
+entender como que isso funciona,
+quais são os modificadores de acesso Java.
+
+10
+00:00:48.098 --> 00:00:52.927
+Então, imagina o seguinte: aquela classe
+Carro lá que a gente desenvolveu você vai
+
+11
+00:00:52.927 --> 00:00:57.183
+lá, cria carro e coloca
+100 na velocidade dele,
+
+12
+00:00:57.183 --> 00:01:01.219
+e carro aparece do nada com 100,
+o que seria correto,
+
+13
+00:01:01.219 --> 00:01:06.770
+seria você acelerar ou frear o carro
+para estar aumentado a velocidade
+
+14
+00:01:06.770 --> 00:01:12.556
+dele gradativamente, então essa
+ideia de você ir lá e simplesmente
+
+15
+00:01:12.556 --> 00:01:17.691
+colocar valor na velocidade, por mais
+que a classe lá que a gente criou,
+
+16
+00:01:17.691 --> 00:01:22.212
+permita isso, isso não seria o correto,
+então a ideia é o quê?
+
+17
+00:01:22.212 --> 00:01:27.152
+É que eu chegue e fale assim: olha
+esse atributo velocidade aqui,
+
+18
+00:01:27.152 --> 00:01:30.731
+ele só pode ser acessado
+dentro da minha classe,
+
+19
+00:01:30.731 --> 00:01:35.590
+fora da minha classe eu quero que as
+pessoas usem o método acelerar e frear.
+
+20
+00:01:35.590 --> 00:01:41.396
+E aí sim, dentro da minha classe o
+método acelerar, ele vai ter uma lógica,
+
+21
+00:01:41.396 --> 00:01:46.889
+ele vai ter algoritmo para aumentar essa
+velocidade, assim como o método frear,
+
+22
+00:01:46.889 --> 00:01:50.452
+ele também vai ter algoritmo
+para diminuir essa velocidade,
+
+23
+00:01:50.452 --> 00:01:56.075
+não quero que ninguém vá lá diretamente
+e fique modificando as coisas.
+
+24
+00:01:56.075 --> 00:02:01.270
+Os modificadores de acesso,
+eles tem Justamente esse papel dentro de
+
+25
+00:02:01.270 --> 00:02:07.170
+sistema orientado a objetos,
+ele diz quem que pode estar acessando
+
+26
+00:02:07.170 --> 00:02:12.724
+determinado membro de uma classe, então eu
+posso falar assim: olha, esse atributo ele
+
+27
+00:02:12.724 --> 00:02:17.610
+só é acessível dentro da classe, ou para
+a subclasse, ou para a classe do pacote.
+
+28
+00:02:17.610 --> 00:02:21.754
+E a gente vai ver que Java,
+existem quatro tipos diferentes de
+
+29
+00:02:21.754 --> 00:02:26.722
+modificadores de acesso, inclusive
+deles é quando você não coloca nada,
+
+30
+00:02:26.722 --> 00:02:30.728
+então dessa forma a gente vai
+permitir por exemplo que uma classe,
+
+31
+00:02:30.728 --> 00:02:35.724
+vamos supor método, ou atributo, ela possa
+ser acessado pela subclasse e não seja
+
+32
+00:02:35.724 --> 00:02:40.815
+acessível por exemplo a outras classes,
+pode ser que eu tenha atributo que
+
+33
+00:02:40.815 --> 00:02:46.140
+eu queira permitir somente para
+subclasses e não para outras classes.
+
+34
+00:02:46.140 --> 00:02:49.104
+O primeiro tipo que a gente
+tem aí é o private,
+
+35
+00:02:49.104 --> 00:02:55.000
+ou seja o privado que quando membro
+tem esse tipo de controle de acesso,
+
+36
+00:02:55.000 --> 00:02:59.516
+ele só pode ser acessado por
+membros da própria classe.
+
+37
+00:02:59.516 --> 00:03:02.470
+Seguida o oposto desse seria o public,
+
+38
+00:03:02.470 --> 00:03:07.178
+são aqueles que qualquer pode acessar,
+então por exemplo,
+
+39
+00:03:07.178 --> 00:03:11.613
+se eu tiver uma variável do tipo
+private isso significa que,
+
+40
+00:03:11.613 --> 00:03:17.119
+só métodos dentro daquela classe,
+vão poder acessar essa variável, por outro
+
+41
+00:03:17.119 --> 00:03:21.852
+lado se essa variável for public, qualquer
+outra classe pode ir lá e acessar ela.
+
+42
+00:03:21.852 --> 00:03:26.835
+Agora a gente tem o que seria aí meio
+termo, que é o protected, o protected,
+
+43
+00:03:26.835 --> 00:03:32.008
+somente subclasses, obviamente
+inclui ali dentro da própria classe,
+
+44
+00:03:32.008 --> 00:03:33.563
+mas fora da classe,
+
+45
+00:03:33.563 --> 00:03:39.369
+somente a subclasse e classes do mesmo
+pacote que podem estar acessando.
+
+46
+00:03:39.369 --> 00:03:45.023
+E para finalizar, o que a gente usou até
+agora, até sem saber, que seria o default,
+
+47
+00:03:45.023 --> 00:03:49.800
+que é quando a gente não coloca nada,
+então ao invés de colocar "private
+
+48
+00:03:49.800 --> 00:03:54.833
+int variável" ou "public int
+variável" se a gente não coloca nada,
+
+49
+00:03:54.833 --> 00:03:58.080
+não coloca "int variável"
+seria esse tipo default ta?
+
+50
+00:03:58.080 --> 00:04:00.009
+O default não é o público,
+
+51
+00:04:00.009 --> 00:04:05.780
+o default ele só torna aquele membro
+acessível para a classes do mesmo pacote.
+
+52
+00:04:05.780 --> 00:04:09.934
+Então assim,
+a gente entendeu os tipos que têm private,
+
+53
+00:04:09.934 --> 00:04:13.976
+bloqueia tudo,
+só dentro da classe que pode; public,
+
+54
+00:04:13.976 --> 00:04:19.530
+qualquer pode; protected é só
+subclasse e classe do mesmo pacote,
+
+55
+00:04:19.530 --> 00:04:23.344
+se eu não colocar nada é
+só dentro do mesmo pacote.
+
+56
+00:04:23.344 --> 00:04:27.838
+Cuidado que a gente precisa ter e que é
+muito importante é de não expor além do
+
+57
+00:04:27.838 --> 00:04:30.801
+necessário, os membros da minha classe,
+
+58
+00:04:30.801 --> 00:04:34.440
+e eu vou explicar porquê
+que isso pode ser perigoso.
+
+59
+00:04:34.440 --> 00:04:39.420
+Então, existem algumas variáveis que só
+podem ser acessadas de certas formas,
+
+60
+00:04:39.420 --> 00:04:42.870
+exemplo que a gente viu,
+foi a variável velocidade,
+
+61
+00:04:42.870 --> 00:04:46.719
+eu não posso simplesmente ir
+lá e colocar valor genérico,
+
+62
+00:04:46.719 --> 00:04:51.238
+eu tenho que acelerar ou frear o carro
+para modificar a velocidade dele,
+
+63
+00:04:51.238 --> 00:04:56.689
+de repente se eu estou por exemplo
+criando uma estrutura de dados, uma fila,
+
+64
+00:04:56.689 --> 00:05:02.281
+ou uma pilha que eu tenho que colocar os
+objetos ordenados de uma certa forma,
+
+65
+00:05:02.281 --> 00:05:07.240
+por exemplo dentro de array, eu não
+quero que o cara vá lá e possa modificar
+
+66
+00:05:07.240 --> 00:05:12.235
+aquele array de qualquer maneira,
+eu quero que meus métodos trabalhem
+
+67
+00:05:12.235 --> 00:05:16.008
+com aquele array de uma forma controlada,
+e de repente,
+
+68
+00:05:16.008 --> 00:05:20.296
+não é só uma variável, conjunto de
+variáveis dentro da classe, que quando eu
+
+69
+00:05:20.296 --> 00:05:24.837
+fizer uma determinada ação elas vão
+mudar de forma a ficar consistente.
+
+70
+00:05:24.837 --> 00:05:29.244
+E se de repente eu pego uma
+variável dessa e deixo ela pública,
+
+71
+00:05:29.244 --> 00:05:34.744
+ou de uma forma que outras classes
+podem estar acessando, isso
+
+72
+00:05:34.744 --> 00:05:39.884
+daí vai expor esse dado aí de uma forma
+que a pessoa pode ir lá e modificar do
+
+73
+00:05:39.884 --> 00:05:45.039
+jeito que ela quiser, e isso pode causar
+uma inconsistência dentro da classe.
+
+74
+00:05:45.039 --> 00:05:50.319
+Eu projeto que participei,
+eu vi isso acontecer.
+
+75
+00:05:50.319 --> 00:05:55.433
+A pessoa criou a classe com seus
+atributos e colocou métodos ali
+
+76
+00:05:55.433 --> 00:06:00.470
+que acessavam, só que deixou os
+atributos abertos, o que aconteceu?
+
+77
+00:06:00.470 --> 00:06:04.132
+Foi uma outra pessoa,
+precisava modificar atributo,
+
+78
+00:06:04.132 --> 00:06:09.848
+e ao invés de usar o método que modificava
+aquele atributo de uma forma válida, e
+
+79
+00:06:09.848 --> 00:06:15.320
+deixava todos os outros ali consistentes,
+ele foi e alterou direto, o que aconteceu?
+
+80
+00:06:15.320 --> 00:06:19.794
+Deu bug no sistema, e foi bug
+extremamente difícil de ser encontrado,
+
+81
+00:06:19.794 --> 00:06:24.656
+tudo é questão de a pessoa ter
+exposto mais do que deveria.
+
+82
+00:06:24.656 --> 00:06:29.625
+Uma outra questão é que a gente tem
+que lembrar que as subclasses também
+
+83
+00:06:29.625 --> 00:06:31.358
+podem estar modificando.
+
+84
+00:06:31.358 --> 00:06:35.190
+Então a gente lembra que como
+a gente viu na aula de herança,
+
+85
+00:06:35.190 --> 00:06:39.897
+a subclasse ela tem que prover aqueles
+mesmos serviços, ela tem que ter
+
+86
+00:06:39.897 --> 00:06:44.864
+aquele mesmo contrato da superclasse,
+e aí também, dependendo de como for,
+
+87
+00:06:44.864 --> 00:06:49.133
+eu não posso sair expondo todas as
+variáveis, para que a subclasse também
+
+88
+00:06:49.133 --> 00:06:54.482
+possa fazer uma festa, e ás vezes quebrar
+determinadas funcionalidades da subclasse.
+
+89
+00:06:54.482 --> 00:06:59.723
+Então da mesma forma a exposição pública,
+a exposição para subclasse
+
+90
+00:06:59.723 --> 00:07:04.279
+pode gerar esse mesmo problema,
+e ainda tem uma outra questão,
+
+91
+00:07:04.279 --> 00:07:09.763
+que toda vez que você deixa alguma
+coisa pública e alguém vai lá e acessa,
+
+92
+00:07:09.763 --> 00:07:15.160
+aquela característica se torna
+mais difícil de ser alterada.
+
+93
+00:07:15.160 --> 00:07:20.167
+Então, por exemplo, imagina que você tem
+uma classe, e você tem array dentro dessa
+
+94
+00:07:20.167 --> 00:07:24.936
+classe, se de repente você quer que
+esse array seja trocado por uma lista,
+
+95
+00:07:24.936 --> 00:07:29.844
+se você tem uma outra classe acessando
+direto aquele array você não vai ter que
+
+96
+00:07:29.844 --> 00:07:33.266
+ir mais alterar só sua classe,
+você vai alterar sua classe e a outra,
+
+97
+00:07:33.266 --> 00:07:37.604
+porquê quanto mais classes tiverem
+acessando, mais difícil vai ser.
+
+98
+00:07:37.604 --> 00:07:42.939
+Então mais uma vez, a gente tem que tomar
+todo cuidado para expor só aquilo que
+
+99
+00:07:42.939 --> 00:07:48.610
+realmente é necessário, aquelas coisas que
+são do funcionamento interno da classe,
+
+100
+00:07:48.610 --> 00:07:53.245
+a gente não precisa deixar público,
+a gente pode deixar privado ou protegido,
+
+101
+00:07:53.245 --> 00:07:57.070
+no caso da gente precisar das
+subclasses estarem acessando depois.
+
+102
+00:07:57.070 --> 00:08:01.750
+Bom, eu acredito que se você está
+assistindo esse curso, você é programador
+
+103
+00:08:01.750 --> 00:08:06.630
+então deve ter criado aí, alguns
+programas, e as vezes você vai lá e você
+
+104
+00:08:06.630 --> 00:08:11.557
+fala assim: "Poxa preciso de tal coisa."
+Aí você pega uma classe, começa a ver
+
+105
+00:08:11.557 --> 00:08:15.989
+ali que métodos que ela tem, que atributos
+ela tem, e de repente você fala: "Opa!
+
+106
+00:08:15.989 --> 00:08:17.266
+Atributo público aqui,
+
+107
+00:08:17.266 --> 00:08:21.245
+deixa eu alterar esse negócio que
+é o que eu estou precisando, Opa!
+
+108
+00:08:21.245 --> 00:08:28.035
+Método aqui, deixa eu invocar isso para
+saber o que está acontecendo." Então,
+
+109
+00:08:28.035 --> 00:08:31.423
+se o cara vê que ele pode
+alterar aquela variável,
+
+110
+00:08:31.423 --> 00:08:36.043
+que é aquele resultado que ele quer,
+ele vai lá e vai alterar direto,
+
+111
+00:08:36.043 --> 00:08:39.626
+ele não está nem aí se aquilo
+vai gerar uma inconsistência,
+
+112
+00:08:39.626 --> 00:08:44.791
+se vai gerar bug depois, ele está atrás
+do objetivo dele, ele não conhece a sua
+
+113
+00:08:44.791 --> 00:08:50.066
+classe por dentro para saber que aquela
+alteração direta vai ser inválida.
+
+114
+00:08:50.066 --> 00:08:54.027
+Então o que posso dizer é,
+não dá essa chance para o cara.
+
+115
+00:08:54.027 --> 00:08:58.218
+Bloqueia aquelas coisas que ele
+não pode acessar através desses
+
+116
+00:08:58.218 --> 00:09:00.003
+modificadores de acesso.
+
+117
+00:09:00.003 --> 00:09:02.236
+Expõe só aquilo que é necessário.
+
+118
+00:09:02.236 --> 00:09:07.618
+Com isso eu apresentei para vocês na aula,
+os modificadores de acesso, mostrei aí
+
+119
+00:09:07.618 --> 00:09:13.539
+alguns cenários que eles são necessários e
+como utilizar ele aí para estar acessando,
+
+120
+00:09:13.539 --> 00:09:19.980
+para estar imitando e controlando o acesso
+aos vários membros aí, de uma classe.
+
+121
+00:09:19.980 --> 00:09:21.860
+Muito obrigado.
+
+122
+00:09:21.860 --> 00:09:23.995
+Até a próxima aula.
+
+123
+00:09:23.995 --> 00:09:28.010
+[MÚSICA]

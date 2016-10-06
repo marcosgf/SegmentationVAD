@@ -1,0 +1,475 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.804
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.804 --> 00:00:15.100
+Olá a todos, esse é o curso de
+orientação a objetos com Java.
+
+3
+00:00:15.100 --> 00:00:21.406
+Neste hands-on vamos ver a questão
+dos modificadores de acesso.
+
+4
+00:00:21.406 --> 00:00:26.142
+Eu falei na aula aí os tipos,
+quando pode acessar, quando não pode, tá?
+
+5
+00:00:26.142 --> 00:00:30.455
+A ideia é a gente mostrar na prática
+aqui pouco dessas questões do acesso.
+
+6
+00:00:30.455 --> 00:00:35.425
+Então assim, a gente não vai fazer nada
+que funciona mas a gente vai ver aqui,
+
+7
+00:00:35.425 --> 00:00:41.237
+pelos erros aqui, que vão dar quando
+é que a gente consegue acessar cada
+
+8
+00:00:41.237 --> 00:00:46.215
+tipo de modificador.
+
+9
+00:00:46.215 --> 00:00:52.240
+Então eu vou criar aqui novo projeto
+para gente poder fazer essa experiência.
+
+10
+00:00:52.240 --> 00:00:53.134
+Certo?
+
+11
+00:00:53.134 --> 00:00:58.250
+Eu vou chamar aqui de
+"experiência acesso".
+
+12
+00:00:58.250 --> 00:01:03.010
+Certo?
+
+13
+00:01:03.010 --> 00:01:05.435
+Então o que é que eu vou fazer?
+
+14
+00:01:05.435 --> 00:01:07.770
+Eu vou criar aqui pacote.
+
+15
+00:01:07.770 --> 00:01:13.460
+Eu vou ser muito criativo e vou
+chamar o pacote de "pacote".
+
+16
+00:01:13.460 --> 00:01:14.660
+Certo?
+
+17
+00:01:14.660 --> 00:01:17.920
+Dentro desse pacote,
+
+18
+00:01:17.920 --> 00:01:22.380
+eu vou criar a classe que
+vai ser a nossa referência.
+
+19
+00:01:22.380 --> 00:01:26.810
+Então vou chamar ela de referência.
+
+20
+00:01:26.810 --> 00:01:34.580
+E aí vou criar variáveis com os
+diferentes modificadores de acesso.
+
+21
+00:01:34.580 --> 00:01:40.180
+Então vou criar tudo inteiro
+aqui no "modificadorDefault".
+
+22
+00:01:40.180 --> 00:01:45.871
+Vou criar aqui "public
+
+23
+00:01:45.871 --> 00:01:51.540
+int modificadorPublico".
+
+24
+00:01:51.540 --> 00:01:58.744
+Vou criar aqui protegido,
+
+25
+00:01:58.744 --> 00:02:05.716
+o "protected int ModificadorProtegido" E
+
+26
+00:02:05.716 --> 00:02:10.490
+vou criar aqui "private" que vai ser o
+
+27
+00:02:10.490 --> 00:02:19.590
+modificador Privado.
+
+28
+00:02:19.590 --> 00:02:24.427
+Então, só para a gente ver aqui, eu vou
+criar então, só para a gente ver como é
+
+29
+00:02:24.427 --> 00:02:29.138
+que a gente vai fazer,
+método na própria classe,
+
+30
+00:02:29.138 --> 00:02:34.477
+que vou chamar aqui de "propriaClasse",
+
+31
+00:02:34.477 --> 00:02:40.822
+para agente ver quais desses eu
+consigo acessar na própria classe.
+
+32
+00:02:40.822 --> 00:02:45.090
+Então, "modificadorDefault".
+
+33
+00:02:45.090 --> 00:02:51.815
+Consigo Certo?
+
+34
+00:02:51.815 --> 00:02:55.710
+"ModificadorPublico".
+
+35
+00:02:55.710 --> 00:03:00.840
+Também consigo.
+
+36
+00:03:00.840 --> 00:03:01.622
+Certo?
+
+37
+00:03:01.622 --> 00:03:04.530
+"ModificadorProtegido".
+
+38
+00:03:04.530 --> 00:03:10.680
+Olha lá, também deixou.
+
+39
+00:03:10.680 --> 00:03:15.700
+E o "ModificadorPrivado", certo?
+
+40
+00:03:15.700 --> 00:03:18.385
+Também consigo.
+
+41
+00:03:18.385 --> 00:03:23.882
+Tá, então na classe aqui eu acesso tudo.
+
+42
+00:03:23.882 --> 00:03:28.005
+Eu vou chamar aqui de "teste acesso".
+
+43
+00:03:28.005 --> 00:03:33.840
+Então é para ver quando é que eu
+consigo acessar ou não as variáveis.
+
+44
+00:03:33.840 --> 00:03:42.440
+Então, por exemplo,
+eu vou criar aqui agora uma outra classe.
+
+45
+00:03:42.440 --> 00:03:43.197
+Certo?
+
+46
+00:03:43.197 --> 00:03:49.810
+Vou chamar aqui, vou criar aqui num
+pacote que vou chamar de "outro".
+
+47
+00:03:49.810 --> 00:03:56.660
+Então é uma outra classe, que não tem
+nada a ver com essa, num outro pacote.
+
+48
+00:03:56.660 --> 00:04:03.239
+Então, eu
+
+49
+00:04:03.239 --> 00:04:07.110
+vou criar aqui o meu teste de acesso.
+
+50
+00:04:07.110 --> 00:04:12.840
+Vou criar aqui a referência,
+
+51
+00:04:12.840 --> 00:04:19.122
+"Referencia r = new Referencia" E vou
+
+52
+00:04:19.122 --> 00:04:24.760
+ver qual desses aqui consigo acessar.
+
+53
+00:04:24.760 --> 00:04:30.221
+[SEM ÁUDIO] Então
+
+54
+00:04:30.221 --> 00:04:35.892
+bota aqui "r.", "r.".
+
+55
+00:04:35.892 --> 00:04:36.890
+Tá?
+
+56
+00:04:36.890 --> 00:04:38.462
+Qual é o problema?
+
+57
+00:04:38.462 --> 00:04:40.035
+Não importou a classe.
+
+58
+00:04:40.035 --> 00:04:43.510
+Então vamos importar aqui
+a classe para a gente ver.
+
+59
+00:04:43.510 --> 00:04:49.575
+Então, note aqui o "default"
+ele está dando erro,
+
+60
+00:04:49.575 --> 00:04:53.790
+se eu vier aqui ele me dá exatamente,
+está dizendo que não é visível.
+
+61
+00:04:53.790 --> 00:05:01.493
+Então se eu clicar aqui do lado,
+
+62
+00:05:01.493 --> 00:05:06.776
+ele mostra o erro aqui,
+de que não é visível aquela.
+
+63
+00:05:06.776 --> 00:05:07.442
+Tá vendo?
+
+64
+00:05:07.442 --> 00:05:12.410
+Ele não está visível, então vou colocar
+comentário aqui só para a gente ver.
+
+65
+00:05:12.410 --> 00:05:17.809
+Então, por exemplo, numa outra classe de
+outro pacote que não tem nada a ver com
+
+66
+00:05:17.809 --> 00:05:22.830
+ela somente o público ele é visível.
+
+67
+00:05:22.830 --> 00:05:28.545
+Eu vou criar aqui uma
+classe que eu vou chamar
+
+68
+00:05:28.545 --> 00:05:34.620
+aqui de "outramesmopacote".
+
+69
+00:05:34.620 --> 00:05:35.833
+Certo?
+
+70
+00:05:35.833 --> 00:05:41.905
+Eu vou fazer a mesma coisa
+que eu fiz aqui na outra,
+
+71
+00:05:41.905 --> 00:05:47.110
+só que a única diferença é que ela está
+no mesmo pacote que a minha referência.
+
+72
+00:05:47.110 --> 00:05:49.621
+Ela está no pacote "pacote".
+
+73
+00:05:49.621 --> 00:05:54.716
+Então, o público ele consegue,
+o "Default" ele consegue.
+
+74
+00:05:54.716 --> 00:05:57.443
+O "Protegido" também consegue,
+
+75
+00:05:57.443 --> 00:06:01.190
+só o "Privado" que ele vai
+dar erro ali de visibilidade.
+
+76
+00:06:01.190 --> 00:06:02.860
+Tá?
+
+77
+00:06:02.860 --> 00:06:05.785
+Ótimo.
+
+78
+00:06:05.785 --> 00:06:10.380
+Vou criar agora aqui no outro pacote, tá?
+
+79
+00:06:10.380 --> 00:06:13.950
+Uma classe que eu vou chamar de "sub".
+
+80
+00:06:13.950 --> 00:06:14.779
+Certo?
+
+81
+00:06:14.779 --> 00:06:18.100
+Que vai estender a minha classe.
+
+82
+00:06:18.100 --> 00:06:22.949
+Então essa classe "sub" eu vou dar aqui
+
+83
+00:06:22.949 --> 00:06:28.500
+"extends Referencia", certo?
+
+84
+00:06:28.500 --> 00:06:31.025
+Opa.
+Temos que importar ela,
+
+85
+00:06:31.025 --> 00:06:33.170
+senão ele não reconhece.
+
+86
+00:06:33.170 --> 00:06:37.300
+Então eu vou pegar aqui,
+esse teste de acesso.
+
+87
+00:06:37.300 --> 00:06:43.090
+Vou sobreescrever até o método aqui.
+
+88
+00:06:43.090 --> 00:06:45.534
+AÍ, viu que ele não consegue.
+
+89
+00:06:45.534 --> 00:06:51.668
+Nesse caso, a gente viu que ele dá erro
+aqui, no que tem o "modificadorDefault"
+
+90
+00:06:51.668 --> 00:06:56.410
+e no "modificadorPrivado",
+ele só consegue o público e o protegido.
+
+91
+00:06:56.410 --> 00:07:00.855
+Tá, então a gente pode ver aqui
+aquilo que a gente aprendeu
+
+92
+00:07:00.855 --> 00:07:02.915
+na aula de controle de acesso.
+
+93
+00:07:02.915 --> 00:07:08.351
+A gente tem aqui na própria classe,
+pode acessar qualquer tipo,
+
+94
+00:07:08.351 --> 00:07:12.222
+outras classes somente os públicos.
+
+95
+00:07:12.222 --> 00:07:15.760
+Outras classes do mesmo pacote,
+
+96
+00:07:15.760 --> 00:07:19.900
+eu consigo "Default",
+o "Publico" e o "Protegido".
+
+97
+00:07:19.900 --> 00:07:24.730
+E subclasses somente o
+"Publico" e o "Protegido".
+
+98
+00:07:24.730 --> 00:07:25.689
+Tá certo?
+
+99
+00:07:25.689 --> 00:07:29.640
+Então, o "Publico" é qualquer lugar,
+
+100
+00:07:29.640 --> 00:07:34.200
+o "Privado" é só na própria classe.
+
+101
+00:07:34.200 --> 00:07:39.860
+O "Default" só na própria classe
+e classes do mesmo pacote.
+
+102
+00:07:39.860 --> 00:07:44.595
+E o "Protegido" somente na
+própria classe no mesmo
+
+103
+00:07:44.595 --> 00:07:49.330
+pacote e subclasses.
+
+104
+00:07:49.330 --> 00:07:50.545
+Tá, espero que vendo assim,
+
+105
+00:07:50.545 --> 00:07:53.710
+tenha sido possível fixar melhor essa
+questão dos modificadores de acesso.
+
+106
+00:07:53.710 --> 00:07:57.237
+Espero que tenham entendido
+e gostado da aula.
+
+107
+00:07:57.237 --> 00:07:58.390
+Até a próxima.
+
+108
+00:07:58.390 --> 00:08:03.070
+[MÚSICA]

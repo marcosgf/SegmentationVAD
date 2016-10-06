@@ -1,0 +1,193 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.216
+[MÚSICA] E aí
+
+2
+00:00:05.216 --> 00:00:10.180
+pessoal, tudo bem?
+
+3
+00:00:10.180 --> 00:00:14.420
+Nessa aula vamos ver como programar
+uma jogabilidade com acelerômetro.
+
+4
+00:00:14.420 --> 00:00:19.100
+Infelizmente não é possível testar
+o acelerômetro pelo simulador.
+
+5
+00:00:19.100 --> 00:00:22.921
+Você precisa testar em aparelho real.
+
+6
+00:00:22.921 --> 00:00:25.665
+Utilizaremos o Frame Work Core Motion,
+
+7
+00:00:25.665 --> 00:00:29.370
+que é responsável por lidar com
+sensores de movimento do aparelho.
+
+8
+00:00:29.370 --> 00:00:34.292
+Este tópico foi abordado no módulo 3
+do curso 3 deste programa de cursos
+
+9
+00:00:34.292 --> 00:00:35.270
+integrados.
+
+10
+00:00:35.270 --> 00:00:37.809
+Se você quiser saber
+mais sobre o Core Motion,
+
+11
+00:00:37.809 --> 00:00:40.030
+deixaremos o link no material de apoio.
+
+12
+00:00:40.030 --> 00:00:45.210
+Vamos começar importando o
+Frame Work Core Motion no código.
+
+13
+00:00:45.210 --> 00:00:53.034
+Criamos uma variável chamada
+MotionManager da classe CNMotionManager.
+
+14
+00:00:53.034 --> 00:00:57.427
+Essa classe é responsável por gerenciar
+os eventos relacionados a sensores de
+
+15
+00:00:57.427 --> 00:00:58.610
+movimento do aparelho.
+
+16
+00:00:58.610 --> 00:01:04.546
+Criamos também uma variável do tipo
+Float chamado AccelerometerValue,
+
+17
+00:01:04.546 --> 00:01:07.690
+que receberá o valor de
+dos eixos do acelerômetro.
+
+18
+00:01:07.690 --> 00:01:10.890
+Vamos inicializar o
+reconhecimento do acelerômetro.
+
+19
+00:01:10.890 --> 00:01:15.110
+Primeiro verificamos se o
+acelerômetro está disponível ou não.
+
+20
+00:01:15.110 --> 00:01:20.677
+Então chamado a função:
+MotionManager.startAccelerometerUpdatesTo-
+
+21
+00:01:20.677 --> 00:01:27.500
+Queue que coloca e executa numa fila uma
+ação a cada atualização do Acelerômetro.
+
+22
+00:01:27.500 --> 00:01:32.250
+Como primeiro argumento passamos
+a fila atual e como render
+
+23
+00:01:32.250 --> 00:01:36.250
+passamos o que queremos que seja feito
+a cada atualização do Acelerômetro.
+
+24
+00:01:36.250 --> 00:01:41.016
+No caso, estamos armazenando na
+variável AccelerometerValue o
+
+25
+00:01:41.016 --> 00:01:43.440
+valor do eixo Y do acelerômetro,
+
+26
+00:01:43.440 --> 00:01:49.084
+que pode ser lida acessando a propriedade
+Acceleration.y do objeto Data.
+
+27
+00:01:49.084 --> 00:01:54.590
+Aqui temos que explicitar o termo
+Self antes de AccelerometerValue,
+
+28
+00:01:54.590 --> 00:01:59.310
+pois essa linha está dentro de bloco de
+código que é executado assincronamente.
+
+29
+00:01:59.310 --> 00:02:03.561
+Até agora tudo que fizemos é atualizar
+o valor de uma variável de acordo com o
+
+30
+00:02:03.561 --> 00:02:04.990
+movimento do aparelho.
+
+31
+00:02:04.990 --> 00:02:08.760
+Precisamos agora atualizar
+a posição do Sprite com esse valor.
+
+32
+00:02:08.760 --> 00:02:13.963
+Atualizamos aqui o eixo X da
+posição do Sprite com a variável
+
+33
+00:02:13.963 --> 00:02:19.130
+AccelerometerValue, que tem que
+ser transformada para CGFloat,
+
+34
+00:02:19.130 --> 00:02:24.440
+que é o tipo utilizado para valores
+de transformados de gráficos.
+
+35
+00:02:24.440 --> 00:02:28.150
+CG são iniciais de Core Graphics.
+
+36
+00:02:28.150 --> 00:02:33.110
+Pluge o aparelho na porta USB do Mac,
+
+37
+00:02:33.110 --> 00:02:37.458
+selecione Device e rode o
+aplicativo Estou mostrando
+
+38
+00:02:37.458 --> 00:02:41.690
+aqui o resultado que gravei
+diretamente de iPhone.
+
+39
+00:02:41.690 --> 00:02:48.291
+[SEM_ÁUDIO] Na próxima
+
+40
+00:02:48.291 --> 00:02:54.752
+aula veremos como adicionar colisões
+simples e efeitos sonoros no jogo.
+
+41
+00:02:54.752 --> 00:02:55.710
+Até lá!

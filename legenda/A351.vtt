@@ -1,0 +1,505 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.573
+Olá.
+
+2
+00:00:00.573 --> 00:00:06.200
+Você já viu nosso curso o
+compensador de avanço de fase.
+
+3
+00:00:06.200 --> 00:00:11.420
+A inspiração para isso era aumentar
+a fase uma determinada frequência.
+
+4
+00:00:11.420 --> 00:00:16.370
+Você também já viu o efeito da
+adição de zero no diagrama de Bode.
+
+5
+00:00:16.370 --> 00:00:19.647
+E é repetido aqui para relembrar.
+
+6
+00:00:19.647 --> 00:00:24.482
+Então, somente com zero,
+você já é capaz de aumentar a fase na
+
+7
+00:00:24.482 --> 00:00:28.580
+frequência desejada de forma a atingir
+a margem de fase requisitada.
+
+8
+00:00:28.580 --> 00:00:34.238
+Esse tipo de controlador é mais simples
+de projetar do que compensador de avanço
+
+9
+00:00:34.238 --> 00:00:38.740
+de fase, uma vez que só é necessário
+escolher a posição do zero e o ganho,
+
+10
+00:00:38.740 --> 00:00:43.848
+ficando com a seguinte função
+de transferência: C de
+
+11
+00:00:43.848 --> 00:00:50.830
+s igual a K p mais K d s que é igual
+a K p vezes 1 mais K d sobre K p s.
+
+12
+00:00:50.830 --> 00:00:54.323
+Nesse formato fica clara a origem do nome
+
+13
+00:00:54.323 --> 00:00:59.196
+Controlador Proporcional Derivativo
+ou simplesmente PD.
+
+14
+00:00:59.196 --> 00:01:04.205
+Isso porque o controlador terá termo
+proporcional ao erro e outro termo
+
+15
+00:01:04.205 --> 00:01:08.940
+que é múltipla da derivada do erro,
+com os ganhos K p e K d respectivamente.
+
+16
+00:01:08.940 --> 00:01:14.530
+O procedimento de projecto é muito
+parecido com o do compensador de avanço,
+
+17
+00:01:14.530 --> 00:01:18.359
+visto que o objetivo é fornecer
+aumento de fase na frequência
+
+18
+00:01:18.359 --> 00:01:20.920
+desejada de cruzamento do zero ômega c.
+
+19
+00:01:20.920 --> 00:01:23.369
+O procedimento segue.
+
+20
+00:01:23.369 --> 00:01:26.632
+Primeiro, calcule a posição do zero de
+
+21
+00:01:26.632 --> 00:01:30.230
+forma a fornececer a fase desejada
+fi na frequência ômega c.
+
+22
+00:01:30.230 --> 00:01:35.030
+Para isso, basta usar a seguinte
+expressão para a fase adicionada pelo PD:
+
+23
+00:01:35.030 --> 00:01:40.018
+fi é igual a fase de C de j ômega c que é
+
+24
+00:01:40.018 --> 00:01:44.462
+igual a fase de Kp mais K d s que é
+
+25
+00:01:44.462 --> 00:01:49.460
+igual ao a arco tangente
+de K d ômega c sobre K p.
+
+26
+00:01:49.460 --> 00:01:57.311
+De onde se pode calcular K d ômega
+c sobre K p igual à tangente de fi,
+
+27
+00:01:57.311 --> 00:02:02.240
+o que implica K d sobre K p igual
+à tangente de fi sobre ômega c.
+
+28
+00:02:02.240 --> 00:02:10.020
+O zero será z 1 igual a K p sobre K d que
+é igual a ômega c sobre a tangente de fi.
+
+29
+00:02:10.020 --> 00:02:15.430
+E você já terá determinado a relação entre
+os ganhos proporcional e derivativo.
+
+30
+00:02:15.430 --> 00:02:20.476
+Segundo, calcule o ganho para
+que o cruzamento de zero
+
+31
+00:02:20.476 --> 00:02:25.381
+dB ocorra ômega c,
+ou seja, módulo de C de j
+
+32
+00:02:25.381 --> 00:02:30.517
+ômega c vezes G de j ômega
+c dB é igual a zero,
+
+33
+00:02:30.517 --> 00:02:36.184
+então, módulo de C de j ômega c
+dB mais módulo de G de j ômega c
+
+34
+00:02:36.184 --> 00:02:41.143
+dB é igual a zero, o que implica
+que o módulo de C de j ômega c dB é
+
+35
+00:02:41.143 --> 00:02:46.240
+igual ao módulo de G de j
+ômega c dB com sinal negativo.
+
+36
+00:02:46.240 --> 00:02:53.780
+Assim, o módulo de C de j ômega c é
+igual a 1 sobre o módulo de G j ômega c.
+
+37
+00:02:53.780 --> 00:02:58.795
+Vamos desenvolver essas expressões
+para obter fórmulas para K p e
+
+38
+00:02:58.795 --> 00:03:03.810
+K d diretamente a partir da
+fase e módulo de G de ômega c.
+
+39
+00:03:03.810 --> 00:03:08.320
+Calculando o módulo de C de j ômega c,
+
+40
+00:03:08.320 --> 00:03:13.181
+módulo de C de ômega c igual
+a raíz quadrada de K p ao
+
+41
+00:03:13.181 --> 00:03:18.180
+quadrado mais K d ao quadrado
+ômega c ao quadrado.
+
+42
+00:03:18.180 --> 00:03:24.110
+E substituindo pelo valor desejado Kp ao
+quadrado mais K d ao quadrado ômega c ao
+
+43
+00:03:24.110 --> 00:03:30.205
+quadrado, tem que ser igual a 1 sobre
+módulo de G de j ômega c ao quadrado.
+
+44
+00:03:30.205 --> 00:03:34.636
+Dividindo por K d ao
+quadrado ficamos com: K p
+
+45
+00:03:34.636 --> 00:03:39.605
+sobre K d ao quadrado mais
+ômega c ao quadrado igual
+
+46
+00:03:39.605 --> 00:03:44.320
+a 1 sobre K d ao quadrado módulo
+de G j ômega c ao quadrado.
+
+47
+00:03:44.320 --> 00:03:50.007
+Lembrando que, K p sobre K d é o valor
+de z 1, determinado no primeiro passo
+
+48
+00:03:50.007 --> 00:03:55.059
+do projeto, temos z 1 ao
+quadrado mais ômega c ao quadrado
+
+49
+00:03:55.059 --> 00:04:00.400
+igual a 1 sobre K d ao quadrado mais
+módulo de G de j ômega c ao quadrado.
+
+50
+00:04:00.400 --> 00:04:05.295
+Substituindo z1 pelo seu valor,
+ficamos com:
+
+51
+00:04:05.295 --> 00:04:10.190
+ômega c ao quadrado sobre tangente ao
+quadrado de fi mais ômega c ao quadrado
+
+52
+00:04:10.190 --> 00:04:15.320
+igual a 1 sobre K d ao quadrado
+vezes módulo de G j ômega
+
+53
+00:04:15.320 --> 00:04:20.350
+c ao quadrado e podemos
+faturar ômega c ao quadrado.
+
+54
+00:04:20.350 --> 00:04:25.807
+Usando agora a identidade trigonométrica 1
+mais tangente ao quadrado de fi igual a 1
+
+55
+00:04:25.807 --> 00:04:32.078
+sobre seno ao quadrado de fi, temos ômega
+c ao quadrado sobre seno ao quadrado de
+
+56
+00:04:32.078 --> 00:04:38.110
+fi igual a 1 sobre K d ao quadrado vezes
+módulo de G de j ômega c ao quadrado.
+
+57
+00:04:38.110 --> 00:04:41.290
+Isolando K d ficamos com,
+
+58
+00:04:41.290 --> 00:04:46.790
+K d igual a seno de fi sobre ômega
+c vezes módulo de G de j ômega c.
+
+59
+00:04:46.790 --> 00:04:53.026
+Voltando a usar o valor do zero calculado,
+temos K p igual a z 1 vezes K d,
+
+60
+00:04:53.026 --> 00:04:59.212
+que será igual a ômega c tangente de fi
+vezes seno de fi sobre ômega c módulo
+
+61
+00:04:59.212 --> 00:05:04.650
+de G de j ômega c, o que dá cosseno de
+fi sobre o módulo e G de j ômega c.
+
+62
+00:05:04.650 --> 00:05:11.180
+Pronto, agora você já tem fórmulas
+bem simples para o projeto.
+
+63
+00:05:11.180 --> 00:05:14.990
+Com isso, usando a fase e o
+módulo de G de j ômega c,
+
+64
+00:05:14.990 --> 00:05:19.770
+você pode facilmente calcular o
+controladador PD 'iii' desejado,
+
+65
+00:05:19.770 --> 00:05:25.015
+com K p igual ao cosseno de fi
+sobre módulo de G de j ômega
+
+66
+00:05:25.015 --> 00:05:31.230
+c e K d igual a seno de fi sobre ômega
+c vezes módulo de G de j ômega c.
+
+67
+00:05:31.230 --> 00:05:33.532
+Mas existe problema.
+
+68
+00:05:33.532 --> 00:05:39.230
+Você já viu que C de s dado dessa forma
+não é uma função de transferência própria,
+
+69
+00:05:39.230 --> 00:05:42.420
+o que significa que o zero puro
+não pode ser implementado.
+
+70
+00:05:42.420 --> 00:05:46.911
+No fundo,
+o projeto fica mais simples porque há
+
+71
+00:05:46.911 --> 00:05:51.737
+parâmetro a menos para se determinar, que
+é a localização do polo que você teria que
+
+72
+00:05:51.737 --> 00:05:54.890
+levar conta no projeto de
+compensador de avanço de fase.
+
+73
+00:05:54.890 --> 00:06:01.286
+Olhando mais uma vez para o
+diagrama de Bode, é como se o polo
+
+74
+00:06:01.286 --> 00:06:06.050
+estivesse uma frequência infinitamente
+alta e sequer aparace na nossa escala.
+
+75
+00:06:06.050 --> 00:06:10.910
+Por isso,
+você não enxerga o momento que o ganho
+
+76
+00:06:10.910 --> 00:06:15.950
+pára de crescer, nem o momento que
+a fase volta a decrescer até zero.
+
+77
+00:06:15.950 --> 00:06:21.020
+Dessa nossa analogia surge
+a solução para o problema.
+
+78
+00:06:21.020 --> 00:06:24.431
+Porque não colocar o polo
+uma frequência muito alta,
+
+79
+00:06:24.431 --> 00:06:29.160
+de maneira a não afetar nem a fase
+nem o ganho torno de ômega c?
+
+80
+00:06:29.160 --> 00:06:34.652
+Você pode colocar polo menos P
+1 com P 1 maior do que zero,
+
+81
+00:06:34.652 --> 00:06:41.150
+usando o seguinte formato:
+1 sobre s sobre P 1 mais
+
+82
+00:06:41.150 --> 00:06:47.220
+1 e tem módulo igual a 1 para frequências
+bem abaixo de módulo de P 1 e fase zero.
+
+83
+00:06:47.220 --> 00:06:50.370
+Vamos calcular o módulo
+e a fase desse termo.
+
+84
+00:06:50.370 --> 00:06:57.107
+O módulo será igual a módulo de 1
+sobre j ômega sobre P 1 mais 1,
+
+85
+00:06:57.107 --> 00:07:02.312
+que é igual a 1 sobre a raíz
+quadrada de ômega sobre P1 ao
+
+86
+00:07:02.312 --> 00:07:08.735
+quadrado mais 1 e a fase será a fase
+de 1 sobre j vezes ômega sobre
+
+87
+00:07:08.735 --> 00:07:13.870
+P 1 mais 1, que é igual a menos o
+arco tangente de ômega sobre P 1.
+
+88
+00:07:13.870 --> 00:07:17.604
+Para ômega igual a módulo de P1 sobre 100,
+
+89
+00:07:17.604 --> 00:07:22.869
+esses valores são: módulo
+igual a raíz de 1 sobre
+
+90
+00:07:22.869 --> 00:07:28.302
+0,01 ao quadrado mais 1
+que é aproximadamente
+
+91
+00:07:28.302 --> 00:07:32.600
+1 e a fase será menos o
+arco tangente de 0,01.
+
+92
+00:07:32.600 --> 00:07:36.767
+Que é aproximadamente menos 0,6 graus.
+
+93
+00:07:36.767 --> 00:07:41.752
+Ou seja, se a frequência de quebra
+associada ao polo estiver 100 vezes
+
+94
+00:07:41.752 --> 00:07:46.588
+acima de ômega c então o ganho ômega c
+é praticamente inalterado e a margem de
+
+95
+00:07:46.588 --> 00:07:49.770
+fase cai de menos do que 0,6 graus.
+
+96
+00:07:49.770 --> 00:07:55.195
+Então, o controlador a ser implementado
+
+97
+00:07:55.195 --> 00:08:01.860
+será C linha de s igual a K p vezes
+1 mais K d sobre K p vezes s,
+
+98
+00:08:01.860 --> 00:08:06.030
+tudo isso dividido por s sobre P 1 mais 1.
+
+99
+00:08:06.030 --> 00:08:13.008
+Isto é, podemos enxergar o controlador PD
+como caso particular do avanço de fase que
+
+100
+00:08:13.008 --> 00:08:17.490
+o polo está frequência tão mais elevada
+que a sua contribuição é desprezível.
+
+101
+00:08:17.490 --> 00:08:22.623
+Agora você aprendeu a projetar controlador
+PD que terá efeito parecido com
+
+102
+00:08:22.623 --> 00:08:27.793
+o de compensador de avanço de fase
+porém com projeto pouco mais simples.
+
+103
+00:08:27.793 --> 00:08:32.798
+No próximo vídeo você verá que deve
+empregar o controlador PD com cautela,
+
+104
+00:08:32.798 --> 00:08:36.850
+devido ao polo frequência de
+quebra alta que é introduzido.

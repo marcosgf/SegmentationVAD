@@ -1,0 +1,490 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.957
+[MÚSICA] Olá, você!
+
+2
+00:00:09.957 --> 00:00:15.640
+Estamos no curso de Orientação
+a Objetos com Java.
+
+3
+00:00:15.640 --> 00:00:20.464
+Meu nome é Eduardo Guerra e hoje eu vou
+tá falando pra vocês sobre a cadeia de
+
+4
+00:00:20.464 --> 00:00:21.469
+construtores.
+
+5
+00:00:21.469 --> 00:00:22.400
+Que que é isso?
+
+6
+00:00:22.400 --> 00:00:26.910
+A gente vai entender como que os
+construtores são invocados quando
+
+7
+00:00:26.910 --> 00:00:29.686
+a gente tem uma hierarquia de classes.
+
+8
+00:00:29.686 --> 00:00:32.791
+Ou seja, bom,
+quando você tem ali uma subclasse,
+
+9
+00:00:32.791 --> 00:00:36.082
+o que que acontece, como que você
+inicializa as superclasses que
+
+10
+00:00:36.082 --> 00:00:40.000
+fazem parte dessa classe
+que você tá instanciando?
+
+11
+00:00:40.000 --> 00:00:43.312
+Então, você pensa,
+né: eu tenho ali uma subclasse,
+
+12
+00:00:43.312 --> 00:00:45.832
+ela tá estendendo uma superclasse...
+
+13
+00:00:45.832 --> 00:00:48.978
+Como que você vai inicializar,
+na subclasse,
+
+14
+00:00:48.978 --> 00:00:52.115
+aquelas coisas que são da superclasse?
+
+15
+00:00:52.115 --> 00:00:57.110
+Por exemplo, a superclasse, ela tem às
+vezes vários atributos ali que eles
+
+16
+00:00:57.110 --> 00:01:03.521
+precisam de uma inicialização no momento
+que você vai lá e instancia o objeto.
+
+17
+00:01:03.521 --> 00:01:07.397
+E, aquela coisa né, se a superclasse,
+
+18
+00:01:07.397 --> 00:01:14.690
+ela precisa instanciar essas variáveis,
+ela tem construtores pra fazer isso.
+
+19
+00:01:14.690 --> 00:01:18.317
+Ou seja, ela mesma já tem os
+seus próprios construtores.
+
+20
+00:01:18.317 --> 00:01:23.592
+Então, como é que a subclasse faz, né, pra
+falar assim: "Ô, superclasse, inicializa
+
+21
+00:01:23.592 --> 00:01:28.710
+aí o que que você tem que inicializar que
+depois eu faço aqui o que eu preciso".
+
+22
+00:01:28.710 --> 00:01:33.320
+Então, Java, é obrigatório que construtor,
+
+23
+00:01:33.320 --> 00:01:38.450
+ele chame outro construtor
+como sua primeira ação.
+
+24
+00:01:38.450 --> 00:01:42.708
+Então essa é uma forma de garantir
+que sempre vai ser inicializado.
+
+25
+00:01:42.708 --> 00:01:47.423
+Então vai se chamando construtores,
+construtores, construtores até que se
+
+26
+00:01:47.423 --> 00:01:51.740
+chame lá o construtor de Object
+que vai fechar todo esse ciclo aí.
+
+27
+00:01:51.740 --> 00:01:57.121
+Então a gente tem duas opções pra
+invocação desses construtores.
+
+28
+00:01:57.121 --> 00:02:02.430
+A gente pode tá invocando aqui
+o construtor da superclasse ou
+
+29
+00:02:02.430 --> 00:02:07.986
+construtor da minha própria classe,
+sendo que ciclos não são permitidos.
+
+30
+00:02:07.986 --> 00:02:10.880
+Ou seja, eu não posso chamar construtor...
+
+31
+00:02:10.880 --> 00:02:12.182
+Eu tenho construtor A,
+
+32
+00:02:12.182 --> 00:02:15.630
+eu não posso chamar construtor B
+que chama de volta o construtor A.
+
+33
+00:02:15.630 --> 00:02:18.647
+Então ele não permite que
+esses ciclos aconteçam.
+
+34
+00:02:18.647 --> 00:02:23.383
+E aí pra invocar o construtor da
+superclasse eu uso super() e pra invocar
+
+35
+00:02:23.383 --> 00:02:26.880
+o construtor da própria
+classe eu uso this().
+
+36
+00:02:26.880 --> 00:02:28.994
+Os dois com parênteses depois.
+
+37
+00:02:28.994 --> 00:02:32.360
+É como se você estivesse
+invocando construtor.
+
+38
+00:02:32.360 --> 00:02:37.523
+Obviamente se esse construtor recebe
+parâmetros, seja da superclasse ou
+
+39
+00:02:37.523 --> 00:02:43.760
+da própria classe, você pode, você tem,
+né, que passar os parâmetros pra ele.
+
+40
+00:02:43.760 --> 00:02:46.846
+E aí você me pergunta, né: puxa vida,
+
+41
+00:02:46.846 --> 00:02:51.563
+eu já criei construtores,
+às vezes até mais de na classe e
+
+42
+00:02:51.563 --> 00:02:56.712
+nunca botei this() ou
+super() logo no começo dele.
+
+43
+00:02:56.712 --> 00:03:00.300
+Então como é que pode,
+você tá falando aí que é obrigatório,
+
+44
+00:03:00.300 --> 00:03:04.712
+como é que pode se eu já criei
+construtor que eu nunca criei isso?
+
+45
+00:03:04.712 --> 00:03:10.060
+É que, digamos assim, o compilador,
+ele faz umas coisinhas pra você.
+
+46
+00:03:10.060 --> 00:03:15.040
+Então quando você não chama o
+construtor de forma explícita,
+
+47
+00:03:15.040 --> 00:03:18.769
+é como se ele colocasse pra você super(),
+né,
+
+48
+00:03:18.769 --> 00:03:24.632
+uma chamada pro super() sem parâmetros,
+logo no começo do seu construtor.
+
+49
+00:03:24.632 --> 00:03:25.438
+Tá certo?
+
+50
+00:03:25.438 --> 00:03:29.551
+Então, ó, quando você cria o construtor,
+por exemplo, dessa classe,
+
+51
+00:03:29.551 --> 00:03:33.605
+chamada MinhaClasse, muito criativo
+o nome, e não coloca nada no começo,
+
+52
+00:03:33.605 --> 00:03:35.998
+é como se tivesse esse super() aqui.
+
+53
+00:03:35.998 --> 00:03:39.710
+É como se você colocasse ali,
+só que isso aí fica implícito.
+
+54
+00:03:39.710 --> 00:03:44.890
+Então, vamos entender o que que
+exatamente o compilador cria pra você.
+
+55
+00:03:44.890 --> 00:03:51.763
+Então, toda vez que você cria uma classe
+e você não coloca construtor nenhum,
+
+56
+00:03:51.763 --> 00:03:56.936
+o compilador vai colocar
+construtor default sem parâmetros,
+
+57
+00:03:56.936 --> 00:03:59.755
+que não faz nada, naquela classe.
+
+58
+00:03:59.755 --> 00:04:03.980
+Ou seja: toda classe,
+ela tem pelo menos construtor.
+
+59
+00:04:03.980 --> 00:04:05.947
+Se você não definir nenhum,
+
+60
+00:04:05.947 --> 00:04:10.880
+construtor default vai ser criado
+pra você: construtor sem parâmetros.
+
+61
+00:04:10.880 --> 00:04:16.228
+A outra coisa que faz pra você é
+quando num construtor você não invoca
+
+62
+00:04:16.228 --> 00:04:22.487
+outro construtor, é colocada uma chamada
+ao super(), sem parâmetros, pra você.
+
+63
+00:04:22.487 --> 00:04:27.336
+Então vamos entender como que
+muitas vezes a gente tá acostumado
+
+64
+00:04:27.336 --> 00:04:32.174
+com as coisas que, digamos assim,
+o compilador já faz pra
+
+65
+00:04:32.174 --> 00:04:37.046
+gente e que às vezes a gente comete alguns
+erros e às vezes quando esse erro aparece,
+
+66
+00:04:37.046 --> 00:04:41.913
+a gente não entende exatamente por que
+que tá acontecendo aquele problema.
+
+67
+00:04:41.913 --> 00:04:46.698
+Então imagina esse caso aqui:
+eu tenho a classe Super, SuperC,
+
+68
+00:04:46.698 --> 00:04:51.380
+que ela tem construtor que
+recebe parâmetro inteiro.
+
+69
+00:04:51.380 --> 00:04:56.856
+E aí, por exemplo, eu crio uma classe
+SubC, certo, e essa tem construtor vazio.
+
+70
+00:04:56.856 --> 00:05:00.012
+Esse é caso que vai dar erro.
+
+71
+00:05:00.012 --> 00:05:00.860
+Por quê?
+
+72
+00:05:00.860 --> 00:05:06.152
+Porque o construtor default
+que tá sendo colocado ali,
+
+73
+00:05:06.152 --> 00:05:10.168
+no caso o super(),
+ele não existe na superclasse.
+
+74
+00:05:10.168 --> 00:05:13.790
+Você fala assim: mas o construtor
+default não é criado pra mim?
+
+75
+00:05:13.790 --> 00:05:17.009
+É se você não define nenhum construtor.
+
+76
+00:05:17.009 --> 00:05:21.993
+Então se você definir construtor
+que recebe algum parâmetro,
+
+77
+00:05:21.993 --> 00:05:27.172
+como é o exemplo aqui do SuperC,
+que define esse construtor inteiro,
+
+78
+00:05:27.172 --> 00:05:31.185
+você não vai conseguir que
+ele seja chamado por default.
+
+79
+00:05:31.185 --> 00:05:34.120
+Você tem que chamar ele explicitamente.
+
+80
+00:05:34.120 --> 00:05:38.682
+Então no caso, pra que funcione,
+eu precisaria que a minha classe SubC,
+
+81
+00:05:38.682 --> 00:05:43.552
+ela pode até ter construtor que
+não seja igual ao da superclasse,
+
+82
+00:05:43.552 --> 00:05:46.857
+mas tem que invocar ele explicitamente.
+
+83
+00:05:46.857 --> 00:05:51.525
+Então o construtor do SubC, ele tem
+que chamar super() passando inteiro,
+
+84
+00:05:51.525 --> 00:05:52.175
+que aí sim,
+
+85
+00:05:52.175 --> 00:05:57.400
+esse construtor existe na superclasse e eu
+não vou tá violando nenhuma dessas regras.
+
+86
+00:05:57.400 --> 00:06:02.330
+Então lembre-se, né, que todo construtor,
+toda classe que você criar,
+
+87
+00:06:02.330 --> 00:06:06.999
+mesmo que ela não tenha superclasse,
+na verdade ela vai ter o Object,
+
+88
+00:06:06.999 --> 00:06:12.320
+logo no começo do construtor dela, ela vai
+tá chamando o super() da classe Object.
+
+89
+00:06:12.320 --> 00:06:17.216
+E assim a gente tem essa cadeia,
+né, de que uma classe sempre
+
+90
+00:06:17.216 --> 00:06:22.295
+vai tá chamando o construtor da
+superclasse; só quando essas superclasses
+
+91
+00:06:22.295 --> 00:06:27.359
+retornarem que ele vai tá executando o
+construtor exatamente daquela classe.
+
+92
+00:06:27.359 --> 00:06:30.706
+E o construtor tem sempre
+que ser chamado primeiro.
+
+93
+00:06:30.706 --> 00:06:33.819
+Você não pode fazer algumas
+coisas e depois chamar
+
+94
+00:06:33.819 --> 00:06:36.000
+o construtor da superclasse, tá?
+
+95
+00:06:36.000 --> 00:06:38.120
+Ele tem que ser chamado primeiro.
+
+96
+00:06:38.120 --> 00:06:43.164
+Vocês vão ver aí logo seguida tem "hands
+on" que vai mostrar pra vocês aí,
+
+97
+00:06:43.164 --> 00:06:48.036
+na prática, aí, como que essa dinâmica
+da cadeia de construtores funciona.
+
+98
+00:06:48.036 --> 00:06:53.083
+Então espero que nessa aula tenha ficado
+pouquinho mais claro como que funciona
+
+99
+00:06:53.083 --> 00:06:58.350
+aí essa questão da construção dos objetos,
+a invocação dos construtores quando você
+
+100
+00:06:58.350 --> 00:07:03.600
+não tem ali a classe sozinha mas ela tá no
+contexto aí de uma hierarquia de classes,
+
+101
+00:07:03.600 --> 00:07:08.517
+ela tem superclasses que também têm
+questões a serem inicializadas.
+
+102
+00:07:08.517 --> 00:07:09.780
+Muito obrigado!
+
+103
+00:07:09.780 --> 00:07:15.750
+[MÚSICA]

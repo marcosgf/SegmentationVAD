@@ -1,0 +1,1002 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.138
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:09.138 --> 00:00:13.730
+bem vindo ao curso de
+orientação a objetos com Java.
+
+3
+00:00:13.730 --> 00:00:20.883
+Eu sou o Clovis Fernandes e hoje iremos
+falar do princípio "Tell, Don' Ask".
+
+4
+00:00:20.883 --> 00:00:25.800
+Na aula anterior nós vimos que o acesso
+
+5
+00:00:25.800 --> 00:00:31.390
+a dados internos da classe diretamente,
+ou via "Getters e setters"
+
+6
+00:00:31.390 --> 00:00:36.910
+isso não era uma coisa boa,
+havia acoplamento muito forte.
+
+7
+00:00:36.910 --> 00:00:41.680
+A ideia na aula de hoje é
+
+8
+00:00:41.680 --> 00:00:46.430
+usando esse princípio,
+diminuir sensivelmente
+
+9
+00:00:46.430 --> 00:00:51.180
+a quantidade de dependência entre
+uma classe relação a outra.
+
+10
+00:00:51.180 --> 00:00:55.580
+No decorrer então da aula,
+eu vou mostrar a você,
+
+11
+00:00:55.580 --> 00:01:00.993
+uma forma de usando o princípio "Tell,
+
+12
+00:01:00.993 --> 00:01:07.011
+don't ask!" como tratar esses
+problemas de acoplamento
+
+13
+00:01:07.011 --> 00:01:12.256
+alto devido ao "Getter e Setter"
+associado a dados internos.
+
+14
+00:01:12.256 --> 00:01:17.505
+Na aula anterior a gente viu que isso
+não era uma coisa boa, era muito ruim.
+
+15
+00:01:17.505 --> 00:01:21.930
+Nós deixamos bem claro,
+nós carimbamos aquilo como uma coisa ruim.
+
+16
+00:01:21.930 --> 00:01:27.486
+E na aula de hoje, nós iremos então
+mostrar como transformar aquela
+
+17
+00:01:27.486 --> 00:01:32.220
+coisa que era ruim, numa coisa que é boa,
+numa coisa que deixa a gente mais feliz.
+
+18
+00:01:32.220 --> 00:01:33.943
+Feliz que sentido?
+
+19
+00:01:33.943 --> 00:01:37.571
+O acoplamento que era alto,
+vai ser reduzido.
+
+20
+00:01:37.571 --> 00:01:39.874
+É esse o objetivo da aula de hoje.
+
+21
+00:01:39.874 --> 00:01:44.938
+Esse conceito que eu estou mostrando
+aí Inglês "Tell, don' ask!",
+
+22
+00:01:44.938 --> 00:01:49.600
+ele corresponde a "Ordene,
+não peça!", ou seja,
+
+23
+00:01:49.600 --> 00:01:56.298
+não peça pela informação que você vai usar
+para realizar uma determinada tarefa.
+
+24
+00:01:56.298 --> 00:01:59.151
+Ao invés, o que é que você faz?
+
+25
+00:01:59.151 --> 00:02:03.393
+Você faz com que o objeto
+do qual você estava
+
+26
+00:02:03.393 --> 00:02:08.284
+querendo obter essa informação
+faça a tarefa para você.
+
+27
+00:02:08.284 --> 00:02:11.856
+É isso que está no sentido
+para você ordenar,
+
+28
+00:02:11.856 --> 00:02:16.031
+não pedir a informação para
+você e você querer fazer.
+
+29
+00:02:16.031 --> 00:02:18.897
+É isso que é a diferença importante.
+
+30
+00:02:18.897 --> 00:02:22.978
+Eu estou realçando aí os
+pontos que são importantes que
+
+31
+00:02:22.978 --> 00:02:27.880
+é no sentido de que eu sempre tenho
+objetivo do que eu quero fazer.
+
+32
+00:02:27.880 --> 00:02:30.519
+Para isso vou precisar
+de algumas informações.
+
+33
+00:02:30.519 --> 00:02:34.070
+Eventualmente essas informações
+estão objetos de outras classes.
+
+34
+00:02:34.070 --> 00:02:39.908
+Ao invés de querer obter essas
+informações para eu realizar a ação
+
+35
+00:02:39.908 --> 00:02:45.670
+que eu quero fazer, o melhor lugar é no
+outro objeto porque a informação está lá.
+
+36
+00:02:45.670 --> 00:02:50.222
+Então eu simplesmente passo para
+
+37
+00:02:50.222 --> 00:02:54.383
+esse objeto a lógica da ação
+que eu estava querendo.
+
+38
+00:02:54.383 --> 00:02:58.708
+Quando eu defini a lógica da
+responsabilidade anteriormente eu não
+
+39
+00:02:58.708 --> 00:03:04.690
+estava pensando nesse princípio ao fazer
+a revisão da minha lógica dessa forma,
+
+40
+00:03:04.690 --> 00:03:09.195
+eu percebo que quem deve fazer
+isso é o outro objeto, não eu.
+
+41
+00:03:09.195 --> 00:03:11.272
+Então há uma distribuição.
+
+42
+00:03:11.272 --> 00:03:13.700
+Isso faz parde da modelagem CRC.
+
+43
+00:03:13.700 --> 00:03:20.836
+Vamos exemplificar então usando
+a classe "A" e "B" aí do meu exemplo
+
+44
+00:03:20.836 --> 00:03:27.531
+que eu mostro a situação que
+estava na aula anterior,
+
+45
+00:03:27.531 --> 00:03:32.630
+que eu estava expondo os dados,
+estou caribando os
+
+46
+00:03:32.630 --> 00:03:37.715
+dados que estão expostos
+porque eu tenho uma variável
+
+47
+00:03:37.715 --> 00:03:42.768
+na classe "B" "x" que é privada,
+mas eu estou expondo
+
+48
+00:03:42.768 --> 00:03:48.706
+esses dados através do "get(x)" e
+o "set(x)", o "get(x)" para obter
+
+49
+00:03:48.706 --> 00:03:53.350
+o valor do "x" e o "set(x)" comparando
+aquele valor para alterar o valor de x.
+
+50
+00:03:53.350 --> 00:03:59.421
+Eu estou expondo esse dado externamente,
+então no meu caso ali da classe "A",
+
+51
+00:03:59.421 --> 00:04:03.140
+ele está querendo
+incrementar o valor de "B".
+
+52
+00:04:03.140 --> 00:04:06.970
+Incrementar o valor de "B" significa você,
+
+53
+00:04:06.970 --> 00:04:11.450
+no caso aí é incrementar por 1 apenas,
+
+54
+00:04:11.450 --> 00:04:14.920
+significa você obter o sucessor.
+
+55
+00:04:14.920 --> 00:04:17.769
+Então o que é que ele faz agora?
+
+56
+00:04:17.769 --> 00:04:22.856
+Antes, ele vai obter o "x" na
+lógica ali de método da classe "A",
+
+57
+00:04:22.856 --> 00:04:27.515
+ele obtém o "x", soma de 1,
+que é o sucessor, e manda que o objeto da
+
+58
+00:04:27.515 --> 00:04:32.110
+classe "B" armazene o novo
+valor do sucessor "B".
+
+59
+00:04:32.110 --> 00:04:34.201
+Pronto, isso não é uma coisa boa.
+
+60
+00:04:34.201 --> 00:04:35.861
+Eu estou expondo os dados.
+
+61
+00:04:35.861 --> 00:04:42.610
+Então, como é que eu resolvo isso
+usando o príncipio "Tell, don't ask!"?
+
+62
+00:04:42.610 --> 00:04:46.867
+Agora nós vamos então,
+o que é que a classe "A" quer?
+
+63
+00:04:46.867 --> 00:04:50.466
+É o sucessor do dado exposto
+por "set(x)" e "get(x)".
+
+64
+00:04:50.466 --> 00:04:55.859
+Então quando eu falo que quero incrementar
+o valor de "B" é apenas por 1, então,
+
+65
+00:04:55.859 --> 00:05:02.715
+lá na lógica do método de "A" eu
+tenho lá o "b.setX(b.getX( ) + 1",
+
+66
+00:05:02.715 --> 00:05:10.300
+eu fui lá, obtive o valor de "x" do
+objeto "B" e somo de 1, o sucessor".
+
+67
+00:05:10.300 --> 00:05:12.905
+Então, qual é que é a solução agora?
+
+68
+00:05:12.905 --> 00:05:15.350
+Eu não quero deixar isso exposto.
+
+69
+00:05:15.350 --> 00:05:17.833
+Então o que é que eu faço primeiramente?
+
+70
+00:05:17.833 --> 00:05:23.700
+Essa responsabilidade de calcular o
+sucessor, eu transfiro para a classe "B".
+
+71
+00:05:23.700 --> 00:05:28.433
+Então, lá na classe "B" vai ter uma
+responsabilidade que é o sucessor e que
+
+72
+00:05:28.433 --> 00:05:33.190
+vai fazer exatamente isso que eu
+estou fazendo aqui dentro do método
+
+73
+00:05:33.190 --> 00:05:34.450
+da classe "A".
+
+74
+00:05:34.450 --> 00:05:40.833
+O lugar mais apropriado para fazer é
+lá "B", porque "B" tem a informação.
+
+75
+00:05:40.833 --> 00:05:46.294
+Então eu vou ordenar que "B" me dê
+o sucessor ,e a lógica do sucessor
+
+76
+00:05:46.294 --> 00:05:51.308
+é aquilo que eu estava usando atualmente,
+e eu vou passá-la para "B".
+
+77
+00:05:51.308 --> 00:05:53.973
+Então a lógica inclusive, já está pronta.
+
+78
+00:05:53.973 --> 00:06:00.326
+Então vejam que a classe "B",
+agora tem método público que é o sucessor.
+
+79
+00:06:00.326 --> 00:06:05.304
+Os métodos "get(x)" e "set(x)"
+que antes eram públicos,
+
+80
+00:06:05.304 --> 00:06:07.768
+agora eu deixo eles como protegidos.
+
+81
+00:06:07.768 --> 00:06:09.930
+Vou explicar isso daqui a pouco.
+
+82
+00:06:09.930 --> 00:06:13.527
+Eu deixo protegido,
+de forma a que externamente,
+
+83
+00:06:13.527 --> 00:06:17.564
+o objeto da classe "B"
+não expõe mais o dado.
+
+84
+00:06:17.564 --> 00:06:24.202
+A única forma de alterar o "x" é
+na hora que eu crio objeto "B",
+
+85
+00:06:24.202 --> 00:06:30.490
+pelo construtor "B", ou na hora de passar
+a mensagem sucessor para objeto "B".
+
+86
+00:06:30.490 --> 00:06:34.280
+Como a gente está vendo aí, aquela
+operação que eu fazia no método de "A",
+
+87
+00:06:34.280 --> 00:06:37.240
+agora estou fazendo dentro
+do método do sucessor.
+
+88
+00:06:37.240 --> 00:06:40.423
+Ele é público porque a classe "A",
+
+89
+00:06:40.423 --> 00:06:45.463
+o método da classe "A" tem agora
+o sucessor como colaboração.
+
+90
+00:06:45.463 --> 00:06:50.690
+Dê uma olhada aí na classe "A"
+no "Antes" que o método da
+
+91
+00:06:50.690 --> 00:06:56.420
+classe "A" tinha lá como comentário
+"Incrementa o valor de b!" que é de 1,
+
+92
+00:06:56.420 --> 00:07:01.729
+e isso significa o sucessor e a expressão
+toda com que eu calculo isso.
+
+93
+00:07:01.729 --> 00:07:06.062
+Então, eu tenho lá duas
+dependências do método "A"
+
+94
+00:07:06.062 --> 00:07:10.420
+relação ao método "B" que
+é o "set(x)" e o "get(x)".
+
+95
+00:07:10.420 --> 00:07:14.755
+Bom, depois, usando o princípio do "Tell,
+don't ask!".
+
+96
+00:07:14.755 --> 00:07:20.840
+Eu simplesmente não preciso nem colocar
+comentário porque fica claríssimo.
+
+97
+00:07:20.840 --> 00:07:25.850
+Eu estou com o objeto "B" e mando
+calcular o sucessor, só isso.
+
+98
+00:07:25.850 --> 00:07:27.287
+Já está claro.
+
+99
+00:07:27.287 --> 00:07:30.830
+Nem comentário se torna necessário.
+
+100
+00:07:30.830 --> 00:07:35.760
+Como sucessor eu coloquei como público
+lá "B" e eu tenho acesso aqui "A".
+
+101
+00:07:35.760 --> 00:07:41.470
+Olhando agora o todo,
+dá para ver que a classe "A",
+
+102
+00:07:41.470 --> 00:07:46.097
+o método da classe "A", agora só tem uma
+
+103
+00:07:46.097 --> 00:07:51.151
+dependência relação ao método sucessor.
+
+104
+00:07:51.151 --> 00:07:55.977
+É uma colaboração do método
+sucessor da classe "B".
+
+105
+00:07:55.977 --> 00:08:01.050
+Antes, eu tinha duas, então,
+a redução foi de 50%.
+
+106
+00:08:01.050 --> 00:08:07.160
+Eu tinha apenas método, mas imagine
+que se eu tivesse por exemplo, vários
+
+107
+00:08:07.160 --> 00:08:12.955
+métodos de diversas classes que usassem
+esse método sucessor da classe "B".
+
+108
+00:08:12.955 --> 00:08:17.228
+Pelo esquema anterior todo o
+cálculo tinha que ser feito cada
+
+109
+00:08:17.228 --> 00:08:20.830
+desses lugares diferentes,
+tendo o código redundante.
+
+110
+00:08:20.830 --> 00:08:25.932
+Agora, tendo passado para o lugar certo,
+que é a classe "B", além de não expor
+
+111
+00:08:25.932 --> 00:08:32.562
+os dados internos usando "get(x)" e
+"set(x)" eu reduzi o acoplamento 50%,
+
+112
+00:08:32.562 --> 00:08:36.964
+que é uma coisa brutal quando
+eu tenho mais redundância.
+
+113
+00:08:36.964 --> 00:08:41.550
+Quando tenho uma não fica
+muito expressivo, mas eu posso
+
+114
+00:08:41.550 --> 00:08:46.180
+imaginar que eu poderia ter muitos
+lugares querendo usar esse sucessor.
+
+115
+00:08:46.180 --> 00:08:48.707
+Na modelagem "CRC", o princípio "Tell,
+
+116
+00:08:48.707 --> 00:08:52.751
+don't ask!" que nós estamos
+agora apresentando,
+
+117
+00:08:52.751 --> 00:08:59.700
+já deve fazer parte quando você está
+modelando a lógica das responsabilidades.
+
+118
+00:08:59.700 --> 00:09:06.826
+Vocês viram que isso é importante,
+porque eu reduzo o acoplamento,
+
+119
+00:09:06.826 --> 00:09:11.915
+eu reduzo a exposição de
+dados internos deste tipo,
+
+120
+00:09:11.915 --> 00:09:15.500
+usando "getters e
+setters" como eu mostrei.
+
+121
+00:09:15.500 --> 00:09:20.589
+Então, é muito importante
+aplicar isso na hora
+
+122
+00:09:20.589 --> 00:09:27.676
+que eu estou fazendo a definição da lógica
+das responsabilidades a qualquer momento,
+
+123
+00:09:27.676 --> 00:09:33.052
+a qualquer momento que eu esteja
+precisando definir ou redefinir a lógica,
+
+124
+00:09:33.052 --> 00:09:35.035
+eu vou sempre pensar nisso.
+
+125
+00:09:35.035 --> 00:09:40.048
+Porque essa é uma maneira orientada
+a objetos, verdadeiramente
+
+126
+00:09:40.048 --> 00:09:44.905
+orientada a objetos e não podemos
+deixar de fazer uso disso,
+
+127
+00:09:44.905 --> 00:09:49.183
+se isso vai tornar o meu programa,
+a minha aplicação,
+
+128
+00:09:49.183 --> 00:09:54.486
+menos acoplada,
+mais flexível e com mais qualidade.
+
+129
+00:09:54.486 --> 00:10:00.498
+Quero ressaltar que a aplicação
+desse princípio Tell,
+
+130
+00:10:00.498 --> 00:10:06.290
+don´t ask, normalmente a gente faz
+com as responsabilidades do tipo faz!
+
+131
+00:10:06.290 --> 00:10:09.820
+Porque as responsabilidades do
+tipo Sabe elas são muito simples.
+
+132
+00:10:09.820 --> 00:10:14.750
+A implicação que vai ter,
+vai ser com relação a quando eu estiver
+
+133
+00:10:14.750 --> 00:10:19.869
+traduzindo uma
+responsabilidade do tipo Sabe,
+
+134
+00:10:19.869 --> 00:10:24.504
+Getters ou Setters e eventualmente
+eu já vou definir esses
+
+135
+00:10:24.504 --> 00:10:27.851
+getters e setters como protegidos.
+
+136
+00:10:27.851 --> 00:10:32.180
+A outra coisa é que usando esse princípio,
+
+137
+00:10:32.180 --> 00:10:39.326
+você naturalmente vai
+distribuindo mais a inteligência,
+
+138
+00:10:39.326 --> 00:10:43.320
+as funcionalidades, através das classes.
+
+139
+00:10:43.320 --> 00:10:46.521
+Porque você vai atribuir as
+
+140
+00:10:46.521 --> 00:10:51.627
+responsabilidades às
+classes mais apropriadas.
+
+141
+00:10:51.627 --> 00:10:57.110
+No caso aqui, nesse exemplo,
+era a classe que continha uma informação.
+
+142
+00:10:57.110 --> 00:11:02.469
+Vez de eu buscar essa informação
+e trazer pra mim, eu simplesmente
+
+143
+00:11:02.469 --> 00:11:06.660
+ordeno para esse lugar que tem essa
+informação, para fazer o que eu quero.
+
+144
+00:11:06.660 --> 00:11:08.906
+A consequência, como nós vimos,
+
+145
+00:11:08.906 --> 00:11:12.090
+é a diminuição do acoplamento
+entre as classes.
+
+146
+00:11:12.090 --> 00:11:15.708
+Para esse tipo de acoplamento,
+
+147
+00:11:15.708 --> 00:11:19.978
+que é considerado entre os piores,
+
+148
+00:11:19.978 --> 00:11:24.080
+que os dados internos ficam expostos,
+
+149
+00:11:24.080 --> 00:11:28.174
+ou diretamente,
+ou através de getters e setters,
+
+150
+00:11:28.174 --> 00:11:33.040
+isso no nosso caso, a gente diminui 50%.
+
+151
+00:11:33.040 --> 00:11:39.300
+A outra coisa é que você também diminui a
+necessidade de getters e setters públicos.
+
+152
+00:11:39.300 --> 00:11:43.450
+Poucos casos serão necessários
+ter getters e setters públicos.
+
+153
+00:11:43.450 --> 00:11:48.530
+Por exemplo,
+classes que são repositórios de dados,
+
+154
+00:11:48.530 --> 00:11:53.221
+muitas vezes você é obrigado a ter
+getters e setters para obter
+
+155
+00:11:53.221 --> 00:11:57.900
+alguma informação,
+porque eles é repositórios de dados.
+
+156
+00:11:57.900 --> 00:12:01.748
+O livro por exemplo, você às vezes quer
+saber alguma informação sobre o livro,
+
+157
+00:12:01.748 --> 00:12:03.250
+se ele está disponível ou não.
+
+158
+00:12:03.250 --> 00:12:06.625
+Para isso você vai obter essa informação.
+
+159
+00:12:06.625 --> 00:12:12.093
+Ou seja, ela naturalmente vai
+aparecer na minha modelagem CRC.
+
+160
+00:12:12.093 --> 00:12:16.562
+A consequência é que a maioria
+dos getters e setters,
+
+161
+00:12:16.562 --> 00:12:21.039
+os getters que também são chamados
+de métodos de acesso que os
+
+162
+00:12:21.039 --> 00:12:25.894
+getters você acessa a informação,
+dado de variáveis de instância.
+
+163
+00:12:25.894 --> 00:12:30.150
+O setters é que modificam,
+é uma edição chamadas de Mutators.
+
+164
+00:12:30.150 --> 00:12:33.740
+A maioria dos getters e
+setters vão ser protegidos.
+
+165
+00:12:33.740 --> 00:12:38.130
+Por convenção, quando eu estiver
+pensando colocar getters e setters,
+
+166
+00:12:38.130 --> 00:12:40.090
+eu coloco eles como protegidos.
+
+167
+00:12:40.090 --> 00:12:44.327
+No Java, isso vai aparecer como Protected,
+
+168
+00:12:44.327 --> 00:12:47.938
+eu vou dizer que ou então UML,
+
+169
+00:12:47.938 --> 00:12:53.190
+representando o Jogo da Velha, o Hash.
+
+170
+00:12:53.190 --> 00:12:59.974
+Como vocês lembram, quando eu
+mostrei na classe B anteriormente,
+
+171
+00:12:59.974 --> 00:13:06.870
+o Get X e Set X eu representei
+ele no depois, já com esse Hash,
+
+172
+00:13:06.870 --> 00:13:11.800
+com esse Jogo da Velha,
+indicando que eles já são protegidos.
+
+173
+00:13:11.800 --> 00:13:14.529
+O que significa ser protegido?
+
+174
+00:13:14.529 --> 00:13:18.110
+Não tem acesso externo do objeto,
+só internamente.
+
+175
+00:13:18.110 --> 00:13:21.110
+Eu poderia ter colocado como privado,
+se eu quisesse.
+
+176
+00:13:21.110 --> 00:13:24.078
+Mas porque eu coloco como protegido?
+
+177
+00:13:24.078 --> 00:13:29.567
+Eu coloco como protegido porque eu
+quero permitir o acesso a objetos
+
+178
+00:13:29.567 --> 00:13:36.140
+de subclasses da classe do qual esse
+getter e setter foram definidos.
+
+179
+00:13:36.140 --> 00:13:39.210
+Por isso eu coloco como protegido.
+
+180
+00:13:39.210 --> 00:13:44.102
+Normalmente, o protegido,
+essa forma de acesso Protected,
+
+181
+00:13:44.102 --> 00:13:48.287
+não vai acontecer de outra forma,
+só vai acontecer normalmente,
+
+182
+00:13:48.287 --> 00:13:52.995
+para getters e setters e
+por causa do uso subclasse.
+
+183
+00:13:52.995 --> 00:13:58.732
+Porque é que a subclasse eu preciso
+ter isso protegido no getter e setter?
+
+184
+00:13:58.732 --> 00:14:03.055
+Porque o getter e setter está
+permitindo o acesso às variáveis de
+
+185
+00:14:03.055 --> 00:14:05.195
+instância da classe.
+
+186
+00:14:05.195 --> 00:14:11.180
+Por convenção, nós estamos e pelo
+princípio do encapsulamento,
+
+187
+00:14:11.180 --> 00:14:19.600
+nós estamos colocando que as variáveis de
+instância são sempre, sempre, privadas.
+
+188
+00:14:19.600 --> 00:14:25.600
+Sinalzinho negativo na UML,
+Private no Java.
+
+189
+00:14:25.600 --> 00:14:26.939
+O que significa isso?
+
+190
+00:14:26.939 --> 00:14:31.882
+Se eu criar uma subclasse dessa classe,
+a variável de instância não vai
+
+191
+00:14:31.882 --> 00:14:35.900
+ser transmitida como
+herança para a subclasse.
+
+192
+00:14:35.900 --> 00:14:39.993
+Mas eu quero usar isso,
+como é que eu faço isso?
+
+193
+00:14:39.993 --> 00:14:44.330
+Nessa hora é que eu vou usar os
+métodos de acesso protegidos.
+
+194
+00:14:44.330 --> 00:14:49.226
+Então o método de acesso, basicamente,
+é para permitir o acesso às variáveis de
+
+195
+00:14:49.226 --> 00:14:53.865
+instância por subclasse,
+não externamente, embora alguns casos,
+
+196
+00:14:53.865 --> 00:14:57.840
+como eu falei, algumas classes
+do tipo repositórios de dados,
+
+197
+00:14:57.840 --> 00:15:02.920
+eles vão ter getters e setters públicos ou
+normalmente, pelo menos getters públicos.
+
+198
+00:15:02.920 --> 00:15:09.030
+Alguns Frameworks você usa por exemplo,
+Hybernate para banco de dados,
+
+199
+00:15:09.030 --> 00:15:13.833
+armazenar, ele exige que todos
+os seus getters e setters
+
+200
+00:15:13.833 --> 00:15:18.858
+sejam públicos então você vai colocar
+os seus getters e setters, nesse caso,
+
+201
+00:15:18.858 --> 00:15:23.393
+do Hybernate, como públicos, mas você vai
+estar pensando que eles são protegidos.
+
+202
+00:15:23.393 --> 00:15:29.060
+Você só está colocando eles como públicos,
+para ser usado pelo Framework Hybernate.
+
+203
+00:15:29.060 --> 00:15:32.592
+Mas nenhum outro momento você vai
+usar esses getters e setters,
+
+204
+00:15:32.592 --> 00:15:34.810
+porque se não você está expondo os dados.
+
+205
+00:15:34.810 --> 00:15:38.680
+A não ser se fosse repositório de dados,
+como a gente acabou de falar.
+
+206
+00:15:38.680 --> 00:15:43.690
+Com isso, mostramos para vocês,
+exemplo de aplicação
+
+207
+00:15:43.690 --> 00:15:48.094
+do princípio Tell,
+Don't Ask e as consequências que isso tem,
+
+208
+00:15:48.094 --> 00:15:53.130
+nós aplicamos para o getter e setter
+e mostramos as consequências que isso
+
+209
+00:15:53.130 --> 00:15:58.103
+tem no fato de o getter e setter
+serem até terem o acesso protegido.
+
+210
+00:15:58.103 --> 00:15:59.035
+Obrigado.
+
+211
+00:15:59.035 --> 00:16:03.980
+[MÚSICA] [MÚSICA]

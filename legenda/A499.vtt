@@ -1,0 +1,480 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.619
+[SEM_ÁUDIO] Meu nome é
+
+2
+00:00:09.619 --> 00:00:16.510
+Eduardo Guerra estou falando com você aqui
+do curso de Orientação a Objetos com Java.
+
+3
+00:00:16.510 --> 00:00:21.412
+Hoje vamos falar de conceito
+extremamente importante e vamos entender
+
+4
+00:00:21.412 --> 00:00:25.000
+a importância dele nessa
+aula que é o encapsulamento.
+
+5
+00:00:25.000 --> 00:00:29.663
+O encapsulamento é considerado dos
+pilares da programação orientada
+
+6
+00:00:29.663 --> 00:00:34.139
+a objetos e espero que nessa aula
+você possa entender o porquê.
+
+7
+00:00:34.139 --> 00:00:37.675
+Eu começo dizendo que
+a ignorância é uma benção.
+
+8
+00:00:37.675 --> 00:00:41.275
+E não digo a ignorância,
+o fulano é ignorante,
+
+9
+00:00:41.275 --> 00:00:45.070
+chega falando alto,
+chega chutando a porta, não.
+
+10
+00:00:45.070 --> 00:00:46.891
+Não é esse tipo de ignorância.
+
+11
+00:00:46.891 --> 00:00:51.670
+É a ignorância no sentido de que
+você não precisa saber tudo.
+
+12
+00:00:51.670 --> 00:00:58.160
+É a ignorância boa aquela ignorância do
+tipo: você não precisa conhecer tudo.
+
+13
+00:00:58.160 --> 00:01:02.450
+Você pode ser ignorante
+relação a alguma coisa.
+
+14
+00:01:02.450 --> 00:01:06.391
+Vamos entender melhor o que
+eu estou querendo dizer.
+
+15
+00:01:06.391 --> 00:01:12.357
+Então quando você está por exemplo, lá na
+sua casa, no seu sofá assistindo uma TV,
+
+16
+00:01:12.357 --> 00:01:18.786
+você precisa saber lidar com o controle
+remoto você precisa saber ligar a TV,
+
+17
+00:01:18.786 --> 00:01:24.445
+trocar o canal, ajustar o volume,
+de repente até sintonizar os canais,
+
+18
+00:01:24.445 --> 00:01:29.283
+uma coisa até pouco mais avançada,
+daquela que as vovós
+
+19
+00:01:29.283 --> 00:01:33.924
+chamam os netinhos pra fazer pra elas,
+sintoniza aqui pra mim.
+
+20
+00:01:33.924 --> 00:01:37.300
+Mas trocar o canal,
+ligar e desligar ela sabe.
+
+21
+00:01:37.300 --> 00:01:41.691
+Então a questão é,
+ninguém precisa entender como uma TV
+
+22
+00:01:41.691 --> 00:01:46.477
+funciona por dentro para
+poder assistir uma TV,
+
+23
+00:01:46.477 --> 00:01:52.584
+ligar e desligar, então nesse caso,
+a ignorância é muito boa.
+
+24
+00:01:52.584 --> 00:01:57.122
+Imagina se para assistir TV
+você precisasse entender o
+
+25
+00:01:57.122 --> 00:02:02.260
+funcionamento da tela, por exemplo,
+se você tinha uma TV antiga,
+
+26
+00:02:02.260 --> 00:02:07.026
+comprou uma TV de uma nova tecnologia,
+você teria que estudar aquela nova
+
+27
+00:02:07.026 --> 00:02:11.612
+tecnologia para poder usar aquela TV,
+nesse caso a ignorância é muito bom.
+
+28
+00:02:11.612 --> 00:02:15.400
+É muito bom a gente não precisar
+entender o funcionamento da TV para
+
+29
+00:02:15.400 --> 00:02:16.900
+conseguir utilizá-la.
+
+30
+00:02:16.900 --> 00:02:22.113
+Uma outra coisa,
+as TVs por dentro, com certeza uma
+
+31
+00:02:22.113 --> 00:02:27.828
+TV de tubo funciona completamente
+diferente de uma TV de LED,
+
+32
+00:02:27.828 --> 00:02:32.518
+uma TV de plasma e as coisas estão sempre
+evoluindo, a tecnologia está sempre
+
+33
+00:02:32.518 --> 00:02:39.271
+andando para frente no sentido de tornar
+as coisas mais leves, mais baratas até,
+
+34
+00:02:39.271 --> 00:02:44.978
+e estou aqui com controle remoto
+ele funciona da mesma forma.
+
+35
+00:02:44.978 --> 00:02:49.133
+Os controlezinhos da TV
+funcionam da mesma forma.
+
+36
+00:02:49.133 --> 00:02:53.844
+Então você não precisa aprender
+nada para comprar uma TV que
+
+37
+00:02:53.844 --> 00:02:56.922
+utilize uma tecnologia diferente.
+
+38
+00:02:56.922 --> 00:03:00.859
+Então esse é bom exemplo
+dessa ignorância boa,
+
+39
+00:03:00.859 --> 00:03:05.758
+no sentido de que você não precisa
+conhecer tudo que está por trás,
+
+40
+00:03:05.758 --> 00:03:11.786
+tudo que está por dentro, o funcionamento
+interno, para poder interagir com aquilo.
+
+41
+00:03:11.786 --> 00:03:14.805
+O que você precisa conhecer
+é só a superfície.
+
+42
+00:03:14.805 --> 00:03:19.693
+Você não precisa saber o que tem dentro,
+você tem que conhecer essa superfície.
+
+43
+00:03:19.693 --> 00:03:22.500
+Aí você fala: está falando de televisão,
+
+44
+00:03:22.500 --> 00:03:26.391
+controle remoto que isso
+tem a ver com programação?
+
+45
+00:03:26.391 --> 00:03:29.775
+Bom, aí eu volto uma pergunta para você.
+
+46
+00:03:29.775 --> 00:03:35.335
+Como você trabalha com sistema que tem
+algumas milhões de linhas de código?
+
+47
+00:03:35.335 --> 00:03:40.214
+Você acha que o desenvolvedor desse
+sistema vai conhecer uma por uma,
+
+48
+00:03:40.214 --> 00:03:42.658
+todas essas linhas de código?
+
+49
+00:03:42.658 --> 00:03:44.914
+Não.
+Então o que acontece,
+
+50
+00:03:44.914 --> 00:03:50.707
+ele precisa conhecer a parte muito
+bem a parte que ele está trabalhando,
+
+51
+00:03:50.707 --> 00:03:55.701
+e ele precisa conhecer essa
+superfície que a gente
+
+52
+00:03:55.701 --> 00:04:00.984
+falou dos módulos que interagem com
+aquele que ele está trabalhando.
+
+53
+00:04:00.984 --> 00:04:05.786
+Então a ideia é a seguinte,
+se eu estou fazendo por exemplo,
+
+54
+00:04:05.786 --> 00:04:09.506
+sistema que lida com imagens de satélite,
+
+55
+00:04:09.506 --> 00:04:14.755
+e eu preciso utilizar por exemplo, filtro
+de imagem, preciso fazer processamento
+
+56
+00:04:14.755 --> 00:04:19.903
+de imagem eu posso ter componente que
+eu chego para ele e falo assim: olha,
+
+57
+00:04:19.903 --> 00:04:23.590
+faz este processamento
+nessa imagem para mim,
+
+58
+00:04:23.590 --> 00:04:28.549
+aí eu não preciso compreender
+como ele faz esse processamento.
+
+59
+00:04:28.549 --> 00:04:32.291
+Eu só tenho que conhecer a superfície,
+ou seja,
+
+60
+00:04:32.291 --> 00:04:37.226
+aquela casca que eu vou interagir no
+momento de lidar com aquele componente.
+
+61
+00:04:37.226 --> 00:04:42.098
+Então quando a gente está desenvolvendo
+sistema maior é interessante que
+
+62
+00:04:42.098 --> 00:04:47.104
+a gente conheça o pedaço do nosso
+sistema que a gente está trabalhando
+
+63
+00:04:47.104 --> 00:04:51.859
+e as interfaces dele com os
+componentes que interessam para ele.
+
+64
+00:04:51.859 --> 00:04:56.198
+E não pense que essa estrutura
+vai: não estou usando
+
+65
+00:04:56.198 --> 00:05:00.780
+orientação a objetos,
+então vai ficar tudo encapsulado.
+
+66
+00:05:00.780 --> 00:05:01.579
+Não senhor.
+
+67
+00:05:01.579 --> 00:05:06.152
+Isso aí é uma estrutura que você tem que
+criar no seu software, para que seja
+
+68
+00:05:06.152 --> 00:05:11.207
+possível alguém trabalhar numa parte
+dele sem precisar conhecer todo o resto,
+
+69
+00:05:11.207 --> 00:05:16.211
+até mesmo para que quando você trabalhar
+naquela parte, independente da pessoa
+
+70
+00:05:16.211 --> 00:05:21.115
+conhecer o resto ou não o impacto
+seja naquela parte, e não no resto.
+
+71
+00:05:21.115 --> 00:05:26.121
+Sistemas ás vezes muito acoplados,
+você realmente precisa conhecer
+
+72
+00:05:26.121 --> 00:05:30.744
+tudo porque uma coisa impacta na outra,
+uma coisa está misturada com a outra.
+
+73
+00:05:30.744 --> 00:05:35.226
+Você vai mexer na lógica, isso está
+misturado com a interface gráfica,
+
+74
+00:05:35.226 --> 00:05:40.053
+às vezes está misturado com o acesso a
+dados está misturado com o acesso a outros
+
+75
+00:05:40.053 --> 00:05:45.846
+sistemas, isso está misturado com a lógica
+que seria de componente separado com
+
+76
+00:05:45.846 --> 00:05:50.540
+cálculo e aí quando você tem que mexer no
+sistema, você tem que lidar com isso tudo.
+
+77
+00:05:50.540 --> 00:05:55.675
+Então, esse encapsulamento é extremamente
+importante e não vem de graça.
+
+78
+00:05:55.675 --> 00:06:00.503
+Fique ciente que você tem que
+pensar o seu software de forma que
+
+79
+00:06:00.503 --> 00:06:04.402
+você fale: ok,
+essa é uma parte independente,
+
+80
+00:06:04.402 --> 00:06:09.367
+eu posso criá-la eu posso definir muito
+bem qual é essa interface para que
+
+81
+00:06:09.367 --> 00:06:14.110
+os outros componentes possam interagir
+com essa parte do meu sistema.
+
+82
+00:06:14.110 --> 00:06:19.200
+Então isso você tem que projetar,
+você tentar tudo
+
+83
+00:06:19.200 --> 00:06:24.009
+isso que a gente vem falando,
+separação de responsabilidades,
+
+84
+00:06:24.009 --> 00:06:28.844
+que seriam justamente: olha,
+essa classe é responsável por isso,
+
+85
+00:06:28.844 --> 00:06:32.700
+então o que está dentro dela
+as outras não precisam saber.
+
+86
+00:06:32.700 --> 00:06:36.600
+Esta parte maior aqui está dentro
+desse conjunto de classes,
+
+87
+00:06:36.600 --> 00:06:39.803
+e a gente vai fazendo isso
+com escopos diferentes.
+
+88
+00:06:39.803 --> 00:06:43.695
+Às vezes uma classe pode
+encapsular comportamento menor
+
+89
+00:06:43.695 --> 00:06:48.162
+componente pode encapsular uma
+parte maior do meu sistema,
+
+90
+00:06:48.162 --> 00:06:52.973
+mas sempre de forma que o resto não
+precise saber do comportamento interno,
+
+91
+00:06:52.973 --> 00:06:57.200
+somente daquela superfície, somente
+da parte que ele tem que interagir.
+
+92
+00:06:57.200 --> 00:07:01.940
+Vamos falar mais de encapsulamento,
+mas espero que nessa aula você tenha
+
+93
+00:07:01.940 --> 00:07:07.029
+compreendido como que esse encapsulamento
+é extremamente importante, principalmente
+
+94
+00:07:07.029 --> 00:07:12.799
+se você está desenvolvendo sistemas
+comerciais, sistema de fácil manutenção
+
+95
+00:07:12.799 --> 00:07:18.118
+que uma equipe vai estar trabalhando
+cima dele e que com certeza você ter
+
+96
+00:07:18.118 --> 00:07:23.160
+os componentes encapsulados é extremamente
+importante para o sucesso do seu projeto.
+
+97
+00:07:23.160 --> 00:07:27.975
+Muito obrigado, vejo você na próxima aula.
+
+98
+00:07:27.975 --> 00:07:32.790
+[SEM_ÁUDIO]

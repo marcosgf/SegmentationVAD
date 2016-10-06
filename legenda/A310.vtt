@@ -1,0 +1,369 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.703
+Olá.
+
+2
+00:00:00.703 --> 00:00:05.747
+Neste vídeo você aprenderá
+a esboçar o diagrama de Bode
+
+3
+00:00:05.747 --> 00:00:11.340
+para sistemas de 2ª ordem do tipo 1, isto
+é, aqueles que possuem 1 polo na origem.
+
+4
+00:00:11.340 --> 00:00:15.470
+A fórmula geral de sistema
+de 2ª ordem do tipo 1 é: G
+
+5
+00:00:15.470 --> 00:00:20.290
+de s igual a K sobre s vezes s menos p1,
+
+6
+00:00:20.290 --> 00:00:24.332
+com p1 menor do que 0
+para sistema estável.
+
+7
+00:00:24.332 --> 00:00:30.909
+Seu módulo dB é dado por módulo de G de
+j ômega dB igual a 20 log do módulo de
+
+8
+00:00:30.909 --> 00:00:37.000
+K menos 20 log do módulo de j ômega menos
+20 log do módulo de j ômega menos p1.
+
+9
+00:00:37.000 --> 00:00:42.151
+O que você observa de diferente
+relação ao módulo no caso dos
+
+10
+00:00:42.151 --> 00:00:47.290
+sistemas de 2ª ordem com 2 polos
+reais negativos do vídeo anterior?
+
+11
+00:00:47.290 --> 00:00:51.030
+Para relembrar,
+colocaremos a equação aqui embaixo.
+
+12
+00:00:51.030 --> 00:00:57.754
+O módulo de G de j ômega dB para o vídeo
+anterior era 20 log do módulo de K menos
+
+13
+00:00:57.754 --> 00:01:03.750
+20 log do módulo de j ômega menos p1 menos
+20 log do módulo de j ômega menos p2.
+
+14
+00:01:03.750 --> 00:01:10.535
+Isso mesmo, uma das frequências de quebra
+desapareceu, isto é, temos decrescimento
+
+15
+00:01:10.535 --> 00:01:15.050
+de menos 20 dB por década desde sempre
+devido ao termo menos 20 log de ômega.
+
+16
+00:01:15.050 --> 00:01:17.906
+Isso porque a frequência de quebra é 0.
+
+17
+00:01:17.906 --> 00:01:22.780
+Contudo, nosso gráfico,
+usamos a escala logarítmica de ômega,
+
+18
+00:01:22.780 --> 00:01:25.129
+que equivale a menos infinito para 0.
+
+19
+00:01:25.129 --> 00:01:27.827
+Isso implica que a frequência
+vem decrescendo com
+
+20
+00:01:27.827 --> 00:01:31.050
+menos 20 dB por década de qualquer
+ponto que desenharmos no gráfico,
+
+21
+00:01:31.050 --> 00:01:34.720
+antes da 2ª frequência de
+quebra real que é módulo de p1.
+
+22
+00:01:34.720 --> 00:01:38.590
+Então, como saber por onde
+passará essa assíntota?
+
+23
+00:01:38.590 --> 00:01:42.322
+Simples, escolha uma frequência
+menor do que módulo de p1,
+
+24
+00:01:42.322 --> 00:01:44.780
+por exemplo, módulo de p1 sobre 10.
+
+25
+00:01:44.780 --> 00:01:49.940
+Para essa frequência, o valor do módulo
+de G j ômega não terá contribuição de p1.
+
+26
+00:01:49.940 --> 00:01:54.006
+Então, o módulo de G de j, de p1 sobre 10
+
+27
+00:01:54.006 --> 00:01:58.390
+dB será aproximadamente igual a 20 log
+do módulo de K menos 20 log de ômega,
+
+28
+00:01:58.390 --> 00:02:03.644
+que é igual a 20 log do módulo de K
+menos 20 log p1 sobre 10 nesse caso.
+
+29
+00:02:03.644 --> 00:02:06.093
+Particular, se p1 for maior do que 1,
+
+30
+00:02:06.093 --> 00:02:10.350
+podemos fazer ômega igual a 1
+simplificando ainda mais a expressão.
+
+31
+00:02:10.350 --> 00:02:15.272
+E o módulo de G de j1 dB será
+aproximadamente 20 log de K
+
+32
+00:02:15.272 --> 00:02:17.803
+menos 20 log de 1, que é 0.
+
+33
+00:02:17.803 --> 00:02:20.400
+Então ficaremos com 20 log de K.
+
+34
+00:02:20.400 --> 00:02:25.555
+Após a frequência de quebra módulo de p1,
+tudo se passa como no caso com 2
+
+35
+00:02:25.555 --> 00:02:30.765
+polos negativos e a assíntota passa
+a decrescer com menos 40 dB por década.
+
+36
+00:02:30.765 --> 00:02:34.558
+Então a variação delta de G de j ômega
+
+37
+00:02:34.558 --> 00:02:38.470
+dB será aproximadamente
+menos 40 log de ômega.
+
+38
+00:02:38.470 --> 00:02:41.625
+Vamos ver o gráfico do
+módulo pela frequência.
+
+39
+00:02:41.625 --> 00:02:45.450
+Vemos que, quanto menor a frequência,
+maior o ganho do sistema.
+
+40
+00:02:45.450 --> 00:02:48.809
+Você já viu que sistemas
+com 1 polo na origem,
+
+41
+00:02:48.809 --> 00:02:54.130
+chamados sistemas do tipo 1, apresentam
+erro regime nulo para uma entrada degrau.
+
+42
+00:02:54.130 --> 00:02:58.612
+Essa característica de ganho cada
+vez maior conforme a frequência
+
+43
+00:02:58.612 --> 00:03:01.100
+diminui reflete essa propriedade.
+
+44
+00:03:01.100 --> 00:03:05.770
+Lembre que a constante Kp é
+dada por Kp igual a G de 0.
+
+45
+00:03:05.770 --> 00:03:13.840
+Já o erro regime para uma entrada degrau é
+dado por e ss igual a 1 sobre 1 mais Kp.
+
+46
+00:03:13.840 --> 00:03:19.320
+Portanto, para termos erro regime nulo,
+devemos ter Kp infinito.
+
+47
+00:03:19.320 --> 00:03:22.282
+Lembrando que G de 0 é
+igual a G de j ômega,
+
+48
+00:03:22.282 --> 00:03:27.180
+quando ômega é igual a 0,
+tem que ir para infinito.
+
+49
+00:03:27.180 --> 00:03:31.935
+Concluímos que a assíntota de baixas
+frequências deve ter inclinação de,
+
+50
+00:03:31.935 --> 00:03:36.690
+ao menos, menos 20 dB por década para o
+erro regime nulo para uma entrada degrau.
+
+51
+00:03:36.690 --> 00:03:41.994
+Quanto ao gráfico da fase,
+a diferença é a seguinte: inicialmente
+
+52
+00:03:41.994 --> 00:03:46.620
+para baixas frequência, isto é, quando
+o ômega é menor do que módulo de p1,
+
+53
+00:03:46.620 --> 00:03:51.780
+a fase já é de menos 90 graus,
+pois há 1 termo j ômega no denominador.
+
+54
+00:03:51.780 --> 00:03:57.170
+Então G de j ômega é igual a K sobre
+j ômega vezes j ômega menos p1.
+
+55
+00:03:57.170 --> 00:04:04.350
+O termo j ômega menos p1 é dominado por
+sua parte real p1 contribuindo com fase 0.
+
+56
+00:04:04.350 --> 00:04:08.670
+Para K maior do que 0 a contribuição
+de fase do ganho também é 0.
+
+57
+00:04:08.670 --> 00:04:12.260
+Então a única fase é a do
+termo 1 sobre j ômega.
+
+58
+00:04:12.260 --> 00:04:17.494
+Então a fase de G de j ômega, que é igual
+à fase de K menos a fase de j ômega
+
+59
+00:04:17.494 --> 00:04:23.140
+menos a fase de j ômega menos p1, será
+aproximadamente igual a menos 90 graus.
+
+60
+00:04:23.140 --> 00:04:28.151
+Após a frequência de quebra,
+a contribuição da fase de j ômega menos
+
+61
+00:04:28.151 --> 00:04:33.120
+p1 passa a ser dominada pela parte
+imaginária subtraindo mais 90 graus.
+
+62
+00:04:33.120 --> 00:04:38.171
+Então, a fase de G de j ômega será igual
+à fase de K menos a fase de j ômega
+
+63
+00:04:38.171 --> 00:04:44.677
+menos a fase de j ômega menos p1, será
+aproximadamente igual a menos 180 graus.
+
+64
+00:04:44.677 --> 00:04:47.905
+Com isso a fase total para
+altas frequências, isto é,
+
+65
+00:04:47.905 --> 00:04:51.840
+quando ômega é maior do que o
+módulo de p1, é de menos 180 graus.
+
+66
+00:04:51.840 --> 00:04:55.710
+Unindo as assíntotas,
+como fizemos nos casos anteriores,
+
+67
+00:04:55.710 --> 00:04:59.084
+temos o seguinte gráfico.
+
+68
+00:04:59.084 --> 00:05:04.999
+Podemos notar nesse gráfico que
+a fase já começa menos 90 graus,
+
+69
+00:05:04.999 --> 00:05:09.510
+isto é, não há valores de frequência
+para os quais a fase produzida seja 0,
+
+70
+00:05:09.510 --> 00:05:13.880
+como aconteia no caso
+com 2 polos não nulos.
+
+71
+00:05:13.880 --> 00:05:17.550
+Agora você já sabe traçar
+assíntotas para esboçar a resposta
+
+72
+00:05:17.550 --> 00:05:21.580
+frequência de alguns dos principais
+tipos de sistema com polos reais.
+
+73
+00:05:21.580 --> 00:05:25.760
+Exercite com sistemas de ordem mais alta,
+isto é, com mais polos.
+
+74
+00:05:25.760 --> 00:05:30.576
+No próximo vídeo você verá como o
+diagrama de Bode pode ser usado
+
+75
+00:05:30.576 --> 00:05:34.813
+para obter uma medida de imagens de
+estabilidade do sistema, ou seja,
+
+76
+00:05:34.813 --> 00:05:38.010
+quanto tempo falta para o
+sistema se tornar instável.

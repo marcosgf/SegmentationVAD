@@ -1,0 +1,676 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.103
+[MÚSICA] Olá!
+
+2
+00:00:02.103 --> 00:00:07.505
+Nesse vídeo a gente vai estudar,
+começar o estudo
+
+3
+00:00:07.505 --> 00:00:12.341
+do que acontece com o conversor digital
+para analógico no domínio da frequência.
+
+4
+00:00:12.341 --> 00:00:16.936
+Como no caso da amostragem, o estudo no
+domínio da frequência é muito mais simples
+
+5
+00:00:16.936 --> 00:00:20.035
+da gente ver, é muito mais
+simples de a gente especificar
+
+6
+00:00:20.035 --> 00:00:23.752
+o que acontece com as distorções
+e principalmente especificar o
+
+7
+00:00:23.752 --> 00:00:27.519
+que a gente deve fazer para
+melhorar algumas das distorções.
+
+8
+00:00:27.519 --> 00:00:32.616
+Então quando a gente for projetar sistema
+para melhorar algumas distorções a gente
+
+9
+00:00:32.616 --> 00:00:37.205
+sabe melhor o que acontece no domínio da
+frequência do que no domínio do tempo.
+
+10
+00:00:37.205 --> 00:00:41.538
+Então para começar esse nosso estudo vamos
+fazer resumo de onde a gente se encontra
+
+11
+00:00:41.538 --> 00:00:44.850
+por enquanto, vamos retomar
+pouco a questão da amostragem.
+
+12
+00:00:44.850 --> 00:00:50.864
+A amostragem, a gente viu que
+uma frequência analógica ômegão,
+
+13
+00:00:50.864 --> 00:00:54.830
+uma frequência contínua
+em radianos por segundo,
+
+14
+00:00:54.830 --> 00:00:58.634
+vira depois de amostragem
+uma frequência discreta,
+
+15
+00:00:58.634 --> 00:01:03.347
+uma frequência eh,
+ômeguinha em unidades de radianos
+
+16
+00:01:03.347 --> 00:01:08.237
+que é dada pelo ômegão vezes o período
+de amostragem e isso dá algumas,
+
+17
+00:01:08.237 --> 00:01:12.000
+alguns mapeamentos que são importantes
+para a gente, a gente viu,
+
+18
+00:01:12.000 --> 00:01:16.750
+por exemplo, que fs sobre 2, uma
+frequência de fs sobre 2 que é a metade da
+
+19
+00:01:16.750 --> 00:01:21.500
+frequência de amostragem vira
+uma frequência digital Pi.
+
+20
+00:01:21.500 --> 00:01:22.202
+Bom?
+
+21
+00:01:22.202 --> 00:01:27.202
+A gente também viu que
+a frequência analógica
+
+22
+00:01:27.202 --> 00:01:31.987
+contínua ômegão é igual a 2 Pi
+vezes a frequência em Hertz,
+
+23
+00:01:31.987 --> 00:01:36.530
+que é a frequência que a gente está mais
+acostumado a falar 440Hz e coisas assim.
+
+24
+00:01:36.530 --> 00:01:41.862
+Outra coisa muito importante que a gente
+viu são a questão das frequências
+
+25
+00:01:41.862 --> 00:01:46.644
+que se misturam depois da amostragem e
+isso tem a ver com a questão do aliasing,
+
+26
+00:01:46.644 --> 00:01:50.446
+as frequências que vão aparecer em
+outros lugares indesejados vão causar
+
+27
+00:01:50.446 --> 00:01:52.612
+distorções indesejadas para a gente.
+
+28
+00:01:52.612 --> 00:01:57.394
+Então a gente viu que as
+seguintes frequências eh, digitais
+
+29
+00:01:57.394 --> 00:02:03.076
+discretas são indistinguíveis,
+elas dão exatamente o mesmo sinal.
+
+30
+00:02:03.076 --> 00:02:09.405
+Uma frequência ômeguinha, uma,
+cosseno com a mesma frequência mais 2 Pi,
+
+31
+00:02:09.405 --> 00:02:14.056
+eu tenho aqui ômeguinha mais 2 Pi,
+cosseno com a frequência
+
+32
+00:02:14.056 --> 00:02:18.656
+negativa menos ômega e com a fase
+negativa também, aqui nesse caso para
+
+33
+00:02:18.656 --> 00:02:23.584
+esses 2 serem iguais eu tenho que mudar
+a fase e como eu posso somar 2 Pi nisso
+
+34
+00:02:23.584 --> 00:02:28.332
+aqui o cosseno com 2 Pi menos ômega com
+a fase trocada também são sinais iguais.
+
+35
+00:02:28.332 --> 00:02:31.680
+Então todos esses sinais aqui
+são exatamente a mesma coisa,
+
+36
+00:02:31.680 --> 00:02:34.001
+a gente não consegue distinguir eles.
+
+37
+00:02:34.001 --> 00:02:38.435
+Agora todos eles estão de certa forma
+associados a frequências analógicas
+
+38
+00:02:38.435 --> 00:02:42.790
+diferentes então esse cara aqui
+está associado a uma frequência f,
+
+39
+00:02:42.790 --> 00:02:49.156
+deixa só eu escrever aqui
+direito que o f é igual
+
+40
+00:02:49.156 --> 00:02:53.815
+a 2 Pi ômeguinha fs.
+
+41
+00:02:53.815 --> 00:03:00.803
+Então esse ômeguinha está relacionado
+a essa frequência analógica aqui.
+
+42
+00:03:00.803 --> 00:03:04.385
+Ômega mais 2 Pi está
+associado a f mais fs,
+
+43
+00:03:04.385 --> 00:03:08.689
+ômega mais 4 Pi está
+associado a f mais 2 fs,
+
+44
+00:03:08.689 --> 00:03:13.032
+2 Pi menos ômega está fs menos f,
+uma outra relação
+
+45
+00:03:13.032 --> 00:03:17.450
+importante que eu não botei aqui atrás é
+que se o fs sobre 2 está relacionado a Pi,
+
+46
+00:03:17.450 --> 00:03:21.540
+então o fs está relacionado a 2 Pi.
+
+47
+00:03:21.540 --> 00:03:25.505
+Então todas essas frequências
+aqui e essas aqui com
+
+48
+00:03:25.505 --> 00:03:30.280
+fase invertida vão no final das contas
+se misturar, vão virar uma coisa só,
+
+49
+00:03:30.280 --> 00:03:33.720
+eu não vou saber dizer depois que
+eu amostrei o que veio de onde.
+
+50
+00:03:33.720 --> 00:03:38.230
+Isso dá origem ao aliasing.
+
+51
+00:03:38.230 --> 00:03:42.740
+Então o fato de essas frequências serem
+indistinguíveis no mundo digital,
+
+52
+00:03:42.740 --> 00:03:47.529
+ela me leva a espectro em frequência
+do mundo digital, como a gente já viu,
+
+53
+00:03:47.529 --> 00:03:49.814
+que tem mais ou menos essa cara aqui.
+
+54
+00:03:49.814 --> 00:03:54.036
+A gente tem primeiro as frequências de 0
+a Pi, Pi é a maior frequência digital,
+
+55
+00:03:54.036 --> 00:03:58.480
+eu não consigo variar mais do que sair de
+1 e ir para -1, entre uma amostra e outra,
+
+56
+00:03:58.480 --> 00:04:01.020
+Pi portanto é a minha
+maior frequência digital,
+
+57
+00:04:01.020 --> 00:04:04.632
+então as frequências entre
+0 e Pi estão aqui, está?
+
+58
+00:04:04.632 --> 00:04:09.205
+As frequências ômega e 2 Pi
+menos ômega são indistinguíveis,
+
+59
+00:04:09.205 --> 00:04:14.339
+então esse cara se repete aqui de Pi até
+2 Pi só que espelhado, porque eu tenho
+
+60
+00:04:14.339 --> 00:04:19.433
+2 Pi menos ômega não é, então o 0 vai
+aparecer em 2 Pi menos 0 que é o 2 Pi.
+
+61
+00:04:19.433 --> 00:04:24.144
+O Pi sobre 2 vai aparecer em 2 Pi
+menos Pi sobre 2 que é o 3 Pi sobre 2,
+
+62
+00:04:24.144 --> 00:04:26.850
+e assim sucessivamente então
+aparece espelhado aqui.
+
+63
+00:04:26.850 --> 00:04:29.315
+Aqui esse cara se repete de novo,
+
+64
+00:04:29.315 --> 00:04:34.497
+porque aqui eu tenho daqui para cá
+eu tenho 2 Pi mais ômega está bom?
+
+65
+00:04:34.497 --> 00:04:40.260
+E o que é que acontece então na
+conversão digital para analógico?
+
+66
+00:04:40.260 --> 00:04:45.180
+A primeira operação que a conversão
+digital para analógico vai fazer,
+
+67
+00:04:45.180 --> 00:04:49.839
+quando eu faço mapeamento com
+a frequência de amostragem fs,
+
+68
+00:04:49.839 --> 00:04:52.255
+é desfazer essa regrinha de 3.
+
+69
+00:04:52.255 --> 00:04:56.894
+Então quando eu amostro eu pego
+a frequência fs sobre 2 e levo na
+
+70
+00:04:56.894 --> 00:05:01.254
+frequência Pi, eu pego fs sobre 4
+e levo na frequência Pi sobre 2,
+
+71
+00:05:01.254 --> 00:05:04.763
+eu pego na frequência fs e levo em 2 Pi,
+eu tenho uma regrinha de 3 aí,
+
+72
+00:05:04.763 --> 00:05:08.527
+uma proporcionalidade entre a frequência
+analógica e a frequência digital.
+
+73
+00:05:08.527 --> 00:05:10.815
+A primeira operação,
+matematicamente claro,
+
+74
+00:05:10.815 --> 00:05:14.342
+que o conversor digital para analógico
+faz isso fisicamente numa tacada só,
+
+75
+00:05:14.342 --> 00:05:18.004
+mas a matematicamente a primeira coisa
+que a gente pode pensar que o conversor
+
+76
+00:05:18.004 --> 00:05:22.557
+digital para analógico faz é desfazer
+essa regrinha de 3, então ele joga aquela
+
+77
+00:05:22.557 --> 00:05:27.130
+frequência Pi que eu tinha no meu sinal
+analógico ele vai jogar em fs sobre 2.
+
+78
+00:05:27.130 --> 00:05:31.535
+Essa frequência aqui que eu amostrei para
+esse cara ômega máximo aqui que eu não
+
+79
+00:05:31.535 --> 00:05:36.125
+falei qual que é, ele vai jogar numa
+frequência f máximo que é igual ao
+
+80
+00:05:36.125 --> 00:05:41.023
+ômega analógico máximo sobre 2 Pi
+e o ômega analógico é igual ao
+
+81
+00:05:41.023 --> 00:05:44.037
+ômega digital vezes
+a frequência de amostragem.
+
+82
+00:05:44.037 --> 00:05:48.319
+E aqui a gente observa a primeira coisa
+interessante é que se a minha frequência
+
+83
+00:05:48.319 --> 00:05:53.594
+máxima digital desse camarada aqui, que é
+tudo no mundo digital for menor do que Pi,
+
+84
+00:05:53.594 --> 00:05:59.157
+então olha só eu ponho Pi aqui,
+dá Pi vezes fs sobre 2 Pi, dá fs sobre 2.
+
+85
+00:05:59.157 --> 00:06:04.107
+Então se o ômega m é menor do que Pi
+a maior frequência vai ser menor do que
+
+86
+00:06:04.107 --> 00:06:08.750
+fs sobre 2 o que está ok, porque eu sei
+que as frequências de 0 até fs sobre 2 são
+
+87
+00:06:08.750 --> 00:06:12.968
+mapeadas direitinho em frequências
+analógicas desde que eu não tenha aliasing
+
+88
+00:06:12.968 --> 00:06:15.603
+para me atrapalhar nesse mapeamento.
+
+89
+00:06:15.603 --> 00:06:19.307
+Então esse raciocínio aqui
+de que a reconstrução,
+
+90
+00:06:19.307 --> 00:06:24.012
+a conversão de digital para analógico
+desfaz o mapeamento já nos permite fazer
+
+91
+00:06:24.012 --> 00:06:26.466
+a primeira pergunta interessante aqui.
+
+92
+00:06:26.466 --> 00:06:29.128
+Vamos considerar o sinal
+do trem novamente,
+
+93
+00:06:29.128 --> 00:06:35.123
+vamos carregar o sinal do
+trem e mandar ele tocar o Y.
+
+94
+00:06:35.123 --> 00:06:39.738
+O Y e eu vou botar a frequência de
+amostragem que é 8192 e aí vocês vão
+
+95
+00:06:39.738 --> 00:06:42.192
+ouvir o bom e velho apito do trem.
+
+96
+00:06:42.192 --> 00:06:46.158
+[SOM] Muito bem, o que aconteceria agora,
+
+97
+00:06:46.158 --> 00:06:51.074
+se eu mandasse ele tocar esse sinal com
+metade da frequência de amostragem.
+
+98
+00:06:51.074 --> 00:06:54.731
+Agora eu estou, me confundi,
+eu não sei direito qual a frequência
+
+99
+00:06:54.731 --> 00:06:59.141
+de amostragem eu acho que ela
+é 4096 e eu vou mandar tocar.
+
+100
+00:06:59.141 --> 00:07:03.736
+O MATLAB, lembra que aquele V e aquele
+Y ele considera aquilo como uma
+
+101
+00:07:03.736 --> 00:07:07.118
+sequência de amostras,
+ele não sabe o que quer dizer aquilo.
+
+102
+00:07:07.118 --> 00:07:11.292
+À hora que você manda tocar você está
+falando para o MATLAB, interprete isso
+
+103
+00:07:11.292 --> 00:07:15.585
+como uma amostra de som e jogue isso para
+o altifalante e interprete isso como
+
+104
+00:07:15.585 --> 00:07:21.389
+amostra de som que foi capturado com uma
+frequência de amostragem fs ou fs sobre 2.
+
+105
+00:07:21.389 --> 00:07:25.569
+Então, se eu mandar o MATLAB tocar
+com a frequência fs sobre 2,
+
+106
+00:07:25.569 --> 00:07:28.140
+o que é que vai acontecer com o meu sinal?
+
+107
+00:07:28.140 --> 00:07:31.570
+Bom, ele vai ficar mais agudo,
+mais grave ou vai ficar igual?
+
+108
+00:07:31.570 --> 00:07:33.260
+Vamos ver o que é que você acha?
+
+109
+00:07:33.260 --> 00:07:40.283
+Olha só, o que é que acontece
+quando a gente toca esse sinal.
+
+110
+00:07:40.283 --> 00:07:45.216
+[SOM] Ele ficou bem mais grave,
+as frequências diminuíram,
+
+111
+00:07:45.216 --> 00:07:47.529
+som grave é som com baixa frequência.
+
+112
+00:07:47.529 --> 00:07:50.700
+Como é que a gente pode tentar
+ver isso intuitivamente?
+
+113
+00:07:50.700 --> 00:07:54.387
+Eu estou dobrando a frequência, estou
+dividindo a frequência de amostragem por
+
+114
+00:07:54.387 --> 00:07:57.819
+2, isso quer dizer que eu estou falando
+para o MATLAB o seguinte, olha,
+
+115
+00:07:57.819 --> 00:08:01.151
+essas amostras eu não tomei
+8000 amostras em 1 segundo,
+
+116
+00:08:01.151 --> 00:08:04.170
+eu tomei na realidade 4000
+amostras em 1 segundo.
+
+117
+00:08:04.170 --> 00:08:08.805
+Então, vamos pensar num
+bloco de 8000 amostras do Y,
+
+118
+00:08:08.805 --> 00:08:11.865
+8192, vamos esquecer essa precisão.
+
+119
+00:08:11.865 --> 00:08:16.803
+Vamos pensar num bloco de 8000
+amostras de Y, eu gostaria que isso
+
+120
+00:08:16.803 --> 00:08:22.033
+fosse tocado em 1 segundo, mas quando
+eu falei para o MATLAB que a frequência
+
+121
+00:08:22.033 --> 00:08:26.505
+de amostragem foi na realidade 4000,
+ele vai tocar 4000 amostras em 1 segundo,
+
+122
+00:08:26.505 --> 00:08:30.512
+então todo aquele 1 segundo que ele era
+para ele ter tocado originalmente, ele vai
+
+123
+00:08:30.512 --> 00:08:35.015
+passar a tocar agora num período de 2
+segundos, num intervalo de 2 segundos.
+
+124
+00:08:35.015 --> 00:08:38.409
+Então, alguma coisa que tinha uma
+determinada variação em 1 segundo,
+
+125
+00:08:38.409 --> 00:08:41.650
+vai passar a ter a mesma
+variação só que em 2 segundos,
+
+126
+00:08:41.650 --> 00:08:47.240
+ela vai passar a variar mais lentamente,
+ela vai aumentar eh, vai diminuir
+
+127
+00:08:47.240 --> 00:08:52.166
+a frequência vai ficar mais grave,
+as variações vão passar a ser mais lentas.
+
+128
+00:08:52.166 --> 00:08:56.744
+Da mesma forma, se eu tocar com o
+dobro da frequência de amostragem,
+
+129
+00:08:56.744 --> 00:08:58.548
+ele vai ficar mais agudo.
+
+130
+00:08:58.548 --> 00:09:02.092
+[SOM] Então aquela coisa que era para
+tocar em 8 segundos, você está falando
+
+131
+00:09:02.092 --> 00:09:06.330
+para o MATLAB "Não, não essas amostras aí
+foram foram 16000 amostras por segundo".
+
+132
+00:09:06.330 --> 00:09:08.589
+Então, ele vai pegar 16000 amostras,
+
+133
+00:09:08.589 --> 00:09:12.858
+que era para ele tocar em 2 segundos
+ele vai passar a tocar em 1 segundo só.
+
+134
+00:09:12.858 --> 00:09:14.573
+Vai passar a ir mais rápido.
+
+135
+00:09:14.573 --> 00:09:19.511
+Então é isso, isso cobre a questão da
+regrinha de 3 que você desfaz à hora que
+
+136
+00:09:19.511 --> 00:09:21.234
+você faz a reconstrução.
+
+137
+00:09:21.234 --> 00:09:23.718
+No próximo bloco, a gente vai ver eh,
+
+138
+00:09:23.718 --> 00:09:28.265
+qual é o efeito da forma de onda segurador
+de ordem 0, segurador de ordem 1.
+
+139
+00:09:28.265 --> 00:09:31.363
+Espero ver vocês lá.
+
+140
+00:09:31.363 --> 00:09:33.090
+[MÚSICA]

@@ -1,0 +1,522 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.727
+[MÚSICA] Olá
+
+2
+00:00:08.727 --> 00:00:16.310
+a todos, bem vindos a mais "hands on" do
+curso da Orientação a Objetos com Java.
+
+3
+00:00:16.310 --> 00:00:20.670
+Hoje vamos ver exemplo aí
+mais completo sobre herança.
+
+4
+00:00:20.670 --> 00:00:21.462
+Está certo?
+
+5
+00:00:21.462 --> 00:00:26.122
+A gente vai retomar aquele exemplo do
+carro, vamos criar diferentes tipos de
+
+6
+00:00:26.122 --> 00:00:30.693
+carro e vamos colocar eles pra correr
+juntos numa corrida, está certo?
+
+7
+00:00:30.693 --> 00:00:31.795
+Então vamos lá.
+
+8
+00:00:31.795 --> 00:00:36.150
+Primeiro eu vou dar uma revisadinha
+no que já está desenvolvido.
+
+9
+00:00:36.150 --> 00:00:42.410
+A gente tem aqui a classe carro,
+que ele tem aqui nome,
+
+10
+00:00:42.410 --> 00:00:46.778
+ele tem a velocidade,
+e ele tem uma potência.
+
+11
+00:00:46.778 --> 00:00:51.955
+Quando eu mando acelerar,
+ele soma a potência,
+
+12
+00:00:51.955 --> 00:00:59.390
+e quando eu mando frear, ele divide
+a velocidade por dois, está certo?
+
+13
+00:00:59.390 --> 00:01:05.675
+Uma diferença que a gente vai fazer
+aqui vai ser que o carro agora, ele
+
+14
+00:01:05.675 --> 00:01:11.540
+tem uma velocidade máxima, ele tem aquela
+velocidade máxima que ele consegue chegar.
+
+15
+00:01:11.540 --> 00:01:16.490
+Eu tenho aqui essa classe Teste Carro,
+
+16
+00:01:16.490 --> 00:01:23.028
+que ele tem aqui o carro parado, o
+acelerar, o frear e se ele freia até zero.
+
+17
+00:01:23.028 --> 00:01:26.240
+Então, a primeira coisa
+que eu vou fazer aqui é
+
+18
+00:01:26.240 --> 00:01:30.290
+acrescentar a velocidade máxima
+nesse carro que eu tenho.
+
+19
+00:01:30.290 --> 00:01:34.840
+Então vamos lá, eu vou vir aqui,
+
+20
+00:01:34.840 --> 00:01:38.656
+vou colocar aqui velocidade.
+
+21
+00:01:38.656 --> 00:01:46.890
+Opa, não é "valocidade" é
+velocidade máxima, certo?
+
+22
+00:01:46.890 --> 00:01:52.744
+E aí eu quero que no construtor,
+seja passado,
+
+23
+00:01:52.744 --> 00:01:57.532
+agora que eu já vi a parte de controle aos
+
+24
+00:01:57.532 --> 00:02:02.590
+modificadores de acesso,
+eu posso colocar todos aqui como privados.
+
+25
+00:02:02.590 --> 00:02:06.670
+Certo?
+
+26
+00:02:06.670 --> 00:02:11.603
+Vou colocar aqui os métodos de
+
+27
+00:02:11.603 --> 00:02:15.955
+acesso pra poder, primeiro eu vou
+criar o construtor, vamos lá.
+
+28
+00:02:15.955 --> 00:02:21.160
+Uma coisa de cada vez, então vamos ver
+aqui também, aproveitar pra ver alguns
+
+29
+00:02:21.160 --> 00:02:27.639
+dos, das coisas que o eclipse
+pode facilitar a nossa vida.
+
+30
+00:02:27.639 --> 00:02:32.450
+Uma delas por exemplo, se eu quero
+criar construtor, eu venho aqui Source,
+
+31
+00:02:32.450 --> 00:02:36.460
+construtor usando os atributos,
+e os "in fields".
+
+32
+00:02:36.460 --> 00:02:43.332
+Então eu quero construtor que ele receba
+a potência, o nome e a velocidade máxima.
+
+33
+00:02:43.332 --> 00:02:47.074
+Eu posso até aqui,
+eu quero primeiro o nome,
+
+34
+00:02:47.074 --> 00:02:50.370
+depois a potência e depois
+a velocidade máxima.
+
+35
+00:02:50.370 --> 00:02:54.885
+Então eu criei alí,
+e eu posso aproveitar também,
+
+36
+00:02:54.885 --> 00:02:59.448
+a gente já viu aqui que esse "super" aqui,
+a gente pode tirar,
+
+37
+00:02:59.448 --> 00:03:07.350
+e eu vou aproveitar aqui pra garantir que
+a minha velocidade ela seja zero, certo?
+
+38
+00:03:07.350 --> 00:03:12.202
+Então, eu tenho acelerar, frear,
+eu tenho o "getVelocidade" agora
+
+39
+00:03:12.202 --> 00:03:16.260
+eu já posso colocar "public"
+todos esses métodos aqui.
+
+40
+00:03:16.260 --> 00:03:21.685
+Certo?
+
+41
+00:03:21.685 --> 00:03:26.950
+E vou tirar esse imprimir aqui, que não
+vai fazer mais parte do meu exemplo.
+
+42
+00:03:26.950 --> 00:03:30.267
+E vou ouvir aqui,
+
+43
+00:03:30.267 --> 00:03:35.360
+e vou também usar o eclipse pra
+gerar alguns métodos de acesso.
+
+44
+00:03:35.360 --> 00:03:38.509
+Então olha, gerar métodos getters and
+
+45
+00:03:38.509 --> 00:03:42.620
+setters eu vou marcar aqui
+que eu quero get nome.
+
+46
+00:03:42.620 --> 00:03:47.400
+Potência não precisa,
+e a velocidade ele já tem o get.
+
+47
+00:03:47.400 --> 00:03:50.550
+Então é isso aí.
+
+48
+00:03:50.550 --> 00:03:53.421
+O resto,
+a questão da potência são questões
+
+49
+00:03:53.421 --> 00:03:57.390
+aqui referentes ao funcionamento
+interno alí do meu carro.
+
+50
+00:03:57.390 --> 00:04:02.330
+A princípio eu não preciso recuperar,
+está certo?
+
+51
+00:04:02.330 --> 00:04:07.751
+Bom, isso aqui fez falhar
+aqui o meu teste, né?
+
+52
+00:04:07.751 --> 00:04:12.519
+Que eu simplesmente "setava" a potência,
+
+53
+00:04:12.519 --> 00:04:19.640
+então eu vou ter que digamos aí,
+refazer isso daqui.
+
+54
+00:04:19.640 --> 00:04:22.540
+Então, como que eu fazer isso aqui?
+
+55
+00:04:22.540 --> 00:04:24.980
+Eu vou criar aqui o meu before.
+
+56
+00:04:24.980 --> 00:04:29.898
+Então, before vou criar aqui
+
+57
+00:04:29.898 --> 00:04:34.996
+inicializa carro, certo?
+
+58
+00:04:34.996 --> 00:04:40.700
+Vou pegar essa variável carro aqui,
+
+59
+00:04:40.700 --> 00:04:47.743
+vou jogar aqui para o teste pra coisa,
+
+60
+00:04:47.743 --> 00:04:54.404
+e vou fazer aqui o c = new Carro O
+que que eu tenho que passar?
+
+61
+00:04:54.404 --> 00:04:55.170
+O nome.
+
+62
+00:04:55.170 --> 00:04:59.162
+Então o nome do carro do
+teste vai ser teste, certo?
+
+63
+00:04:59.162 --> 00:05:05.550
+A potência dele vai ser 10, e a velocidade
+máxima a princípio vai ser 100.
+
+64
+00:05:05.550 --> 00:05:08.311
+Então olha, o teste do carro parado.
+
+65
+00:05:08.311 --> 00:05:12.550
+Deixa eu só ver se a velocidade
+inicial é zero, aqui olha.
+
+66
+00:05:12.550 --> 00:05:16.580
+No acelerar eu já inicializei,
+
+67
+00:05:16.580 --> 00:05:21.903
+no frear também, certo?
+
+68
+00:05:21.903 --> 00:05:26.680
+E o frear até zero, mesma coisa.
+
+69
+00:05:26.680 --> 00:05:32.911
+Vamos ver,
+acho que aqui eu precisaria colocar,
+
+70
+00:05:32.911 --> 00:05:38.998
+eu vou salvar, opa,
+ainda tem algum erro aqui olha,
+
+71
+00:05:38.998 --> 00:05:44.467
+está faltando importar o before
+eu vou importar aqui, certo?
+
+72
+00:05:44.467 --> 00:05:48.490
+Opa, qual o problema?
+
+73
+00:05:48.490 --> 00:05:50.781
+Ele não pode ser int.
+
+74
+00:05:50.781 --> 00:05:54.350
+Não sei de onde eu tirei esse int.
+
+75
+00:05:54.350 --> 00:05:57.660
+Ele tem que ser void.
+
+76
+00:05:57.660 --> 00:06:02.000
+Eu salvo aqui agora,
+acho que agora está certo, né?
+
+77
+00:06:02.000 --> 00:06:05.550
+O que está dando errado é esse
+método principal aqui olha,
+
+78
+00:06:05.550 --> 00:06:09.498
+ele ainda está usando muita coisa,
+eu vou até excluir ele aqui,
+
+79
+00:06:09.498 --> 00:06:12.400
+que ele não vai fazer
+parte desse meu exemplo.
+
+80
+00:06:12.400 --> 00:06:17.258
+Vou exclui essa classe, depois
+a gente vai ter outra classe principal
+
+81
+00:06:17.258 --> 00:06:20.332
+que vai fazer a nossa corrida, certo?
+
+82
+00:06:20.332 --> 00:06:28.205
+Então vou rodar o teste aqui pra ver
+se está tudo funcionando perfeito.
+
+83
+00:06:28.205 --> 00:06:28.970
+Okay.
+
+84
+00:06:28.970 --> 00:06:34.840
+Agora eu tenho que fazer o
+teste da velocidade máxima.
+
+85
+00:06:34.840 --> 00:06:36.403
+Certo?
+
+86
+00:06:36.403 --> 00:06:39.980
+Ele até 10, né?
+
+87
+00:06:39.980 --> 00:06:42.029
+Então o que eu vou fazer?
+
+88
+00:06:42.029 --> 00:06:45.260
+Eu vou colocar aqui, teste acelerar,
+
+89
+00:06:45.260 --> 00:06:50.820
+até velocidade máxima.
+
+90
+00:06:50.820 --> 00:06:51.465
+Certo?
+
+91
+00:06:51.465 --> 00:06:56.820
+Então o acelerar vai somar 10 e
+a minha velocidade máxima é 100,
+
+92
+00:06:56.820 --> 00:07:01.750
+então, eu vou fazer aqui for (int=0),
+
+93
+00:07:01.750 --> 00:07:05.650
+vou acelerar aqui, sei lá, 14 vezes,
+
+94
+00:07:05.650 --> 00:07:13.750
+e vou ver se ele mantém
+a velocidade de 100 no máximo, né?
+
+95
+00:07:13.750 --> 00:07:20.000
+Então eu vou salvar aqui, vou executar.
+
+96
+00:07:20.000 --> 00:07:22.371
+Certo?
+E aqui ele não está funcionando.
+
+97
+00:07:22.371 --> 00:07:22.912
+Por quê?
+
+98
+00:07:22.912 --> 00:07:24.620
+Porque eu não fiz nada ainda.
+
+99
+00:07:24.620 --> 00:07:28.610
+Vamos ver lá,
+olha ele está indo até o 140.
+
+100
+00:07:28.610 --> 00:07:34.087
+Então eu tenho que fazer aqui,
+olha ele só vai depois que
+
+101
+00:07:34.087 --> 00:07:39.272
+ele acelerar se a velocidade final que
+
+102
+00:07:39.272 --> 00:07:44.990
+ele tiver for
+maior que a velocidade máxima,
+
+103
+00:07:44.990 --> 00:07:52.890
+então a velocidade vai
+ser a velocidade máxima.
+
+104
+00:07:52.890 --> 00:07:58.509
+[SEM_ÁUDIO] Certo?
+
+105
+00:07:58.509 --> 00:08:02.420
+Vamos ver se agora nosso teste passa?
+
+106
+00:08:02.420 --> 00:08:06.360
+Passou.
+
+107
+00:08:06.360 --> 00:08:07.334
+Certo?
+
+108
+00:08:07.334 --> 00:08:12.985
+Então eu tenho aqui, a gente não
+mexeu com nada de herança ainda,
+
+109
+00:08:12.985 --> 00:08:18.116
+mas estamos preparando o terreno,
+eu criei o meu carro
+
+110
+00:08:18.116 --> 00:08:23.305
+aqui utilizando, eu dei uma "refatorada",
+
+111
+00:08:23.305 --> 00:08:27.412
+acrescentei alí os modificadores
+de acesso que a gente já conhece,
+
+112
+00:08:27.412 --> 00:08:33.508
+e agora isso aqui finaliza a nossa
+primeira parte do exemplo.
+
+113
+00:08:33.508 --> 00:08:40.150
+Na segunda parte vamos mexer aqui,
+criar aqui outro tipo de carro.
+
+114
+00:08:40.150 --> 00:08:45.070
+[MÚSICA]

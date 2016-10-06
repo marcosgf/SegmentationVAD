@@ -1,0 +1,336 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.236
+[MÚSICA] E aí
+
+2
+00:00:05.236 --> 00:00:10.320
+pessoal, tudo bem?
+
+3
+00:00:10.320 --> 00:00:14.568
+Agora que temos o Sprite do jogador se
+movimentando de acordo com o toque,
+
+4
+00:00:14.568 --> 00:00:16.700
+vamos adicionar inimigo na cena.
+
+5
+00:00:16.700 --> 00:00:20.450
+No editor de cena,
+adicione novo Color Sprite.
+
+6
+00:00:20.450 --> 00:00:25.050
+Selecione a imagem sun1.
+
+7
+00:00:25.050 --> 00:00:31.500
+E renomei para Enemy1, redimensione para
+tamanho proporcional ao Player Node.
+
+8
+00:00:31.500 --> 00:00:39.500
+[SEM_ÁUDIO]
+
+9
+00:00:39.500 --> 00:00:47.846
+[SEM_ÁUDIO] Crie
+
+10
+00:00:47.846 --> 00:00:54.480
+uma variável chamada enemy1Node,
+
+11
+00:00:54.480 --> 00:01:00.560
+da classe SKSpriteNode,
+e uma variável chamada enemy1Velocity,
+
+12
+00:01:00.560 --> 00:01:06.040
+da classe CGPoint, que será usada para
+determinar a velocidade do Inimigo1.
+
+13
+00:01:06.040 --> 00:01:08.134
+Na função didMoveToView,
+
+14
+00:01:08.134 --> 00:01:13.510
+use a função childNodeWithName para
+encontrar o nó chamado Enemy1.
+
+15
+00:01:13.510 --> 00:01:18.720
+e inicialize a velocidade
+com CGPoint X=10 e Y=10.
+
+16
+00:01:18.720 --> 00:01:23.577
+Na função Update vamos
+
+17
+00:01:23.577 --> 00:01:28.488
+atualizar a posição X do
+Inimigo1 somando a sua
+
+18
+00:01:28.488 --> 00:01:33.040
+velocidade X e atualizar a posição
+Y somando a sua velocidade Y.
+
+19
+00:01:33.040 --> 00:01:37.606
+Vamos adicionar condições para
+que o inimigo não saia da tela e
+
+20
+00:01:37.606 --> 00:01:41.460
+inverta seu movimento quando tocar
+em uma das laterais da tela.
+
+21
+00:01:41.460 --> 00:01:45.460
+Primeiro verificamos o eixo X,
+se a posição X do inimigo for
+
+22
+00:01:45.460 --> 00:01:49.724
+menor do que 0, ou maior do que
+a largura do frame da cena,
+
+23
+00:01:49.724 --> 00:01:55.220
+a velocidade X é invertida
+multiplicando o valor atual por -1.
+
+24
+00:01:55.220 --> 00:01:59.885
+Assim, se a velocidade X for positivo e
+o inimigo tocar a parte direita da tela,
+
+25
+00:01:59.885 --> 00:02:04.550
+sua velocidade X fica negativa e
+começa a se movimentar para esquerda.
+
+26
+00:02:04.550 --> 00:02:06.680
+Se tocar na parte esquerda da tela,
+
+27
+00:02:06.680 --> 00:02:10.660
+sua velocidade fica positiva,
+movimentando-se para direita.
+
+28
+00:02:10.660 --> 00:02:14.880
+Também ajustamos a posição do inimigo
+para que ele não saia da tela.
+
+29
+00:02:14.880 --> 00:02:19.895
+Temos que fazer agora o mesmo para o
+eixo Y, se a posição Y do inimigo for
+
+30
+00:02:19.895 --> 00:02:23.543
+menor do que zero,
+ou maior que a altura do frame da cena,
+
+31
+00:02:23.543 --> 00:02:27.630
+a velocidade Y é invertida,
+multiplicando o valor atual por -1.
+
+32
+00:02:27.630 --> 00:02:32.140
+Rode no simulador para conferir se o
+inimigo está se movimentando conforme o
+
+33
+00:02:32.140 --> 00:02:32.850
+esperado.
+
+34
+00:02:32.850 --> 00:02:40.255
+[SEM_ÁUDIO] Se
+
+35
+00:02:40.255 --> 00:02:44.140
+você tiver iPad ou iPhone rode também
+no aparelho para ver a diferença de
+
+36
+00:02:44.140 --> 00:02:47.410
+velocidade, que no aparelho
+será maior do que no simulador.
+
+37
+00:02:47.410 --> 00:02:55.319
+[SEM_ÁUDIO] Temos
+
+38
+00:02:55.319 --> 00:03:01.910
+que fazer uma correção dessa
+velocidade de movimentação.
+
+39
+00:03:01.910 --> 00:03:08.059
+Perceba que estamos usando a função Update
+para atualizar a posição do inimigo,
+
+40
+00:03:08.059 --> 00:03:12.620
+a função Update é executada toda vez
+antes de cada quadro ser renderizado.
+
+41
+00:03:12.620 --> 00:03:17.219
+Isso significa que se tivermos aparelho
+que roda numa taxa de quadros por
+
+42
+00:03:17.219 --> 00:03:22.031
+segundo baixa, a função update está sendo
+executada menos vezes a cada segundo,
+
+43
+00:03:22.031 --> 00:03:24.900
+que aparelho com taxa de
+quadros segundo alta.
+
+44
+00:03:24.900 --> 00:03:28.700
+Então, o jogo terá velocidade
+diferente em cada modelo de aparelho.
+
+45
+00:03:28.700 --> 00:03:33.595
+Temos que fazer cálculo de correção
+para que o jogo rode na mesma velocidade
+
+46
+00:03:33.595 --> 00:03:38.251
+em modelos diferentes do aparelho,
+independente da taxa de quadros por
+
+47
+00:03:38.251 --> 00:03:43.265
+segundo, precisamos calcular o tempo
+entre uma atualização e outra então,
+
+48
+00:03:43.265 --> 00:03:47.541
+crie uma variável chamada
+lastUpdateTime e inicialize com
+
+49
+00:03:47.541 --> 00:03:50.590
+construtor da clase 'CFTimeInterval'.
+
+50
+00:03:50.590 --> 00:03:55.910
+Na função Update vamos calcular esse
+
+51
+00:03:55.910 --> 00:04:01.230
+intervalo de tempo entre as atualizações
+pela variável 'timeSinceLastUpdate'
+
+52
+00:04:01.230 --> 00:04:06.291
+fazendo 'currentTime' que recebemos
+por parâmetro da função Update,
+
+53
+00:04:06.291 --> 00:04:08.990
+menos o valor de 'lastUpdateTime'.
+
+54
+00:04:08.990 --> 00:04:13.027
+Após o cálculo atualizamos o valor
+'lastUpdateTime' com o valor
+
+55
+00:04:13.027 --> 00:04:14.260
+'currentTime'.
+
+56
+00:04:14.260 --> 00:04:19.185
+Tivemos que adicionar
+a condição 'lastUpdateTime'
+
+57
+00:04:19.185 --> 00:04:24.418
+diferente de 0 para que a variável
+'timeSinceLastUpdate' seja
+
+58
+00:04:24.418 --> 00:04:29.590
+calculado apenas depois que a variável
+'lastUpdateTime' já tenha valor.
+
+59
+00:04:29.590 --> 00:04:34.496
+Com este valor precisamos apenas
+multiplicá-lo pela velocidade do inimigo
+
+60
+00:04:34.496 --> 00:04:36.920
+para corrigir a taxa de atualização.
+
+61
+00:04:36.920 --> 00:04:40.760
+Para isso precisamos transformá-lo
+primeiro em 'CGFloat'.
+
+62
+00:04:40.760 --> 00:04:45.501
+Como o valor desse intervalo é pequeno
+e multiplicamos pela velocidade,
+
+63
+00:04:45.501 --> 00:04:48.110
+temos que mudar a escala da velocidade.
+
+64
+00:04:48.110 --> 00:04:52.040
+Pois caso contrário,
+o inimigo se movimentará bem devagar.
+
+65
+00:04:52.040 --> 00:04:55.620
+Mude a velocidade X e Y para 300.
+
+66
+00:04:55.620 --> 00:05:03.690
+[SEM_ÁUDIO] Rode no simulador
+para ver o resultado.
+
+67
+00:05:03.690 --> 00:05:12.440
+[SEM_ÁUDIO] E se tiver iPhone ou iPad,
+rode no aparelho também.
+
+68
+00:05:12.440 --> 00:05:16.380
+Você verá que a velocidade
+em ambos será igual.
+
+69
+00:05:16.380 --> 00:05:19.916
+Porém, no aparelho você notará
+que o movimento é mais suave,
+
+70
+00:05:19.916 --> 00:05:23.460
+pois a taxa de quadros por segundo
+é maior do que no simulador.
+
+71
+00:05:23.460 --> 00:05:30.400
+Na próxima aula iremos adicionar
+as regras de fim de jogo, até lá.

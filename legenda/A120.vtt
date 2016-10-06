@@ -1,0 +1,254 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.105
+[MÚSICA] E
+
+3
+00:00:13.105 --> 00:00:17.910
+aí pessoal, tudo bem?
+
+4
+00:00:17.910 --> 00:00:21.510
+Nessa aula iremos ver como
+funciona segmented control.
+
+5
+00:00:21.510 --> 00:00:26.070
+Criaremos aplicativo que tenha
+segmented control e uma view.
+
+6
+00:00:26.070 --> 00:00:31.660
+Ao alterarmos a aba do segmented control
+alteramos uma label dentro dessa view.
+
+7
+00:00:31.660 --> 00:00:36.350
+Vamos iniciar criando novo projeto
+com a opção Single View Application.
+
+8
+00:00:36.350 --> 00:00:40.780
+Escolha nome de projeto e
+em devices deixe iPhone.
+
+9
+00:00:40.780 --> 00:00:46.550
+Com o projeto criado vamos ao storyboard.
+
+10
+00:00:46.550 --> 00:00:51.087
+Ajuste a opção de visualização
+para ser a mais próxima de
+
+11
+00:00:51.087 --> 00:00:53.690
+iPhone na orientação vertical.
+
+12
+00:00:53.690 --> 00:00:56.820
+Adicione segmented control.
+
+13
+00:00:56.820 --> 00:01:04.530
+Ajuste a posição.
+
+14
+00:01:04.530 --> 00:01:10.620
+Adicione Constraints.
+
+15
+00:01:10.620 --> 00:01:17.766
+[SEM_ÁUDIO] Temos
+
+16
+00:01:17.766 --> 00:01:23.660
+algumas opções importantes
+no inspetor de atributos.
+
+17
+00:01:23.660 --> 00:01:30.498
+Estilo, vamos deixar plain,
+número de segmentos, coloque 3.
+
+18
+00:01:30.498 --> 00:01:35.780
+Em seguida podemos ajustar algumas
+informações sobre cada segmento.
+
+19
+00:01:35.780 --> 00:01:40.668
+No primeiro,
+denominado Segmented 0 mude o nome
+
+20
+00:01:40.668 --> 00:01:45.310
+para Primeiro, deixe ativo e selecionado.
+
+21
+00:01:45.310 --> 00:01:52.024
+No segundo mude o nome para Segundo,
+também ativo.
+
+22
+00:01:52.024 --> 00:01:57.380
+No terceiro mude o nome para
+Terceiro e também deixe ativo.
+
+23
+00:01:57.380 --> 00:02:01.740
+Agora vamos adicionar uma
+view com uma label dentro.
+
+24
+00:02:01.740 --> 00:02:09.740
+[SEM_ÁUDIO]
+
+25
+00:02:09.740 --> 00:02:16.040
+[SEM_ÁUDIO] Vou
+
+26
+00:02:16.040 --> 00:02:21.080
+mudar a cor do fundo da view.
+
+27
+00:02:21.080 --> 00:02:27.230
+Adicionar Constraints.
+
+28
+00:02:27.230 --> 00:02:35.230
+[SEM_ÁUDIO]
+
+29
+00:02:35.230 --> 00:02:42.565
+[SEM_ÁUDIO] Vou
+
+30
+00:02:42.565 --> 00:02:49.020
+deixar essa label branca e
+quase do tamanho da view.
+
+31
+00:02:49.020 --> 00:02:57.740
+[SEM_ÁUDIO] Adicionar Constraints.
+
+32
+00:02:57.740 --> 00:03:05.740
+[SEM_ÁUDIO]
+
+33
+00:03:05.740 --> 00:03:13.740
+[SEM_ÁUDIO]
+
+34
+00:03:13.740 --> 00:03:21.920
+[SEM_ÁUDIO] Aqui tem alguns erros
+e eu vou corrigir as constraints.
+
+35
+00:03:21.920 --> 00:03:29.920
+[SEM_ÁUDIO]
+
+36
+00:03:29.920 --> 00:03:37.920
+[SEM_ÁUDIO]
+
+37
+00:03:37.920 --> 00:03:45.920
+[SEM_ÁUDIO]
+
+38
+00:03:45.920 --> 00:03:53.149
+[SEM_ÁUDIO] Vamos
+
+39
+00:03:53.149 --> 00:03:58.370
+fazer as conexões com código.
+
+40
+00:03:58.370 --> 00:04:04.260
+Uma oulet para a label,
+
+41
+00:04:04.260 --> 00:04:09.000
+textLabel.
+
+42
+00:04:09.000 --> 00:04:16.594
+Uma outlet para o segmented control,
+segmentedControl.
+
+43
+00:04:16.594 --> 00:04:21.670
+Uma action para o segmented control,
+
+44
+00:04:21.670 --> 00:04:26.800
+segmentedControlChanged.
+
+45
+00:04:26.800 --> 00:04:34.690
+Vamos ao código.
+
+46
+00:04:34.690 --> 00:04:41.318
+[SEM_ÁUDIO] Assim
+
+47
+00:04:41.318 --> 00:04:45.381
+como nos últimos exemplos vamos criar
+uma função auxiliar que verifique o
+
+48
+00:04:45.381 --> 00:04:50.359
+estado atual do segmented control
+e faz as alterações de acordo.
+
+49
+00:04:50.359 --> 00:04:55.004
+Nessa função verificamos qual o
+segmento está selecionado e alteramos
+
+50
+00:04:55.004 --> 00:04:56.030
+o texto da label.
+
+51
+00:04:56.030 --> 00:05:01.230
+Agora basta chamar essa função
+quando carregamos o view controller
+
+52
+00:05:01.230 --> 00:05:05.780
+e chamar novamente quando tiver uma ação.
+
+53
+00:05:05.780 --> 00:05:10.520
+Pronto, já podemos executar.
+
+54
+00:05:10.520 --> 00:05:17.615
+[SEM_ÁUDIO] Veja
+
+55
+00:05:17.615 --> 00:05:23.660
+que a label muda de acordo
+com o segmento selecionado.
+
+56
+00:05:23.660 --> 00:05:28.783
+[SEM_ÁUDIO] Na
+
+57
+00:05:28.783 --> 00:05:32.728
+próxima aula iremos ver como usar stepper.
+
+58
+00:05:32.728 --> 00:05:33.480
+Até lá!

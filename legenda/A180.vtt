@@ -1,0 +1,267 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.345
+[MÚSICA] E aí,
+
+2
+00:00:05.345 --> 00:00:08.785
+pessoal, tudo bem?
+
+3
+00:00:08.785 --> 00:00:13.180
+Nessa aula vamos ver como adicionar
+uma câmera que acompanha o jogador.
+
+4
+00:00:13.180 --> 00:00:16.200
+Crie novo projeto com o template de Game.
+
+5
+00:00:16.200 --> 00:00:20.600
+Com as configurações Swift,
+SpriteKit e Universal.
+
+6
+00:00:20.600 --> 00:00:29.340
+[SEM_ÁUDIO] Remova a orientação Portrait,
+pois vamos fazer o jogo em modo paisagem.
+
+7
+00:00:29.340 --> 00:00:34.115
+[SEM_ÁUDIO] Faça o
+
+8
+00:00:34.115 --> 00:00:38.210
+download do arquivo zip desse módulo
+e importe as imagens da pasta RPG.
+
+9
+00:00:38.210 --> 00:00:46.846
+[SEM_ÁUDIO] No editor
+
+10
+00:00:46.846 --> 00:00:53.290
+de cena mude o tamanho da
+cena para 1136 por 640.
+
+11
+00:00:53.290 --> 00:01:01.660
+[SEM_ÁUDIO] Adicione Color Sprite
+e escolha a textura CaveMap.
+
+12
+00:01:01.660 --> 00:01:09.700
+[SEM_ÁUDIO] Ajuste a posição Z para -1.
+
+13
+00:01:09.700 --> 00:01:14.160
+Adicione outro Color Sprite.
+
+14
+00:01:14.160 --> 00:01:21.430
+Mude o nome para Warrior e
+escolha a textura warrior.
+
+15
+00:01:21.430 --> 00:01:28.315
+Posicione neste quadrado central.
+
+16
+00:01:28.315 --> 00:01:35.200
+No código apague as linhas
+de exemplo do template.
+
+17
+00:01:35.200 --> 00:01:40.050
+Crie uma variável para o guerreiro
+e na função didMoveToView procure
+
+18
+00:01:40.050 --> 00:01:41.480
+pelo nome Warrior.
+
+19
+00:01:41.480 --> 00:01:47.412
+Vamos adicionar uma movimentação para
+o personagem usando o gesto Swipe,
+
+20
+00:01:47.412 --> 00:01:50.600
+assim como fizemos no
+primeiro módulo deste curso.
+
+21
+00:01:50.600 --> 00:01:56.590
+No primeiro módulo adicionamos apenas
+Swipe para a esquerda e para a direita.
+
+22
+00:01:56.590 --> 00:02:01.350
+Vamos adicionar aqui Swipe para
+cima e outro para baixo também.
+
+23
+00:02:01.350 --> 00:02:07.080
+Vamos criar as 4 funções que serão
+chamadas quando o Swipe for detectado.
+
+24
+00:02:07.080 --> 00:02:11.187
+Para cada direção criamos
+uma ação de movimento para o
+
+25
+00:02:11.187 --> 00:02:14.210
+warriorNode usando a função moveByX,
+
+26
+00:02:14.210 --> 00:02:18.070
+passando como argumento a quantidade de
+pixels em que o node deve-se movimentar.
+
+27
+00:02:18.070 --> 00:02:22.710
+No caso do Swipe para a direita,
+o Sprite se movimentará com o valor da
+
+28
+00:02:22.710 --> 00:02:27.720
+largura de warriorNode
+no eixo x e 0 no eixo y.
+
+29
+00:02:27.720 --> 00:02:32.371
+No Swipe para a esquerda, o Sprite
+se movimentará com valor negativo da
+
+30
+00:02:32.371 --> 00:02:36.590
+largura de warriorNode
+no eixo x e 0 no eixo y.
+
+31
+00:02:36.590 --> 00:02:41.687
+No Swipe para cima, o Sprite se
+movimentará o valor da altura de
+
+32
+00:02:41.687 --> 00:02:46.705
+warriorNode no eixo y e 0 no eixo x
+e no Swipe para baixo, o Sprite se
+
+33
+00:02:46.705 --> 00:02:53.180
+movimentará o valor negativo da altura
+de warriorNode no eixo y e 0 no eixo x.
+
+34
+00:02:53.180 --> 00:02:56.710
+Todos esses movimentos duram 0.3 segundo.
+
+35
+00:02:56.710 --> 00:03:01.615
+Agora precisamos criar os reconhecedores
+de gesto e adicioná-los na nossa cena,
+
+36
+00:03:01.615 --> 00:03:04.710
+assim como fizemos no
+primeiro módulo deste curso.
+
+37
+00:03:04.710 --> 00:03:08.730
+Rode no simulador para ver o resultado.
+
+38
+00:03:08.730 --> 00:03:15.016
+[SEM_ÁUDIO] Muito bem,
+
+39
+00:03:15.016 --> 00:03:19.400
+o guerreiro está se movimentando
+para todos os lados.
+
+40
+00:03:19.400 --> 00:03:23.490
+Vamos agora adicionar uma câmera
+que acompanha a posição do jogador.
+
+41
+00:03:23.490 --> 00:03:32.611
+[SEM_ÁUDIO] No editor
+
+42
+00:03:32.611 --> 00:03:39.380
+de cena encontre o objeto
+câmera e arraste para a cena.
+
+43
+00:03:39.380 --> 00:03:43.510
+Escolha o Warrior como o pai dessa câmera,
+assim,
+
+44
+00:03:43.510 --> 00:03:47.421
+quando o jogador se movimentar,
+a câmera se move junto.
+
+45
+00:03:47.421 --> 00:03:50.610
+Ajuste para a posição 0
+tanto no x quanto no y.
+
+46
+00:03:50.610 --> 00:03:55.154
+Clique em algum ponto fora do
+
+47
+00:03:55.154 --> 00:03:58.820
+Sprite do mapa para que as
+configurações da cena apareçam.
+
+48
+00:03:58.820 --> 00:04:03.320
+No atributo câmera escolha
+a câmera que acabamos de criar.
+
+49
+00:04:03.320 --> 00:04:06.908
+E pronto,
+agora o jogo já vai renderizar tudo o que
+
+50
+00:04:06.908 --> 00:04:10.080
+estiver dentro do campo
+de visão da câmera.
+
+51
+00:04:10.080 --> 00:04:18.080
+Rode no simulador para ver o resultado.
+
+52
+00:04:18.080 --> 00:04:26.080
+[SEM_ÁUDIO]
+
+53
+00:04:26.080 --> 00:04:35.914
+[SEM_ÁUDIO] Como desafio,
+
+54
+00:04:35.914 --> 00:04:41.041
+implemente algum algoritmo
+que o guerreiro não saia
+
+55
+00:04:41.041 --> 00:04:45.660
+do mapa e limite o movimento da câmera
+para que ela não mostre o fundo cinza.
+
+56
+00:04:45.660 --> 00:04:50.880
+Na próxima aula iremos adicionar
+luzes e sombras nesse jogo.
+
+57
+00:04:50.880 --> 00:04:53.960
+Até lá.

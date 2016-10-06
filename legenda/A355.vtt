@@ -1,0 +1,147 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.894
+Olá.
+Neste vídeo você verá na carta de
+
+2
+00:00:02.894 --> 00:00:06.970
+Nichols-Black os efeitos
+que os controladores PD,
+
+3
+00:00:06.970 --> 00:00:12.090
+PI e PID têm sobre a resposta
+frequência de malha fechada do sistema.
+
+4
+00:00:12.090 --> 00:00:18.249
+O sistema escolhido para
+estudo é G de s igual a 0,01
+
+5
+00:00:18.249 --> 00:00:24.299
+sobre s mais 0,05 vezes s mais 0,07,
+
+6
+00:00:24.299 --> 00:00:28.921
+cuja resposta na carta de Nichols-Black
+pode ser vista na figura azul,
+
+7
+00:00:28.921 --> 00:00:30.440
+com realimentação unitária.
+
+8
+00:00:30.440 --> 00:00:35.336
+Nota-se que a frequência de cruzamento
+de 0dB é bem abaixo de 1 radiano por
+
+9
+00:00:35.336 --> 00:00:39.260
+segundo e a margem de fase
+é de cerca de 80 graus.
+
+10
+00:00:39.260 --> 00:00:42.920
+Isso indica comportamento muito lento.
+
+11
+00:00:42.920 --> 00:00:46.500
+O ganho frequências baixas
+é de cerca de 10dB,
+
+12
+00:00:46.500 --> 00:00:50.724
+o que indica que o sistema deve
+apresentar erro regime apreciável.
+
+13
+00:00:50.724 --> 00:00:55.658
+Seguida, coloca-se o PD série com
+o sistema com a seguinte função de
+
+14
+00:00:55.658 --> 00:01:00.162
+transferência: C PD de s igual a 3,2
+
+15
+00:01:00.162 --> 00:01:04.859
+mais 9,5s sobre s sobre 180 mais 1.
+
+16
+00:01:04.859 --> 00:01:09.250
+Obtém-se a curva magenta
+na carta de Nichols-Black.
+
+17
+00:01:09.250 --> 00:01:14.350
+Pode-se notar que a margem de fase
+foi reduzida para cerca de 63 graus,
+
+18
+00:01:14.350 --> 00:01:17.680
+e há pico de ressonância torno de 0,5 dB.
+
+19
+00:01:17.680 --> 00:01:22.418
+A frequência de cruzamento de 0dB ficou
+muito mais próxima de 1 radiano por
+
+20
+00:01:22.418 --> 00:01:27.123
+segundo, indicando diminuição
+do tempo de resposta.
+
+21
+00:01:27.123 --> 00:01:32.071
+Ao introduzir no sistema original
+curva azul agora o PI com função de
+
+22
+00:01:32.071 --> 00:01:39.135
+transferência dada por C PI de s
+igual a s menos 0,018 sobre s,
+
+23
+00:01:39.135 --> 00:01:44.762
+tem-se o comportamento observado na
+curva amarelo, com diminuição da
+
+24
+00:01:44.762 --> 00:01:49.810
+margem de fase e ganho baixas frequências
+crescente conforme a frequência diminui.
+
+25
+00:01:49.810 --> 00:01:54.840
+Por fim, com o PID dado
+
+26
+00:01:54.840 --> 00:01:59.870
+por C PID igual a 3,2 mais 9,5 s sobre
+
+27
+00:01:59.870 --> 00:02:05.384
+s sobre 180 mais 1,
+tudo isso vezes s menos
+
+28
+00:02:05.384 --> 00:02:10.366
+0,018 sobre s,
+a curva pode ser vista verde.
+
+29
+00:02:10.366 --> 00:02:13.610
+Ela conjuga os defeitos do PI e do PD.
+
+30
+00:02:13.610 --> 00:02:19.670
+Pode ser enxergada como adição de PI ao
+PD, diminuindo levemente a margem de fase
+
+31
+00:02:19.670 --> 00:02:25.330
+quando comparada com a curva amarela,
+mas aumentando infinitamente o ganho de C.

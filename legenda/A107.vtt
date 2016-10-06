@@ -1,0 +1,305 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.063
+[MÚSICA] E
+
+3
+00:00:13.063 --> 00:00:17.830
+aí pessoal, tudo bem?
+
+4
+00:00:17.830 --> 00:00:22.310
+Nessa aula iremos ver como capturar
+gestos do usuário na tela do aplicativo.
+
+5
+00:00:22.310 --> 00:00:24.719
+Criaremos aplicativo como imagem,
+
+6
+00:00:24.719 --> 00:00:29.100
+podemos aumentar essa imagem e
+movê-la pela tela utilizando gestos.
+
+7
+00:00:29.100 --> 00:00:33.330
+Vamos iniciar criando novo projeto
+com a opção Single View Application.
+
+8
+00:00:33.330 --> 00:00:37.800
+Escolha nome de projeto e em
+Devices deixe apenas iPhone.
+
+9
+00:00:37.800 --> 00:00:44.315
+Com o projeto criado mova a imagem
+
+10
+00:00:44.315 --> 00:00:49.240
+de bola que está disponível no arquivo
+.zip desse módulo para a pasta xcassets.
+
+11
+00:00:49.240 --> 00:00:58.500
+[SEM_ÁUDIO] Vamos ao storyboard.
+
+12
+00:00:58.500 --> 00:01:03.501
+Antes de fazer qualquer
+alteração aqui ajuste
+
+13
+00:01:03.501 --> 00:01:07.780
+a opção de visualização para ser a mais
+próxima de iPhone na orientação vertical.
+
+14
+00:01:07.780 --> 00:01:11.260
+Primeiro vamos adicionar uma imagem.
+
+15
+00:01:11.260 --> 00:01:17.010
+Colocar a imagem da bola e modificar
+para a altura e largura de 150 pixeis.
+
+16
+00:01:17.010 --> 00:01:25.420
+É importante deixar selecionada essas
+opções de interação para a imagem da bola.
+
+17
+00:01:25.420 --> 00:01:28.395
+Se esses valores não
+estiverem selecionados,
+
+18
+00:01:28.395 --> 00:01:31.450
+qualquer gesto da imagem
+da bola será ignorado.
+
+19
+00:01:31.450 --> 00:01:35.126
+Agora vamos adicionar
+gestos ao View Controller.
+
+20
+00:01:35.126 --> 00:01:36.840
+Procure por Gestures.
+
+21
+00:01:36.840 --> 00:01:41.910
+Arraste Pinch Gesture Recognizer
+para a imagem da bola.
+
+22
+00:01:41.910 --> 00:01:45.990
+Arraste também Pan Gesture Recognizer.
+
+23
+00:01:45.990 --> 00:01:49.010
+Para ter certeza que as
+conexões foram feitas,
+
+24
+00:01:49.010 --> 00:01:51.510
+abra o inspetor de conexões da imagem.
+
+25
+00:01:51.510 --> 00:01:54.740
+Aqui podemos ver que os dois
+gestos foram adicionados.
+
+26
+00:01:54.740 --> 00:01:58.980
+Agora vamos conetar uma outlet para
+a imagem antes de irmos ao código.
+
+27
+00:01:58.980 --> 00:02:06.103
+Vou chamar a outlet de
+Ball Image View Vamos
+
+28
+00:02:06.103 --> 00:02:10.570
+ao código.
+
+29
+00:02:10.570 --> 00:02:17.470
+Aqui precisamos de uma
+função para cada gesto.
+
+30
+00:02:17.470 --> 00:02:22.126
+handlePinch trata como
+
+31
+00:02:22.126 --> 00:02:26.200
+fazemos o gesto de pinch,
+que é aquele que usamos para fazer zoom.
+
+32
+00:02:26.200 --> 00:02:30.960
+No código apenas faça verificação
+da view que chamou a função.
+
+33
+00:02:30.960 --> 00:02:34.790
+e aplique uma transformação de
+escala de acordo com o pinch fez.
+
+34
+00:02:34.790 --> 00:02:39.446
+handlePan trata
+
+35
+00:02:39.446 --> 00:02:44.000
+como fazemos gesto de pan que é
+aquele de pressionar e arrastar.
+
+36
+00:02:44.000 --> 00:02:47.430
+Temos código pouco mais complicado aqui.
+
+37
+00:02:47.430 --> 00:02:50.768
+Primeiro verificamos se
+já terminou de arrastar,
+
+38
+00:02:50.768 --> 00:02:52.950
+que é quando solta o dedo da tela.
+
+39
+00:02:52.950 --> 00:02:57.230
+Depois fazemos alguns cálculos
+de velocidade do deslize.
+
+40
+00:02:57.230 --> 00:03:03.260
+Em seguida calculamos o ponto final que
+a imagem vai ficar depois da animação.
+
+41
+00:03:03.260 --> 00:03:07.900
+Fazemos uma verificação se esse
+ponto está nos limites da tela.
+
+42
+00:03:07.900 --> 00:03:12.244
+Por último aplicamos a animação
+utilizando easy out para
+
+43
+00:03:12.244 --> 00:03:16.175
+a velocidade diminuir aos poucos.
+
+44
+00:03:16.175 --> 00:03:20.978
+Você deve ter percebido que as duas
+funções que adicionamos são outlets porém
+
+45
+00:03:20.978 --> 00:03:23.203
+não conetamos eles pelo storyboard.
+
+46
+00:03:23.203 --> 00:03:26.270
+Vamos voltar ao storyboard
+para conetar os gestos.
+
+47
+00:03:26.270 --> 00:03:29.910
+Veja que no View Controller tem
+os símbolos para cada gesto.
+
+48
+00:03:29.910 --> 00:03:34.048
+Apenas pressione Ctrl,
+clique e arraste para o
+
+49
+00:03:34.048 --> 00:03:38.497
+View Controller e selecione
+a função que criamos.
+
+50
+00:03:38.497 --> 00:03:40.880
+Repita para o outro gesto.
+
+51
+00:03:40.880 --> 00:03:47.960
+Agora podemos executar o aplicativo.
+
+52
+00:03:47.960 --> 00:03:56.387
+[SEM_ÁUDIO] Para
+
+53
+00:03:56.387 --> 00:04:04.657
+fazer pan basta clicar em cima
+da imagem deslocar e soltar.
+
+54
+00:04:04.657 --> 00:04:09.300
+A velocidade da bola vai depender
+da velocidade do movimento.
+
+55
+00:04:09.300 --> 00:04:15.196
+[SEM_ÁUDIO] Para
+
+56
+00:04:15.196 --> 00:04:20.992
+fazer o pinch pressione
+a tecla Alt ou option.
+
+57
+00:04:20.992 --> 00:04:25.170
+Veja que aparecem 2 bolas
+movendo de acordo com o cursor.
+
+58
+00:04:25.170 --> 00:04:30.060
+Deixe elas próximas uma da
+outra e pressione a tecla Shift
+
+59
+00:04:30.060 --> 00:04:31.774
+mantendo a anterior.
+
+60
+00:04:31.774 --> 00:04:35.210
+Veja que agora as duas
+bolas se movem juntas.
+
+61
+00:04:35.210 --> 00:04:39.240
+Posicione-as em cima da imagem da bola.
+
+62
+00:04:39.240 --> 00:04:43.690
+Solte apenas o Shift, clique e arraste.
+
+63
+00:04:43.690 --> 00:04:46.402
+Se arrastar para fora aumenta a bola,
+
+64
+00:04:46.402 --> 00:04:50.060
+se arrastar para dentro
+diminui o tamanho da bola.
+
+65
+00:04:50.060 --> 00:04:57.409
+Na próxima aula você vai ver
+como utilizar Picker View.
+
+66
+00:04:57.409 --> 00:04:58.420
+Até lá!

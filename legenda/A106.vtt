@@ -1,0 +1,364 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.073
+[MÚSICA] E
+
+3
+00:00:13.073 --> 00:00:17.850
+ai pessoal, tudo bem?
+
+4
+00:00:17.850 --> 00:00:23.210
+Nessa aula iremos ver como capturar dados
+do usuário utilizando teclado virtual.
+
+5
+00:00:23.210 --> 00:00:26.491
+Criaremos aplicativo
+com alguns campos que,
+
+6
+00:00:26.491 --> 00:00:31.140
+quando selecionados, abram o
+teclado do dispositivo para edição.
+
+7
+00:00:31.140 --> 00:00:35.950
+Vamos iniciar criando novo projeto
+com a opção Single View Application.
+
+8
+00:00:35.950 --> 00:00:40.830
+Escolha o nome de projeto e em
+devices deixe apenas iPhone.
+
+9
+00:00:40.830 --> 00:00:49.320
+[SEM_ÁUDIO] Com o projeto criado,
+vamos trabalhar no storyboard.
+
+10
+00:00:49.320 --> 00:00:54.397
+Antes de fazer qualquer alteração aqui,
+ajuste
+
+11
+00:00:54.397 --> 00:00:59.450
+a opção de visualização para ser a mais
+próxima de iPhone na orientação vertical.
+
+12
+00:00:59.450 --> 00:01:02.960
+Vamos adicionar 2 labels.
+
+13
+00:01:02.960 --> 00:01:10.460
+Ajuste o tamanho e posições sem o
+uso de constraints para facilitar.
+
+14
+00:01:10.460 --> 00:01:14.910
+A primeira label mude para Nome.
+
+15
+00:01:14.910 --> 00:01:21.791
+[SEM_ÁUDIO] A segunda
+
+16
+00:01:21.791 --> 00:01:25.920
+label mude para Descrição.
+
+17
+00:01:25.920 --> 00:01:32.648
+[SEM_ÁUDIO] Agora,
+
+18
+00:01:32.648 --> 00:01:37.080
+vamos adicionar text field.
+
+19
+00:01:37.080 --> 00:01:44.690
+Mova para ficar ao lado da primeira label.
+
+20
+00:01:44.690 --> 00:01:50.630
+Repare que tem diversas opções
+de edição no iii de atributos.
+
+21
+00:01:50.630 --> 00:01:54.670
+As mais interessantes são: placeholder.
+
+22
+00:01:54.670 --> 00:01:59.520
+Aqui podemos deixar texto padrão quando
+ainda não há nenhum dado inserido pelo
+
+23
+00:01:59.520 --> 00:02:00.170
+usuário.
+
+24
+00:02:00.170 --> 00:02:03.517
+Vamos deixar o texto Digite O Seu Nome.
+
+25
+00:02:03.517 --> 00:02:09.200
+Border style, o estilo da borda do
+text field vamos deixar arredondada.
+
+26
+00:02:09.200 --> 00:02:13.686
+Clear button, se em algum momento
+aparece a opção de apagar todo o
+
+27
+00:02:13.686 --> 00:02:17.530
+texto deixe para aparecer sempre
+o que eles tivessem digitado.
+
+28
+00:02:17.530 --> 00:02:22.320
+Vamos deixar os outros com valor padrão
+mas os principais para alteração.
+
+29
+00:02:22.320 --> 00:02:27.090
+Capitalization, opção para deixar
+letras maiúsculas nas palavras,
+
+30
+00:02:27.090 --> 00:02:31.640
+Spell-Checking, opção de deixar
+habilitado corretor ortográfico,
+
+31
+00:02:31.640 --> 00:02:35.280
+Keyboard Type, para os diferentes
+tipos de teclado virtual.
+
+32
+00:02:35.280 --> 00:02:40.970
+Return Key, o que é feito quando utilizado
+a tecla enter ou return do teclado.
+
+33
+00:02:40.970 --> 00:02:46.580
+Agora, vamos adicionar text view
+logo após a label de descrição.
+
+34
+00:02:46.580 --> 00:02:54.450
+Este é parecido com text field com a
+diferença que ele aceita múltiplas linhas.
+
+35
+00:02:54.450 --> 00:02:58.910
+Apague o texto que está aqui
+e mude a cor de fundo para
+
+36
+00:02:58.910 --> 00:03:03.690
+ficar mais fácil de
+visualizar iii no aplicativo.
+
+37
+00:03:03.690 --> 00:03:08.800
+Com os objetos de texto selecionados,
+vamos conectá-los ao código.
+
+38
+00:03:08.800 --> 00:03:12.810
+Primeiro, criar outlet para o text field.
+
+39
+00:03:12.810 --> 00:03:17.380
+Vou dar o nome de Name Text Field.
+
+40
+00:03:17.380 --> 00:03:21.950
+Agora, criar outlet para o text view.
+
+41
+00:03:21.950 --> 00:03:25.110
+Vou dar o nome de Description Text View.
+
+42
+00:03:25.110 --> 00:03:29.350
+Vamos ao código.
+
+43
+00:03:29.350 --> 00:03:34.790
+Para que possamos receber as
+informações desses campos,
+
+44
+00:03:34.790 --> 00:03:37.347
+vamos inserir Delegate para cada campo.
+
+45
+00:03:37.347 --> 00:03:41.350
+Delegate é elemento importante de
+programação na linguagem Swift.
+
+46
+00:03:41.350 --> 00:03:43.960
+Algumas classes prontas
+
+47
+00:03:43.960 --> 00:03:48.130
+em Swift possuem protocolos para
+quando alguém utiliza elas.
+
+48
+00:03:48.130 --> 00:03:53.051
+Devem existir algumas funções que
+precisam ser implementadas para que essas
+
+49
+00:03:53.051 --> 00:03:54.420
+classes funcionem.
+
+50
+00:03:54.420 --> 00:03:57.580
+Assim que entra o uso de delegates.
+
+51
+00:03:57.580 --> 00:04:02.499
+Se usamos objeto que seja de uma dessas
+classes e queremos obter informações
+
+52
+00:04:02.499 --> 00:04:05.236
+deles, precisamos
+implementar as funções que
+
+53
+00:04:05.236 --> 00:04:08.920
+constam no protocolo da classe
+desse objeto como obrigatórias.
+
+54
+00:04:08.920 --> 00:04:13.310
+Há também funções auxiliares
+que não são obrigatórias.
+
+55
+00:04:13.310 --> 00:04:16.920
+No caso do text field e text view,
+
+56
+00:04:16.920 --> 00:04:21.600
+vamos utilizar os delegates, porém,
+para eles não há funções obrigatórias.
+
+57
+00:04:21.600 --> 00:04:26.432
+Vamos apenas utilizar
+algumas funções auxiliares.
+
+58
+00:04:26.432 --> 00:04:33.400
+Insira UITextViewDelegate
+e UITextFieldDelegate.
+
+59
+00:04:33.400 --> 00:04:39.920
+Vamos direcionar os delegates para esse
+view controller na função ViewDidLoad.
+
+60
+00:04:39.920 --> 00:04:44.524
+Agora podemos colocar as funções
+que verificam quando terminam de
+
+61
+00:04:44.524 --> 00:04:46.010
+digitar cada campo.
+
+62
+00:04:46.010 --> 00:04:50.810
+Para verificar quando termina
+de digitar o text view,
+
+63
+00:04:50.810 --> 00:04:54.460
+usamos TextViewDidEndEditing.
+
+64
+00:04:54.460 --> 00:04:59.230
+Para verificar quando termina
+de digitar text field,
+
+65
+00:04:59.230 --> 00:05:02.410
+usamos textFieldDidEndEditing.
+
+66
+00:05:02.410 --> 00:05:07.170
+Porém, em nenhum momento essas
+funções estão sendo chamadas.
+
+67
+00:05:07.170 --> 00:05:12.695
+[SEM_ÁUDIO] Com
+
+68
+00:05:12.695 --> 00:05:17.740
+essa função verificamos quando o usuário
+tocar na tela em qualquer ponto.
+
+69
+00:05:17.740 --> 00:05:20.787
+Se o toque for
+feito depois que começou a editar,
+
+70
+00:05:20.787 --> 00:05:23.620
+vamos considerar que
+ele terminou a edição.
+
+71
+00:05:23.620 --> 00:05:30.525
+Quando terminar a edição,
+as funções anteriores são chamadas.
+
+72
+00:05:30.525 --> 00:05:33.222
+Com todas essas funções prontas,
+
+73
+00:05:33.222 --> 00:05:36.570
+podemos executar o aplicativo
+no simulador de iPhone 6.
+
+74
+00:05:36.570 --> 00:05:44.570
+[SEM_ÁUDIO]
+
+75
+00:05:44.570 --> 00:05:53.015
+[SEM_ÁUDIO] Veja que temos
+
+76
+00:05:53.015 --> 00:05:59.210
+a impressão no console do Xcode sempre
+que termina a edição de qualquer campo.
+
+77
+00:05:59.210 --> 00:06:04.856
+[SEM_ÁUDIO] Na
+
+78
+00:06:04.856 --> 00:06:10.120
+próxima aula você vai ver como
+capturar gestos em aplicativo.
+
+79
+00:06:10.120 --> 00:06:14.030
+Até lá!

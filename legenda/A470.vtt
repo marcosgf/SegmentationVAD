@@ -1,0 +1,1060 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.819
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.819 --> 00:00:14.230
+bem vindo ao curso de Orientação a Objetos
+com Java, eu sou o Clovis Fernandes
+
+3
+00:00:14.230 --> 00:00:19.309
+e nessa aula iremos dar continuidade
+ao hands-on sobre Modelagem CRC.
+
+4
+00:00:19.309 --> 00:00:25.540
+Vamos apresentar o passo 6 e dar
+fecho na modelagem da aplicação SAB.
+
+5
+00:00:25.540 --> 00:00:29.746
+No passo 5 nós identificamos
+as responsabilidades
+
+6
+00:00:29.746 --> 00:00:32.780
+completamente para a classe Biblioteca.
+
+7
+00:00:32.780 --> 00:00:36.700
+Então, eu tenho aqui verde
+a responsabilidade do tipo sabe,
+
+8
+00:00:36.700 --> 00:00:41.654
+amarelo as as responsabilidades do
+tipo faz, que foram responsabilidades
+
+9
+00:00:41.654 --> 00:00:46.930
+óbvias e as restantes são
+responsabilidades que foram identificadas
+
+10
+00:00:46.930 --> 00:00:51.628
+na especificação através
+de verbos e predicados.
+
+11
+00:00:51.628 --> 00:00:57.507
+O passo 6 eu vou pegar cada
+uma das responsabilidades
+
+12
+00:00:57.507 --> 00:01:02.377
+de cada classe e vou dar
+a lógica para elas, certo?
+
+13
+00:01:02.377 --> 00:01:07.343
+Eu vou exemplificar aqui,
+algumas dessas responsabilidades.
+
+14
+00:01:07.343 --> 00:01:08.601
+Então, por exemplo,
+
+15
+00:01:08.601 --> 00:01:14.270
+a responsabilidade: "Empresta livro" da
+classe Biblioteca tem a seguinte lógica,
+
+16
+00:01:14.270 --> 00:01:19.416
+que é algoritmo, não é, mostra o que
+é que faz essa responsabilidade.
+
+17
+00:01:19.416 --> 00:01:23.976
+Então, tem livro para empréstimo para dado
+usuário, e é isso que é o objetivo do
+
+18
+00:01:23.976 --> 00:01:27.350
+emprestar o livro,
+emprestar o livro para dado usuário.
+
+19
+00:01:27.350 --> 00:01:31.803
+A primeira coisa que eu faço é
+marcar o livro como emprestado,
+
+20
+00:01:31.803 --> 00:01:36.161
+eu anexo o usuário, que eu acabo
+de emprestar o livro, como alvo do
+
+21
+00:01:36.161 --> 00:01:40.832
+empréstimo do livro e anexo o livro à
+lista de livros emprestados pelo usuário,
+
+22
+00:01:40.832 --> 00:01:44.259
+ou seja, o livro,
+quando eu marco o livro como emprestado,
+
+23
+00:01:44.259 --> 00:01:48.851
+ele deixa de ser disponível, ele fica
+indisponível para emprestar para outro,
+
+24
+00:01:48.851 --> 00:01:52.160
+porque ele já não vai existir
+no catálogo para emprestar.
+
+25
+00:01:52.160 --> 00:01:55.983
+E eu represento isso
+anexando o usuário ao livro,
+
+26
+00:01:55.983 --> 00:02:01.818
+que é alvo do meu empréstimo, para que eu
+saiba quem aquele livro está, está certo?
+
+27
+00:02:01.818 --> 00:02:06.442
+Se eu precisar algum momento e eu anexo o
+livro à lista de livros emprestados pelo
+
+28
+00:02:06.442 --> 00:02:10.867
+usuário para que o usuário saiba
+e fique registrado quais são os
+
+29
+00:02:10.867 --> 00:02:13.899
+livros que ele tem
+emprestado da biblioteca.
+
+30
+00:02:13.899 --> 00:02:18.411
+O que é que acontece com
+essas 3 últimas linhas aqui?
+
+31
+00:02:18.411 --> 00:02:22.047
+Elas são responsabilidades novas, está?
+
+32
+00:02:22.047 --> 00:02:27.080
+Então, eu tenho a responsabilidade,
+posso olhá-las como responsabilidades.
+
+33
+00:02:27.080 --> 00:02:32.321
+Da mesma maneira que eu
+olhava os verbos e predicados
+
+34
+00:02:32.321 --> 00:02:37.746
+na especificação do sistema SAB,
+agora eu olho na lógica de cada
+
+35
+00:02:37.746 --> 00:02:44.046
+responsabilidade de classes existentes,
+eu vou descobrir novas responsabilidades.
+
+36
+00:02:44.046 --> 00:02:49.018
+Então, eu tenho aí, marca livro como
+emprestado, é uma responsabilidade,
+
+37
+00:02:49.018 --> 00:02:52.291
+anexa usuário como alvo
+do empréstimo do livro,
+
+38
+00:02:52.291 --> 00:02:57.039
+é outra responsabilidade e anexa livro à
+lista de livros emprestados pelo usuário é
+
+39
+00:02:57.039 --> 00:02:59.480
+outra responsabilidade
+e o que é que acontece?
+
+40
+00:02:59.480 --> 00:03:06.937
+Eu agora faço a atribuição dessas
+responsabilidades às classes existentes.
+
+41
+00:03:06.937 --> 00:03:13.173
+Então marca livro como emprestado e anexa
+usuário como alvo do empréstimo do livro,
+
+42
+00:03:13.173 --> 00:03:18.110
+eu faço a atribuição à classe Livro,
+faz sentido pertencer à classe Livro.
+
+43
+00:03:18.110 --> 00:03:23.500
+Já a responsabilidade anexa livro à lista
+de livros emprestados pelo usuário, faz
+
+44
+00:03:23.500 --> 00:03:29.007
+todo o sentido estar na classe Usuário e é
+isso que eu faço, eu faço essa atribuição.
+
+45
+00:03:29.007 --> 00:03:34.527
+Suponha no meu caso, nesse exemplo,
+as atribuições são classes já existentes,
+
+46
+00:03:34.527 --> 00:03:40.003
+suponha que nenhuma das classes existente
+fizesse sentido para eu fazer atribuição,
+
+47
+00:03:40.003 --> 00:03:41.820
+então o que é que eu teria que fazer?
+
+48
+00:03:41.820 --> 00:03:43.456
+Criar uma classe nova, então,
+
+49
+00:03:43.456 --> 00:03:47.205
+pode ser que eu não tenha chegado
+a uma classe pela análise CRC até aos
+
+50
+00:03:47.205 --> 00:03:52.140
+passos anteriores, mas agora comecaria
+a chegar a uma classe nova, porquê?
+
+51
+00:03:52.140 --> 00:03:57.683
+Eu teria na mão uma responsabilidade e não
+teria uma classe que eu pudesse atribuir,
+
+52
+00:03:57.683 --> 00:04:01.316
+neste caso, essa classe nova
+receberia a atribuição dessa
+
+53
+00:04:01.316 --> 00:04:04.047
+responsabilidade e faria
+parte do meu sistema.
+
+54
+00:04:04.047 --> 00:04:07.251
+Seria a quarta classe se fosse o caso,
+não é o caso aqui.
+
+55
+00:04:07.251 --> 00:04:09.200
+Vamos olhar agora outra lógica.
+
+56
+00:04:09.200 --> 00:04:11.790
+Agora dá "Devolve livro" da Biblioteca.
+
+57
+00:04:11.790 --> 00:04:15.046
+Ela é exatamente o oposto da anterior.
+
+58
+00:04:15.046 --> 00:04:19.625
+O anterior eu estava emprestando
+o livro para usuário,
+
+59
+00:04:19.625 --> 00:04:22.922
+agora é usuário que está devolvendo
+livro para a biblioteca.
+
+60
+00:04:22.922 --> 00:04:25.387
+Então, devolve o livro
+da classe Biblioteca.
+
+61
+00:04:25.387 --> 00:04:26.622
+Qual é a lógica dela?
+
+62
+00:04:26.622 --> 00:04:32.221
+A primeira coisa que eu faço eu desanexo o
+livro da lista de livros emprestados pelo
+
+63
+00:04:32.221 --> 00:04:39.092
+usuário, ou seja, eu devolvo livro de dado
+usuário, então eu já sei quem é o usuário,
+
+64
+00:04:39.092 --> 00:04:43.757
+aí eu desanexo o livro desse objeto
+usuário, da lista de livros dele.
+
+65
+00:04:43.757 --> 00:04:48.803
+Desanexo o usuário como alvo do empréstimo
+do livro, então, estou devolvendo livro,
+
+66
+00:04:48.803 --> 00:04:53.144
+ele está marcado lá que esse
+usuário como o detentor do livro,
+
+67
+00:04:53.144 --> 00:04:57.851
+eu vou desanexar e marco o
+livro como disponível, porquê?
+
+68
+00:04:57.851 --> 00:05:02.264
+Eu acabei de devolver, então agora,
+se aparecer no instante seguinte
+
+69
+00:05:02.264 --> 00:05:07.162
+novo usuário querendo emprestar esse
+mesmo livro, o livro estará disponível.
+
+70
+00:05:07.162 --> 00:05:08.610
+Então o que aconteceu?
+
+71
+00:05:08.610 --> 00:05:12.988
+O desanexa livro da lista de
+livros emprestado pelo usuário,
+
+72
+00:05:12.988 --> 00:05:16.710
+eu atribuo à classe Usuário,
+porque faz sentido, não é?
+
+73
+00:05:16.710 --> 00:05:21.223
+É uma operação que eu vou fazer lá na
+classe Usuário, lá na classe Usuário,
+
+74
+00:05:21.223 --> 00:05:26.046
+eu tenho, a classe Usuário sabe
+a lista dos livros que ele emprestou,
+
+75
+00:05:26.046 --> 00:05:31.683
+então ele poderá facilmente desanexar o
+livro da lista de livros emprestados.
+
+76
+00:05:31.683 --> 00:05:35.284
+Já o desanexa o usuário como
+alvo do empréstimo do livro,
+
+77
+00:05:35.284 --> 00:05:39.621
+ele marca o livro como disponível,
+esses 2 pertencem à classe Livro,
+
+78
+00:05:39.621 --> 00:05:44.633
+eu vou fazer a atribuição dessas novas
+responsabilidades à classe Livro.
+
+79
+00:05:44.633 --> 00:05:49.480
+Então, para que vocês percebam que à
+medida que eu vou descrevendo as lógicas,
+
+80
+00:05:49.480 --> 00:05:53.963
+eu vou tendo mais informação sobre
+o que o meu sistema faz e vão
+
+81
+00:05:53.963 --> 00:05:58.878
+aparecendo novas responsabilidades,
+eventualmente novas classes, está certo?
+
+82
+00:05:58.878 --> 00:06:03.525
+No caso aqui não apareceu porque eu
+estou fazendo exemplo bastante simples,
+
+83
+00:06:03.525 --> 00:06:04.513
+nesse momento.
+
+84
+00:06:04.513 --> 00:06:09.269
+A próxima coisa que eu vou fazer é
+apresentar a lógica da responsabilidade
+
+85
+00:06:09.269 --> 00:06:13.375
+"Exibe livros disponíveis"
+para empréstimo de Biblioteca.
+
+86
+00:06:13.375 --> 00:06:17.747
+Então ele é uma lógica que ele vai
+varrer o catálogo de livros, não é?
+
+87
+00:06:17.747 --> 00:06:22.207
+Então para cada livro do catálogo de
+livros ele simplesmente pergunta se o
+
+88
+00:06:22.207 --> 00:06:26.036
+livro, que ele está à mão naquele momento,
+está disponível ou não.
+
+89
+00:06:26.036 --> 00:06:30.024
+Se estiver disponível, ele coloca
+na lista para exibir, está certo?
+
+90
+00:06:30.024 --> 00:06:34.630
+Passa para o próximo livro, pergunta se
+está disponível, se não estiver passa para
+
+91
+00:06:34.630 --> 00:06:38.415
+o próximo livro, se estiver,
+coloca para exibir, está certo?
+
+92
+00:06:38.415 --> 00:06:43.404
+Com isso eu vou montando o catálogo de,
+a lista de livros disponíveis.
+
+93
+00:06:43.404 --> 00:06:45.300
+O que é que aparece aqui?
+
+94
+00:06:45.300 --> 00:06:47.453
+Uma nova responsabilidade.
+
+95
+00:06:47.453 --> 00:06:49.262
+Livro está disponível?
+
+96
+00:06:49.262 --> 00:06:54.480
+É uma pergunta que é uma responsabilidade
+do tipo pergunta booleana,
+
+97
+00:06:54.480 --> 00:07:00.148
+vai responder sim ou não, verdadeiro ou
+falso e eu vou atribuir à classe Livro.
+
+98
+00:07:00.148 --> 00:07:05.660
+Então, é uma responsabilidade que eu vou
+agora, apareceu agora e eu vou atribuir,
+
+99
+00:07:05.660 --> 00:07:10.660
+procuro lá, faz sentido ser na classe
+Livro, então eu coloco na classe Livro.
+
+100
+00:07:10.660 --> 00:07:15.660
+"Exibir livros não disponíveis",
+basicamente é a mesma coisa do anterior,
+
+101
+00:07:15.660 --> 00:07:20.275
+só que eu inverto a pergunta, antes
+eu perguntava: livro está disponível?
+
+102
+00:07:20.275 --> 00:07:23.981
+Agora eu pergunto livro não disponível,
+mas basicamente
+
+103
+00:07:23.981 --> 00:07:28.692
+a responsabilidade é a mesma da anterior,
+o livro está disponível?
+
+104
+00:07:28.692 --> 00:07:32.540
+Basta eu negar a anterior, então,
+não é uma responsabilidade nova.
+
+105
+00:07:32.540 --> 00:07:37.300
+É a mesma responsabilidade antiga que
+eu estou usando aqui e já tinha sido
+
+106
+00:07:37.300 --> 00:07:39.095
+atribuído à classe Livro.
+
+107
+00:07:39.095 --> 00:07:43.408
+Agora a lógica para "Registra
+usuário" de Biblioteca, se o usuário
+
+108
+00:07:43.408 --> 00:07:48.170
+não está na lista de usuários da
+biblioteca, eu vou registrar novo usuário.
+
+109
+00:07:48.170 --> 00:07:51.575
+Se ele já existir, eu estou fazendo
+algo errado, não é, está certo?
+
+110
+00:07:51.575 --> 00:07:55.745
+Estou querendo colocar, registrar
+usuário que já existe está certo?
+
+111
+00:07:55.745 --> 00:08:02.110
+Então, se o usuário existir,
+eu vou avisar que o usuário já existe.
+
+112
+00:08:02.110 --> 00:08:06.460
+Agora se ele não existe,
+então eu vou criar uma nova instância,
+
+113
+00:08:06.460 --> 00:08:08.790
+novo objeto do usuário, está certo?
+
+114
+00:08:08.790 --> 00:08:13.573
+E vou adicionar a esse objeto à lista de
+usuários da biblioteca e aviso que ele é
+
+115
+00:08:13.573 --> 00:08:14.540
+novo usuário.
+
+116
+00:08:14.540 --> 00:08:17.375
+Coloco também o nome único dele,
+não é, está certo?
+
+117
+00:08:17.375 --> 00:08:21.383
+São informações que veio junto comigo
+quando registra usuário vem com
+
+118
+00:08:21.383 --> 00:08:26.649
+informações sobre o nome, aí eu coloco
+essa informação no objeto novo usuário.
+
+119
+00:08:26.649 --> 00:08:32.000
+O adiciona esse objeto à lista de usuários
+da biblioteca e avisa "Novo usuário"
+
+120
+00:08:32.000 --> 00:08:37.475
+ele está marcado aí como preto, poderia
+ser considerado uma nova responsabilidade
+
+121
+00:08:37.475 --> 00:08:43.002
+se for realmente muito difícil fazer
+essa adição desse novo elemento.
+
+122
+00:08:43.002 --> 00:08:47.476
+Se for uma coisa simples,
+ele é código comum, se não realmente
+
+123
+00:08:47.476 --> 00:08:51.942
+poderia ser uma responsabilidade nova e
+aqui eu não estou nem considerando isso.
+
+124
+00:08:51.942 --> 00:08:54.403
+A outra lógica é o "Adiciona
+livro" está certo?
+
+125
+00:08:54.403 --> 00:08:59.650
+Já no caso do "Adiciona livro",
+eu crio novo número único de catálogo.
+
+126
+00:08:59.650 --> 00:09:03.338
+Isso pode ser uma coisa simples,
+no meu exemplo, vai ser uma coisa simples,
+
+127
+00:09:03.338 --> 00:09:06.702
+porque eu estou simplesmente
+fazendo uma numeração simples,
+
+128
+00:09:06.702 --> 00:09:11.680
+a cada vez que entra livro ele recebe
+número, ele tem contador muito simples.
+
+129
+00:09:11.680 --> 00:09:16.370
+Mas no caso real da biblioteca,
+pode ser que isso se transformasse
+
+130
+00:09:16.370 --> 00:09:21.060
+numa responsabilidade que ia dar origem,
+uma parte do meu sistema,
+
+131
+00:09:21.060 --> 00:09:26.147
+que iria ser responsável para colocar
+os números apropriados de biblioteca,
+
+132
+00:09:26.147 --> 00:09:30.731
+que seguem regras de biblioteconomia
+e que os números são complicados para
+
+133
+00:09:30.731 --> 00:09:34.069
+identificar se o livro é de ação,
+se o livro é científico,
+
+134
+00:09:34.069 --> 00:09:38.308
+se o livro científico é de medicina,
+de computação ou de não sei o quê.
+
+135
+00:09:38.308 --> 00:09:42.470
+Então, eventualmente esse Cria
+novo número único de catálogo,
+
+136
+00:09:42.470 --> 00:09:46.790
+seria uma responsabilidade que
+daria origem a uma nova classe,
+
+137
+00:09:46.790 --> 00:09:51.738
+que estaria cuidando dessa problemática
+de dar número único de catálogo.
+
+138
+00:09:51.738 --> 00:09:56.283
+Cria, no nosso caso aqui, ele é uma coisa
+muito simples, é contador muito simples,
+
+139
+00:09:56.283 --> 00:10:00.551
+ele sempre vai apontando o próximo número
+que esteja disponível para servir de seu
+
+140
+00:10:00.551 --> 00:10:02.580
+número único do catálogo do livro.
+
+141
+00:10:02.580 --> 00:10:07.084
+Aí eu crio uma instância do objeto usuário
+e adiciono esse objeto ao catálogo de
+
+142
+00:10:07.084 --> 00:10:08.474
+livros da biblioteca.
+
+143
+00:10:08.474 --> 00:10:09.794
+No nosso caso também,
+
+144
+00:10:09.794 --> 00:10:13.620
+adicionar objetos é uma coisas muito
+simples porque estamos com uma lista muito
+
+145
+00:10:13.620 --> 00:10:17.237
+simples mas poderia ser uma coisa mais
+complicada também e se transformar numa
+
+146
+00:10:17.237 --> 00:10:20.840
+responsabilidade atribuída a uma
+classe provavelmente nova aqui.
+
+147
+00:10:20.840 --> 00:10:24.014
+Como ficamos então com a classe livro?
+
+148
+00:10:24.014 --> 00:10:30.805
+Se vocês lembram, nos só estávamos usando
+responsabilidades verdes do tipo Sabe.
+
+149
+00:10:30.805 --> 00:10:33.560
+Sabe título, Sabe autor,
+Sabe número único de usuário,
+
+150
+00:10:33.560 --> 00:10:36.786
+Sabe disponibilidade empréstimo,
+Sabe usuário, se emprestado.
+
+151
+00:10:36.786 --> 00:10:40.494
+A partir do momento que começamos a listar
+as lógicas das responsabilidades das
+
+152
+00:10:40.494 --> 00:10:45.035
+classes biblioteca, livro e usuário,
+começaram a aparecer novas
+
+153
+00:10:45.035 --> 00:10:49.702
+responsabilidades e que elas
+foram sendo atribuídas,
+
+154
+00:10:49.702 --> 00:10:53.360
+a maioria delas, algumas delas
+para livro e outras para usuário.
+
+155
+00:10:53.360 --> 00:10:56.246
+Então aparecem então Marca
+livro como emprestado,
+
+156
+00:10:56.246 --> 00:10:58.940
+Anexa usuário como alvo
+do empréstimo do livro,
+
+157
+00:10:58.940 --> 00:11:04.520
+Desanexa usuário como alvo do empréstimo
+do livro, Marca livro como disponível.
+
+158
+00:11:04.520 --> 00:11:05.906
+Livro está disponível?
+
+159
+00:11:05.906 --> 00:11:10.328
+Aqui existe uma redundância que eu não
+eliminei ainda mas numa fase posterior eu
+
+160
+00:11:10.328 --> 00:11:11.510
+poderia eliminar.
+
+161
+00:11:11.510 --> 00:11:14.031
+É o Sabe disponibilidade de empréstimo,
+
+162
+00:11:14.031 --> 00:11:17.274
+ela corresponde muito ao
+Livro está disponível.
+
+163
+00:11:17.274 --> 00:11:23.480
+Algum momento eu ia ver que elas são
+a mesma e eliminaria uma das duas.
+
+164
+00:11:23.480 --> 00:11:27.650
+Já a classe usuário: antes só tinha o Sabe
+nome e Sabe lista de livros emprestados.
+
+165
+00:11:27.650 --> 00:11:31.480
+Eu consegui então identificar nas
+responsabilidades da classe biblioteca
+
+166
+00:11:31.480 --> 00:11:34.420
+duas responsabilidades que
+foram atribuídas aos olhos,
+
+167
+00:11:34.420 --> 00:11:35.620
+faz sentido isso aqui.
+
+168
+00:11:35.620 --> 00:11:38.289
+Uma delas é o Anexo lista
+de livros emprestados,
+
+169
+00:11:38.289 --> 00:11:41.560
+a outra é Desanexa livro da
+lista de livros emprestados.
+
+170
+00:11:41.560 --> 00:11:48.950
+Olhando agora como cartão, está certo, eu
+estou agora resumindo a classe biblioteca,
+
+171
+00:11:48.950 --> 00:11:52.664
+aqui eu não estou colocando a descrição
+dela, mas poderia colocar a descrição.
+
+172
+00:11:52.664 --> 00:11:56.340
+Não estou colocando também os atributos
+nem as responsabilidades do tipo SAT,
+
+173
+00:11:56.340 --> 00:11:58.081
+só por simplicidade.
+
+174
+00:11:58.081 --> 00:12:03.567
+Então aqui eu tenho só responsabilidades
+do tipo Faz e com as suas colaborações,
+
+175
+00:12:03.567 --> 00:12:05.400
+por exemplo: registro do usuário,
+
+176
+00:12:05.400 --> 00:12:10.278
+a coloboração é com o usuário
+apenas porque eu vou criar
+
+177
+00:12:10.278 --> 00:12:14.894
+objeto usuário e para isso a colaboração
+é o construtor da classe usuária.
+
+178
+00:12:14.894 --> 00:12:16.741
+Ele vai e constrói para mim objeto.
+
+179
+00:12:16.741 --> 00:12:21.658
+Só para mudar pouquinho, por exemplo,
+o empresta livro colabora com as classes,
+
+180
+00:12:21.658 --> 00:12:25.712
+as classes colaboradoras
+são classe livro e usuário.
+
+181
+00:12:25.712 --> 00:12:32.090
+Então por exemplo, na classe livro ele
+precisa da colaboração da marca livro.
+
+182
+00:12:32.090 --> 00:12:36.550
+O usuário precisa de anexa livro
+à lista de livros do usuário.
+
+183
+00:12:36.550 --> 00:12:41.382
+E assim para cada uma delas eu
+vou descrevendo e isso mostra,
+
+184
+00:12:41.382 --> 00:12:45.361
+por exemplo,
+que eu tenho as classes colaboradoras e as
+
+185
+00:12:45.361 --> 00:12:48.823
+suas responsabilidades
+específicas listadas aqui.
+
+186
+00:12:48.823 --> 00:12:52.478
+Já no caso da classe livro as
+responsabilidades nesse exemplo,
+
+187
+00:12:52.478 --> 00:12:56.536
+que é muito simples,
+elas não precisam de colaboração nenhuma.
+
+188
+00:12:56.536 --> 00:13:00.845
+Então eu listei aí as responsabilidades
+que foram do tipo Faz.
+
+189
+00:13:00.845 --> 00:13:04.840
+A classe usuário também é
+muito simples neste momento.
+
+190
+00:13:04.840 --> 00:13:10.176
+Não quer dizer que ao longo da modelagem,
+à medida que entram novos requisitos
+
+191
+00:13:10.176 --> 00:13:15.407
+eu vou melhorando a minha especificação
+do meu sistema SAB, vai havendo mudança
+
+192
+00:13:15.407 --> 00:13:20.835
+nisso aqui dinamicamente mas nesse momento
+ela não tem colaboração nenhuma, tá certo?
+
+193
+00:13:20.835 --> 00:13:26.320
+Então ela não tem colaboração nenhuma,
+ela só tem as suas responsabilidades.
+
+194
+00:13:26.320 --> 00:13:29.514
+E como está isso termos de colaboração?
+
+195
+00:13:29.514 --> 00:13:34.484
+Eu posso indicar que a classe biblioteca
+ela depende da classe livro e
+
+196
+00:13:34.484 --> 00:13:36.428
+depende da classe usuário.
+
+197
+00:13:36.428 --> 00:13:41.416
+Agora está muito claramente definido isso,
+como é que está definido?
+
+198
+00:13:41.416 --> 00:13:46.088
+Através das classes colaboradoras
+que são citadas vários momentos,
+
+199
+00:13:46.088 --> 00:13:48.456
+livro, livro, livro, tá certo?
+
+200
+00:13:48.456 --> 00:13:54.588
+E na classe empresta livro e devolve
+livro, ali também tinha que ter usuário.
+
+201
+00:13:54.588 --> 00:13:59.124
+Então nós também temos essas dependências,
+isso mostra que dependências são
+
+202
+00:13:59.124 --> 00:14:04.132
+colaborações e estou acoplando as classes
+biblioteca às classes livro e usuário.
+
+203
+00:14:04.132 --> 00:14:08.840
+Uma representação UML no
+diagrama de colaboração,
+
+204
+00:14:08.840 --> 00:14:11.235
+é dessa forma que está marcado aí.
+
+205
+00:14:11.235 --> 00:14:17.325
+Aquela representação que nós estávamos
+vendo dos cartões pode ser simplificada
+
+206
+00:14:17.325 --> 00:14:22.646
+usando anotação UML de classes,
+que eu uso diagrama de colaborações.
+
+207
+00:14:22.646 --> 00:14:24.634
+Basta aparecer o nome da classe.
+
+208
+00:14:24.634 --> 00:14:29.818
+Então eu tenho a classe biblioteca que
+depende da classe livro e que depende da
+
+209
+00:14:29.818 --> 00:14:35.096
+classe usuário, ou seja,
+essas classes estão fortemente acopladas.
+
+210
+00:14:35.096 --> 00:14:38.520
+Uma colabora com outra:
+a classe biblioteca,
+
+211
+00:14:38.520 --> 00:14:43.790
+ela é uma classe cliente das
+classes livro e usuário.
+
+212
+00:14:43.790 --> 00:14:49.011
+Finalmente então acabamos
+de apresentar o passo 6,
+
+213
+00:14:49.011 --> 00:14:54.548
+mostramos o diagrama de colaboração
+das classes que nós identificamos
+
+214
+00:14:54.548 --> 00:14:59.403
+completamente, todas as
+responsabilidades e colaborações
+
+215
+00:14:59.403 --> 00:15:04.412
+das 3 classes: classe biblioteca
+livro e usuário, tá certo?
+
+216
+00:15:04.412 --> 00:15:10.220
+Nós identificamos tudo e vimos como elas
+se relacionam através de colaboração
+
+217
+00:15:10.220 --> 00:15:15.740
+e o diagrama de colaboração que
+mostramos a sua dependência, tá certo?
+
+218
+00:15:15.740 --> 00:15:20.090
+Muito obrigado!
+
+219
+00:15:20.090 --> 00:15:22.990
+[MÚSICA]

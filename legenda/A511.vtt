@@ -1,0 +1,625 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.530
+[MÚSICA]
+
+2
+00:00:07.530 --> 00:00:11.174
+[MÚSICA] Olá a todos,
+
+3
+00:00:11.174 --> 00:00:16.560
+eu sou Eduardo Guerra, estamos aqui no
+curso de orientação a objetos com Java.
+
+4
+00:00:16.560 --> 00:00:21.880
+Hoje eu vou nesse hands-on mostrar
+pouquinho sobre interfaces,
+
+5
+00:00:21.880 --> 00:00:26.280
+polimorfismo, para você entender
+pouquinho como que isso daí funciona.
+
+6
+00:00:26.280 --> 00:00:27.101
+Está certo?
+
+7
+00:00:27.101 --> 00:00:32.324
+E aí eu vou fazer exemplo bem simples
+mas para demonstrar mesmo o conceito.
+
+8
+00:00:32.324 --> 00:00:38.395
+O que eu vou fazer, eu vou criar aqui
+projeto, vou chamar ele de Interfaces.
+
+9
+00:00:38.395 --> 00:00:43.353
+Dentro desse projeto eu vou criar
+várias classes, vou criar uma interface
+
+10
+00:00:43.353 --> 00:00:48.263
+chamada Barulho, certo, onde, sei lá,
+
+11
+00:00:48.263 --> 00:00:55.440
+a classe ela vai retornar a uma string
+que é o barulho que ela faz, está?
+
+12
+00:00:55.440 --> 00:01:01.552
+E aí, a partir disso,
+eu vou criar uma lista desses objetos com
+
+13
+00:01:01.552 --> 00:01:07.908
+barulho e a gente vai ver
+como que funciona aí esse,
+
+14
+00:01:07.908 --> 00:01:13.450
+essa questão aí do polimorfismo,
+que método com o que ele chama cada.
+
+15
+00:01:13.450 --> 00:01:14.314
+Está certo?
+
+16
+00:01:14.314 --> 00:01:17.780
+Então eu vou começar criando
+aqui minha interface,
+
+17
+00:01:17.780 --> 00:01:22.730
+vou chamar de Barulhento, certo?
+
+18
+00:01:22.730 --> 00:01:27.880
+Nessa interface eu vou definir
+
+19
+00:01:27.880 --> 00:01:37.280
+o método fazer barulho,
+
+20
+00:01:37.280 --> 00:01:41.310
+ok?
+
+21
+00:01:41.310 --> 00:01:47.070
+E aí eu vou criar algumas classes aqui
+
+22
+00:01:47.070 --> 00:01:54.560
+vou criar aqui,
+
+23
+00:01:54.560 --> 00:01:59.470
+por exemplo a classe cachorro,
+
+24
+00:01:59.470 --> 00:02:04.345
+certo?
+
+25
+00:02:04.345 --> 00:02:09.220
+Que, o cachorro vai ser barulhento, certo?
+
+26
+00:02:09.220 --> 00:02:17.040
+Então vou colocar aqui
+implements barulhento, não é?
+
+27
+00:02:17.040 --> 00:02:22.175
+Tem cachorro que é mesmo, não é?
+
+28
+00:02:22.175 --> 00:02:25.848
+E aí ele dá a opção aqui,
+note que ele deixa errado.
+
+29
+00:02:25.848 --> 00:02:26.532
+Porquê?
+
+30
+00:02:26.532 --> 00:02:29.294
+Porque ele está
+implementando uma interface,
+
+31
+00:02:29.294 --> 00:02:31.730
+mas não implementou os métodos dela,
+não é?
+
+32
+00:02:31.730 --> 00:02:36.331
+Então eu posso pedir ajuda aqui
+para o meu amigo Eclipse, certo?
+
+33
+00:02:36.331 --> 00:02:41.079
+Lá, ele sugere aqui: ou eu deixo o
+cachorro abstrato ou eu adiciono os
+
+34
+00:02:41.079 --> 00:02:43.090
+métodos não implementados.
+
+35
+00:02:43.090 --> 00:02:49.030
+Vou criar aqui essa opção e o
+"cachorro" aqui, quando faz barulho,
+
+36
+00:02:49.030 --> 00:02:54.400
+ele vai fazer "au au", certo?
+
+37
+00:02:54.400 --> 00:02:58.678
+Bom, vamos criar uma outra classe,
+imagine aqui,
+
+38
+00:02:58.678 --> 00:03:02.090
+ele pode herdar de animal e etc., nã oé?
+
+39
+00:03:02.090 --> 00:03:07.280
+Vou ter aqui uma outra
+classe que vai ser carro,
+
+40
+00:03:07.280 --> 00:03:12.555
+certo?
+
+41
+00:03:12.555 --> 00:03:17.830
+Também vou colocar aqui implements
+
+42
+00:03:17.830 --> 00:03:23.551
+Barulhento, certo?
+
+43
+00:03:23.551 --> 00:03:26.316
+Ele vai reclamar da mesma coisa,
+
+44
+00:03:26.316 --> 00:03:31.250
+que eu não adicionei o método,
+ajuda aí Eclipse, certo?
+
+45
+00:03:31.250 --> 00:03:38.246
+Então eu vou vim aqui, vou retornar "vrum
+
+46
+00:03:38.246 --> 00:03:45.860
+vrum bi bi", pronto, certo?
+
+47
+00:03:45.860 --> 00:03:53.235
+Para finalizar quero último,
+última coisa que faz barulho aí.
+
+48
+00:03:53.235 --> 00:03:57.390
+Vou solicitar a ajuda
+aqui da minha plateia.
+
+49
+00:03:57.390 --> 00:04:00.760
+Fala alguma coisa aí que faz barulho!
+
+50
+00:04:00.760 --> 00:04:01.687
+Bateria!
+
+51
+00:04:01.687 --> 00:04:02.717
+Muito bom.
+
+52
+00:04:02.717 --> 00:04:08.505
+Então vamos criar aqui uma nova
+classe aqui chamado bateria, né?
+
+53
+00:04:08.505 --> 00:04:13.298
+Note que são classes assim,
+completamente diferentes.
+
+54
+00:04:13.298 --> 00:04:18.000
+Agora eu vou fazer diferente, eu já
+vou vir aqui no próprio Eclipse já vou
+
+55
+00:04:18.000 --> 00:04:23.510
+informar aqui que a minha
+bateria é barulhenta.
+
+56
+00:04:23.510 --> 00:04:27.097
+E aí quando eu marco aqui o
+inherit abstract methods,
+
+57
+00:04:27.097 --> 00:04:31.140
+quando eu der o finish aqui eu vou
+até tirar aqui os construtores.
+
+58
+00:04:31.140 --> 00:04:37.139
+Quando eu der finish aqui, note que ele
+já vai colocar pra mim o método ali.
+
+59
+00:04:37.139 --> 00:04:38.275
+Está certo?
+
+60
+00:04:38.275 --> 00:04:41.683
+Aqui como que é o barulho da bateria,
+
+61
+00:04:41.683 --> 00:04:47.050
+vamos ver "pum pum
+
+62
+00:04:47.050 --> 00:04:51.309
+tá tá ptiz".
+
+63
+00:04:51.309 --> 00:04:55.550
+Que é o pst no final não é,
+sei lá alguma coisa assim.
+
+64
+00:04:55.550 --> 00:05:01.070
+Minhas onomatopeias, é isso mesmo, certo?
+
+65
+00:05:01.070 --> 00:05:05.960
+Não estão lá muito sofisticadas,
+mas dá pra, serve para o exemplo aqui.
+
+66
+00:05:05.960 --> 00:05:11.720
+Então vamos criar aqui agora
+a nossa classe principal,
+
+67
+00:05:11.720 --> 00:05:17.297
+certo, para gente ver como que
+funciona aqui esse polimorfismo.
+
+68
+00:05:17.297 --> 00:05:21.280
+Vamos marcar aqui o método main, certo?
+
+69
+00:05:21.280 --> 00:05:23.604
+Então o que eu vou fazer?
+
+70
+00:05:23.604 --> 00:05:29.590
+Eu vou criar array de barulhento.
+
+71
+00:05:29.590 --> 00:05:35.663
+Barulhentos, certo?
+
+72
+00:05:35.663 --> 00:05:40.870
+Vai ser arraid de 10 barulhentos,
+
+73
+00:05:40.870 --> 00:05:43.803
+certo?
+
+74
+00:05:43.803 --> 00:05:50.474
+E vou colocar aqui,
+não é, barulhento, certo?
+
+75
+00:05:50.474 --> 00:05:53.737
+Então vou colocar aqui os vários objetos.
+
+76
+00:05:53.737 --> 00:05:56.190
+Então "cachorro", não é?
+
+77
+00:05:56.190 --> 00:06:01.472
+Vou colocar aqui, vou dar qual
+
+78
+00:06:01.472 --> 00:06:07.418
+é o problema aqui?
+
+79
+00:06:07.418 --> 00:06:12.074
+Está, é barulhentos, certo?
+
+80
+00:06:12.074 --> 00:06:13.930
+Então, cachorro.
+
+81
+00:06:13.930 --> 00:06:18.530
+Vou dar uns control c + control v aqui, 3,
+
+82
+00:06:18.530 --> 00:06:22.740
+6, até 9, não é?
+
+83
+00:06:22.740 --> 00:06:30.454
+Então vamos colocar aqui vários
+barulhentos diferentes, certo?
+
+84
+00:06:30.454 --> 00:06:37.070
+8, 9, não é,
+o segundo aqui pode ser new carro.
+
+85
+00:06:37.070 --> 00:06:42.446
+Deixa outro cachorro,
+
+86
+00:06:42.446 --> 00:06:46.657
+dois cachorros, mais uma bateria, certo?
+
+87
+00:06:46.657 --> 00:06:51.267
+Mais aqui uns três carros.
+
+88
+00:06:51.267 --> 00:06:56.990
+Na verdade ele tem mais carros e cachorros
+do que bateria, essa é a verdade.
+
+89
+00:06:56.990 --> 00:07:02.040
+Mas uma bateria aqui e termina
+com mais cachorro, certo?
+
+90
+00:07:02.040 --> 00:07:07.123
+Eu vou criar outro método
+
+91
+00:07:07.123 --> 00:07:13.380
+aqui que vai ser o faz barulho.
+
+92
+00:07:13.380 --> 00:07:18.750
+É o que tem ali no Barulhento,
+não, é fazer barulho.
+
+93
+00:07:18.750 --> 00:07:23.450
+Como que é, barulhar, não,
+
+94
+00:07:23.450 --> 00:07:28.356
+não existe isso, sons, pronto,
+
+95
+00:07:28.356 --> 00:07:35.470
+sons e aí ele vai receber
+array de barulhentos, certo?
+
+96
+00:07:35.470 --> 00:07:40.398
+Então aqui esses sons,
+a gente simplesmente vai fazer o
+
+97
+00:07:40.398 --> 00:07:45.820
+seguinte para cada barulhento,
+
+98
+00:07:45.820 --> 00:07:50.230
+nos barulhentos,
+
+99
+00:07:50.230 --> 00:07:55.560
+certo, ele vai imprimir no console
+
+100
+00:07:55.560 --> 00:08:00.590
+b.fazer barulho, certo?
+
+101
+00:08:00.590 --> 00:08:05.352
+E aí aqui, no meu método principal,
+eu vou vim aqui e chamar
+
+102
+00:08:05.352 --> 00:08:10.310
+os sons passando ali os barulhentos,
+certo?
+
+103
+00:08:10.310 --> 00:08:12.444
+Muito bom.
+
+104
+00:08:12.444 --> 00:08:18.630
+Então eu salvo aqui, certo, e vou rodar.
+
+105
+00:08:18.630 --> 00:08:25.329
+Quando eu executo, eu posso ver
+aqui que o que ele colocou ali,
+
+106
+00:08:25.329 --> 00:08:30.376
+primeiro era o cachorro,
+depois era o carro, cachorro, cachorro,
+
+107
+00:08:30.376 --> 00:08:35.124
+a bateria, carro, carro,
+carro, bateria, cachorro.
+
+108
+00:08:35.124 --> 00:08:39.169
+Então apesar aqui dele receber uma lista,
+não é,
+
+109
+00:08:39.169 --> 00:08:43.145
+que ele não sabe o que é,
+a princípio são barulhentos,
+
+110
+00:08:43.145 --> 00:08:48.500
+ele vai chamar o método que eu
+defini cada uma das classes, está?
+
+111
+00:08:48.500 --> 00:08:52.180
+Essa é a ideia do polimorfismo, não é?
+
+112
+00:08:52.180 --> 00:08:57.740
+Aí vamos supor que eu tenho isso aqui e
+decido criar uma nova classe barulhenta,
+
+113
+00:08:57.740 --> 00:09:02.930
+não é, vou criar aqui, deixa eu ver,
+uma coisa bem barulhenta, vuvuzela.
+
+114
+00:09:02.930 --> 00:09:07.518
+Nem sei como que escreve isso daqui,
+vai ser com "z" mesmo, não é?
+
+115
+00:09:07.518 --> 00:09:12.540
+Já vou adicionar aqui à interface
+barulhento pra me facilitar,
+
+116
+00:09:12.540 --> 00:09:15.365
+certo?
+
+117
+00:09:15.365 --> 00:09:22.250
+E a vuvuzela,
+eu não sei como escrever o barulho dela,
+
+118
+00:09:22.250 --> 00:09:28.680
+mas seria alguma coisa
+assim "VRUUUUUUMMM".
+
+119
+00:09:28.680 --> 00:09:31.610
+Não isso tá mais para o carro, não é?
+
+120
+00:09:31.610 --> 00:09:34.930
+"VRUUUUUUUUUXXXXXUUUUUU", sei lá.
+
+121
+00:09:34.930 --> 00:09:40.320
+Por favor, não me julguem,
+não julguem meus barulhos, certo?
+
+122
+00:09:40.320 --> 00:09:44.200
+Então vamos voltar, sem barulho,
+
+123
+00:09:44.200 --> 00:09:49.850
+eh se eu botar aqui new vuvuzela, certo?
+
+124
+00:09:49.850 --> 00:09:54.241
+Então no sexto lugar ali ele tem
+que chamar este método novo que
+
+125
+00:09:54.241 --> 00:09:55.630
+eu acabei de criar.
+
+126
+00:09:55.630 --> 00:10:00.960
+Note que esses sons nem sabem
+que existe vuvuzela, certo?
+
+127
+00:10:00.960 --> 00:10:04.756
+Então quando eu rodar aqui, certo?
+
+128
+00:10:04.756 --> 00:10:10.018
+Lá ele tá vuvuzela ali
+no meio sendo chamada.
+
+129
+00:10:10.018 --> 00:10:14.875
+Então com isso,
+implementando aquela interface,
+
+130
+00:10:14.875 --> 00:10:19.117
+o método, aqui, sons, ele não precisa
+conhecer cada uma das classes,
+
+131
+00:10:19.117 --> 00:10:22.352
+não precisa saber qual o método de cada
+uma das classes, ele só precisa conhecer
+
+132
+00:10:22.352 --> 00:10:27.790
+a interface e cada [INAUDIBLE] precisa
+estar implementando aquela interface.
+
+133
+00:10:27.790 --> 00:10:31.065
+Está certo, então essa ideia de interface,
+
+134
+00:10:31.065 --> 00:10:35.984
+essa ideia do polimorfismo
+que você pode estar passando
+
+135
+00:10:35.984 --> 00:10:41.360
+essa classe no lugar
+de qualquer classe que
+
+136
+00:10:41.360 --> 00:10:47.070
+implementa interface no lugar onde ele
+aceita uma interface daquele tipo, está?
+
+137
+00:10:47.070 --> 00:10:51.725
+Espero que essa questão tenha ficado mais
+clara pra você vendo aqui na prática e
+
+138
+00:10:51.725 --> 00:10:54.486
+até a nossa próxima aula.
+
+139
+00:10:54.486 --> 00:10:59.890
+[MÚSICA] [MÚSICA]

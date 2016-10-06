@@ -1,0 +1,274 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.832
+Nesse vídeo,
+vamos ver exemplo completo do projeto de
+
+2
+00:00:03.832 --> 00:00:08.251
+ganho proporcional do Plano-s para
+sistema de segunda ordem do Tipo 1.
+
+3
+00:00:08.251 --> 00:00:13.387
+A função de transferência malha
+aberta do nosso sistema é 10 sobre s,
+
+4
+00:00:13.387 --> 00:00:16.675
+s mais 10 e o requisito de desempenho será
+
+5
+00:00:16.675 --> 00:00:21.290
+overshoot de no máximo 5% com o
+menor instante de pico possível.
+
+6
+00:00:21.290 --> 00:00:25.970
+É claro que podemos escrever a função
+de transferência malha fechada
+
+7
+00:00:25.970 --> 00:00:30.914
+10k sobre s ao quadrado
+mais 10s mais 10k e usar as
+
+8
+00:00:30.914 --> 00:00:35.550
+equações 2 ksi ômega n é igual a 10
+e ômega n ao quadrado igual a 10k,
+
+9
+00:00:35.550 --> 00:00:40.465
+com ksi igual a 0,69 para
+determinar ômega n e k.
+
+10
+00:00:40.465 --> 00:00:44.623
+Mas vamos usar o que já sabemos
+do lugar geométrico das raízes
+
+11
+00:00:44.623 --> 00:00:48.080
+para determinar o polo malha
+fechada e então o ganho k.
+
+12
+00:00:48.080 --> 00:00:52.996
+Já sabemos que para sistema de segunda
+ordem do Tipo 1 sem zeros o lugar
+
+13
+00:00:52.996 --> 00:00:57.738
+geométrico das raízes será o trecho
+da reta real entre o 2º polo e
+
+14
+00:00:57.738 --> 00:01:01.890
+a origem mais a mediana
+entre 0 e o 2º polo.
+
+15
+00:01:01.890 --> 00:01:10.290
+E o requisito de ksi de no mínimo 0,69 nos
+leva a ângulo beta menor que 46,37 graus.
+
+16
+00:01:10.290 --> 00:01:15.819
+Podemos traçar a reta com inclinação
+beta e ver onde ela cruza o LGR.
+
+17
+00:01:15.819 --> 00:01:20.146
+Esse ponto de cruzamento atendo
+o requisito de desempenho de
+
+18
+00:01:20.146 --> 00:01:25.110
+overshoot e faz parte do LGR, ou seja,
+é potencial polo malha fechada.
+
+19
+00:01:25.110 --> 00:01:29.946
+A partir do LGR e do requisito de
+desempenho do Plano-s, temos também que
+
+20
+00:01:29.946 --> 00:01:34.868
+esse ponto é o de mínimo instante de pico
+que atende ao requisito de overshoot.
+
+21
+00:01:34.868 --> 00:01:39.490
+Podemos calcular esse ponto usando o
+fato de que a parte real dos polos malha
+
+22
+00:01:39.490 --> 00:01:44.600
+fechada será menos 10 sobre 2,
+que é igual a menos 5 e o ângulo beta.
+
+23
+00:01:44.600 --> 00:01:49.563
+Podemos escrever: tangente de beta
+é igual a ômega d sobre 5 e ômega d
+
+24
+00:01:49.563 --> 00:01:52.230
+é igual a 5 vezes a tangente de beta,
+
+25
+00:01:52.230 --> 00:01:58.320
+onde beta é o arco cuja tangente é a raiz
+de 1 menos ksi ao quadrado sobre ksi.
+
+26
+00:01:58.320 --> 00:02:03.200
+Temos então ômega d
+igual a 5,25 e os polos
+
+27
+00:02:03.200 --> 00:02:08.590
+malha fechada serão menos
+5 mais ou menos 5,25j.
+
+28
+00:02:08.590 --> 00:02:13.827
+E, para que isso aconteça,
+precisamos ter k igual a módulo
+
+29
+00:02:13.827 --> 00:02:18.460
+de quadradinho vezes o módulo
+de quadradinho mais 10 sobre 10.
+
+30
+00:02:18.460 --> 00:02:21.628
+Espera aí,
+de onde veio esse 10 no denominador?
+
+31
+00:02:21.628 --> 00:02:26.489
+Lembre-se de que a restrição de módulo
+é: módulo de G de quadradinho de k é
+
+32
+00:02:26.489 --> 00:02:28.950
+igual a módulo de menos 1 sobre k.
+
+33
+00:02:28.950 --> 00:02:34.150
+E nesse exemplo temos: G de s é
+igual a 10 sobre s s mais 10.
+
+34
+00:02:34.150 --> 00:02:39.116
+Portanto o módulo de G de quadradinho
+de k é o módulo de 10 sobre
+
+35
+00:02:39.116 --> 00:02:42.750
+o módulo de quadradinho de k
+vezes quadradinho mais 10.
+
+36
+00:02:42.750 --> 00:02:47.738
+E k, que é igual a 1 sobre o módulo de
+G de quadradinho de k vai ser igual
+
+37
+00:02:47.738 --> 00:02:52.602
+ao módulo de quadradinho de k vezes o
+módulo de quadradinho mais 10 sobre 10.
+
+38
+00:02:52.602 --> 00:02:58.810
+Calculando k,
+obtemos: k aproximadamente igual a 5,26.
+
+39
+00:02:58.810 --> 00:03:02.336
+Vamos conferir esse
+resultado usando o Simulink.
+
+40
+00:03:02.336 --> 00:03:06.767
+Execute o Matlab e crie novo
+modelo Simulink baseado no
+
+41
+00:03:06.767 --> 00:03:11.842
+template Controlita MF,
+ajuste o ganho para 5,26,
+
+42
+00:03:11.842 --> 00:03:17.585
+lembre de usar ponto no Matlab,
+e o Zero Pole para 10 sobre s s mais 10,
+
+43
+00:03:17.585 --> 00:03:23.020
+alterando o segundo polo de menos 2
+para menos 10 e o ganho de 1 para 10,
+
+44
+00:03:23.020 --> 00:03:27.655
+altere a Transfer Function
+para 52,6 sobre s ao
+
+45
+00:03:27.655 --> 00:03:33.130
+quadrado mais 10s mais 52,6
+para simular a mesma resposta.
+
+46
+00:03:33.130 --> 00:03:37.848
+Rode a simulação e verifique que
+o overshoot é de 5 por cento,
+
+47
+00:03:37.848 --> 00:03:39.640
+conforme requerido.
+
+48
+00:03:39.640 --> 00:03:44.213
+Pode alterar o valor do ganho e
+verificar que aumentando o ganho,
+
+49
+00:03:44.213 --> 00:03:47.680
+o overshoot aumenta e
+diminuindo-o o overshoot diminui.
+
+50
+00:03:47.680 --> 00:03:51.458
+Mas o instante de pico também diminui.
+
+51
+00:03:51.458 --> 00:03:55.367
+Então o ganho k igual a 5,26 é realmente o
+
+52
+00:03:55.367 --> 00:03:58.910
+que melhor atende aos
+requisitos de desempenho.
+
+53
+00:03:58.910 --> 00:04:01.650
+Acabamos de ver exemplo
+completo de projeto de
+
+54
+00:04:01.650 --> 00:04:06.451
+ganho proporcional no Plano-s para
+sistema de segunda ordem do Tipo 1.
+
+55
+00:04:06.451 --> 00:04:07.785
+No próximo vídeo,
+
+56
+00:04:07.785 --> 00:04:12.190
+começaremos a ver como fazer esboço
+rápido do lugar geométrico das raízes.

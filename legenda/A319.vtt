@@ -1,0 +1,197 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.267
+Olá!
+Neste vídeo você aprenderá a ler o
+
+2
+00:00:03.267 --> 00:00:08.956
+cruzamento de 0db e a margem de fase na
+carta de Nichols-Black e a redesenhar
+
+3
+00:00:08.956 --> 00:00:13.870
+a curva rapidamente para readequar a
+função de transferência de malha fechada,
+
+4
+00:00:13.870 --> 00:00:16.730
+caso o ganho de
+realimentação seja alterado.
+
+5
+00:00:16.730 --> 00:00:21.445
+Vamos traçar a curva na carta de
+Nichols-Black para o seguinte sistema: G
+
+6
+00:00:21.445 --> 00:00:28.920
+de S igual a 100 sobre S ao
+quadrado mais 4S mais 29.
+
+7
+00:00:28.920 --> 00:00:34.880
+Para isso, começamos traçando o
+diagrama de Bode de G de J ômega,
+
+8
+00:00:34.880 --> 00:00:40.230
+que pode ser vista na figura.
+
+9
+00:00:40.230 --> 00:00:44.684
+A partir da magnitude e da fase de G de
+
+10
+00:00:44.684 --> 00:00:48.557
+J ômega podemos traçar a curva
+na carta de Nichols-Black,
+
+11
+00:00:48.557 --> 00:00:52.630
+marcando algumas frequências
+correspondentes às entradas na carta.
+
+12
+00:00:52.630 --> 00:00:55.703
+O resultado será o gráfico visto aqui,
+
+13
+00:00:55.703 --> 00:01:01.020
+onde marcamos as frequências de 1,
+10 e 100 radianos por segundo.
+
+14
+00:01:01.020 --> 00:01:06.347
+Nesse caso você pode ver que o
+cruzamento de 0db ocorre perto
+
+15
+00:01:06.347 --> 00:01:12.786
+de 10 radianos por segundo e
+a fase é perto de menos 153 graus.
+
+16
+00:01:12.786 --> 00:01:18.630
+Com isso teremos: Ômega C,
+aproximadamente 10 radianos por segundo,
+
+17
+00:01:18.630 --> 00:01:22.080
+e PM, aproximadamente 27 graus.
+
+18
+00:01:22.080 --> 00:01:26.846
+Agora vamos considerar o que acontece se
+
+19
+00:01:26.846 --> 00:01:31.695
+tivermos K igual a 10 multiplicando
+G de J ômega, de forma que K
+
+20
+00:01:31.695 --> 00:01:36.700
+vezes G igual a 100 vezes 10.000
+
+21
+00:01:36.700 --> 00:01:41.340
+sobre S ao quadrado mais 4S mais 29.
+
+22
+00:01:41.340 --> 00:01:46.433
+No diagrama de Bode você já viu que
+isso apenas translada o gráfico
+
+23
+00:01:46.433 --> 00:01:50.950
+da magnitude de 20db para cima,
+sem alterar o gráfico da fase.
+
+24
+00:01:50.950 --> 00:01:56.829
+Ora, se a carta de Nichols-Black é o
+desenho de magnitude versus frequência
+
+25
+00:01:56.829 --> 00:02:01.970
+de G de J ômega, isso apenas resultará
+na translação da curva de 20db,
+
+26
+00:02:01.970 --> 00:02:04.171
+como observado nesta figura,
+
+27
+00:02:04.171 --> 00:02:08.030
+que a curva transladada com
+o ganho está cor de laranja.
+
+28
+00:02:08.030 --> 00:02:12.874
+Você pode ver agora que
+a frequência de cruzamento do 0
+
+29
+00:02:12.874 --> 00:02:17.637
+foi substancialmente aumentada
+para algo torno de 32
+
+30
+00:02:17.637 --> 00:02:22.640
+radianos por segundo e a margem de
+fase reduziu-se a meros 7 graus.
+
+31
+00:02:22.640 --> 00:02:27.277
+O que se costumava fazer quando não se
+dispunha de computadores que traçam
+
+32
+00:02:27.277 --> 00:02:31.519
+a curva na carta de Nichols-Black
+era usar papel transparente,
+
+33
+00:02:31.519 --> 00:02:35.668
+assim era possível arrastar a curva
+sobre a carta e ler rapidamente
+
+34
+00:02:35.668 --> 00:02:38.080
+as alterações com a mudança do ganho.
+
+35
+00:02:38.080 --> 00:02:43.170
+Agora você aprendeu a ler a margem
+de fase na carta de Nichols-Black
+
+36
+00:02:43.170 --> 00:02:47.893
+e que o efeito de mudanças no ganho
+é uma simples translação na curva
+
+37
+00:02:47.893 --> 00:02:51.890
+para cima quando K maior que 1 ou
+para baixo quando K menor que 1.
+
+38
+00:02:51.890 --> 00:02:56.850
+Nos próximos videos você aprenderá
+a relacionar a margem de fase
+
+39
+00:02:56.850 --> 00:03:00.820
+malha aberta com o pico de
+ressonância malha fechada.
+
+40
+00:03:00.820 --> 00:03:04.675
+Aprenderá também a relacionar
+a frequência de cruzamento do zero
+
+41
+00:03:04.675 --> 00:03:09.220
+malha aberta e com a frequência
+de ressonância malha fechada.

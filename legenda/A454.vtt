@@ -1,0 +1,443 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.808
+[MÚSICA] Olá a todos.
+
+2
+00:00:08.808 --> 00:00:15.570
+Bem vindos a mais Hands On do curso
+de Orientação de Objetos com Java.
+
+3
+00:00:15.570 --> 00:00:20.025
+Eu sou Eduardo Guerra,
+hoje vamos falar sobre construtores.
+
+4
+00:00:20.025 --> 00:00:24.480
+Vamos ver por exemplo, quando uma
+classe pode ter mais de construtor.
+
+5
+00:00:24.480 --> 00:00:27.442
+Queremos ver por exemplo, que uma classe,
+
+6
+00:00:27.442 --> 00:00:30.724
+pode ser construída de formas diferentes,
+ta?
+
+7
+00:00:30.724 --> 00:00:35.572
+A gente vai fazer isso exemplo que a gente
+vai criar uma classe que representa uma
+
+8
+00:00:35.572 --> 00:00:40.415
+compra, e vamos ver diferentes formas de
+se inicializar essa compra dependendo se
+
+9
+00:00:40.415 --> 00:00:45.285
+ela é uma compra parcelada,
+ou se ela é uma compra à vista.
+
+10
+00:00:45.285 --> 00:00:48.520
+Então vou criar aqui novo projeto.
+
+11
+00:00:48.520 --> 00:00:53.400
+Então vou vir aqui,
+vou chamar ele de comércio.
+
+12
+00:00:53.400 --> 00:00:59.170
+Então, criado aqui o projeto
+
+13
+00:00:59.170 --> 00:01:03.473
+eu vou vir e vou criar
+a minha classe compra,
+
+14
+00:01:03.473 --> 00:01:09.625
+então criei aqui a classe compra.
+
+15
+00:01:09.625 --> 00:01:17.662
+Bom, nessa classe eu vou ter aqui
+inteiro que vai ser o valor,
+
+16
+00:01:17.662 --> 00:01:22.138
+e vou colocar aqui como valor total,
+
+17
+00:01:22.138 --> 00:01:28.710
+e vou ter inteiro aqui que
+vai ser número de parcelas.
+
+18
+00:01:28.710 --> 00:01:33.308
+Então eu vou
+
+19
+00:01:33.308 --> 00:01:38.172
+ter construtores, por exemplo,
+
+20
+00:01:38.172 --> 00:01:42.736
+aqui da Compra,
+que vai estar recebendo nesse caso aqui,
+
+21
+00:01:42.736 --> 00:01:48.119
+eu vou até colocar aqui uma observação,
+seria aqui quando for à vista,
+
+22
+00:01:48.119 --> 00:01:53.890
+então ele vai receber só o valor.
+
+23
+00:01:53.890 --> 00:02:01.250
+Então, nesse caso eu venho aqui e faço,
+valor total é igual ao valor,
+
+24
+00:02:01.250 --> 00:02:07.869
+opa deu pouquinho a mais
+aqui e o número de parcelas,
+
+25
+00:02:07.869 --> 00:02:12.660
+vai receber 1 porque ele
+está pagando à vista,
+
+26
+00:02:12.660 --> 00:02:16.070
+quando paga à vista é uma parcela só.
+
+27
+00:02:16.070 --> 00:02:20.790
+Agora eu vou ter o meu construtor aqui,
+que vai ser o à prazo.
+
+28
+00:02:20.790 --> 00:02:25.335
+Na verdade vou colocar aqui, parcelado,
+
+29
+00:02:25.335 --> 00:02:30.959
+então nesse caso ao invés
+de receber o valor total,
+
+30
+00:02:30.959 --> 00:02:35.996
+eu vou receber quantidade de parcelas e
+
+31
+00:02:35.996 --> 00:02:42.320
+o valor da parcela.
+
+32
+00:02:42.320 --> 00:02:47.660
+Então, nesse caso, o número de parcelas.
+
+33
+00:02:47.660 --> 00:02:55.710
+[SEM ÁUDIO] Ele vai receber
+a quantidade de parcelas,
+
+34
+00:02:55.710 --> 00:03:01.176
+e ali o meu valor total ele vai
+
+35
+00:03:01.176 --> 00:03:06.183
+estar recebendo o valor da
+
+36
+00:03:06.183 --> 00:03:12.090
+parcela vezes a quantidade de parcelas.
+
+37
+00:03:12.090 --> 00:03:18.203
+Então, note que a inicialização
+é completamente diferente,
+
+38
+00:03:18.203 --> 00:03:24.139
+assim como a quantidade de
+parâmetros também de cada deles.
+
+39
+00:03:24.139 --> 00:03:29.435
+Eu vou criar aqui agora alguns métodos,
+
+40
+00:03:29.435 --> 00:03:34.985
+no caso vou criar só métodos get para
+
+41
+00:03:34.985 --> 00:03:39.653
+poder estar recuperando ali,
+
+42
+00:03:39.653 --> 00:03:43.184
+e eu vou criar aqui também, certo?
+
+43
+00:03:43.184 --> 00:03:49.811
+Para pegar,
+vou botar aqui getValor Parcela,
+
+44
+00:03:49.811 --> 00:03:55.260
+que ele vai retornar o valor total
+
+45
+00:03:55.260 --> 00:04:01.330
+dividido pelo número de parcelas.
+
+46
+00:04:01.330 --> 00:04:05.666
+Tá?
+Então note que eu tenho uma informação
+
+47
+00:04:05.666 --> 00:04:07.960
+aqui que é calculada.
+
+48
+00:04:07.960 --> 00:04:11.167
+Tá?
+Vamos ver então se isso aqui está
+
+49
+00:04:11.167 --> 00:04:13.550
+funcionando direitinho?
+
+50
+00:04:13.550 --> 00:04:17.178
+Então eu vou vir aqui,
+vou criar teste de unidade,
+
+51
+00:04:17.178 --> 00:04:20.010
+como a gente já aprendeu outras aulas.
+
+52
+00:04:20.010 --> 00:04:23.910
+Vou criar aqui o TesteCompra.
+
+53
+00:04:23.910 --> 00:04:29.420
+adiciono o JUnit, quero sim.
+
+54
+00:04:29.420 --> 00:04:34.170
+Então vou vir aqui,
+vou chamar aqui de compra
+
+55
+00:04:34.170 --> 00:04:39.795
+AVista.
+
+56
+00:04:39.795 --> 00:04:44.531
+E aqui, eu vou criar uma nova compra,
+
+57
+00:04:44.531 --> 00:04:53.167
+usando o construtor à vista
+que recebe aqui só inteiro,
+
+58
+00:04:53.167 --> 00:04:58.400
+então uma conta aqui de
+por exemplo 500 Aí eu vou
+
+59
+00:04:58.400 --> 00:05:03.288
+verificar aqui utilizando o
+
+60
+00:05:03.288 --> 00:05:07.900
+método assertEquals, se c.
+
+61
+00:05:07.900 --> 00:05:13.460
+getNumeroParcelas.
+
+62
+00:05:13.460 --> 00:05:19.370
+Na verdade o JUnit é ao contrário,
+é sempre o que eu primeiro,
+
+63
+00:05:19.370 --> 00:05:27.430
+então, eu estou vendo se o número
+de parcelas é 1 assertEquals.
+
+64
+00:05:27.430 --> 00:05:32.260
+Eu quero saber, se o valor da compra,
+
+65
+00:05:32.260 --> 00:05:37.285
+se o valor total é 500
+
+66
+00:05:37.285 --> 00:05:42.310
+e o valor da parcela no caso, também
+tem que ser 500, que é uma parcela só.
+
+67
+00:05:42.310 --> 00:05:46.050
+Então o valor,
+ele acaba sendo igual ao valor total.
+
+68
+00:05:46.050 --> 00:05:51.340
+Então, o valor da parcela também é 500.
+
+69
+00:05:51.340 --> 00:05:55.090
+Então vamos rodar o teste aqui,
+para ver se está,
+
+70
+00:05:55.090 --> 00:06:00.990
+se está funcionando direitinho.
+
+71
+00:06:00.990 --> 00:06:06.489
+Ele vai rodar ali o JUnit,
+e vai falar para gente se o teste está ok,
+
+72
+00:06:06.489 --> 00:06:08.860
+a princípio este aqui está.
+
+73
+00:06:08.860 --> 00:06:11.597
+Eu vou copiar aqui,
+
+74
+00:06:11.597 --> 00:06:16.750
+eu vou fazer o teste da compra a prazo,
+
+75
+00:06:16.750 --> 00:06:22.490
+vou botar aqui parcelado,
+melhor parcelado.
+
+76
+00:06:22.490 --> 00:06:27.701
+Então, no caso aqui eu vou
+criar aqui uma compra de
+
+77
+00:06:27.701 --> 00:06:35.000
+1000 de por exemplo,
+4 vezes, é isso mesmo?
+
+78
+00:06:35.000 --> 00:06:36.710
+Vamos ver aqui.
+
+79
+00:06:36.710 --> 00:06:41.868
+Não, primeiro é a quantidade de parcelas,
+então tem que ser de 4 vezes o valor
+
+80
+00:06:41.868 --> 00:06:47.156
+de 1000, então o número de parcelas
+que ele tem que retornar é 4,
+
+81
+00:06:47.156 --> 00:06:53.760
+o valor total tem que ser 1000 e o
+valor da parcela tem que ser 250.
+
+82
+00:06:53.760 --> 00:06:58.701
+Vamos salvar aqui e vamos
+rodar o teste novamente opa,
+
+83
+00:06:58.701 --> 00:07:03.210
+deu problema, qual foi o,
+
+84
+00:07:03.210 --> 00:07:07.360
+qual foi o resultado aqui?
+
+85
+00:07:08.608 --> 00:07:11.730
+Sim!
+
+86
+00:07:11.730 --> 00:07:14.759
+Está errado mesmo,
+porque aqui eu não passo o valor total,
+
+87
+00:07:14.759 --> 00:07:16.100
+passo o valor da parcela.
+
+88
+00:07:16.100 --> 00:07:19.240
+Então teria que estar passando ali 250.
+
+89
+00:07:19.240 --> 00:07:25.982
+Viu como é que o teste ajuda a gente
+a ver aqui os problemas, certo?
+
+90
+00:07:25.982 --> 00:07:32.542
+Lembrando aqui que não é a quantidade e o
+valor da parcela, não o valor total, ta?
+
+91
+00:07:32.542 --> 00:07:37.070
+Poderia ser o valor total, se assim eu
+quisesse que fosse o meu construtor.
+
+92
+00:07:37.070 --> 00:07:41.575
+Ok?
+Então, o objetivo aqui desse Hands On foi
+
+93
+00:07:41.575 --> 00:07:47.131
+mostrar que é possível ter mais de tipo
+de construtor para a mesma classe,
+
+94
+00:07:47.131 --> 00:07:50.482
+e muitas vezes esses construtores
+eles podem ter digamos,
+
+95
+00:07:50.482 --> 00:07:55.446
+significados diferentes, eles podem ser
+utilizados situações diferentes para
+
+96
+00:07:55.446 --> 00:07:59.093
+construir objeto de uma mesma classe,
+certo?
+
+97
+00:07:59.093 --> 00:08:01.460
+Muito obrigado por assistir.
+
+98
+00:08:01.460 --> 00:08:08.760
+Até à próxima.

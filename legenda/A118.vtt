@@ -1,0 +1,213 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.021
+[MÚSICA] E
+
+3
+00:00:13.021 --> 00:00:17.750
+aí pessoal, tudo bem?
+
+4
+00:00:17.750 --> 00:00:20.448
+Nessa aula iremos ver
+como utilizar slider.
+
+5
+00:00:20.448 --> 00:00:25.350
+Queremos aplicativo que tenha apenas
+slider que altere o valor de uma label.
+
+6
+00:00:25.350 --> 00:00:29.810
+Vamos iniciar criando novo projeto
+com a opção single view application.
+
+7
+00:00:29.810 --> 00:00:33.990
+Pondo o nome do projeto e
+em devices deixe Universal.
+
+8
+00:00:33.990 --> 00:00:38.820
+Com o projeto criado vamos ao storyboard.
+
+9
+00:00:38.820 --> 00:00:42.530
+Adicione slider.
+
+10
+00:00:42.530 --> 00:00:48.310
+Ajuste o seu tamanho.
+
+11
+00:00:48.310 --> 00:00:54.520
+E adicione Constrain.
+
+12
+00:00:54.520 --> 00:01:02.520
+[SEM_ÁUDIO]
+
+13
+00:01:02.520 --> 00:01:09.238
+[SEM_ÁUDIO] No
+
+14
+00:01:09.238 --> 00:01:17.804
+inspetor de atributos deixe o valor mínimo
+0 e o máximo 1 e o valor inicial meio.
+
+15
+00:01:17.804 --> 00:01:20.530
+Agora adicione uma label.
+
+16
+00:01:20.530 --> 00:01:28.000
+Altere o tamanho, cor, constrain.
+
+17
+00:01:28.000 --> 00:01:36.000
+[SEM_ÁUDIO]
+
+18
+00:01:36.000 --> 00:01:44.210
+[SEM_ÁUDIO] Vamos
+
+19
+00:01:44.210 --> 00:01:50.674
+fazer as conexões com código.
+
+20
+00:01:50.674 --> 00:01:55.750
+Outlet para o slider.
+
+21
+00:01:55.750 --> 00:02:00.120
+Chame de slider mesmo.
+
+22
+00:02:00.120 --> 00:02:07.510
+E outro para a label.
+
+23
+00:02:07.510 --> 00:02:10.880
+Label.
+
+24
+00:02:10.880 --> 00:02:15.850
+Agora uma action para o slider.
+
+25
+00:02:15.850 --> 00:02:18.230
+Value changed.
+
+26
+00:02:18.230 --> 00:02:22.140
+Chamar de Slider Changed.
+
+27
+00:02:22.140 --> 00:02:27.670
+Vamos ao código.
+
+28
+00:02:27.670 --> 00:02:34.870
+Aqui apenas precisamos ver o atual
+valor do slider e modificar a label.
+
+29
+00:02:34.870 --> 00:02:38.050
+Podemos fazer isso na action.
+
+30
+00:02:38.050 --> 00:02:42.585
+Aqui salvamos o valor do slider em uma
+
+31
+00:02:42.585 --> 00:02:46.940
+NSString para podermos salvar
+com duas casas decimais.
+
+32
+00:02:46.940 --> 00:02:54.610
+Em seguida convertemos a NSString em uma
+string para atualizar o texto da label.
+
+33
+00:02:54.610 --> 00:03:02.610
+Vamos executar.
+
+34
+00:03:02.610 --> 00:03:09.986
+[SEM_ÁUDIO] Veja que o
+valor inicial da label
+
+35
+00:03:09.986 --> 00:03:15.400
+não está atualizado mas quando mudamos o
+slider, atualiza corretamente a label.
+
+36
+00:03:15.400 --> 00:03:18.870
+Vamos corrigir esse valor inicial.
+
+37
+00:03:18.870 --> 00:03:25.620
+Como sabemos que o valor inicial é 0.5,
+
+38
+00:03:25.620 --> 00:03:30.810
+pois deixamos isso no storyboard,
+basta atualizar esse valor no começo.
+
+39
+00:03:30.810 --> 00:03:35.412
+Porém essa não é a forma mais adequada
+pois nem sempre podemos saber
+
+40
+00:03:35.412 --> 00:03:36.650
+o valor inicial.
+
+41
+00:03:36.650 --> 00:03:42.580
+A melhor forma seria criar
+uma função separada.
+
+42
+00:03:42.580 --> 00:03:51.559
+[SEM_ÁUDIO] Com essa função
+
+43
+00:03:51.559 --> 00:03:57.510
+auxiliar basta chamar na action
+e na inicialização da view.
+
+44
+00:03:57.510 --> 00:04:03.310
+Vamos executar novamente.
+
+45
+00:04:03.310 --> 00:04:08.488
+[SEM_ÁUDIO] Veja
+
+46
+00:04:08.488 --> 00:04:13.010
+que agora temos o valor inicial
+correto e continua atualizando.
+
+47
+00:04:13.010 --> 00:04:17.550
+Na próxima aula iremos ver
+como alterar fontes de
+
+48
+00:04:17.550 --> 00:04:21.631
+labels e pouco mais sobre botões.
+
+49
+00:04:21.631 --> 00:04:22.590
+Até lá!

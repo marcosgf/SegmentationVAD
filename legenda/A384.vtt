@@ -1,0 +1,829 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.739
+Após esse vídeo, você será capaz de
+explicar o que é o controlador PD e porque
+
+2
+00:00:04.739 --> 00:00:06.750
+ele deve ser usado com cuidado.
+
+3
+00:00:06.750 --> 00:00:11.317
+Você acabou de ver como projetar
+controlador de avanço de fase, que nada
+
+4
+00:00:11.317 --> 00:00:16.052
+mais é do que controlador com a forma C
+de s igual a k s mais a sobre s mais b,
+
+5
+00:00:16.052 --> 00:00:18.740
+onde zero é menor do que a menor do que b.
+
+6
+00:00:18.740 --> 00:00:23.745
+ou seja, com polo e zero negativos e o
+zero mais próximo da origem que o polo.
+
+7
+00:00:23.745 --> 00:00:28.260
+E você já sabe que existem infinitas
+opções para a escolha do polo e do zero,
+
+8
+00:00:28.260 --> 00:00:32.390
+desde que a contribuição de fase do
+controlador para s igual a quadradinho d
+
+9
+00:00:32.390 --> 00:00:33.691
+seja a necessária.
+
+10
+00:00:33.691 --> 00:00:37.830
+Vamos considerar que desejamos
+avanço de fase de 25 graus.
+
+11
+00:00:37.830 --> 00:00:40.890
+Já sabe que vamos reciclar outro exemplo,
+não é?
+
+12
+00:00:40.890 --> 00:00:43.548
+Então, precisamos ter: fase de C de
+
+13
+00:00:43.548 --> 00:00:48.521
+quadradinho desejado é igual à fase de
+quadradinho desejado mais a menos a fase
+
+14
+00:00:48.521 --> 00:00:51.380
+de quadradinho desejado
+mais b igual a 25 graus.
+
+15
+00:00:51.380 --> 00:00:56.900
+E que tal se nos livrássemos de s mais
+b e ficássemos apenas com K s mais a?
+
+16
+00:00:56.900 --> 00:01:01.562
+Desse modo, teríamos C de s igual a k s
+
+17
+00:01:01.562 --> 00:01:05.445
+mais a e precisaríamos ter fase
+de C de quadradinho desejado,
+
+18
+00:01:05.445 --> 00:01:09.492
+que é igual a fase de quadradinho
+desejado mais a igual a 25 graus.
+
+19
+00:01:09.492 --> 00:01:14.739
+Com quadradinho desejado igual a menos
+5 mais 7j, nós temos: a fase de
+
+20
+00:01:14.739 --> 00:01:20.190
+C de quadradinho desejado igual a fase
+de a menos 5 mais 7j igual a 25.
+
+21
+00:01:20.190 --> 00:01:24.579
+E para isso precisamos
+ter a aproximadamente 20.
+
+22
+00:01:24.579 --> 00:01:27.780
+Temos então C de s igual a k s mais 20.
+
+23
+00:01:27.780 --> 00:01:32.476
+E para determinar k,
+fazemos k igual a 1 sobre módulo de C de
+
+24
+00:01:32.476 --> 00:01:35.850
+quadradinho desejado vezes módulo
+de G de quadradinho desejado.
+
+25
+00:01:35.850 --> 00:01:40.920
+Usando a função de transferência G de s
+igual a 200 sobre s s mais 10 s mais 20,
+
+26
+00:01:40.920 --> 00:01:45.833
+nós temos: k igual a 1 sobre 200
+módulo de quadradinho desejado
+
+27
+00:01:45.833 --> 00:01:50.225
+módulo de quadradinho desejado mais 10
+módulo de quadradinho desejado mais 20
+
+28
+00:01:50.225 --> 00:01:53.100
+sobre módulo de quadradinho
+desejado mais 20.
+
+29
+00:01:53.100 --> 00:01:58.251
+Calculando os módulos,
+temos k aproximadamente 0,37
+
+30
+00:01:58.251 --> 00:02:03.295
+e teremos: C de s igual a 0,37 s mais 20.
+
+31
+00:02:03.295 --> 00:02:09.080
+E esse é controlador PD,
+o PD vem de proporcional derivativo,
+
+32
+00:02:09.080 --> 00:02:12.400
+porque no domínio do tempo é
+isso que esse controlador faz.
+
+33
+00:02:12.400 --> 00:02:17.198
+O sinal de saída do controlador é
+a soma de uma componente proporcional
+
+34
+00:02:17.198 --> 00:02:19.485
+com uma componente derivativa.
+
+35
+00:02:19.485 --> 00:02:23.629
+O sinal de entrada do controlador
+PD é E de s e o sinal de saída do
+
+36
+00:02:23.629 --> 00:02:28.442
+controlador PD é U de s e podemos
+escrever: U de s é igual a C vezes E de s,
+
+37
+00:02:28.442 --> 00:02:31.539
+que é igual a 0,37 s mais 20 vezes E de s.
+
+38
+00:02:31.539 --> 00:02:36.566
+Fazendo as multiplicações,
+U de s é igual a 0,37
+
+39
+00:02:36.566 --> 00:02:40.630
+s vezes E de s mais 7,4 E de s.
+
+40
+00:02:40.630 --> 00:02:45.274
+Transformada inversa,
+linearidade e transformada da derivada,
+
+41
+00:02:45.274 --> 00:02:50.950
+chegamos a u de t é igual a 0,37
+e ponto de t mais 7,4 e de t,
+
+42
+00:02:50.950 --> 00:02:57.547
+onde e ponto de t é a derivada de e com
+relação a t, o que podemos escrever
+
+43
+00:02:57.547 --> 00:03:03.400
+como u de t é igual a k p vezes o e de t
+mais 1 k d vezes a derivada de e de t.
+
+44
+00:03:03.400 --> 00:03:09.650
+k p é o ganho proporcional e k d é o
+ganho derivativo do controlador PD.
+
+45
+00:03:09.650 --> 00:03:15.570
+No domínio transformado, podemos escrever
+C de s é igual a k p mais C de s.
+
+46
+00:03:15.570 --> 00:03:21.490
+Nesse caso,
+C de s é igual a 7,4 mais 0,37s.
+
+47
+00:03:21.490 --> 00:03:26.510
+Note que o ganho proporcional é k vezes a,
+então k p
+
+48
+00:03:26.510 --> 00:03:31.530
+igual a vezes a e o ganho derivativo
+é simplesmente k, k d igual a k.
+
+49
+00:03:31.530 --> 00:03:36.103
+Vamos calcular a função de
+transferência malha fechada.
+
+50
+00:03:36.103 --> 00:03:41.089
+C de s G de s vai ser igual a 74
+sobre s s mais 10 e T de s vai ser
+
+51
+00:03:41.089 --> 00:03:45.773
+igual a 74 sobre s ao
+quadrado mais 10s mais 74.
+
+52
+00:03:45.773 --> 00:03:50.460
+Os polos malha fechada são
+menos 5 mais ou menos 7j.
+
+53
+00:03:50.460 --> 00:03:52.909
+Mas não fique muito empolgado ainda.
+
+54
+00:03:52.909 --> 00:03:56.930
+Vamos fazer uma simulação
+Simulink desse controlador e de
+
+55
+00:03:56.930 --> 00:03:59.922
+dos controladores que
+projetamos anteriormente.
+
+56
+00:03:59.922 --> 00:04:02.710
+Execute o MatLab e crie
+novo modelo Simulink.
+
+57
+00:04:02.710 --> 00:04:05.681
+New Simulink Model contrulita mf.
+
+58
+00:04:05.681 --> 00:04:11.630
+Apague o ganho k, copie e cole o zero-pole
+e coloque a cópia no lugar do ganho k,
+
+59
+00:04:11.630 --> 00:04:15.784
+altere o primeiro zero-pole para menos 5,
+
+60
+00:04:15.784 --> 00:04:19.833
+menos 8,3 e 6,77 e o segundo para nada,
+
+61
+00:04:19.833 --> 00:04:27.940
+0 menos 20 menos 10 e 200 e altere
+a Transfer Function para 74 e 1, 10 74.
+
+62
+00:04:27.940 --> 00:04:30.686
+Salve o modelo e rode a simulação.
+
+63
+00:04:30.686 --> 00:04:34.770
+Você verá que a resposta
+do sistema controlado não é
+
+64
+00:04:34.770 --> 00:04:37.630
+exatamente a resposta do
+sistema de segunda ordem.
+
+65
+00:04:37.630 --> 00:04:40.815
+Isso ocorre porque o sistema
+tem mais dois polos e zero
+
+66
+00:04:40.815 --> 00:04:44.895
+malha fechada e esses dois polos e
+zero afetam a resposta ao degrau.
+
+67
+00:04:44.895 --> 00:04:47.540
+Mas não é nisso que estamos interessados.
+
+68
+00:04:47.540 --> 00:04:52.838
+Copie e cole o Scope,
+dê duplo clique na cópia e na janela
+
+69
+00:04:52.838 --> 00:04:58.064
+do Scope clique File Number
+of Input Ports e escolha 1.
+
+70
+00:04:58.064 --> 00:05:02.250
+O novo Scope irá mostrar
+a saída do controlador.
+
+71
+00:05:02.250 --> 00:05:07.128
+Botão direito entre o controlador e o
+sistema e arraste até o controlador do
+
+72
+00:05:07.128 --> 00:05:07.990
+novo Scope.
+
+73
+00:05:07.990 --> 00:05:10.283
+Rode a simulação novamente.
+
+74
+00:05:10.283 --> 00:05:13.518
+Note que o valor máximo
+da saída do controlador,
+
+75
+00:05:13.518 --> 00:05:17.250
+que é também o valor máximo na
+entrada do sistema, não chega a 7.
+
+76
+00:05:17.250 --> 00:05:22.098
+Vamos agora substituir o o controlador
+de avanço de fase pelo controlador PD
+
+77
+00:05:22.098 --> 00:05:23.850
+que acabamos de projetar.
+
+78
+00:05:23.850 --> 00:05:27.809
+Você pode até tentar alterar o
+zero-pole para que ele tenha
+
+79
+00:05:27.809 --> 00:05:29.400
+só o zero e nenhum polo.
+
+80
+00:05:29.400 --> 00:05:31.306
+Mas o Simulink não vai gostar.
+
+81
+00:05:31.306 --> 00:05:34.810
+Precisaremos simular o
+controlador PD de outra forma.
+
+82
+00:05:34.810 --> 00:05:39.151
+Apague o zero-pole que representa
+o controlador e agora vamos
+
+83
+00:05:39.151 --> 00:05:44.390
+adicionar mais blocos ao nosso
+modelo: View Library Browser.
+
+84
+00:05:44.390 --> 00:05:48.003
+Continuous arraste
+Derivative para o modelo,
+
+85
+00:05:48.003 --> 00:05:51.560
+Math Operation arraste 2 Gains e 1 Sum.
+
+86
+00:05:51.560 --> 00:05:55.330
+Se preferir pode usar Add no lugar de Sum.
+
+87
+00:05:55.330 --> 00:05:59.770
+Vamos agora fazer a simulação do
+controlador PD com esses blocos.
+
+88
+00:05:59.770 --> 00:06:02.713
+Mas vamos precisar de mais espaço.
+
+89
+00:06:02.713 --> 00:06:07.235
+Marque o zero-pole e os 2 scopes,
+clique com o botão esquerdo e arraste
+
+90
+00:06:07.235 --> 00:06:10.981
+retângulo que englobe esses 3
+blocos e solte o botão esquerdo,
+
+91
+00:06:10.981 --> 00:06:15.820
+seguida clique e arraste qualquer
+dos blocos e mova-os para a direita.
+
+92
+00:06:15.820 --> 00:06:20.230
+Você também pode movê-los a clicando
+sobre o bloco e arrastando.
+
+93
+00:06:20.230 --> 00:06:25.301
+Arraste o somador para a direita
+conectando-o no fio que vai para a entrada
+
+94
+00:06:25.301 --> 00:06:30.004
+do sistema e para o Scope,
+edite dos ganhos para 7,4 e
+
+95
+00:06:30.004 --> 00:06:35.051
+outro para 0,37; A saída do
+ganho 7,4 vai direto para
+
+96
+00:06:35.051 --> 00:06:39.980
+o somador e a saída do ganho
+0,37 vai para o derivador.
+
+97
+00:06:39.980 --> 00:06:43.700
+A saída do derivador
+também vai para o somador.
+
+98
+00:06:43.700 --> 00:06:48.521
+Para finalizar, a saída do primeiro
+somador que está desconectada vai
+
+99
+00:06:48.521 --> 00:06:53.625
+para a entrada dos dois ganhos
+Salve e rode a simulação novamente.
+
+100
+00:06:53.625 --> 00:06:57.227
+Caso não esteja vendo o
+valor máximo do sinal,
+
+101
+00:06:57.227 --> 00:07:02.198
+na janela do Scope clique no menu
+Tools Axis scaling e escolha Scale y
+
+102
+00:07:02.198 --> 00:07:06.630
+axis limits ou automatic
+scale axis limits.
+
+103
+00:07:06.630 --> 00:07:10.979
+Note que o valor máximo da saída do
+controlador PD, que também é o valor
+
+104
+00:07:10.979 --> 00:07:16.767
+máximo da entrada do sistema,
+passa de 5 vezes 10 à décima terceira.
+
+105
+00:07:16.767 --> 00:07:18.980
+Isso dá 50 trilhões.
+
+106
+00:07:18.980 --> 00:07:23.900
+Então, imagine que a entrada do
+nosso sistema seja uma tensão volts.
+
+107
+00:07:23.900 --> 00:07:29.280
+Já imaginou colocar 50 trilhões de
+volts na entrada de algum circuito?
+
+108
+00:07:29.280 --> 00:07:34.258
+Eu não tenho nem ideia de como conseguir
+gerar esses 50 trilhões de volts e,
+
+109
+00:07:34.258 --> 00:07:37.180
+mesmo que fosse possível
+gerar essa tensão,
+
+110
+00:07:37.180 --> 00:07:43.305
+colocá-la na entrada de qualquer circuito
+iria torrar o circuito instantaneamente.
+
+111
+00:07:43.305 --> 00:07:46.397
+O mesmo vale para pressão,
+temperatura, corrente,
+
+112
+00:07:46.397 --> 00:07:49.430
+força ou qualquer outra
+grandeza que você imaginar.
+
+113
+00:07:49.430 --> 00:07:54.870
+Seria impossível gerar sinal de tal
+magnitude e, se fosse possível gerá-lo,
+
+114
+00:07:54.870 --> 00:08:00.310
+colocá-lo na entrada de sistema iria
+acabar com o sistema instantaneamente.
+
+115
+00:08:00.310 --> 00:08:04.037
+Feche o Scope que mostra
+a saída do controlador e
+
+116
+00:08:04.037 --> 00:08:08.520
+note que a saída dos dois sistemas não
+são idênticas, como era de se esperar.
+
+117
+00:08:08.520 --> 00:08:13.622
+Teoricamente a saída do controlador PD
+seria infinita no instante da aplicação
+
+118
+00:08:13.622 --> 00:08:18.170
+da entrada degrau, mas o Simulink
+não consegue simular sinal infinito.
+
+119
+00:08:18.170 --> 00:08:22.090
+O melhor que ele faz é simular sinal
+com a amplitude de 50 trilhões.
+
+120
+00:08:22.090 --> 00:08:26.241
+Por isso a diferença entre
+a função de transferência já
+
+121
+00:08:26.241 --> 00:08:29.710
+malha fechada e o sistema
+com o controlador PD.
+
+122
+00:08:29.710 --> 00:08:33.856
+Talvez você tenha notado que
+existe bloco P e D Controller,
+
+123
+00:08:33.856 --> 00:08:36.893
+controlador P e D, Continuous, notou?
+
+124
+00:08:36.893 --> 00:08:41.593
+Vamos substituir nossa simulação
+do controlador PD pelo bloco P e
+
+125
+00:08:41.593 --> 00:08:46.537
+D Controller: View Library Browser
+Continuous clique e arraste
+
+126
+00:08:46.537 --> 00:08:48.770
+bloco P e D Controller para o modelo.
+
+127
+00:08:48.770 --> 00:08:53.017
+Apague os ganhos,
+o derivador e o somador mais à direita.
+
+128
+00:08:53.017 --> 00:08:55.805
+Apague as ligações desnecessárias.
+
+129
+00:08:55.805 --> 00:08:58.313
+Clique na ligação e use a tecla del,
+
+130
+00:08:58.313 --> 00:09:04.022
+posicione o controlador PD entre o somador
+e a entrada do sistema e do Scope.
+
+131
+00:09:04.022 --> 00:09:09.590
+Duplo clique no P e D,
+Controller mude de P e D para PD.
+
+132
+00:09:09.590 --> 00:09:12.650
+Mais à frente você verá
+o controlador P e D.
+
+133
+00:09:12.650 --> 00:09:17.500
+Altere o proportional p para
+7.4 e o derivative d para 0.37,
+
+134
+00:09:17.500 --> 00:09:21.920
+rode a simulação novamente e note
+que o valor máximo da saída do
+
+135
+00:09:21.920 --> 00:09:26.550
+controlador agora é de cerca
+de 45 e não os 50 trilhões.
+
+136
+00:09:26.550 --> 00:09:31.586
+Caso você não esteja vendo direito o
+valor máximo, você pode usar novamente
+
+137
+00:09:31.586 --> 00:09:37.086
+o menu Tools e Axis scaling ou pode
+usar os botões da barra de ferramentas.
+
+138
+00:09:37.086 --> 00:09:40.100
+Você pode usar o Scale y ou o Scale x e y.
+
+139
+00:09:40.100 --> 00:09:43.721
+Fechando esse scope você verá
+a saída do sistema com o PD,
+
+140
+00:09:43.721 --> 00:09:47.880
+que parece estar até melhor do
+que com a entrada de 50 trilhões.
+
+141
+00:09:47.880 --> 00:09:50.205
+O que é que está acontecendo?
+
+142
+00:09:50.205 --> 00:09:53.844
+Feche o Scope e dê duplo
+clique no P e D Controller.
+
+143
+00:09:53.844 --> 00:09:56.666
+Note que além dos ganhos
+proporcional e derivativo,
+
+144
+00:09:56.666 --> 00:09:59.806
+tem mais parâmetro: o
+filtro é coeficiente n.
+
+145
+00:09:59.806 --> 00:10:04.680
+Note também que no canto direito tem
+diagrama do Compensator formula,
+
+146
+00:10:04.680 --> 00:10:06.300
+fórmula do compensador.
+
+147
+00:10:06.300 --> 00:10:09.358
+O controlador também é
+chamado de compensador.
+
+148
+00:10:09.358 --> 00:10:12.597
+Pois ele compensa alguma
+deficiência do sistema.
+
+149
+00:10:12.597 --> 00:10:17.693
+Pois bem, note que o diagrama mostra
+a equação P mais D vezes N sobre
+
+150
+00:10:17.693 --> 00:10:22.720
+1 mais N vezes 1 sobre s,
+que podemos escrever
+
+151
+00:10:22.720 --> 00:10:29.880
+como P mais DN vezes s mais PN
+sobre P mais DN sobre S mais N.
+
+152
+00:10:29.880 --> 00:10:34.330
+Substituindo os nossos valores de P,
+D e N,
+
+153
+00:10:34.330 --> 00:10:37.634
+e fazendo as multiplicações e somas,
+
+154
+00:10:37.634 --> 00:10:42.409
+chegamos a 44,4 s mais
+16,7 sobre s mais 100.
+
+155
+00:10:42.409 --> 00:10:47.529
+Ou seja, o bloco P e D controller
+implementa o controlador PD como
+
+156
+00:10:47.529 --> 00:10:49.237
+controlador de avanço de fase,
+
+157
+00:10:49.237 --> 00:10:54.399
+adicionando polo menos 100 e reajustando
+a posição do zero e reajustando o ganho.
+
+158
+00:10:54.399 --> 00:10:59.793
+E com isso o valor da saída no instante da
+aplicação do degrau não fica tão grande.
+
+159
+00:10:59.793 --> 00:11:01.385
+Existem outras opções,
+
+160
+00:11:01.385 --> 00:11:06.320
+como simplesmente adicionar polo
+multiplicando C de s por b sobre s mais b.
+
+161
+00:11:06.320 --> 00:11:09.144
+Por exemplo, com b igual a 100,
+
+162
+00:11:09.144 --> 00:11:13.770
+teríamos C de s igual a 37
+s mais 20 sobre s mais 100.
+
+163
+00:11:13.770 --> 00:11:18.578
+De qualquer forma o controlador PD
+dificilmente será implementado realmente
+
+164
+00:11:18.578 --> 00:11:23.429
+como proporcional derivativo, uma vez que
+o derivador levaria sinais com amplitude
+
+165
+00:11:23.429 --> 00:11:26.938
+elevada demais quando o
+erro variasse abruptamente.
+
+166
+00:11:26.938 --> 00:11:31.851
+Além disso, derivador aumentaria o efeito
+de ruído no sensor e de variações rápidas
+
+167
+00:11:31.851 --> 00:11:33.150
+devido a perturbações.
+
+168
+00:11:33.150 --> 00:11:37.697
+Então apesar de podermos projetar
+controladores PD, na realidade,
+
+169
+00:11:37.697 --> 00:11:40.940
+estamos usando controladores
+de avanço de fase.
+
+170
+00:11:40.940 --> 00:11:44.545
+Agora você já é capaz de explicar
+o que é o controlador PD,
+
+171
+00:11:44.545 --> 00:11:49.088
+porque ele deve ser usado com cuidado
+e como ele geralmente é implementado.
+
+172
+00:11:49.088 --> 00:11:53.125
+No próximo vídeo, você verá exemplo
+completo de projeto de controlador
+
+173
+00:11:53.125 --> 00:11:57.540
+de avanço de fase para sistema
+de segunda ordem de tipo 1.

@@ -1,0 +1,701 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.198
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:09.198 --> 00:00:13.980
+bem vindo ao curso de
+orientação a objetos com Java.
+
+3
+00:00:13.980 --> 00:00:18.510
+Eu sou Clovis Fernandes e vamos
+dar continuidade à apresentação
+
+4
+00:00:18.510 --> 00:00:20.912
+sobre diagramas de classe.
+
+5
+00:00:20.912 --> 00:00:27.690
+Nós já vimos sobre os conceitos de classe,
+associação e multiplicidade.
+
+6
+00:00:27.690 --> 00:00:32.215
+Agora veremos os conceitos de
+navegabilidade, agregação,
+
+7
+00:00:32.215 --> 00:00:37.536
+composição e herança no contexto
+de diagramas de classes da UML.
+
+8
+00:00:37.536 --> 00:00:43.202
+Quanto à navegabilidade, tem a ver com o
+que é que uma classe enxerga da outra.
+
+9
+00:00:43.202 --> 00:00:48.030
+Esse exemplo que eu estou mostrando,
+a navegabilidade é bidirecional
+
+10
+00:00:48.030 --> 00:00:52.933
+eu não estou colocando nenhuma
+seta indicando a direção,
+
+11
+00:00:52.933 --> 00:00:58.020
+então eu tenho Cliente enxerga
+Pedido e Pedido enxerga Cliente.
+
+12
+00:00:58.020 --> 00:01:02.620
+Ou seja, Cliente vai poder ter 0 ou mais
+
+13
+00:01:02.620 --> 00:01:08.330
+objetos pedidos e pedido
+deverá ter exatamente
+
+14
+00:01:08.330 --> 00:01:13.160
+objeto cliente,
+porque a navegabilidade é bidirecional.
+
+15
+00:01:13.160 --> 00:01:17.300
+Outra maneira de representar
+isso é através de setas.
+
+16
+00:01:17.300 --> 00:01:23.786
+Que eu coloco seta de lado e do outro
+mostrando a direção da navegabilidade,
+
+17
+00:01:23.786 --> 00:01:29.440
+a direção da visibilidade de
+uma classe relação à outra.
+
+18
+00:01:29.440 --> 00:01:31.472
+Estou mostrando aqui.
+
+19
+00:01:31.472 --> 00:01:35.655
+A outra,
+olhando a classe Pedido e Pagamento,
+
+20
+00:01:35.655 --> 00:01:39.010
+a associação Pedido com Pagamento,
+
+21
+00:01:39.010 --> 00:01:43.290
+a navegabilidade a gente chama
+de unidirecional porque,
+
+22
+00:01:43.290 --> 00:01:50.000
+apenas a classe Pedido é que
+enxerga a classe Pagamento.
+
+23
+00:01:50.000 --> 00:01:53.991
+Objetos Pedido vão enxergar
+objetos de Pagamento.
+
+24
+00:01:53.991 --> 00:01:55.540
+A seta indica isso.
+
+25
+00:01:55.540 --> 00:02:00.330
+Ou seja, o Pagamento não vai
+enxergar Pedido nesse momento.
+
+26
+00:02:00.330 --> 00:02:05.075
+Isso não quer dizer que é assim
+e o projeto não pode mudar, não.
+
+27
+00:02:05.075 --> 00:02:09.730
+A navegabilidade ela pode mudar
+de acordo com os novos requisitos
+
+28
+00:02:09.730 --> 00:02:14.620
+e você vai inserindo no seu programa
+ou mudando requisitos anteriores.
+
+29
+00:02:14.620 --> 00:02:18.368
+Vamos falar agora da
+associação do tipo agregação.
+
+30
+00:02:18.368 --> 00:02:24.000
+O exemplo que nós colocamos,
+o Carro tem Roda, a Roda pertence a Carro.
+
+31
+00:02:24.000 --> 00:02:29.030
+No rótulo da associação,
+a gente está colocando até uma seta.
+
+32
+00:02:29.030 --> 00:02:32.263
+Porque eu posso ler de lado e do outro.
+
+33
+00:02:32.263 --> 00:02:33.119
+Tá certo?
+
+34
+00:02:33.119 --> 00:02:36.170
+Então a Roda, ela faz parte do Carro.
+
+35
+00:02:36.170 --> 00:02:37.464
+O Carro tem Roda.
+
+36
+00:02:37.464 --> 00:02:41.779
+Na verdade, o carro no nosso
+exemplo agora, tem 4 rodas.
+
+37
+00:02:41.779 --> 00:02:43.435
+Exatamente 4 rodas.
+
+38
+00:02:43.435 --> 00:02:46.289
+Então eu posso ler isso
+de lado e do outro.
+
+39
+00:02:46.289 --> 00:02:51.054
+Agregação, tem a ver com esse fato de
+você estar usando o conceito de ter
+
+40
+00:02:51.054 --> 00:02:55.538
+alguma coisa ou fazer
+parte de alguma coisa.
+
+41
+00:02:55.538 --> 00:02:58.650
+Que é o que caracteriza agregação.
+
+42
+00:02:58.650 --> 00:03:03.160
+Então a associação, o rótulo da
+associação quando significa ter,
+
+43
+00:03:03.160 --> 00:03:09.499
+possuir ou equivalente, eu posso
+chamar essa associação de agregação.
+
+44
+00:03:09.499 --> 00:03:12.985
+Essa associação que eu
+estou colocando agora,
+
+45
+00:03:12.985 --> 00:03:16.466
+é uma associação normal,
+associação normal.
+
+46
+00:03:16.466 --> 00:03:20.372
+Eu simplesmente tenho rótulo que é [tem].
+
+47
+00:03:20.372 --> 00:03:23.340
+Então carro tem 4 rodas.
+
+48
+00:03:23.340 --> 00:03:27.850
+O fato de fazer isso já
+caracteriza que é uma agregação.
+
+49
+00:03:27.850 --> 00:03:32.360
+Agora, eu posso representar isso
+de uma maneira melhor na UML?
+
+50
+00:03:32.360 --> 00:03:33.247
+Posso!
+
+51
+00:03:33.247 --> 00:03:39.838
+Basta usar esse símbolo que é diamante,
+vazado, branco.
+
+52
+00:03:39.838 --> 00:03:43.030
+Esse símbolo caracteriza a agregação.
+
+53
+00:03:43.030 --> 00:03:48.409
+Ao mesmo tempo, eu não preciso mais
+colocar o rótulo da associação,
+
+54
+00:03:48.409 --> 00:03:50.330
+o verbo da associação.
+
+55
+00:03:50.330 --> 00:03:54.337
+Eu não preciso mais falar
+que carro tem 4 rodas.
+
+56
+00:03:54.337 --> 00:03:59.964
+Basta eu colocar, carro,
+o símbolo da agregação e 4 rodas.
+
+57
+00:03:59.964 --> 00:04:06.000
+Não preciso mais colocar também a parte
+de baixo, de pertence, é desnecessário.
+
+58
+00:04:06.000 --> 00:04:09.634
+No nosso exemplo aí,
+o objeto carro for eliminado.
+
+59
+00:04:09.634 --> 00:04:11.870
+Ele for totalmente eliminado.
+
+60
+00:04:11.870 --> 00:04:18.647
+O que é que acontece com os objetos
+roda que estavam agregados?
+
+61
+00:04:18.647 --> 00:04:20.170
+Não acontece nada.
+
+62
+00:04:20.170 --> 00:04:22.862
+O objeto carro é eliminado,
+
+63
+00:04:22.862 --> 00:04:28.338
+mas os outros são objetos que antes de
+fazer a agregação eles já existiam.
+
+64
+00:04:28.338 --> 00:04:30.780
+Então eles não podem ser eliminados.
+
+65
+00:04:30.780 --> 00:04:32.100
+Nós vimos agregação.
+
+66
+00:04:32.100 --> 00:04:35.017
+Agora eu vou apresentar
+para vocês a composição.
+
+67
+00:04:35.017 --> 00:04:39.739
+Composição é uma associação qualquer,
+ela é muito parecida com agregação,
+
+68
+00:04:39.739 --> 00:04:42.388
+o rótulo dela também é o de ter, possuir.
+
+69
+00:04:42.388 --> 00:04:47.360
+Então no nosso exemplo aí o
+livro possui ou tem capítulos,
+
+70
+00:04:47.360 --> 00:04:52.667
+então isso caracteriza algo
+muito parecido com agregação.
+
+71
+00:04:52.667 --> 00:04:57.383
+Eu estou usando que o livro,
+ele tem ou mais capítulos,
+
+72
+00:04:57.383 --> 00:05:02.884
+eu esto dizendo que o capítulo faz
+parte do livro por isso é verdadeiro.
+
+73
+00:05:02.884 --> 00:05:07.656
+Tem uma diferença relação à agregação,
+no caso da simbologia nós
+
+74
+00:05:07.656 --> 00:05:12.614
+usamos diamante preto,
+isso caracteriza a composição.
+
+75
+00:05:12.614 --> 00:05:16.545
+E qual a diferença da
+composição com agregação?
+
+76
+00:05:16.545 --> 00:05:21.854
+Vocês lembram que quando era
+agregação o objeto que agregava,
+
+77
+00:05:21.854 --> 00:05:26.635
+o carro, naquele exemplo,
+quando eu eliminava o carro,
+
+78
+00:05:26.635 --> 00:05:30.272
+os objetos que estavam
+sendo agregados ao carro,
+
+79
+00:05:30.272 --> 00:05:34.705
+que eram as rodas ele não era eliminado,
+eles não eram eliminados.
+
+80
+00:05:34.705 --> 00:05:39.508
+Se o carro era eliminado as rodas não eram
+eliminadas, porque elas pré existiam,
+
+81
+00:05:39.508 --> 00:05:44.287
+elas estavam existentes antes
+da criação do objeto carro.
+
+82
+00:05:44.287 --> 00:05:50.060
+Agora na agregação, na composição,
+desculpe, o que é que ocorre?
+
+83
+00:05:50.060 --> 00:05:55.919
+O livro se ele for eliminado, todos os
+capítulos vão ser eliminados juntos,
+
+84
+00:05:55.919 --> 00:06:00.808
+porque o tempo de vida dos objetos
+da composição, as partes né,
+
+85
+00:06:00.808 --> 00:06:04.060
+do todo, eles são eliminados juntos.
+
+86
+00:06:04.060 --> 00:06:11.634
+Porque eles foram criados pelo
+objeto que compõem todos eles.
+
+87
+00:06:11.634 --> 00:06:16.981
+Então eu crio o livro e dentro de
+livro eu começo a criar os capítulos,
+
+88
+00:06:16.981 --> 00:06:23.050
+com isso ao eliminar o livro eu elimino
+também todos os capítulos, nesse exemplo.
+
+89
+00:06:23.050 --> 00:06:27.672
+Isso que diferencia
+a agregação de composição.
+
+90
+00:06:27.672 --> 00:06:35.030
+Quando elemento que agrega é eliminado
+na agregação os componentes,
+
+91
+00:06:35.030 --> 00:06:39.959
+os seus componentes não são eliminados,
+na composição quando componente que
+
+92
+00:06:39.959 --> 00:06:43.812
+compõe os outros é eliminado,
+os outros também são eliminados.
+
+93
+00:06:43.812 --> 00:06:45.980
+Bom, iremos falar agora de herança.
+
+94
+00:06:45.980 --> 00:06:50.230
+Herança relaciona uma
+classe com a sua subclasse.
+
+95
+00:06:50.230 --> 00:06:55.440
+No nosso exemplo, temos a classe
+pagamento, que tem 3 subclasses,
+
+96
+00:06:55.440 --> 00:06:59.298
+que caracterizam maneiras
+diferentes de fazer pagamento.
+
+97
+00:06:59.298 --> 00:07:02.560
+Então, eu tenho pagamento
+por cartão de crédito,
+
+98
+00:07:02.560 --> 00:07:07.344
+pagamento por dinheiro vivo
+e pagamento por cheque.
+
+99
+00:07:07.344 --> 00:07:12.590
+A herança ela também,
+eu posso estar olhando de baixo para cima.
+
+100
+00:07:12.590 --> 00:07:15.125
+Olhando a herança como
+olhei anteriormente,
+
+101
+00:07:15.125 --> 00:07:16.945
+está olhando de cima para baixo.
+
+102
+00:07:16.945 --> 00:07:21.564
+Por isso é que eu tenho uma seta herança,
+lá mostrando a seta pra baixo.
+
+103
+00:07:21.564 --> 00:07:25.430
+Já o conceito inverso
+é o de generalização.
+
+104
+00:07:25.430 --> 00:07:29.080
+Suponha que eu tivesse as classes,
+cartão de crédito,
+
+105
+00:07:29.080 --> 00:07:33.980
+dinheiro e cheque, generalizar
+significa você criar uma classe,
+
+106
+00:07:33.980 --> 00:07:38.994
+que é mais geral que essas 3, que no caso
+seria pagamento e eu passaria algumas
+
+107
+00:07:38.994 --> 00:07:43.680
+responsabilidades que são comuns dessas
+classes, para a classe pagamento.
+
+108
+00:07:43.680 --> 00:07:50.660
+Isso chama-se generalização,
+o contrário disso é a especialização,
+
+109
+00:07:50.660 --> 00:07:56.250
+Ou herança, especialização na verdade
+é tipo de herança mais comum.
+
+110
+00:07:56.250 --> 00:07:59.273
+Como é que eu reconheço que uma classe,
+
+111
+00:07:59.273 --> 00:08:03.866
+se a estrutura de herança que
+eu estou fazendo funciona?
+
+112
+00:08:03.866 --> 00:08:07.410
+Basta olhar o relacionamento é-um.
+
+113
+00:08:07.410 --> 00:08:12.290
+Então cartão de crédito
+é tipo de pagamento,
+
+114
+00:08:12.290 --> 00:08:15.600
+Ohh, então cartão de
+crédito é uma subclasse.
+
+115
+00:08:15.600 --> 00:08:20.396
+Pagamento por dinheiro vivo,
+é tipo de pagamento?
+
+116
+00:08:20.396 --> 00:08:22.700
+Também é então, beleza.
+
+117
+00:08:22.700 --> 00:08:27.192
+Pagamento por cheque, é tipo de pagamento?
+
+118
+00:08:27.192 --> 00:08:31.843
+Também, ok, então o relacionamento
+é-um foi satisfeito.
+
+119
+00:08:31.843 --> 00:08:35.050
+Então eu quero, por exemplo,
+pagar com balas.
+
+120
+00:08:35.050 --> 00:08:37.787
+Bala é tipo de pagamento?
+
+121
+00:08:37.787 --> 00:08:38.360
+Não.
+
+122
+00:08:38.360 --> 00:08:42.674
+Bala não é tipo de pagamento, então o
+relacionamneto é-um nessa característica
+
+123
+00:08:42.674 --> 00:08:47.932
+de examinar o relacionamento é-um
+ajuda a determinar se a classe
+
+124
+00:08:47.932 --> 00:08:52.383
+é subclasse de outra se outra
+classe ela tem subclasse.
+
+125
+00:08:52.383 --> 00:08:57.450
+Nesse outro diagrama de herança,
+nós temos algumas coisas interessantes.
+
+126
+00:08:57.450 --> 00:09:03.867
+Na classe abstrata eu não posso criar
+instâncias dela, eu só uso para fazer,
+
+127
+00:09:03.867 --> 00:09:08.865
+transmitir métodos comuns
+a todas as subclasses.
+
+128
+00:09:08.865 --> 00:09:13.276
+Já na classe concreta,
+aí eu posso fazer instâncias dela.
+
+129
+00:09:13.276 --> 00:09:17.472
+Então na classe abstrata não
+dá pra criar objetos dela,
+
+130
+00:09:17.472 --> 00:09:19.990
+na classe concreta dá pra criar.
+
+131
+00:09:19.990 --> 00:09:23.750
+Como é que eu descubro
+que a classe é abstrata?
+
+132
+00:09:23.750 --> 00:09:28.267
+Vendo ou colocando ela como itálico.
+
+133
+00:09:28.267 --> 00:09:32.128
+Isso já identifica normalmente.
+
+134
+00:09:32.128 --> 00:09:36.464
+Nem todo editor vai permitir
+que eu coloque itálico.
+
+135
+00:09:36.464 --> 00:09:41.334
+Verdade, aí basta você
+colocar cima do nome
+
+136
+00:09:41.334 --> 00:09:46.300
+da classe que ela é uma classe abstrata,
+basta colocar lá abstrata.
+
+137
+00:09:46.300 --> 00:09:50.787
+E aí o nome não vai estar
+itálico mas tem uma informação
+
+138
+00:09:50.787 --> 00:09:53.470
+dizendo que a classe é abstrata.
+
+139
+00:09:53.470 --> 00:09:57.739
+Com isso,
+nós completamos a apresentação dos
+
+140
+00:09:57.739 --> 00:10:02.352
+conceitos mais básicos e
+usuais de diagramas de classe.
+
+141
+00:10:02.352 --> 00:10:05.980
+Algumas coisas ficaram ainda
+sem serem trabalhadas.
+
+142
+00:10:05.980 --> 00:10:10.224
+Algumas nós vamos trabalhar
+exercícios outras nós vamos,
+
+143
+00:10:10.224 --> 00:10:16.418
+iremos apresentar à medida que o
+assunto requeira esse conceito,
+
+144
+00:10:16.418 --> 00:10:22.980
+aí nós apresentaremos nesse momento,
+então vão ser diagramas de sequência,
+
+145
+00:10:22.980 --> 00:10:27.210
+notação para subsistemas.
+
+146
+00:10:27.210 --> 00:10:29.280
+e coisas desse tipo.
+
+147
+00:10:29.280 --> 00:10:30.430
+Obrigado.
+
+148
+00:10:30.430 --> 00:10:35.950
+[MÚSICA] [MÚSICA}

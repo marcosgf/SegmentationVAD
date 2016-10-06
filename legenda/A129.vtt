@@ -1,0 +1,549 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.215
+[MÚSICA] Olá!
+
+2
+00:00:05.215 --> 00:00:06.757
+Bem vindos ao último video,
+
+3
+00:00:06.757 --> 00:00:10.430
+dessa parte de reconstrução do
+conversor digital para analógico.
+
+4
+00:00:10.430 --> 00:00:15.282
+Esse video a gente vai ver
+como que aumentar a gente
+
+5
+00:00:15.282 --> 00:00:19.579
+pode ser vantajoso para a gente, pode
+facilitar muito a nossa vida em termos dos
+
+6
+00:00:19.579 --> 00:00:23.970
+cuidados que a gente tem que tomar com
+o conversor digital para analógico.
+
+7
+00:00:23.970 --> 00:00:27.481
+Mas antes de falar sobre isso,
+eu vou falar sobre as desvantagens,
+
+8
+00:00:27.481 --> 00:00:31.370
+porque como muitas coisas em engenharia,
+sempre existe compromisso.
+
+9
+00:00:31.370 --> 00:00:35.061
+Existem soluções que trazem
+melhoras mas há custo,
+
+10
+00:00:35.061 --> 00:00:37.960
+não existe o almoço grátis em engenharia.
+
+11
+00:00:37.960 --> 00:00:40.800
+O custo de você de aumentar
+a taxa de amostragem,
+
+12
+00:00:40.800 --> 00:00:43.515
+é que: 1 seus conversores
+ficam mais caros.
+
+13
+00:00:43.515 --> 00:00:45.345
+Quanto maior a taxa de amostragem,
+
+14
+00:00:45.345 --> 00:00:49.070
+mais caro é o seu conversor analógico
+digital e digital para analógico.
+
+15
+00:00:49.070 --> 00:00:52.350
+2 você tem que armazenar mais informação.
+
+16
+00:00:52.350 --> 00:00:57.404
+Se eu invés de amostrar
+48 mil vezes por segundo,
+
+17
+00:00:57.404 --> 00:01:01.766
+eu resolvo amostrar 96 mil vezes por
+segundo, o dobro, eu tenho o dobro de
+
+18
+00:01:01.766 --> 00:01:06.084
+amostras, isso quer dizer que eu tenho o
+dobro do número de bits para armazenar e
+
+19
+00:01:06.084 --> 00:01:09.819
+isso tem custo para mim, o processamento
+fica mais caro, o número de contas que eu
+
+20
+00:01:09.819 --> 00:01:13.731
+tenho que fazer, se eu for fazer algum
+filtro, tudo isso complica a minha vida.
+
+21
+00:01:13.731 --> 00:01:18.296
+Mas ainda assim, eu acredito que não é
+difícil convencer vocês de que aumentar
+
+22
+00:01:18.296 --> 00:01:20.071
+a taxa de amostragem é vantajoso.
+
+23
+00:01:20.071 --> 00:01:22.100
+Basta olhar para essa figurinha aqui.
+
+24
+00:01:22.100 --> 00:01:26.980
+Aqui é o que tenho a reconstrução então,
+daquela minha senóide,
+
+25
+00:01:26.980 --> 00:01:28.757
+com 6 amostras por segundo,
+
+26
+00:01:28.757 --> 00:01:33.740
+quando eu passo elas por segurador de
+ordem 0, obtendo aqui o sinal em magenta.
+
+27
+00:01:33.740 --> 00:01:37.570
+Aqui eu tenho a mesma figurinha,
+mudei as cores, perdão,
+
+28
+00:01:37.570 --> 00:01:43.471
+mas é a mesma figurinha
+com a minha senóide
+
+29
+00:01:43.471 --> 00:01:48.195
+aqui em vermelho e a minha
+reconstrução em azul.
+
+30
+00:01:48.195 --> 00:01:52.240
+Segurador de ordem 0 ainda mas eu estou
+tomando muito mais amostras por segundo.
+
+31
+00:01:52.240 --> 00:01:57.228
+Eu acho que fica claro para a maioria
+de vocês, que esse sinal aqui em azul,
+
+32
+00:01:57.228 --> 00:02:03.260
+é uma reconstrução melhor
+do que a desse sinal aqui.
+
+33
+00:02:03.260 --> 00:02:05.060
+Ok?
+O que acontece?
+
+34
+00:02:05.060 --> 00:02:08.160
+Porque é que isso está acontecendo?
+
+35
+00:02:08.160 --> 00:02:10.025
+E é interessante a gente ver isso,
+
+36
+00:02:10.025 --> 00:02:14.437
+porque isso vai nos ajudar a ver uma série
+de coisas sobre o domínio da frequência,
+
+37
+00:02:14.437 --> 00:02:18.390
+revisar uma série de conceitos sobre
+a passagem do domínio da frequência.
+
+38
+00:02:18.390 --> 00:02:20.832
+Como explicar então,
+o que está acontecendo.
+
+39
+00:02:20.832 --> 00:02:26.248
+Basicamente vamos imaginar o seguinte
+exemplo: A gente tem sinal cuja maior
+
+40
+00:02:26.248 --> 00:02:33.810
+frequência é 4410 que é uma frequência de
+sinal de voz com uma qualidade razoável.
+
+41
+00:02:33.810 --> 00:02:35.998
+Porque é que eu escolhi 4410?
+
+42
+00:02:35.998 --> 00:02:41.323
+Porque eu vou amostrar esse sinal com
+a taxa de amostragem do CD 44100,
+
+43
+00:02:41.323 --> 00:02:45.831
+então 4410 é múltiplo aí fica,
+facilita as contas.
+
+44
+00:02:45.831 --> 00:02:50.959
+Então, vamos considerar esse sinal aqui,
+cuja frequência máxima,
+
+45
+00:02:50.959 --> 00:02:55.158
+então é 4410, eu vou amostrar ele eh,
+
+46
+00:02:55.158 --> 00:03:00.709
+a 44100 e vou passar por conversor
+digital para analógico usando segurador
+
+47
+00:03:00.709 --> 00:03:04.920
+de ordem 0 aquele que mantêm constante
+então, a amostra entre instante e outro.
+
+48
+00:03:04.920 --> 00:03:06.827
+Como será que vai acontecer?
+
+49
+00:03:06.827 --> 00:03:12.636
+Bom, essa amostra 4410 vai virar, pela
+nossa regrinha de 3, 2 Pi sobre 10 dá 2 Pi
+
+50
+00:03:12.636 --> 00:03:18.270
+vezes a frequência sobre a frequência de
+amostragem, então vai virar 2 Pi sobre 10.
+
+51
+00:03:18.270 --> 00:03:22.410
+E aí eu vou ter a minha replicazinha aqui.
+
+52
+00:03:22.410 --> 00:03:27.319
+O cara aparecendo aqui,
+2 Pi menos ômega e aqui ômega mais 2 Pi.
+
+53
+00:03:27.319 --> 00:03:31.355
+Isso vem daqui para cá em
+ômega mais 2 Pi então aqui,
+
+54
+00:03:31.355 --> 00:03:37.520
+é 2 Pi vezes 9 sobre 10, é 2 Pi menos
+2 Pi sobre 10, esse ponto aqui.
+
+55
+00:03:37.520 --> 00:03:40.006
+Na reconstrução o que é que vai acontecer?
+
+56
+00:03:40.006 --> 00:03:43.182
+Eu vou pegar isso aqui,
+vou desfazer a regrinha de 3,
+
+57
+00:03:43.182 --> 00:03:46.829
+então esse 2 Pi vai virar
+a frequência de amostragem,
+
+58
+00:03:46.829 --> 00:03:52.057
+44100 e eu vou passar
+isso aqui pelo segurador
+
+59
+00:03:52.057 --> 00:03:57.170
+de ordem 0 cujo pulso tem uma transformada
+de Fourier que é dada por uma
+
+60
+00:03:57.170 --> 00:04:02.071
+coisa com essa característica aqui, então,
+eu vou ter novamente uma distorção na
+
+61
+00:04:02.071 --> 00:04:07.390
+minha faixa de interesse e eu vou ter as
+minhas altas frequências aparecendo aqui.
+
+62
+00:04:07.390 --> 00:04:11.917
+Vamos imaginar o que é que aconteceria se
+eu dobrasse a minha taxa de amostragem.
+
+63
+00:04:11.917 --> 00:04:16.949
+Se eu dobrasse a minha taxa de amostragem
+o 4410 vai virar 2 Pi sobre 20 agora,
+
+64
+00:04:16.949 --> 00:04:21.444
+não vai mais virar 2 Pi sobre 10,
+ele vai virar 2 Pi sobre 20 tá?
+
+65
+00:04:21.444 --> 00:04:27.539
+E daí vai ter 2 Pi sobre 20,
+vai ter a réplica aqui em 2 Pi, então,
+
+66
+00:04:27.539 --> 00:04:32.468
+isso aqui é o 2 Pi menos a frequência
+máxima que é 2 Pi menos 2 Pi sobre 20 OK?
+
+67
+00:04:32.468 --> 00:04:34.701
+Aqui está a minha réplica em 2 Pi.
+
+68
+00:04:34.701 --> 00:04:38.985
+À hora em que eu passo isso aqui pelo
+conversor digital para analógico,
+
+69
+00:04:38.985 --> 00:04:42.507
+isso aqui é o sinal digital à hora
+que passo pelo conversor digital para
+
+70
+00:04:42.507 --> 00:04:46.380
+analógico esse 2 Pi vira 88200, vira
+a minha nova frequência de amostragem,
+
+71
+00:04:46.380 --> 00:04:48.190
+eu dobrei a frequência de amostragem.
+
+72
+00:04:48.190 --> 00:04:52.815
+Então, esse cara aqui, vai ficar aqui,
+
+73
+00:04:52.815 --> 00:04:58.250
+o 2 Pi sobre 20 vai voltar a ser 4410,
+mas o 2 Pi virou 88200.
+
+74
+00:04:58.250 --> 00:05:02.800
+Então, observa que no primeiro
+caso eu tinha, frequências aqui,
+
+75
+00:05:02.800 --> 00:05:08.690
+em torno de 44100 que desapareceram quando
+eu dobrei a minha taxa de amostragem.
+
+76
+00:05:08.690 --> 00:05:13.275
+As minhas primeiras altas frequências vão
+aparecer aqui em torno de 88200 mais do
+
+77
+00:05:13.275 --> 00:05:18.554
+que isso, você vê que eu estiquei pouco
+o pulso aqui, então ele varia menos,
+
+78
+00:05:18.554 --> 00:05:22.470
+o p de f aqui do meu pulso varia
+menos dentro desse intervalo.
+
+79
+00:05:22.470 --> 00:05:25.760
+Então, ele causa menos
+distorção dentro da faixa.
+
+80
+00:05:25.760 --> 00:05:30.630
+E quais são as duas vantagens que eu
+consigo ao aumentar a taxa de amostragem?
+
+81
+00:05:30.630 --> 00:05:34.390
+Menor distorção dentro da faixa
+e as minhas altas frequências
+
+82
+00:05:34.390 --> 00:05:38.480
+aparecendo cada vez mais longe das
+minhas frequências de interesse.
+
+83
+00:05:38.480 --> 00:05:42.050
+o que facilita cada vez mais o
+trabalho do meu filtro passar altas,
+
+84
+00:05:42.050 --> 00:05:43.340
+passar baixas perdão.
+
+85
+00:05:43.340 --> 00:05:47.042
+Então, essas são as
+grandes vantagens de usar,
+
+86
+00:05:47.042 --> 00:05:51.750
+aumentar a taxa de amostragem, a gente
+consegue uma reconstrução mais simples,
+
+87
+00:05:51.750 --> 00:05:56.700
+com maior qualidade,
+mas claro, com maior custo.
+
+88
+00:05:56.700 --> 00:06:00.884
+É interessante notar que essa
+mudança de taxa de amostragem,
+
+89
+00:06:00.884 --> 00:06:06.032
+eu posso obter digitalmente eu posso
+pegar o meu sinal, amostrar a 44100,
+
+90
+00:06:06.032 --> 00:06:10.800
+normal, do jeito que eu faria
+normalmente e depois esse x de n eu
+
+91
+00:06:10.800 --> 00:06:15.660
+gero mais amostras dele no mundo digital,
+sem mudar o meu conversor analógico
+
+92
+00:06:15.660 --> 00:06:19.510
+digital pelo menos, o conversor digital
+para analógico ele iria editado.
+
+93
+00:06:19.510 --> 00:06:24.124
+Essa parte de mudança de taxa de
+amostragem no mundo digital é uma
+
+94
+00:06:24.124 --> 00:06:27.636
+parte importantíssima de
+processamento digital de sinais.
+
+95
+00:06:27.636 --> 00:06:31.788
+Muitas vezes você é obrigado a fazer isso,
+porque você tem componentes que funcionam,
+
+96
+00:06:31.788 --> 00:06:36.012
+por exemplo, em relógios diferentes,
+você está usando FPGA para acelerar
+
+97
+00:06:36.012 --> 00:06:41.980
+processamento no computador, ou para,
+receptor de sistema de comunicações.
+
+98
+00:06:41.980 --> 00:06:46.304
+O FPGA opera numa taxa de amostragem o seu
+sistema de comunicações opera em outra
+
+99
+00:06:46.304 --> 00:06:49.081
+taxa de amostragem e você precisa
+fazer esses 2 conversarem,
+
+100
+00:06:49.081 --> 00:06:51.420
+você precisa fazer uma mudança
+de taxa de amostragem.
+
+101
+00:06:51.420 --> 00:06:55.151
+Isso é uma parte interessantíssima
+do curso, espero dia fazer
+
+102
+00:06:55.151 --> 00:06:59.269
+módulo sobre isso mas por enquanto é só
+saber que é possível fazer digitalmente,
+
+103
+00:06:59.269 --> 00:07:03.020
+sem voltar para o mundo analógico,
+fazer essa mudança de taxa de amostragem.
+
+104
+00:07:03.020 --> 00:07:10.130
+Bom, isso conclui toda a parte da
+teoria de reconstrução do sinal,
+
+105
+00:07:10.130 --> 00:07:13.880
+o que conclui toda a parte
+da teoria do nosso curso.
+
+106
+00:07:13.880 --> 00:07:18.914
+Próximo video então, vai ser apenas
+resumo do nosso curso e nesse resumo
+
+107
+00:07:18.914 --> 00:07:24.120
+eu vou mostrar para vocês que é
+possível recuperar perfeitamente
+
+108
+00:07:24.120 --> 00:07:28.426
+as frequências de interesse, desde que eu
+faça a amostragem com o devido cuidado,
+
+109
+00:07:28.426 --> 00:07:32.259
+com os devidos filtros e eu faça a
+reconstrução com os devidos cuidados e com
+
+110
+00:07:32.259 --> 00:07:37.065
+os devidos filtros, eu consigo recuperar
+perfeitamente o sinal desejado.
+
+111
+00:07:37.065 --> 00:07:41.881
+Isso é o famoso Teorema da Amostragem
+que a gente vai ver no último video,
+
+112
+00:07:41.881 --> 00:07:43.780
+o último video desse curso.
+
+113
+00:07:43.780 --> 00:07:46.663
+Muito obrigado e até lá!
+
+114
+00:07:46.663 --> 00:07:48.040
+[MÚSICA]

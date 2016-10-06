@@ -1,0 +1,863 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.970
+[MÚSICA] [MÚSICA]
+
+2
+00:00:07.970 --> 00:00:11.235
+Olá a todos meu nome é Eduardo Guerra.
+
+3
+00:00:11.235 --> 00:00:15.520
+Esse é o curso de desenvolvimento
+de software guiado por testes.
+
+4
+00:00:15.520 --> 00:00:20.604
+Na aula de hoje vamos falar aí das
+Diretivas de Mock Object ou seja,
+
+5
+00:00:20.604 --> 00:00:24.030
+o que é que o Mock Object precisa fazer?
+
+6
+00:00:24.030 --> 00:00:28.830
+Quais os papeis que ele
+cumpre ali dentro do teste,
+
+7
+00:00:28.830 --> 00:00:31.613
+como ele se insere dentro do teste?
+
+8
+00:00:31.613 --> 00:00:33.966
+Ele precisa verificar alguma coisa?
+
+9
+00:00:33.966 --> 00:00:36.990
+Ele precisa ter determinado comportamento?
+
+10
+00:00:36.990 --> 00:00:42.136
+Então, eu gosto de, então, assim
+basicamente hoje a gente vai entender
+
+11
+00:00:42.136 --> 00:00:47.095
+quais são os tipos de coisa que
+o Mock Object precisa fazer.
+
+12
+00:00:47.095 --> 00:00:53.137
+Eu gosto de dizer que o Mock Object
+parecido com o nosso amigo RobotCop,
+
+13
+00:00:53.137 --> 00:00:57.280
+ele tem três diretivas
+que ele precisa seguir.
+
+14
+00:00:57.280 --> 00:01:02.300
+podem estar ali na programação
+do nosso Mock Object.
+
+15
+00:01:02.300 --> 00:01:06.967
+Então, a primeira diretiva é
+imitar a interface da dependência,
+
+16
+00:01:06.967 --> 00:01:11.142
+depois simular o comportamento
+do cenário de teste,
+
+17
+00:01:11.142 --> 00:01:15.710
+e por fim verificar as
+chamadas esperadas da classe.
+
+18
+00:01:15.710 --> 00:01:19.446
+Então no nosso exemplo a gente
+teria aqui por exemplo,
+
+19
+00:01:19.446 --> 00:01:23.925
+uma classe de negócios,
+que é o que a gente está desenvolvendo.
+
+20
+00:01:23.925 --> 00:01:28.283
+E ela tem alí uma classe que
+ela executa alguns processos,
+
+21
+00:01:28.283 --> 00:01:34.400
+que você passa o nome do processo e ela
+vai estar executando aquilo algum lugar.
+
+22
+00:01:34.400 --> 00:01:39.678
+Mais ou menos,
+executa o cadastrar o usuário,
+
+23
+00:01:39.678 --> 00:01:42.900
+então ele de alguma forma
+vai executar aquilo.
+
+24
+00:01:42.900 --> 00:01:47.168
+E é justamente essa classe que executa
+esses processos que a gente vai estar
+
+25
+00:01:47.168 --> 00:01:50.860
+criando o Mock Object aqui na nossa aula.
+
+26
+00:01:50.860 --> 00:01:55.935
+Então a gente vai vendo a partir
+desse exemplo cada uma das diretivas,
+
+27
+00:01:55.935 --> 00:02:01.371
+e como a gente pode estar fazendo
+para implementar aí cada uma.
+
+28
+00:02:01.371 --> 00:02:06.516
+Bom, então a primeira
+coisa que o Mock precisa
+
+29
+00:02:06.516 --> 00:02:11.060
+é ter a mesma interface da dependência.
+
+30
+00:02:11.060 --> 00:02:17.507
+Então por exemplo, eu vou pegar o meu
+Mock Object que seria alí o ExecMock,
+
+31
+00:02:17.507 --> 00:02:22.194
+e vou estar implementando
+a interface Executor.
+
+32
+00:02:22.194 --> 00:02:26.380
+E aí obviamente esse, por implementar
+
+33
+00:02:26.380 --> 00:02:31.465
+a interface executor o meu Mock
+precisa ter todos os métodos
+
+34
+00:02:31.465 --> 00:02:36.305
+que essa interface Executor possui.
+
+35
+00:02:36.305 --> 00:02:41.723
+Eu também já entrando
+aí na segunda diretiva,
+
+36
+00:02:41.723 --> 00:02:47.397
+eu preciso simular comportamentos
+para o cenário de teste.
+
+37
+00:02:47.397 --> 00:02:54.470
+Então no caso se a gente observar o método
+executar aqui, ele retorna "booleano".
+
+38
+00:02:54.470 --> 00:02:59.953
+Então, eu tenho que como de alguma
+forma lá no meu teste configurar,
+
+39
+00:02:59.953 --> 00:03:08.279
+"Olha, eu quero que ele
+retorne por exemplo,
+
+40
+00:03:08.279 --> 00:03:13.170
+alí no lugar do resultado o
+valor que eu passar pra ele".
+
+41
+00:03:13.170 --> 00:03:16.260
+Então se eu quiser por exemplo,
+que ele retorne True,
+
+42
+00:03:16.260 --> 00:03:21.150
+eu vou alí e chamo "setResultado True"
+e se eu quiser que ele retorne False,
+
+43
+00:03:21.150 --> 00:03:23.967
+eu chamo "setResultado False".
+
+44
+00:03:23.967 --> 00:03:28.941
+Então, assim pode ser obviamente
+com qualquer tipo de retorno que
+
+45
+00:03:28.941 --> 00:03:32.660
+o meu Mock precisar
+retornar alí no método.
+
+46
+00:03:32.660 --> 00:03:37.312
+No caso por exemplo dele ter vários
+métodos e poder retornar coisas
+
+47
+00:03:37.312 --> 00:03:40.360
+diferentes às vezes numa
+mesma chamada da classe.
+
+48
+00:03:40.360 --> 00:03:45.881
+Você tem que guardar isso daí de alguma
+forma para que na hora que a classe
+
+49
+00:03:45.881 --> 00:03:51.170
+chamar o Mock Object,
+ele retorne o que você está querendo.
+
+50
+00:03:51.170 --> 00:03:54.978
+Então o que é interessante falar é dizer
+
+51
+00:03:54.978 --> 00:03:59.150
+que esse retorno do Mock ele
+é parte do cenário de teste.
+
+52
+00:03:59.150 --> 00:04:04.438
+Então se você fala assim, "Olha eu estou
+criando caso de teste no caso da execução
+
+53
+00:04:04.438 --> 00:04:09.605
+da dependência dar verdadeiro ou no caso
+da execução da dependência dar falso".
+
+54
+00:04:09.605 --> 00:04:11.855
+Isso faz parte do cenário do teste.
+
+55
+00:04:11.855 --> 00:04:16.580
+Lembrando que como o resultado
+de execução do teste,
+
+56
+00:04:16.580 --> 00:04:21.375
+do método, do Mock,
+não necessáriamente vai ser retorno
+
+57
+00:04:21.375 --> 00:04:26.018
+mas pode por exemplo ser uma
+exceção que está sendo lançada,
+
+58
+00:04:26.018 --> 00:04:30.608
+então nesse caso eu também
+criei aqui método setException,
+
+59
+00:04:30.608 --> 00:04:35.291
+que eu configuro alí uma
+exceção dentro de uma variável,
+
+60
+00:04:35.291 --> 00:04:40.719
+e eu verifico dentro do meu método
+executar se aquela exceção for
+
+61
+00:04:40.719 --> 00:04:46.350
+diferente de nula ou seja, se o meu
+teste configurar alguma coisa alí,
+
+62
+00:04:46.350 --> 00:04:50.484
+ele vai lançar aquela
+exceção como resultado,
+
+63
+00:04:50.484 --> 00:04:54.461
+também parte do cenário de teste ou seja,
+
+64
+00:04:54.461 --> 00:05:00.735
+eu quero testar a minha classe no caso
+da dependência dela jogar uma exceção,
+
+65
+00:05:00.735 --> 00:05:06.095
+quero ver se ela se comporta
+de forma correta nesses casos.
+
+66
+00:05:06.095 --> 00:05:11.133
+E aí por fim,
+a última diretiva do Mock é verificar
+
+67
+00:05:11.133 --> 00:05:16.403
+as chamadas esperadas pela classe,
+então por exemplo,
+
+68
+00:05:16.403 --> 00:05:21.687
+eu chamei vou supor,
+minha classe lá ela vai chamar
+
+69
+00:05:21.687 --> 00:05:26.876
+essa classe executora
+aí por exemplo com sei
+
+70
+00:05:26.876 --> 00:05:32.017
+lá duas vezes com a string
+calcular alguma coisa,
+
+71
+00:05:32.017 --> 00:05:37.148
+ou cadastrar alguma coisa,
+então eu tenho que verificar no teste se
+
+72
+00:05:37.148 --> 00:05:43.626
+a minha classe fez as chamadas corretas
+ou com os parâmetros corretos,
+
+73
+00:05:43.626 --> 00:05:47.660
+ou quantidade correta na dependência dela.
+
+74
+00:05:47.660 --> 00:05:50.610
+Então o que a gente precisa fazer?
+
+75
+00:05:50.610 --> 00:05:54.556
+no método Executar,
+repare que agora, antes era assim,
+
+76
+00:05:54.556 --> 00:05:58.110
+eu configurava alguma coisa
+para o Executar fazer,
+
+77
+00:05:58.110 --> 00:06:02.263
+agora o Executar ele vai guardar
+as informações da chamada,
+
+78
+00:06:02.263 --> 00:06:07.394
+então se eu precisar desse tipo
+de verificação, eu preciso que
+
+79
+00:06:07.394 --> 00:06:13.050
+ele guarde alí o resultado
+ou os parâmetros,
+
+80
+00:06:13.050 --> 00:06:16.936
+ou a quantidade de chamadas,
+dependendo do que eu quero verificar.
+
+81
+00:06:16.936 --> 00:06:21.505
+No caso alí ele recebe uma String como
+parametro e eu estou guardando essa String
+
+82
+00:06:21.505 --> 00:06:23.806
+uma lista chamada alí Execuções.
+
+83
+00:06:23.806 --> 00:06:29.490
+E aí eu crio método, esse método ele é
+do Mock assim como aqueles métodos né,
+
+84
+00:06:29.490 --> 00:06:32.163
+eu vou voltar pouquinho aqui.
+
+85
+00:06:32.163 --> 00:06:37.838
+O método setException ou o método
+setResultado, esses métodos são métodos
+
+86
+00:06:37.838 --> 00:06:43.824
+do Mock não são métodos da interface são
+métodos que quem vai utilizar é o teste.
+
+87
+00:06:43.824 --> 00:06:48.735
+Vamos voltar aqui então para
+o nosso método Verifica,
+
+88
+00:06:48.735 --> 00:06:52.574
+que assim como aqueles que eu
+mostrei aqui, são métodos do Mock,
+
+89
+00:06:52.574 --> 00:06:58.456
+e aí por exemplo eu vou passar para ele
+uma lista de string com as execuções e vou
+
+90
+00:06:58.456 --> 00:07:04.370
+verificar aqui no caso, se todas aquelas
+execuções foram realmente chamadas.
+
+91
+00:07:04.370 --> 00:07:09.550
+Nesse caso aqui repare que
+ele tem "for" que ele vai
+
+92
+00:07:09.550 --> 00:07:14.855
+passando pelas verificações
+e ele tem "if" que verifica
+
+93
+00:07:14.855 --> 00:07:20.410
+se aquela execução está contida na
+lista de execuções que ele guardou.
+
+94
+00:07:20.410 --> 00:07:25.242
+Então, basicamente o que eu estou fazendo
+é o seguinte, eu estou verificando se as
+
+95
+00:07:25.242 --> 00:07:30.045
+execuções que eu passei para ele
+algum momento foram chamadas,
+
+96
+00:07:30.045 --> 00:07:35.710
+por essa implementação, vou fazer uma
+pergunta para você: Se eu passar,
+
+97
+00:07:35.710 --> 00:07:41.580
+se tiver uma execução que não estiver
+nessa lista que eu passei para ele.
+
+98
+00:07:41.580 --> 00:07:46.740
+Imagina que eu passo uma lista com
+duas execuções e na verdade ele
+
+99
+00:07:46.740 --> 00:07:52.683
+tem executado três, sendo que essas
+duas estão contidas nessas três.
+
+100
+00:07:52.683 --> 00:07:54.750
+Ele vai dar algum problema?
+
+101
+00:07:54.750 --> 00:07:58.300
+Responde aí.
+
+102
+00:07:58.300 --> 00:08:00.667
+Não, ele não vai dar, porquê?
+
+103
+00:08:00.667 --> 00:08:05.772
+Porque ele só verifica se as
+execuções estão contidas nas
+
+104
+00:08:05.772 --> 00:08:11.043
+que eu passei para ele, então,
+se eu tiver alguma a mais
+
+105
+00:08:11.043 --> 00:08:15.910
+a princípio ele não vai dar
+problema ou se eu chamar, se
+
+106
+00:08:15.910 --> 00:08:20.473
+essas execuções forem chamadas numa ordem
+diferente também não vai dar problema.
+
+107
+00:08:20.473 --> 00:08:24.763
+E aí se você falar não, mas eu quero
+que sejam chamadas exatamente aquelas,
+
+108
+00:08:24.763 --> 00:08:26.952
+e exatamente na ordem que eu passar.
+
+109
+00:08:26.952 --> 00:08:31.420
+Aí eu posso ir lá e criar por exemplo,
+método de verificação diferente.
+
+110
+00:08:31.420 --> 00:08:37.141
+Então, nesse caso eu chamei de verifica
+sequência, então note que ele pega,
+
+111
+00:08:37.141 --> 00:08:41.063
+ele vai do 1 até ao tamanho e aí ele
+
+112
+00:08:41.063 --> 00:08:46.000
+varifica se aquela posição,
+
+113
+00:08:46.000 --> 00:08:52.120
+do que foi executado é igual àquela
+posição do que eu passei para ele.
+
+114
+00:08:52.120 --> 00:08:57.798
+Então, euu estou dando esse exemplo para
+mostrar que eu posso ter várias execuções
+
+115
+00:08:57.798 --> 00:09:04.840
+diferentes, vários métodos que verificam
+a execução de uma forma diferente.
+
+116
+00:09:04.840 --> 00:09:07.492
+Então eu posso ter que verifica sequencia,
+
+117
+00:09:07.492 --> 00:09:12.851
+eu posso ter outro que verifica
+só se foi executado ou não,
+
+118
+00:09:12.851 --> 00:09:16.815
+a ordem, isso tudo depende
+dos requisitos da sua classe.
+
+119
+00:09:16.815 --> 00:09:21.418
+Nesse caso você não tem que chamar o
+VerificaSequencia só por que é desse
+
+120
+00:09:21.418 --> 00:09:23.873
+jeito que ele realmente executa.
+
+121
+00:09:23.873 --> 00:09:28.475
+Não, mas você tem que chamar
+o VerificaSequencia se existe
+
+122
+00:09:28.475 --> 00:09:33.474
+requisito para a sua classe no qual
+aquela sequência é importante.
+
+123
+00:09:33.474 --> 00:09:38.211
+Lembrando sempre quando a gente cria Mock,
+a gente tem que criar essas
+
+124
+00:09:38.211 --> 00:09:42.501
+verificações de acordo com os requisitos
+da classe que a gente está criando,
+
+125
+00:09:42.501 --> 00:09:45.224
+e não do jeito que ela realmente funciona.
+
+126
+00:09:45.224 --> 00:09:45.862
+Porquê?
+
+127
+00:09:45.862 --> 00:09:50.524
+Porque às vezes eu posso modificar
+essa classe de uma forma válida e às
+
+128
+00:09:50.524 --> 00:09:55.514
+vezes ele trocar uma ordem ou alguma
+coisa na chamada e isso aí aí ela vai
+
+129
+00:09:55.514 --> 00:09:58.448
+continuar correta mas o meu
+teste vai falhar, por quê?
+
+130
+00:09:58.448 --> 00:10:01.571
+Porque eu amarrei demais
+a forma que eu disse
+
+131
+00:10:01.571 --> 00:10:05.287
+que tinha que ser a execução da classe.
+
+132
+00:10:05.287 --> 00:10:12.070
+Então vamos dar uma olhada no teste,
+como que ficaria teste, usando isso aí.
+
+133
+00:10:12.070 --> 00:10:16.135
+Então note que eu, por exemplo, imagino
+que tem uma classe ali que cria ranking,
+
+134
+00:10:16.135 --> 00:10:21.332
+né, pegando o gancho que o nosso
+projeto vai ser de gamification,
+
+135
+00:10:21.332 --> 00:10:26.692
+o projeto aí de final de curso do programa
+de cursos integrados, então vamos
+
+136
+00:10:26.692 --> 00:10:33.057
+pegar esse exemplo aqui que eu tenho que
+criar ranking e o que que eu vou fazer?
+
+137
+00:10:33.057 --> 00:10:36.910
+Eu preciso dessa classe executor,
+
+138
+00:10:36.910 --> 00:10:41.955
+então eu vou criar ExecMock
+e vou utilizar o método set,
+
+139
+00:10:41.955 --> 00:10:47.975
+no caso eu estou usando dos tipos de
+injeção que a gente viu na aula anterior,
+
+140
+00:10:47.975 --> 00:10:52.377
+estou usando aí a injeção de
+dependência para colocar o mock,
+
+141
+00:10:52.377 --> 00:10:57.812
+aí eu chamo o método criar, que seria
+exatamente a funcionalidade si que eu
+
+142
+00:10:57.812 --> 00:11:03.464
+quero verificar, que eu quero executar,
+e aí eu quero saber se essa classe,
+
+143
+00:11:03.464 --> 00:11:09.930
+se esse criador ranking, chamou os
+métodos, se chamou o método executar,
+
+144
+00:11:09.930 --> 00:11:15.926
+que ele deveria chamar,
+ali na classe na dependência, no ExecMock.
+
+145
+00:11:15.926 --> 00:11:20.496
+Então eu chamaria o Mock.verifica,
+ali ordenar pontos,
+
+146
+00:11:20.496 --> 00:11:24.660
+escolher ganhadores e mandar
+e-mail para os vencedores.
+
+147
+00:11:24.660 --> 00:11:29.254
+Então eu vou estar verificando
+se todas essas execuções foram
+
+148
+00:11:29.254 --> 00:11:30.926
+chamadas ali no mock.
+
+149
+00:11:30.926 --> 00:11:35.971
+Bom, eu sei que você pode agora estar
+começando a ficar preocupado de
+
+150
+00:11:35.971 --> 00:11:40.967
+que criar esses mocks, de acordo com
+a dependência que você precisar,
+
+151
+00:11:40.967 --> 00:11:44.700
+se ela tiver vários métodos ou
+tiver várias possibilidades,
+
+152
+00:11:44.700 --> 00:11:48.863
+ou receber vários parâmetros,
+isso aí pode ficar muito complicado.
+
+153
+00:11:48.863 --> 00:11:53.073
+A realidade é que realmente
+pode ficar complicado.
+
+154
+00:11:53.073 --> 00:11:58.393
+Dependendo do mock, ele pode,
+se ele tiver vários métodos,
+
+155
+00:11:58.393 --> 00:12:04.213
+pode realmente ficar bem complicado
+estar criando esses mocks na mão.
+
+156
+00:12:04.213 --> 00:12:09.883
+Felizmente, temos frameworks que
+funcionam como fábricas de mock, ou seja,
+
+157
+00:12:09.883 --> 00:12:16.990
+você não precisa ir lá e criar uma classe,
+arquivo separado para o seu mock.
+
+158
+00:12:16.990 --> 00:12:21.114
+Você pode no próprio método de teste,
+falar assim: olha, cria para mim mock
+
+159
+00:12:21.114 --> 00:12:27.204
+dessa interface, que quando chamar o
+método tal, ele vai retornar tal coisa,
+
+160
+00:12:27.204 --> 00:12:31.468
+e verifica se ele chamou esse
+cara uma vez com tal parâmetro.
+
+161
+00:12:31.468 --> 00:12:36.036
+Então existem frameworks de mock
+que têm essa funcionalidade,
+
+162
+00:12:36.036 --> 00:12:41.766
+facilitam bastante a vida,
+não está no escopo deste
+
+163
+00:12:41.766 --> 00:12:48.158
+curso inicial aqui de TDD
+falar sobre esses frameworks,
+
+164
+00:12:48.158 --> 00:12:53.760
+mas eu acho importante nesse momento dizer
+para você que esses frameworks existem e
+
+165
+00:12:53.760 --> 00:12:59.427
+eu até aconselho que vocês procurem, eu já
+posso dar alguns nomes aqui como Jmock,
+
+166
+00:12:59.427 --> 00:13:04.096
+o Easymock,
+o Mockito Java e outras linguagens
+
+167
+00:13:04.096 --> 00:13:08.865
+também tem vários frameworks
+para criação de mock Object.
+
+168
+00:13:08.865 --> 00:13:15.050
+Certo, então fica aí opcional
+para vocês fazerem essa pesquisa.
+
+169
+00:13:15.050 --> 00:13:19.955
+Então espero que com isso, nessa aula,
+vocês tenham conseguido entender
+
+170
+00:13:19.955 --> 00:13:24.860
+essas diretivas do mock object,
+como a gente viu são 3,
+
+171
+00:13:24.860 --> 00:13:30.925
+uma delas você ter a mesma
+interface da dependência,
+
+172
+00:13:30.925 --> 00:13:39.230
+a segunda você estar simulando
+o comportamento da classe,
+
+173
+00:13:39.230 --> 00:13:43.256
+com retornos,
+exceções e etc; e terceiro estar
+
+174
+00:13:43.256 --> 00:13:48.241
+verificando as chamadas feitas pela
+classe que está sendo testada.
+
+175
+00:13:48.241 --> 00:13:53.344
+Certo, então vendo essas 3 diretivas
+a gente percebe qual que é o papel,
+
+176
+00:13:53.344 --> 00:13:56.620
+quais os tipos de coisa o
+mock object pode fazer.
+
+177
+00:13:56.620 --> 00:13:57.187
+Certo?
+
+178
+00:13:57.187 --> 00:14:00.670
+Muito obrigado por assistir,
+até a próxima aula.
+
+179
+00:14:00.670 --> 00:14:06.720
+[MÚSICA]

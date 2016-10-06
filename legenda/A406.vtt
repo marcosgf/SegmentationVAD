@@ -1,0 +1,520 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.532
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.532 --> 00:00:11.170
+bem vindo ao curso sobre TDD!
+
+3
+00:00:11.170 --> 00:00:16.270
+Eu sou o Clovis Fernandes e hoje
+iremos falar sobre refatoração.
+
+4
+00:00:16.270 --> 00:00:22.986
+Vamos explicar para você, ao final desta
+aula você saberá o que é refatoração.
+
+5
+00:00:22.986 --> 00:00:28.145
+Como vocês sabem,
+refatoração é uma das parte do TDD,
+
+6
+00:00:28.145 --> 00:00:30.890
+do ciclo do TDD, está certo?
+
+7
+00:00:30.890 --> 00:00:35.730
+Então vamos começar
+conjunto de vídeo aulas
+
+8
+00:00:35.730 --> 00:00:40.709
+mostrando como funciona a refatoração,
+
+9
+00:00:40.709 --> 00:00:43.760
+como a gente vai realizar a refatoração.
+
+10
+00:00:43.760 --> 00:00:48.410
+Uma coisa que a gente já
+tinha mostrado é que eu posso
+
+11
+00:00:48.410 --> 00:00:53.553
+construir software de qualidade,
+usando por exemplo uma modelagem CRC,
+
+12
+00:00:53.553 --> 00:01:01.010
+usando Big Design Upfront, BDUF, usando os
+princípios, os bons princípios de projeto.
+
+13
+00:01:01.010 --> 00:01:01.937
+Está certo?
+
+14
+00:01:01.937 --> 00:01:04.297
+Mas isso não é o que nós queremos.
+
+15
+00:01:04.297 --> 00:01:09.983
+Nós queremos usar isso através
+de Enough Design Upfront,
+
+16
+00:01:09.983 --> 00:01:18.620
+projeto suficiente que possa
+garantir bom começo para o meu TDD.
+
+17
+00:01:18.620 --> 00:01:24.528
+No TDD a gente não procura, não é
+obrigatório ficar aplicando princípio
+
+18
+00:01:24.528 --> 00:01:28.540
+na hora que a gente está produzindo código
+para funcionar, o obrigatório é funcionar.
+
+19
+00:01:28.540 --> 00:01:29.277
+Está certo?
+
+20
+00:01:29.277 --> 00:01:33.676
+Então eu quero ter código e nem sempre
+ele fica com a qualidade desejável.
+
+21
+00:01:33.676 --> 00:01:35.180
+E aí, o que é que eu faço?
+
+22
+00:01:35.180 --> 00:01:36.653
+Transformação.
+
+23
+00:01:36.653 --> 00:01:40.736
+Eu vou, com base princípios de projeto,
+
+24
+00:01:40.736 --> 00:01:46.750
+eu vou transformar esse código
+normalmente sem qualidade,
+
+25
+00:01:46.750 --> 00:01:49.630
+para código com mais qualidade.
+
+26
+00:01:49.630 --> 00:01:50.647
+Está certo?
+
+27
+00:01:50.647 --> 00:01:53.885
+E como é que se chama essa transformação?
+
+28
+00:01:53.885 --> 00:02:01.315
+No caso do TDD, no ciclo do TDD, é o que
+nós chamamos de refatoração, está certo?
+
+29
+00:02:01.315 --> 00:02:06.504
+Refatoração vai me ajudar
+a transformar código que
+
+30
+00:02:06.504 --> 00:02:11.603
+não tem muita qualidade,
+num código com boa qualidade.
+
+31
+00:02:11.603 --> 00:02:15.178
+E o que é que é então code refactoring?
+
+32
+00:02:15.178 --> 00:02:17.180
+Refatoração de código?
+
+33
+00:02:17.180 --> 00:02:22.510
+Isso é uma coisa que nós
+podemos olhar diversas facetas.
+
+34
+00:02:22.510 --> 00:02:28.910
+Vamos olhar inicialmente, olhando
+refatoração como se fosse substantivo.
+
+35
+00:02:28.910 --> 00:02:33.417
+Então como substantivo,
+refatoração vai ser uma
+
+36
+00:02:33.417 --> 00:02:37.786
+alteração que você faz
+ao código de software,
+
+37
+00:02:37.786 --> 00:02:43.986
+para tornar mais fácil de compreender,
+mais fácil de modificar,
+
+38
+00:02:43.986 --> 00:02:49.190
+ou seja, se você tem mais
+facilidade de compreender,
+
+39
+00:02:49.190 --> 00:02:52.579
+você vai ter mais facilidade de modificar.
+
+40
+00:02:52.579 --> 00:02:55.700
+Isso é uma coisa inerente no caso do TDD,
+
+41
+00:02:55.700 --> 00:03:00.581
+porque nós estamos esperando
+e construindo passo a passo,
+
+42
+00:03:00.581 --> 00:03:05.057
+através de baby steps,
+o meu código, está certo?
+
+43
+00:03:05.057 --> 00:03:10.157
+Então ele tem que estar fácil
+de compreender e principalmente
+
+44
+00:03:10.157 --> 00:03:14.630
+fácil de modificar, porque eu vou
+estar modificando ele constantemente.
+
+45
+00:03:14.630 --> 00:03:19.080
+Mas o mais importante
+no caso da refatoração,
+
+46
+00:03:19.080 --> 00:03:23.624
+eu quero deixar isso para quando eu for
+fazer as transformações lá
+
+47
+00:03:23.624 --> 00:03:27.860
+no código de produção para fazer
+o teste que falhou, funcionar.
+
+48
+00:03:27.860 --> 00:03:32.740
+Eu deixo o código bem mais estruturado,
+está certo?
+
+49
+00:03:32.740 --> 00:03:37.392
+Mas eu tenho a garantia de
+que o seu comportamento
+
+50
+00:03:37.392 --> 00:03:41.253
+observável não foi alterado, está certo?
+
+51
+00:03:41.253 --> 00:03:43.041
+Porque esse é o objetivo.
+
+52
+00:03:43.041 --> 00:03:48.411
+Então, quando ele passou pelo,
+pelo ponto green, que eu estou escrevendo
+
+53
+00:03:48.411 --> 00:03:53.415
+código que vai fazer o teste
+que falhou passar, está certo?
+
+54
+00:03:53.415 --> 00:04:00.010
+Vai entrar refatoração,
+ou seja, ele passou pelo,
+
+55
+00:04:00.010 --> 00:04:05.280
+pelo teste que ele acabou de testar,
+mas passou por todos os testes anteriores.
+
+56
+00:04:05.280 --> 00:04:08.480
+Então o comportamento
+dele está funcionando.
+
+57
+00:04:08.480 --> 00:04:13.376
+Eu vou fazer então as alterações
+de uma maneira organizada
+
+58
+00:04:13.376 --> 00:04:17.398
+e no final eu vou entregar o
+software funcionando do mesmo jeito.
+
+59
+00:04:17.398 --> 00:04:21.704
+Isso que é uma coisa importante de
+a gente saber sobre a refatoração.
+
+60
+00:04:21.704 --> 00:04:26.724
+Agora a outra coisa importante também,
+é olhar o verbo refatorar,
+
+61
+00:04:26.724 --> 00:04:31.571
+porque eu posso dizer que eu quero
+refatorar, eu vou refatorar, está certo?
+
+62
+00:04:31.571 --> 00:04:33.834
+E o que é que eu quero dizer com isso?
+
+63
+00:04:33.834 --> 00:04:39.772
+Que eu vou empreender atividades de
+reestruturar o software, está certo?
+
+64
+00:04:39.772 --> 00:04:41.817
+Pode ser no TDD ou não.
+
+65
+00:04:41.817 --> 00:04:43.010
+está certo?
+
+66
+00:04:43.010 --> 00:04:45.830
+Ao aplicar uma série de refatorações,
+
+67
+00:04:45.830 --> 00:04:50.876
+quer dizer as refatorações são técnicas,
+pequenas técnicas, está certo?
+
+68
+00:04:50.876 --> 00:04:57.200
+Que eu vou aplicando para realizar
+a transformação, a refatoração como todo.
+
+69
+00:04:57.200 --> 00:05:01.717
+Mas o importante,
+sem alterar o comportamento do software.
+
+70
+00:05:01.717 --> 00:05:03.570
+E como é que eu garanto isso?
+
+71
+00:05:03.570 --> 00:05:08.412
+Testando antes da refatoração e
+testando depois da refatoração.
+
+72
+00:05:08.412 --> 00:05:13.008
+Com isso eu garanto que as modificações
+foram feitas de maneira segura,
+
+73
+00:05:13.008 --> 00:05:15.620
+o que é que eu quero
+dizer com maneira segura?
+
+74
+00:05:15.620 --> 00:05:20.294
+Significa que o comportamento que estava
+antes de eu reestruturar esse código para
+
+75
+00:05:20.294 --> 00:05:26.240
+torná-lo mais compreensível,
+mais fácil para modificar depois,
+
+76
+00:05:26.240 --> 00:05:33.155
+eu, eu consegui garantir que ele
+está com o mesmo comportamento
+
+77
+00:05:33.155 --> 00:05:38.399
+antes de eu realizar a refatoração,
+antes de eu refatorar, está certo?
+
+78
+00:05:38.399 --> 00:05:43.610
+A definição mais precisa é
+dada pelo Martin Fowler,
+
+79
+00:05:43.610 --> 00:05:47.330
+que é o grande guru dessa
+área de refatoração.
+
+80
+00:05:47.330 --> 00:05:51.720
+A refatoração já existia antes dele,
+mas ele é que organizou,
+
+81
+00:05:51.720 --> 00:05:56.110
+ele que deu nomes às
+técnicas de refatoração.
+
+82
+00:05:56.110 --> 00:06:01.410
+Ele que identificou os
+problemas que o código tem,
+
+83
+00:06:01.410 --> 00:06:04.591
+o que ele chamou de maus cheiros não é?
+
+84
+00:06:04.591 --> 00:06:05.690
+Está certo?
+
+85
+00:06:05.690 --> 00:06:11.333
+Ele que identificou,
+organizou isso tudo, está certo?
+
+86
+00:06:11.333 --> 00:06:14.830
+Então a definição que ele dá,
+para code refactoring,
+
+87
+00:06:14.830 --> 00:06:18.300
+é que é uma série de passos pequenos,
+está certo?
+
+88
+00:06:18.300 --> 00:06:23.430
+Cada dos quais vai produzir
+alguma mudança interna
+
+89
+00:06:23.430 --> 00:06:28.408
+no programa e obviamente,
+seguindo aquele mantra,
+
+90
+00:06:28.408 --> 00:06:33.472
+sem alterar o comportamento externo
+que aquele trecho de código
+
+91
+00:06:33.472 --> 00:06:38.365
+ou aquele software já estava garantindo,
+está certo?
+
+92
+00:06:38.365 --> 00:06:43.741
+Que ele foi construído para
+garantir algumas responsabilidades,
+
+93
+00:06:43.741 --> 00:06:49.118
+alguns conjuntos de casos de testes
+relativos a algumas responsabilidades.
+
+94
+00:06:49.118 --> 00:06:53.980
+E isso ele está garantindo que
+esse comportamento permanece,
+
+95
+00:06:53.980 --> 00:06:57.771
+mesmo tendo feito uma
+reestruturação do código,
+
+96
+00:06:57.771 --> 00:07:02.835
+que sempre normalmente se espera
+que seja para melhorar o código.
+
+97
+00:07:02.835 --> 00:07:06.410
+Se aplicar as técnicas
+propostas por Fowler,
+
+98
+00:07:06.410 --> 00:07:11.320
+a chance de eu ter código de
+melhor qualidade é muito grande.
+
+99
+00:07:11.320 --> 00:07:16.860
+Com isso nós mostramos para vocês
+o que é que é a refatoração.
+
+100
+00:07:16.860 --> 00:07:22.090
+A refatoração permite
+reestruturar software,
+
+101
+00:07:22.090 --> 00:07:29.126
+dentro do ciclo do TDD, mas pode ser usada
+também fora do ciclo do TDD, está certo?
+
+102
+00:07:29.126 --> 00:07:33.566
+Mas no nosso caso especial é
+dentro do ciclo do TDD para
+
+103
+00:07:33.566 --> 00:07:38.552
+melhorar a qualidade do software,
+dar uma qualidade melhor ao
+
+104
+00:07:38.552 --> 00:07:43.280
+software que implica ser mais fácil
+de ler, mas fácil de compreender,
+
+105
+00:07:43.280 --> 00:07:49.839
+e também garantindo que você
+faça isso com segurança.
+
+106
+00:07:49.839 --> 00:07:50.700
+Como?
+
+107
+00:07:50.700 --> 00:07:55.548
+Testando antes,
+testando depois da refatoração e vendo
+
+108
+00:07:55.548 --> 00:07:58.680
+que o comportameto foi preservado.
+
+109
+00:07:58.680 --> 00:08:01.850
+Obrigado!
+
+110
+00:08:01.850 --> 00:08:05.020
+[MÚSICA]

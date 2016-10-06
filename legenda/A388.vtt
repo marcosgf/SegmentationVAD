@@ -1,0 +1,520 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.404
+Após esse vídeo, você será capaz de
+aumentar a constante de erro de sistema
+
+2
+00:00:04.404 --> 00:00:09.257
+sem alterar a posição dos seus polos
+malha fechada ou alterando muito pouco.
+
+3
+00:00:09.257 --> 00:00:13.790
+Seja o seguinte sistema malha
+aberta: 1 sobre s s mais 3,2,
+
+4
+00:00:13.790 --> 00:00:17.493
+usando o controle proporcional
+e ganho k igual a 7,4,
+
+5
+00:00:17.493 --> 00:00:21.973
+temos: 7,4 sobre s ao
+quadrado mais 3,2s mais 7,4,
+
+6
+00:00:21.973 --> 00:00:27.443
+polos menos 1,6 mais ou menos 2,2j,
+ksi igual a 0,59
+
+7
+00:00:27.443 --> 00:00:32.325
+e ômega n igual a 2,72,
+o overshoot será de 10%,
+
+8
+00:00:32.325 --> 00:00:37.197
+o tempo de subida de 0 a 100% será de 1
+segundo, o tempo de acomodação para 2% do
+
+9
+00:00:37.197 --> 00:00:41.600
+valor final 2,5 segundos,
+o instante de pico 1,43 segundos.
+
+10
+00:00:41.600 --> 00:00:46.591
+A constante de erro de velocidade
+será kv aproximadamente 2,31 e erro
+
+11
+00:00:46.591 --> 00:00:52.060
+regime permanente para uma entrada rampa
+unitária será de aproximadamente 0,43.
+
+12
+00:00:52.060 --> 00:00:55.498
+Já vimos que não podemos simplesmente
+alterar o ganho para ajustar o erro
+
+13
+00:00:55.498 --> 00:00:58.721
+regime, caso contrário,
+iremos alterar também as características
+
+14
+00:00:58.721 --> 00:01:01.719
+de amortecimento e de velocidade
+de resposta ao degrau.
+
+15
+00:01:01.719 --> 00:01:03.240
+O que podemos fazer então?
+
+16
+00:01:03.240 --> 00:01:07.405
+Que tal acrescentar polo e zero ao
+nosso controlador proporcional,
+
+17
+00:01:07.405 --> 00:01:11.570
+de modo a alterar a constante de erro,
+mas sem alterar os polos malha fechada?
+
+18
+00:01:11.570 --> 00:01:13.432
+Seria isso possível?
+
+19
+00:01:13.432 --> 00:01:17.555
+Vamos tentar duplicar
+a nossa constante de erro.
+
+20
+00:01:17.555 --> 00:01:22.322
+No lugar do controlador proporcional k
+igual a 7,4, usaremos controlador com
+
+21
+00:01:22.322 --> 00:01:26.860
+a fórmula C de s igual a 7,4
+s mais 2b sobre s mais b.
+
+22
+00:01:26.860 --> 00:01:31.966
+Note que com esse controlador, a constante
+de erro de velocidade será aproximadamente
+
+23
+00:01:31.966 --> 00:01:35.852
+4,6, ou seja, realmente dobraremos
+a constante de erro de velocidade e
+
+24
+00:01:35.852 --> 00:01:40.657
+assim reduziremos o erro regime permanente
+para uma entrada rampa pela metade,
+
+25
+00:01:40.657 --> 00:01:45.338
+mas o novo polo e zero irão afetar também
+o LGR, a não ser que a contribuição
+
+26
+00:01:45.338 --> 00:01:49.610
+módulo e fase do par polo e zero seja
+tão pequena que possa ser desprezada.
+
+27
+00:01:49.610 --> 00:01:56.627
+Os polos malha fechada são menos 1,6 mais
+ou menos 2,2j, a contribuição do par polo
+
+28
+00:01:56.627 --> 00:02:01.468
+e zero fase é fase de quadradinho mais
+2b menos a fase de quadradinho mais b.
+
+29
+00:02:01.468 --> 00:02:06.195
+Substituindo o valor do polo malha
+fechada, temos a fase de 2b menos
+
+30
+00:02:06.195 --> 00:02:11.467
+1,6 mais 2,2j menos a fase
+de b menos 1,6 mais 2,2j.
+
+31
+00:02:11.467 --> 00:02:17.862
+Se o módulo de b for muito maior que 1,6,
+podemos aproximar essa expressão por,
+
+32
+00:02:17.862 --> 00:02:22.340
+fase de 2b mais 2,2j menos
+a fase de b mais 2,2j.
+
+33
+00:02:22.340 --> 00:02:26.662
+Supondo b maior que 0, uma vez que não é
+muito bom adicionar polos no semiplano
+
+34
+00:02:26.662 --> 00:02:31.341
+à direita, nós temos: fase de quadradinho
+mais 2b menos a fase de quadradinho mais b
+
+35
+00:02:31.341 --> 00:02:36.755
+aproximadamente arco tangente de 1,1 sobre
+b menos arco tangente de 2,2 sobre b.
+
+36
+00:02:36.755 --> 00:02:41.765
+Para b suficientemente grande,
+podemos desprezar esses ângulos e o par
+
+37
+00:02:41.765 --> 00:02:46.955
+polo zero não influenciaria
+muito a fase de G no polo.
+
+38
+00:02:46.955 --> 00:02:49.158
+Vamos calcular a contribuição módulo,
+
+39
+00:02:49.158 --> 00:02:52.720
+módulo de quadradinho mais b sobre
+o módulo de quadradinho mais 2b.
+
+40
+00:02:52.720 --> 00:02:57.394
+Isso vai dar módulo de b menos
+1,6 mais 2,2 j sobre módulo de 2b
+
+41
+00:02:57.394 --> 00:02:59.368
+menos 1,6 mais 2,2j.
+
+42
+00:02:59.368 --> 00:03:05.087
+Como estamos considerando b muito maior
+que 1,6 e também b muito maior que 2,2,
+
+43
+00:03:05.087 --> 00:03:08.790
+podemos aproximar essa
+contribuição módulo por meio.
+
+44
+00:03:08.790 --> 00:03:12.594
+Ou seja, para que os polos malha
+fechada estejam no mesmo lugar,
+
+45
+00:03:12.594 --> 00:03:15.409
+o ganho deveria ser reduzido
+à metade e a constante de
+
+46
+00:03:15.409 --> 00:03:18.610
+erro que tinha sido dobrada voltaria
+a ser o que era originalmente.
+
+47
+00:03:18.610 --> 00:03:20.823
+Vamos tentar outra coisa então.
+
+48
+00:03:20.823 --> 00:03:25.340
+Já que b muito grande não funcionou,
+vamos tentar b muito pequeno.
+
+49
+00:03:25.340 --> 00:03:30.429
+A contribuição fase de nosso par
+polo e zero é fase de 2b menos
+
+50
+00:03:30.429 --> 00:03:35.500
+1,6 mais 2,2j menos a fase
+de b menos 1,6 mais 2,2j.
+
+51
+00:03:35.500 --> 00:03:40.936
+Para b muito menor que 1,6,
+podemos aproximar 2b menos 1,6
+
+52
+00:03:40.936 --> 00:03:47.847
+por menos 1,6 e b menos 1,6 por
+menos 1,6 e temos fase de menos 1,6
+
+53
+00:03:47.847 --> 00:03:53.385
+mais 2,2j menos a fase de
+menos 1,6 mais 2,2j igual a 0.
+
+54
+00:03:53.385 --> 00:03:56.114
+Vamos verificar a contribuição módulo.
+
+55
+00:03:56.114 --> 00:04:01.502
+Módulo de b menos 1,6 mais 2,2j dividido
+por módulo de 2b menos 1,6 mais
+
+56
+00:04:01.502 --> 00:04:07.300
+2,2j e para b muito menor que 1,6,
+temos esse módulo igual a 1.
+
+57
+00:04:07.300 --> 00:04:10.448
+Ou seja, para b suficientemente pequeno,
+
+58
+00:04:10.448 --> 00:04:14.710
+a contribuição fase módulo
+de s mais 2b sobre s mais b,
+
+59
+00:04:14.710 --> 00:04:19.680
+no polo malha fechada, é desprezível não
+alterando assim os polos malha fechada.
+
+60
+00:04:19.680 --> 00:04:26.480
+Vamos ver exemplo numérico, por exemplo,
+2b igual a 0,02, que é bem menor que 1,6.
+
+61
+00:04:26.480 --> 00:04:31.128
+Temos então C de s igual a 7,4 s mais 0,02
+
+62
+00:04:31.128 --> 00:04:35.934
+sobre s mais 0,01 e a função
+de transferência malha
+
+63
+00:04:35.934 --> 00:04:40.871
+fechada será 7,4 vezes s
+mais 0,02 sobre s mais 3,2
+
+64
+00:04:40.871 --> 00:04:45.680
+s mais 0,01 mais 7,4 s mais 0,02.
+
+65
+00:04:45.680 --> 00:04:51.021
+Desenvolvendo pouco o denominador,
+chegamos a s vezes s ao quadrado
+
+66
+00:04:51.021 --> 00:04:56.970
+mais 3,21s mais 0,032 mais
+7,4 vezes s mais 0,02.
+
+67
+00:04:56.970 --> 00:05:02.040
+Note que, se o nosso primeiro termo
+do denominador fosse 0,02 vezes s
+
+68
+00:05:02.040 --> 00:05:07.055
+ao quadrado mais 3,2s poderíamos
+cancelar o termo s mais 0,02
+
+69
+00:05:07.055 --> 00:05:11.761
+no numerador e no denominador,
+e chegaríamos a 7,4 sobre s ao
+
+70
+00:05:11.761 --> 00:05:16.668
+quadrado mais 3,2s mais 7,4,
+que é a função de transferência original.
+
+71
+00:05:16.668 --> 00:05:19.460
+E note que esses termos não
+são tão diferentes assim.
+
+72
+00:05:19.460 --> 00:05:23.494
+De qualquer forma,
+finalizando o denominador malha fechada,
+
+73
+00:05:23.494 --> 00:05:29.190
+temos: s ao cubo mais 3,21 s ao
+quadrado mais 7,432s mais 0,148.
+
+74
+00:05:29.190 --> 00:05:34.165
+Calculando as raízes do denominador,
+chegamos a menos
+
+75
+00:05:34.165 --> 00:05:39.600
+1,595 mais ou menos 2,196j e menos
+
+76
+00:05:39.600 --> 00:05:44.430
+0,0201, muito próximo
+das raízes originais.
+
+77
+00:05:44.430 --> 00:05:48.426
+Então fomos capazes de reduzir o erro
+regime pela metade sem alterar os polos
+
+78
+00:05:48.426 --> 00:05:49.260
+malha fechada.
+
+79
+00:05:49.260 --> 00:05:53.660
+Você já deve ser capaz de fazer
+a simulação desse sistema no Simulink,
+
+80
+00:05:53.660 --> 00:05:58.060
+basta substituir o ganho por zero
+pole e editar os parâmetros.
+
+81
+00:05:58.060 --> 00:06:00.684
+Note que com o controlador
+que acabamos de projetar,
+
+82
+00:06:00.684 --> 00:06:03.305
+a resposta ao degrau não vai mudar muito,
+mas o erro
+
+83
+00:06:03.305 --> 00:06:07.950
+regime tenderá para a metade do erro
+anterior, só que ele fará isso lentamente.
+
+84
+00:06:07.950 --> 00:06:12.772
+Para ver o erro convergindo, você terá
+que aumentar o tempo de simulação.
+
+85
+00:06:12.772 --> 00:06:14.914
+Note que para diminuir o erro regime,
+
+86
+00:06:14.914 --> 00:06:18.182
+tivemos que colocar o polo mais
+próximo da origem que o zero.
+
+87
+00:06:18.182 --> 00:06:22.414
+Desse modo, esse controlador ou
+compensador irá contribuir com uma fase
+
+88
+00:06:22.414 --> 00:06:24.060
+negativa no polo desejado.
+
+89
+00:06:24.060 --> 00:06:26.662
+A contribuição será pequena
+e desprezaremos ela,
+
+90
+00:06:26.662 --> 00:06:28.605
+mas será uma contribuição negativa.
+
+91
+00:06:28.605 --> 00:06:33.497
+Por causa dessa contribuição, apesar de
+não estarmos interessados nela, e para
+
+92
+00:06:33.497 --> 00:06:38.434
+contrastar com o controlador de avanço de
+fase, o controlador que acabamos de ver,
+
+93
+00:06:38.434 --> 00:06:42.851
+ou seja, controlador com a fórmula C de
+s é igual a k s mais a sobre s mais b,
+
+94
+00:06:42.851 --> 00:06:47.220
+com a maior que b maior que 0, é chamado
+de controlador de atraso de fase.
+
+95
+00:06:47.220 --> 00:06:50.964
+O controlador ou compensador
+de avanço de fase, então,
+
+96
+00:06:50.964 --> 00:06:55.614
+tem o zero mais próximo da origem que o
+polo e tem por objetivo fazer com que o
+
+97
+00:06:55.614 --> 00:06:59.460
+LGR passe por determinado ponto,
+e fazer com que esse ponto seja polo
+
+98
+00:06:59.460 --> 00:07:02.520
+malha fechada através do ajuste
+do ganho do controlador.
+
+99
+00:07:02.520 --> 00:07:07.350
+O controlador de avanço de fase é
+conhecido também como controlador lead.
+
+100
+00:07:07.350 --> 00:07:12.066
+O controlador ou compensador de atraso de
+fase tem o polo mais próximo da origem
+
+101
+00:07:12.066 --> 00:07:16.030
+que o zero e tem por objetivo aumentar
+a constante de erro do sistema,
+
+102
+00:07:16.030 --> 00:07:18.446
+sem alterar os polos malha fechada.
+
+103
+00:07:18.446 --> 00:07:23.000
+O controlador de atraso de fase é
+conhecido também como controlador lag.
+
+104
+00:07:23.000 --> 00:07:25.875
+Agora você já é capaz de
+aumentar a constante de erro de
+
+105
+00:07:25.875 --> 00:07:29.130
+sistema sem alterar a posição
+dos seus polos malha fechada.
+
+106
+00:07:29.130 --> 00:07:30.186
+No próximo vídeo,
+
+107
+00:07:30.186 --> 00:07:34.740
+você verá como definir a posição do zero e
+do polo do controlador de atraso de fase.

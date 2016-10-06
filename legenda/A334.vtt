@@ -1,0 +1,327 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.626
+Olá.
+Você já aprendeu que o princípio do
+
+2
+00:00:02.626 --> 00:00:07.368
+argumento pode ser usado para saber
+qual é o saldo de raízes de G(s)
+
+3
+00:00:07.368 --> 00:00:09.130
+dentro de contorno.
+
+4
+00:00:09.130 --> 00:00:13.561
+Neste vídeo você aprenderá
+a usar contorno especial,
+
+5
+00:00:13.561 --> 00:00:18.542
+o de Nyquist, para determinar quantos
+polos de malha fechada haverá
+
+6
+00:00:18.542 --> 00:00:22.810
+no semiplano direito com
+realimentação unitária de KG(s).
+
+7
+00:00:22.810 --> 00:00:27.027
+Ora, se você está interessado no
+número de raízes no semiplano direito,
+
+8
+00:00:27.027 --> 00:00:31.392
+parece natural escolher contorno
+que englobe todo esse semiplano.
+
+9
+00:00:31.392 --> 00:00:36.093
+A pergunta é: como conceber esse
+contorno que deve envolver todo
+
+10
+00:00:36.093 --> 00:00:39.142
+semiplano real de S maior do que 0?
+
+11
+00:00:39.142 --> 00:00:44.292
+Certamente, o eixo imaginário tem
+que fazer parte desse contorno,
+
+12
+00:00:44.292 --> 00:00:47.390
+pois tudo a direita dele
+está no semiplano direito.
+
+13
+00:00:47.390 --> 00:00:52.135
+O truque agora é fechar
+essa reta que começa -J
+
+14
+00:00:52.135 --> 00:00:56.880
+vezes infinito passa pela origem
+e vai até +J vezes infinito,
+
+15
+00:00:56.880 --> 00:01:00.620
+como uma semicircunferência de raio
+infinito, de maneira a conter todo o
+
+16
+00:01:00.620 --> 00:01:05.470
+semiplano direito no interior do contorno,
+como na figura.
+
+17
+00:01:05.470 --> 00:01:10.520
+Com isso, fica muito simples saber qual
+é o saldo de raízes de uma função,
+
+18
+00:01:10.520 --> 00:01:14.608
+simplesmente avaliando essa função
+no contorno de Nyquist e contando o
+
+19
+00:01:14.608 --> 00:01:18.689
+número de voltas no mesmo sentido
+que se percorrer o contorno.
+
+20
+00:01:18.689 --> 00:01:23.570
+No nosso curso, vamos percorrer o
+contorno de Nyquist no sentido horário.
+
+21
+00:01:23.570 --> 00:01:29.125
+Assim, cada 0 no semiplano direito
+resultará uma volta no sentido horário
+
+22
+00:01:29.125 --> 00:01:34.680
+na avaliação da função, cada polo
+uma volta no sentido anti-horário.
+
+23
+00:01:34.680 --> 00:01:35.430
+Muito bem.
+
+24
+00:01:35.430 --> 00:01:40.308
+Mas como isso nos ajuda com os polos de
+malha fechada se o critério é usar apenas
+
+25
+00:01:40.308 --> 00:01:41.509
+o saldo de raízes?
+
+26
+00:01:41.509 --> 00:01:45.656
+Vamos lembrar a expressão para
+a função de transferência de
+
+27
+00:01:45.656 --> 00:01:50.170
+malha fechada: T(s) igual
+a KG(s) sobre 1 mais KG(s).
+
+28
+00:01:50.170 --> 00:01:55.410
+Os polos de malha fechada são
+as raízes de 1 mais KG(s) =0.
+
+29
+00:01:55.410 --> 00:02:00.633
+Desenvolvemos essa expressão e
+você já viu que 1 mais KG(s)
+
+30
+00:02:00.633 --> 00:02:07.323
+é igual denG(s) mais
+KnumG(s) sobre denG(s).
+
+31
+00:02:07.323 --> 00:02:12.141
+Que denG(s) é o polinômio
+no denominador de
+
+32
+00:02:12.141 --> 00:02:17.298
+G(s) e KnumG(s) é o polinômio
+do numerador de G(s),
+
+33
+00:02:17.298 --> 00:02:22.050
+isso é, os polos de G(s),
+chamados polos de malha aberta,
+
+34
+00:02:22.050 --> 00:02:25.157
+são os polos de 1 mais KG(s).
+
+35
+00:02:25.157 --> 00:02:30.510
+Os zeros de 1 mais KG(s) por
+sua vez são os polos de T(s),
+
+36
+00:02:30.510 --> 00:02:33.340
+chamados polos de malha fechada.
+
+37
+00:02:33.340 --> 00:02:38.220
+Assim, voltando a equação para o saldo
+de raízes no interior de contorno,
+
+38
+00:02:38.220 --> 00:02:40.158
+N igual a Z menos P.
+
+39
+00:02:40.158 --> 00:02:45.968
+Identificamos no nosso caso que Z
+deve ser o número de polos de T(s),
+
+40
+00:02:45.968 --> 00:02:48.660
+malha fechada, no semiplano direito.
+
+41
+00:02:48.660 --> 00:02:55.500
+E P deve ser o número de polos de G(s),
+malha aberta, no semiplano direito.
+
+42
+00:02:55.500 --> 00:03:01.070
+Você normalmente conhece o sistema malha
+aberta, isso é, sabe a expressão G(s).
+
+43
+00:03:01.070 --> 00:03:03.218
+Então, sabe o valor de P.
+
+44
+00:03:03.218 --> 00:03:07.040
+Por outro lado,
+o que queremos é encontrar Z,
+
+45
+00:03:07.040 --> 00:03:10.490
+é o número de polos de
+T(s) no semiplano direito.
+
+46
+00:03:10.490 --> 00:03:15.658
+Se trabalharmos mais pouco as expressões,
+veremos que as raízes
+
+47
+00:03:15.658 --> 00:03:21.200
+de 1 mais KG(s) igual a 0 satisfazem
+G(s) igual a menos 1 sobre K.
+
+48
+00:03:21.200 --> 00:03:26.264
+Então podemos desenhar o mapeamento
+do contorno de Nyquist por G(s) e,
+
+49
+00:03:26.264 --> 00:03:29.570
+invés de contar o número
+de voltas torno da origem,
+
+50
+00:03:29.570 --> 00:03:33.450
+contamos o número de voltas
+torno de menos 1 sobre K.
+
+51
+00:03:33.450 --> 00:03:37.206
+Teremos Z igual a N mais P,
+
+52
+00:03:37.206 --> 00:03:43.016
+que Z é o número de polos de malha
+fechada no semiplano direito,
+
+53
+00:03:43.016 --> 00:03:47.873
+P é o número de polos de malha aberta
+no semiplano direito e N é o número
+
+54
+00:03:47.873 --> 00:03:52.420
+de voltas torno de menos 1
+sobre K no sentido horário.
+
+55
+00:03:52.420 --> 00:03:57.287
+E vamos convencionar que uma volta no
+sentido horário soma 1 a N e uma volta
+
+56
+00:03:57.287 --> 00:03:59.810
+no sentido anti-horário vale -1.
+
+57
+00:03:59.810 --> 00:04:03.047
+Este é o critério de
+estabilidade de Nyquist.
+
+58
+00:04:03.047 --> 00:04:08.919
+Dessa forma se a função de malha aberta
+G(s) tiver N polos no semiplano direito,
+
+59
+00:04:08.919 --> 00:04:12.600
+para que o sistema malha
+fechada seja estável,
+
+60
+00:04:12.600 --> 00:04:16.780
+deve haver N voltas torno
+de -1 sobre K no sentido
+
+61
+00:04:16.780 --> 00:04:21.679
+anti-horário no mapeamento do
+contorno de Nyquist por G(s).
+
+62
+00:04:21.679 --> 00:04:26.531
+Assim, Z igual a N mais P que é igual
+a menos M mais M que é igual a 0.
+
+63
+00:04:26.531 --> 00:04:31.080
+Isso é, não há polos de malha
+fechada no semiplano direito.
+
+64
+00:04:31.080 --> 00:04:36.192
+Agora você já sabe como usar o critério
+de Nyquist para verificar a estabilidade
+
+65
+00:04:36.192 --> 00:04:37.240
+malha fechada.
+
+66
+00:04:37.240 --> 00:04:42.112
+Nos próximos vídeos você vai aprender
+a traçar os diagramas de Nyquist para
+
+67
+00:04:42.112 --> 00:04:44.354
+alguns tipos comuns de sistemas.
+
+68
+00:04:44.354 --> 00:04:45.140
+Obrigado.

@@ -1,0 +1,226 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:16.669
+[MÚSICA] E ai pessoal, tudo bem?
+
+3
+00:00:16.669 --> 00:00:22.050
+Nessa aula iremos conhecer pouco sobre
+o ciclo de vida do view controller.
+
+4
+00:00:22.050 --> 00:00:26.190
+Criaremos aplicativo que faz
+a transição de 2 telas apenas.
+
+5
+00:00:26.190 --> 00:00:30.872
+Vamos iniciar criando novo projeto
+com a opção Single View Application.
+
+6
+00:00:30.872 --> 00:00:37.120
+Escolha nome de projeto e
+em devices deixa iPhone.
+
+7
+00:00:37.120 --> 00:00:41.750
+Com o projeto criado, vamos ao storyboard.
+
+8
+00:00:41.750 --> 00:00:46.384
+Ajuste a opção de visualização
+para ser a mais próxima de
+
+9
+00:00:46.384 --> 00:00:49.041
+iPhone na orientação vertical.
+
+10
+00:00:49.041 --> 00:00:54.440
+Adicione navigation controller
+ao view controller existente.
+
+11
+00:00:54.440 --> 00:01:03.549
+[SEM_ÁUDIO] Agora
+
+12
+00:01:03.549 --> 00:01:10.205
+adicione novo view controller.
+
+13
+00:01:10.205 --> 00:01:16.581
+Vamos criar novo arquivo
+
+14
+00:01:16.581 --> 00:01:22.075
+swift para esse novo view controller.
+
+15
+00:01:22.075 --> 00:01:30.177
+File, Cocoa Touch Class e o
+UIViewController sobre class,
+
+16
+00:01:30.177 --> 00:01:34.180
+chamar de Second View Controller.
+
+17
+00:01:34.180 --> 00:01:41.015
+[SEM_ÁUDIO] No
+
+18
+00:01:41.015 --> 00:01:47.230
+segundo view controller,
+aba de identidade,
+
+19
+00:01:47.230 --> 00:01:51.800
+selecionar SecondViewController.
+
+20
+00:01:51.800 --> 00:01:58.306
+Agora vamos colocar botão no primeiro
+
+21
+00:01:58.306 --> 00:02:03.230
+view controller.
+
+22
+00:02:03.230 --> 00:02:08.731
+[SEM_ÁUDIO] Na
+
+23
+00:02:08.731 --> 00:02:13.010
+aba de conexão,
+
+24
+00:02:13.010 --> 00:02:16.420
+faça iii do botão para o
+segundo view controller.
+
+25
+00:02:16.420 --> 00:02:18.971
+Selecione Show.
+
+26
+00:02:18.971 --> 00:02:23.399
+Nesse exemplo não precisamos
+de nenhuma conexão com código.
+
+27
+00:02:23.399 --> 00:02:25.610
+Vamos ao código do Second View Controller.
+
+28
+00:02:25.610 --> 00:02:30.853
+[SEM_ÁUDIO] Já
+
+29
+00:02:30.853 --> 00:02:39.196
+vimos a função ViewDidLoad e em
+uma ocasião vimos a ViewDidAppear.
+
+30
+00:02:39.196 --> 00:02:43.631
+A ViewDidLoad é chamada logo que
+view controller é carregado.
+
+31
+00:02:43.631 --> 00:02:49.850
+Usamos para fazer inicializações que não
+precisam da view já aparecendo na tela.
+
+32
+00:02:49.850 --> 00:02:53.890
+A ViewDidAppear é chamada assim que o view
+controller aparece na tela do aplicativo.
+
+33
+00:02:53.890 --> 00:02:58.813
+Pode ser usada para fazer alguma animação
+ou alguma outra operação que precise que
+
+34
+00:02:58.813 --> 00:03:01.035
+tudo já esteja carregado.
+
+35
+00:03:01.035 --> 00:03:04.610
+Outras funções são: viewWillAppear,
+
+36
+00:03:04.610 --> 00:03:09.220
+viewWillDisappear e viewDidDisappear.
+
+37
+00:03:09.220 --> 00:03:15.340
+viewWillAppear ocorre
+entre as 2 já explicadas.
+
+38
+00:03:15.340 --> 00:03:18.089
+É chamada logo antes da
+tela ser apresentada,
+
+39
+00:03:18.089 --> 00:03:22.801
+usada para fazer inicializações que
+precisem de mais elementos carregados e
+
+40
+00:03:22.801 --> 00:03:24.800
+antes da tela já estar visível.
+
+41
+00:03:24.800 --> 00:03:31.013
+viewWillDisappear é chamada logo antes
+de sair da tela atual, usada para
+
+42
+00:03:31.013 --> 00:03:35.970
+fazer uma pequena animação, salvar alguma
+variável ou salvar o estado do sistema.
+
+43
+00:03:35.970 --> 00:03:40.430
+viewDidDisappear é chamada logo
+que a tela sai do aplicativo.
+
+44
+00:03:40.430 --> 00:03:44.690
+É usada para fazer a transição de
+algum valor de uma view para outra.
+
+45
+00:03:44.690 --> 00:03:52.690
+Vamos executar esse código.
+
+46
+00:03:52.690 --> 00:03:58.659
+[SEM_ÁUDIO] Quando vamos
+para a segunda tela,
+
+47
+00:03:58.659 --> 00:04:00.910
+veja a ordem das impressões no terminal.
+
+48
+00:04:00.910 --> 00:04:08.780
+E também podemos ver essas
+impressões quando saímos da tela.
+
+49
+00:04:08.780 --> 00:04:16.134
+Na próxima aula, iremos fazer uma
+recapitulação dos tópicos desse módulo.
+
+50
+00:04:16.134 --> 00:04:16.790
+Até lá!

@@ -1,0 +1,346 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.141
+[MÚSICA] E
+
+3
+00:00:13.141 --> 00:00:17.980
+aí pessoal, tudo bem?
+
+4
+00:00:17.980 --> 00:00:22.700
+Nessa aula iremos utilizar botões
+para fazer a transição entre telas.
+
+5
+00:00:22.700 --> 00:00:27.529
+Criaremos aplicativo que tenha duas
+telas e faça a transição entre
+
+6
+00:00:27.529 --> 00:00:29.370
+elas utilizando botões.
+
+7
+00:00:29.370 --> 00:00:35.760
+Vamos iniciar criando novo projeto
+com a opção Single View Application.
+
+8
+00:00:35.760 --> 00:00:39.842
+Escolha o nome de projeto e em devices,
+por enquanto,
+
+9
+00:00:39.842 --> 00:00:42.790
+iremos trabalhar apenas com o iPhone.
+
+10
+00:00:42.790 --> 00:00:51.280
+[SEM_ÁUDIO] Com o projeto criado
+vamos trabalhar no storyboard.
+
+11
+00:00:51.280 --> 00:00:56.473
+Antes de fazer qualquer
+alteração aqui ajuste a opção
+
+12
+00:00:56.473 --> 00:01:01.320
+de visualização para ser a mais próxima
+de iPhone na orientação vertical.
+
+13
+00:01:01.320 --> 00:01:06.010
+Agora adicione novo view controller.
+
+14
+00:01:06.010 --> 00:01:10.848
+Podemos considerar que cada view
+controller representa uma tela que o
+
+15
+00:01:10.848 --> 00:01:12.570
+aplicativo vai conter.
+
+16
+00:01:12.570 --> 00:01:19.680
+Agora vamos criar código .swift
+para cada view controller.
+
+17
+00:01:19.680 --> 00:01:24.120
+Vamos adicionar novo arquivo swift.
+
+18
+00:01:24.120 --> 00:01:30.860
+Escolha Cocoa Touch Class,
+sub classe UIViewController.
+
+19
+00:01:30.860 --> 00:01:35.290
+Vamos nomear o arquivo
+como StartViewController.
+
+20
+00:01:35.290 --> 00:01:43.603
+[SEM_ÁUDIO] Repetir
+
+21
+00:01:43.603 --> 00:01:48.280
+esse procedimento.
+
+22
+00:01:48.280 --> 00:01:53.440
+Agora nomear o arquivo
+como FinalViewController.
+
+23
+00:01:53.440 --> 00:01:59.648
+[SEM_ÁUDIO] Na
+
+24
+00:01:59.648 --> 00:02:07.874
+aba de identidade faça a conexão
+de cada view controller.
+
+25
+00:02:07.874 --> 00:02:10.820
+Primeiro o StartViewController.
+
+26
+00:02:10.820 --> 00:02:19.650
+[SEM_ÁUDIO] Agora o FinalViewController.
+
+27
+00:02:19.650 --> 00:02:25.730
+Podemos apagar esse view
+controller existente.
+
+28
+00:02:25.730 --> 00:02:31.770
+Adicione uma label e botão em cada deles.
+
+29
+00:02:31.770 --> 00:02:39.770
+[SEM_ÁUDIO]
+
+30
+00:02:39.770 --> 00:02:48.870
+[SEM_ÁUDIO] [SEM_ÁUDIO]
+
+31
+00:02:48.870 --> 00:02:55.860
+No primeiro vou modificar
+a label para View Inicial,
+
+32
+00:02:55.860 --> 00:03:03.670
+mudar a cor para verde, centralizar,
+
+33
+00:03:03.670 --> 00:03:10.110
+mudar o tamanho.
+
+34
+00:03:10.110 --> 00:03:16.550
+O botão vou aumentar o tamanho,
+
+35
+00:03:16.550 --> 00:03:20.100
+e modificar para Mudar View.
+
+36
+00:03:20.100 --> 00:03:28.100
+[SEM_ÁUDIO]
+
+37
+00:03:28.100 --> 00:03:33.529
+[SEM_ÁUDIO] Com
+
+38
+00:03:33.529 --> 00:03:42.080
+a tecla Alt ou Option pressionada
+clique e arraste para a segunda view.
+
+39
+00:03:42.080 --> 00:03:46.160
+Altere a label para View Final
+e o botão para Voltar.
+
+40
+00:03:46.160 --> 00:03:51.721
+[SEM_ÁUDIO] Agora
+
+41
+00:03:51.721 --> 00:03:56.290
+vamos fazer a conexão entre
+os dois view controllers.
+
+42
+00:03:56.290 --> 00:04:02.040
+No primeiro selecione o botão.
+
+43
+00:04:02.040 --> 00:04:06.165
+Na aba de conexões vamos
+criar segue manual.
+
+44
+00:04:06.165 --> 00:04:10.290
+Clique e arraste até ao
+segundo view controller.
+
+45
+00:04:10.290 --> 00:04:14.200
+Com isso vemos algumas opções de segue.
+
+46
+00:04:14.200 --> 00:04:16.489
+Selecione a present modally.
+
+47
+00:04:16.489 --> 00:04:21.079
+Selecione essa seta criada entre
+os dois view controllers que
+
+48
+00:04:21.079 --> 00:04:22.783
+damos o nome de segue.
+
+49
+00:04:22.783 --> 00:04:28.270
+Modifique o identificador na aba de
+atributos da segue para moveSegue.
+
+50
+00:04:28.270 --> 00:04:33.070
+Selecione o segundo view controller.
+
+51
+00:04:33.070 --> 00:04:37.040
+Na aba de conexões vamos
+criar segue manual.
+
+52
+00:04:37.040 --> 00:04:41.691
+Para isso apenas clique e arraste até ao
+
+53
+00:04:41.691 --> 00:04:45.680
+primeiro view controller e também
+selecione a opção present modally.
+
+54
+00:04:45.680 --> 00:04:50.347
+Dessa forma criamos segue que não
+está vinculado a nenhum elemento da
+
+55
+00:04:50.347 --> 00:04:51.990
+FinalViewController.
+
+56
+00:04:51.990 --> 00:04:57.380
+Vamos nomear o identificador
+dessa segue como backSegue.
+
+57
+00:04:57.380 --> 00:05:05.400
+[SEM_ÁUDIO] Com isso já podemos
+executar e ver como está o aplicativo.
+
+58
+00:05:05.400 --> 00:05:12.046
+[SEM_ÁUDIO] Já
+
+59
+00:05:12.046 --> 00:05:18.200
+estamos fazendo a transição da
+primeira para a segunda tela
+
+60
+00:05:18.200 --> 00:05:23.200
+quando clicamos no primeiro botão mas nada
+ocorre quando clicamos no botão voltar.
+
+61
+00:05:23.200 --> 00:05:28.330
+Vamos voltar ao storyboard,
+criar uma action para esse botão.
+
+62
+00:05:28.330 --> 00:05:33.526
+Utilizando o assistant editor crie
+
+63
+00:05:33.526 --> 00:05:39.020
+a action backAction.
+
+64
+00:05:39.020 --> 00:05:45.670
+Agora vamos ao código.
+
+65
+00:05:45.670 --> 00:05:53.043
+[SEM_ÁUDIO] Aqui
+
+66
+00:05:53.043 --> 00:05:57.743
+vamos criar segue por código utilizando o
+
+67
+00:05:57.743 --> 00:06:02.719
+identificador backSegue que
+definimos no storyboard.
+
+68
+00:06:02.719 --> 00:06:07.513
+Quando trabalhamos com segues podemos
+utilizar essa função que já vem
+
+69
+00:06:07.513 --> 00:06:12.310
+comentada quando adicionamos novo arquivo
+que seja da sub classe UI View Controller.
+
+70
+00:06:12.310 --> 00:06:17.009
+Para utilizar basta descomentar e
+verificar qual o identificador do segue
+
+71
+00:06:17.009 --> 00:06:18.360
+que será executado.
+
+72
+00:06:18.360 --> 00:06:24.340
+Isso é interessante caso queira passar
+alguma informação antes de mudar de tela.
+
+73
+00:06:24.340 --> 00:06:27.730
+Vamos executar novamente o aplicativo.
+
+74
+00:06:27.730 --> 00:06:33.151
+[SEM_ÁUDIO] Agora
+
+75
+00:06:33.151 --> 00:06:37.810
+temos os botões funcionando para fazer
+a transição entre as duas telas.
+
+76
+00:06:37.810 --> 00:06:43.088
+Na próxima aula você vai ver como
+utilizar o navigation controller.
+
+77
+00:06:43.088 --> 00:06:43.730
+Até lá!

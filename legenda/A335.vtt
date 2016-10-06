@@ -1,0 +1,266 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.274
+Olá!
+Você viu como traçar o diagrama polar de
+
+2
+00:00:03.274 --> 00:00:07.680
+G de j ômega a partir do
+diagrama de Bode vídeo anterior.
+
+3
+00:00:07.680 --> 00:00:11.350
+Porque isso será importante para
+construir o diagrama de Nyquist?
+
+4
+00:00:11.350 --> 00:00:16.160
+Bom, relembre que o contorno de Nyquist
+encobre todo o eixo imaginário.
+
+5
+00:00:16.160 --> 00:00:20.600
+Se você conhecer a resposta frequência,
+
+6
+00:00:20.600 --> 00:00:27.459
+significa que conhece G de j ômega para
+ômega variando de zero a mais infinito.
+
+7
+00:00:27.459 --> 00:00:32.260
+Agora, como o G de s é uma razão
+de polinômio de Ns termos reais,
+
+8
+00:00:32.260 --> 00:00:38.249
+G de s barra é igual a G barra de s, onde
+o barra representa o complexo conjugado.
+
+9
+00:00:38.249 --> 00:00:43.187
+Isto é, a função aplicada ao conjugado
+complexo do argumento resulta do
+
+10
+00:00:43.187 --> 00:00:46.670
+complexo conjugado da
+função do mesmo argumento.
+
+11
+00:00:46.670 --> 00:00:50.328
+Assim, substituindo s por j ômega,
+
+12
+00:00:50.328 --> 00:00:55.216
+G de j ômega barra é igual
+a G de menos j ômega que será
+
+13
+00:00:55.216 --> 00:01:00.202
+igual a G barra de j ômega,
+o que quer dizer que para saber G
+
+14
+00:01:00.202 --> 00:01:04.985
+de j ômega para ômega variando de
+menos infinito e zero basta somar o
+
+15
+00:01:04.985 --> 00:01:10.261
+complexo conjugado de G de j ômega para
+ômega variando entre zero e mais infinito.
+
+16
+00:01:10.261 --> 00:01:15.125
+Resumo, conhecendo
+a resposta frequência de G,
+
+17
+00:01:15.125 --> 00:01:19.140
+você pode traçar facilmente o diagrama
+polar para a porção do controlo de Nyquist
+
+18
+00:01:19.140 --> 00:01:24.156
+no eixo imaginário, simplesmente, usando o
+módulo e a fase de G de j ômega para ômega
+
+19
+00:01:24.156 --> 00:01:29.660
+variando entre zero e mais infinito,
+e depois, refletindo relação ao eixo real.
+
+20
+00:01:29.660 --> 00:01:34.033
+Quanto à porção de semi circunferência
+com raio infinito pode ser
+
+21
+00:01:34.033 --> 00:01:36.110
+descrita por r elevado a Teta.
+
+22
+00:01:36.110 --> 00:01:40.493
+Com r sendo o raio e o ângulo Teta
+variando de mais 90 graus a menos 90
+
+23
+00:01:40.493 --> 00:01:45.940
+graus, para percorrer no sentido horário,
+nesse caso, as duas situações distintas.
+
+24
+00:01:45.940 --> 00:01:49.370
+Primeiro, G de s estritamente própria.
+
+25
+00:01:49.370 --> 00:01:55.630
+Nesse caso, o grau do numerador gnum é
+menor do que o grau do denominador gden.
+
+26
+00:01:55.630 --> 00:02:00.110
+Como o raio é infinito,
+teremos r elevado a gnum menos gden,
+
+27
+00:02:00.110 --> 00:02:03.106
+tende a 0 com r tendendo a infinito.
+
+28
+00:02:03.106 --> 00:02:07.760
+O módulo de G de r elevado
+a Teta será 0 toda esta parte.
+
+29
+00:02:07.760 --> 00:02:12.115
+A fase variará de gnum
+menos gden vezes 90 graus
+
+30
+00:02:12.115 --> 00:02:17.117
+a menos gnum menos gden vezes 90 graus,
+isto é,
+
+31
+00:02:17.117 --> 00:02:23.240
+o ângulo que o G de s converge para
+a origem é gnum menos gden vezes 90 graus.
+
+32
+00:02:23.240 --> 00:02:26.717
+Segundo caso: G de s própria.
+
+33
+00:02:26.717 --> 00:02:31.445
+Nesse caso, gnum igual a gden,
+resultando num valor
+
+34
+00:02:31.445 --> 00:02:35.830
+finito para o módulo de G de s,
+avaliado na semi circunferência.
+
+35
+00:02:35.830 --> 00:02:43.130
+Como exemplo, vamos voltar ao caso G de s
+igual a 10 sobre s mais 1 vezes s mais 10.
+
+36
+00:02:43.130 --> 00:02:47.806
+Nesse caso,
+gnum igual a 0 e gden igual a 2, ou seja,
+
+37
+00:02:47.806 --> 00:02:50.870
+o sistema é estritamente próprio.
+
+38
+00:02:50.870 --> 00:02:54.340
+Relembrando o diagrama de Bode para
+essas funções de transferência,
+
+39
+00:02:54.340 --> 00:03:00.251
+o módulo começa 1 para a fase zero,
+mantém-se próximo de 1,
+
+40
+00:03:00.251 --> 00:03:05.800
+com quase 45 graus, vai para cerca
+de 0,3 com quase menos 90 graus,
+
+41
+00:03:05.800 --> 00:03:10.731
+diminuindo a 0,1 com quase
+menos 135 graus e finalmente,
+
+42
+00:03:10.731 --> 00:03:17.250
+converge para zero com quase menos gnum
+vezes 90 graus igual a menos 180 graus.
+
+43
+00:03:17.250 --> 00:03:22.183
+Confira no esboço feito no vídeo anterior,
+onde os pontos de destaque
+
+44
+00:03:22.183 --> 00:03:26.250
+são marcados cor de rosa, são, justamente,
+os pontos que comentamos anteriormente.
+
+45
+00:03:26.250 --> 00:03:29.714
+Agora, para obter a outra
+metade do esboço,
+
+46
+00:03:29.714 --> 00:03:33.550
+basta refletir o desenho
+relação ao eixo real.
+
+47
+00:03:33.550 --> 00:03:36.292
+ficando com esta figura.
+
+48
+00:03:36.292 --> 00:03:40.847
+Agora, você já sabe como esboçar
+o diagrama de Nyquist a partir do
+
+49
+00:03:40.847 --> 00:03:43.280
+diagrama de Bode do sistema malha aberta.
+
+50
+00:03:43.280 --> 00:03:47.280
+Que tal praticar pouco com outros
+exemplos de funções de transferência?
+
+51
+00:03:47.280 --> 00:03:51.779
+Nos próximos vídeos,
+vamos tentar realizar o esboço do diagrama
+
+52
+00:03:51.779 --> 00:03:55.859
+de Nyquist rapidamente, a partir
+apenas da função de transferência,
+
+53
+00:03:55.859 --> 00:03:57.760
+sem traçar o seu diagrama de Bode.
+
+54
+00:03:57.760 --> 00:04:01.494
+A estabilidade afetará
+sobremaneira o seu entendimento
+
+55
+00:04:01.494 --> 00:04:04.850
+sobre a estabilidade do
+sistema malha fechada.

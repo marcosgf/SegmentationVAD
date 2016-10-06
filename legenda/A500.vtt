@@ -1,0 +1,595 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.825
+[MÚSICA] Olá a todos.
+
+2
+00:00:08.825 --> 00:00:13.392
+Esse é o curso de orientação
+a objetos com Java.
+
+3
+00:00:13.392 --> 00:00:18.800
+Eu sou o Eduardo Guerra e hoje vamos
+estar falando sobre os métodos de acesso.
+
+4
+00:00:18.800 --> 00:00:23.702
+Vamos entender como que a gente pode
+estar utilizando os métodos de acesso
+
+5
+00:00:23.702 --> 00:00:27.766
+para encapsular o acesso
+aos atributos da nossa
+
+6
+00:00:27.766 --> 00:00:32.603
+classe e como eles são importantes
+e muitas vezes são responsáveis por
+
+7
+00:00:32.603 --> 00:00:36.565
+dar uma grande flexibilidade
+no momento da implementação.
+
+8
+00:00:36.565 --> 00:00:40.256
+Sendo que a gente pode estar
+protegendo aqueles atributos,
+
+9
+00:00:40.256 --> 00:00:43.006
+podemos estar mudando
+o formato deles não é?
+
+10
+00:00:43.006 --> 00:00:48.065
+E como isso daí nos dá controle sobre como
+a classe está sendo vista externamente,
+
+11
+00:00:48.065 --> 00:00:51.870
+independente de como internamente
+ela está estruturada.
+
+12
+00:00:51.870 --> 00:00:56.113
+Então imagine aí uma atriz que
+tem várias informações sobre ela,
+
+13
+00:00:56.113 --> 00:01:01.608
+só que ela não quer que muitas dessas
+informações sejam divulgadas publicamente.
+
+14
+00:01:01.608 --> 00:01:07.390
+Então por exemplo as coisas boas que ela
+fez: participou de evento humanitário,
+
+15
+00:01:07.390 --> 00:01:09.208
+lançou filme não é?
+
+16
+00:01:09.208 --> 00:01:12.655
+Isso daí todo mundo quer que seja público.
+
+17
+00:01:12.655 --> 00:01:16.468
+Mas ali aquela briga que teve
+ali com o namorado não é?
+
+18
+00:01:16.468 --> 00:01:21.210
+Aquele problema lá de família e tal,
+essas coisas quer manter privado.
+
+19
+00:01:21.210 --> 00:01:26.189
+Então vamos imaginar aí por
+exemplo uma classe ali Atriz.
+
+20
+00:01:26.189 --> 00:01:30.159
+Ela tem ali o seu nome,
+talvez não tenha problema não é?
+
+21
+00:01:30.159 --> 00:01:34.736
+Ou às vezes talvez tenha ali nome
+artístico, que não queira liberar o seu
+
+22
+00:01:34.736 --> 00:01:40.220
+nome real, a idade,
+tem ali segredo, tem ali amante.
+
+23
+00:01:40.220 --> 00:01:46.520
+Então a gente pode ver que todas essas
+informações a princípio são privadas.
+
+24
+00:01:46.520 --> 00:01:47.446
+Porquê?
+
+25
+00:01:47.446 --> 00:01:51.728
+Porque eles têm o private
+ali e a classe Atriz
+
+26
+00:01:51.728 --> 00:01:56.164
+ela pode definir como que
+vai expor essas informações.
+
+27
+00:01:56.164 --> 00:01:58.021
+Então o método de acesso não é?
+
+28
+00:01:58.021 --> 00:02:00.254
+Vamos pegar o nome aqui como exemplo.
+
+29
+00:02:00.254 --> 00:02:04.307
+É uma forma de a gente estar dando esse
+acesso público a essas informações da
+
+30
+00:02:04.307 --> 00:02:04.830
+classe.
+
+31
+00:02:04.830 --> 00:02:08.513
+No caso a gente tem o método get,
+que ele pega não é?
+
+32
+00:02:08.513 --> 00:02:10.176
+Ele retorna ali o nome.
+
+33
+00:02:10.176 --> 00:02:14.917
+E a gente tem o método set, que permite
+que a gente altere aquele nome.
+
+34
+00:02:14.917 --> 00:02:19.113
+E você fala assim: mas eu entendi
+o que é método de acesso,
+
+35
+00:02:19.113 --> 00:02:24.150
+eu posso pegar e colocar isso daí,
+ao invés de usar getNome,
+
+36
+00:02:24.150 --> 00:02:29.072
+eu vou usar retornaNome ou
+configuraNome ao invés do setNome?
+
+37
+00:02:29.072 --> 00:02:30.750
+Você até pode fazer isso.
+
+38
+00:02:30.750 --> 00:02:33.297
+Não vai deixar de ser método de acesso.
+
+39
+00:02:33.297 --> 00:02:36.410
+Só que na linguagem Java
+existe padrão JavaBeans,
+
+40
+00:02:36.410 --> 00:02:41.269
+que é uma forma padronizada de estar
+criando esses métodos de acesso.
+
+41
+00:02:41.269 --> 00:02:46.648
+E a gente tem vários frameworks que
+trabalham identificando esse padrão,
+
+42
+00:02:46.648 --> 00:02:52.172
+que é começar os métodos com get e set
+e por isso é muito recomendado que,
+
+43
+00:02:52.172 --> 00:02:57.784
+principalmente Java,
+você utilize eles nesse formato aqui,
+
+44
+00:02:57.784 --> 00:03:03.460
+como a gente exemplificou aqui do
+atributo nome, getNome, setNome.
+
+45
+00:03:03.460 --> 00:03:06.428
+Bom e você fala assim:
+mas eu não posso ir lá,
+
+46
+00:03:06.428 --> 00:03:10.737
+não faz sentido eu ir modificar o
+nome de uma atriz, por exemplo.
+
+47
+00:03:10.737 --> 00:03:15.681
+Eu posso simplesmente não ter o método
+set e fazer com que essa propriedade
+
+48
+00:03:15.681 --> 00:03:17.343
+seja somente para leitura.
+
+49
+00:03:17.343 --> 00:03:18.727
+Olha como é fácil não é?
+
+50
+00:03:18.727 --> 00:03:23.464
+O atributo, eu posso pôr ele como
+público ou privado, dar acesso ou não,
+
+51
+00:03:23.464 --> 00:03:28.062
+mas eu não posso falar: olha você
+só pode ler, não pode modificar.
+
+52
+00:03:28.062 --> 00:03:31.534
+Agora com o método de acesso
+isso é muito simples.
+
+53
+00:03:31.534 --> 00:03:36.027
+É simplesmente prover método
+get e não prover método set.
+
+54
+00:03:36.027 --> 00:03:41.400
+E aí aquele atributo só internamente
+na classe vai poder ser modificado.
+
+55
+00:03:41.400 --> 00:03:46.837
+Outra coisa interessante é que
+o método set, ele pode conter
+
+56
+00:03:46.837 --> 00:03:52.220
+dentro dele uma certa lógica para
+que só se aceite valores válidos.
+
+57
+00:03:52.220 --> 00:03:58.634
+Então, por exemplo, no caso aqui da idade
+eu não vou aceitar uma idade negativa.
+
+58
+00:03:58.634 --> 00:04:00.310
+Porém, o tipo inteiro,
+
+59
+00:04:00.310 --> 00:04:05.500
+que é o tipo que está sendo recebido por
+aquela propriedade, ele pode ser negativo.
+
+60
+00:04:05.500 --> 00:04:10.837
+Então, por exemplo, no método set eu
+posso verificar ali se a idade é maior
+
+61
+00:04:10.837 --> 00:04:15.896
+que zero e só então atribuir aquele
+valor ali no meu atributo idade.
+
+62
+00:04:15.896 --> 00:04:21.248
+Então, no meu método set eu também,
+eu não só posso receber a informação,
+
+63
+00:04:21.248 --> 00:04:24.471
+como eu posso também validar ou, às vezes,
+
+64
+00:04:24.471 --> 00:04:29.401
+até formatar essa informação para
+colocar dentro da minha classe.
+
+65
+00:04:29.401 --> 00:04:30.520
+No método get,
+
+66
+00:04:30.520 --> 00:04:35.579
+eu não preciso retornar exatamente
+aquilo que está dentro da minha classe.
+
+67
+00:04:35.579 --> 00:04:36.958
+Então, por exemplo,
+
+68
+00:04:36.958 --> 00:04:42.270
+a gente sabe aí que às vezes no meio
+artístico aí o pessoal dá aquela,
+
+69
+00:04:42.270 --> 00:04:47.232
+quando chega numa certa idade, começa
+a dar aquela diminuída na idade, não é?
+
+70
+00:04:47.232 --> 00:04:53.051
+Então ele pode, por exemplo, no getIdade,
+se a idade, por exemplo, for maior que 30,
+
+71
+00:04:53.051 --> 00:04:58.526
+dar aquela reduzida ali, multiplicar por
+algum índice ali ou reduzir alguns anos.
+
+72
+00:04:58.526 --> 00:05:02.256
+Eu fiz essa brincadeira aqui,
+mas se a gente for pensar,
+
+73
+00:05:02.256 --> 00:05:05.778
+falar assim: de repente
+quando eu vou retornar nome,
+
+74
+00:05:05.778 --> 00:05:10.265
+de repente eu posso querer ver, por
+exemplo, se aquela pessoa tem algum título
+
+75
+00:05:10.265 --> 00:05:14.697
+e caso ela tenha eu vou colocar Senhor,
+Excelentíssimo.
+
+76
+00:05:14.697 --> 00:05:19.152
+De repente eu vou colocar Doutor
+na frente do nome da pessoa,
+
+77
+00:05:19.152 --> 00:05:21.827
+quando a pessoa for lá e der o getNome.
+
+78
+00:05:21.827 --> 00:05:26.142
+Então não é tão absurdo assim num
+sistema real você querer ajustar
+
+79
+00:05:26.142 --> 00:05:27.990
+a informação antes de retornar.
+
+80
+00:05:27.990 --> 00:05:33.014
+E isso daí é uma coisa que você tem
+a oportunidade de fazer no método get,
+
+81
+00:05:33.014 --> 00:05:37.968
+você não retornar exatamente,
+digamos assim é como se a informação
+
+82
+00:05:37.968 --> 00:05:41.795
+que estivesse dentro da classe,
+ela estivesse estado bruto.
+
+83
+00:05:41.795 --> 00:05:47.010
+Mas aí o que você quer retornar
+para as pessoas, você pode refinar,
+
+84
+00:05:47.010 --> 00:05:52.320
+você pode formatar, você pode ter uma
+lógica ali para fazer alguma coisa.
+
+85
+00:05:52.320 --> 00:05:56.770
+Outra coisa interessante, deixa eu até
+eu sair aqui do caminho do código.
+
+86
+00:05:56.770 --> 00:06:01.220
+Por exemplo, eu não sou obrigado
+a retornar uma informação
+
+87
+00:06:01.220 --> 00:06:05.301
+exatamente da forma que ela
+está dentro da minha classe.
+
+88
+00:06:05.301 --> 00:06:08.616
+Então, por exemplo,
+ao invés de ter a idade,
+
+89
+00:06:08.616 --> 00:06:13.363
+eu posso ter dentro da minha
+classe a data de nascimento e aí,
+
+90
+00:06:13.363 --> 00:06:18.840
+a partir da data de nascimento,
+eu calcular a idade para ser retornada.
+
+91
+00:06:18.840 --> 00:06:23.680
+Então, isso mostra que o meu
+formato de armazenamento dentro da
+
+92
+00:06:23.680 --> 00:06:27.328
+classe não precisa ser
+exatamente igual ao meu retorno.
+
+93
+00:06:27.328 --> 00:06:31.400
+Eu posso, por exemplo, retornar a idade,
+mas posso guardar a data,
+
+94
+00:06:31.400 --> 00:06:34.256
+e calcular a idade a partir dessa data.
+
+95
+00:06:34.256 --> 00:06:37.125
+E isso pode se aplicar
+a várias outras coisas.
+
+96
+00:06:37.125 --> 00:06:40.240
+Opa, deixa eu voltar,
+deixa eu voltar, deixa eu voltar.
+
+97
+00:06:40.240 --> 00:06:41.636
+Pronto, pronto.
+
+98
+00:06:41.636 --> 00:06:46.965
+Então, a gente viu com isso daí que
+a prática de você ter métodos de acesso
+
+99
+00:06:46.965 --> 00:06:53.690
+permite essa separação da estrutura
+interna para esse contrato, para essa,
+
+100
+00:06:53.690 --> 00:06:59.430
+essa casca externa que as
+outras classes consomem.
+
+101
+00:06:59.430 --> 00:07:03.640
+Por exemplo, imagina que eu
+realmente tivesse nesse caso aqui,
+
+102
+00:07:03.640 --> 00:07:05.436
+que a gente viu aí da idade.
+
+103
+00:07:05.436 --> 00:07:10.245
+Imagina que a gente realmente
+tivesse a idade dentro da classe e,
+
+104
+00:07:10.245 --> 00:07:15.770
+de repente, eu percebi que seria
+interessante mudar essa estrutura.
+
+105
+00:07:15.770 --> 00:07:20.642
+Então, numa classe que eu
+tivesse que fazer essa mudança,
+
+106
+00:07:20.642 --> 00:07:23.770
+eu poderia manter o método getIdade,
+
+107
+00:07:23.770 --> 00:07:29.658
+que outras classes talvez estivessem
+utilizando, mas teria toda a liberdade
+
+108
+00:07:29.658 --> 00:07:34.765
+de mudar a minha estrutura interna
+contanto que as pessoas de fora,
+
+109
+00:07:34.765 --> 00:07:40.383
+quando eu digo as pessoas eu digo as
+classes de fora pudessem interagir com
+
+110
+00:07:40.383 --> 00:07:45.744
+aquela classe da mesma forma, independente
+de que se internamente ela mudou ou não.
+
+111
+00:07:45.744 --> 00:07:49.766
+Então esse é dos reais
+benefícios aí do encapsulamento,
+
+112
+00:07:49.766 --> 00:07:53.760
+ele te dá essa liberdade de
+você trabalhar a sua classe
+
+113
+00:07:53.760 --> 00:07:57.495
+internamente e você manter
+essa estrutura interna.
+
+114
+00:07:57.495 --> 00:07:58.179
+Com isso,
+
+115
+00:07:58.179 --> 00:08:02.910
+espero que vocês tenham entendido
+pouco mais sobre métodos de acesso.
+
+116
+00:08:02.910 --> 00:08:08.652
+Entendido que eles são pouco, eles vão
+pouco além do que simplesmente você fazer
+
+117
+00:08:08.652 --> 00:08:14.623
+get e set para todos os atributos da sua
+classe e entender essa flexibilidade,
+
+118
+00:08:14.623 --> 00:08:19.150
+essa liberdade de validar,
+de formatar na hora que você recebe,
+
+119
+00:08:19.150 --> 00:08:24.126
+de formatar na hora que você retorna
+ou mesmo de retornar uma coisa,
+
+120
+00:08:24.126 --> 00:08:28.928
+retornar ou receber uma coisa num
+formato completamente diferente
+
+121
+00:08:28.928 --> 00:08:32.874
+daquele que você tem,
+armazena internamente na sua classe.
+
+122
+00:08:32.874 --> 00:08:35.228
+Espero que tenha ficado claro a todos.
+
+123
+00:08:35.228 --> 00:08:36.880
+Nos vemos na próxima aula.
+
+124
+00:08:36.880 --> 00:08:42.940
+[MÚSICA]

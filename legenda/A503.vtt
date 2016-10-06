@@ -1,0 +1,961 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.198
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:09.198 --> 00:00:13.980
+bem vindo ao curso de
+orientação a objetos com Java.
+
+3
+00:00:13.980 --> 00:00:18.592
+Eu sou o Clovis Fernandes e hoje
+iremos falar de acoplamento.
+
+4
+00:00:18.592 --> 00:00:23.559
+Na aula de hoje iremos caracterizar
+o conceito de acoplamento
+
+5
+00:00:23.559 --> 00:00:27.569
+e vamos exemplificar duas
+situações de acoplamento alto.
+
+6
+00:00:27.569 --> 00:00:32.644
+Na próxima aula iremos mostrar como
+transformar esse acoplamento alto que é
+
+7
+00:00:32.644 --> 00:00:38.630
+uma coisa não muito boa, não é nada
+boa para o projeto da nossa aplicação,
+
+8
+00:00:38.630 --> 00:00:42.878
+numa de acoplamento baixo que é muito
+bom para o que a gente está querendo.
+
+9
+00:00:42.878 --> 00:00:48.067
+Como eu ia dizendo então nós vamos
+caracterizar o conceito de acoplamento.
+
+10
+00:00:48.067 --> 00:00:51.981
+Nós temos acoplamento bom,
+que é acoplamento baixo,
+
+11
+00:00:51.981 --> 00:00:55.090
+e acoplamento ruim,
+que é acoplamento alto.
+
+12
+00:00:55.090 --> 00:01:03.514
+E caracterizar dois exemplos de situações
+que caracterizam o acoplamento alto.
+
+13
+00:01:03.514 --> 00:01:06.062
+O que que é então acoplamento?
+
+14
+00:01:06.062 --> 00:01:12.328
+Acoplamento descreve os relacionamentos
+e as dependências entre classes.
+
+15
+00:01:12.328 --> 00:01:15.490
+No fundo ela dá o grau de interconexão,
+
+16
+00:01:15.490 --> 00:01:20.300
+de interdependência de uma
+classe relação às outras.
+
+17
+00:01:20.300 --> 00:01:21.867
+Isso é o acoplamento.
+
+18
+00:01:21.867 --> 00:01:23.516
+Para o nosso trabalho,
+
+19
+00:01:23.516 --> 00:01:29.313
+basta caracterizar 2 tipos de acoplamento:
+acoplamento baixo e acoplamento alto.
+
+20
+00:01:29.313 --> 00:01:34.099
+No acoplamento alto, como vocês estão
+vendo nessa figura, eu tenho muitas
+
+21
+00:01:34.099 --> 00:01:38.915
+conexões de uma classe com outra, eu tenho
+dependências de uma classe e outras.
+
+22
+00:01:38.915 --> 00:01:43.368
+Na verdade eu posso ter até entre
+várias classes com outra classe ou
+
+23
+00:01:43.368 --> 00:01:47.107
+várias classes com várias outras classes.
+
+24
+00:01:47.107 --> 00:01:50.422
+E quanto maior o grau de acoplamento,
+
+25
+00:01:50.422 --> 00:01:54.020
+mais difícil fica para
+você fazer alguma mudança.
+
+26
+00:01:54.020 --> 00:01:57.424
+O seu aplicativo fica
+difícil de desenvolver,
+
+27
+00:01:57.424 --> 00:02:02.178
+não fica flexível para mudanças,
+então não é uma coisa boa.
+
+28
+00:02:02.178 --> 00:02:06.838
+Então nós podemos colocar
+esse carimbo de bad,
+
+29
+00:02:06.838 --> 00:02:12.623
+ruim para acoplamento alto,
+porque fica difícil de desenvolver,
+
+30
+00:02:12.623 --> 00:02:18.281
+modificar, reusar, aperfeiçoar
+o sistema com novos requisitos.
+
+31
+00:02:18.281 --> 00:02:23.029
+Contrapartida acoplamento baixo
+que você reduz ao mínimo as
+
+32
+00:02:23.029 --> 00:02:28.783
+interconexões entre as classes e as outras
+classes, você reduz isso ao mínimo,
+
+33
+00:02:28.783 --> 00:02:32.902
+isso é bom porque ao contrário
+do acoplamento alto,
+
+34
+00:02:32.902 --> 00:02:37.205
+quanto menos acoplamento
+menos problemas você tem.
+
+35
+00:02:37.205 --> 00:02:42.521
+Se no caso de acoplamento alto você
+mudasse uma determinada classe da qual
+
+36
+00:02:42.521 --> 00:02:48.300
+muitas outras classes dependem,
+qualquer mudança é muito trabalhosa.
+
+37
+00:02:48.300 --> 00:02:53.205
+Já com o acoplamento baixo,
+com poucas dependências de uma
+
+38
+00:02:53.205 --> 00:02:58.110
+classe relação à outra, as mudanças
+ficam mais fáceis de serem executadas.
+
+39
+00:02:58.110 --> 00:03:03.740
+Por isso que o acoplamento
+baixo é bom e a gente então
+
+40
+00:03:03.740 --> 00:03:10.312
+vai carimbar acoplamento
+baixo como uma coisa boa.
+
+41
+00:03:10.312 --> 00:03:13.442
+É o que nós queremos, é o nosso alvo.
+
+42
+00:03:13.442 --> 00:03:18.390
+Contudo dependendo da maneira
+como você projeta o seu sistema,
+
+43
+00:03:18.390 --> 00:03:23.225
+você pode inicialmente não
+alcançar esse acoplamento baixo.
+
+44
+00:03:23.225 --> 00:03:28.060
+Então você vai ter que fazer
+algum tipo de refatoração,
+
+45
+00:03:28.060 --> 00:03:32.738
+de remodelar o que você
+fez para diminuir o
+
+46
+00:03:32.738 --> 00:03:37.200
+acoplamento entre as
+classes da sua aplicação,
+
+47
+00:03:37.200 --> 00:03:42.259
+ou então você já pode aplicar
+alguns princípios que vão conduzir
+
+48
+00:03:42.259 --> 00:03:47.448
+você a ter no final, classes com menos
+acoplamento, com acoplamento baixo.
+
+49
+00:03:47.448 --> 00:03:48.830
+Então esse é o ideal.
+
+50
+00:03:48.830 --> 00:03:55.510
+A seguir eu vou mostrar duas
+situações de acoplamento muito ruim.
+
+51
+00:03:55.510 --> 00:03:58.534
+São os piores tipos de acoplamento.
+
+52
+00:03:58.534 --> 00:04:01.936
+Então é acoplamento alto,
+mas é do pior grau.
+
+53
+00:04:01.936 --> 00:04:05.963
+Significa que nós precisamos
+tomar muito cuidado com ele.
+
+54
+00:04:05.963 --> 00:04:11.513
+Nós podemos na verdade evitar à priori,
+para não cair nisso na hora
+
+55
+00:04:11.513 --> 00:04:16.679
+que estamos iniciando ou
+começando a fazer o nosso projeto.
+
+56
+00:04:16.679 --> 00:04:21.547
+Compensação se nós cairmos nisso, existem
+maneiras como eu vou mostrar na próxima
+
+57
+00:04:21.547 --> 00:04:23.990
+aula, de reverter isso com facilidade.
+
+58
+00:04:23.990 --> 00:04:29.375
+Embora o ideal é já produzir
+sem esse tipo de acoplamento.
+
+59
+00:04:29.375 --> 00:04:34.004
+O primeiro tipo de acoplamento que eu
+vou mostrar é o acoplamento com dados
+
+60
+00:04:34.004 --> 00:04:34.760
+internos.
+
+61
+00:04:34.760 --> 00:04:40.996
+No acoplamento com dados internos os
+dados são expostos, eles estão públicos.
+
+62
+00:04:40.996 --> 00:04:45.750
+Por isso que a gente deixa
+as variáveis de instância,
+
+63
+00:04:45.750 --> 00:04:51.586
+define por convenção como
+privadas para não acontecer isso.
+
+64
+00:04:51.586 --> 00:04:56.574
+Então aqui normalmente vocês já não vão
+produzir isso, mas é só para exemplificar,
+
+65
+00:04:56.574 --> 00:04:59.587
+já estar definindo que
+ela não é uma coisa boa.
+
+66
+00:04:59.587 --> 00:05:03.854
+Eu estou carimbando,
+olha os dados delas são públicos,
+
+67
+00:05:03.854 --> 00:05:08.610
+porque eu estou expondo os
+dados ao acesso público.
+
+68
+00:05:08.610 --> 00:05:14.298
+É como se eu estivesse expondo
+a minha carteira de dinheiro,
+
+69
+00:05:14.298 --> 00:05:19.489
+alguém pode vir enfiar a mão no meu bolso,
+tirar o dinheiro e eu não posso reclamar
+
+70
+00:05:19.489 --> 00:05:24.731
+porque eu permiti isso, eu estou deixando
+os meus dados internos expostos.
+
+71
+00:05:24.731 --> 00:05:28.800
+No exemplo 1 eu vou mostrar através,
+
+72
+00:05:28.800 --> 00:05:33.948
+num diagrama de classes
+e partes de código,
+
+73
+00:05:33.948 --> 00:05:40.073
+que uma classe A acessa os
+dados internos da classe B.
+
+74
+00:05:40.073 --> 00:05:46.293
+Esses dados são o estado da classe B,
+de objetos da classe B.
+
+75
+00:05:46.293 --> 00:05:49.490
+A classe A depende da classe B.
+
+76
+00:05:49.490 --> 00:05:55.240
+A classe B,
+ela tem dado interno x que está público,
+
+77
+00:05:55.240 --> 00:06:00.450
+é dado público, ele tem maisinho aí,
+então ele é público.
+
+78
+00:06:00.450 --> 00:06:02.922
+A classe A pode acessar esse dado.
+
+79
+00:06:02.922 --> 00:06:07.500
+No caso a classe A,
+chamando de método para simplificar,
+
+80
+00:06:07.500 --> 00:06:12.844
+ela pretende incrementar o valor de x,
+o valor x de B de 1,
+
+81
+00:06:12.844 --> 00:06:18.613
+ou seja,
+ela quer obter o sucessor do valor de B.
+
+82
+00:06:18.613 --> 00:06:26.122
+Como o dado x é acessível, está público,
+basta eu instanciar uma classe.
+
+83
+00:06:26.122 --> 00:06:32.580
+Então eu instanciei uma classe com objeto,
+instanciei a classe,
+
+84
+00:06:32.580 --> 00:06:37.338
+criei objeto da classe B,
+eu coloquei no bezinho.
+
+85
+00:06:37.338 --> 00:06:42.954
+Para acessar o campo a variável de
+instância x, basta eu colocar b.x.
+
+86
+00:06:42.954 --> 00:06:47.264
+Se eu quero incrementar esse valor,
+eu pego o valor
+
+87
+00:06:47.264 --> 00:06:52.017
+anterior do b.x somo
+com 1 e atribuo ao b.x.
+
+88
+00:06:52.017 --> 00:06:58.210
+É como se eu pudesse então enfiar
+a mão na carteira de outra pessoa,
+
+89
+00:06:58.210 --> 00:07:02.050
+tiro de lá o quanto ela tem de dinheiro,
+
+90
+00:07:02.050 --> 00:07:06.950
+coloco valor de real a mais
+e devolvo a carteira.
+
+91
+00:07:06.950 --> 00:07:08.401
+Nesse caso a pessoa vai gostar,
+
+92
+00:07:08.401 --> 00:07:11.850
+mas se eu fizer a operação contrária
+de retirar dinheiro ela não vai gostar.
+
+93
+00:07:11.850 --> 00:07:15.124
+Então a operação que na vida
+real não é uma coisa boa,
+
+94
+00:07:15.124 --> 00:07:21.230
+isso que nós estamos fazendo
+também não é bom, isso é mau.
+
+95
+00:07:21.230 --> 00:07:27.063
+Na figura da classe B eu identifico com
+
+96
+00:07:27.063 --> 00:07:32.340
+círculo e uma seta essa
+variável que está exposta.
+
+97
+00:07:32.340 --> 00:07:38.231
+Na classe A eu estou
+expondo o código do método,
+
+98
+00:07:38.231 --> 00:07:41.060
+que eu defino essa operação
+que eu quero fazer.
+
+99
+00:07:41.060 --> 00:07:44.890
+Então eu estou acessando uma
+variável que não deveria acessar.
+
+100
+00:07:44.890 --> 00:07:47.020
+Então o que é que está acontecendo?
+
+101
+00:07:47.020 --> 00:07:53.224
+O dado x, ele é público,
+ele está totalmente exposto.
+
+102
+00:07:53.224 --> 00:07:58.921
+Eu posso ir lá e fazer o que eu quiser
+com ele, eu posso aumentar, diminuir,
+
+103
+00:07:58.921 --> 00:08:03.938
+fazer o que eu quiser como eu fiz aí
+que foi simplesmente usar sucessor.
+
+104
+00:08:03.938 --> 00:08:08.015
+O que é que eu estou, o que é que
+está ocorrendo ao expor o dado?
+
+105
+00:08:08.015 --> 00:08:10.934
+Eu quebro o princípio de encapsulamento.
+
+106
+00:08:10.934 --> 00:08:16.050
+O princípio de encapsulamento diz que
+eu só devo acessar as variáveis de
+
+107
+00:08:16.050 --> 00:08:21.014
+instância dos objetos da minha
+classe através de métodos.
+
+108
+00:08:21.014 --> 00:08:25.130
+Então o encapsulamento
+está tentando proteger,
+
+109
+00:08:25.130 --> 00:08:28.775
+fazer com que eu não acesse esses valores.
+
+110
+00:08:28.775 --> 00:08:31.010
+Para isso por convenção,
+
+111
+00:08:31.010 --> 00:08:36.613
+a gente torna os dados privados
+e vamos colocar algum acesso.
+
+112
+00:08:36.613 --> 00:08:39.780
+Que ideia é que a gente
+pode fazer inicialmente?
+
+113
+00:08:39.780 --> 00:08:41.902
+Usar getter e setter por exemplo.
+
+114
+00:08:41.902 --> 00:08:47.086
+A segunda situação que eu vou mostrar,
+fazer o acesso tentando, entre aspas,
+
+115
+00:08:47.086 --> 00:08:55.755
+garantir o encapsulamento que vou
+usar métodos públicos da classe B,
+
+116
+00:08:55.755 --> 00:09:02.556
+que vão acessar por mim o dado x,
+a variável de instância x.
+
+117
+00:09:02.556 --> 00:09:08.505
+Eu vou mostrar para vocês que isso embora
+aparentemente não esteja quebrando
+
+118
+00:09:08.505 --> 00:09:14.770
+o encapsulamento, no final das contas o
+encapsulamento continua sendo quebrado.
+
+119
+00:09:14.770 --> 00:09:18.557
+Por que é que continua sendo quebrado?
+
+120
+00:09:18.557 --> 00:09:24.210
+Porque os dados,
+os dados agora vez de serem públicos,
+
+121
+00:09:24.210 --> 00:09:30.983
+eles são expostos publicamente de uma
+forma indireta através do setter.
+
+122
+00:09:30.983 --> 00:09:35.878
+Então a gente carimba isso
+como sendo "Dados Expostos".
+
+123
+00:09:35.878 --> 00:09:40.395
+De qualquer maneira ele é
+equivalente ao dado ser público.
+
+124
+00:09:40.395 --> 00:09:42.630
+Não está me ajudando nada.
+
+125
+00:09:42.630 --> 00:09:45.688
+Por que é que não me ajuda nada?
+
+126
+00:09:45.688 --> 00:09:47.880
+Vamos ver no diagrama.
+
+127
+00:09:47.880 --> 00:09:55.420
+A classe A, no diagrama que eu vou
+mostrar, acessa o dado que é o estado,
+
+128
+00:09:55.420 --> 00:10:01.080
+do meu objeto por meio de
+getter e setter não é?
+
+129
+00:10:01.080 --> 00:10:08.310
+Vocês percebam que na classe B agora
+a variável instância x é privada.
+
+130
+00:10:08.310 --> 00:10:11.085
+Se ela é privada,
+
+131
+00:10:11.085 --> 00:10:16.530
+o sinal é- por convenção na UML, então
+o sinal é menos, está indicando isso.
+
+132
+00:10:16.530 --> 00:10:21.194
+E agora eu tenho getX público,
+
+133
+00:10:21.194 --> 00:10:26.456
+mais também,
+set para obter o valor de X e setX com
+
+134
+00:10:26.456 --> 00:10:31.940
+o parâmetro valor para
+alterar o valor de X.
+
+135
+00:10:31.940 --> 00:10:34.319
+O setX também é público.
+
+136
+00:10:34.319 --> 00:10:40.056
+Eu estou indicando agora, na classe A,
+vocês percebem pelas setas.
+
+137
+00:10:40.056 --> 00:10:44.420
+Eu estou fazendo agora acesso à
+dependência agora que eu tenho não é
+
+138
+00:10:44.420 --> 00:10:46.480
+do dado direto.
+
+139
+00:10:46.480 --> 00:10:51.662
+É dado que vai ser exposto por get e set.
+
+140
+00:10:51.662 --> 00:10:59.700
+Então vou agora fazer esse meu sucessor
+do valor lá do objeto da classe B.
+
+141
+00:10:59.700 --> 00:11:07.088
+Eu vou fazer usando o get e o set, então
+eu ponho b.setX vou passar o parâmetro,
+
+142
+00:11:07.088 --> 00:11:11.895
+o parâmetro era obter o
+valor de X através de
+
+143
+00:11:11.895 --> 00:11:16.710
+b.getX e acrescentar de 1
+para obter o seu sucessor.
+
+144
+00:11:16.710 --> 00:11:19.753
+E aí ele é parâmetro do b.setX.
+
+145
+00:11:19.753 --> 00:11:23.260
+Eu vou então colocar o nome no valor.
+
+146
+00:11:23.260 --> 00:11:28.070
+Então, aparentemente,
+tudo está correndo bem.
+
+147
+00:11:28.070 --> 00:11:33.520
+Parece orientado a objetos, mas não
+está sendo bem orientado a objetos,
+
+148
+00:11:33.520 --> 00:11:38.490
+porque eu estou tendo
+acoplamento desnecessário,
+
+149
+00:11:38.490 --> 00:11:43.390
+eu posso resolver isso,
+eliminar esse tipo de acoplamento.
+
+150
+00:11:43.390 --> 00:11:49.190
+Novamente os dados estão expostos,
+então eu estou carimbando isso aí.
+
+151
+00:11:49.190 --> 00:11:50.887
+Dados expostos!
+
+152
+00:11:50.887 --> 00:11:55.248
+E se os dados estão expostos
+é equivalente a eu ter,
+
+153
+00:11:55.248 --> 00:12:00.404
+usando o getter e setter é
+equivalente ao uso direto dos
+
+154
+00:12:00.404 --> 00:12:05.350
+dados internos de forma pública.
+
+155
+00:12:05.350 --> 00:12:11.359
+Isso não é uma coisa boa,
+embora esteja usando métodos de acesso,
+
+156
+00:12:11.359 --> 00:12:16.506
+eu ainda assim estou
+quebrando o encapsulamento,
+
+157
+00:12:16.506 --> 00:12:20.604
+porque ele é idêntico ao dado ser público.
+
+158
+00:12:20.604 --> 00:12:29.094
+Nós veremos outras aulas no nosso curso
+que os getter e setters têm seu papel,
+
+159
+00:12:29.094 --> 00:12:34.170
+têm seu uso,
+mas nesse caso que nós estamos mostrando,
+
+160
+00:12:34.170 --> 00:12:39.360
+nós podemos evitar facilmente e eu
+vou mostrar isso na próxima aula.
+
+161
+00:12:39.360 --> 00:12:41.549
+Então, normalmente,
+
+162
+00:12:41.549 --> 00:12:47.032
+os getter e setters eles poucas situações,
+eles podem ser públicos.
+
+163
+00:12:47.032 --> 00:12:51.030
+Na maioria das vezes eles
+vão ser ou protegidos,
+
+164
+00:12:51.030 --> 00:12:57.323
+que eles podem ser herdados por
+objetos de subclasse ou privados,
+
+165
+00:12:57.323 --> 00:13:03.601
+que não vão poder algumas
+situações vão ser públicos.
+
+166
+00:13:03.601 --> 00:13:09.060
+Mas quando nós podemos evitar isso,
+como é o caso desse,
+
+167
+00:13:09.060 --> 00:13:15.554
+nós temos que evitar,
+porque ele fica equivalente pior
+
+168
+00:13:15.554 --> 00:13:20.557
+tipo de acoplamento alto que é o de acesso
+
+169
+00:13:20.557 --> 00:13:25.390
+a dados internos de uma classe.
+
+170
+00:13:25.390 --> 00:13:31.964
+Então, concluindo,
+acoplamento alto, muito ruim.
+
+171
+00:13:31.964 --> 00:13:35.290
+Carimbamos que ele é muito ruim.
+
+172
+00:13:35.290 --> 00:13:40.065
+Devemos evitar ao máximo e
+nós vamos mostrar algumas
+
+173
+00:13:40.065 --> 00:13:44.539
+técnicas para evitar isso já na
+próxima aula e nas aulas seguintes,
+
+174
+00:13:44.539 --> 00:13:49.220
+nós vamos mostrar algumas técnicas
+de desenvolvimento que vão
+
+175
+00:13:49.220 --> 00:13:54.120
+ajudar a minimizar os acoplamentos,
+
+176
+00:13:54.120 --> 00:14:00.150
+fazendo com que vez de ter acoplamento
+alto com problemas de encapsulamento,
+
+177
+00:14:00.150 --> 00:14:02.887
+nós tenhamos acoplamento baixo.
+
+178
+00:14:02.887 --> 00:14:08.000
+Outra coisa que nós concluímos
+hoje que o acoplamento com
+
+179
+00:14:08.000 --> 00:14:13.480
+dados internos da classe é alto,
+
+180
+00:14:13.480 --> 00:14:19.076
+é o pior dos tipos de acoplamentos e
+
+181
+00:14:19.076 --> 00:14:24.360
+o acoplamento com o uso de
+getter e setter é tão ruim
+
+182
+00:14:24.360 --> 00:14:29.750
+quanto neste tipo de situação que
+eu estou mostrando aqui para vocês.
+
+183
+00:14:29.750 --> 00:14:38.100
+Quando ele equivalem a expor dados como se
+fossem dados internos apenas tão somente.
+
+184
+00:14:38.100 --> 00:14:44.059
+E vai ser uma [INAUDÍVEL] a gente mostrar
+como resolver isso de uma maneira simples.
+
+185
+00:14:44.059 --> 00:14:48.290
+Então nessa aula identificamos
+acoplamento alto,
+
+186
+00:14:48.290 --> 00:14:53.572
+aproveitamos para caracterizar
+acoplamento, o conceito de acoplamento.
+
+187
+00:14:53.572 --> 00:14:56.180
+Falamos pouco de encapsulamento,
+
+188
+00:14:56.180 --> 00:15:00.719
+que também é outro princípio
+que define que quando você vai,
+
+189
+00:15:00.719 --> 00:15:06.644
+os acessos a dados internos são
+sempre através de métodos definidos
+
+190
+00:15:06.644 --> 00:15:11.480
+na interface da classe
+só que essa definição de
+
+191
+00:15:11.480 --> 00:15:16.503
+encapsulamento não foi
+suficiente a nos resguardar
+
+192
+00:15:16.503 --> 00:15:21.620
+do uso inadequado da situação de
+hoje que usamos getter e setter.
+
+193
+00:15:21.620 --> 00:15:26.609
+Com isso,
+nós tivemos uma coisa muito ruim também,
+
+194
+00:15:26.609 --> 00:15:29.490
+que é o acoplamento alto,
+usando o getter e setter.
+
+195
+00:15:29.490 --> 00:15:34.663
+A conclusão disso é os vários princípios
+devem ser combinados e é isso que eu
+
+196
+00:15:34.663 --> 00:15:40.100
+vou mostrar na próxima aula,
+que nós vamos combinar vários
+
+197
+00:15:40.100 --> 00:15:45.815
+princípios para melhorar
+o grau de acoplamento.
+
+198
+00:15:45.815 --> 00:15:50.017
+No fundo, nós vamos baixar o acoplamento.
+
+199
+00:15:50.017 --> 00:15:53.114
+Acoplamento baixo é o
+que é bom para a gente.
+
+200
+00:15:53.114 --> 00:15:55.140
+Carimbo de bom para a gente.
+
+201
+00:15:55.140 --> 00:15:59.545
+Até à próxima aula.
+
+202
+00:15:59.545 --> 00:16:02.140
+[MÚSICA]

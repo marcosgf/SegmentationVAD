@@ -1,0 +1,79 @@
+WEBVTT
+
+1
+00:00:01.570 --> 00:00:06.420
+A function is pretty much a sequence of
+instructions to perform a specific task.
+
+2
+00:00:06.420 --> 00:00:08.610
+Basically if you're building a car,
+
+3
+00:00:08.610 --> 00:00:11.390
+what you want the car to
+do is what a function is.
+
+4
+00:00:11.390 --> 00:00:12.940
+Turn right, you wanna turn left,
+
+5
+00:00:12.940 --> 00:00:17.260
+you want it to drive, you want it to stop,
+all those could be functions.
+
+6
+00:00:17.260 --> 00:00:18.450
+Now that we're back with our farmer,
+
+7
+00:00:18.450 --> 00:00:21.340
+we're going to start learning
+how to define functions.
+
+8
+00:00:21.340 --> 00:00:22.930
+You'll notice in your
+workspace that there's
+
+9
+00:00:22.930 --> 00:00:25.260
+a block that has a star in the corner.
+
+10
+00:00:25.260 --> 00:00:27.370
+This is a function definition.
+
+11
+00:00:27.370 --> 00:00:30.550
+At the top part of the block,
+it tells us the name in the function.
+
+12
+00:00:30.550 --> 00:00:33.360
+The blocks inside of
+it tells what it does.
+
+13
+00:00:33.360 --> 00:00:35.960
+This definition sits in the workspace,
+but our farmer
+
+14
+00:00:35.960 --> 00:00:40.560
+won't do the actions inside the function
+until we drag out the function block.
+
+15
+00:00:40.560 --> 00:00:44.180
+To do that you need to click on
+the functions category in the menu and
+
+16
+00:00:44.180 --> 00:00:46.650
+drag out the fill 5 function.
+
+17
+00:00:46.650 --> 00:00:48.260
+Let's put the fun back in functions.

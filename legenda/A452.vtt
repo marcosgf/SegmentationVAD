@@ -1,0 +1,518 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.813
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.813 --> 00:00:12.664
+Olá a todos, aqui é Eduardo Guerra,
+
+3
+00:00:12.664 --> 00:00:18.500
+de volta com você no curso de
+Orientação a Objetos com Java.
+
+4
+00:00:18.500 --> 00:00:23.421
+Hoje no nosso 'iii' eu vou mostrar
+para vocês como criar uma classe,
+
+5
+00:00:23.421 --> 00:00:28.109
+como instanciar essa classe, vamos estar
+vendo na prática como diferenciar,
+
+6
+00:00:28.109 --> 00:00:31.740
+não é, como nós podemos criar
+vários objetos da mesma classe.
+
+7
+00:00:31.740 --> 00:00:37.594
+Então a primeira coisa que eu vou
+fazer é eu vou vir aqui e eu vou criar
+
+8
+00:00:37.594 --> 00:00:42.655
+vou criar aqui novo projeto Java que
+
+9
+00:00:42.655 --> 00:00:48.380
+eu vou estar chamando de carros, certo,
+então eu vou colocar aqui, carros.
+
+10
+00:00:48.380 --> 00:00:54.286
+[SEM ÁUDIO] Bom criado aqui o projeto,
+
+11
+00:00:54.286 --> 00:00:57.435
+eu vou vir e vou criar
+a minha classe carro, não é?
+
+12
+00:00:57.435 --> 00:01:04.033
+Basicamente com aquelas mesmas informações
+que a gente criou lá na aula, certo?
+
+13
+00:01:04.033 --> 00:01:07.490
+Então eu vou chamar aqui de carro,
+
+14
+00:01:07.490 --> 00:01:11.780
+pronto, está aqui a minha classe.
+
+15
+00:01:11.780 --> 00:01:17.172
+Eu vou criar aqui uma
+propriedade inteira que
+
+16
+00:01:17.172 --> 00:01:23.113
+vai ser o, a potência,
+
+17
+00:01:23.113 --> 00:01:28.195
+eu vou criar aqui uma propriedade,
+também vou,
+
+18
+00:01:28.195 --> 00:01:33.626
+vai ser inteira que vai ser a velocidade,
+vou criar aqui uma string para ser
+
+19
+00:01:33.626 --> 00:01:38.860
+o nome do carro, certo, para a gente poder
+identificar legalzinho qual é o carro,
+
+20
+00:01:38.860 --> 00:01:44.280
+certo, e aí vou criar aqui o método
+
+21
+00:01:44.280 --> 00:01:49.605
+acelerar não é,
+
+22
+00:01:49.605 --> 00:01:54.930
+que ele vai somar a potência na
+velocidade, então velocidade
+
+23
+00:01:54.930 --> 00:02:00.413
+é igual a velocidade mais potência, certo?
+
+24
+00:02:00.413 --> 00:02:04.490
+Para você que está começando
+agora na linguagem Java,
+
+25
+00:02:04.490 --> 00:02:09.408
+uma dica: você pode substituir isso
+aqui colocando mais igual potência,
+
+26
+00:02:09.408 --> 00:02:12.964
+é a mesma coisa do que estava antes,
+certo?
+
+27
+00:02:12.964 --> 00:02:17.805
+Vou colocar aqui o frear, certo,
+
+28
+00:02:17.805 --> 00:02:22.591
+que ele vai fazer a velocidade é igual
+
+29
+00:02:22.591 --> 00:02:27.491
+à velocidade dividido por 2, não é,
+
+30
+00:02:27.491 --> 00:02:32.844
+no caso como ele é inteiro ele vai
+fazer aquilo ali até parar, certo?
+
+31
+00:02:32.844 --> 00:02:38.390
+E vou criar aqui método que retorna,
+não é,
+
+32
+00:02:38.390 --> 00:02:44.320
+no caso vai ser o getVelocidade, certo?
+
+33
+00:02:44.320 --> 00:02:51.230
+Esse método getVelocidade ele vai
+retornar a velocidade do carro,
+
+34
+00:02:51.230 --> 00:02:55.582
+opa velocidade do carro certo?
+
+35
+00:02:55.582 --> 00:02:59.992
+E vou criar outro método aqui para
+
+36
+00:02:59.992 --> 00:03:04.951
+facilitar a minha vida que eu
+vou chamar de imprimir, certo,
+
+37
+00:03:04.951 --> 00:03:10.090
+que eu vou fazer aqui sysout,
+
+38
+00:03:10.090 --> 00:03:14.400
+não é, a gente já viu aí
+noutra aula que o atalho aqui,
+
+39
+00:03:14.400 --> 00:03:20.125
+vou imprimir aqui "O
+carro " e aí vou colocar
+
+40
+00:03:20.125 --> 00:03:27.400
+o nome do carro "está
+
+41
+00:03:27.400 --> 00:03:33.220
+a velocidade" e aí vou
+colocar aqui a velocidade,
+
+42
+00:03:33.220 --> 00:03:37.910
+ou melhor vou dar getVelocidade para usar,
+
+43
+00:03:37.910 --> 00:03:44.128
+utilizar o método ali, certo,
+
+44
+00:03:44.128 --> 00:03:52.600
+e está a velocidade de tantos km/h, certo?
+
+45
+00:03:52.600 --> 00:03:57.163
+Botar aqui de, tantos km/h, certo?
+
+46
+00:03:57.163 --> 00:03:59.988
+Então criei aqui a minha classe carro,
+
+47
+00:03:59.988 --> 00:04:05.198
+agora eu vou estar criando uma classe
+chamada principal que ela vai ter método
+
+48
+00:04:05.198 --> 00:04:10.927
+main e aí ela vai criar algumas instâncias
+da classe carro, certo, para podermos
+
+49
+00:04:10.927 --> 00:04:16.050
+testar e ver como funciona essa
+questão aí de criar objetos da classe.
+
+50
+00:04:16.050 --> 00:04:23.670
+Então eu vou vir aqui
+vou criar aqui a classe,
+
+51
+00:04:23.670 --> 00:04:28.570
+opa, a classe principal,
+
+52
+00:04:28.570 --> 00:04:34.048
+já vou marcar aqui que eu
+quero método main, certo?
+
+53
+00:04:34.048 --> 00:04:38.960
+Então vou criar aqui
+
+54
+00:04:38.960 --> 00:04:42.980
+carro c1 é igual a new carro,
+
+55
+00:04:42.980 --> 00:04:47.112
+então eu instanciei a classe carro, está?
+
+56
+00:04:47.112 --> 00:04:50.966
+Eu preciso agora inicializar
+aquelas variáveis não é,
+
+57
+00:04:50.966 --> 00:04:56.096
+então vou pôr c1 ponto
+no caso aqui potência,
+
+58
+00:04:56.096 --> 00:04:59.154
+não é,
+a minha potência ela tem que começar com,
+
+59
+00:04:59.154 --> 00:05:02.670
+eu preciso setar alguma coisa,
+vou colocar aqui 10.
+
+60
+00:05:02.670 --> 00:05:07.920
+O c1 também vou dar nome, não é,
+então vou colocar aqui nome
+
+61
+00:05:07.920 --> 00:05:14.932
+é igual a que é que eu vou chamar aqui,
+
+62
+00:05:14.932 --> 00:05:19.264
+vou chamar aqui de Corcel,
+
+63
+00:05:19.264 --> 00:05:24.154
+pronto, e a minha
+
+64
+00:05:24.154 --> 00:05:30.243
+velocidade questão aqui
+de boas práticas não é,
+
+65
+00:05:30.243 --> 00:05:34.202
+eu vou inicializar aqui com 0, certo?
+
+66
+00:05:34.202 --> 00:05:39.994
+Então se eu chamar o
+meu c1.imprimir não é,
+
+67
+00:05:39.994 --> 00:05:44.790
+ele tem que imprimir ali
+que o Corcel está a 0 km/h.
+
+68
+00:05:44.790 --> 00:05:48.717
+Então vou salvar, vou executar certo,
+
+69
+00:05:48.717 --> 00:05:53.095
+então "O carro Corcel está
+na velocidade de 0 km/h".
+
+70
+00:05:53.095 --> 00:05:58.669
+Se eu vier aqui e fizer por exemplo,
+c1.acelerar, não é,
+
+71
+00:05:58.669 --> 00:06:05.693
+ele tem que imprimir agora que o Corcel
+está a 10 km/h, olha aqui correto, está?
+
+72
+00:06:05.693 --> 00:06:11.150
+E se eu vir por exemplo vou acelerar
+3 vezes de depois vou frear.
+
+73
+00:06:11.150 --> 00:06:17.320
+[SEM ÁUDIO] Então eu vou
+
+74
+00:06:17.320 --> 00:06:22.750
+vir aqui frear.
+
+75
+00:06:22.750 --> 00:06:26.272
+Então ele acelerou,
+
+76
+00:06:26.272 --> 00:06:30.877
+cada uma ele está somando 10 não é,
+
+77
+00:06:30.877 --> 00:06:35.042
+e quando ele freia vai estar a 15 km/h,
+está?
+
+78
+00:06:35.042 --> 00:06:41.102
+Uma coisa interessante é que se
+eu criar outro carro aqui certo,
+
+79
+00:06:41.102 --> 00:06:45.569
+então eu crio aqui por exemplo
+carro c2 não é, nesse,
+
+80
+00:06:45.569 --> 00:06:49.906
+no caso aqui o meu c2 ele
+vai ter os valores aqui,
+
+81
+00:06:49.906 --> 00:06:53.280
+eu também vou começar com a velocidade 0,
+
+82
+00:06:53.280 --> 00:06:58.580
+a potência dele no caso aqui vai ser 15,
+certo,
+
+83
+00:06:58.580 --> 00:07:05.251
+o nome dele vai ser Carango, certo,
+e a velocidade também vai ser 0 está?
+
+84
+00:07:05.251 --> 00:07:11.336
+Então aqui no final vez de fazer só o
+c1.imprimir eu vou imprimir o c1 e o c2,
+
+85
+00:07:11.336 --> 00:07:12.242
+está?
+
+86
+00:07:12.242 --> 00:07:14.960
+Então eu salvo aqui.
+
+87
+00:07:14.960 --> 00:07:19.771
+Então note que eu estou
+acelerando e freando só o c1,
+
+88
+00:07:19.771 --> 00:07:25.761
+o c2 ele mantém aquelas variáveis
+internas do jeito que estava.
+
+89
+00:07:25.761 --> 00:07:30.209
+Se eu vier aqui e mexer no c2 também,
+não é,
+
+90
+00:07:30.209 --> 00:07:35.384
+mandar acelerar aqui o c2,
+por exemplo acelerar
+
+91
+00:07:35.384 --> 00:07:40.594
+ele 2 vezes aqui ele vai
+modificar as variáveis
+
+92
+00:07:40.594 --> 00:07:45.235
+do c2, está?
+
+93
+00:07:45.235 --> 00:07:51.182
+Uma outra coisa que eu queria mostrar
+aqui para vocês se eu pegar aqui,
+
+94
+00:07:51.182 --> 00:07:59.585
+criar terceiro carro e criar ele
+exatamente igualzinho o c1 certo,
+
+95
+00:07:59.585 --> 00:08:04.230
+só que está numa variável diferente,
+
+96
+00:08:04.230 --> 00:08:08.775
+ele também chama Corcel, certo,
+
+97
+00:08:08.775 --> 00:08:13.958
+eu vou até colocar aqui sysout aqui
+pra a gente saber que agora eu vou
+
+98
+00:08:13.958 --> 00:08:19.016
+botar aqui "Imprimindo c3", certo?
+
+99
+00:08:19.016 --> 00:08:23.590
+Imprimindo ali o carro 3, não é,
+
+100
+00:08:23.590 --> 00:08:28.514
+eu vou chamar aqui c3.imprimir e olha lá,
+
+101
+00:08:28.514 --> 00:08:31.440
+está vendo?
+
+102
+00:08:31.440 --> 00:08:37.258
+O c3 é igualzinho ao c1,
+mas o fato de eu modificar o c1 não é,
+
+103
+00:08:37.258 --> 00:08:41.743
+não modifica o c3,
+lembrando aquele conceito de que a classe,
+
+104
+00:08:41.743 --> 00:08:46.574
+o objeto ele é único, por mais que
+ele seja igual ao outro, está?
+
+105
+00:08:46.574 --> 00:08:50.756
+Então eu posso por exemplo ter duas
+cadeiras, não é, e quebrar a perna de
+
+106
+00:08:50.756 --> 00:08:54.720
+uma elas podem ser idênticas, a partir do
+momento que eu quebrar não vai ser mais,
+
+107
+00:08:54.720 --> 00:08:58.409
+então da mesma forma eu posso ter 2 carros
+idênticos, a partir do momento que eu
+
+108
+00:08:58.409 --> 00:09:01.230
+acelerar o outro não acelera
+porque ele é igual, está?
+
+109
+00:09:01.230 --> 00:09:05.481
+Espero que com esse exemplo
+aqui vocês tenham compreendido
+
+110
+00:09:05.481 --> 00:09:08.380
+esse conceito aí da classe, do objeto,
+
+111
+00:09:08.380 --> 00:09:13.660
+como que a gente instancia e a questão de
+cada ter o seu escopo ali de variáveis.
+
+112
+00:09:13.660 --> 00:09:17.315
+Muito obrigado por assistir,
+até à próxima aula!
+
+113
+00:09:17.315 --> 00:09:22.670
+[MÚSICA] [MÚSICA]

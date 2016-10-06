@@ -1,0 +1,526 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.234
+Após esse vídeo, você será capaz de
+definir a posição do 0 e do polo do
+
+2
+00:00:04.234 --> 00:00:07.960
+controlador de atraso de fase e
+verificaremos também a contribuição
+
+3
+00:00:07.960 --> 00:00:12.640
+angular do controlador de atraso de
+fase na posição dos polos malha fechada.
+
+4
+00:00:12.640 --> 00:00:15.389
+A relação entre o polo e 0
+do controlador de atraso
+
+5
+00:00:15.389 --> 00:00:18.470
+de fase é determinada pelo aumento
+necessário na constante de erro.
+
+6
+00:00:18.470 --> 00:00:22.288
+Por exemplo, se precisarmos aumentar
+a constante de erro 10 vezes,
+
+7
+00:00:22.288 --> 00:00:26.310
+o 0 do controlador de atraso de fase
+deverá estar 10 vezes mais afastado da
+
+8
+00:00:26.310 --> 00:00:27.519
+origem que o seu polo.
+
+9
+00:00:27.519 --> 00:00:29.820
+Para os que gostam de fórmulas, vamos lá.
+
+10
+00:00:29.820 --> 00:00:34.549
+Seja k e a constante de erro original do
+sistema e k e desejado a constante de erro
+
+11
+00:00:34.549 --> 00:00:35.280
+desejada.
+
+12
+00:00:35.280 --> 00:00:40.359
+A razão entre o erro e o polo do
+controlador de atraso de fase será: menos
+
+13
+00:00:40.359 --> 00:00:44.680
+a sobre menos b que é igual a a sobre
+b que é igual k e desejado sobre k e.
+
+14
+00:00:44.680 --> 00:00:49.678
+Então, uma vez determinada a posição
+do 0 do controlador de atraso de fase,
+
+15
+00:00:49.678 --> 00:00:55.974
+calculamos o polo como menos b igual
+a menos a k e sobre k e desejado,
+
+16
+00:00:55.974 --> 00:01:00.017
+ou b igual a a vezes k
+e sobre k e desejado.
+
+17
+00:01:00.017 --> 00:01:03.369
+É fácil lembrar,
+queremos aumento na constante de erro,
+
+18
+00:01:03.369 --> 00:01:05.290
+então a precisa ser maior do que b.
+
+19
+00:01:05.290 --> 00:01:09.603
+Muito bem, já sabemos qual é a relação
+entre a e b e podemos já transcrever o
+
+20
+00:01:09.603 --> 00:01:11.692
+controlador de atraso de fase,
+
+21
+00:01:11.692 --> 00:01:15.470
+como k s mais a sobre s mais
+a vezes k e sobre k e desejado.
+
+22
+00:01:15.470 --> 00:01:19.868
+Note que a contribuição do 0 e do polo do
+controlador para a constante de erro será
+
+23
+00:01:19.868 --> 00:01:21.183
+k e desejado sobre k e.
+
+24
+00:01:21.183 --> 00:01:25.580
+Mas como determinamos a posição do
+0 do controlador de avanço de fase?
+
+25
+00:01:25.580 --> 00:01:29.246
+A posição ideal do 0 do controlador
+de atraso de fase pode depender
+
+26
+00:01:29.246 --> 00:01:32.245
+de vários fatores,
+mas podemos usar uma regra prática,
+
+27
+00:01:32.245 --> 00:01:36.460
+que nos dará bom compromisso entre manter
+os polos malha fechada no mesmo lugar,
+
+28
+00:01:36.460 --> 00:01:38.872
+e fazer com que o erro
+diminua mais rápido.
+
+29
+00:01:38.872 --> 00:01:41.822
+Posicionamos o 0 do
+controlador de atraso de fase
+
+30
+00:01:41.822 --> 00:01:44.953
+1 décimo da parte real dos
+polos desejados, ou seja,
+
+31
+00:01:44.953 --> 00:01:48.690
+a vai ser igual a menos a parte
+real do quadradinho sobre 10.
+
+32
+00:01:48.690 --> 00:01:53.666
+Assim, o nosso controlador de
+atraso de fase fica C de s é
+
+33
+00:01:53.666 --> 00:01:58.657
+igual a k s menos a parte real do
+polo desejado sobre 10 sobre s menos
+
+34
+00:01:58.657 --> 00:02:03.320
+a parte real do polo desejado sobre
+10 vezes k e sobre k e desejado.
+
+35
+00:02:03.320 --> 00:02:07.610
+Vamos ver exemplo numérico, vamos
+continuar contribuindo com o nosso meio
+
+36
+00:02:07.610 --> 00:02:10.264
+ambiente e vamos reciclar o nosso exemplo.
+
+37
+00:02:10.264 --> 00:02:14.964
+Os polos malha fechada são: menos
+1,6 mais ou menos 2,2 j e o
+
+38
+00:02:14.964 --> 00:02:19.770
+controlador de atraso de fase
+fica: C de s igual a k s mais
+
+39
+00:02:19.770 --> 00:02:24.228
+0,16 sobre s mais 0,16 vezes
+k e sobre k e desejado.
+
+40
+00:02:24.228 --> 00:02:27.735
+Considerando que queremos
+dobrar a constante de erro,
+
+41
+00:02:27.735 --> 00:02:33.790
+temos C de s igual s mais
+0,16 sobre s mais 0,08.
+
+42
+00:02:33.790 --> 00:02:37.463
+Vamos agora verificar qual é a
+contribuição de fase desse controlador na
+
+43
+00:02:37.463 --> 00:02:39.820
+posição dos polos deixados malha fechada.
+
+44
+00:02:39.820 --> 00:02:45.133
+A fase do C do quadradinho vai ser
+a fase de menos 1,6 mais 2,2 j mais
+
+45
+00:02:45.133 --> 00:02:50.640
+0,16 menos a fase de menos
+1,6 mais 2,2 j mais 0,08.
+
+46
+00:02:50.640 --> 00:02:55.430
+Fazendo os cálculos chegamos à fase de C
+de quadradinho igual a menos 1,23 graus.
+
+47
+00:02:55.430 --> 00:03:00.092
+Esses menos 1,23 graus farão com que
+a resposta do grau de sistema seja menos
+
+48
+00:03:00.092 --> 00:03:02.219
+amortecida aumentado o overshoot.
+
+49
+00:03:02.219 --> 00:03:05.537
+Se o aumento da constante de
+erro fosse fator de 10 ou
+
+50
+00:03:05.537 --> 00:03:09.383
+fator de 2 teríamos uma
+contribuição de fase de menos 2,54
+
+51
+00:03:09.383 --> 00:03:13.200
+graus e o efeito do controlador
+de atraso de fase seria maior.
+
+52
+00:03:13.200 --> 00:03:16.188
+Se a resposta do sistema
+ficar muito oscilatória,
+
+53
+00:03:16.188 --> 00:03:18.905
+você pode diminuir ainda
+mais a posição do 0.
+
+54
+00:03:18.905 --> 00:03:22.903
+Por outro lado, se você estiver satisfeito
+com o amortecimento da resposta,
+
+55
+00:03:22.903 --> 00:03:24.753
+você pode aumentar o valor do 0.
+
+56
+00:03:24.753 --> 00:03:28.763
+Polo e 0 mais afastados da origem
+farão com que o regime permanente
+
+57
+00:03:28.763 --> 00:03:30.490
+diminua mais rapidamente.
+
+58
+00:03:30.490 --> 00:03:34.258
+A melhor maneira de decidir é
+realmente simular o sistema,
+
+59
+00:03:34.258 --> 00:03:38.261
+de qualquer forma, posicionar o 0
+do controlador de atraso de fase
+
+60
+00:03:38.261 --> 00:03:41.931
+1 décimo da parte real dos polos
+desejados é bom chute inicial.
+
+61
+00:03:41.931 --> 00:03:46.393
+Vamos fazer algumas simulações usando
+tanto a linha de comando do Matlab quanto
+
+62
+00:03:46.393 --> 00:03:50.030
+Simulink, vamos simular a resposta
+ao degrau na linha de comando
+
+63
+00:03:50.030 --> 00:03:52.960
+e verificar o erro regime
+permanente no Simulink.
+
+64
+00:03:52.960 --> 00:03:57.320
+Na linha de comando
+digite: T igual a tf 7.4 1
+
+65
+00:03:57.320 --> 00:04:02.655
+3.2 7.4 e G igual a zpk nada
+
+66
+00:04:02.655 --> 00:04:07.692
+0 menos 3.2 1 e o C1 vai ser zpk de menos
+
+67
+00:04:07.692 --> 00:04:12.611
+0.16 menos 0.08 e 7.4.
+
+68
+00:04:12.611 --> 00:04:19.281
+C2 é zpk menos 0.16 menos 0.016 7.4.
+
+69
+00:04:19.281 --> 00:04:25.530
+T1 feedback C1 vezes G,1 e o
+T2 feedback de C2 vezes G,1.
+
+70
+00:04:25.530 --> 00:04:28.249
+E agora dê step de T T1 e T2.
+
+71
+00:04:28.249 --> 00:04:33.347
+Note que o overshoot do sistema
+sem o atraso de fase é de 10%,
+
+72
+00:04:33.347 --> 00:04:39.710
+com o controlador com o fator 2 é de 14%
+e com o controlador com o fator 10 é 17%.
+
+73
+00:04:39.710 --> 00:04:44.605
+Vamos simular os mesmos sistemas no
+Simulink, mas vamos observar o E
+
+74
+00:04:44.605 --> 00:04:49.500
+regime permanente para uma entrada rampa,
+New, Simulink Model, controlita mf.
+
+75
+00:04:49.500 --> 00:04:56.090
+Altere o zero pole para nada 0 menos
+3.2 1, altere o ganho k para 7.4.
+
+76
+00:04:56.090 --> 00:05:01.043
+Apague o step e a transfer function e
+as ligações da transfer function para o
+
+77
+00:05:01.043 --> 00:05:05.260
+Scope, apague também a ligação entre
+a saída do zero pole e o Scope.
+
+78
+00:05:05.260 --> 00:05:10.261
+Copie e cole o sistema malha fechada,
+clique e arraste torno do somador
+
+79
+00:05:10.261 --> 00:05:15.508
+do ganho e do sistema e depois copie e
+cole e posicione ele a baixo do original.
+
+80
+00:05:15.508 --> 00:05:20.760
+Apague o Gain da cópia, copie e cole o
+zero pole e coloque no lugar do ganho.
+
+81
+00:05:20.760 --> 00:05:26.828
+Edite novo zero pole para
+menos 0.016 menos 0.08 e 7.4.
+
+82
+00:05:26.828 --> 00:05:31.291
+Copie e cole esse novo sistema
+malha fechada e edite o
+
+83
+00:05:31.291 --> 00:05:35.640
+polo de controlador de atraso
+de fase para menos 0.016.
+
+84
+00:05:35.640 --> 00:05:41.924
+View, Library Browser, Sources arraste
+ramp para a esquerda do modelo.
+
+85
+00:05:41.924 --> 00:05:45.070
+Ligue a saída das rampas às
+entradas dos 3 somadores.
+
+86
+00:05:45.070 --> 00:05:51.910
+Abra o Scope, File, Number of Inputs Ports
+3, ligue as saídas dos somadores ao Scope.
+
+87
+00:05:51.910 --> 00:05:54.708
+A saída do somador é o erro.
+
+88
+00:05:54.708 --> 00:05:59.960
+Agora rode a simulação, aumente o tempo
+de simulação para 50 e rode de novo.
+
+89
+00:05:59.960 --> 00:06:02.953
+Note o erro convergindo
+para valor cada vez menor,
+
+90
+00:06:02.953 --> 00:06:05.355
+mas essa convergência não é muito rápida.
+
+91
+00:06:05.355 --> 00:06:09.864
+Na linha de comando,
+altere o controlador C1 para C1
+
+92
+00:06:09.864 --> 00:06:14.510
+igual a zpk menos 0.8 menos 0.08 e 7.4.
+
+93
+00:06:14.510 --> 00:06:17.706
+Temos fator de 10,
+mas o 0 e o polo são maiores.
+
+94
+00:06:17.706 --> 00:06:23.462
+Obtenha nova função de transferência malha
+fechada e rode a simulação novamente.
+
+95
+00:06:23.462 --> 00:06:28.655
+T igual a feedback t1 igual
+a feedback C1 vezes G,1 step T T1 T2.
+
+96
+00:06:28.655 --> 00:06:31.205
+Note que o overshoot aumentou muito,
+
+97
+00:06:31.205 --> 00:06:35.360
+faça a mesma alteração no modelo
+Simulink e rode a simulação.
+
+98
+00:06:35.360 --> 00:06:40.490
+Note que o erro foi para o seu valor
+final consideravelmente mais rápido.
+
+99
+00:06:40.490 --> 00:06:43.819
+Então, quanto mais próximo da
+origem o polo e o 0 estiverem,
+
+100
+00:06:43.819 --> 00:06:45.620
+menor o seu efeito no overshoot.
+
+101
+00:06:45.620 --> 00:06:47.487
+Mas o erro converge lentamente.
+
+102
+00:06:47.487 --> 00:06:52.018
+Se o polo e o 0 estiverem mais afastados
+da origem, o erro converge mais rápido,
+
+103
+00:06:52.018 --> 00:06:54.030
+mas o efeito no overshoot é maior.
+
+104
+00:06:54.030 --> 00:06:57.031
+É preciso chegar a uma
+solução de compromisso,
+
+105
+00:06:57.031 --> 00:07:00.932
+ou às vezes projetar ou reprojetar
+controlador de avanço de
+
+106
+00:07:00.932 --> 00:07:03.924
+fase para trabalhar conjunto
+com o atraso de fase.
+
+107
+00:07:03.924 --> 00:07:08.327
+Agora você já é capaz de definir a posição
+do 0 e do polo do controlador de atraso
+
+108
+00:07:08.327 --> 00:07:08.928
+de fase.
+
+109
+00:07:08.928 --> 00:07:12.315
+No próximo vídeo,
+você conhecerá o controlador PI,
+
+110
+00:07:12.315 --> 00:07:14.210
+de proporcional e integral.

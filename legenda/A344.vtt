@@ -1,0 +1,289 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.505
+Olá.
+
+2
+00:00:00.505 --> 00:00:06.951
+Você já viu que a frequência onde ocorre o
+avanço de fase máximo é a média geométrica
+
+3
+00:00:06.951 --> 00:00:11.510
+das frequências de quebra do 0 e do polo
+para o compensador de avanço de fase.
+
+4
+00:00:11.510 --> 00:00:16.830
+Neste vídeo você aprenderá
+a determinar o avanço máximo graus,
+
+5
+00:00:16.830 --> 00:00:19.855
+produzido por compensador
+de avanço de fase.
+
+6
+00:00:19.855 --> 00:00:24.385
+Para facilitar a discussão, vamos colocar
+a função de transferência na seguinte
+
+7
+00:00:24.385 --> 00:00:31.940
+fórmula: C a de s igual a T vezes s mais
+1 sobre alfa vezes T vezes s mais 1.
+
+8
+00:00:31.940 --> 00:00:39.709
+Dessa forma o zero e o polo serão
+z1 igual a menos 1 sobre T,
+
+9
+00:00:39.709 --> 00:00:46.010
+para o zero e p1 igual a menos 1
+sobre alfa vezes T para o polo.
+
+10
+00:00:46.010 --> 00:00:50.924
+Então, para que o módulo de z1
+seja menor do que o módulo de p1,
+
+11
+00:00:50.924 --> 00:00:53.570
+deve-se ter alfa menor do que 1.
+
+12
+00:00:53.570 --> 00:00:57.952
+A fase exata é dada por fi igual
+
+13
+00:00:57.952 --> 00:01:03.250
+a arcotangente de T ômega menos
+arcotangente de alfa T ômega.
+
+14
+00:01:03.250 --> 00:01:07.544
+Com essa nova parametrização,
+a frequência ômega max,
+
+15
+00:01:07.544 --> 00:01:12.567
+onde ocorre o pico de fase será
+ômega max igual à raiz quadrada de
+
+16
+00:01:12.567 --> 00:01:17.906
+módulo de z1 vezes módulo de p1,
+que será igual à raiz quadrada de 1
+
+17
+00:01:17.906 --> 00:01:23.290
+sobre T vezes 1 sobre alfa T que
+é igual a 1 sobre T raiz de alfa.
+
+18
+00:01:23.290 --> 00:01:28.451
+Substituindo esse valor na
+expressão para fase, I max será
+
+19
+00:01:28.451 --> 00:01:33.070
+igual a arcotangente de 1 sobre raiz de
+alfa menos arcotangente da raiz de alfa.
+
+20
+00:01:33.070 --> 00:01:38.149
+Trabalhando a expressão e usando
+a fórmula para a tangente de uma soma de
+
+21
+00:01:38.149 --> 00:01:43.908
+arcos a tangente de fi max será
+igual a tangente do arcotangente
+
+22
+00:01:43.908 --> 00:01:50.470
+de 1 sobre raiz de alfa menos a tangente
+do arcotangente da raiz de alfa.
+
+23
+00:01:50.470 --> 00:01:55.177
+Tudo isso dividido por 1 mais
+tangente do arcotangente de 1
+
+24
+00:01:55.177 --> 00:02:00.272
+sobre raiz de alfa vezes tangente
+do arcotangente da raiz de alfa,
+
+25
+00:02:00.272 --> 00:02:03.900
+o que dá 1 sobre raiz de
+alfa menos raiz de alfa,
+
+26
+00:02:03.900 --> 00:02:08.910
+tudo dividido por 1 mais 1 sobre
+raiz de alfa vezes raiz de alfa,
+
+27
+00:02:08.910 --> 00:02:14.920
+que é igual a 1 sobre raiz de alfa menos
+raiz de alfa, tudo isso dividido por 2.
+
+28
+00:02:14.920 --> 00:02:19.088
+Mas, a tangente de ângulo
+fi max é igual ao seno
+
+29
+00:02:19.088 --> 00:02:22.694
+do ângulo fi max sobre o
+cosseno do ângulo fi max e o
+
+30
+00:02:22.694 --> 00:02:27.580
+cosseno de fi max é a raiz quadrada de
+1 menos seno ao quadrado de fi max.
+
+31
+00:02:27.580 --> 00:02:33.782
+De onde seno de fi max sobre raiz
+de 1 menos seno ao quadrado de fi
+
+32
+00:02:33.782 --> 00:02:39.800
+max é igual a 1 sobre raiz de alfa menos
+raiz de alfa, tudo isso dividido por 2.
+
+33
+00:02:39.800 --> 00:02:44.808
+Elevando ambos os lados ao quadrado,
+teremos seno ao quadrado de fi
+
+34
+00:02:44.808 --> 00:02:50.179
+max sobre 1 menos seno ao quadrado
+de fi max igual a 1 menos alfa,
+
+35
+00:02:50.179 --> 00:02:55.064
+tudo isso ao quadrado,
+dividido por 4 alfa o que implica
+
+36
+00:02:55.064 --> 00:02:59.940
+que 4 alfa seno ao quadrado de
+fi max é igual a 1 menos 2 alfa,
+
+37
+00:02:59.940 --> 00:03:04.667
+mais alfa ao quadrado menos,
+abre parênteses, 1 menos 2 alfa mais
+
+38
+00:03:04.667 --> 00:03:09.680
+alfa ao quadrado, fecha parênteses,
+multiplica seno ao quadrado de fi max.
+
+39
+00:03:09.680 --> 00:03:14.294
+Isolando o seno,
+ficaremos com abre parênteses,
+
+40
+00:03:14.294 --> 00:03:20.951
+1 mais 2 alfa mais alfa ao quadrado, fecha
+parênteses, seno ao quadrado de fi max,
+
+41
+00:03:20.951 --> 00:03:25.420
+sendo igual a 1 menos 2 alfa,
+mais alfa ao quadrado.
+
+42
+00:03:25.420 --> 00:03:29.955
+De onde seno ao quadrado de fi
+max será igual a 1 menos alfa,
+
+43
+00:03:29.955 --> 00:03:34.440
+tudo elevado ao quadrado, dividido por
+1 mais alfa, tudo elevado ao quadrado.
+
+44
+00:03:34.440 --> 00:03:37.031
+Tirando a raiz positiva,
+
+45
+00:03:37.031 --> 00:03:42.460
+você chegará a seno de fi max igual
+a 1 menos alfa sobre 1 mais alfa.
+
+46
+00:03:42.460 --> 00:03:46.900
+Agora escrevendo alfa função do seno,
+
+47
+00:03:46.900 --> 00:03:51.450
+1 mais alfa vezes o seno de fi
+max será igual a 1 menos alfa.
+
+48
+00:03:51.450 --> 00:03:57.990
+De onde, alfa vezes 1 mais seno de fi
+max será igual a 1 menos seno de fi max.
+
+49
+00:03:57.990 --> 00:04:00.108
+Assim, isolando o alfa,
+
+50
+00:04:00.108 --> 00:04:05.220
+alfa é igual a 1 menos seno de fi
+max sobre 1 mais seno de fi max.
+
+51
+00:04:05.220 --> 00:04:11.481
+Isto é, se for necessário encontrar a
+razão alfa entre a frequência de quebra do
+
+52
+00:04:11.481 --> 00:04:17.408
+zero e a do polo para obter avanço de
+fase fi max, basta aplicar essa fórmula.
+
+53
+00:04:17.408 --> 00:04:22.284
+Seguida, você pode determinar que
+frequência ômega max ocorrerá
+
+54
+00:04:22.284 --> 00:04:25.070
+esse avanço manipulando a variável T.
+
+55
+00:04:25.070 --> 00:04:30.469
+Agora, você já tem as ferramentas para
+calcular os valores do zero e do polo do
+
+56
+00:04:30.469 --> 00:04:35.560
+compensador para obter o avanço de fase
+que precisar na frequência desejada.
+
+57
+00:04:35.560 --> 00:04:40.012
+No próximo vídeo, você vai aprender
+a usar esse termo de avanço
+
+58
+00:04:40.012 --> 00:04:44.707
+conjunto com ganho para ajustar tanto
+a frequência de cruzamento de 0 dB quanto
+
+59
+00:04:44.707 --> 00:04:49.530
+a margem de fase, algo que era
+impossível fazer apenas com o ganho.

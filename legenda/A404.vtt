@@ -1,0 +1,566 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.672
+[MÚSICA] Estamos
+
+2
+00:00:07.672 --> 00:00:13.210
+de volta com o hands on de
+desenvolvimento da nossa pilha, certo?
+
+3
+00:00:13.210 --> 00:00:16.687
+Temos aqui os dois primeiros testes,
+não é,
+
+4
+00:00:16.687 --> 00:00:20.080
+o teste que a gente
+verificou a pilha vazia.
+
+5
+00:00:20.080 --> 00:00:25.265
+A gente fez teste onde
+a gente empilha elemento,
+
+6
+00:00:25.265 --> 00:00:28.991
+e gente executou e viu que
+a nossa barrinha está verde.
+
+7
+00:00:28.991 --> 00:00:30.450
+Está tudo certinho.
+
+8
+00:00:30.450 --> 00:00:38.360
+Vamos então para o próximo teste que
+seria para empilhar dois elementos.
+
+9
+00:00:38.360 --> 00:00:43.210
+Então vou pegar como
+base o teste anterior,
+
+10
+00:00:43.210 --> 00:00:48.070
+vou criar "empilhaDoisElementos".
+
+11
+00:00:48.070 --> 00:00:51.646
+Então eu vou arrumar aqui o teste,
+eu vou empilhar.
+
+12
+00:00:51.646 --> 00:00:58.670
+Depois de empilhar o primeiro,
+eu vou empilhar o segundo.
+
+13
+00:00:58.670 --> 00:01:03.850
+O "estaVazia" aqui eu estou
+confiante que já está funcionando,
+
+14
+00:01:03.850 --> 00:01:10.221
+então eu sei que o tamanho precisa ser
+dois, e o meu topo tem que ser segundo.
+
+15
+00:01:10.221 --> 00:01:14.120
+Será que minha pilha funciona
+aqui com dois elementos?
+
+16
+00:01:14.120 --> 00:01:18.860
+Então eu vou salvar o teste, vou executar.
+
+17
+00:01:18.860 --> 00:01:22.770
+Funcionou, funcionou!
+
+18
+00:01:22.770 --> 00:01:24.930
+Então o que significa isso?
+
+19
+00:01:24.930 --> 00:01:29.070
+Significa que esse teste,
+pro meu TDD, ele não é bom.
+
+20
+00:01:29.070 --> 00:01:33.855
+É bom o teste que faz falhar alguma coisa.
+
+21
+00:01:33.855 --> 00:01:37.653
+Quando isso acontece, a gente normalmente
+volta no mesmo teste a não ser que seja
+
+22
+00:01:37.653 --> 00:01:40.836
+teste que você queira para
+refinar alguma funcionalidade,
+
+23
+00:01:40.836 --> 00:01:44.170
+para verificar se algum caso
+realmente está funcionando.
+
+24
+00:01:44.170 --> 00:01:47.341
+Mas para o TDD mesmo,
+a gente precisa de teste falhando.
+
+25
+00:01:47.341 --> 00:01:54.840
+Então ao invés de empilhar dois elementos,
+eu vou "empilha dois e desempilha ".
+
+26
+00:01:54.840 --> 00:02:02.780
+Ou melhor,
+vou chamar de ''empilha e desempilha".
+
+27
+00:02:02.780 --> 00:02:08.081
+Então o que que eu vou fazer,
+eu vou empilhar dois elementos,
+
+28
+00:02:08.081 --> 00:02:10.860
+vou verificar se isso daqui é verdade.
+
+29
+00:02:10.860 --> 00:02:13.930
+Aí eu vou pegar aqui,
+
+30
+00:02:13.930 --> 00:02:19.864
+vamos chamar aqui de "desempilhado" então,
+
+31
+00:02:19.864 --> 00:02:23.100
+aquele teste que eu tinha antes,
+ele vai ser só o começo para mim.
+
+32
+00:02:23.100 --> 00:02:28.430
+Então, eu vou chamar a pilha,
+".desempilha".
+
+33
+00:02:28.430 --> 00:02:35.520
+Ele tem que me retornar,
+qual que é o elemento que está cima.
+
+34
+00:02:35.520 --> 00:02:40.370
+Eu vou verificar novamente que o tamanho
+
+35
+00:02:40.370 --> 00:02:44.450
+ele vai ser agora que eu desempilhei.
+
+36
+00:02:44.450 --> 00:02:49.320
+O topo agora tem que ser o primeiro.
+
+37
+00:02:49.320 --> 00:02:54.062
+Opa ficou errado, ficou "primieiro".
+
+38
+00:02:54.062 --> 00:02:57.100
+Tem que ser "primeiro".
+
+39
+00:02:57.100 --> 00:03:04.590
+E o meu, esse "desempilhado"
+
+40
+00:03:04.590 --> 00:03:10.620
+[SEM_ÁUDIO] ele vai ser segundo,
+
+41
+00:03:10.620 --> 00:03:13.720
+vai ser o segundo aqui.
+
+42
+00:03:13.720 --> 00:03:18.160
+Então vou colocar aqui "desempilhado".
+
+43
+00:03:18.160 --> 00:03:24.990
+Então ele vai ser aqui o segundo.
+
+44
+00:03:24.990 --> 00:03:31.770
+Novamente eu vou ter que criar esse método
+"desempilha" porque ele não existe.
+
+45
+00:03:31.770 --> 00:03:35.980
+Crie aqui método "desempilha" na pilha.
+
+46
+00:03:35.980 --> 00:03:36.849
+Salva.
+
+47
+00:03:36.849 --> 00:03:40.830
+Agora o teste, ele está compilando.
+
+48
+00:03:40.830 --> 00:03:42.393
+Eu vou executar aqui,
+
+49
+00:03:42.393 --> 00:03:47.670
+e agora sim eu vou ter teste que falha
+para eu poder trabalhar cima dele.
+
+50
+00:03:47.670 --> 00:03:54.544
+Bom, Vamos lá, agora
+
+51
+00:03:54.544 --> 00:04:00.525
+esse elemento aqui sozinho ele já não vai
+adiantar, porque eu preciso ter histórico.
+
+52
+00:04:00.525 --> 00:04:05.412
+Porque no momento que ele desempilha
+ele vai desempilhar o segundo,
+
+53
+00:04:05.412 --> 00:04:11.904
+e o primeiro que estava por baixo ali
+do segundo, ele vai ficar no topo.
+
+54
+00:04:11.904 --> 00:04:14.990
+E aqui eu estou guardando só.
+
+55
+00:04:14.990 --> 00:04:21.429
+Eu vou criar aqui array de elementos.
+
+56
+00:04:21.429 --> 00:04:25.790
+Eu vou chamar de elementos.
+
+57
+00:04:25.790 --> 00:04:30.533
+Então, eu vou vir
+
+58
+00:04:30.533 --> 00:04:34.790
+aqui vou dar Refactor, Rename.
+
+59
+00:04:34.790 --> 00:04:38.360
+Para ele mudar todo mundo alí
+que está usando ele para mim.
+
+60
+00:04:38.360 --> 00:04:44.120
+Eu vou colocar o S alí no final,
+para ficar mais adequado.
+
+61
+00:04:44.120 --> 00:04:49.698
+E eu vou vir aqui por
+exemplo no meu método
+
+62
+00:04:49.698 --> 00:04:55.362
+"empilha" ele vai vir aqui na minha
+quantidade, ela começa com o que?
+
+63
+00:04:55.362 --> 00:04:59.046
+Vou colocar aqui que ele começa com o 0.
+
+64
+00:04:59.046 --> 00:05:04.000
+Está explicitamente Java
+inteiros já começam com 0,
+
+65
+00:05:04.000 --> 00:05:07.405
+mas eu vou colocar aqui
+de uma forma explicita.
+
+66
+00:05:07.405 --> 00:05:09.319
+Então o que é que eu vou fazer?
+
+67
+00:05:09.319 --> 00:05:14.732
+Quando eu empilhar eu vou colocar o
+elemento na posição "quantidade".
+
+68
+00:05:14.732 --> 00:05:19.090
+E aí quando eu somo ali
+ele vai adicionando.
+
+69
+00:05:19.090 --> 00:05:24.573
+E o topo ele vai ser o
+que estiver alí no array
+
+70
+00:05:24.573 --> 00:05:31.470
+elementos na posição "quantidade- 1".
+
+71
+00:05:31.470 --> 00:05:34.783
+Depois obviamente a gente vai rodar
+o teste para ver se esse negócio etá
+
+72
+00:05:34.783 --> 00:05:35.520
+funcionando.
+
+73
+00:05:35.520 --> 00:05:44.150
+[SEM_ÁUDIO] Eu preciso também criar aqui
+o array, que eu não cheguei a criar.
+
+74
+00:05:44.150 --> 00:05:49.020
+A princípio eu vou criar com 10,
+depois a gente avalia isso aqui.
+
+75
+00:05:49.020 --> 00:05:53.360
+"new Object[10]"
+
+76
+00:05:53.360 --> 00:06:01.050
+[SEM_ÁUDIO] E aqui no "desempilha"
+vamos ver como é que vai ser.
+
+77
+00:06:01.050 --> 00:06:04.580
+Eu tenho que pegar o
+elemento que está no topo.
+
+78
+00:06:04.580 --> 00:06:08.440
+Então, eu já vou usar o
+próprio método "topo".
+
+79
+00:06:08.440 --> 00:06:16.300
+"object" Vamos colocar aqui,
+
+80
+00:06:16.300 --> 00:06:21.430
+vamos chamar de topo mesmo,
+a gente pega alí quem está no topo.
+
+81
+00:06:21.430 --> 00:06:27.510
+Eu vou fazer que a "quantidade
+
+82
+00:06:27.510 --> 00:06:32.900
+menos menos" E vou retornar o topo.
+
+83
+00:06:32.900 --> 00:06:40.275
+Bom, será que vai funcionar
+aqui a minha pilha?
+
+84
+00:06:40.275 --> 00:06:42.840
+Eu vou salvar e vou rodar teste para ver.
+
+85
+00:06:42.840 --> 00:06:50.076
+Olha que interessante que aconteceu.
+
+86
+00:06:50.076 --> 00:06:55.656
+O meu teste pilha desempilha
+que eu estava tentando
+
+87
+00:06:55.656 --> 00:07:00.850
+desenvolver agora,
+esse teste ele está funcionando.
+
+88
+00:07:00.850 --> 00:07:06.604
+Só que a minha pilha vazia,
+que é aquele primeiro teste que eu fiz lá,
+
+89
+00:07:06.604 --> 00:07:11.234
+que eu aposto muitos de vocês pensaram,
+"Nossa mas que teste inútil,
+
+90
+00:07:11.234 --> 00:07:14.560
+não serve para nada você
+verificar uma pilha vazia".
+
+91
+00:07:14.560 --> 00:07:17.700
+Justamente ele está dando problema agora.
+
+92
+00:07:17.700 --> 00:07:24.425
+Ele não é teste inútil não, porque ele
+pegou bug que ficou na minha pilha.
+
+93
+00:07:24.425 --> 00:07:27.040
+Vamos ver o que aconteceu?
+
+94
+00:07:27.040 --> 00:07:34.783
+Ele não está ele está retornando
+falso como a pilha vazia.
+
+95
+00:07:34.783 --> 00:07:36.954
+Vamos ver o que aconteceu?
+
+96
+00:07:36.954 --> 00:07:43.374
+Olha aqui o porquê ele está verificando se
+esses elementos aqui, se isso aqui é new.
+
+97
+00:07:43.374 --> 00:07:46.895
+Nunca vai ser new,
+porque vai estar com o meu array.
+
+98
+00:07:46.895 --> 00:07:51.690
+O que eu tenho que verificar agora
+é se a quantidade é igual a 0.
+
+99
+00:07:51.690 --> 00:07:57.440
+Então a quantidade igual a 0.
+
+100
+00:07:57.440 --> 00:08:00.562
+Então vamos ver se o teste roda agora?
+
+101
+00:08:00.562 --> 00:08:02.130
+Agora funcionou.
+
+102
+00:08:02.130 --> 00:08:06.905
+Então preste atenção,
+às vezes aquele teste que você acha
+
+103
+00:08:06.905 --> 00:08:11.924
+que não vai servir para nada,
+que é bobo ele pode ser teste que
+
+104
+00:08:11.924 --> 00:08:16.865
+vai ser sim importante dentro da
+suíte de testes da sua classe.
+
+105
+00:08:16.865 --> 00:08:20.910
+Além de ser o primeiro
+passo dentro do seu TDD.
+
+106
+00:08:20.910 --> 00:08:26.500
+Aposto que muitos de vocês
+não perceberam esse erro.
+
+107
+00:08:26.500 --> 00:08:31.362
+Talvez alguns mais experientes tenham já
+batido o olho alí no ''está vazia" e visto
+
+108
+00:08:31.362 --> 00:08:36.670
+que ia dar problema, mas talvez alguns
+até não porque não são experiente
+
+109
+00:08:36.670 --> 00:08:40.530
+mas as vezes por falta de atenção
+acabaram não percebendo essa questão.
+
+110
+00:08:40.530 --> 00:08:46.897
+Isso é uma coisa bem interessante.
+
+111
+00:08:46.897 --> 00:08:50.560
+A gente aprende uma lição no TDD,
+nenhum teste é bobo.
+
+112
+00:08:50.560 --> 00:08:56.675
+Às vezes aquele teste que você acha
+que não está testando muita coisa,
+
+113
+00:08:56.675 --> 00:09:01.184
+quando as coisas começam a se complicar
+aquilo alí pode as vezes pegar
+
+114
+00:09:01.184 --> 00:09:05.318
+bug importante que de outras
+formas você poderia não pegar.
+
+115
+00:09:05.318 --> 00:09:09.610
+Ok?
+Então seguimos mais passinho aqui,
+
+116
+00:09:09.610 --> 00:09:16.240
+criamos mais testezinho aqui, agora já
+temos uma pilha que empilha e desempilha.
+
+117
+00:09:16.240 --> 00:09:21.888
+E a gente volta na terceira parte aqui
+do nosso hands-on e eu vou voltar
+
+118
+00:09:21.888 --> 00:09:27.496
+mostrando para vocês a gente verificando
+aqui as situações de erro da pilha.
+
+119
+00:09:27.496 --> 00:09:32.370
+Quando a pilha estoura, ou quando a pilha,
+
+120
+00:09:32.370 --> 00:09:36.744
+ou quando alguém tenta tirar alguma
+coisa de uma pilha que está vazia.
+
+121
+00:09:36.744 --> 00:09:37.263
+Certo?
+
+122
+00:09:37.263 --> 00:09:40.240
+Até à próxima parte do vídeo,
+espero vocês lá.
+
+123
+00:09:40.240 --> 00:09:45.540
+[MÚSICA]

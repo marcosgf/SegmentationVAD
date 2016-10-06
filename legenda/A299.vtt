@@ -1,0 +1,619 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.835
+[MÚSICA] Após esse vídeo,
+
+2
+00:00:08.835 --> 00:00:16.314
+dada a função de transferência de sistema
+com ou mais parâmetros indeterminados,
+
+3
+00:00:16.314 --> 00:00:22.330
+você será capaz de determinar que
+condições o sistema será BIBO estável.
+
+4
+00:00:22.330 --> 00:00:28.291
+Como já vimos, a estabilidade de sistema é
+determinada pela parte real de seus polos,
+
+5
+00:00:28.291 --> 00:00:31.900
+que são as raízes do denominador
+da função de transferência.
+
+6
+00:00:31.900 --> 00:00:36.070
+Caso tenhamos o denominador de
+uma função de transferência,
+
+7
+00:00:36.070 --> 00:00:40.240
+podemos verificar a estabilidade
+usando o critério de Routh-Hurwitz.
+
+8
+00:00:40.240 --> 00:00:45.169
+Mas e se o denominador da função de
+transferência tiver algum parâmetro que
+
+9
+00:00:45.169 --> 00:00:46.786
+pode ser modificado?
+
+10
+00:00:46.786 --> 00:00:48.250
+Ganho, por exemplo?
+
+11
+00:00:48.250 --> 00:00:53.242
+Saber para que valores do parâmetro
+nosso sistema é estável é uma informação
+
+12
+00:00:53.242 --> 00:00:54.100
+muito útil.
+
+13
+00:00:54.100 --> 00:00:58.975
+Com isso podemos podemos projetar o nosso
+controlador de modo a ficar longe da
+
+14
+00:00:58.975 --> 00:01:03.217
+instabilidade e caso seja
+necessário testar o sistema real,
+
+15
+00:01:03.217 --> 00:01:07.340
+saberemos que valores evitar
+para não termos problemas.
+
+16
+00:01:07.340 --> 00:01:12.215
+Mas voltando ao assunto desse vídeo,
+podemos construir a tabela de
+
+17
+00:01:12.215 --> 00:01:16.910
+Routh como se o parâmetro variável
+fosse número real e impor condições
+
+18
+00:01:16.910 --> 00:01:21.336
+sobre os valores desse parâmetro
+para que o sistema seja estável,
+
+19
+00:01:21.336 --> 00:01:25.570
+como fizemos nos exemplos literais
+de segunda e terceira ordem.
+
+20
+00:01:25.570 --> 00:01:30.819
+Por exemplo, coeficientes 1, 6,
+
+21
+00:01:30.819 --> 00:01:37.763
+11 e 6 mais k, multiplicação cruzada
+das duas linhas anteriores dividida
+
+22
+00:01:37.763 --> 00:01:43.870
+pelo pivô e podemos copiar diretamente o
+último elemento da linha para a anterior.
+
+23
+00:01:43.870 --> 00:01:48.035
+Os elementos da primeira coluna são 1, 6,
+
+24
+00:01:48.035 --> 00:01:54.176
+60 k dividido por 6 e 6 mais k e
+para que o sistema seja estável
+
+25
+00:01:54.176 --> 00:01:59.380
+precisamos ter k menor que
+60 e k maior que menos 6.
+
+26
+00:01:59.380 --> 00:02:04.890
+O que acontece quando k é igual
+a 60 e k é igual a menos 6?
+
+27
+00:02:04.890 --> 00:02:09.465
+Para k igual a 60 o
+polinômio fica s ao cubo
+
+28
+00:02:09.465 --> 00:02:14.187
+mais 6s ao quadrado mais
+11s mais 60 e as raízes
+
+29
+00:02:14.187 --> 00:02:18.710
+são menos 6 e mais ou
+menos raiz de 11 vezes i.
+
+30
+00:02:18.710 --> 00:02:23.644
+Podemos verificar fazendo o
+produto quadrado do primeiro menos
+
+31
+00:02:23.644 --> 00:02:25.361
+o quadrado do segundo.
+
+32
+00:02:25.361 --> 00:02:30.230
+O quadrado da raiz quadrada é o próprio
+número e i ao quadrado é menos 1.
+
+33
+00:02:30.230 --> 00:02:32.312
+E fazendo o produto final,
+
+34
+00:02:32.312 --> 00:02:36.911
+chegamos ao nosso polinômio
+que tem par de polos complexos
+
+35
+00:02:36.911 --> 00:02:42.010
+conjugados sobre o eixo imaginário
+e o sistema portanto é instável.
+
+36
+00:02:42.010 --> 00:02:46.931
+Para k igual a menos 6,
+o polinômio fica s ao cubo mais 6s ao
+
+37
+00:02:46.931 --> 00:02:52.336
+quadrado mais 11s e podemos
+colocar s evidência e verificamos
+
+38
+00:02:52.336 --> 00:02:57.543
+facilmente que uma das raízes é
+zero e o sistema também é instável.
+
+39
+00:02:57.543 --> 00:03:02.462
+Se k for maior que 60 a primeira
+coluna da tabela de Routh tem duas
+
+40
+00:03:02.462 --> 00:03:07.620
+trocas de sinal e o polinômio tem
+duas raízes com parte real positiva.
+
+41
+00:03:07.620 --> 00:03:12.595
+Se k for menor do que menos 6
+a tabela de Routh tem uma troca
+
+42
+00:03:12.595 --> 00:03:15.750
+de sinal e o polinômio
+tem uma raiz positiva.
+
+43
+00:03:15.750 --> 00:03:20.742
+No vídeo passado eu disse que uma
+das vantagens da realimentação é
+
+44
+00:03:20.742 --> 00:03:24.751
+poder estabilizar sistema
+instável malha aberta,
+
+45
+00:03:24.751 --> 00:03:30.327
+mas eu também disse que uma desvantagem é
+a possibilidade de instabilizar sistema
+
+46
+00:03:30.327 --> 00:03:36.269
+estável malha aberta e alguns casos
+ganho adequado pode estabilizar
+
+47
+00:03:36.269 --> 00:03:42.309
+sistema instável malha aberta e ganho
+inadequado pode voltar a instabilizá-lo.
+
+48
+00:03:42.309 --> 00:03:46.080
+Vamos ver esses três exemplos
+usando Routh-Hurwitz.
+
+49
+00:03:46.080 --> 00:03:52.385
+Por exemplo, vamos usar G de s igual a 1
+sobre s ao quadrado mais 2s menos 3.
+
+50
+00:03:52.385 --> 00:03:58.690
+Os polos são 1 e menos 3 e o
+sistema é instável malha aberta.
+
+51
+00:03:58.690 --> 00:04:04.390
+E ganho malha aberta não modifica os
+polos, não alterando a estabilidade.
+
+52
+00:04:04.390 --> 00:04:08.582
+A função de transferência
+malha fechada será k
+
+53
+00:04:08.582 --> 00:04:12.560
+sobre s ao quadrado
+mais 2s menos 3 mais k.
+
+54
+00:04:12.560 --> 00:04:17.682
+Podemos usar a Fórmula de Bhaskara
+para escrever as raízes do denominador
+
+55
+00:04:17.682 --> 00:04:21.030
+função de k,
+mas é mais simples usarmos Routh-Hurwitz.
+
+56
+00:04:21.030 --> 00:04:26.435
+Construindo a tabela de Routh temos 1,
+2 e menos
+
+57
+00:04:26.435 --> 00:04:31.840
+3 mais k e para que o sistema seja
+estável, precisamos ter k maior que 3.
+
+58
+00:04:31.840 --> 00:04:33.591
+Quando k for igual a 3,
+
+59
+00:04:33.591 --> 00:04:38.510
+temos polo na origem e para k
+menor que 3 temos polo positivo.
+
+60
+00:04:38.510 --> 00:04:45.360
+Este é então exemplo de sistema instável
+malha aberta que pode ser estabilizado
+
+61
+00:04:45.360 --> 00:04:50.480
+com controle proporcional malha fechada,
+desde que o ganho seja maior do que 3.
+
+62
+00:04:50.480 --> 00:04:55.290
+Para nosso segundo exemplo
+temos: G de s é igual a 10
+
+63
+00:04:55.290 --> 00:05:00.415
+sobre s ao cubo mais 8s ao
+quadrado mais 12s mais 10.
+
+64
+00:05:00.415 --> 00:05:05.010
+Malha fechada temos 10k sobre s ao
+
+65
+00:05:05.010 --> 00:05:09.550
+cubo mais 8s ao quadrado
+mais 12s mais 10 mais 10k.
+
+66
+00:05:09.550 --> 00:05:13.551
+Vamos verificar o denominador
+da função de transferência
+
+67
+00:05:13.551 --> 00:05:17.870
+malha aberta: s ao cubo mais 8
+s ao quadrado mais 12s mais 10.
+
+68
+00:05:17.870 --> 00:05:22.320
+Construindo a tabela de Routh,
+verificamos que não há troca de sinal na
+
+69
+00:05:22.320 --> 00:05:25.847
+primeira coluna e o sistema
+é estável malha aberta.
+
+70
+00:05:25.847 --> 00:05:31.318
+Verificamos agora o denominador da
+função de transferência malha fechada:
+
+71
+00:05:31.318 --> 00:05:36.240
+s ao cubo mais 8s ao quadrado
+mais 12s mais 10 mais 10k.
+
+72
+00:05:36.240 --> 00:05:38.744
+Construindo a tabela de Routh,
+
+73
+00:05:38.744 --> 00:05:44.040
+verificamos que para k maior ou
+igual a 8,6 o sistema é instável.
+
+74
+00:05:44.040 --> 00:05:49.019
+Então este é exemplo de sistema
+estável malha aberta que
+
+75
+00:05:49.019 --> 00:05:53.540
+pode ficar instável malha fechada
+se usarmos ganho inadequado.
+
+76
+00:05:53.540 --> 00:05:57.630
+Nesse caso ganho maior ou igual a 8,6.
+
+77
+00:05:57.630 --> 00:06:02.903
+Para nosso terceiro exemplo
+temos: G de s igual a 10
+
+78
+00:06:02.903 --> 00:06:08.801
+sobre s ao cubo mais 11s ao quadrado
+mais 8s menos 20 e o denominador
+
+79
+00:06:08.801 --> 00:06:15.126
+malha fechada será s ao cubo mais 11s
+ao quadrado mais 8s menos 20 mais 10k.
+
+80
+00:06:15.126 --> 00:06:20.182
+Nem precisamos verificar o sistema
+malha aberta, a presença de sinal
+
+81
+00:06:20.182 --> 00:06:24.881
+negativo indica que há pelo menos
+uma raiz com parte real positiva.
+
+82
+00:06:24.881 --> 00:06:30.022
+Construímos a tabela de Routh para
+a malha fechada e verificamos que
+
+83
+00:06:30.022 --> 00:06:35.940
+o sistema será estável para k
+maior que 2 e k menos que 10,8.
+
+84
+00:06:35.940 --> 00:06:42.164
+Note que para k igual a 0 o sistema é
+instável e com k igual a 0 o denominador
+
+85
+00:06:42.164 --> 00:06:46.800
+do sistema malha fechada coincide com
+o denominador do sistema malha aberta.
+
+86
+00:06:46.800 --> 00:06:52.476
+Este é então exemplo de sistema
+instável malha aberta que pode
+
+87
+00:06:52.476 --> 00:06:57.570
+ficar estável malha fechada, mas apenas
+para uma determinada faixa de ganhos.
+
+88
+00:06:57.570 --> 00:07:02.518
+E se a função de transferência
+tiver mais de parâmetro variável?
+
+89
+00:07:02.518 --> 00:07:07.216
+Ganho e ajuste de mais algum
+componente do sistema,
+
+90
+00:07:07.216 --> 00:07:11.830
+resistor e circuito ou amortecedor
+de sistema mecânico por exemplo.
+
+91
+00:07:11.830 --> 00:07:16.834
+Construímos a tabela de Routh
+normalmente carregando as variáveis
+
+92
+00:07:16.834 --> 00:07:21.579
+literais e ao final impomos que todos
+os elementos da primeira coluna
+
+93
+00:07:21.579 --> 00:07:26.420
+tenham o mesmo sinal, isto é,
+sejam todos positivos ou todos negativos.
+
+94
+00:07:26.420 --> 00:07:31.790
+Por exemplo se a função de transferência
+do sistema malha fechada for
+
+95
+00:07:31.790 --> 00:07:37.160
+k sobre s ao quadrado menos
+s menos 2 mais k t s mais k,
+
+96
+00:07:37.160 --> 00:07:42.680
+construímos a tabela de Routh
+e verificamos que nesse caso
+
+97
+00:07:42.680 --> 00:07:48.200
+precisamos ter k t maior que 1 e k maior
+que 2, para que o sistema seja estável.
+
+98
+00:07:48.200 --> 00:07:53.700
+Seja agora T de s igual a as mais
+
+99
+00:07:53.700 --> 00:08:00.343
+b sobre s ao cubo mais 3s quadrado
+mais 2s menos 1 mais as mais b.
+
+100
+00:08:00.343 --> 00:08:05.270
+Construímos a tabela de Routh
+e verificamos que nesse caso
+
+101
+00:08:05.270 --> 00:08:10.900
+precisamos ter b maior que 1 e
+a maior que b menos 7 dividido por 3.
+
+102
+00:08:10.900 --> 00:08:13.284
+Ou seja, diferente do caso anterior,
+
+103
+00:08:13.284 --> 00:08:17.681
+a escolha de uma das variáveis
+afeta a escolha da outra.
+
+104
+00:08:17.681 --> 00:08:23.070
+Último exemplo: T de s é
+igual a k s mais a sobre s ao
+
+105
+00:08:23.070 --> 00:08:28.484
+cubo mais 3s ao quadrado
+mais 2s mais k s mais a.
+
+106
+00:08:28.484 --> 00:08:33.596
+Construímos a tabela de Routh
+e verificamos que nesse caso
+
+107
+00:08:33.596 --> 00:08:40.027
+precisamos ter ka maior que 0 e
+3k menos ka maior que menos 6.
+
+108
+00:08:40.027 --> 00:08:43.425
+Novamente dos valores afeta o outro.
+
+109
+00:08:43.425 --> 00:08:46.215
+Se tivermos por exemplo a igual a 2,
+
+110
+00:08:46.215 --> 00:08:51.114
+precisamos ter k maior que 0 para
+garantir a estabilidade, mas se a for
+
+111
+00:08:51.114 --> 00:08:55.800
+igual a 4 precisaremos ter k entre 0 e 6.
+
+112
+00:08:55.800 --> 00:09:02.298
+Então não tem segredo nenhum para
+achar as condições de estabilidade.
+
+113
+00:09:02.298 --> 00:09:07.073
+No caso de uma única variável, montamos
+a tabela de Routh e impondo que todos os
+
+114
+00:09:07.073 --> 00:09:10.110
+elementos da primeira coluna
+tenham o mesmo sinal,
+
+115
+00:09:10.110 --> 00:09:13.970
+descobrimos para que valores da
+variável o sistema é estável.
+
+116
+00:09:13.970 --> 00:09:18.722
+Se tivermos mais de uma variável no
+denominador da função de transferência de
+
+117
+00:09:18.722 --> 00:09:21.134
+interesse, o procedimento é o mesmo.
+
+118
+00:09:21.134 --> 00:09:26.096
+Ao impormos que todos os elementos da
+primeira coluna tenham o mesmo sinal,
+
+119
+00:09:26.096 --> 00:09:31.036
+obteremos restrições sobre as
+variáveis isoladamente ou conjunto.
+
+120
+00:09:31.036 --> 00:09:35.794
+Convém notar que nem sempre é
+possível estabilizar o sistema.
+
+121
+00:09:35.794 --> 00:09:41.166
+Por exemplo, tente achar o valor de k
+que deixe o seguinte sistema estável:
+
+122
+00:09:41.166 --> 00:09:47.150
+T de s igual a k sobre s ao quadrado
+menos s menos 6 mais ks menos 1.
+
+123
+00:09:47.150 --> 00:09:48.206
+Muito bem.
+
+124
+00:09:48.206 --> 00:09:51.904
+Agora dada a função de transferência de
+
+125
+00:09:51.904 --> 00:09:55.718
+sistema com ou mais
+parâmetros indeterminados,
+
+126
+00:09:55.718 --> 00:10:00.480
+você já deve ser capaz de determinar
+que condições o sistema será estável.
+
+127
+00:10:00.480 --> 00:10:05.175
+[MÚSICA] [SOM]
+
+128
+00:10:05.175 --> 00:10:09.870
+[SOM]

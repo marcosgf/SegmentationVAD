@@ -1,0 +1,174 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.638
+[MÚSICA] E
+
+2
+00:00:04.638 --> 00:00:09.610
+aí pessoal, tudo bem?
+
+3
+00:00:09.610 --> 00:00:12.955
+Agora que temos o jogador e o
+inimigo se movimentando na tela,
+
+4
+00:00:12.955 --> 00:00:14.830
+vamos criar a regra de fim de jogo.
+
+5
+00:00:14.830 --> 00:00:18.870
+Vamos começar adicionando
+uma Label na cena.
+
+6
+00:00:18.870 --> 00:00:25.170
+Atualize o nome para GameOverText
+
+7
+00:00:25.170 --> 00:00:29.260
+e o texto para Game Over.
+
+8
+00:00:29.260 --> 00:00:32.680
+Modifique a cor e a fonte como desejar.
+
+9
+00:00:32.680 --> 00:00:40.680
+[SEM_ÁUDIO]
+
+10
+00:00:40.680 --> 00:00:48.680
+[SEM_ÁUDIO]
+
+11
+00:00:48.680 --> 00:00:56.680
+[SEM_ÁUDIO]
+
+12
+00:00:56.680 --> 00:01:04.680
+[SEM_ÁUDIO]
+
+13
+00:01:04.680 --> 00:01:11.550
+[SEM_ÁUDIO] No
+
+14
+00:01:11.550 --> 00:01:15.854
+código crie uma variável
+chamada gameOverNode,
+
+15
+00:01:15.854 --> 00:01:21.630
+da classe SKLabelNode, e uma booleana
+chamada gameOver com o valor false.
+
+16
+00:01:21.630 --> 00:01:25.028
+Da mesma forma que fizemos
+com os outros nós,
+
+17
+00:01:25.028 --> 00:01:30.760
+procure pelo nó com o nome GameOverText,
+indicando que é da classe SKLabelNode.
+
+18
+00:01:30.760 --> 00:01:33.936
+Como o jogo já começa logo
+que a cena é carregada,
+
+19
+00:01:33.936 --> 00:01:39.140
+vamos esconder essa Label Game Over
+fazendo gameOverNode.hidden = true.
+
+20
+00:01:39.140 --> 00:01:42.565
+Vamos criar uma função chamada GameOver.
+
+21
+00:01:42.565 --> 00:01:48.090
+Nessa função escondemos o jogador com
+a linha playerNode.hidden = true.
+
+22
+00:01:48.090 --> 00:01:52.850
+Atualizamos a variável gameOver
+para true e mostramos o
+
+23
+00:01:52.850 --> 00:01:57.860
+Label GameOver com a linha
+gameOverNode.hidden = false.
+
+24
+00:01:57.860 --> 00:02:03.665
+Vamos criar também uma função chamada
+RestartGame que faz o inverso.
+
+25
+00:02:03.665 --> 00:02:09.930
+Mostra o playerNode, faz gameOver
+= false e esconde o gameOverNode.
+
+26
+00:02:09.930 --> 00:02:15.473
+Na função update vamos
+verificar a colisão entre
+
+27
+00:02:15.473 --> 00:02:23.460
+o jogador e o inimigo com a condição
+if(playerNode.intersectsNode(enemy1Node).
+
+28
+00:02:23.460 --> 00:02:28.160
+Se essa colisão for verdadeira,
+executamos a função GameOver.
+
+29
+00:02:28.160 --> 00:02:32.034
+Vamos fazer com que se o jogo
+estiver no estado Game Over,
+
+30
+00:02:32.034 --> 00:02:34.790
+qualquer toque na tela o jogo recomeça.
+
+31
+00:02:34.790 --> 00:02:39.114
+Para isso,
+na função touchesBegan executamos a função
+
+32
+00:02:39.114 --> 00:02:42.430
+RestartGame se gameOver for verdadeiro.
+
+33
+00:02:42.430 --> 00:02:46.340
+Rode no simulador para ver o resultado.
+
+34
+00:02:46.340 --> 00:02:54.340
+[SEM_ÁUDIO]
+
+35
+00:02:54.340 --> 00:03:02.143
+[SEM_ÁUDIO] Quando há
+colisão com o inimigo,
+
+36
+00:03:02.143 --> 00:03:06.120
+o jogo acaba, e ao tocar em qualquer
+lugar da tela, o jogo recomeça.
+
+37
+00:03:06.120 --> 00:03:11.635
+Na próxima aula vamos
+adicionar pontuação no jogo.
+
+38
+00:03:11.635 --> 00:03:12.520
+Até lá!

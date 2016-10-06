@@ -1,0 +1,594 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.890
+[MÚSICA] Meu
+
+2
+00:00:07.890 --> 00:00:10.021
+nome é Eduardo Guerra.
+
+3
+00:00:10.021 --> 00:00:15.135
+Você está aqui no curso de
+orientação a objetos com Java.
+
+4
+00:00:15.135 --> 00:00:19.783
+Hoje vamos falar de assunto
+extremamente importante que é o
+
+5
+00:00:19.783 --> 00:00:22.592
+relacionamento entre as classes tá?
+
+6
+00:00:22.592 --> 00:00:25.946
+A ideia dessa aula é
+mostrar pouco para vocês,
+
+7
+00:00:25.946 --> 00:00:29.835
+eu sei que a gente ainda não
+viu muito a questão prática né?
+
+8
+00:00:29.835 --> 00:00:34.488
+A gente tá meio que dando os primeiros
+passos Java, mas a minha ideia aqui é
+
+9
+00:00:34.488 --> 00:00:39.558
+mostrar para vocês a ideia real de
+orientação a objetos que é você
+
+10
+00:00:39.558 --> 00:00:45.530
+combinar várias classes para criar
+uma funcionalidade de sistema.
+
+11
+00:00:45.530 --> 00:00:52.190
+Bom, para mostrar isso para vocês,
+vim aqui nesse deserto aqui, nesse calor.
+
+12
+00:00:52.190 --> 00:00:52.807
+Nossa!
+
+13
+00:00:52.807 --> 00:00:55.097
+Para mostrar para vocês o quê?
+
+14
+00:00:55.097 --> 00:00:56.066
+Essa pedra!
+
+15
+00:00:56.066 --> 00:01:00.130
+Porque é que eu vim aqui
+mostrar para vocês essa pedra?
+
+16
+00:01:00.130 --> 00:01:08.080
+Para que vocês não façam o sistema
+de vocês dessa forma, certo?
+
+17
+00:01:08.080 --> 00:01:13.823
+Muita gente às vezes quando programa,
+programação estruturada com funções,
+
+18
+00:01:13.823 --> 00:01:20.311
+faz o programa é aquele blocão,
+é aquela coisa enorme que é bloco só.
+
+19
+00:01:20.311 --> 00:01:24.732
+Então assim quando a gente está
+trabalhando com orientação a objetos,
+
+20
+00:01:24.732 --> 00:01:29.362
+a gente tem que fugir dessa pedra, a gente
+não tem que querer que o nosso software
+
+21
+00:01:29.362 --> 00:01:31.910
+não tenha a cara dessa pedra, porquê?
+
+22
+00:01:31.910 --> 00:01:35.228
+A pedra,
+se a gente precisar diminuir pedacinho,
+
+23
+00:01:35.228 --> 00:01:40.430
+se a gente precisar modificar alguma
+coisa por exemplo imagina lá dentro dela,
+
+24
+00:01:40.430 --> 00:01:44.805
+a gente tem que mexer na pedra inteira,
+a gente tem que destruir a pedra inteira.
+
+25
+00:01:44.805 --> 00:01:49.180
+E não é isso que a gente quer, a gente
+quer sistema que seja fácil de trabalhar,
+
+26
+00:01:49.180 --> 00:01:52.418
+fácil de mexer, fácil de manter tá?
+
+27
+00:01:52.418 --> 00:01:59.753
+Então aí a gente vem aqui com o que
+a gente tem que buscar que é peças né?
+
+28
+00:01:59.753 --> 00:02:03.310
+O mais conhecido aí como Lego né?
+
+29
+00:02:03.310 --> 00:02:03.923
+Certo?
+
+30
+00:02:03.923 --> 00:02:08.416
+A gente tem que tentar fazer o
+nosso sistema dessa forma, né?
+
+31
+00:02:08.416 --> 00:02:10.779
+Como se fossem várias pequenas peças.
+
+32
+00:02:10.779 --> 00:02:11.352
+Porquê?
+
+33
+00:02:11.352 --> 00:02:16.288
+Porque se a gente precisar mudar uma, uma
+peça a gente só tira ela e coloca outra,
+
+34
+00:02:16.288 --> 00:02:19.600
+mesmo que ela esteja no meio
+de uma grande estrutura,
+
+35
+00:02:19.600 --> 00:02:21.936
+a gente não precisa mexer todas né?
+
+36
+00:02:21.936 --> 00:02:23.980
+Às vezes uma peça que a gente faz,
+
+37
+00:02:23.980 --> 00:02:27.560
+a gente pode usar aquela mesma
+peça que a gente construiu,
+
+38
+00:02:27.560 --> 00:02:32.544
+que seria digamos assim o formato da
+peça seria mais ou menos a classe, né?
+
+39
+00:02:32.544 --> 00:02:36.430
+A gente pega aquela classe e
+instancia vários objetos né?
+
+40
+00:02:36.430 --> 00:02:40.779
+Ás vezes com cores diferentes
+para montar aquele sistema maior.
+
+41
+00:02:40.779 --> 00:02:45.119
+Então é, é essa ideia que a gente
+tem que perseguir tá certo?
+
+42
+00:02:45.119 --> 00:02:49.256
+Então as classes de sistema
+elas têm que colaborar de forma
+
+43
+00:02:49.256 --> 00:02:52.776
+a chegar naquela funcionalidade
+que você quer certo?
+
+44
+00:02:52.776 --> 00:02:57.422
+Você não pode pensar numa funcionalidade
+como uma coisa que vai estar inteira
+
+45
+00:02:57.422 --> 00:03:01.315
+dentro de uma classe ou inteira
+dentro de método do seu sistema.
+
+46
+00:03:01.315 --> 00:03:07.449
+Você tem que pegar as responsabilidades e
+tentar dividir essas responsabilidades.
+
+47
+00:03:07.449 --> 00:03:12.961
+Imagina por exemplo, para a gente entender
+esses conceitos que eu estou falando,
+
+48
+00:03:12.961 --> 00:03:17.360
+imagina que a gente esteja desenvolvendo
+sistema de uma pizzaria online,
+
+49
+00:03:17.360 --> 00:03:20.860
+que o preço da pizza vai depender
+aí dos ingredientes dela,
+
+50
+00:03:20.860 --> 00:03:26.017
+como a maioria das pizzarias trabalha
+dessa forma e a entrega depende aí do,
+
+51
+00:03:26.017 --> 00:03:31.214
+o valor da entrega depende do dia
+da semana, depende da distância
+
+52
+00:03:31.214 --> 00:03:36.143
+entre a casa da pessoa,
+onde vai ter que entregar e a pizzaria.
+
+53
+00:03:36.143 --> 00:03:40.653
+Nem passe pela sua cabeça querer
+fazer esse sistema como uma pedra tá?
+
+54
+00:03:40.653 --> 00:03:44.811
+Querer colocar todas essas
+funcionalidades, todos esses cálculos
+
+55
+00:03:44.811 --> 00:03:49.061
+dentro de método só que fala: se
+tem ingrediente tal bota isso,
+
+56
+00:03:49.061 --> 00:03:53.043
+se tem o outro ingrediente,
+se tem calabresa coloca aquilo, se o cara
+
+57
+00:03:53.043 --> 00:03:57.686
+mora a tanto de distância bota mais,
+mas se for na segunda-feira é de graça.
+
+58
+00:03:57.686 --> 00:04:02.473
+Então nem pense querer botar
+isso tudo no mesmo local tá?
+
+59
+00:04:02.473 --> 00:04:07.980
+Então vamos tentar a partir desse exemplo,
+chegar quais classes
+
+60
+00:04:07.980 --> 00:04:13.728
+a gente utilizaria e como elas vão
+colaborar para formar essa funcionalidade.
+
+61
+00:04:13.728 --> 00:04:16.039
+O que é que a gente pode ter no sistema?
+
+62
+00:04:16.039 --> 00:04:21.028
+A gente teria aqui a própria classe pizza,
+que seria responsável ali por estar
+
+63
+00:04:21.028 --> 00:04:26.268
+calculando o preço baseado nos
+ingredientes, poderíamos ter uma classe
+
+64
+00:04:26.268 --> 00:04:32.828
+entrega, que estaria ali responsável
+por calcular o valor do frete,
+
+65
+00:04:32.828 --> 00:04:37.419
+e a gente teria uma classe aí que
+seria o carrinho de compras, que é uma
+
+66
+00:04:37.419 --> 00:04:41.615
+metáfora muito comum principalmente
+quando a gente trabalha com e-commerce,
+
+67
+00:04:41.615 --> 00:04:45.480
+que seria onde por exemplo normalmente,
+muitas vezes a pessoa vai comprar,
+
+68
+00:04:45.480 --> 00:04:49.598
+ela não compra uma pizza só,
+ela compra às vezes várias pizzas,
+
+69
+00:04:49.598 --> 00:04:53.343
+compra ali refrigerante,
+pode comprar uma sobremesa.
+
+70
+00:04:53.343 --> 00:04:58.834
+Então esse carrinho seria onde teriam
+todos os produtos que a pessoa comprou né?
+
+71
+00:04:58.834 --> 00:05:04.954
+E também quando eu perguntasse o total
+desse carrinho, ele me daria o somatório
+
+72
+00:05:04.954 --> 00:05:10.251
+do preço dos produtos mais o preço da
+entrega, que seria aí o preço total.
+
+73
+00:05:10.251 --> 00:05:12.910
+Como que essas classes vão colaborar?
+
+74
+00:05:12.910 --> 00:05:17.836
+Eu teria por exemplo,
+o carrinho sabendo calcular
+
+75
+00:05:17.836 --> 00:05:22.326
+o preço total, o carrinho por
+exemplo ele ia cada produto dele,
+
+76
+00:05:22.326 --> 00:05:27.208
+se fosse uma pizza ele perguntaria para
+essa pizza: pizza qual é o seu preço?
+
+77
+00:05:27.208 --> 00:05:28.484
+E aí o carrinho,
+
+78
+00:05:28.484 --> 00:05:33.273
+paro o carrinho não interessa como
+que a pizza calcula o total dela.
+
+79
+00:05:33.273 --> 00:05:35.813
+Isso é responsabilidade da pizza.
+
+80
+00:05:35.813 --> 00:05:40.244
+A responsabilidade do carrinho
+é somar o preço de seus
+
+81
+00:05:40.244 --> 00:05:42.960
+produtos com o preço da entrega.
+
+82
+00:05:42.960 --> 00:05:46.505
+O calcular o preço da pizza com
+base nos seus ingredientes é
+
+83
+00:05:46.505 --> 00:05:48.590
+responsabilidade da classe pizza.
+
+84
+00:05:48.590 --> 00:05:52.960
+Então a classe carrinho pra
+poder dizer o valor total,
+
+85
+00:05:52.960 --> 00:05:57.370
+ele ia colaborar com a classe
+pizza e perguntar: classe pizza,
+
+86
+00:05:57.370 --> 00:06:01.194
+na verdade o objeto pizza,
+objeto pizza qual que é o seu valor?
+
+87
+00:06:01.194 --> 00:06:04.945
+E aí ele simplesmente ia pegar aquele
+resultado pra somar com o resto.
+
+88
+00:06:04.945 --> 00:06:07.166
+E a mesma coisa com a classe entrega,
+
+89
+00:06:07.166 --> 00:06:11.370
+que seria responsável de calcular
+esse valor da entrega da pizza.
+
+90
+00:06:11.370 --> 00:06:15.454
+Então a classe carrinho ia
+colaborar com a classe entrega,
+
+91
+00:06:15.454 --> 00:06:19.128
+ia colaborar com a classe pizza,
+para criar toda essa
+
+92
+00:06:19.128 --> 00:06:23.731
+funcionalidade que é poder dizer
+qual que é o valor total da compra.
+
+93
+00:06:23.731 --> 00:06:28.791
+Então o carrinho ele iria lá para
+cada dos itens, perguntando o valor,
+
+94
+00:06:28.791 --> 00:06:33.673
+de repente se fosse uma,
+refrigerante ele já teria valor fixo né?
+
+95
+00:06:33.673 --> 00:06:38.470
+No caso da pizza ele teria uma lógica
+interna pra retornar esse valor,
+
+96
+00:06:38.470 --> 00:06:42.602
+e a entrega ele ia pegar por exemplo
+o endereço e ia pegar o dia da
+
+97
+00:06:42.602 --> 00:06:46.430
+semana e teria também uma
+lógica interna pra fazer isso.
+
+98
+00:06:46.430 --> 00:06:49.546
+Dessa forma fica muito
+claro que se por exemplo,
+
+99
+00:06:49.546 --> 00:06:54.010
+eu tiver ingrediente novo na minha
+pizzaria, eu posso modificar somente
+
+100
+00:06:54.010 --> 00:06:57.390
+a classe pizza e a classe carrinho
+não tem que saber nada disso.
+
+101
+00:06:57.390 --> 00:07:00.193
+Tá?
+Da mesma forma se eu quiser fazer uma
+
+102
+00:07:00.193 --> 00:07:02.010
+promoção de que, sei lá,
+
+103
+00:07:02.010 --> 00:07:06.630
+às quartas-feiras a entrega é
+gratuita ou tem certo desconto,
+
+104
+00:07:06.630 --> 00:07:10.425
+também a classe carrinho e a classe pizza
+não precisariam estar envolvido nisso.
+
+105
+00:07:10.425 --> 00:07:15.328
+Então essa é uma das vantagens de eu estar
+tentando separar as responsabilidades do
+
+106
+00:07:15.328 --> 00:07:16.267
+meu sistema.
+
+107
+00:07:16.267 --> 00:07:20.766
+Eu consigo dividir o que cada
+faz e depois quando eu vou
+
+108
+00:07:20.766 --> 00:07:25.308
+fazer a modificação uma parte,
+aquilo ali não afeta o resto.
+
+109
+00:07:25.308 --> 00:07:29.936
+E aí com isso, a gente dá para perceber
+que sistema orientado a objeto,
+
+110
+00:07:29.936 --> 00:07:36.560
+ele é basicamente identificar quais são
+as peças e como elas vão se encaixar.
+
+111
+00:07:36.560 --> 00:07:39.678
+Tá?
+Então qual que foi o meu esforço nesse
+
+112
+00:07:39.678 --> 00:07:41.459
+caso aqui da pizzaria?
+
+113
+00:07:41.459 --> 00:07:46.253
+É descobrir quais eram as
+classes que estavam envolvidas
+
+114
+00:07:46.253 --> 00:07:50.560
+na criação desse sistema da pizzaria
+no caso a pizza, a entrega, né?
+
+115
+00:07:50.560 --> 00:07:55.193
+A gente viu aí outras aulas
+como identificar isso aí,
+
+116
+00:07:55.193 --> 00:07:57.960
+como ver essas colaborações né?
+
+117
+00:07:57.960 --> 00:08:02.480
+E o grande segredo da modelagem
+orientada a objetos é
+
+118
+00:08:02.480 --> 00:08:06.196
+justamente você identificar quais
+são essas peças e como é que elas
+
+119
+00:08:06.196 --> 00:08:10.389
+vão colaborar para criar aquela
+funcionalidade final do seu sistema.
+
+120
+00:08:10.389 --> 00:08:14.925
+Com isso a gente viu aí, entendeu melhor
+o relacionamento entre as classes e
+
+121
+00:08:14.925 --> 00:08:19.085
+como que a gente pode combinar
+funcionalidades diferentes,
+
+122
+00:08:19.085 --> 00:08:24.973
+classes de objetos para criar
+a funcionalidade geral do sistema.
+
+123
+00:08:24.973 --> 00:08:28.500
+Até à próxima aula.
+
+124
+00:08:28.500 --> 00:08:30.580
+[MÚSICA]

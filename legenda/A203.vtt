@@ -1,0 +1,561 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.292
+[MÚSICA] Fala,
+
+2
+00:00:05.292 --> 00:00:10.220
+pessoal, tudo bem?
+
+3
+00:00:10.220 --> 00:00:14.465
+Nesta aula, vamos continuar
+implementando iApps em nosso aplicativo.
+
+4
+00:00:14.465 --> 00:00:18.710
+Desta vez, vamos tratar de implementar
+o código em nosso projeto de Xcode,
+
+5
+00:00:18.710 --> 00:00:22.646
+para que possamos finalmente apresentar
+ao usuário de nosso aplicativo,
+
+6
+00:00:22.646 --> 00:00:25.267
+as opções de compras que
+ele terá à disposição.
+
+7
+00:00:25.267 --> 00:00:28.720
+Sem enrolar mais,
+vamos continuar com a nossa aula de iApp.
+
+8
+00:00:28.720 --> 00:00:31.506
+Vamos começar então abrindo
+o nosso projeto no Xcode.
+
+9
+00:00:31.506 --> 00:00:35.989
+Como eu disse antes, vou continuar usando
+o nosso projeto das aulas anteriores,
+
+10
+00:00:35.989 --> 00:00:38.790
+mas você pode usar seu
+próprio app se preferir.
+
+11
+00:00:38.790 --> 00:00:40.014
+Antes de mais nada,
+
+12
+00:00:40.014 --> 00:00:44.899
+vamos criar uma nova viewController para
+cuidar da seleção e venda de nossos iApps.
+
+13
+00:00:44.899 --> 00:00:48.290
+Como geralmente temos vários
+itens para vender ao usuário,
+
+14
+00:00:48.290 --> 00:00:53.795
+vamos colocar uma tabela em nossa view,
+assim teremos uma lista dos itens à venda.
+
+15
+00:00:53.795 --> 00:00:59.300
+Precisaremos também de uma célula em
+nossa tabela, senão não adianta nada.
+
+16
+00:00:59.300 --> 00:01:03.190
+Em nossa célula,
+vamos escolher o estilo Subtitle.
+
+17
+00:01:03.190 --> 00:01:06.749
+Assim ela criará título e
+subtítulo automaticamente.
+
+18
+00:01:06.749 --> 00:01:09.690
+Escolha identificador
+para a sua nova célula.
+
+19
+00:01:09.690 --> 00:01:15.361
+Por fim,
+escolha Disclosure indicator em Accessory.
+
+20
+00:01:15.361 --> 00:01:20.525
+Voltando à nossa nova viewController,
+precisamos de botão de retorno
+
+21
+00:01:20.525 --> 00:01:25.020
+à tela principal, porque vamos apresentar
+a nossa tela de compras de modo modal.
+
+22
+00:01:25.020 --> 00:01:28.220
+Aproveite para dar nome
+mais explicativo para ele.
+
+23
+00:01:28.220 --> 00:01:30.976
+Vamos deixar a nossa nova
+view de lado só pouco,
+
+24
+00:01:30.976 --> 00:01:34.930
+porque precisamos modificar algumas
+coisas em nossa view principal.
+
+25
+00:01:34.930 --> 00:01:37.820
+Em nossa tela inicial,
+precisamos de 2 elementos.
+
+26
+00:01:37.820 --> 00:01:41.880
+Primeiro precisamos de ter botão que
+nos enviará para a tela de compras.
+
+27
+00:01:41.880 --> 00:01:46.616
+Agora precisamos de label que nos
+indicará se nosso item foi liberado com
+
+28
+00:01:46.616 --> 00:01:47.680
+sucesso ou não.
+
+29
+00:01:47.680 --> 00:01:51.955
+Aproveite para criar a Property
+desse Label uma vez que ele será
+
+30
+00:01:51.955 --> 00:01:53.980
+modificado dinamicamente.
+
+31
+00:01:53.980 --> 00:02:00.675
+[SEM_ÁUDIO] Por
+
+32
+00:02:00.675 --> 00:02:06.640
+fim vamos linkar o nosso botão
+com a nossa tela de compras.
+
+33
+00:02:06.640 --> 00:02:13.420
+Não se esqueça de escolher
+identificador para esse link.
+
+34
+00:02:13.420 --> 00:02:17.710
+A partir de agora vamos trabalhar
+somente na sua tela de compras.
+
+35
+00:02:17.710 --> 00:02:21.480
+Então, para começar,
+vamos criar controlador para ela.
+
+36
+00:02:21.480 --> 00:02:26.370
+Para isso vamos criar
+nova classe Cocoa Touch,
+
+37
+00:02:26.370 --> 00:02:33.310
+que é a subclasse de UiViewController.
+
+38
+00:02:33.310 --> 00:02:40.250
+Não se esqueça de linkar seu
+controlador com sua tela no storyboard.
+
+39
+00:02:40.250 --> 00:02:43.073
+Antes de colocarmos
+qualquer linha de código,
+
+40
+00:02:43.073 --> 00:02:45.900
+precisamos seguir 2
+passos em nosso projeto.
+
+41
+00:02:45.900 --> 00:02:49.654
+Primeiro precisamos selecionar
+nossa conta de desenvolvedor.
+
+42
+00:02:49.654 --> 00:02:52.178
+Para isso, clique no ícone de seu projeto,
+
+43
+00:02:52.178 --> 00:02:55.233
+no menu da esquerda e em
+Team escolha a sua conta.
+
+44
+00:02:55.233 --> 00:02:59.311
+Segundo, precisamos habilitar
+a opção de iApp em nosso app.
+
+45
+00:02:59.311 --> 00:03:04.550
+Na aba Capabilities, procure por in-App
+Purchase e mude seu switch para On.
+
+46
+00:03:04.550 --> 00:03:09.783
+O Xcode automaticamente
+importará o Framework StoreKit
+
+47
+00:03:09.783 --> 00:03:13.780
+em seu App e habilitará
+a opção iApp ao seu App Id.
+
+48
+00:03:13.780 --> 00:03:19.010
+Caso o XCode encontre algum problema,
+clique em Fix Issue para que ele arrume.
+
+49
+00:03:19.010 --> 00:03:21.090
+E finalmente vamos ao código,
+
+50
+00:03:21.090 --> 00:03:25.090
+vamos precisar de várias
+funções e variáveis diferentes.
+
+51
+00:03:25.090 --> 00:03:28.002
+Então talvez o processo
+todo seja pouco confuso.
+
+52
+00:03:28.002 --> 00:03:29.921
+Se você não entender algum passo,
+
+53
+00:03:29.921 --> 00:03:33.996
+procure assistir novamente à aula e
+ler os comentários junto das funções.
+
+54
+00:03:33.996 --> 00:03:35.384
+Se sua dúvida persistir,
+
+55
+00:03:35.384 --> 00:03:39.750
+entre em contato com outros programadores
+através de nosso fórum de discussões.
+
+56
+00:03:39.750 --> 00:03:44.530
+Para começar, vamos importar o Framework
+do StoreKit em nossa tela de compras.
+
+57
+00:03:44.530 --> 00:03:49.401
+[SEM ÁUDIO] Agora vamos
+
+58
+00:03:49.401 --> 00:03:54.769
+declarar uma variável que receberá os IDs
+de nossos produtos e uma segunda variável,
+
+59
+00:03:54.769 --> 00:03:57.884
+que armazenará nossos produtos à venda.
+
+60
+00:03:57.884 --> 00:04:02.835
+Precisamos também importar o
+protocolo SKProductsRequestDelegate
+
+61
+00:04:02.835 --> 00:04:04.823
+em nossa tela de compras.
+
+62
+00:04:04.823 --> 00:04:08.735
+Erro aparecerá mas não se
+preocupe com ele por enquanto.
+
+63
+00:04:08.735 --> 00:04:12.810
+Vamos agora inserir em nosso
+Array de IDs o Id de nosso item.
+
+64
+00:04:12.810 --> 00:04:17.783
+Agora precisamos de uma função que
+recebe as informações do iTunes
+
+65
+00:04:17.783 --> 00:04:20.540
+Connect sobre o itens que temos à venda.
+
+66
+00:04:20.540 --> 00:04:25.550
+Esta função primeiro verifica se o
+device do usuário aceita compras in-app.
+
+67
+00:04:25.550 --> 00:04:30.493
+Caso aceite, solicitamos as informações
+de nossos produtos através de seus IDs.
+
+68
+00:04:30.493 --> 00:04:34.320
+Antes de prosseguirmos,
+precisamos falar para o nosso app,
+
+69
+00:04:34.320 --> 00:04:37.440
+chamar esta função assim que
+a tela de compras for aberta.
+
+70
+00:04:37.440 --> 00:04:42.228
+Agora precisamos de uma função que
+recebe a informação solicitada sobre os
+
+71
+00:04:42.228 --> 00:04:43.444
+nossos produtos.
+
+72
+00:04:43.444 --> 00:04:46.550
+Esta função recebe Array
+sobre os nossos produtos,
+
+73
+00:04:46.550 --> 00:04:50.980
+em que contêm as informações de nossos
+produtos registrados no iTunes Connect.
+
+74
+00:04:50.980 --> 00:04:54.556
+Primeiro a função verifica se o
+Array passado não está vazio.
+
+75
+00:04:54.556 --> 00:04:59.160
+Caso não esteja, a variável productsArray
+recebe cada elemento deste Array.
+
+76
+00:04:59.160 --> 00:05:02.040
+Por fim,
+recarregamos os dados em nossa tabela.
+
+77
+00:05:02.040 --> 00:05:05.037
+Antes de prosseguirmos com
+nossas funções de compra,
+
+78
+00:05:05.037 --> 00:05:08.475
+precisamos modificar algumas
+propriedades de nossa tabela.
+
+79
+00:05:08.475 --> 00:05:12.984
+Para isso, vamos começar importando
+para a nossa tela 2 protocolos para ela.
+
+80
+00:05:12.984 --> 00:05:17.469
+No viewDidLoad vamos falar para o nosso
+app que a nossa tabela segue estes
+
+81
+00:05:17.469 --> 00:05:18.360
+protocolos.
+
+82
+00:05:18.360 --> 00:05:21.380
+Vamos precisar de 4 funções
+para a nossa tabela.
+
+83
+00:05:21.380 --> 00:05:25.988
+A primeira função verifica o número
+de sessões que a nossa tabela tem,
+
+84
+00:05:25.988 --> 00:05:28.018
+vamos precisar de apenas uma.
+
+85
+00:05:28.018 --> 00:05:31.971
+A segunda é uma função que vê quantas
+células nossa tabela precisa.
+
+86
+00:05:31.971 --> 00:05:35.920
+Calculamos este valor através do
+número de produtos em nossa Array.
+
+87
+00:05:35.920 --> 00:05:36.609
+A terceira,
+
+88
+00:05:36.609 --> 00:05:40.368
+mostra para o nosso app como ele deve
+montar as células de nossa tabela.
+
+89
+00:05:40.368 --> 00:05:43.882
+As informações são passadas através
+de nosso Array de produtos.
+
+90
+00:05:43.882 --> 00:05:48.084
+A quarta função recebe o valor da linha
+selecionada pelo usuário e o guarda na
+
+91
+00:05:48.084 --> 00:05:50.114
+variável selectedProduct Index.
+
+92
+00:05:50.114 --> 00:05:54.218
+Por fim, chamamos a função showAction,
+mas como você pode notar,
+
+93
+00:05:54.218 --> 00:05:57.242
+ainda não declaramos nem
+a variável nem a função.
+
+94
+00:05:57.242 --> 00:05:59.432
+Então é isso que precisamos fazer agora.
+
+95
+00:05:59.432 --> 00:06:03.761
+Primeiro vamos declarar a variável que
+irá guardar o valor da linha selecionada.
+
+96
+00:06:03.761 --> 00:06:06.610
+Agora precisamos declarar
+a função showActions.
+
+97
+00:06:06.610 --> 00:06:07.535
+Nesta função,
+
+98
+00:06:07.535 --> 00:06:12.089
+apresentamos ao usuário as opções que
+ele tem caso clique em item à venda.
+
+99
+00:06:12.089 --> 00:06:14.166
+Caso o usuário clique em comprar,
+
+100
+00:06:14.166 --> 00:06:17.582
+iniciamos uma sessão de
+compra através de SKPayment.
+
+101
+00:06:17.582 --> 00:06:20.440
+Passamos o valor da linha
+escolhida na tabela,
+
+102
+00:06:20.440 --> 00:06:23.274
+então identificamos o item
+que o usuário quer comprar.
+
+103
+00:06:23.274 --> 00:06:25.023
+Para que a nossa sessão funcione,
+
+104
+00:06:25.023 --> 00:06:27.930
+precisamos importar mais
+protocolo para nossa tela.
+
+105
+00:06:27.930 --> 00:06:33.260
+[SEM_ÁUDIO] Então dizemos
+
+106
+00:06:33.260 --> 00:06:37.170
+ao nosso aplicativo que vamos utilizar
+este protocolo em nossas transações.
+
+107
+00:06:37.170 --> 00:06:41.600
+A etapa final que envolve a nossa
+transação é montar uma função que nos diz
+
+108
+00:06:41.600 --> 00:06:43.500
+sobre as etapas da transação.
+
+109
+00:06:43.500 --> 00:06:47.700
+Desta forma, saberemos se correu tudo
+bem ou se ocorreu algum problema.
+
+110
+00:06:47.700 --> 00:06:52.839
+Esta função observa apenas se
+a transação ocorreu tudo bem ou não,
+
+111
+00:06:52.839 --> 00:06:57.560
+mas pode-se observar várias outras
+etapas caso seja necessário.
+
+112
+00:06:57.560 --> 00:07:01.700
+Como você pode ver, há o elemento
+Delegate não identificado pelo Xcode,
+
+113
+00:07:01.700 --> 00:07:04.580
+mas por enquanto vou deixar
+você apenas na curiosidade.
+
+114
+00:07:04.580 --> 00:07:07.839
+Vamos fazer mais uma pausa e na próxima
+aula vamos finalmente ver o iApp
+
+115
+00:07:07.839 --> 00:07:09.175
+funcionando em seu device.
+
+116
+00:07:09.175 --> 00:07:11.646
+Espero que você tenha gostado até agora.
+
+117
+00:07:11.646 --> 00:07:13.269
+Nos vemos na próxima aula.
+
+118
+00:07:13.269 --> 00:07:13.770
+Até lá.

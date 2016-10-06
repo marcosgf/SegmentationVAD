@@ -1,0 +1,954 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+[MÚSICA]
+
+2
+00:00:08.000 --> 00:00:13.084
+[MÚSICA] Dando continuidade
+
+3
+00:00:13.084 --> 00:00:17.380
+ao nosso módulo de entrevistas, a gente tá
+aqui com o Mateus Schmidt que é graduando
+
+4
+00:00:17.380 --> 00:00:21.757
+do Instituto de Artes da Unicamp
+e é coordenador geral do Gamux.
+
+5
+00:00:21.757 --> 00:00:26.885
+O Gamux é grupo de estudos constituído
+por alunos do Instituto de Computação e
+
+6
+00:00:26.885 --> 00:00:31.534
+de Artes da Unicamp que além de organizar
+reuniões semanais com atividades focadas
+
+7
+00:00:31.534 --> 00:00:35.240
+pesquisa e desenvolvimento de jogos
+digitais, também promove as game jams.
+
+8
+00:00:35.240 --> 00:00:38.977
+Mateus então com base na sua
+experiência junto ao Gamux como que
+
+9
+00:00:38.977 --> 00:00:42.036
+você vê a utilização de uma
+metodologia de trabalho,
+
+10
+00:00:42.036 --> 00:00:45.830
+no caso aqui a gente tá falando
+então da metodologia iterativa, né?
+
+11
+00:00:45.830 --> 00:00:48.230
+pra guiar o trabalho do artista, não é?
+
+12
+00:00:48.230 --> 00:00:53.073
+Você provavelmente já tentou trabalhar
+sem método, eu acho que todo mundo começa
+
+13
+00:00:53.073 --> 00:00:56.227
+dessa forma, e depois foi
+descobrindo como se organizar,
+
+14
+00:00:56.227 --> 00:00:58.647
+implementando processo de trabalho.
+
+15
+00:00:58.647 --> 00:00:59.922
+Como que foi isso?
+
+16
+00:00:59.922 --> 00:01:04.880
+>> Então como qualquer iniciante assim,
+quando eu comecei a trabalhar com
+
+17
+00:01:04.880 --> 00:01:08.823
+jogos eu comecei tateando sozinho casa.
+
+18
+00:01:08.823 --> 00:01:12.412
+E você acho que por estar treinado para
+fazer isso pela escola por todo o tempo
+
+19
+00:01:12.412 --> 00:01:15.818
+que você passa estudando,
+você começa com método mais tradicional.
+
+20
+00:01:15.818 --> 00:01:20.065
+Então você pega aquele método cascata, bem
+classicão, vai estudando passo a passo,
+
+21
+00:01:20.065 --> 00:01:21.402
+fazendo tudo devagarzinho.
+
+22
+00:01:21.402 --> 00:01:25.210
+Quando eu entrei no Gamux foi igualzinho:
+assim eu continuei nesse método cascata e
+
+23
+00:01:25.210 --> 00:01:27.850
+isso dura assim até você
+acabar o primeiro projeto.
+
+24
+00:01:27.850 --> 00:01:31.700
+Aí você percebe que o primeiro projeto
+não tem nada mais a ver com o briefing,
+
+25
+00:01:31.700 --> 00:01:36.400
+tem erro de usabilidade, tem erro de
+interface, tem erro de jogabilidade.
+
+26
+00:01:36.400 --> 00:01:39.176
+Às vezes a proposta do jogo
+inicial ela não é mais cumprida.
+
+27
+00:01:39.176 --> 00:01:40.286
+Por que isso acontece?
+
+28
+00:01:40.286 --> 00:01:42.130
+Assim o jogo ele é sistema complexo,
+
+29
+00:01:42.130 --> 00:01:47.354
+tem vários fatores que eles agem entre si
+e eles acabam atuando no outro e momento
+
+30
+00:01:47.354 --> 00:01:53.090
+essa interligação de fatores internos
+do jogo ela deixa de ser previsível.
+
+31
+00:01:53.090 --> 00:01:56.669
+Então o que que a gente começou a
+perceber, no meu caso por ser das artes eu
+
+32
+00:01:56.669 --> 00:02:00.886
+nem aprendi isso aula, foi uma coisa que
+a gente começou a reparar enquanto a gente
+
+33
+00:02:00.886 --> 00:02:04.735
+desenvolvia mesmo, mas que a ação do
+tester ela era muito mais eficiente,
+
+34
+00:02:04.735 --> 00:02:08.760
+a pessoa que estava testando o jogo,
+que sai jogando tudo muito mais eficiente
+
+35
+00:02:08.760 --> 00:02:11.520
+quando você intercala ela
+durante a produção do jogo,
+
+36
+00:02:11.520 --> 00:02:13.800
+do que quando você deixa
+ele testar no final.
+
+37
+00:02:13.800 --> 00:02:16.966
+Porque muitas vezes a pessoa testa no
+final o jogo e você tem que alterar uma
+
+38
+00:02:16.966 --> 00:02:18.497
+coisa que não dá mais para alterar.
+
+39
+00:02:18.497 --> 00:02:21.853
+Então assim tinha muitas vezes que eu
+queria uma alteraçãozinha de código que
+
+40
+00:02:21.853 --> 00:02:24.943
+era só mudar, mas tinha alteração que
+tinha que ia ter que mudar todas as
+
+41
+00:02:24.943 --> 00:02:27.858
+classes e tinha alteração que às
+vezes na arte tinha você por exemplo
+
+42
+00:02:27.858 --> 00:02:29.600
+fez as animações com os frames errados,
+
+43
+00:02:29.600 --> 00:02:33.427
+no formato errado e tá dando pau e
+você tem que fazer todas as alterações
+
+44
+00:02:33.427 --> 00:02:36.908
+todas as artes do jogo é uma coisa que
+fica inviável assim, toma muito tempo.
+
+45
+00:02:36.908 --> 00:02:40.423
+A gente percebeu que a gente fazendo
+vários testes curtos a gente conseguia
+
+46
+00:02:40.423 --> 00:02:45.180
+ir direcionando o jogo pra ponto que
+ele estava mais finalizado no final,
+
+47
+00:02:45.180 --> 00:02:47.577
+se a gente fizesse isso
+no processo tradicional.
+
+48
+00:02:47.577 --> 00:02:50.912
+>> Então eu acho que comparando por
+exemplo com outras obras de arte,
+
+49
+00:02:50.912 --> 00:02:56.545
+outros trabalhos artísticos seria mais ou
+menos a mesma coisa de você pegar trabalho
+
+50
+00:02:56.545 --> 00:03:00.870
+de arte, você apresentar a público e ele
+não ter o resultado que você esperou.
+
+51
+00:03:00.870 --> 00:03:04.237
+O quê que você faz com isso, você
+consegue só corrigir no próximo projeto.
+
+52
+00:03:04.237 --> 00:03:06.212
+>> Sim.
+>> E você partir por exemplo,
+
+53
+00:03:06.212 --> 00:03:08.728
+nesse caso especificamente dos jogos,
+
+54
+00:03:08.728 --> 00:03:13.089
+você consegue então trazer essa
+atuação do tester ou mesmo de qualquer
+
+55
+00:03:13.089 --> 00:03:18.038
+representante que vai entrar contato,
+ele contribuir com as suas críticas
+
+56
+00:03:18.038 --> 00:03:22.851
+no decorrer do desenvolvimento e já ir
+implementando essa essa, esse resultado.
+
+57
+00:03:22.851 --> 00:03:25.860
+>> Isso, é, acaba sendo realmente
+método de desenvolvimento ágil,
+
+58
+00:03:25.860 --> 00:03:29.258
+porque você precisa ter todo mundo junto,
+porque assim: é muito difícil de você
+
+59
+00:03:29.258 --> 00:03:31.990
+conseguir fazer a arte separada
+da programação e dar tudo certo.
+
+60
+00:03:31.990 --> 00:03:34.940
+Normalmente você enquanto você está
+fazendo a arte, o programador ali do lado
+
+61
+00:03:34.940 --> 00:03:37.529
+ele já olha pra arte que está sendo
+feita e já fala o que vai dar errado,
+
+62
+00:03:37.529 --> 00:03:38.260
+se vai dar errado.
+
+63
+00:03:38.260 --> 00:03:40.840
+Ao mesmo tempo você vê por exemplo
+o sólido, por exemplo o quadrado
+
+64
+00:03:40.840 --> 00:03:43.559
+vermelho pulando você fala: olha
+vai dar problema com a animação,
+
+65
+00:03:43.559 --> 00:03:46.359
+o pé dele não está quicando,
+por exemplo uma coisa assim.
+
+66
+00:03:46.359 --> 00:03:50.515
+Realmente no final você vai desenvolvendo
+método que ele é mais eficiente,
+
+67
+00:03:50.515 --> 00:03:51.842
+ele é mais completo assim.
+
+68
+00:03:51.842 --> 00:03:52.890
+Então no nosso caso,
+
+69
+00:03:52.890 --> 00:03:55.504
+a gente sempre trabalha com
+a equipe inteira no mesmo lugar.
+
+70
+00:03:55.504 --> 00:03:58.888
+A gente promove eventos de desenvolvimento
+que eles são maciços assim: então
+
+71
+00:03:58.888 --> 00:04:01.258
+a gente não faz duas horas
+de desenvolvimento conjunto.
+
+72
+00:04:01.258 --> 00:04:03.773
+A gente pega quarenta e oito fica
+todo mundo dois dias sem dormir,
+
+73
+00:04:03.773 --> 00:04:07.148
+a gente pega e mata o jogo três, quatro
+dias desse desenvolvimento porque a gente
+
+74
+00:04:07.148 --> 00:04:11.929
+percebe que a gente consegue fazer vária
+seções iterativas pedaços assim e no
+
+75
+00:04:11.929 --> 00:04:15.819
+final juntar tudo e o jogo acaba estando
+mais perto do documento de game design que
+
+76
+00:04:15.819 --> 00:04:20.337
+a gente montou no começo, quando a gente
+tem esse controle sobre as etapas.
+
+77
+00:04:20.337 --> 00:04:22.907
+>> O game designer às
+vezes ele tem uma visão,
+
+78
+00:04:22.907 --> 00:04:27.740
+uma ideia que o pessoal da programação
+muitas vezes não está implementando da
+
+79
+00:04:27.740 --> 00:04:29.978
+maneira que foi idealizado.
+
+80
+00:04:29.978 --> 00:04:35.881
+Então assim eu vejo que muitas propostas
+que partem somente de programadaores
+
+81
+00:04:35.881 --> 00:04:40.391
+equipes que não têm artistas ou que o
+artista entra só no final do projeto,
+
+82
+00:04:40.391 --> 00:04:45.007
+quando isso vai pra teste
+muitas vezes o jogador que vai
+
+83
+00:04:45.007 --> 00:04:49.052
+testar ele não, não consegue
+compreender bem aquela mecânica.
+
+84
+00:04:49.052 --> 00:04:51.937
+É como se ficassem uns pedaços
+separados do projeto, não é?
+
+85
+00:04:51.937 --> 00:04:53.442
+>> Sim.
+Uma coisa que a gente faz pra
+
+86
+00:04:53.442 --> 00:04:54.918
+tentar corrigir esse problema,
+
+87
+00:04:54.918 --> 00:04:57.710
+que é problema bastante comum
+na verdade não só com jogos,
+
+88
+00:04:57.710 --> 00:05:02.640
+qualquer projeto que você tem, que ele é
+compartimentalizado, você acaba tendo essa
+
+89
+00:05:02.640 --> 00:05:06.780
+diferença de mentalidade de quem estava no
+planejamento e de quem está só executando.
+
+90
+00:05:06.780 --> 00:05:10.355
+Uma coisa que a gente fez pra corrigir
+esse problema é que sempre antes de fazer
+
+91
+00:05:10.355 --> 00:05:13.820
+o documento de game design, antes dos
+games designers, da equipe que faz o
+
+92
+00:05:13.820 --> 00:05:16.910
+game design bolar a estratégia do jogo,
+a gente reúne todos os programadores e
+
+93
+00:05:16.910 --> 00:05:19.980
+artistas discute com eles a ideia para
+todo mundo entender a essência do projeto,
+
+94
+00:05:19.980 --> 00:05:24.080
+como o jogador deve se sentir,
+que estética a arte deve transmitir,
+
+95
+00:05:24.080 --> 00:05:28.753
+como que a dificuldade vai progredir
+durante o jogo, se é jogo para pro player,
+
+96
+00:05:28.753 --> 00:05:31.674
+para a pessoa que joga muito,
+se é jogo para quem não joga muito.
+
+97
+00:05:31.674 --> 00:05:33.980
+Porque aí no final quando a pessoa for
+desenvolver,
+
+98
+00:05:33.980 --> 00:05:36.939
+o panorama de ideia que a gente tem já
+está muito perto da do game designer.
+
+99
+00:05:36.939 --> 00:05:39.490
+Então as correções que a gente faz
+do game design são bem menores
+
+100
+00:05:39.490 --> 00:05:40.039
+>> Entendi.
+
+101
+00:05:40.039 --> 00:05:40.710
+>> Nesse caso.
+
+102
+00:05:40.710 --> 00:05:43.580
+>> E também tem aquelas reuniões
+que são pontuais, não é?
+
+103
+00:05:43.580 --> 00:05:48.444
+Geralmente na metodologia ágil você sempre
+tem algumas reuniões que vão pontuando o
+
+104
+00:05:48.444 --> 00:05:50.514
+decorrer do projeto, não é então.
+
+105
+00:05:50.514 --> 00:05:52.929
+>> Isso.
+>> Para você ver se está amarrado com o
+
+106
+00:05:52.929 --> 00:05:57.169
+objetivo, se o resultado está sendo
+atingido ou se precisa mudar alguma coisa.
+
+107
+00:05:57.169 --> 00:06:00.898
+>> Geral quando a gente desenvolve, a
+gente não usa nenhuma figura de gerente de
+
+108
+00:06:00.898 --> 00:06:05.261
+projeto muito forte assim, nunca é cara
+que está fora do projeto olhando de longe,
+
+109
+00:06:05.261 --> 00:06:08.881
+é sempre alguém que está participando e
+que normalmente tem pouco mais de visão do
+
+110
+00:06:08.881 --> 00:06:11.390
+jogo completo, normalmente é
+a pessoa mais experiente do grupo.
+
+111
+00:06:11.390 --> 00:06:15.080
+E ela acaba sendo, no ambiente da
+metodologia Scrum que é bem comum,
+
+112
+00:06:15.080 --> 00:06:18.699
+acaba sendo essa pessoa que vai estar
+cobrando as outras, que vai estar sempre
+
+113
+00:06:18.699 --> 00:06:21.283
+deixando tudo transparente,
+o que está acontecendo por todos os lados,
+
+114
+00:06:21.283 --> 00:06:23.760
+porque é a impossível a gente pegar
+e fazer o jogo sempre apenas assim.
+
+115
+00:06:23.760 --> 00:06:27.252
+Então vira e mexe o jogo volta para
+a casa de programador olha sei lá,
+
+116
+00:06:27.252 --> 00:06:29.803
+tem bug simples nas legendas,
+altera as legendas.
+
+117
+00:06:29.803 --> 00:06:30.463
+Ele vai e altera.
+
+118
+00:06:30.463 --> 00:06:31.916
+Olha os achievements estão dando pau.
+
+119
+00:06:31.916 --> 00:06:34.790
+Essas coisas pequenas não tem necessidade
+da gente juntar a equipe inteira.
+
+120
+00:06:34.790 --> 00:06:37.004
+Então sempre é bom ter alguém
+que está contato com todo mundo,
+
+121
+00:06:37.004 --> 00:06:39.793
+que é essa pessoa que tem essa visão, essa
+pessoa que costuma ser responsável por
+
+122
+00:06:39.793 --> 00:06:43.381
+marcar essas reuniões pontuais, que acabam
+auxiliando o desenvolvimento também.
+
+123
+00:06:43.381 --> 00:06:47.090
+>> No Gamux vocês procuram então orientar
+os iniciantes nessa entrada para o mundo
+
+124
+00:06:47.090 --> 00:06:48.880
+de desenvolvimento de jogos, não é?
+
+125
+00:06:48.880 --> 00:06:53.920
+Vocês têm uma preocupação transmitir uma
+metodologia de trabalho para esse pessoal,
+
+126
+00:06:53.920 --> 00:06:58.450
+vocês encontram uma certa resistência
+de transmitir essa metodologia para os
+
+127
+00:06:58.450 --> 00:06:59.516
+iniciantes?
+
+128
+00:06:59.516 --> 00:07:03.623
+>> Então, o que acontecia há pouco tempo
+atrás, na verdade fez uns três anos
+
+129
+00:07:03.623 --> 00:07:06.391
+a gente tinha uma metodologia
+mais tradicional de ensino.
+
+130
+00:07:06.391 --> 00:07:10.456
+Então o objetivo do Gamux sempre foi
+inserir as pessoas no mercado de jogos,
+
+131
+00:07:10.456 --> 00:07:12.060
+seja indie seja por empresa.
+
+132
+00:07:12.060 --> 00:07:16.567
+A gente quer dar a oportunidade para as
+pessoas de realmente entrar no mercado
+
+133
+00:07:16.567 --> 00:07:17.200
+com tudo.
+
+134
+00:07:17.200 --> 00:07:18.402
+O que acontecia no começo?
+
+135
+00:07:18.402 --> 00:07:21.285
+A gente oferecia aquela metodologia
+bem tradicional de ensino.
+
+136
+00:07:21.285 --> 00:07:25.370
+Então assim: tinha duas aulas semanais e
+as pessoas desenvolviam projeto por conta,
+
+137
+00:07:25.370 --> 00:07:28.256
+que a gente ia vistoriando
+e dando palpite.
+
+138
+00:07:28.256 --> 00:07:30.520
+O que acontecia sempre era assim.
+
+139
+00:07:30.520 --> 00:07:35.310
+Obviamente a gente lida com público
+noventa por cento universitário, então
+
+140
+00:07:35.310 --> 00:07:39.340
+a pessoa ia nas aulas, entrava semana
+de provas sumia não fazia mais nada,
+
+141
+00:07:39.340 --> 00:07:41.232
+o projeto defasando ia caindo, caindo.
+
+142
+00:07:41.232 --> 00:07:42.799
+No final de grupo de cinquenta,
+
+143
+00:07:42.799 --> 00:07:46.461
+sessenta alunos a gente tinha quatro
+projetos acabados, cinco no máximo.
+
+144
+00:07:46.461 --> 00:07:50.772
+E a gente tinha até se conformado com
+esse número, número que normalmente essas
+
+145
+00:07:50.772 --> 00:07:53.675
+cinco pessoas entravam na administração
+do Gamux no período seguinte.
+
+146
+00:07:53.675 --> 00:07:54.730
+A gente ia mantendo isso,
+
+147
+00:07:54.730 --> 00:07:59.891
+até ponto que a gente teve a ideia de
+pegar uma game jam e modificar ela para
+
+148
+00:07:59.891 --> 00:08:04.310
+ela servir na verdade como uma ferramenta
+de ensino que seguisse uma metodologia.
+
+149
+00:08:04.310 --> 00:08:05.712
+Então como que a gente fez?
+
+150
+00:08:05.712 --> 00:08:09.528
+Geral as game jams elas exigem que os
+participantes tenham algum conhecimento de
+
+151
+00:08:09.528 --> 00:08:12.820
+jogos, então você entra se você sabe
+fazer a arte e você sabe programar,
+
+152
+00:08:12.820 --> 00:08:14.210
+não tem espaço para aprender.
+
+153
+00:08:14.210 --> 00:08:15.720
+O que a gente fez foi o contrário.
+
+154
+00:08:15.720 --> 00:08:19.531
+A gente pegou uma game jam que ninguém
+sabe nada, a gente colocou dez membros do
+
+155
+00:08:19.531 --> 00:08:23.754
+Gamux mais ou menos ali, experientes,
+para ajudar as pessoas que não sabem nada.
+
+156
+00:08:23.754 --> 00:08:27.030
+Então você chega,
+você arrebanha pessoas, forma grupos,
+
+157
+00:08:27.030 --> 00:08:28.863
+você começa a desenvolver
+o projeto do zero.
+
+158
+00:08:28.863 --> 00:08:30.454
+>> Legal.
+>> Então o objetivo disso é passar
+
+159
+00:08:30.454 --> 00:08:31.515
+a metodologia para eles.
+
+160
+00:08:31.515 --> 00:08:34.940
+Então você faz eles fazerem reunião de
+game design, explica tudo que está ali se
+
+161
+00:08:34.940 --> 00:08:37.839
+fazendo de errado e eles estão
+fazendo certo e aí você vai ensinando
+
+162
+00:08:37.839 --> 00:08:41.549
+progressivamente até que no final com a
+habilidade que a pessoa tenha qualquer que
+
+163
+00:08:41.549 --> 00:08:44.753
+seja ela consiga ter produto
+finalizado e pronto para ser usado.
+
+164
+00:08:44.753 --> 00:08:46.150
+A nossa preocupação é essa.
+
+165
+00:08:46.150 --> 00:08:50.575
+A característica mais comum de quem está
+tentando entrar no mercado é elaborar
+
+166
+00:08:50.575 --> 00:08:54.261
+plano de MMO gigantesco
+de equipes absurdas
+
+167
+00:08:54.261 --> 00:08:56.949
+de pessoas e a pessoa não
+conseguir fechar o projeto.
+
+168
+00:08:56.949 --> 00:08:59.145
+>> Lógico.
+>> Então você pega pessoas que estudam
+
+169
+00:08:59.145 --> 00:09:03.032
+jogos mesmo curso de graduação de jogos
+as pessoas não conseguem finalizar o
+
+170
+00:09:03.032 --> 00:09:06.271
+projeto e ter alguma coisa para mostrar,
+quando elas estão procurando emprego.
+
+171
+00:09:06.271 --> 00:09:09.854
+A nossa preocupação é exatamente essa
+assim: tenha controle do seu projeto para
+
+172
+00:09:09.854 --> 00:09:13.756
+você conseguir ter produto finalizado
+para mostrar para as pessoas.
+
+173
+00:09:13.756 --> 00:09:15.495
+>> Conseguir formar portfólio, não é?
+
+174
+00:09:15.495 --> 00:09:17.080
+Depois.
+>> Isso exato, exatamente.
+
+175
+00:09:17.080 --> 00:09:18.410
+>> Começar a fazer portfólio.
+
+176
+00:09:18.410 --> 00:09:19.444
+Legal.
+Então Mateus,
+
+177
+00:09:19.444 --> 00:09:22.813
+eu vou pedir agora para você deixar uma
+dica para o pessoal que está iniciando,
+
+178
+00:09:22.813 --> 00:09:27.702
+não é, com relação a essa utilização
+da metodologia iterativa, especial para
+
+179
+00:09:27.702 --> 00:09:32.714
+quem quer trabalhar com essa vertente
+mais subjetiva da estética dos games,
+
+180
+00:09:32.714 --> 00:09:37.687
+do lado mais artístico,
+você que também é da área de artes.
+
+181
+00:09:37.687 --> 00:09:38.390
+>> Certo.
+
+182
+00:09:38.390 --> 00:09:41.685
+Olha a dica que eu posso dar, a dica que
+eu acho que pode ser mais significativa
+
+183
+00:09:41.685 --> 00:09:47.540
+para essas pessoas é: trabalhe
+ciclos e finalize os projetos.
+
+184
+00:09:47.540 --> 00:09:52.290
+Então assim, você fez ciclo com uma coisa
+que você já pode mostrar para as pessoas.
+
+185
+00:09:52.290 --> 00:09:53.772
+Coloca isso como mínimo.
+
+186
+00:09:53.772 --> 00:09:55.439
+Faça que esse ciclo seja curto.
+
+187
+00:09:55.439 --> 00:09:57.167
+Pensa, antes de pensar no jogo,
+
+188
+00:09:57.167 --> 00:09:59.894
+pensa: eu preciso ter alguma
+coisa jogável quinze dias.
+
+189
+00:09:59.894 --> 00:10:01.549
+Se você desistir dessa ideia no meio,
+
+190
+00:10:01.549 --> 00:10:04.539
+você já vai ter alguma coisa para
+mostrar e é isso que está faltando no
+
+191
+00:10:04.539 --> 00:10:07.455
+mercado hoje: as pessoas não
+conseguem completar os projetos.
+
+192
+00:10:07.455 --> 00:10:11.590
+Então elabore projetos que podem ser
+finalizados dentro do tempo que você tem.
+
+193
+00:10:11.590 --> 00:10:14.542
+>> Então Mateus,
+muita obrigada pela sua participação,
+
+194
+00:10:14.542 --> 00:10:17.760
+pela sua disponibilidade vir
+aqui conversar com a gente.
+
+195
+00:10:17.760 --> 00:10:18.579
+>> Foi prazer.
+
+196
+00:10:18.579 --> 00:10:19.587
+Eu é que agradeço.
+
+197
+00:10:19.587 --> 00:10:22.485
+>> Então essa entrevista
+finaliza o nosso sexto módulo.
+
+198
+00:10:22.485 --> 00:10:30.653
+A seguir vamos ver alguns conceitos
+finais para encerrar esse nosso curso.
+
+199
+00:10:30.653 --> 00:10:37.755
+[MÚSICA] [MÚSICA]
+
+200
+00:10:37.755 --> 00:10:42.750
+[MÚSICA]

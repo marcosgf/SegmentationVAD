@@ -1,0 +1,437 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.171
+Após esse video,
+
+2
+00:00:01.171 --> 00:00:05.623
+você será capaz de explicar
+a aproximação da resposta de sistemas de
+
+3
+00:00:05.623 --> 00:00:10.600
+terceira ordem pela resposta de sistemas
+de segunda ou até de primeira ordem.
+
+4
+00:00:10.600 --> 00:00:15.325
+Esta aproximação é muita parecida com
+a aproximação de sistemas de segunda
+
+5
+00:00:15.325 --> 00:00:18.030
+ordem para os sistemas de primeira ordem.
+
+6
+00:00:18.030 --> 00:00:23.530
+Se o polo mais afastado da origem
+estiver razoavelmente afastado, ou seja
+
+7
+00:00:23.530 --> 00:00:29.030
+se seu módulo for suficientemente grande,
+ele alterará pouco os outros resíduos.
+
+8
+00:00:29.030 --> 00:00:33.180
+Terá resíduo pequeno associado
+e tenderá rápido para 0.
+
+9
+00:00:33.180 --> 00:00:38.655
+Se tivermos 2 polos bem afastados com
+relação à terceiro mais próximo da origem,
+
+10
+00:00:38.655 --> 00:00:41.430
+podemos fazer uma aproximação
+de primeira ordem.
+
+11
+00:00:41.430 --> 00:00:44.885
+Vamos ver alguns exemplos com Simulink.
+
+12
+00:00:44.885 --> 00:00:49.730
+Execute o MATLAB, na aba home clique Open.
+
+13
+00:00:49.730 --> 00:00:51.443
+Aqui está o controlita.
+
+14
+00:00:51.443 --> 00:00:54.300
+Se tiver salvado uma pasta diferente,
+
+15
+00:00:54.300 --> 00:01:00.190
+encontre o controlita.slx selecione
+o arquivo e clique abrir.
+
+16
+00:01:00.190 --> 00:01:04.816
+Para facilitar a nossa vida daqui diante,
+vamos fazer uma pequena
+
+17
+00:01:04.816 --> 00:01:09.695
+alteração neste modelo e
+salvá-lo como template.
+
+18
+00:01:09.695 --> 00:01:12.224
+View, library browser, continuous.
+
+19
+00:01:12.224 --> 00:01:14.610
+Arraste uma transfer
+function para o modelo.
+
+20
+00:01:14.610 --> 00:01:19.070
+Substitua o segundo Zero Pole
+pela função de trasnferência.
+
+21
+00:01:19.070 --> 00:01:23.300
+Clique no segundo Zero Pole e tecle DEL.
+
+22
+00:01:23.300 --> 00:01:27.530
+E arraste a função de transferência
+para o lugar onde o Zero Pole estava.
+
+23
+00:01:27.530 --> 00:01:32.496
+Agora clique File,
+export model to template.
+
+24
+00:01:32.496 --> 00:01:36.950
+Se quiser, pode alterar o nome
+e acrescentar uma descrição.
+
+25
+00:01:36.950 --> 00:01:38.526
+Clique export.
+
+26
+00:01:38.526 --> 00:01:41.185
+Agora pode fechar esse modelo.
+
+27
+00:01:41.185 --> 00:01:44.830
+Se quiser pode salvar
+mas não é necessário.
+
+28
+00:01:44.830 --> 00:01:46.103
+A partir de agora,
+
+29
+00:01:46.103 --> 00:01:50.810
+vamos criar novos modelos com base
+no template que acabamos de criar.
+
+30
+00:01:50.810 --> 00:01:58.190
+Clique new Simulink model e escolha
+o template que você acabou de criar.
+
+31
+00:01:58.190 --> 00:02:02.733
+Pronto, com isso você já começa
+o novo diagrama com degrau,
+
+32
+00:02:02.733 --> 00:02:05.660
+uma função de transferência e scope.
+
+33
+00:02:05.660 --> 00:02:09.630
+E não precisa achar e arrastar
+esses blocos do library browser.
+
+34
+00:02:09.630 --> 00:02:14.797
+Modifique o Zero Pole para
+20 sobre s mais 1, s mais 2,
+
+35
+00:02:14.797 --> 00:02:19.850
+s mais 10, isso é,
+deixe só os colchetes nos zeros menos
+
+36
+00:02:19.850 --> 00:02:25.260
+1 menos 2 e 10 Poles,
+a ordem não importa, e 20 Gain.
+
+37
+00:02:25.260 --> 00:02:29.341
+Para ver o denominador,
+basta aumentar o tamanho do bloco,
+
+38
+00:02:29.341 --> 00:02:32.630
+clicando e arrastando
+uma das extremidades.
+
+39
+00:02:32.630 --> 00:02:39.170
+Na função de transferência, use 2 no
+numerador e 1, 3 e 2 no denominador.
+
+40
+00:02:39.170 --> 00:02:43.330
+Essa função de transferência,
+2 sobre S ao quadrado mais 3 S mais 2,
+
+41
+00:02:43.330 --> 00:02:47.490
+equivale a 2 sobre S mais 1, S mais 2.
+
+42
+00:02:47.490 --> 00:02:49.122
+Salve e rode a simulação.
+
+43
+00:02:49.122 --> 00:02:53.465
+A resposta do sistema de terceira
+ordem pode ser aproximada pela
+
+44
+00:02:53.465 --> 00:02:56.700
+resposta do sistema de segunda ordem.
+
+45
+00:02:56.700 --> 00:03:00.840
+Vamos mudar o polo menos 2 para menos 20.
+
+46
+00:03:00.840 --> 00:03:03.765
+Altere o polo e o ganho do Zero Pole.
+
+47
+00:03:03.765 --> 00:03:06.310
+O ganho agora deve ser 200,
+
+48
+00:03:06.310 --> 00:03:10.390
+e altere a função de transferência
+para 1 sobre S mais 1.
+
+49
+00:03:10.390 --> 00:03:15.915
+E rode a simulação novamente,
+mas mais interessante do que simplesmente
+
+50
+00:03:15.915 --> 00:03:20.179
+fazer a aproximação de terceira para
+segunda ou primeira ordem, é saber qual o
+
+51
+00:03:20.179 --> 00:03:25.210
+efeito de terceiro polo sobre a resposta
+subamortecida de segunda ordem.
+
+52
+00:03:25.210 --> 00:03:27.621
+Vamos criar novo modelo.
+
+53
+00:03:27.621 --> 00:03:30.440
+File, new model, controlita.
+
+54
+00:03:30.440 --> 00:03:35.365
+Edite a transfer function para 1 e 1 1 1 e
+
+55
+00:03:35.365 --> 00:03:40.050
+o Zero Pole para nada, menos 2.5 e 2.5.
+
+56
+00:03:40.050 --> 00:03:46.110
+Estique novamente a ligação entre o
+Zero Pole e o Scope, movendo o scope.
+
+57
+00:03:46.110 --> 00:03:51.290
+Copie e cole a transfer function e
+arraste ela para depois do Zero Pole.
+
+58
+00:03:51.290 --> 00:03:56.536
+Temos sistema de terceira
+ordem com polos menos
+
+59
+00:03:56.536 --> 00:04:01.691
+0,5 mais ou menos 0,87
+j e menos 2,5 e sistema
+
+60
+00:04:01.691 --> 00:04:07.400
+de segunda ordem com polos
+menos 0,5 mais ou menos 0,87 j.
+
+61
+00:04:07.400 --> 00:04:11.535
+Rode a simulação e abra o scope.
+
+62
+00:04:11.535 --> 00:04:13.527
+As respostas não são idênticas,
+
+63
+00:04:13.527 --> 00:04:18.120
+mas o overshooting é bem parecido,
+sendo que o overshooting do sistema com
+
+64
+00:04:18.120 --> 00:04:22.250
+terceiro polo é menor que o overshooting
+do sistema de segunda ordem.
+
+65
+00:04:22.250 --> 00:04:25.947
+Note também, que a resposta do
+sistema com o terceiro polo
+
+66
+00:04:25.947 --> 00:04:29.500
+é mais lenta que a resposta
+do sistema de segunda ordem.
+
+67
+00:04:29.500 --> 00:04:34.849
+Isto acontece porque podemos aproximar
+o efeito do terceiro polo como uma
+
+68
+00:04:34.849 --> 00:04:40.140
+suavização do degrau, então, a resposta
+fica mais lenta e mais amortecida.
+
+69
+00:04:40.140 --> 00:04:44.591
+Podemos fazer uma análise teórica
+dos resíduos, como no caso anterior,
+
+70
+00:04:44.591 --> 00:04:47.050
+mas creio que isso não seja necessário.
+
+71
+00:04:47.050 --> 00:04:50.684
+Como regra prática,
+podemos fazer uma aproximação,
+
+72
+00:04:50.684 --> 00:04:53.959
+se o polo mais afastado
+tiver módulo pelo menos,
+
+73
+00:04:53.959 --> 00:04:59.060
+5 vezes maior que o módulo da parte
+real dos polos complexos conjugados.
+
+74
+00:04:59.060 --> 00:05:03.780
+Quanto mais afastado estiver o
+terceiro polo, melhor é a aproximação.
+
+75
+00:05:03.780 --> 00:05:07.994
+Mas se o terceiro polo não
+estiver suficientemente afastado,
+
+76
+00:05:07.994 --> 00:05:09.910
+a aproximação não é válida.
+
+77
+00:05:09.910 --> 00:05:14.426
+Vamos mudar o terceiro polo para menos
+1 e depois para menos 0,5 e ver o que
+
+78
+00:05:14.426 --> 00:05:15.140
+acontece.
+
+79
+00:05:15.140 --> 00:05:20.370
+A diferença entre as respostas agora,
+é bem maior,
+
+80
+00:05:20.370 --> 00:05:26.200
+e com o polo menos 0,5 nem chegamos a ter
+overshooting na resposta ao degrau,
+
+81
+00:05:26.200 --> 00:05:28.146
+mesmo com csi de 0,5.
+
+82
+00:05:28.146 --> 00:05:33.446
+Você pode alterar a simulação e
+verificar que essa aproximação,
+
+83
+00:05:33.446 --> 00:05:37.593
+é válida também de sistemas de
+quarta para terceira ordem,
+
+84
+00:05:37.593 --> 00:05:41.460
+de quarta para segunda e até
+de quarta para primeira ordem.
+
+85
+00:05:41.460 --> 00:05:47.567
+Os polos mais distantes da origem,
+correspondem a modos mais rápidos,
+
+86
+00:05:47.567 --> 00:05:50.909
+e se esses polos estiverem
+suficientemente afastados,
+
+87
+00:05:50.909 --> 00:05:55.290
+podemos considerar a dinâmica apenas dos
+polos ou do polo mais próximo da origem,
+
+88
+00:05:55.290 --> 00:05:57.771
+que corresponde ao modo mais lento.
+
+89
+00:05:57.771 --> 00:06:02.468
+Agora, você já é capaz de explicar
+a aproximação da resposta de sistemas de
+
+90
+00:06:02.468 --> 00:06:06.830
+terceira ordem pela resposta de sistemas
+de segunda, ou até de primeira ordem.
+
+91
+00:06:06.830 --> 00:06:12.420
+E lembre, o terceiro polo deixa o
+sistema mais lento e mais amortecido.
+
+92
+00:06:12.420 --> 00:06:17.585
+No próximo video, você verá que alguns
+casos, a resposta ao degrau de sistema com
+
+93
+00:06:17.585 --> 00:06:24.290
+zeros pode ser aproximada pela resposta
+ao degrau de sistema sem zeros.

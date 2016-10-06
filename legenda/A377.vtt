@@ -1,0 +1,362 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.627
+Após esse video, você será capaz de
+esboçar o lugar geométrico das raízes para
+
+2
+00:00:04.627 --> 00:00:07.539
+sistemas de terceira
+ordem sem zeros e com 0.
+
+3
+00:00:07.539 --> 00:00:12.500
+Para nosso primeiro exemplo, vamos usar
+sistema de terceira ordem do Tipo 1:
+
+4
+00:00:12.500 --> 00:00:17.520
+G de s igual a 200 sobre
+s s mais 10 s mais 20.
+
+5
+00:00:17.520 --> 00:00:21.921
+São 3 ramos do lugar geométrico das
+raízes, no eixo real os trechos entre 0 e
+
+6
+00:00:21.921 --> 00:00:25.650
+menos 10 e à esquerda de menos 20,
+fazem parte do LGR.
+
+7
+00:00:25.650 --> 00:00:31.750
+Temos 3 assíntotas com 180 graus e mais
+ou menos 60 graus que se cruzam menos 10.
+
+8
+00:00:31.750 --> 00:00:36.385
+Construímos a tabela de Routh para
+determinar onde o LGR cruza o eixo
+
+9
+00:00:36.385 --> 00:00:37.370
+imaginário.
+
+10
+00:00:37.370 --> 00:00:42.293
+P de s igual s ao cubo mais 30 s
+ao quadrado mais 200 s mais 200 k,
+
+11
+00:00:42.293 --> 00:00:49.230
+na linha s 3, 1 e 200; na linha s 2, 30
+e 200 k; na linha s 1, 6000 menos 200 k,
+
+12
+00:00:49.230 --> 00:00:54.542
+k é igual a 30 e os polos complexos
+conjugados são: mais ou menos 10
+
+13
+00:00:54.542 --> 00:00:59.960
+raiz quadrada de 2 j, o que dá
+aproximadamente mais ou menos 14 j.
+
+14
+00:00:59.960 --> 00:01:06.420
+Calculando a saída do eixo real, 3 s ao
+quadrado mais 60 s mais 200 igual a 0,
+
+15
+00:01:06.420 --> 00:01:13.180
+raízes menos 15,8 e menos 4,2 e
+a saída do eixo real é menos 4,2.
+
+16
+00:01:13.180 --> 00:01:18.170
+Completando o root locus da
+forma mais simples possível.
+
+17
+00:01:18.170 --> 00:01:22.500
+Vamos agora ver como
+traçar o LGR com o MATLAB.
+
+18
+00:01:22.500 --> 00:01:26.129
+Execute o MATLAB e crie a função
+de transferência de nosso exemplo,
+
+19
+00:01:26.129 --> 00:01:32.694
+usando zpk, sys igual a zpk abre
+parênteses, abre e fecha colchetes,
+
+20
+00:01:32.694 --> 00:01:37.116
+vírgula, abre colchetes, 0 espaço menos
+10, espaço menos 20, fecha colchetes,
+
+21
+00:01:37.116 --> 00:01:42.175
+vírgula, abre colchetes, 200,
+fecha colchetes, fecha parênteses, enter.
+
+22
+00:01:42.175 --> 00:01:46.599
+E agora digite rlocus, abre parênteses,
+sys, fecha parênteses,
+
+23
+00:01:46.599 --> 00:01:51.850
+enter e pronto, aqui está o lugar
+geométrico das raízes de nosso exemplo.
+
+24
+00:01:51.850 --> 00:01:52.915
+Difícil, não?
+
+25
+00:01:52.915 --> 00:01:56.800
+Agora você sabe conferir este
+lugar geométrico das raízes.
+
+26
+00:01:56.800 --> 00:02:00.917
+Você pode clicar sobre dos
+ramos e arrastar o quadradinho
+
+27
+00:02:00.917 --> 00:02:05.482
+para ver alguns valores do LGR,
+por exemplo, o ponto de cruzamento do eixo
+
+28
+00:02:05.482 --> 00:02:09.685
+imaginário e o ganho para isso e
+o ponto de saída do eixo real.
+
+29
+00:02:09.685 --> 00:02:13.520
+Note que os valores batem
+com os valores calculados.
+
+30
+00:02:13.520 --> 00:02:18.180
+Altere as posições dos polos, colocando
+ou mais no semiplano da esquerda,
+
+31
+00:02:18.180 --> 00:02:22.428
+experimente também usar par de
+polos complexos conjugados,
+
+32
+00:02:22.428 --> 00:02:27.520
+esboce o LGR e confira seu esboço
+usando a função rlocus do MATLAB.
+
+33
+00:02:27.520 --> 00:02:32.449
+Vamos agora ver o LGR de sistema
+de terceira ordem com 0: G de
+
+34
+00:02:32.449 --> 00:02:37.180
+s é igual a 200 s mais 5
+sobre s s mais 10 s mais 15.
+
+35
+00:02:37.180 --> 00:02:41.584
+Novamente são 3 ramos do LGR,
+no eixo real os trechos entre
+
+36
+00:02:41.584 --> 00:02:45.220
+0 e menos 5 e entre menos 10 e
+menos 15 fazem parte do LGR.
+
+37
+00:02:45.220 --> 00:02:50.530
+Temos duas assíntotas com mais e menos
+90 graus, que se cruzam menos 10.
+
+38
+00:02:50.530 --> 00:02:54.891
+Se você construir a tabela de Routh para
+esse sistema, verá que ele nunca ficará
+
+39
+00:02:54.891 --> 00:03:00.310
+instável para ganho positivo,
+o LGR então não cruza o eixo imaginário.
+
+40
+00:03:00.310 --> 00:03:02.500
+Vamos calcular a saída do eixo real.
+
+41
+00:03:02.500 --> 00:03:06.741
+Como temos polinômio no numerador,
+vamos usar a fórmula completa,
+
+42
+00:03:06.741 --> 00:03:11.210
+que corresponde a igualar
+a derivada de 1 sobre G de s a 0.
+
+43
+00:03:11.210 --> 00:03:16.026
+O denominador de G de s é s ao
+cubo mais 25 s ao quadrado mais
+
+44
+00:03:16.026 --> 00:03:19.921
+150 s e o numerador de G
+de s é 200 s mais 1000.
+
+45
+00:03:19.921 --> 00:03:24.643
+Derivando o denominador com relação
+a s obtemos: 3 s ao quadrado mais
+
+46
+00:03:24.643 --> 00:03:28.620
+50 s mais 150 e derivando
+o denominador obtemos 200.
+
+47
+00:03:28.620 --> 00:03:33.471
+Substituindo na fórmula, temos:
+menos 3 s ao quadrado mais 50 s mais
+
+48
+00:03:33.471 --> 00:03:38.722
+150 sobre 200 s mais 1000 mais s
+ao cubo mais 25 s ao quadrado mais
+
+49
+00:03:38.722 --> 00:03:43.841
+150 s sobre 200 s mais 1000 ao
+quadrado vezes 200 igual a 0,
+
+50
+00:03:43.841 --> 00:03:49.346
+que podemos reescrever como: 200 s ao cubo
+mais 25 s ao quadrado mais 150 s igual
+
+51
+00:03:49.346 --> 00:03:54.530
+a 3 s ao quadrado mais 50 s
+mais 150 vezes 200 s mais 1000.
+
+52
+00:03:54.530 --> 00:03:59.405
+Fazendo a multiplicação e
+reagrupando os termos, chegamos a:
+
+53
+00:03:59.405 --> 00:04:04.280
+400 s ao cubo mais 8000 s ao quadrado
+mais 50000 s mais 150000 igual a 0.
+
+54
+00:04:04.280 --> 00:04:09.448
+Que podemos ainda simplificar para: s
+ao cubo mais 20 s ao quadrado mais 125
+
+55
+00:04:09.448 --> 00:04:14.544
+s mais 375 igual a 0,
+cujas raízes são aproximadamente
+
+56
+00:04:14.544 --> 00:04:18.652
+menos 12,3 e menos 3,8 mais ou menos 4 j e
+
+57
+00:04:18.652 --> 00:04:23.500
+obviamente o ponto de saída
+só pode ser menos 12,3.
+
+58
+00:04:23.500 --> 00:04:28.520
+Finalizando nosso LGR,
+note que para esboço poderíamos ter
+
+59
+00:04:28.520 --> 00:04:33.540
+colocado a saída do eixo real no ponto
+médio entre menos 10 e menos 15,
+
+60
+00:04:33.540 --> 00:04:36.325
+o meu esboço ainda estaria muito bom.
+
+61
+00:04:36.325 --> 00:04:41.470
+Eu acho que você nem precisa da minha
+ajuda para traçar o LGR no MATLAB,
+
+62
+00:04:41.470 --> 00:04:47.016
+mas vamos lá, digite: sys igual a zpk,
+abre parênteses, abre colchetes, menos 5,
+
+63
+00:04:47.016 --> 00:04:51.782
+fecha colchetes, vírgula, abre colchetes,
+0 espaço menos 10, espaço menos 15, fecha
+
+64
+00:04:51.782 --> 00:04:56.480
+colchetes, vírgula, abre colchetes, 200,
+fecha colchetes, fecha parênteses, enter.
+
+65
+00:04:56.480 --> 00:05:01.405
+E rlocus, sys, enter.
+
+66
+00:05:01.405 --> 00:05:05.812
+Note novamente que os valores do
+cruzamento das assíntotas e do ponto de
+
+67
+00:05:05.812 --> 00:05:08.843
+saída, batem com os valores calculados,
+
+68
+00:05:08.843 --> 00:05:13.807
+altere as posições dos polos e do
+0 e treine mais pouco, se quiser,
+
+69
+00:05:13.807 --> 00:05:17.780
+pode acrescentar mais ou dois
+zeros à função de transferência.
+
+70
+00:05:17.780 --> 00:05:24.610
+Acrescentaremos polo no próximo video,
+esboce os LGRs e confira usando o MATLAB.
+
+71
+00:05:24.610 --> 00:05:29.639
+Agora você já é capaz de esboçar o
+LGR para sistemas de terceira ordem,
+
+72
+00:05:29.639 --> 00:05:30.892
+sem ou com zeros.
+
+73
+00:05:30.892 --> 00:05:32.199
+No próximo video,
+
+74
+00:05:32.199 --> 00:05:37.360
+você verá exemplo do esboço de LGR
+de quarta ordem sem zeros e com 0.

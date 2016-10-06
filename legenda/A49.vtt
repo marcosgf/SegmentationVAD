@@ -1,0 +1,75 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.670
+[MÚSICA]
+
+2
+00:00:05.670 --> 00:00:12.865
+[SEM_ÁUDIO] Bem,
+
+3
+00:00:12.865 --> 00:00:17.740
+se você já chegou até aqui
+
+4
+00:00:17.740 --> 00:00:21.790
+você já avançou bastante, espero que você
+seja bastante engajado nas atividades.
+
+5
+00:00:21.790 --> 00:00:26.750
+Agora que você já aprendeu como coletar
+e preparar os dados vamos ver como é
+
+6
+00:00:26.750 --> 00:00:28.910
+que a gente pode analisá-los.
+
+7
+00:00:28.910 --> 00:00:34.810
+Nesse módulo a gente vai tratar de
+duas técnicas: correlação e regressão.
+
+8
+00:00:34.810 --> 00:00:37.630
+A correlação é mais uma
+técnica exploratória,
+
+9
+00:00:37.630 --> 00:00:42.740
+o objetivo é você identificar
+possíveis associações entre variáveis.
+
+10
+00:00:42.740 --> 00:00:46.840
+Na regressão a palavra chave
+é causalidade, ou seja,
+
+11
+00:00:46.840 --> 00:00:51.520
+a gente quer identificar o que é que
+é causa e o que é que é consequência.
+
+12
+00:00:51.520 --> 00:00:54.098
+Com essas duas técnicas você vai conseguir
+
+13
+00:00:54.098 --> 00:00:57.400
+tirar bastante informação
+para poder tomar decisão.
+
+14
+00:00:57.400 --> 00:01:01.791
+Esse é módulo bastante prático, então
+a gente espera que você se engaje bastante
+
+15
+00:01:01.791 --> 00:01:06.310
+nos exercícios,
+utilizando ferramentas como o Excel e o
+
+16
+00:01:06.310 --> 00:01:11.980
+Stata.

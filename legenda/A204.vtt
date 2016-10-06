@@ -1,0 +1,307 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.716
+[MÚSICA] Fala, pessoal.
+
+2
+00:00:05.716 --> 00:00:06.955
+Tudo bem?
+
+3
+00:00:06.955 --> 00:00:14.194
+Nesta aula, vamos finalmente terminar de
+implementar iApps em nosso aplicativo.
+
+4
+00:00:14.194 --> 00:00:17.985
+Encerramos a aula passada
+implementando as funções que enviam
+
+5
+00:00:17.985 --> 00:00:22.097
+pedido para receber as informações de
+nossos itens e que verificam se ocorreu
+
+6
+00:00:22.097 --> 00:00:23.994
+tudo certo com a transação do iApp.
+
+7
+00:00:23.994 --> 00:00:27.640
+Agora falta explicar para o nosso
+App o que fazer com a informação e
+
+8
+00:00:27.640 --> 00:00:31.575
+que o item foi comprado com sucesso
+e é isso que vamos fazer nesta aula.
+
+9
+00:00:31.575 --> 00:00:36.382
+No final da aula, vou mostrar também como
+testar seu App como usuário de teste para
+
+10
+00:00:36.382 --> 00:00:40.823
+que você compre seus itens em modo sandbox
+e não precise pagar nada por eles.
+
+11
+00:00:40.823 --> 00:00:45.158
+Vamos então voltar à implementação
+de delegate para nosso aplicativo.
+
+12
+00:00:45.158 --> 00:00:49.845
+Este delegate irá tratar de realizar o
+desbloqueio de alguma funcionalidade em
+
+13
+00:00:49.845 --> 00:00:54.410
+nosso App, após recebermos a confirmação
+da compra de item pelo usuário.
+
+14
+00:00:54.410 --> 00:00:58.802
+Em nosso caso, esse delegate irá apenas
+mudar o label em nossa tela inicial.
+
+15
+00:00:58.802 --> 00:01:02.495
+Então, é exatamente isso que
+precisamos fazer agora, ou seja,
+
+16
+00:01:02.495 --> 00:01:04.770
+criar o protocolo de nosso novo delegate.
+
+17
+00:01:04.770 --> 00:01:08.944
+Nesse protocolo temos apenas uma
+função que recebe valor inteiro.
+
+18
+00:01:08.944 --> 00:01:13.804
+Agora precisamos declarar nosso delegate
+que irá usar este novo protocolo.
+
+19
+00:01:13.804 --> 00:01:17.370
+Como vamos usar a função desse
+delegate em nossa tela inicial,
+
+20
+00:01:17.370 --> 00:01:21.034
+precisamos importar esse
+protocolo naquela tela.
+
+21
+00:01:21.034 --> 00:01:25.920
+Agora precisamos dizer que nossa tela
+inicial será o delegate de nossa
+
+22
+00:01:25.920 --> 00:01:27.100
+tela de compras.
+
+23
+00:01:27.100 --> 00:01:31.731
+Para isso usamos a função Prepare for
+segue, em que verificamos se estamos
+
+24
+00:01:31.731 --> 00:01:35.140
+mudando para tela de compras,
+então "setamos" o delegate.
+
+25
+00:01:35.140 --> 00:01:39.953
+Por fim, precisamos declarar a função que
+irá modificar nossa tela após a compra
+
+26
+00:01:39.953 --> 00:01:40.518
+do item.
+
+27
+00:01:40.518 --> 00:01:42.020
+Antes de testar seu App,
+
+28
+00:01:42.020 --> 00:01:46.225
+vamos voltar para nossa tela de compras
+e declarar a função do botão de voltar,
+
+29
+00:01:46.225 --> 00:01:50.430
+senão não conseguiremos retornar à
+tela principal para ver o resultado.
+
+30
+00:01:50.430 --> 00:01:54.450
+Nesta função, diremos apenas que
+nossa view seja retirada da tela.
+
+31
+00:01:54.450 --> 00:01:57.155
+Vamos agora testar nosso App.
+
+32
+00:01:57.155 --> 00:02:01.950
+Para isso,
+você vai precisar usar seu iPhone ou iPad,
+
+33
+00:02:01.950 --> 00:02:05.599
+porque o simulador do Xcode não
+consegue acessar o iTunes connect.
+
+34
+00:02:05.599 --> 00:02:09.779
+Eu recomendo que você primeiro rode o
+Xcode para que ele instale o App no seu
+
+35
+00:02:09.779 --> 00:02:14.571
+device e depois pare a execução no Xcode e
+teste o aplicativo sem estar conectado com
+
+36
+00:02:14.571 --> 00:02:15.675
+o seu computador.
+
+37
+00:02:15.675 --> 00:02:20.680
+Desse modo, evitamos que ocorram
+conflitos entre o Xcode e o seu device.
+
+38
+00:02:20.680 --> 00:02:24.053
+Agora que você tem o aplicativo
+instalado em seu device,
+
+39
+00:02:24.053 --> 00:02:26.520
+vamos testar se a iApp está funcionando.
+
+40
+00:02:26.520 --> 00:02:30.710
+Para começar, você deve estar usando
+a sua conta de tester em seu device.
+
+41
+00:02:30.710 --> 00:02:35.486
+Para isso, vá nas configurações do seu
+device e clique em iTunes e AppStore.
+
+42
+00:02:35.486 --> 00:02:38.580
+Clique em Apple ID e deslogue
+de sua conta normal.
+
+43
+00:02:38.580 --> 00:02:41.760
+Agora, abra seu aplicativo
+e clique no botão Compras.
+
+44
+00:02:41.760 --> 00:02:45.455
+Pode demorar pouco até que nosso
+aplicativo receba o item da iTunes
+
+45
+00:02:45.455 --> 00:02:46.028
+connect.
+
+46
+00:02:46.028 --> 00:02:48.460
+Espere até que seus
+itens apareçam na lista.
+
+47
+00:02:48.460 --> 00:02:51.392
+Como só temos item à venda, clique nele.
+
+48
+00:02:51.392 --> 00:02:54.940
+Alert view aparecerá com as
+opções Cancelar e Comprar.
+
+49
+00:02:54.940 --> 00:02:56.346
+Clique em Comprar.
+
+50
+00:02:56.346 --> 00:02:58.745
+Uma nova tela de login aparecerá.
+
+51
+00:02:58.745 --> 00:03:02.580
+Clique em Use existing Apple ID
+e digite seu login de tester.
+
+52
+00:03:02.580 --> 00:03:06.870
+Uma nova alert view se abrirá, pedindo
+para que você confirme a sua compra.
+
+53
+00:03:06.870 --> 00:03:11.851
+Note que aparece escrito Environment
+sandbox na parte inferior da alert view.
+
+54
+00:03:11.851 --> 00:03:16.666
+Isso significa que você está logado com
+sua conta de tester e não pagará nada
+
+55
+00:03:16.666 --> 00:03:17.440
+pelo iApp.
+
+56
+00:03:17.440 --> 00:03:20.814
+Clique em Buy e espere até que
+a transação seja confirmada.
+
+57
+00:03:20.814 --> 00:03:25.416
+Agora basta que você volte para sua tela
+principal e verifique que o label foi
+
+58
+00:03:25.416 --> 00:03:28.130
+modificado com a mensagem iApp comprada.
+
+59
+00:03:28.130 --> 00:03:31.827
+Como usamos item consumível,
+sempre que você abrir seu App,
+
+60
+00:03:31.827 --> 00:03:34.011
+será possível comprá-lo novamente.
+
+61
+00:03:34.011 --> 00:03:37.180
+Agora que você já sabe como
+fazer uma compra dentro do App,
+
+62
+00:03:37.180 --> 00:03:41.025
+é só usar a sua criatividade e criar
+vários itens em seu aplicativo.
+
+63
+00:03:41.025 --> 00:03:43.323
+Espero que tenham gostado desta aula.
+
+64
+00:03:43.323 --> 00:03:47.341
+Nas próximas aulas,
+veremos mais sobre como aprimorar seu App.
+
+65
+00:03:47.341 --> 00:03:47.860
+Até lá!

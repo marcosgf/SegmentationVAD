@@ -1,0 +1,721 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.860
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.860 --> 00:00:12.472
+bem vindo ao curso Orientação
+a Objetos com Java.
+
+3
+00:00:12.472 --> 00:00:17.918
+Eu sou o Clovis Fernandes e hoje vamos
+falar de identificação de colaborações.
+
+4
+00:00:17.918 --> 00:00:22.775
+Vamos falar de classes colaboradoras
+e colaborações de responsabilidades
+
+5
+00:00:22.775 --> 00:00:24.266
+de uma dada classe.
+
+6
+00:00:24.266 --> 00:00:27.690
+Anteriormente nós
+definimos e identificamos
+
+7
+00:00:27.690 --> 00:00:30.885
+a lógica de responsabilidades
+de uma classe.
+
+8
+00:00:30.885 --> 00:00:35.348
+Agora queremos identificar as classes
+colaboradoras e as colaborações das
+
+9
+00:00:35.348 --> 00:00:37.730
+responsabilidades de uma dada classe.
+
+10
+00:00:37.730 --> 00:00:41.917
+Vamos retomar as classes que nós
+estivemos trabalhando na aula
+
+11
+00:00:41.917 --> 00:00:45.480
+anterior: a classe
+Conta Corrente e a classe Banco.
+
+12
+00:00:45.480 --> 00:00:49.804
+A classe Conta Corrente nós vimos
+que tem 2 responsabilidades do tipo
+
+13
+00:00:49.804 --> 00:00:53.480
+sabe: sabe o número da conta,
+sabe o valor do saldo atual.
+
+14
+00:00:53.480 --> 00:00:57.326
+Estou reapresentado apenas 2
+responsabilidade do tipo faz,
+
+15
+00:00:57.326 --> 00:01:03.376
+para credita valor ao saldo atual,
+debita valor do saldo atual.
+
+16
+00:01:03.376 --> 00:01:08.179
+Já a classe Banco tem duas
+responsabilidades do tipo sabe: ela sabe
+
+17
+00:01:08.179 --> 00:01:12.500
+as contas que estão ativas e ela
+sabe as contas que estão inativas.
+
+18
+00:01:12.500 --> 00:01:19.030
+A classe Banco tem 3 responsabilidades
+do tipo faz: registra uma conta nova,
+
+19
+00:01:19.030 --> 00:01:25.230
+apresenta a lista dos números de conta e
+obtém o valor do saldo do Banco como todo.
+
+20
+00:01:25.230 --> 00:01:30.081
+Estou reapresentando a lógica da
+responsabilidade apresenta os números da
+
+21
+00:01:30.081 --> 00:01:34.900
+conta, das contas ativas porque eu quero
+enfatizar o papel das colaborações.
+
+22
+00:01:34.900 --> 00:01:39.475
+Então nós temos aí que o objeto Banco
+ele tem uma lista de contas correntes,
+
+23
+00:01:39.475 --> 00:01:41.230
+objetos contas correntes.
+
+24
+00:01:41.230 --> 00:01:46.133
+Eu preciso para pegar os números
+dessas contas correntes examinar cada
+
+25
+00:01:46.133 --> 00:01:48.475
+objeto conta corrente dessa lista.
+
+26
+00:01:48.475 --> 00:01:52.856
+Para cada uma dessas contas eu envio
+uma mensagem e peço: conta corrente,
+
+27
+00:01:52.856 --> 00:01:54.397
+como você sabe o número da conta?
+
+28
+00:01:54.397 --> 00:01:55.718
+Passa para mim este número.
+
+29
+00:01:55.718 --> 00:01:58.085
+Então eu preciso deste
+número e ele passa para mim.
+
+30
+00:01:58.085 --> 00:02:00.030
+O que é que eu estou
+fazendo com isso tudo?
+
+31
+00:02:00.030 --> 00:02:05.287
+Na lógica dessa responsabilidade eu
+estou pedido para objeto da classe
+
+32
+00:02:05.287 --> 00:02:10.509
+Conta Corrente prestar serviço para mim,
+ou seja, eu estou pedindo uma colaboração.
+
+33
+00:02:10.509 --> 00:02:16.048
+Então a classe Conta Corrente nesse caso,
+ela é classe Colaboradora, porquê?
+
+34
+00:02:16.048 --> 00:02:20.522
+Eu peço para objeto Conta Corrente que
+é da classe Conta Corrente para ela
+
+35
+00:02:20.522 --> 00:02:22.483
+me auxiliar, colaborar comigo,
+
+36
+00:02:22.483 --> 00:02:27.024
+eu não consigo fazer tudo sozinho nessa
+responsabilidade para apresentar os
+
+37
+00:02:27.024 --> 00:02:31.317
+números das contas corrente ativas
+sem a ajuda do objeto Conta Corrente.
+
+38
+00:02:31.317 --> 00:02:35.313
+Para isso eu uso a responsabilidade da
+conta corrente que é sabe o número da
+
+39
+00:02:35.313 --> 00:02:40.563
+conta, isso é uma colaboração, então
+uma colaboração é uma responsabilidade,
+
+40
+00:02:40.563 --> 00:02:45.216
+a classe do objeto é a classe
+Colaboradora e a Colaboração é uma
+
+41
+00:02:45.216 --> 00:02:47.751
+responsabilidade dessa
+classe Colaboradora.
+
+42
+00:02:47.751 --> 00:02:51.004
+Eu havia deixado também para
+mostrar para vocês a lógica da
+
+43
+00:02:51.004 --> 00:02:55.132
+responsabilidade obtém o
+saldo total do banco, eis aí,
+
+44
+00:02:55.132 --> 00:03:00.005
+o objeto Banco tem esse atributo,
+lista de contas correntes ativas,
+
+45
+00:03:00.005 --> 00:03:04.716
+eu crio uma variável que eu vou
+armazenar os saldos de todas as contas.
+
+46
+00:03:04.716 --> 00:03:07.724
+Inicialmente ele é zerado,
+começo a examinar
+
+47
+00:03:07.724 --> 00:03:12.103
+a lista então das contas correntes,
+o objeto da classe Conta Corrente.
+
+48
+00:03:12.103 --> 00:03:13.230
+Como nós já vimos,
+
+49
+00:03:13.230 --> 00:03:17.716
+esse objeto ele é de uma classe que
+a gente chama de classe Colaboradora.
+
+50
+00:03:17.716 --> 00:03:21.420
+Nós usamos a responsabilidade
+do objeto Conta Corrente,
+
+51
+00:03:21.420 --> 00:03:25.246
+sabe o valor do saldo atual,
+essa é uma Colaboração.
+
+52
+00:03:25.246 --> 00:03:30.379
+Então uma Colaboração é uma
+responsabilidade de classe Colaboradora,
+
+53
+00:03:30.379 --> 00:03:34.006
+sem a qual eu não conseguiria
+cumprir a responsabilidade obtém
+
+54
+00:03:34.006 --> 00:03:35.531
+o saldo do total do banco.
+
+55
+00:03:35.531 --> 00:03:40.380
+Então eu peço para esse objeto me devolver
+o valor do saldo atual, ele me devolve,
+
+56
+00:03:40.380 --> 00:03:45.332
+eu consolido isso junto com o
+saldo anterior e tenho novo saldo,
+
+57
+00:03:45.332 --> 00:03:48.528
+vou fazendo isso para
+todas as contas correntes,
+
+58
+00:03:48.528 --> 00:03:51.565
+até que não tenha mais nenhuma
+conta corrente nesta lista.
+
+59
+00:03:51.565 --> 00:03:55.709
+A lógica dessa responsabilidade é no final
+me devolver o saldo total e é o que eu
+
+60
+00:03:55.709 --> 00:03:56.910
+faço isso ao final.
+
+61
+00:03:56.910 --> 00:04:01.009
+Para realizar a lógica de uma
+responsabilidade eu tenho duas ações,
+
+62
+00:04:01.009 --> 00:04:04.991
+ou eu faço tudo sozinho nesta
+responsabilidade ou caso eu não consiga
+
+63
+00:04:04.991 --> 00:04:08.929
+fazer isso, eu vou precisar da
+colaboração de alguma outra classe,
+
+64
+00:04:08.929 --> 00:04:12.495
+de alguma outra responsabilidade
+que pode estar outra classe,
+
+65
+00:04:12.495 --> 00:04:14.729
+pode estar na mesma
+classe ou outra classe.
+
+66
+00:04:14.729 --> 00:04:18.144
+Então, eu tenho essas duas coisas
+que eu preciso saber para fazer,
+
+67
+00:04:18.144 --> 00:04:20.701
+definir a lógica da
+minha responsabilidade.
+
+68
+00:04:20.701 --> 00:04:25.803
+Se eu consigo fazer tudo sozinho,
+ótimo, perfeito, se eu não consigo,
+
+69
+00:04:25.803 --> 00:04:31.846
+é muito melhor eu deixar que uma classe
+mais apropriada faça isso por mim.
+
+70
+00:04:31.846 --> 00:04:36.835
+Mais para a frente nós iremos ver alguns
+princípios que vão ajudar a definir quando
+
+71
+00:04:36.835 --> 00:04:41.720
+eu passo na minha própria classe
+ou numa outra classe a definição
+
+72
+00:04:41.720 --> 00:04:45.863
+da lógica da responsabilidade,
+nós veremos isso mais tarde.
+
+73
+00:04:45.863 --> 00:04:48.709
+Mas neste momento é só para entender isso,
+
+74
+00:04:48.709 --> 00:04:54.513
+ou eu faço tudo na lógica da minha classe
+ou eu, algumas dessas coisas eu transfiro.
+
+75
+00:04:54.513 --> 00:04:59.895
+Nos exemplos anteriores, na classe
+Banco relação à classe Conta Corrente,
+
+76
+00:04:59.895 --> 00:05:05.546
+eu precisava da colaboração da classe
+Conta Corrente, no primeiro momento
+
+77
+00:05:05.546 --> 00:05:11.327
+para me devolver o número da conta e
+no segundo para me devolver o saldo.
+
+78
+00:05:11.327 --> 00:05:14.490
+Resumindo, sobre a classe Conta Corrente,
+
+79
+00:05:14.490 --> 00:05:19.930
+nós vamos usar essa estrutura que eu tenho
+a classe, cujo nome é Conta Corrente,
+
+80
+00:05:19.930 --> 00:05:23.940
+eu tenho uma lista de responsabilidades
+e uma lista de colaboração.
+
+81
+00:05:23.940 --> 00:05:26.746
+No caso da Conta Corrente,
+por simplicidade,
+
+82
+00:05:26.746 --> 00:05:31.094
+eu estou colocando duas responsabilidades
+apenas e nenhuma colaboração.
+
+83
+00:05:31.094 --> 00:05:34.799
+Então, eu tenho a responsabilidade:
+Credita valor ao saldo atual,
+
+84
+00:05:34.799 --> 00:05:37.484
+Debita valor do saldo atual, por exemplo.
+
+85
+00:05:37.484 --> 00:05:41.184
+Já a classe Banco eu estou
+definindo o nome da classe Banco,
+
+86
+00:05:41.184 --> 00:05:45.765
+a lista de responsabilidades,
+então eu tenho: registra uma conta nova,
+
+87
+00:05:45.765 --> 00:05:50.114
+apresenta os números das contas ativas,
+obtém o saldo total do Banco.
+
+88
+00:05:50.114 --> 00:05:54.717
+As colaborações, como eu disse as
+colaborações são responsabilidade de
+
+89
+00:05:54.717 --> 00:06:00.142
+outras classes e eu estou identificando aí
+de qual classe que é essa responsabilidade
+
+90
+00:06:00.142 --> 00:06:04.316
+que eu estou usando e qual é
+a colaboração que é uma responsabilidade.
+
+91
+00:06:04.316 --> 00:06:08.297
+No caso do primeiro, da primeira
+responsabilidade da classe Banco,
+
+92
+00:06:08.297 --> 00:06:12.393
+registra uma conta nova,
+a colaboradora é a Conta Corrente e
+
+93
+00:06:12.393 --> 00:06:17.112
+a colaboração é o construtor da
+própria classe Conta Corrente.
+
+94
+00:06:17.112 --> 00:06:22.090
+Vocês se lembram que a lógica da registra
+uma conta corrente iniciava por eu
+
+95
+00:06:22.090 --> 00:06:26.842
+criar objeto da Conta Corrente
+e a gente faz isso
+
+96
+00:06:26.842 --> 00:06:31.702
+Java através do construtor,
+então aqui, isso é uma colaboração.
+
+97
+00:06:31.702 --> 00:06:36.552
+A segunda, apresenta os números das contas
+ativas, a classe colaboradora novamente é
+
+98
+00:06:36.552 --> 00:06:40.310
+a Conta Corrente,
+a colaboração é a responsabilidade,
+
+99
+00:06:40.310 --> 00:06:44.686
+sabe o número da conta,
+que é do tipo saber da Conta Corrente.
+
+100
+00:06:44.686 --> 00:06:48.647
+A outra responsabilidade de Banco
+é obtém o saldo total do banco,
+
+101
+00:06:48.647 --> 00:06:53.355
+a classe colaboradora, novamente, nossos
+exemplos só envolvem as duas classes Banco
+
+102
+00:06:53.355 --> 00:06:59.493
+e Conta Corrente, a classe colaboradora
+é a Conta Corrente, a colaboração agora
+
+103
+00:06:59.493 --> 00:07:05.264
+é sabe o valor do saldo atual que é uma
+responsabilidade da classe Conta Corrente.
+
+104
+00:07:05.264 --> 00:07:09.752
+Vamos fazer aqui uma diferenciação,
+classe colaboradora e colaboração.
+
+105
+00:07:09.752 --> 00:07:13.516
+A colaboração é uma responsabilidade
+de uma classe colaboradora,
+
+106
+00:07:13.516 --> 00:07:17.904
+quando alguma responsabilidade de
+alguma classe, pode ser outra classe,
+
+107
+00:07:17.904 --> 00:07:23.040
+precisa da colaboração de uma
+responsabilidade da classe colaboradora,
+
+108
+00:07:23.040 --> 00:07:26.242
+essa responsabilidade é
+chamada de colaboração.
+
+109
+00:07:26.242 --> 00:07:31.090
+Normalmente nós chamamos a classe
+colaboradora de classe servidora
+
+110
+00:07:31.090 --> 00:07:35.836
+porque ela é que vai oferecer a sua
+responsabilidade como se fosse
+
+111
+00:07:35.836 --> 00:07:38.167
+serviço para as outras classes.
+
+112
+00:07:38.167 --> 00:07:40.792
+Esse serviço é a colaboração.
+
+113
+00:07:40.792 --> 00:07:44.751
+Já a classe que depende
+da classe colaboradora,
+
+114
+00:07:44.751 --> 00:07:49.442
+ela precisa que a classe colaboradora
+colabore com ela com algum serviço,
+
+115
+00:07:49.442 --> 00:07:53.648
+com alguma colaboração, nós chamamos
+essa classe de classe cliente.
+
+116
+00:07:53.648 --> 00:07:59.680
+Podemos representar UML essa relação entre
+a classe cliente e a classe servidora.
+
+117
+00:07:59.680 --> 00:08:05.170
+Então a classe cliente ela tem
+uma responsabilidade que depende,
+
+118
+00:08:05.170 --> 00:08:10.010
+ela precisa da colaboração de uma
+responsabilidade da classe servidora.
+
+119
+00:08:10.010 --> 00:08:16.425
+Então há relação de dependência entre
+a classe cliente com a classe servidora.
+
+120
+00:08:16.425 --> 00:08:22.300
+A classe cliente depende da classe
+servidora, esse conceito de dependência,
+
+121
+00:08:22.300 --> 00:08:27.575
+que é uma classe depender de outra, nesse
+caso ela depende por causa da colaboração,
+
+122
+00:08:27.575 --> 00:08:32.196
+é conceito muito importante que nós
+vamos debater ao longo de todo o curso,
+
+123
+00:08:32.196 --> 00:08:36.499
+a tentativa sempre é de diminuir
+essas dependências entre classes.
+
+124
+00:08:36.499 --> 00:08:41.355
+Termo que abrange tudo isso e que
+nós usamos muito, é acoplamento,
+
+125
+00:08:41.355 --> 00:08:46.520
+eu digo que a classe cliente está
+acoplada à classe servidora.
+
+126
+00:08:46.520 --> 00:08:50.650
+Então, toda a vez que uma responsabilidade
+minha precisa de uma colaboração
+
+127
+00:08:50.650 --> 00:08:55.585
+de uma classe colaboradora ou servidora,
+há acoplamento entre essas duas classes.
+
+128
+00:08:55.585 --> 00:09:00.161
+Então a gente fala de dependência e de
+acoplamento, a mesma coisa, o objetivo
+
+129
+00:09:00.161 --> 00:09:05.622
+sempre vai ser minimizar, eliminar,
+reduzir as dependências entre classes.
+
+130
+00:09:05.622 --> 00:09:09.780
+Finalmente, essa representação
+que eu usei anteriormente,
+
+131
+00:09:09.780 --> 00:09:12.805
+descrevendo a classe
+através do nome da classe,
+
+132
+00:09:12.805 --> 00:09:18.108
+das suas responsabilidades e das suas
+colaborações ou classes colaboradoras,
+
+133
+00:09:18.108 --> 00:09:23.426
+nós chamamos isso de Cartão CRC,
+é uma técnica muito antiga de orientação
+
+134
+00:09:23.426 --> 00:09:28.063
+a objeto, mas que é muito
+útil até hoje para facilitar
+
+135
+00:09:28.063 --> 00:09:33.271
+a definição de classes e identificar as
+suas responsabilidades e colaborações,
+
+136
+00:09:33.271 --> 00:09:37.150
+por isso que estamos apresentando
+nesse curso e isso vai reforçar,
+
+137
+00:09:37.150 --> 00:09:41.759
+consolidar os conceitos de classe,
+responsabilidade,
+
+138
+00:09:41.759 --> 00:09:46.568
+colaboração, dependência,
+acoplamento, classes clientes,
+
+139
+00:09:46.568 --> 00:09:51.130
+classes servidoras, tudo isso vai
+ser discutido ao longo do curso.
+
+140
+00:09:51.130 --> 00:09:55.601
+Próxima aula iremos dar continuidade
+à questão dos cartões CRC,
+
+141
+00:09:55.601 --> 00:09:58.050
+onde mostraremos a modelagem CRC.
+
+142
+00:09:58.050 --> 00:09:58.826
+Nesta aula,
+
+143
+00:09:58.826 --> 00:10:03.850
+o objetivo era caracterizar e identificar
+classes colaboradoras e colaborações,
+
+144
+00:10:03.850 --> 00:10:09.650
+diferenciar classes colaboradoras de
+colaborações, uma classe colaboradora
+
+145
+00:10:09.650 --> 00:10:14.043
+é uma classe que tem uma responsabilidade
+e vai ser útil para alguma outra classe.
+
+146
+00:10:14.043 --> 00:10:17.386
+A essa responsabilidade
+a gente chama de colaboração.
+
+147
+00:10:17.386 --> 00:10:18.690
+Até à próxima aula!
+
+148
+00:10:18.690 --> 00:10:23.550
+[MÚSICA] [MÚSICA]

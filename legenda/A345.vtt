@@ -1,0 +1,281 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.747
+Olá.
+
+2
+00:00:00.747 --> 00:00:05.874
+Até agora você só era capaz
+de ajustar a frequência
+
+3
+00:00:05.874 --> 00:00:10.638
+ômega c de cruzamento de 0 dB ligada
+à velocidade de resposta malha
+
+4
+00:00:10.638 --> 00:00:15.330
+fechada e estimar a margem de
+fase ligada ao sobressinal ou,
+
+5
+00:00:15.330 --> 00:00:19.490
+ao contrário, ajustar a margem
+de fase e estimar ômega c.
+
+6
+00:00:19.490 --> 00:00:24.520
+Isto porque seu controlador só
+tinha grau de liberdade, o ganho.
+
+7
+00:00:24.520 --> 00:00:29.531
+No entanto, nos vídeos anteriores
+você viu que adicionar zero
+
+8
+00:00:29.531 --> 00:00:34.522
+e polo série com funções de transferência
+malha aberta permite alterar a margem de
+
+9
+00:00:34.522 --> 00:00:39.633
+fase por valor de até 90º, com uma
+frequência que é a média geométrica da
+
+10
+00:00:39.633 --> 00:00:45.915
+frequência de quebra do zero e do polo,
+com o zero mais lento do que o polo.
+
+11
+00:00:45.915 --> 00:00:51.294
+Então, o controlador agora
+passará a ter dinâmica de
+
+12
+00:00:51.294 --> 00:00:58.140
+ser dado por C de s igual a K vezes
+Ts mais 1 sobre alfa Ts mais 1,
+
+13
+00:00:58.140 --> 00:01:03.030
+a ser colocado série com sistema
+controlado, como no diagrama.
+
+14
+00:01:03.030 --> 00:01:07.810
+Agora, a lógica de projeto é muito
+
+15
+00:01:07.810 --> 00:01:12.540
+simples e pode ser colocada da
+seguinte maneira: Primeiro,
+
+16
+00:01:12.540 --> 00:01:18.300
+comece calculando a margem de fase
+desejada e a frequência ômega c,
+
+17
+00:01:18.300 --> 00:01:22.210
+esses valores devem ser obtidos
+dos requisitos de projeto,
+
+18
+00:01:22.210 --> 00:01:27.310
+tais como sobressinal e tempo de subida,
+tempo de pico, tempo de acomodação.
+
+19
+00:01:27.310 --> 00:01:32.291
+Segundo, verifique se a margem de
+fase é maior ou igual à desejada
+
+20
+00:01:32.291 --> 00:01:34.110
+na frequência ômega c.
+
+21
+00:01:34.110 --> 00:01:36.688
+Terceiro, caso afirmativo,
+
+22
+00:01:36.688 --> 00:01:41.850
+determine o ganho K para que o
+cruzamento de 0 dB ocorra ômega c.
+
+23
+00:01:41.850 --> 00:01:46.661
+O excesso de margem de fase faz com que
+o sistema fique mais amortecido do que o
+
+24
+00:01:46.661 --> 00:01:49.380
+solicitado, o que, usualmente, é bom,
+
+25
+00:01:49.380 --> 00:01:54.270
+pois o requisito de sobressinal costuma
+ser dado termos de sobressinal máximo,
+
+26
+00:01:54.270 --> 00:01:58.500
+o que repercute uma margem de
+fase mínima a ser atingida.
+
+27
+00:01:58.500 --> 00:02:02.970
+Nesse caso, é desnecessário adicionar
+zeros e pólos ao controlador.
+
+28
+00:02:02.970 --> 00:02:07.554
+Lembre-se, se conseguir atingir os
+requisitos com controlador mais simples,
+
+29
+00:02:07.554 --> 00:02:08.660
+por que complicar?
+
+30
+00:02:08.660 --> 00:02:13.488
+Quarto, caso a margem de fase
+seja inferior ao necessário na
+
+31
+00:02:13.488 --> 00:02:18.625
+frequência ômega c, faremos com
+que o avanço máximo se dê ômega c.
+
+32
+00:02:18.625 --> 00:02:24.686
+Assim, determine o avanço de fase desejado
+Imax Com isso, calcule o valor de alfa.
+
+33
+00:02:24.686 --> 00:02:28.670
+Alfa igual a 1- seno de fi
+max sobre 1 + seno de fi max.
+
+34
+00:02:28.670 --> 00:02:34.881
+Lembrando que acabou de determinar
+o ômega c Quinto lugar, determine
+
+35
+00:02:34.881 --> 00:02:41.130
+T para satisfazer ômega c igual a ômega
+max que é igual a 1 sobre T raiz de alfa.
+
+36
+00:02:41.130 --> 00:02:45.840
+Isto é,
+T é igual a 1 sobre ômega c raiz de alfa.
+
+37
+00:02:45.840 --> 00:02:50.650
+Sexto, agora lembre-se que o ganho
+do sistema foi alterado pelo termo
+
+38
+00:02:50.650 --> 00:02:52.180
+contendo zero e polo.
+
+39
+00:02:52.180 --> 00:02:57.776
+O ganho introduzido por esse termo na
+frequência de 0 dB desejada é módulo
+
+40
+00:02:57.776 --> 00:03:04.640
+de j ômega c T mais 1 dividido
+por j ômega c alfa T mais 1,
+
+41
+00:03:04.640 --> 00:03:09.730
+que é igual à raiz quadrada de T ômega c,
+tudo isso ao quadrado
+
+42
+00:03:09.730 --> 00:03:14.820
+mais 1 dividido por alfa T ômega c,
+tudo ao quadrado mais 1.
+
+43
+00:03:14.820 --> 00:03:21.423
+Lembrando que acabou de determinar T
+igual a 1 sobre ômega c raiz de alfa.
+
+44
+00:03:21.423 --> 00:03:26.450
+Então, a raiz de T ômega c ao
+quadrado mais 1 sobre alfa T
+
+45
+00:03:26.450 --> 00:03:31.448
+ômega c ao quadrado mais 1 será
+igual à raiz de 1 sobre alfa
+
+46
+00:03:31.448 --> 00:03:36.414
+mais 1 dividido por alfa mais 1,
+que é igual a alfa mais 1
+
+47
+00:03:36.414 --> 00:03:41.867
+sobre alfa vezes alfa mais 1,
+que é igual a 1 sobre a raiz de alfa.
+
+48
+00:03:41.867 --> 00:03:43.560
+Como consequência,
+
+49
+00:03:43.560 --> 00:03:47.535
+o ganho K deve ser determinado de
+forma a compensar o ganho de G de
+
+50
+00:03:47.535 --> 00:03:52.520
+J ômega c multiplicando esse fator, de
+forma a ser unitário equivalente a 0 dBs.
+
+51
+00:03:52.520 --> 00:03:58.197
+Então, K vezes módulo de G de J
+ômega c sobre a raiz de alfa tem de
+
+52
+00:03:58.197 --> 00:04:04.170
+ser igual a 1 o que implica K igual a raiz
+de alfa sobre o módulo de G de J ômega c,
+
+53
+00:04:04.170 --> 00:04:09.169
+ou decibeis, módulo de K dB igual a 10 log
+
+54
+00:04:09.169 --> 00:04:14.395
+de alfa menos 20 log de G de
+J ômega c que é igual a 10
+
+55
+00:04:14.395 --> 00:04:19.330
+log de alfa menos módulo
+de G de J ômega c dB.
+
+56
+00:04:19.330 --> 00:04:21.568
+Seguindo esses passos do projeto,
+
+57
+00:04:21.568 --> 00:04:26.616
+você agora é capaz de ajustar tanto o
+tempo de resposta quanto o sobressinal.
+
+58
+00:04:26.616 --> 00:04:32.720
+No próximo vídeo, vamos fazer exemplo
+de projeto para deixar tudo mais claro.

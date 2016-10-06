@@ -1,0 +1,888 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.633
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:09.633 --> 00:00:15.250
+então estamos na terceira parte
+do nosso exemplo aqui de herança,
+
+3
+00:00:15.250 --> 00:00:20.365
+certo, agora vamos fazer a classe
+corrida que vai colocar os carros,
+
+4
+00:00:20.365 --> 00:00:25.480
+não é, e vamos ver quem vai ganhar
+aí essa corrida, está certo?
+
+5
+00:00:25.480 --> 00:00:30.989
+Então assim recapitulando o que
+a gente já fez, a gente criou uma
+
+6
+00:00:30.989 --> 00:00:37.838
+classe abstrata chamada carro de corrida
+que o método acelerar é método abstrato.
+
+7
+00:00:37.838 --> 00:00:43.160
+Criamos o carro soma que soma
+a potência certo, como algoritmo
+
+8
+00:00:43.160 --> 00:00:49.630
+de aceleração e criamos o carro multi
+que ele tem a potência entre 1 e 2,
+
+9
+00:00:49.630 --> 00:00:55.216
+certo, e ele multiplica a velocidade
+por essa potência, sendo que na
+
+10
+00:00:55.216 --> 00:01:01.013
+primeira acelerada ele vai sempre
+colocar 10 na velocidade, está certo?
+
+11
+00:01:01.013 --> 00:01:05.762
+Os 2 aqui têm uma velocidade máxima
+que eles não conseguem passar.
+
+12
+00:01:05.762 --> 00:01:10.447
+Fizemos aqui também os testes de unidade
+e verificamos aqui que os 2 estão
+
+13
+00:01:10.447 --> 00:01:13.075
+funcionando como esperado, está certo?
+
+14
+00:01:13.075 --> 00:01:18.391
+Então eu vou fechar todos essas abas aqui,
+está, e vou começar a criar
+
+15
+00:01:18.391 --> 00:01:24.730
+então a minha classe corrida, certo?
+
+16
+00:01:24.730 --> 00:01:31.282
+A minha classe corrida ela vai
+se basear só na classe abstrata,
+
+17
+00:01:31.282 --> 00:01:36.335
+ou seja para ela não interessa qual que é
+o algoritmo de acelerar, ela simplesmente
+
+18
+00:01:36.335 --> 00:01:41.852
+vai mandar os carros acelerarem não é,
+a cada ciclo ali da corrida, está?
+
+19
+00:01:41.852 --> 00:01:50.390
+Então a corrida o que ela tem que ter de
+mais importante assim é o tamanho dela,
+
+20
+00:01:50.390 --> 00:01:55.440
+está, é o comprimento, vou chamar aqui,
+
+21
+00:01:55.440 --> 00:02:01.185
+comprimento da pista,
+vamos chamar de pista,
+
+22
+00:02:01.185 --> 00:02:05.380
+pronto, estou indeciso aqui
+no nome mas vai ser pista.
+
+23
+00:02:05.380 --> 00:02:06.293
+está?
+
+24
+00:02:06.293 --> 00:02:12.240
+Então eu vou passar aqui
+o tamanho da corrida,
+
+25
+00:02:12.240 --> 00:02:15.472
+não é,
+e ele vai colocar ali na pista, está?
+
+26
+00:02:15.472 --> 00:02:19.366
+Então ele vai ser aqui
+pista é igual ao tamanho.
+
+27
+00:02:19.366 --> 00:02:27.519
+Então é aquele ali a distância que os
+carros vão precisar percorrer, está certo?
+
+28
+00:02:27.519 --> 00:02:31.902
+Eu também vou criar aqui mapa está?
+
+29
+00:02:31.902 --> 00:02:37.315
+O mapa ele é uma estrutura de dados Java
+que ele tem uma chave e ele tem valor.
+
+30
+00:02:37.315 --> 00:02:39.229
+Então o que é que eu vou fazer?
+
+31
+00:02:39.229 --> 00:02:44.424
+Na minha corrida o carro vai ser a chave,
+certo,
+
+32
+00:02:44.424 --> 00:02:50.285
+e a distância que aquele carro já
+percorreu vai ser o valor, está?
+
+33
+00:02:50.285 --> 00:02:55.300
+E então eu vou vir aqui, vou criar mapa
+
+34
+00:02:55.300 --> 00:03:00.386
+que ele vai ter carro de corrida
+
+35
+00:03:00.386 --> 00:03:05.246
+e inteiro que vai ser,
+
+36
+00:03:05.246 --> 00:03:09.570
+integer aqui,
+que vai ser a distância que ele percorreu.
+
+37
+00:03:09.570 --> 00:03:14.208
+Aí eu vou chamar esse mapa de carros e já
+
+38
+00:03:14.208 --> 00:03:18.980
+vou inicializar com HashMap, certo?
+
+39
+00:03:18.980 --> 00:03:25.228
+Então vamos importar aqui não é,
+eu posso importar,
+
+40
+00:03:25.228 --> 00:03:30.260
+vocês não estão vendo aí mas usando o
+Ctrl Shift O está, então eu vou passar
+
+41
+00:03:30.260 --> 00:03:35.509
+a fazer isso nos próximos exemplos para
+poupar aqui pouco do tempo, está certo?
+
+42
+00:03:35.509 --> 00:03:40.031
+Então agora que eu criei o carro,
+eu vou criar aqui método que é o
+
+43
+00:03:40.031 --> 00:03:44.940
+adicionaCarro na corrida, certo?
+
+44
+00:03:44.940 --> 00:03:50.446
+Ele vai receber carro de corrida,
+
+45
+00:03:50.446 --> 00:03:56.310
+pode ser, como ele recebe carro
+de corrida pode ser de qualquer
+
+46
+00:03:56.310 --> 00:04:02.350
+uma das duas subclasses, certo,
+faltou dizer aqui que esse método é void,
+
+47
+00:04:02.350 --> 00:04:07.310
+e vou vir aqui e vou colocar
+
+48
+00:04:07.310 --> 00:04:12.632
+carros.put aí eu vou
+colocar aqui o carro e
+
+49
+00:04:12.632 --> 00:04:17.750
+vou colocar 0, não é,
+ou seja ele está saindo da largada,
+
+50
+00:04:17.750 --> 00:04:22.030
+ok?
+
+51
+00:04:22.030 --> 00:04:25.710
+Adicionei os carros, certo,
+
+52
+00:04:25.710 --> 00:04:31.408
+e eu vou criar aqui para mim
+também método privado certo,
+
+53
+00:04:31.408 --> 00:04:40.290
+que vai me falar se
+a corrida terminou ou não.
+
+54
+00:04:40.290 --> 00:04:43.175
+Como que eu vou fazer isso?
+
+55
+00:04:43.175 --> 00:04:50.020
+Eu vou verificar se algum carro possui o,
+
+56
+00:04:50.020 --> 00:04:54.590
+a distância percorrida maior
+do que a pista, não é?
+
+57
+00:04:54.590 --> 00:04:56.770
+Se tiver quer dizer que terminou.
+
+58
+00:04:56.770 --> 00:05:03.780
+Então eu vou fazer forzinho aqui,
+não é, de CarroDeCorrida,
+
+59
+00:05:03.780 --> 00:05:08.340
+ou melhor eu já vou fazer
+aqui dos valores já.
+
+60
+00:05:08.340 --> 00:05:13.398
+Integer valor, certo,
+que aqui para princípio não interessa
+
+61
+00:05:13.398 --> 00:05:18.412
+quem que foi que passou,
+não é, então o valor eu
+
+62
+00:05:18.412 --> 00:05:23.309
+tenho aqui carros ponto
+eu posso botar values,
+
+63
+00:05:23.309 --> 00:05:28.034
+que vão ser os valores ali,
+no caso ele vai pegar os inteiros e eu
+
+64
+00:05:28.034 --> 00:05:32.491
+vou fazer o seguinte: se o valor for
+
+65
+00:05:32.491 --> 00:05:38.199
+maior que a pista,
+então retorna verdadeiro.
+
+66
+00:05:38.199 --> 00:05:43.040
+Se eu verifiquei todos os valores,
+aí eu retorno falso.
+
+67
+00:05:43.040 --> 00:05:48.635
+Se eu verifiquei todos os valores e nenhum
+dele é maior, vou ter que colocar aqui
+
+68
+00:05:48.635 --> 00:05:53.992
+maior ou igual não é, ali o igual quando
+ele acaba ali de passar a pista, certo?
+
+69
+00:05:53.992 --> 00:05:58.292
+Então eu tenho ali a minha corrida,
+eu adiciono os carros,
+
+70
+00:05:58.292 --> 00:06:01.918
+a próxima coisa que eu
+tenho que fazer aqui é o,
+
+71
+00:06:01.918 --> 00:06:07.357
+vou chamar aqui esse de método aqui
+
+72
+00:06:07.357 --> 00:06:14.800
+de UmDoisTresEJa não é, ou seja,
+vamos começar a corrida.
+
+73
+00:06:14.800 --> 00:06:15.501
+Certo?
+
+74
+00:06:15.501 --> 00:06:18.107
+Então o que é que ele vai fazer?
+
+75
+00:06:18.107 --> 00:06:23.201
+Ele vai pegar todos os carros,
+vai acelerar os carros,
+
+76
+00:06:23.201 --> 00:06:27.729
+então a primeira coisa que
+ele vai fazer é o seguinte
+
+77
+00:06:27.729 --> 00:06:30.897
+ele vai pegar cada dos carros aqui cadê?
+
+78
+00:06:30.897 --> 00:06:34.006
+Então eu vou fazer for aqui,
+
+79
+00:06:34.006 --> 00:06:39.723
+vou pegar cada carro de corrida, carro,
+
+80
+00:06:39.723 --> 00:06:44.732
+vou lá no meu carros ponto,
+
+81
+00:06:44.732 --> 00:06:49.760
+aí aqui já é a chave que é
+o key não é então keySet,
+
+82
+00:06:49.760 --> 00:06:55.848
+não é, e aí para cada carro eu
+vou chamar o acelerar, certo?
+
+83
+00:06:55.848 --> 00:07:02.435
+Seguida eu vou pegar
+qualquer distância atual,
+
+84
+00:07:02.435 --> 00:07:06.631
+não é, então distanciaAtual certo?
+
+85
+00:07:06.631 --> 00:07:12.331
+Melhor, só distância então eu vou fazer
+
+86
+00:07:12.331 --> 00:07:17.855
+carros.get carro então
+ele vai pegar a distância
+
+87
+00:07:17.855 --> 00:07:23.443
+daquele carro e ele vai,
+opa faltou n aqui para ficar bonitinho,
+
+88
+00:07:23.443 --> 00:07:28.307
+eu vou fazer aqui distancia mais igual à
+
+89
+00:07:28.307 --> 00:07:32.552
+velocidade do carro não é,
+
+90
+00:07:32.552 --> 00:07:37.770
+então mais igual velocidade,
+
+91
+00:07:37.770 --> 00:07:42.255
+cadê aqui?
+
+92
+00:07:42.255 --> 00:07:46.532
+Não, não é velocidade,
+
+93
+00:07:46.532 --> 00:07:51.351
+é carro.getVelocidade,
+
+94
+00:07:51.351 --> 00:07:56.507
+aí sim e vou colocar essa
+distância de novo lá.
+
+95
+00:07:56.507 --> 00:08:02.295
+Então vou fazer assim carros.put
+
+96
+00:08:02.295 --> 00:08:07.189
+o carro e a distância.
+
+97
+00:08:07.189 --> 00:08:13.611
+Então a cada ciclo ele vai
+fazer isso daqui está?
+
+98
+00:08:13.611 --> 00:08:18.635
+Então ele vai para cada carro, ele
+acelera, ele pega a distância do carro,
+
+99
+00:08:18.635 --> 00:08:22.023
+soma a velocidade do carro
+nessa distância e faz.
+
+100
+00:08:22.023 --> 00:08:24.222
+Isso aqui é ciclo da corrida,
+
+101
+00:08:24.222 --> 00:08:29.646
+só que eu tenho que fazer isso aqui
+enquanto a corrida não tiver terminado.
+
+102
+00:08:29.646 --> 00:08:33.685
+Então eu vou colocar aqui while terminou,
+
+103
+00:08:33.685 --> 00:08:39.114
+ou menor enquanto não
+terminou então eu tenho
+
+104
+00:08:39.114 --> 00:08:44.360
+que fazer isso daqui
+enquanto ainda não terminou,
+
+105
+00:08:44.360 --> 00:08:48.900
+então eu vou colocar aqui
+esse while terminou certo
+
+106
+00:08:48.900 --> 00:08:54.006
+e ele
+
+107
+00:08:54.006 --> 00:08:58.420
+vai ter terminado aqui a corrida.
+
+108
+00:08:58.420 --> 00:09:01.337
+está?
+Então quando ele terminar a corrida eu vou
+
+109
+00:09:01.337 --> 00:09:05.709
+querer imprimir aqui cada dos carros.
+
+110
+00:09:05.709 --> 00:09:10.928
+Então eu vou colocar aqui sysout o
+
+111
+00:09:10.928 --> 00:09:16.848
+carro ponto
+
+112
+00:09:16.848 --> 00:09:21.334
+o nome dele e vou
+
+113
+00:09:21.334 --> 00:09:26.826
+colocar aqui a distância
+que ele percorreu,
+
+114
+00:09:26.826 --> 00:09:32.333
+que é o carros.get(carro), que ele
+vai estar pegando ali o valor certo?
+
+115
+00:09:32.333 --> 00:09:36.552
+Bom, então depois ali da corrida,
+
+116
+00:09:36.552 --> 00:09:41.776
+depois que alguém terminou
+ele vai imprimir o resultado
+
+117
+00:09:41.776 --> 00:09:46.120
+ali de onde está cada.
+
+118
+00:09:46.120 --> 00:09:48.964
+Eu poderia aqui fazer uma
+ordenação para ver quem ficou
+
+119
+00:09:48.964 --> 00:09:52.530
+primeiro mas vou fazer assim para
+simplificar o nosso exemplo, está?
+
+120
+00:09:52.530 --> 00:09:55.039
+Bom agora que eu criei a corrida,
+
+121
+00:09:55.039 --> 00:09:59.784
+vou criar aqui agora uma uma classe
+principal que vai criar os carros,
+
+122
+00:09:59.784 --> 00:10:04.825
+colocar na corrida,
+para a gente ver quem vai chegar primeiro.
+
+123
+00:10:04.825 --> 00:10:09.038
+Então, eu vou chamar aqui de "principal".
+
+124
+00:10:09.038 --> 00:10:13.623
+Mandei criar ali o método "main", certo?
+
+125
+00:10:13.623 --> 00:10:18.894
+Tira aqui o construtor que eu
+sem querer marquei aqui também.
+
+126
+00:10:18.894 --> 00:10:24.120
+Então eu vou criar aqui uma corrida é...
+
+127
+00:10:24.120 --> 00:10:31.966
+"corridaDaAmizade", não é nome de corrida,
+assim?
+
+128
+00:10:31.966 --> 00:10:35.790
+Monte de corrida da amizade por aí,
+aposto.
+
+129
+00:10:35.790 --> 00:10:36.807
+"= a new corrida".
+
+130
+00:10:36.807 --> 00:10:39.010
+E vou colocar aqui a distância como 2.000.
+
+131
+00:10:39.010 --> 00:10:39.766
+Certo?
+
+132
+00:10:39.766 --> 00:10:44.750
+Então eu vou começar a adicionar
+carros nessa corrida.
+
+133
+00:10:44.750 --> 00:10:48.740
+Tá, então vou fazer
+aqui "corridaDaAmizade.
+
+134
+00:10:48.740 --> 00:10:52.570
+adicionaCarro".
+
+135
+00:10:52.570 --> 00:10:56.800
+Então, o primeiro carro que eu
+vou colocar, vai ser carro soma.
+
+136
+00:10:56.800 --> 00:11:05.040
+Então esse carro soma vai
+chamar: "CarroA", certo?
+
+137
+00:11:05.040 --> 00:11:08.349
+É, estou sem criatividade
+para o nome do carro.
+
+138
+00:11:08.349 --> 00:11:09.936
+Com o que ele vem aqui?
+
+139
+00:11:09.936 --> 00:11:14.997
+Vem a potência,
+vou colocar 10 e vou colocar a velocidade
+
+140
+00:11:14.997 --> 00:11:19.190
+máxima dele, 110, certo?
+
+141
+00:11:19.190 --> 00:11:24.115
+Vou colocar aqui outro carro soma com
+
+142
+00:11:24.115 --> 00:11:29.770
+a potência menor,
+a potência dele vai ser 8.
+
+143
+00:11:29.770 --> 00:11:35.970
+Esse aqui vai ser o carro b, só que
+a velocidade máxima dele vai ser 140.
+
+144
+00:11:35.970 --> 00:11:41.640
+Essa corrida está a ficar interessante.
+
+145
+00:11:41.640 --> 00:11:47.370
+Vamos lá,
+agora eu vou colocar aqui "CarroMult".
+
+146
+00:11:47.370 --> 00:11:53.080
+Então eu vou colocar aqui "CarroC"
+
+147
+00:11:53.080 --> 00:12:01.460
+que vai ser 1.7 e a velocidade
+máxima dele é 100.
+
+148
+00:12:01.460 --> 00:12:07.566
+E vou colocar aqui
+
+149
+00:12:07.566 --> 00:12:13.070
+que a potência é 1.4,
+
+150
+00:12:13.070 --> 00:12:19.330
+só que a velocidade dele máxima é 150.
+
+151
+00:12:19.330 --> 00:12:23.000
+Tem que mudar o nome dele aqui,
+vou chamar de "CarroD".
+
+152
+00:12:23.000 --> 00:12:28.250
+Aí eu vou vir aqui na
+minha corrida da amizade.
+
+153
+00:12:28.250 --> 00:12:29.179
+Certo?
+
+154
+00:12:29.179 --> 00:12:33.170
+E vou fazer: dois, três e já!
+
+155
+00:12:33.170 --> 00:12:38.003
+Quando eu era pequeno era
+[DESCONHECIDO] Mais ou menos
+
+156
+00:12:38.003 --> 00:12:40.558
+isso aqui que a gente está chamando, tá?
+
+157
+00:12:40.558 --> 00:12:42.091
+Então, vou rodar aqui,
+
+158
+00:12:42.091 --> 00:12:46.336
+vamos ver qual vai ser o meu
+carro aqui que vai ganhar, certo?
+
+159
+00:12:46.336 --> 00:12:51.420
+Então rodei ali posso ver
+que o meu "CarroD" ali que
+
+160
+00:12:51.420 --> 00:12:56.550
+tem a velocidade máxima de 140,
+acabou chegando primeiro ali.
+
+161
+00:12:56.550 --> 00:13:01.594
+Tá?
+Vamos reduzir aqui para 130 para ver?
+
+162
+00:13:01.594 --> 00:13:04.490
+Roda lá, né?
+
+163
+00:13:05.662 --> 00:13:09.770
+Também ganhou!
+
+164
+00:13:09.770 --> 00:13:14.649
+[SEM ÁUDIO] Vamos,
+
+165
+00:13:14.649 --> 00:13:18.190
+deixa eu ver aqui, vamos botar 110 ali,
+
+166
+00:13:18.190 --> 00:13:22.719
+para ficar iguais os carros.
+
+167
+00:13:22.719 --> 00:13:23.810
+Roda.
+
+168
+00:13:23.810 --> 00:13:28.824
+Opa, agora quem ganhou foi o "CarroD".
+
+169
+00:13:28.824 --> 00:13:34.070
+Não acho que era o "CarroD" que estava
+ganhando, não estava vendo aqui a letra.
+
+170
+00:13:34.070 --> 00:13:34.757
+Certo?
+
+171
+00:13:34.757 --> 00:13:39.770
+Porque ele não necessariamente
+vai imprimir na ordem, né?
+
+172
+00:13:39.770 --> 00:13:45.102
+Vamos manter o 140, vamos diminuir aqui
+o "CarroD", aqui, que está muito rápido.
+
+173
+00:13:45.102 --> 00:13:47.630
+Vamos colocar aqui 120 nele.
+
+174
+00:13:47.630 --> 00:13:51.480
+Agora, continua o "CarroD".
+
+175
+00:13:51.480 --> 00:13:55.607
+110 para você, "CarroD".
+
+176
+00:13:55.607 --> 00:14:01.300
+E agora foi o "CarroB" que ganhou.
+
+177
+00:14:01.300 --> 00:14:06.390
+Então, essa corrida ficou bem equilibrada.
+
+178
+00:14:06.390 --> 00:14:09.583
+Então assim, o que é que é
+importante aqui nesse exemplo?
+
+179
+00:14:09.583 --> 00:14:11.875
+Não é a nossa brincadeirinha da corrida,
+
+180
+00:14:11.875 --> 00:14:17.360
+é a gente ver que independente
+do carro que eu chamo aqui,
+
+181
+00:14:17.360 --> 00:14:23.110
+como a corrida está esperando
+aqui o carro de corrida,
+
+182
+00:14:23.110 --> 00:14:27.942
+que é a superclasse, eu posso inclusive
+criar novo algoritmo de aceleração,
+
+183
+00:14:27.942 --> 00:14:31.048
+com novo tipo de carro e passar
+para essa classe de corrida.
+
+184
+00:14:31.048 --> 00:14:34.160
+Então essa que é a grande
+sacada da herança, né?
+
+185
+00:14:34.160 --> 00:14:38.922
+É a gente justamente poder fazer isso,
+de passar qualquer classe que obedeça
+
+186
+00:14:38.922 --> 00:14:43.156
+o contrato da minha superclasse,
+que no caso aqui é o carro de corrida.
+
+187
+00:14:43.156 --> 00:14:47.215
+A gente vê que na hora que ele chama aqui
+o acelerar, a hora que ele pega o nome,
+
+188
+00:14:47.215 --> 00:14:52.960
+ele não sabe se é carro soma ou
+carro multi que ele está pegando.
+
+189
+00:14:52.960 --> 00:14:58.326
+Então, espero que com este exemplo tenha
+ficado claro aí essa questão da herança,
+
+190
+00:14:58.326 --> 00:15:02.665
+essa questão do contrato da superclasse,
+do método classe abstrata,
+
+191
+00:15:02.665 --> 00:15:08.260
+método abstrato, então tentamos
+fazer exemplo aí que pega toda essa,
+
+192
+00:15:08.260 --> 00:15:15.749
+esses conceitos aí que a gente precisa
+quando a gente trabalha com a herança.
+
+193
+00:15:15.749 --> 00:15:20.854
+Espero que tenha ficado bem
+claro para vocês isso e até ao
+
+194
+00:15:20.854 --> 00:15:26.750
+próximo hands-on.

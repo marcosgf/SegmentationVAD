@@ -1,0 +1,437 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.710
+[MÚSICA]
+
+2
+00:00:05.710 --> 00:00:11.463
+[SEM ÁUDIO] Olá,
+
+3
+00:00:11.463 --> 00:00:16.490
+retomando o módulo Inferindo Propriedades
+e Características de uma População,
+
+4
+00:00:16.490 --> 00:00:22.080
+eu gostaria de retomar
+a lição de Teste de Hipótese.
+
+5
+00:00:22.080 --> 00:00:27.430
+Teste de hipótese é central,
+como a gente viu na videoaula anterior,
+
+6
+00:00:27.430 --> 00:00:31.830
+porque se uma empresa
+que fabrica fósforos,
+
+7
+00:00:31.830 --> 00:00:36.767
+resolvesse testar a qualidade
+de todos os fósforos
+
+8
+00:00:36.767 --> 00:00:42.575
+fabricados ela poderia acabar sem fósforos
+para colocar no mercado, para vender.
+
+9
+00:00:42.575 --> 00:00:47.285
+Nós aprendemos na videoaula passada
+uma série de conceitos importantes,
+
+10
+00:00:47.285 --> 00:00:49.930
+de entre eles a amostra por exemplo.
+
+11
+00:00:49.930 --> 00:00:55.442
+Amostra, no final do dia,
+ela deve ser extraída de uma população,
+
+12
+00:00:55.442 --> 00:01:00.320
+ela vai acabar sendo representativa da
+população, desde que ela seja aleatória.
+
+13
+00:01:00.320 --> 00:01:06.780
+Nós aprendemos também que é
+importante definirmos hipóteses,
+
+14
+00:01:06.780 --> 00:01:11.790
+existem hipóteses nulas e
+hipóteses alternativas.
+
+15
+00:01:11.790 --> 00:01:18.270
+A hipótese nula busca na
+verdade o status quo,
+
+16
+00:01:18.270 --> 00:01:24.090
+a gente vai inferir sobre o status quo,
+se a gente for pensar agora em marketing,
+
+17
+00:01:24.090 --> 00:01:28.829
+variáveis típicas de estudos
+promoção de vendas e o
+
+18
+00:01:28.829 --> 00:01:34.036
+resultado em volume de vendas,
+a minha hipótese nula seria
+
+19
+00:01:34.036 --> 00:01:39.370
+justamente que promoção de vendas
+não afeta, não varia vendas.
+
+20
+00:01:39.370 --> 00:01:46.200
+A hipótese alternativa seria que
+aumento de promoção de vendas,
+
+21
+00:01:46.200 --> 00:01:52.350
+levaria a aumento de, no volume de
+vendas dos produtos no mercado.
+
+22
+00:01:52.350 --> 00:01:57.295
+Então a ideia do teste de hipótese
+que nós vimos na videoaula anterior é
+
+23
+00:01:57.295 --> 00:02:02.574
+que nós podemos inferir de
+maneira estatística o nível
+
+24
+00:02:02.574 --> 00:02:07.340
+de significância do efeito
+da promoção em vendas.
+
+25
+00:02:07.340 --> 00:02:12.752
+Eu gostaria de chamar
+a atenção em especial para
+
+26
+00:02:12.752 --> 00:02:19.090
+a elaboração dessas hipóteses e por
+consequência a interpretação das mesmas.
+
+27
+00:02:19.090 --> 00:02:26.760
+A hipótese ela deve ser formulada com
+base em alguma inquietação inicial.
+
+28
+00:02:26.760 --> 00:02:31.600
+Dada a experiência que
+você já tem no mercado,
+
+29
+00:02:31.600 --> 00:02:37.936
+dado o que a gente já escutou
+sobre o efeito de algumas ações,
+
+30
+00:02:37.936 --> 00:02:42.792
+por exemplo,
+na satisfação do consumidor ou nas vendas.
+
+31
+00:02:42.792 --> 00:02:47.865
+O importante é que essa hipótese seja
+
+32
+00:02:47.865 --> 00:02:55.810
+muito claramente enunciada para
+que a gente possa testá-la.
+
+33
+00:02:55.810 --> 00:02:59.851
+Então quando a gente pretende,
+por exemplo,
+
+34
+00:02:59.851 --> 00:03:03.485
+investigar se promoção afeta
+vendas eu preciso, por exemplo,
+
+35
+00:03:03.485 --> 00:03:06.390
+saber que tipo de promoção é que
+eu estou fazendo no mercado.
+
+36
+00:03:06.390 --> 00:03:10.963
+Então a promoção ela pode vir a ser
+desconto onde eu vou lá e sou
+
+37
+00:03:10.963 --> 00:03:15.150
+capaz de medir o quanto que eu
+aumentei ou diminui de desconto.
+
+38
+00:03:15.150 --> 00:03:19.391
+Promoção de vendas pode também se
+referir a displays que eu coloco
+
+39
+00:03:19.391 --> 00:03:24.000
+no ponto de venda,
+a quantidade de displays ou, por exemplo,
+
+40
+00:03:24.000 --> 00:03:32.270
+a localização desse display
+no planograma da loja.
+
+41
+00:03:32.270 --> 00:03:37.765
+Eu tenho que ser capaz de
+enunciar hipóteses que façam
+
+42
+00:03:37.765 --> 00:03:43.808
+referências a elementos mensuráveis
+que eu seja capaz de observar,
+
+43
+00:03:43.808 --> 00:03:51.640
+de alguma forma medir, para poder
+fazer o teste então estatístico.
+
+44
+00:03:51.640 --> 00:04:00.100
+Essas hipóteses elas vão nos ajudar a
+olhar essa distribuição de probabilidade.
+
+45
+00:04:00.100 --> 00:04:05.220
+Então o p-valor que nós
+vimos na videoaula anterior,
+
+46
+00:04:05.220 --> 00:04:12.292
+ele vai ser calculado dada
+a probabilidade de variação desse,
+
+47
+00:04:12.292 --> 00:04:18.244
+dessa variável explicativa que eu
+tenho no meu, na minha pesquisa,
+
+48
+00:04:18.244 --> 00:04:24.112
+por exemplo, promoção de vendas,
+o quanto que ela afeta significativamente,
+
+49
+00:04:24.112 --> 00:04:29.194
+ou o quanto, ou qual é a probabilidade
+de ela afetar significativamente a minha
+
+50
+00:04:29.194 --> 00:04:34.820
+variável de resposta,
+no caso pode ser o volume de vendas.
+
+51
+00:04:34.820 --> 00:04:40.352
+O teste de hipótese mais comumente
+utilizado em marketing é o teste bicaudal.
+
+52
+00:04:40.352 --> 00:04:45.226
+Considerando uma distribuição
+normal o que a gente busca é
+
+53
+00:04:45.226 --> 00:04:49.709
+inferir se a variável
+explicativa ela afeta
+
+54
+00:04:49.709 --> 00:04:54.352
+positiva ou negativamente
+a variável de resposta.
+
+55
+00:04:54.352 --> 00:04:58.942
+O teste bicaudal permite que
+a gente faça inferências
+
+56
+00:04:58.942 --> 00:05:04.024
+sobre a probabilidade de
+efeito positivo e negativo de,
+
+57
+00:05:04.024 --> 00:05:08.490
+por exemplo, promoção em vendas.
+
+58
+00:05:08.490 --> 00:05:14.469
+Existem 2 tipos de erros que
+
+59
+00:05:14.469 --> 00:05:21.440
+podem surgir quando a gente
+realiza esse teste de hipótese.
+
+60
+00:05:21.440 --> 00:05:25.913
+O que é aceitável é quando
+
+61
+00:05:25.913 --> 00:05:30.526
+a gente tem uma H0 que é verdadeira e
+
+62
+00:05:30.526 --> 00:05:35.540
+a gente consegue aceitar H0,
+essa é uma conclusão esperada.
+
+63
+00:05:35.540 --> 00:05:40.370
+Uma outra conclusão correta esperada é
+
+64
+00:05:40.370 --> 00:05:44.940
+quando H0 é falso e a gente rejeita o H0.
+
+65
+00:05:44.940 --> 00:05:50.530
+Existem 2 tipos de problemas
+que a gente tem que
+
+66
+00:05:50.530 --> 00:05:56.670
+tomar muito cuidado que é conhecido como
+o problema tipo 1 e o problema tipo 2.
+
+67
+00:05:56.670 --> 00:06:03.460
+O problema tipo 1 é quando
+a gente tem H0 verdadeiro,
+
+68
+00:06:03.460 --> 00:06:07.818
+ou seja,
+o status quo está presente na sua amostra,
+
+69
+00:06:07.818 --> 00:06:13.776
+no fenómeno que você está
+estudando e por alguma
+
+70
+00:06:13.776 --> 00:06:18.021
+falha na coleta dos dados,
+
+71
+00:06:18.021 --> 00:06:22.231
+ou por alguma falha no instrumento
+que está sendo utilizado,
+
+72
+00:06:22.231 --> 00:06:27.990
+a gente acabou fazendo o teste
+e a gente rejeitou a hipótese.
+
+73
+00:06:27.990 --> 00:06:32.150
+O erro tipo 1 a gente acaba rejeitando
+
+74
+00:06:32.150 --> 00:06:36.100
+a hipótese nula quando na
+verdade ela é verdadeira.
+
+75
+00:06:36.100 --> 00:06:41.883
+E o erro tipo 2 ele acontece quando
+
+76
+00:06:41.883 --> 00:06:48.090
+a gente não rejeita a hipótese nula
+quando ela deveria ser rejeitada.
+
+77
+00:06:48.090 --> 00:06:53.860
+Então temos que levar em consideração
+a possibilidade desses erros,
+
+78
+00:06:53.860 --> 00:06:58.220
+pois os testes, eles são baseados
+em informações amostrais.
+
+79
+00:06:58.220 --> 00:07:02.960
+A probabilidade de ocorrência
+desses 2 tipos de erros
+
+80
+00:07:02.960 --> 00:07:08.011
+acabam nos levando
+
+81
+00:07:08.011 --> 00:07:12.290
+a tomar decisões incorretas.
+
+82
+00:07:12.290 --> 00:07:18.244
+Para evitar esse tipo de erros 1 e 2
+
+83
+00:07:18.244 --> 00:07:25.463
+temos que tomar muito cuidado
+na construção da hipótese,
+
+84
+00:07:25.463 --> 00:07:30.301
+na coleta da amostra, que seja aleatória e
+
+85
+00:07:30.301 --> 00:07:36.104
+representativa da população e no
+devido tratamento das variáveis
+
+86
+00:07:36.104 --> 00:07:41.666
+que são mensuráveis que serão
+utilizadas nesse teste de hipóteses.
+
+87
+00:07:41.666 --> 00:07:49.860
+Os teste de hipóteses serão retomados
+nas lições de correlação e de regressão,
+
+88
+00:07:49.860 --> 00:07:54.990
+quando nós estaremos inferindo
+sobre o efeito de algumas variáveis
+
+89
+00:07:54.990 --> 00:07:59.865
+ligadas a marketing,
+na venda, na satisfação,
+
+90
+00:07:59.865 --> 00:08:06.913
+na atitude com relação à marca e etc.
+
+91
+00:08:06.913 --> 00:08:09.920
+etc.

@@ -1,0 +1,403 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.710
+[MÚSICA]
+
+2
+00:00:05.710 --> 00:00:11.096
+[MÚSICA] Olá!
+
+3
+00:00:11.096 --> 00:00:17.409
+Nesta vídeoaula nós vamos
+continuar praticando o cálculo
+
+4
+00:00:17.409 --> 00:00:22.725
+da distância euclidiana usando o
+software Excel e nós vamos fazer
+
+5
+00:00:22.725 --> 00:00:28.825
+exercício também simples usando uma
+base de dados chamado Renda Idade.
+
+6
+00:00:28.825 --> 00:00:34.003
+Quando você abrir essa base você vai
+notar que tem de novo 2 planilhas,
+
+7
+00:00:34.003 --> 00:00:36.520
+uma com roteiro e uma com os dados.
+
+8
+00:00:36.520 --> 00:00:40.820
+Vamos ver primeiro os dados,
+depois nós voltamos ao roteiro.
+
+9
+00:00:40.820 --> 00:00:44.894
+Nós temos aqui 3 indivíduos,
+que a gente de A, B e C,
+
+10
+00:00:44.894 --> 00:00:49.791
+e as rendas que eles têm anuais medida,
+por exemplo,
+
+11
+00:00:49.791 --> 00:00:53.990
+em milhares de unidades monetárias.
+
+12
+00:00:53.990 --> 00:00:56.460
+E aqui temos a idade dos
+indivíduos medida em anos.
+
+13
+00:00:56.460 --> 00:01:00.408
+Note que aqui do lado nós temos a mesma
+idade medida em meses, por isso, se você
+
+14
+00:01:00.408 --> 00:01:05.840
+iluminar a célula você vai ver que nada
+mais é que do o número de anos vezes 12.
+
+15
+00:01:05.840 --> 00:01:11.623
+O que nós queremos com esse exercício,
+além de continuar praticando
+
+16
+00:01:11.623 --> 00:01:17.358
+o cálculo de distâncias euclidianas
+com você, é mostrar se existe uma
+
+17
+00:01:17.358 --> 00:01:22.645
+influência na hora que a gente
+muda a unidade de uma variável,
+
+18
+00:01:22.645 --> 00:01:28.484
+ou seja, se a gente calcular para
+a variável Renda de uma única forma mas,
+
+19
+00:01:28.484 --> 00:01:33.579
+a variável Idade medida em anos,
+e depois repetir para a variável idade
+
+20
+00:01:33.579 --> 00:01:38.880
+medida em meses, será que isso vai afetar
+o cálculo da distância euclidiana?
+
+21
+00:01:38.880 --> 00:01:42.716
+Essa é a dúvida inquietude que
+nós temos com esse exercício.
+
+22
+00:01:42.716 --> 00:01:44.790
+Como que a gente faria o cálculo?
+
+23
+00:01:44.790 --> 00:01:48.046
+Esse roteiro é exatamente
+igual ao anterior e, por isso,
+
+24
+00:01:48.046 --> 00:01:52.112
+que eu vou direto mostrar para você
+como que a gente poderia fazer.
+
+25
+00:01:52.112 --> 00:01:56.932
+Bastaria eu fazer uma tabela,
+que eu posso copiar de cima,
+
+26
+00:01:56.932 --> 00:01:59.770
+aquelas 3 unidade para cá.
+
+27
+00:01:59.770 --> 00:02:04.993
+Vamos fazer agora a cota dessa
+coluna de forma transposta,
+
+28
+00:02:04.993 --> 00:02:11.840
+usando o comando na pagina inicial que
+é o Colar, Colar Especial, Transpor.
+
+29
+00:02:11.840 --> 00:02:12.581
+Muito bem.
+
+30
+00:02:12.581 --> 00:02:17.106
+Agora eu calcularia aqui a distãncia,
+como a gente fez anteriormente,
+
+31
+00:02:17.106 --> 00:02:21.531
+só para vocês lembrarem da variável Renda,
+dela com ela mesma,
+
+32
+00:02:21.531 --> 00:02:26.737
+daria obviamente 0, depois nós
+teríamos da variável do indivíduo
+
+33
+00:02:26.737 --> 00:02:31.720
+A menos a variável do individuo
+B e assim por diante,
+
+34
+00:02:31.720 --> 00:02:36.600
+e esta seria a nossa matriz de
+distância da variável Renda.
+
+35
+00:02:36.600 --> 00:02:43.900
+Poderia fazer a mesma coisa agora para
+a variável Idade, ou em anos ou em meses.
+
+36
+00:02:43.900 --> 00:02:48.550
+De novo, para que a gente ganhe tempo,
+eu vou fechar esse arquivo e abrir o outro
+
+37
+00:02:48.550 --> 00:02:53.200
+que já tem a solução pronta,
+que é Idade, Renda, Solução,
+
+38
+00:02:53.200 --> 00:02:58.800
+e chamar atenção que este, esta planilha
+roteiro é exatamente igual ao anterior,
+
+39
+00:02:58.800 --> 00:03:03.370
+mas quando a gente vai para a solução
+vocês tão vendo aqui a base de dados,
+
+40
+00:03:03.370 --> 00:03:05.752
+e aqui as distâncias todas calculadas.
+
+41
+00:03:05.752 --> 00:03:11.439
+Lembre-se sempre que a diagonal é 0
+porque a distância do indivíduo C com C,
+
+42
+00:03:11.439 --> 00:03:15.684
+ou B com B, ou B ou A com A,
+a distancia dele com ele mesmo é sempre 0.
+
+43
+00:03:15.684 --> 00:03:19.019
+As distâncias são aquelas que
+tava mostrando para você,
+
+44
+00:03:19.019 --> 00:03:23.309
+nada mais é do que aquela formula,
+34- 23, e assim por diante.
+
+45
+00:03:23.309 --> 00:03:28.246
+Lembre-se também, como nós vimos na
+aula anterior, que o lado de cima da
+
+46
+00:03:28.246 --> 00:03:33.120
+diagonal é exatamente o reflexo
+do lado de baixo da diagonal.
+
+47
+00:03:33.120 --> 00:03:38.001
+Estas são as distâncias da variável
+Renda e essas são as distâncias
+
+48
+00:03:38.001 --> 00:03:39.490
+da variável Idade.
+
+49
+00:03:39.490 --> 00:03:42.868
+Nesta primeira tabela a variável
+Idade está medida em anos,
+
+50
+00:03:42.868 --> 00:03:47.711
+eu coloquei até em vermelho para você não
+confundir, e aqui tá medida em meses.
+
+51
+00:03:47.711 --> 00:03:52.289
+A variável Idade medida em anos,
+a distância é 27 para 34,
+
+52
+00:03:52.289 --> 00:03:56.443
+tamos falando menos 7 anos,
+e assim por diante.
+
+53
+00:03:56.443 --> 00:04:00.724
+Já em meses vocês vai ver
+que a distância dá 84 meses,
+
+54
+00:04:00.724 --> 00:04:05.319
+porque eu tenho que fazer 324 menos 408.
+
+55
+00:04:05.319 --> 00:04:09.530
+Obviamente que 7 vezes 12 vai dar 84.
+
+56
+00:04:09.530 --> 00:04:14.044
+O que eu quero aqui é que você preste
+atenção agora no calculo da distância
+
+57
+00:04:14.044 --> 00:04:17.080
+euclidiana, ou seja,
+a distância combinada.
+
+58
+00:04:17.080 --> 00:04:19.948
+Você se lembra da fórmula?
+
+59
+00:04:19.948 --> 00:04:25.170
+Basta pegar e somar 11 ao quadrado,
+
+60
+00:04:25.170 --> 00:04:31.527
+que é a célula B9,
+
+61
+00:04:31.527 --> 00:04:36.120
+mais a célula G9 ao quadrado,
+
+62
+00:04:36.120 --> 00:04:41.010
+fecha o parênteses, eleva ao quadrado
+
+63
+00:04:41.010 --> 00:04:46.490
+e depois tira a raiz
+
+64
+00:04:46.490 --> 00:04:51.350
+quadrada, ou seja, temos a distância 13.
+
+65
+00:04:51.350 --> 00:04:56.110
+Agora, se a gente fizesse o
+cálculo usando a Idade em anos,
+
+66
+00:04:56.110 --> 00:05:00.870
+estas seriam as distâncias-
+A gente ia dizer que
+
+67
+00:05:00.870 --> 00:05:04.976
+não estão muito distantes os
+elementos da nossa matriz.
+
+68
+00:05:04.976 --> 00:05:10.235
+Quando a gente faz o mesmo calculo
+usando a idade em meses, ou seja,
+
+69
+00:05:10.235 --> 00:05:15.084
+eu agora vou pegar e
+fazer a fórmula elevando
+
+70
+00:05:15.084 --> 00:05:19.492
+11 ao quadrado mais -84 ao quadrado,
+
+71
+00:05:19.492 --> 00:05:25.959
+e depois fazendo a raiz quadrada, você vai
+ver que a distância ficou muito maior.
+
+72
+00:05:25.959 --> 00:05:29.535
+Se antes era 13, agora dá 84,
+
+73
+00:05:29.535 --> 00:05:33.930
+e isso muda totalmente as nossas
+
+74
+00:05:33.930 --> 00:05:38.730
+decisões de marketing ou
+também os nossos cálculos,
+
+75
+00:05:38.730 --> 00:05:43.530
+ou seja, as distâncias são diferentes
+quando a unidade da variável se altera.
+
+76
+00:05:43.530 --> 00:05:48.286
+Por isso é que em análise de
+Cluster é fundamental a gente
+
+77
+00:05:48.286 --> 00:05:52.160
+ter as medidas expressas
+em unidades homogêneas,
+
+78
+00:05:52.160 --> 00:05:57.310
+de preferência na mesma unidade,
+ou em números compatíveis e comparáveis.
+
+79
+00:05:57.310 --> 00:06:02.590
+Nós vamos depois aprender
+procedimento em Stata que significa
+
+80
+00:06:02.590 --> 00:06:07.312
+padronizar a variável para
+evitar qualquer distorção,
+
+81
+00:06:07.312 --> 00:06:12.295
+uma vez que acabamos de ver que
+a unidade da variável pode levar
+
+82
+00:06:12.295 --> 00:06:17.500
+sim a conclusões distintas,
+diferentes e muitas vezes erradas.
+
+83
+00:06:17.500 --> 00:06:21.376
+Aqui nós terminamos esta videoaula
+e nós estamos prontos agora para
+
+84
+00:06:21.376 --> 00:06:23.355
+fazer Cluster Analysis em Stata.
+
+85
+00:06:23.355 --> 00:06:29.210
+[SEM_ÁUDIO]

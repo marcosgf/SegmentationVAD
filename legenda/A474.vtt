@@ -1,0 +1,504 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.026
+[MÚSICA] Olá a todos,
+
+2
+00:00:09.026 --> 00:00:12.072
+meu nome é Eduardo Guerra.
+
+3
+00:00:12.072 --> 00:00:17.053
+Estamos aqui no curso de orientação
+a objeto com Java e hoje
+
+4
+00:00:17.053 --> 00:00:21.880
+eu vou mostrar para vocês como criar
+na prática testes automatizados.
+
+5
+00:00:21.880 --> 00:00:24.962
+Tá?
+A gente como exercício a gente vai tentar
+
+6
+00:00:24.962 --> 00:00:27.883
+criar os testes para a nossa classe carro.
+
+7
+00:00:27.883 --> 00:00:30.400
+Então eu vou vir aqui vou abrir a classe
+
+8
+00:00:30.400 --> 00:00:33.795
+carro que a gente desenvolveu
+na aula passada certo?
+
+9
+00:00:33.795 --> 00:00:38.900
+A gente pode ver aí que ele tem o método
+acelerar e frear, e a gente vai testar
+
+10
+00:00:38.900 --> 00:00:44.180
+justamente essas funcionalidades
+da classe carro certo?
+
+11
+00:00:44.180 --> 00:00:49.567
+Então eu vou vir aqui,
+eu vou adicionar o JUnit é o primeiro
+
+12
+00:00:49.567 --> 00:00:54.400
+passo que eu tenho que fazer é
+adicionar o JUnit no meu projeto.
+
+13
+00:00:54.400 --> 00:00:58.184
+Tá?
+Então eu vou vir aqui propriedades vou eu
+
+14
+00:00:58.184 --> 00:01:02.756
+preciso clicar aqui Java Build Path,
+
+15
+00:01:02.756 --> 00:01:06.542
+Libraries e selecionar Add Library tá?
+
+16
+00:01:06.542 --> 00:01:08.640
+Ele tem várias opções.
+
+17
+00:01:08.640 --> 00:01:13.480
+O JUnit aqui é uma delas,
+eu vou dar Next tá?
+
+18
+00:01:13.480 --> 00:01:19.220
+O Eclipse ele já vem com o JUnit né,
+ele tem a opção do JUnit 3, o JUnit 4.
+
+19
+00:01:19.220 --> 00:01:22.950
+A gente nesse curso vai
+tá usando o JUnit 4.
+
+20
+00:01:22.950 --> 00:01:26.073
+Tá?
+Então eu já deixo aqui selecionado
+
+21
+00:01:26.073 --> 00:01:26.930
+e dou o OK.
+
+22
+00:01:26.930 --> 00:01:27.694
+Certo?
+
+23
+00:01:27.694 --> 00:01:30.975
+Ele tem que aparecer aqui JUnit 4.
+
+24
+00:01:30.975 --> 00:01:33.331
+Tá?
+Quando a gente cria testes,
+
+25
+00:01:33.331 --> 00:01:39.215
+a gente costuma separar o código do teste
+do código que a gente está desenvolvendo.
+
+26
+00:01:39.215 --> 00:01:44.251
+Então eu vou vir aqui e vou
+criar novo Source Folder certo?
+
+27
+00:01:44.251 --> 00:01:47.020
+Que eu vou chamar de Teste.
+
+28
+00:01:47.020 --> 00:01:52.949
+Então coloquei aqui baixo.
+
+29
+00:01:52.949 --> 00:01:58.860
+Então eu vou vir aqui agora
+vou dar novo JUnit Test Case,
+
+30
+00:01:58.860 --> 00:02:05.129
+vou colocar aqui, TesteCarro certo?
+
+31
+00:02:05.129 --> 00:02:08.837
+Ele pergunta qual que é o
+source folder que eu quero.
+
+32
+00:02:08.837 --> 00:02:14.422
+No caso eu quero o source folder Teste que
+eu criei para colocar os testes certo?
+
+33
+00:02:14.422 --> 00:02:15.340
+E finalizo.
+
+34
+00:02:15.340 --> 00:02:20.089
+Você pode observar que ele
+simplesmente vem com teste aqui.
+
+35
+00:02:20.089 --> 00:02:25.220
+Então você pode criar a classe de teste,
+você não precisa
+
+36
+00:02:25.220 --> 00:02:32.074
+ficar criando monte de eu vou
+usar aqui o coisa do Eclipse.
+
+37
+00:02:32.074 --> 00:02:37.132
+Simplesmente você pode criar uma classe
+normal e depois ir acrescentando
+
+38
+00:02:37.132 --> 00:02:41.908
+os testes, que na verdade não tem
+nada de mais a classe de teste tá?
+
+39
+00:02:41.908 --> 00:02:46.889
+Você não precisa ir por processo
+diferente de criar outras classes certo?
+
+40
+00:02:46.889 --> 00:02:50.483
+Mas eu vou aproveitar que ele
+já colocou o @Test aqui pra mim,
+
+41
+00:02:50.483 --> 00:02:52.601
+já importou ali cima certo?
+
+42
+00:02:52.601 --> 00:02:56.110
+Eu vou colocar aqui o testAcelerar.
+
+43
+00:02:56.110 --> 00:03:02.370
+Então como a gente viu, o primeiro
+passo é criar aqui a minha classe,
+
+44
+00:03:02.370 --> 00:03:07.810
+então eu vou vir aqui ó,
+Carro c = new Carro.
+
+45
+00:03:07.810 --> 00:03:13.110
+Eu vou configurar aqui
+a potência do meu carro né, c.
+
+46
+00:03:13.110 --> 00:03:16.950
+potência certo?
+
+47
+00:03:16.950 --> 00:03:25.292
+Igual vou colocar aqui 10 certo?
+
+48
+00:03:25.292 --> 00:03:29.520
+Então eu posso já verificar aqui,
+
+49
+00:03:29.520 --> 00:03:36.064
+por exemplo fazer assertEquals que opa,
+esqueci de acelerar.
+
+50
+00:03:36.064 --> 00:03:40.983
+Então eu vou fazer aqui
+c.acelerar e aí eu vou
+
+51
+00:03:40.983 --> 00:03:45.470
+verificar aqui se o 10 = c.
+
+52
+00:03:45.470 --> 00:03:49.157
+getVelocidade, certo?
+
+53
+00:03:49.157 --> 00:03:55.310
+Então eu vou salvar aqui certo?
+
+54
+00:03:55.310 --> 00:04:00.510
+Vou executar.
+
+55
+00:04:00.510 --> 00:04:05.026
+Então eu executo aqui, eu vou fazer
+de novo aqui para vocês verem,
+
+56
+00:04:05.026 --> 00:04:07.784
+eu venho aqui e dou Run As JUnit Teste tá?
+
+57
+00:04:07.784 --> 00:04:12.300
+Depois eu posso simplesmente rodar ele
+aqui de novo que ele vai executar.
+
+58
+00:04:12.300 --> 00:04:16.259
+O JUnit quando ele executa ele,
+ele coloca essa janelinha aqui tá?
+
+59
+00:04:16.259 --> 00:04:19.124
+Você pode ver que tem uma
+barrinha verde certo?
+
+60
+00:04:19.124 --> 00:04:24.087
+E ele mostra aqui as classes que ele
+executou e os métodos que ele executou.
+
+61
+00:04:24.087 --> 00:04:28.482
+Eu vou botar aqui por exemplo, que
+a velocidade tem que ser 9 para o teste
+
+62
+00:04:28.482 --> 00:04:31.192
+falhar só para a gente
+ver o que acontece tá?
+
+63
+00:04:31.192 --> 00:04:33.918
+Quando eu executar o teste de novo, certo,
+
+64
+00:04:33.918 --> 00:04:38.955
+ele vai aparecer a barrinha vermelha e ele
+vai aparecer o teste que deu problema.
+
+65
+00:04:38.955 --> 00:04:43.347
+Se a gente pegar aqui baixo,
+a gente vai ver que ele está
+
+66
+00:04:43.347 --> 00:04:47.292
+escrito: Expeted 9 but, but was 10 né?
+
+67
+00:04:47.292 --> 00:04:51.469
+Então o que é que ele está dizendo aqui,
+que ele esperava que fosse 9, que foi o
+
+68
+00:04:51.469 --> 00:04:56.650
+que eu coloquei aqui no assert, mas o
+resultado do getVelocidade foi 10 tá?
+
+69
+00:04:56.650 --> 00:04:59.264
+Se eu clicar aqui baixo, certo?
+
+70
+00:04:59.264 --> 00:05:04.497
+O Eclipse já me leva para a linha de
+código onde aconteceu aquele problema tá?
+
+71
+00:05:04.497 --> 00:05:09.014
+Então eu vou voltar aqui com 10 e
+vou estar criando aqui novo teste.
+
+72
+00:05:09.014 --> 00:05:11.915
+Eu poderia ter criado
+teste aqui por exemplo,
+
+73
+00:05:11.915 --> 00:05:16.551
+para verificar se o carro assim que
+eu crio se a velocidade dele está 0.
+
+74
+00:05:16.551 --> 00:05:21.100
+Então eu posso criar aqui por exemplo,
+testeCarroParado.
+
+75
+00:05:21.100 --> 00:05:24.380
+Carro parado.
+
+76
+00:05:24.380 --> 00:05:25.089
+certo?
+
+77
+00:05:25.089 --> 00:05:28.634
+Então a velocidade dele tem que ser 0 né?
+
+78
+00:05:28.634 --> 00:05:34.161
+Eu posso criar teste que
+eu acelero e freio para
+
+79
+00:05:34.161 --> 00:05:39.740
+ver se o método frear está funcionando,
+certo?
+
+80
+00:05:39.740 --> 00:05:44.780
+Então eu vou vir aqui c.frear.
+
+81
+00:05:44.780 --> 00:05:47.851
+No caso ele vai ter que
+dividir a velocidade por 2.
+
+82
+00:05:47.851 --> 00:05:49.372
+Então tem que ser 5 tá?
+
+83
+00:05:49.372 --> 00:05:55.250
+Então eu vou salvar aqui, vou rodar
+aqui o meu teste e olha passaram todos.
+
+84
+00:05:55.250 --> 00:05:55.790
+Tá?
+
+85
+00:05:55.790 --> 00:06:04.425
+Eu quero fazer teste aqui que eu quero ver
+se ele chega a 0 se eu frear o suficiente.
+
+86
+00:06:04.425 --> 00:06:10.310
+Então eu vou colocar aqui, frear até zero.
+
+87
+00:06:10.310 --> 00:06:11.004
+Certo?
+
+88
+00:06:11.004 --> 00:06:14.076
+Então, se ele vai dividindo por 2,
+
+89
+00:06:14.076 --> 00:06:18.991
+eu tenho que chamar aqui
+ele 5 vai dividir por 2 ele
+
+90
+00:06:18.991 --> 00:06:24.135
+vai ficar seria 2,5 ele
+arredonda para baixo 2,
+
+91
+00:06:24.135 --> 00:06:28.260
+eu preciso frear mais duas
+vezes aqui para ele chegar a 0.
+
+92
+00:06:28.260 --> 00:06:28.936
+Certo?
+
+93
+00:06:28.936 --> 00:06:33.970
+Então eu vou ver se ele chega até 0,
+se eu frear o suficiente.
+
+94
+00:06:33.970 --> 00:06:39.410
+Então salvo aqui, rodo, está funcionando.
+
+95
+00:06:39.410 --> 00:06:44.037
+Note que se eu tivesse frear
+a menos aqui e rodasse certo?
+
+96
+00:06:44.037 --> 00:06:49.940
+Ele ia mostrar todos os teste que
+passaram como verdinhos e esse daqui,
+
+97
+00:06:49.940 --> 00:06:52.741
+ele falou assim: olha eu esperava 0,
+mas foi 1.
+
+98
+00:06:52.741 --> 00:06:56.600
+Se eu clicar aqui, ele me leva pra
+linha de código onde deu o problema.
+
+99
+00:06:56.600 --> 00:06:57.447
+Está certo?
+
+100
+00:06:57.447 --> 00:07:02.075
+Então a gente viu aqui como que é
+fácil criar os testes com o JUnit, né?
+
+101
+00:07:02.075 --> 00:07:07.712
+Basta a gente criar os métodos de
+teste colocando o @Test certo?
+
+102
+00:07:07.712 --> 00:07:12.516
+E a gente pode utilizar
+aqui os métodos de assert,
+
+103
+00:07:12.516 --> 00:07:15.390
+o assertEquals, a gente tem outros né?
+
+104
+00:07:15.390 --> 00:07:18.799
+Se a gente vier aqui e
+olhar aqui na classe,
+
+105
+00:07:18.799 --> 00:07:24.370
+pode ver aqui todos os métodos que
+ele tem aqui de asserção, certo?
+
+106
+00:07:24.370 --> 00:07:29.850
+E a gente pode utilizar esses
+métodos para fazer a comparação.
+
+107
+00:07:29.850 --> 00:07:32.925
+Bom é isso,
+espero que vocês tenham entendido.
+
+108
+00:07:32.925 --> 00:07:34.050
+Muito obrigado.
+
+109
+00:07:34.050 --> 00:07:40.270
+[MÚSICA]

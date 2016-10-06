@@ -1,0 +1,603 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.302
+Muito bem, chegamos ao fim de mais curso,
+
+2
+00:00:02.302 --> 00:00:06.615
+espero que você tenha aproveitado alguma
+coisa dele e aprendido alguma coisa nova.
+
+3
+00:00:06.615 --> 00:00:10.238
+Ou pelo menos que você tenha refrescado
+a memória, o controle no plano S,
+
+4
+00:00:10.238 --> 00:00:14.645
+também chamado de controle clássico é algo
+bastante simples depois que você aprende,
+
+5
+00:00:14.645 --> 00:00:15.866
+pelo menos na teoria.
+
+6
+00:00:15.866 --> 00:00:20.424
+Ele se resume a calcular fases e módulos
+de números complexos e ajustar parametros
+
+7
+00:00:20.424 --> 00:00:24.830
+K, A, B, C e D para posicionar os
+polos malha fechada do sistema nas
+
+8
+00:00:24.830 --> 00:00:28.488
+posições desejadas e ajustar
+a constante de erro do sistema.
+
+9
+00:00:28.488 --> 00:00:31.600
+Mas lembre-se,
+não adianta nada ter par de polos
+
+10
+00:00:31.600 --> 00:00:35.714
+malha fechada exatamente onde desejamos,
+e ter a constante de erro que queremos,
+
+11
+00:00:35.714 --> 00:00:38.730
+se tiver terceiro ou quarto polo
+lá no semi plano da direita.
+
+12
+00:00:38.730 --> 00:00:42.127
+E nunca tente cancelar polo no
+semi plano da direita com o 0,
+
+13
+00:00:42.127 --> 00:00:45.835
+o cancelamento nunca será perfeito
+e o sistema ficará instável.
+
+14
+00:00:45.835 --> 00:00:49.390
+Polos no semiplano da esquerda
+você pode tentar cancelar,
+
+15
+00:00:49.390 --> 00:00:53.227
+mesmo não conseguindo cancelar polo no
+semi plano da esquerda perfeitamente,
+
+16
+00:00:53.227 --> 00:00:56.690
+a contribuição desse polo na resposta
+do sistema poderá ser desprezada.
+
+17
+00:00:56.690 --> 00:01:00.601
+No projeto dos controladores, nós supomos
+que o efeito de demais polos e zeros
+
+18
+00:01:00.601 --> 00:01:04.749
+podem ser desprezados e nos concentramos
+no par de polos complexos conjugados,
+
+19
+00:01:04.749 --> 00:01:08.385
+mas nem sempre o efeito dos demais
+polos e zeros pode ser desprezados.
+
+20
+00:01:08.385 --> 00:01:11.241
+Após projetar o seu
+controlador você deve testá-lo
+
+21
+00:01:11.241 --> 00:01:15.865
+simulação e fazer os ajustes necessários,
+aumentado o csi ou aumentando o ômega
+
+22
+00:01:15.865 --> 00:01:19.581
+n dos polos desejados ou aumentando
+o avanço de fase do controlador.
+
+23
+00:01:19.581 --> 00:01:23.591
+Só depois de estar satisfeito com os
+resultados da simulação é que você deve
+
+24
+00:01:23.591 --> 00:01:27.758
+testar seu controlador
+protótipo ou sistema real.
+
+25
+00:01:27.758 --> 00:01:29.450
+Sim, testar e não usar.
+
+26
+00:01:29.450 --> 00:01:33.672
+Provavelmente, foram feitas simplificações
+e aproximações para que o modelo do
+
+27
+00:01:33.672 --> 00:01:34.969
+sistema fosse obtido.
+
+28
+00:01:34.969 --> 00:01:38.760
+Então, o sistema real,
+pode ter comportametno ligeiramente,
+
+29
+00:01:38.760 --> 00:01:42.350
+provavelmente não muito,
+diferente do que você havia previsto.
+
+30
+00:01:42.350 --> 00:01:45.892
+Teste o sistema real ou o
+protótipo com o controlador.
+
+31
+00:01:45.892 --> 00:01:48.711
+Verifique se os requisitos
+são atendidos novamente e
+
+32
+00:01:48.711 --> 00:01:51.440
+faça os ajustes necessários
+no projeto do controlador.
+
+33
+00:01:51.440 --> 00:01:55.319
+E se você fez o teste no protótipo,
+é necessário fazer o teste mais uma vez no
+
+34
+00:01:55.319 --> 00:01:59.507
+sistema real, antes de realmente usar o
+controlador, pois a dinâmica do sistema
+
+35
+00:01:59.507 --> 00:02:02.800
+real pode ser ligeiramente
+diferente da dinâmica do protótipo.
+
+36
+00:02:02.800 --> 00:02:04.226
+E por falar sistema real,
+
+37
+00:02:04.226 --> 00:02:07.734
+você deve ter notado que eu não usei
+nenhum exemplo de sistema físico.
+
+38
+00:02:07.734 --> 00:02:08.340
+Não notou?
+
+39
+00:02:08.340 --> 00:02:13.181
+Mas que isso, eu não cheguei a usar
+nenhuma vez uma equação diferencial que
+
+40
+00:02:13.181 --> 00:02:15.351
+representasse a dinâmica de sistema.
+
+41
+00:02:15.351 --> 00:02:19.226
+Está, eu usei uma EDO para falar do
+atraso, mas a equação não representava
+
+42
+00:02:19.226 --> 00:02:22.890
+sistema específico, representava
+sistema genérico de primeria ordem.
+
+43
+00:02:22.890 --> 00:02:26.258
+Nós partimos sempre diretamente
+da função de transferência,
+
+44
+00:02:26.258 --> 00:02:29.976
+será que não seria mais interessante se
+ao invés de usarmos apenas funções de
+
+45
+00:02:29.976 --> 00:02:33.580
+transferência usássemos os modelos de
+sistemas e suas equações diferenciais?
+
+46
+00:02:33.580 --> 00:02:38.020
+Talvez até fosse mais interessante mas
+uma das belezas do controle de sistemas é
+
+47
+00:02:38.020 --> 00:02:41.844
+que ele é aplicado exatamente do mesmo
+modo a qualquer tipo de sistema.
+
+48
+00:02:41.844 --> 00:02:45.002
+Não importa se o sistema é sistema
+eletrônico, sistema mecânico,
+
+49
+00:02:45.002 --> 00:02:48.970
+sistema hidráulico, sistema pneumático,
+sistema químico, sistema biológico,
+
+50
+00:02:48.970 --> 00:02:50.798
+ou de qualquer outro tipo.
+
+51
+00:02:50.798 --> 00:02:54.615
+O controle de sistema se aplica
+igualmente a todos eles.
+
+52
+00:02:54.615 --> 00:02:58.281
+Os números podem ser diferentes,
+sistemas mais rápidos como os eletrônicos,
+
+53
+00:02:58.281 --> 00:03:00.260
+vão ter polos e zeros com módulos maiores.
+
+54
+00:03:00.260 --> 00:03:02.793
+Enquanto sistemas mais
+lentos como os térmicos,
+
+55
+00:03:02.793 --> 00:03:04.970
+vão ter polos e zeros com módulos menores.
+
+56
+00:03:04.970 --> 00:03:09.258
+Mas os números não fazem diferença, você
+vai analisar e projetar o controle desses
+
+57
+00:03:09.258 --> 00:03:11.350
+sistemas exatamente da mesma maneira.
+
+58
+00:03:11.350 --> 00:03:14.437
+Você só precisa da função de
+transferência do sistema,
+
+59
+00:03:14.437 --> 00:03:17.730
+ou da equação diferencial e
+dos requisitos de desempenho.
+
+60
+00:03:17.730 --> 00:03:21.523
+E vai ser capaz de projetar o controlador,
+que fará com que o sistema,
+
+61
+00:03:21.523 --> 00:03:24.430
+seja ele qual for,
+se comporte da maneira desejada.
+
+62
+00:03:24.430 --> 00:03:27.558
+Eu também não falei da implementação
+física do controlador,
+
+63
+00:03:27.558 --> 00:03:31.045
+isso porque dependendo da natureza
+do sistema o controlador pode ser
+
+64
+00:03:31.045 --> 00:03:35.326
+implementado de uma forma diferente, mas
+se você souber modelar o sistema isso é se
+
+65
+00:03:35.326 --> 00:03:39.707
+você conhecer as leis físicas usadas para
+obter a equação diferencial que representa
+
+66
+00:03:39.707 --> 00:03:43.626
+a dinâmica do sistema, provavelmente
+você também vai saber como implementar
+
+67
+00:03:43.626 --> 00:03:46.256
+controlador, dada a sua
+função de transferência.
+
+68
+00:03:46.256 --> 00:03:50.100
+Basta usar as mesmas leis para determinar
+como deve ser esse dispositivo.
+
+69
+00:03:50.100 --> 00:03:54.319
+Se você estiver sintonizando PID,
+o controlador já está implementado
+
+70
+00:03:54.319 --> 00:03:58.013
+fisicamente só precisa ajustar os
+valores dos ganhos, algumas vezes,
+
+71
+00:03:58.013 --> 00:04:01.270
+o controlador será implementado
+na forma de circuito eletrônico.
+
+72
+00:04:01.270 --> 00:04:04.787
+Quem já estudou pouco de eletrônica já
+sabe que pode implementar controlador,
+
+73
+00:04:04.787 --> 00:04:06.975
+usando circuito com
+amplificador operacional.
+
+74
+00:04:06.975 --> 00:04:10.675
+Para os que não estudaram nada de
+eletrônica não adiantaria muito eu mostra
+
+75
+00:04:10.675 --> 00:04:14.536
+como implementar controlador
+usando amplificador operacionais.
+
+76
+00:04:14.536 --> 00:04:19.030
+Além disso, os controladores podem
+ser implementados digitalmente
+
+77
+00:04:19.030 --> 00:04:23.672
+micro controlador ou micro computador
+embarcado, e a obtenção do controlador
+
+78
+00:04:23.672 --> 00:04:27.680
+discreto a partir de uma função de
+transferência é assunto de outro curso.
+
+79
+00:04:27.680 --> 00:04:32.337
+Temos mais dois cursos planejados para
+fechar o controle de sistemas lineares
+
+80
+00:04:32.337 --> 00:04:33.706
+variantes do tempo.
+
+81
+00:04:33.706 --> 00:04:38.157
+Deles é sobre controle moderno, onde
+iremos modelar os sistemas no que chamamos
+
+82
+00:04:38.157 --> 00:04:42.821
+de espaços de estados, e projetaremos
+controladores de realimentação de estado.
+
+83
+00:04:42.821 --> 00:04:46.907
+Você verá que com esses controladores,
+podemos não apenas posicionar os polos
+
+84
+00:04:46.907 --> 00:04:50.620
+complexos conjugados desejados,
+mas todos os polos do sistema.
+
+85
+00:04:50.620 --> 00:04:55.098
+E o outro curso é sobre controle
+digital ou controle para o computador.
+
+86
+00:04:55.098 --> 00:04:59.696
+Nesse curso, você verá como transformar
+a função de transferência de controlador
+
+87
+00:04:59.696 --> 00:05:00.734
+algoritmo simples,
+
+88
+00:05:00.734 --> 00:05:04.600
+que será usado para implementar uma
+versão digital do controlador contínuo.
+
+89
+00:05:04.600 --> 00:05:08.620
+Você verá também como obter modelos
+discretos de sistemas contínuos e projetar
+
+90
+00:05:08.620 --> 00:05:13.108
+diretamente controlador discreto, o que
+alguns casos, pode ser mais eficiente do
+
+91
+00:05:13.108 --> 00:05:17.760
+que projetar controlador contínuo,
+e depois convertê-lo controlador discreto.
+
+92
+00:05:17.760 --> 00:05:20.895
+E você verá também como
+modelar e compensar
+
+93
+00:05:20.895 --> 00:05:25.320
+efeito colateral não muito agradável
+da utilização de controle digital,
+
+94
+00:05:25.320 --> 00:05:29.813
+então, fique ligado e se você ainda não
+tiver feito o controle usando a resposta
+
+95
+00:05:29.813 --> 00:05:31.890
+frequência, eu recomendo que faça.
+
+96
+00:05:31.890 --> 00:05:35.460
+E mesmo que você já tenha feito
+eu recomendo que faça de novo,
+
+97
+00:05:35.460 --> 00:05:38.803
+mas agora fazendo paralelo entre
+o que você viu neste curso e
+
+98
+00:05:38.803 --> 00:05:42.530
+o que você estará vendo de novo
+controle usando a reposta frequência.
+
+99
+00:05:42.530 --> 00:05:43.739
+Gostou do curso?
+
+100
+00:05:43.739 --> 00:05:47.044
+Faça uma avaliação dele
+e deixe seu depoimento.
+
+101
+00:05:47.044 --> 00:05:47.931
+Não gostou?
+
+102
+00:05:47.931 --> 00:05:51.022
+Faça também uma avaliação
+e deixe seu depoimento.
+
+103
+00:05:51.022 --> 00:05:55.335
+E o mais importante, por favor,
+diga exatamente do que você gostou e o que
+
+104
+00:05:55.335 --> 00:05:58.870
+precisamos tirar, mudar,
+acrescentar ou melhorar.
+
+105
+00:05:58.870 --> 00:06:01.580
+Dizer que tem que melhorar tudo, não vale.
+
+106
+00:06:01.580 --> 00:06:05.095
+Se você for genérico demais
+nas suas críticas e sugestões,
+
+107
+00:06:05.095 --> 00:06:07.670
+dificilmente saberemos como atendê-las.
+
+108
+00:06:07.670 --> 00:06:09.456
+Mas se você for bem específico,
+
+109
+00:06:09.456 --> 00:06:13.434
+poderemos colocá-las nossa lista
+de coisas a fazer que só cresce.
+
+110
+00:06:13.434 --> 00:06:17.625
+E dia quando tivermos conseguido
+fazer todas as outras coisas que já
+
+111
+00:06:17.625 --> 00:06:21.200
+estão na lista também,
+atenderemos as suas solicitações.
+
+112
+00:06:21.200 --> 00:06:26.990
+E se você não quiser se identificar é
+só usar o Relate Problema aqui baixo.
+
+113
+00:06:26.990 --> 00:06:31.858
+É só clicar na bandeirinha,
+depois aperfeiçoamento de conteúdo,
+
+114
+00:06:31.858 --> 00:06:34.670
+digitar a sua mensagem e clicar enviar.
+
+115
+00:06:34.670 --> 00:06:37.554
+Eu recebo a mensagem mas
+sem saber quem enviou.
+
+116
+00:06:37.554 --> 00:06:42.850
+Se você tiver algum comentário sobre vídeo
+específico, faça isso na página do vídeo.
+
+117
+00:06:42.850 --> 00:06:46.412
+Assim fica mais fácil para eu
+verificar do que você está falando,
+
+118
+00:06:46.412 --> 00:06:48.830
+quanto mais específico você for, melhor.
+
+119
+00:06:48.830 --> 00:06:52.860
+[ESTRANGEIRO] Obrigado pela companhia,
+
+120
+00:06:52.860 --> 00:06:57.945
+e até o próximo Mundo do Controle,
+onde podemos
+
+121
+00:06:57.945 --> 00:07:03.050
+ou não ter Desafio do Jackman.
+
+122
+00:07:03.050 --> 00:07:08.165
+Load, handle,
+
+123
+00:07:08.165 --> 00:07:11.511
+sound Y, F, S enter.
+
+124
+00:07:11.511 --> 00:07:16.620
+[MÚSICA] [MÚSICA]
+
+125
+00:07:16.620 --> 00:07:22.200
+[MÚSICA]
+
+126
+00:07:22.200 --> 00:07:28.520
+[MÚSICA]

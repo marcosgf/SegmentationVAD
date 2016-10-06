@@ -1,0 +1,181 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.200
+[MÚSICA] E aí
+
+2
+00:00:05.200 --> 00:00:10.070
+pessoal, tudo bem?
+
+3
+00:00:10.070 --> 00:00:15.113
+Agora que já vimos pouco sobre o template
+de jogos no 'SpriteKIT', vamos conhecer
+
+4
+00:00:15.113 --> 00:00:19.000
+pouco mais sobre as duas principais
+classes: 'Game Scene' e 'Game Node'.
+
+5
+00:00:19.000 --> 00:00:21.207
+A 'Game Scene' é a cena do seu jogo,
+
+6
+00:00:21.207 --> 00:00:24.500
+ela contém informação de
+todos os objetos do seu jogo.
+
+7
+00:00:24.500 --> 00:00:27.840
+Esses objetos são chamados 'Game Nodes'.
+
+8
+00:00:27.840 --> 00:00:31.350
+Se você clicar no inspetor de atributos,
+
+9
+00:00:31.350 --> 00:00:34.630
+verá algumas possíveis
+configurações para sua cena.
+
+10
+00:00:34.630 --> 00:00:38.732
+Como o nome, a câmera,
+a cor de fundo, tamanho,
+
+11
+00:00:38.732 --> 00:00:42.270
+que por padrão está proporcional ao iPad.
+
+12
+00:00:42.270 --> 00:00:48.670
+O ponto de âncora, onde o objeto fica
+quando está na posição 'X=0' e 'Y=0'.
+
+13
+00:00:48.670 --> 00:00:52.660
+Por padrão, o ponto de origem
+é no canto inferior esquerdo,
+
+14
+00:00:52.660 --> 00:00:58.033
+mas você pode modificar isso modificando
+o 'Ancor Point', e o valor da gravidade,
+
+15
+00:00:58.033 --> 00:01:01.770
+caso você for
+usar a simulação de física no seu jogo.
+
+16
+00:01:01.770 --> 00:01:07.020
+O SpriteKIT funciona num
+esquema de hierarquia,
+
+17
+00:01:07.020 --> 00:01:11.608
+todo objeto criado na cena,
+seja 'Sprite', uma 'Label', uma luz,
+
+18
+00:01:11.608 --> 00:01:16.690
+uma câmera é 'Game Node', e por padrão,
+a cena onde eles são criados é o 'Pai'.
+
+19
+00:01:16.690 --> 00:01:21.621
+Selecione a Bibioteca de Objetos
+e experimente clicar e arrastar
+
+20
+00:01:21.621 --> 00:01:22.840
+objeto na cena.
+
+21
+00:01:22.840 --> 00:01:26.240
+Arraste dois 'Color Sprites' e nó vazio.
+
+22
+00:01:26.240 --> 00:01:30.900
+Note que todo nó tem em comum
+as propriedades de nome,
+
+23
+00:01:30.900 --> 00:01:34.510
+que é gerado nome padrão
+incrementado com número.
+
+24
+00:01:34.510 --> 00:01:38.730
+'Parent', que determina
+quem é o 'Pai' desse nó,
+
+25
+00:01:38.730 --> 00:01:43.760
+por padrão o 'Pai' é a própria cena,
+posição 'X' e 'Y',
+
+26
+00:01:43.760 --> 00:01:47.700
+e 'Z' que pode ser utilizado para
+determinar a profundidade do nó.
+
+27
+00:01:47.700 --> 00:01:51.340
+fazendo com que ele fique abaixo,
+ou acima de outro nó.
+
+28
+00:01:51.340 --> 00:01:56.000
+Experimente mudar o 'Pai' dos
+'Sprite Nodes' por exemplo.
+
+29
+00:01:56.000 --> 00:02:00.560
+Selecione o nó vazio como 'Pai'.
+
+30
+00:02:00.560 --> 00:02:04.061
+A partir do momento que nó é 'Filho'
+do outro significa que a sua posição é
+
+31
+00:02:04.061 --> 00:02:05.120
+relativa ao 'Pai'.
+
+32
+00:02:05.120 --> 00:02:09.820
+Se você mudar para '(0,0)' a posição
+será a mesma que a do 'Pai'.
+
+33
+00:02:09.820 --> 00:02:16.240
+[SEM_ÁUDIO] Os
+
+34
+00:02:16.240 --> 00:02:20.484
+'Filhos' sempre obedecerão
+as propriedades do Pai,
+
+35
+00:02:20.484 --> 00:02:25.550
+sejam elas de posição, rotação,
+
+36
+00:02:25.550 --> 00:02:33.250
+tamanho,
+
+37
+00:02:33.250 --> 00:02:41.600
+transparência, e se
+
+38
+00:02:41.600 --> 00:02:48.260
+está ativada ou não.
+
+39
+00:02:48.260 --> 00:02:55.570
+Na próxima aula vamos conhecer
+pouco mais sobre 'Sprite Simples'.

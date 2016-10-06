@@ -1,0 +1,480 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.883
+Olá.
+Após esse vídeo,
+
+2
+00:00:01.883 --> 00:00:06.832
+você será capaz de explicar o que é o
+Plano-s e de representar os polos e zeros
+
+3
+00:00:06.832 --> 00:00:09.240
+de uma Função de Transferência no Plano-s.
+
+4
+00:00:09.240 --> 00:00:13.850
+O Plano-s nada mais é do
+que plano cartesiano,
+
+5
+00:00:13.850 --> 00:00:18.380
+onde o eixo das abscissas corresponde
+à parte real da variável s,
+
+6
+00:00:18.380 --> 00:00:22.550
+e o eixo das ordenadas
+corresponde à parte imaginária.
+
+7
+00:00:22.550 --> 00:00:28.100
+Ou seja, temos gráfico onde cada
+ponto corresponde a número complexo.
+
+8
+00:00:28.100 --> 00:00:35.170
+Por exemplo, o ponto marcado corresponde
+a: a mais b j ou a mais b i.
+
+9
+00:00:35.170 --> 00:00:40.285
+E, dado uma função de transferência,
+nós podemos representar seus polos
+
+10
+00:00:40.285 --> 00:00:45.120
+e seus zeros no Plano-s,
+no que chamamos de mapa de polos e zeros.
+
+11
+00:00:45.120 --> 00:00:49.725
+Por exemplo, dada a função de
+transferência: G de s é igual a K vezes
+
+12
+00:00:49.725 --> 00:00:53.180
+s mais a sobre s mais b vezes s mais c.
+
+13
+00:00:53.180 --> 00:00:57.180
+Seu zero é menos a e seus
+polos são menos b e menos c.
+
+14
+00:00:57.180 --> 00:01:02.260
+Vamos assumir que o sistema seja estável
+e que o zero também seja negativo.
+
+15
+00:01:02.260 --> 00:01:07.380
+Para nosso exemplo, vamos assumir
+também que a menor que b menor que c.
+
+16
+00:01:07.380 --> 00:01:11.198
+Representamos os polos da
+função de transferência
+
+17
+00:01:11.198 --> 00:01:13.600
+por x e os zeros por uma bolinha.
+
+18
+00:01:13.600 --> 00:01:17.100
+Temos, então,
+o seguinte mapa de polos e zeros.
+
+19
+00:01:17.100 --> 00:01:24.230
+E o MATLAB pode traçar o mapa
+de polos e zeros para a gente.
+
+20
+00:01:24.230 --> 00:01:28.680
+Primeiro, vou mostrar uma outra maneira
+de criar uma função de transferência.
+
+21
+00:01:28.680 --> 00:01:33.201
+Você já viu que pode criar uma função
+de transferência usando a função tf e
+
+22
+00:01:33.201 --> 00:01:37.600
+passando os coeficientes do numerador e do
+denominador da função de transferência.
+
+23
+00:01:37.600 --> 00:01:43.317
+Agora, vamos usar a função zpk,
+que cria uma função
+
+24
+00:01:43.317 --> 00:01:48.120
+de transferência a partir dos polos,
+zeros e do ganho da função faturada.
+
+25
+00:01:48.120 --> 00:01:52.993
+Vamos usar a mesma função de
+transferência, mas com k igual a 2,
+
+26
+00:01:52.993 --> 00:01:56.020
+a igual a 10, b igual a 5 e c igual a 4.
+
+27
+00:01:56.020 --> 00:02:02.283
+Na linha de comando do MATLAB,
+digite sys igual a zpk,
+
+28
+00:02:02.283 --> 00:02:07.610
+abre parênteses, abre colchetes,
+menos 10, esse é o zero.
+
+29
+00:02:07.610 --> 00:02:12.844
+Fecha colchetes, abre colchetes,
+menos 5 espaço menos 4,
+
+30
+00:02:12.844 --> 00:02:18.390
+são os dois polos, fecha colchetes,
+vírgula, abre colchetes, 2.
+
+31
+00:02:18.390 --> 00:02:19.560
+Esse é o ganho.
+
+32
+00:02:19.560 --> 00:02:24.000
+Fecha colchetes,
+fecha parênteses e tecle Enter.
+
+33
+00:02:24.000 --> 00:02:28.607
+Você acabou de criar uma função
+de transferência a partir de seus
+
+34
+00:02:28.607 --> 00:02:30.240
+polos e de seus zeros.
+
+35
+00:02:30.240 --> 00:02:34.652
+Digite agora pzmap, abre parênteses, sys,
+
+36
+00:02:34.652 --> 00:02:38.792
+fecha parênteses,
+enter e o MATLAB apresenta
+
+37
+00:02:38.792 --> 00:02:43.590
+mapa de polos e zeros da função
+de transferência no Plano-s.
+
+38
+00:02:43.590 --> 00:02:47.650
+Vamos criar agora uma função
+de transferência com polos
+
+39
+00:02:47.650 --> 00:02:51.710
+complexos com parte real negativa
+e zero no semiplano da direita.
+
+40
+00:02:51.710 --> 00:02:56.469
+Digite sys igual a tf, abre parênteses,
+
+41
+00:02:56.469 --> 00:03:01.780
+abre colchetes, menos 5, espaço 25,
+fecha colchetes, vírgula,
+
+42
+00:03:01.780 --> 00:03:07.700
+abre colchetes, 1 espaço 6 espaço 25,
+fecha colchetes, fecha parênteses, enter.
+
+43
+00:03:07.700 --> 00:03:14.220
+E agora, pzmap, abre parênteses,
+sys, fecha parênteses, enter.
+
+44
+00:03:14.220 --> 00:03:19.300
+E temos aqui o mapa de polos e zeros.
+
+45
+00:03:19.300 --> 00:03:24.020
+Para conferir os polos,
+digite na linha de comando: roots,
+
+46
+00:03:24.020 --> 00:03:27.086
+de raízes, abre parênteses,
+abre colchetes,
+
+47
+00:03:27.086 --> 00:03:31.959
+1 espaço 6 espaço 25, fecha colchetes,
+fecha parênteses, enter.
+
+48
+00:03:31.959 --> 00:03:35.007
+A função roots retorna
+as raízes do polinômio,
+
+49
+00:03:35.007 --> 00:03:38.250
+cujos coeficientes são os
+números entre colchetes.
+
+50
+00:03:38.250 --> 00:03:43.530
+Nesse caso, o polinômio é: s ao quadrado,
+mais 6 s mais 25.
+
+51
+00:03:43.530 --> 00:03:48.298
+E agora, você já é capaz de
+explicar o que é o Plano-s e de
+
+52
+00:03:48.298 --> 00:03:53.039
+representar os polos e zeros de uma
+Função de Transferência no Plano-s.
+
+53
+00:03:53.039 --> 00:03:56.740
+Vou aproveitar que este vídeo
+está curto para fazer parêntese.
+
+54
+00:03:56.740 --> 00:03:59.760
+Você deve ter notado que,
+todos os exemplos,
+
+55
+00:03:59.760 --> 00:04:04.498
+usamos funções de transferência onde o
+Grau do Numerador é menor ou, no máximo,
+
+56
+00:04:04.498 --> 00:04:06.920
+igual ao Grau do Denominador, não notou?
+
+57
+00:04:06.920 --> 00:04:11.783
+Chamamos essas funções de transferência de
+Funções de Transferências Próprias e elas
+
+58
+00:04:11.783 --> 00:04:15.810
+correspondem à dinâmica de
+sistemas chamados Causais.
+
+59
+00:04:15.810 --> 00:04:20.502
+Uma Função de Transferência com o Grau do
+Numerador maior que o Grau do Denominador
+
+60
+00:04:20.502 --> 00:04:23.455
+é chamada de Função de
+Transferência Imprópria.
+
+61
+00:04:23.455 --> 00:04:27.885
+Funções de Transferências Impróprias
+representariam a dinâmica de
+
+62
+00:04:27.885 --> 00:04:29.420
+Sistemas não Causais.
+
+63
+00:04:29.420 --> 00:04:31.142
+Por que representariam?
+
+64
+00:04:31.142 --> 00:04:36.158
+Porque não existem, pelo menos não
+que eu saiba, Sistemas não Causais.
+
+65
+00:04:36.158 --> 00:04:41.073
+Sistema Não Causal seria sistema
+modelado por uma equação diferencial
+
+66
+00:04:41.073 --> 00:04:44.827
+onde temos uma derivada maior
+da entrada do que da saída
+
+67
+00:04:44.827 --> 00:04:49.330
+e esse sistema seria sistema
+adivinho ou previsor do futuro.
+
+68
+00:04:49.330 --> 00:04:54.969
+Vamos ver o caso mais simples: a equação
+diferencial ordinária de nosso sistema
+
+69
+00:04:54.969 --> 00:05:00.760
+seria y de t é igual a u ponto de t,
+onde u é a entrada e y é a saída.
+
+70
+00:05:00.760 --> 00:05:06.130
+E vamos usar três entradas diferentes:
+u de t igual a 1, degrau unitário,
+
+71
+00:05:06.130 --> 00:05:11.460
+u de t é igual a e menos t e u
+de t é igual a e elevado a t.
+
+72
+00:05:11.460 --> 00:05:13.129
+Qual o valor de y0?
+
+73
+00:05:13.129 --> 00:05:17.846
+Vamos calcular as derivadas
+dos três sinais de entrada.
+
+74
+00:05:17.846 --> 00:05:20.145
+A derivada de u1 de t igual a 0.
+
+75
+00:05:20.145 --> 00:05:22.645
+A derivada de u2 de t é igual a menos e,
+
+76
+00:05:22.645 --> 00:05:26.020
+menos t e a derivada de u3 de
+t é igual a e elevado a t.
+
+77
+00:05:26.020 --> 00:05:32.470
+No instante t igual a 0 temos
+derivada de u1 igual a 0,
+
+78
+00:05:32.470 --> 00:05:37.080
+derivada de u2 igual a menos
+1 e derivada de u3 igual a 1.
+
+79
+00:05:37.080 --> 00:05:42.410
+Note, no entanto, que t igual a 0,
+os três sinais de entrada são iguais.
+
+80
+00:05:42.410 --> 00:05:47.095
+Como apenas tendo u de 0 igual 1 o sistema
+
+81
+00:05:47.095 --> 00:05:51.780
+decidirá se sua saída será 0 menos
+1 ou 1 ou qualquer outro valor.
+
+82
+00:05:51.780 --> 00:05:55.875
+Só mesmo sendo adivinho e já sabendo,
+
+83
+00:05:55.875 --> 00:05:59.970
+apenas com a informação de que u de 0
+igual a 1, qual é a derivada desse sinal.
+
+84
+00:05:59.970 --> 00:06:05.059
+Então, no mundo real conhecido,
+com exceção de alguns videntes,
+
+85
+00:06:05.059 --> 00:06:07.660
+não existe Sistema Não Causal.
+
+86
+00:06:07.660 --> 00:06:11.440
+E, portanto, não temos Funções
+de Transferência Impróprias.
+
+87
+00:06:11.440 --> 00:06:17.730
+É claro que alguém pode criar modelos
+teóricos com sistemas adivinhos.
+
+88
+00:06:17.730 --> 00:06:22.827
+E, além disso, razões de polinômios com
+o Grau do Numerador maior do que o Grau
+
+89
+00:06:22.827 --> 00:06:27.855
+do Denominador podem aparecer como
+resultado de manipulações matemáticas,
+
+90
+00:06:27.855 --> 00:06:31.870
+o que resultaria uma pseudo Função
+de Transferência Imprópria.
+
+91
+00:06:31.870 --> 00:06:37.518
+Nos nossos exemplos, continuaremos a usar
+apenas Funções de Transferência Próprias
+
+92
+00:06:37.518 --> 00:06:42.275
+e, na maioria das vezes, serão Funções de
+Transferência com Grau de Numerador zero,
+
+93
+00:06:42.275 --> 00:06:45.040
+o que é bastante comum de
+ser encontrado na prática.
+
+94
+00:06:45.040 --> 00:06:49.821
+Agora, você já sabe o que são
+funções de transferência próprias e
+
+95
+00:06:49.821 --> 00:06:53.260
+impróprias e o que são sistemas
+causais e não causais.
+
+96
+00:06:53.260 --> 00:06:57.820
+E sabe que, no mundo real,
+não encontramos sistemas não causais.
+
+97
+00:06:57.820 --> 00:07:00.700
+Se você encontrar por favor me avise.
+
+98
+00:07:00.700 --> 00:07:04.171
+Eu quero usar ele para jogar na loteria.
+
+99
+00:07:04.171 --> 00:07:05.810
+No próximo vídeo,
+
+100
+00:07:05.810 --> 00:07:10.920
+você verá como representar
+requisito de Overshoot no Plano-s.

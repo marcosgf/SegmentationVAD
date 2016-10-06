@@ -1,0 +1,280 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.040
+Olá.
+Neste vídeo,
+
+2
+00:00:01.040 --> 00:00:05.080
+você aprenderá a projetar ganho de
+realimentação proporcional a partir da
+
+3
+00:00:05.080 --> 00:00:08.960
+resposta frequência para atender
+a requisito de sobressinal.
+
+4
+00:00:08.960 --> 00:00:13.535
+Mais especificamente, você usará
+a margem de fase como ferramenta para
+
+5
+00:00:13.535 --> 00:00:17.480
+relacionar a resposta frequência
+e a resposta no tempo.
+
+6
+00:00:17.480 --> 00:00:22.202
+Com o sistema com realimentação unitária
+mais ganho K multiplicando o erro,
+
+7
+00:00:22.202 --> 00:00:26.659
+conforme mostrado no diagrama ao lado,
+você já viu que o
+
+8
+00:00:26.659 --> 00:00:32.820
+denominador da proporção de transferência
+de malha fechada passa a ser 1 + KG de s.
+
+9
+00:00:32.820 --> 00:00:40.430
+Então, a equação característica
+será G de s igual a -1 sobre K,
+
+10
+00:00:40.430 --> 00:00:44.905
+isto é,
+como K é número real maior do que zero,
+
+11
+00:00:44.905 --> 00:00:48.410
+a fase continua a ser- 180 graus.
+
+12
+00:00:48.410 --> 00:00:52.220
+E o que se altera é o módulo G
+de s para encontrar os polos.
+
+13
+00:00:52.220 --> 00:00:57.083
+Você também já viu que ganho
+multiplicando G de J ômega apenas
+
+14
+00:00:57.083 --> 00:01:02.520
+desloca o gráfico da magnitude,
+mudando a frequência de cruzamento de 0dB,
+
+15
+00:01:02.520 --> 00:01:05.600
+por sua vez,
+isso pode alterar a margem de fase.
+
+16
+00:01:05.600 --> 00:01:10.137
+Então, agora você pode calcular o
+papel de amortecimento necessário para
+
+17
+00:01:10.137 --> 00:01:12.520
+atingir requisito de sobressinal.
+
+18
+00:01:12.520 --> 00:01:16.210
+Por exemplo, 20%, ou seja, 0,2.
+
+19
+00:01:16.210 --> 00:01:22.493
+Nesse caso, Si será igual ao logaritmo
+natural de Mp, onde Mp é o sobressinal
+
+20
+00:01:22.493 --> 00:01:28.110
+dividido pela raiz de Pi ao quadrado mais
+o logaritmo natural de Mp ao quadrado.
+
+21
+00:01:28.110 --> 00:01:31.874
+No nosso caso,
+isso será substituído por 0,2.
+
+22
+00:01:31.874 --> 00:01:37.626
+Teremos então o módulo do logaritmo de 0,2
+dividido pela raiz de Pi ao quadrado mais
+
+23
+00:01:37.626 --> 00:01:43.380
+o logaritmo natural de 0,2 ao quadrado,
+o que dará, aproximadamente, 0,45.
+
+24
+00:01:43.380 --> 00:01:47.728
+A margem de fase associada
+malha aberta será dada por Pm
+
+25
+00:01:47.728 --> 00:01:51.110
+igual a 100 vezes Si, o que dará 45º.
+
+26
+00:01:51.110 --> 00:01:56.075
+Agora, você pode usar essas
+constatações para alterar o desempenho
+
+27
+00:01:56.075 --> 00:01:59.650
+do sistema malha fechada por meio
+da manipulação do valor de K.
+
+28
+00:01:59.650 --> 00:02:04.874
+Para isso, bastará verificar qual
+é o ganho do sistema na frequência
+
+29
+00:02:04.874 --> 00:02:10.539
+que a margem de fase é de 45º e fazer
+o ganho K ser o inverso desse valor.
+
+30
+00:02:10.539 --> 00:02:16.500
+Para o sistema G de S igual
+a 10 sobre S vezes S + 2,
+
+31
+00:02:16.500 --> 00:02:20.530
+a resposta no tempo é mostrada ao
+lado com realimentação unitária.
+
+32
+00:02:20.530 --> 00:02:25.100
+Nela, vemos que o sobressinal
+é de cerca de 35%,
+
+33
+00:02:25.100 --> 00:02:28.381
+o que não atende ao
+nosso requisito de 20%.
+
+34
+00:02:28.381 --> 00:02:32.430
+A resposta frequência é dada
+no gráfico ao lado agora.
+
+35
+00:02:32.430 --> 00:02:36.673
+A frequência que a margem de fase é 45º,
+isto é,
+
+36
+00:02:36.673 --> 00:02:40.250
+quando a fase de G de J ômega vale- 135º,
+
+37
+00:02:40.250 --> 00:02:44.120
+pode ser lida no gráfico e vale
+dois radianos por segundo.
+
+38
+00:02:44.120 --> 00:02:48.720
+A magnitude nesta frequência
+é de cerca 5 dBs,
+
+39
+00:02:48.720 --> 00:02:52.650
+o que significa uma magnitude de 1,78.
+
+40
+00:02:52.650 --> 00:03:00.562
+Assim, basta termos ganho de K igual
+a 1 sobre 1,78, que é igual a 0,56.
+
+41
+00:03:00.562 --> 00:03:05.690
+Vamos verificar o que acontece
+na frequência e no tempo.
+
+42
+00:03:05.690 --> 00:03:10.623
+No gráfico da resposta frequência,
+vemos que a curva de magnitude
+
+43
+00:03:10.623 --> 00:03:15.263
+cor de laranja foi transladada para baixo,
+pois o ganho K é menor do que 1,
+
+44
+00:03:15.263 --> 00:03:19.490
+e a nova frequência de cruzamento de
+0 dB é de 2 radianos por segundo.
+
+45
+00:03:19.490 --> 00:03:24.140
+Essa frequência corresponde
+a uma margem de fase de 45º.
+
+46
+00:03:24.140 --> 00:03:29.050
+A resposta no tempo mostra que o
+sobressinal foi reduzido a cerca de 23%.
+
+47
+00:03:29.050 --> 00:03:35.396
+Este pequeno erro se deve às
+nossas aproximações, particular,
+
+48
+00:03:35.396 --> 00:03:39.660
+para a fórmula que relaciona a margem
+de fase com o fator de amortecimento.
+
+49
+00:03:39.660 --> 00:03:44.390
+Tipicamente, requisitos de sobressinal
+são dados na forma de desigualdades
+
+50
+00:03:44.390 --> 00:03:48.550
+requerendo, assim, que o sobressinal
+seja menor ou igual a determinado valor.
+
+51
+00:03:48.550 --> 00:03:52.651
+Nesses casos,
+o que se faz é adicionar alguns graus,
+
+52
+00:03:52.651 --> 00:03:55.781
+de 5 a 10 graus,
+à margem de fase desejada,
+
+53
+00:03:55.781 --> 00:03:59.690
+para compensar antecipadamente
+os efeitos das aproximações.
+
+54
+00:03:59.690 --> 00:04:04.428
+Neste vídeo você aprendeu a projetar
+ganho proporcional a partir da
+
+55
+00:04:04.428 --> 00:04:08.030
+resposta frequência para atender
+requisito de sobressinal.
+
+56
+00:04:08.030 --> 00:04:12.566
+Na próxima semana, você verá outras
+maneiras de se representar a resposta
+
+57
+00:04:12.566 --> 00:04:18.529
+frequência e como obter especificações
+de desempenho no domínio da frequência.

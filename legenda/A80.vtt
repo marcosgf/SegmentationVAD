@@ -1,0 +1,467 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.016
+[MÚSICA] [SEM
+
+2
+00:00:08.016 --> 00:00:13.547
+ÁUDIO] Olá, bem vindos à lição
+
+3
+00:00:13.547 --> 00:00:19.962
+aonde vamos aprender a construir
+mapas perceptuais utilizando o Stata.
+
+4
+00:00:19.962 --> 00:00:26.633
+O primeiro exercício que vamos fazer
+consiste na análise da percepção de
+
+5
+00:00:26.633 --> 00:00:33.558
+conjunto de companhias aéreas a partir
+de determinado grupo de atributos.
+
+6
+00:00:33.558 --> 00:00:39.046
+No caso, conveniência, pontualidade,
+serviço em geral e conforto,
+
+7
+00:00:39.046 --> 00:00:43.189
+apresentados na primeira linha
+da tabela que estamos vendo.
+
+8
+00:00:43.189 --> 00:00:47.819
+Enquanto na primeira coluna temos
+o nome das companhias aéreas que
+
+9
+00:00:47.819 --> 00:00:49.820
+estarão sendo analisadas.
+
+10
+00:00:49.820 --> 00:00:52.671
+Mas de onde vieram esses dados?
+
+11
+00:00:52.671 --> 00:00:57.896
+Para indivíduos que são capazes
+de oferecer informações
+
+12
+00:00:57.896 --> 00:01:02.984
+a respeito destas companhias
+aéreas foi solicitado
+
+13
+00:01:02.984 --> 00:01:07.576
+que eles pontuassem qual
+a sua percepção quanto
+
+14
+00:01:07.576 --> 00:01:12.520
+a oferta de determinado atributo
+numa determinada companhia aérea.
+
+15
+00:01:12.520 --> 00:01:18.894
+Estes dados foram consolidados e foram
+geradas médias das respostas para
+
+16
+00:01:18.894 --> 00:01:24.550
+cada uma das companhias aéreas,
+resultando na tabela que estamos vendo.
+
+17
+00:01:24.550 --> 00:01:31.880
+Uma vez de posse desses dados, iremos
+utilizar o Stata e portanto abrir o Stata,
+
+18
+00:01:31.880 --> 00:01:37.360
+carregar estes dados e procurar
+o procedimento adequado
+
+19
+00:01:37.360 --> 00:01:42.139
+para que possamos construir
+os mapas perceptuais.
+
+20
+00:01:42.139 --> 00:01:43.880
+Então mãos à obra.
+
+21
+00:01:43.880 --> 00:01:47.130
+Começamos abrindo o Stata.
+
+22
+00:01:47.130 --> 00:01:51.152
+Uma vez o Stata aberto,
+
+23
+00:01:51.152 --> 00:01:57.190
+vamos carregar os dados importando
+a planilha que acabamos ver.
+
+24
+00:01:57.190 --> 00:02:05.920
+Esta planilha tem o nome de
+Mapa_Perceptual_Aéreas_BD.
+
+25
+00:02:05.920 --> 00:02:11.962
+Vamos clicar nesta planilha e
+temos aqui o conjunto de dados.
+
+26
+00:02:11.962 --> 00:02:19.280
+Lembrando que precisamos informar ao Stata
+que a primeira linha consiste em rótulos.
+
+27
+00:02:19.280 --> 00:02:24.008
+Os dados estão importados.
+
+28
+00:02:24.008 --> 00:02:28.770
+Agora precisamos buscar o
+procedimentos de análise
+
+29
+00:02:28.770 --> 00:02:32.083
+multivariada adequado para tratá-los.
+
+30
+00:02:32.083 --> 00:02:36.725
+Esse procedimento se chama
+Multidimensional Scaling e pode ser
+
+31
+00:02:36.725 --> 00:02:42.740
+encontrada no menu Statistics,
+Multivariate analysis,
+
+32
+00:02:42.740 --> 00:02:48.341
+Multidimensional scaling e por
+tratarmos dados de médias de
+
+33
+00:02:48.341 --> 00:02:55.580
+opiniões dos respondentes vamos
+utilizar a opção MDS of data.
+
+34
+00:02:55.580 --> 00:03:01.693
+Este submenu solicita
+que informemos quais são
+
+35
+00:03:01.693 --> 00:03:07.826
+as variáveis que estaremos considerando
+para a construção do posicionamento.
+
+36
+00:03:07.826 --> 00:03:11.180
+Portanto são elas conveniência,
+pontualidade,
+
+37
+00:03:11.180 --> 00:03:13.658
+serviços em geral e conforto.
+
+38
+00:03:13.658 --> 00:03:18.540
+Assim como solicita que
+apresentemos qual é a variável
+
+39
+00:03:18.540 --> 00:03:23.128
+que caracteriza a identificação das
+
+40
+00:03:23.128 --> 00:03:28.230
+nossas unidades de estudo,
+no caso as empresas aéreas.
+
+41
+00:03:28.230 --> 00:03:33.595
+Dando OK o sistema irá
+processar estes dados e gerar
+
+42
+00:03:33.595 --> 00:03:39.411
+uma tabela que apresenta de forma
+sintética o resultado dessa análise.
+
+43
+00:03:39.411 --> 00:03:44.950
+Podemos verificar aqui a possibilidade
+de construir 4 dimensões,
+
+44
+00:03:44.950 --> 00:03:49.747
+mas efetivamente não
+precisamos dessas 4 dimensões,
+
+45
+00:03:49.747 --> 00:03:55.629
+porque apenas 2 delas
+correspondem a praticamente
+
+46
+00:03:55.629 --> 00:04:02.273
+98,34% do fenômeno em estudo,
+da variância em estudo.
+
+47
+00:04:02.273 --> 00:04:07.196
+Uma vez de posse desses dados
+podemos agora construir o
+
+48
+00:04:07.196 --> 00:04:11.229
+gráfico que irá representar num espaço
+
+49
+00:04:11.229 --> 00:04:16.487
+bidimensional a posição
+de cada uma das empresas.
+
+50
+00:04:16.487 --> 00:04:21.858
+Este gráfico que é gerado
+automaticamente a partir do Stata,
+
+51
+00:04:21.858 --> 00:04:27.930
+apresenta as empresas plotadas
+num espaço bidimensional.
+
+52
+00:04:27.930 --> 00:04:33.301
+O que se pode concluir a partir
+destes dados é que, por exemplo,
+
+53
+00:04:33.301 --> 00:04:39.002
+a US Airways e a Continental são empresas
+que aparentemente são percebidas
+
+54
+00:04:39.002 --> 00:04:45.316
+como razoavelmente próximas, enquanto
+a Southwest se destaca de todo o grupo.
+
+55
+00:04:45.316 --> 00:04:52.250
+No entanto, como temos as variáveis
+para construir o posicionamento,
+
+56
+00:04:52.250 --> 00:04:57.508
+podemos criar outro mapa que
+será mais útil para que possamos
+
+57
+00:04:57.508 --> 00:05:04.456
+identificar quais elementos contribuem
+para a construção dessa percepção.
+
+58
+00:05:04.456 --> 00:05:09.383
+Para isso iremos no submenu
+Gráficos ou Graphics,
+
+59
+00:05:09.383 --> 00:05:15.138
+iremos considerar o
+Multivariate analysis graphs,
+
+60
+00:05:15.138 --> 00:05:19.850
+a opção Biplot e no submenu iremos
+
+61
+00:05:19.850 --> 00:05:24.962
+informar as variáveis que desejamos,
+conveniência, pontualidade,
+
+62
+00:05:24.962 --> 00:05:30.175
+serviço em geral e conforto,
+assim como iremos pedir que
+
+63
+00:05:30.175 --> 00:05:36.182
+sejam identificadas as empresas
+de acordo com o seu nome.
+
+64
+00:05:36.182 --> 00:05:41.294
+Como poderemos ver a seguir
+teremos mapa que é mais
+
+65
+00:05:41.294 --> 00:05:46.262
+ilustrativo e que permite
+uma análise mais detalhada e
+
+66
+00:05:46.262 --> 00:05:50.720
+mais aprofundada do
+posicionamento das empresas.
+
+67
+00:05:50.720 --> 00:05:54.941
+Como podemos verificar nesse mapa
+
+68
+00:05:54.941 --> 00:05:59.782
+as empresas continuam sendo apresentadas,
+
+69
+00:05:59.782 --> 00:06:04.283
+estão de forma análoga
+ao que havíamos visto,
+
+70
+00:06:04.283 --> 00:06:09.030
+no entanto surgem vetores
+que nos ajudam a entender
+
+71
+00:06:09.030 --> 00:06:12.609
+como este posicionamento foi construído.
+
+72
+00:06:12.609 --> 00:06:18.498
+Então verificamos por exemplo,
+que as empresas Continental
+
+73
+00:06:18.498 --> 00:06:23.482
+e US Airways,
+que estão mais isoladas do grupo,
+
+74
+00:06:23.482 --> 00:06:29.557
+são aquelas que que tem as piores
+avaliações em cada uma dessas dimensões.
+
+75
+00:06:29.557 --> 00:06:32.980
+E como sabemos que são
+as piores avaliações?
+
+76
+00:06:32.980 --> 00:06:38.113
+Cada vetor desse corresponde
+a eixo e a projeção
+
+77
+00:06:38.113 --> 00:06:43.407
+ortogonal de cada uma dessas
+marcas por sobre esse eixo
+
+78
+00:06:43.407 --> 00:06:48.855
+indica a posição relativa desta
+marca em relação a este atributo.
+
+79
+00:06:48.855 --> 00:06:51.735
+Então se considerarmos o eixo conforto,
+
+80
+00:06:51.735 --> 00:06:56.931
+verificamos que a Southwest é
+aquela que tem o pior conforto,
+
+81
+00:06:56.931 --> 00:07:05.324
+no entanto ela é balanceada por ter
+a maior pontualidade e maior conveniência,
+
+82
+00:07:05.324 --> 00:07:12.481
+ao passo que a Continental e a US Airways
+são aquela que de maneira geral,
+
+83
+00:07:12.481 --> 00:07:18.333
+se considerarmos o vetor Serviço em geral,
+são aquelas que tem a pior pontuação,
+
+84
+00:07:18.333 --> 00:07:24.122
+assim como com relação ao eixo
+Conveniência, ao eixo Pontualidade.
+
+85
+00:07:24.122 --> 00:07:29.805
+Desta maneira ao analisarmos
+o mapa conseguimos entender
+
+86
+00:07:29.805 --> 00:07:35.430
+claramente qual empresa de
+destaca em qual quesito.
+
+87
+00:07:35.430 --> 00:07:40.035
+E se por acaso fomos
+representantes da America Airlines
+
+88
+00:07:40.035 --> 00:07:44.640
+percebemos que somos muito bem
+avaliados no quesito Conforto,
+
+89
+00:07:44.640 --> 00:07:48.744
+estamos em segundo lugar
+na visão Serviços em geral,
+
+90
+00:07:48.744 --> 00:07:53.593
+no entanto, estamos atrás em
+Conveniência e em Pontualidade.
+
+91
+00:07:53.593 --> 00:07:58.840
+Se desejamos melhorar nosso
+posicionamento, devemos trabalhar esses
+
+92
+00:07:58.840 --> 00:08:05.420
+atributos para os quais somos percebidos
+como piores que nossos concorrentes.
+
+93
+00:08:05.420 --> 00:08:10.232
+Creio que isso da uma visão
+bastante geral daquilo que
+
+94
+00:08:10.232 --> 00:08:13.283
+pode ser feito com mapas perceptuais,
+
+95
+00:08:13.283 --> 00:08:18.563
+além de ensinar por meio do Stata
+e de exercício bastante simples,
+
+96
+00:08:18.563 --> 00:08:23.370
+como podemos construir e utilizar
+esta poderosa ferramenta.
+
+97
+00:08:23.370 --> 00:08:31.090
+Até a próxima lição.

@@ -1,0 +1,1021 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.608
+[MÚSICA] [MÚSICA] Olá.
+
+2
+00:00:08.608 --> 00:00:11.593
+Bem-vindo ao curso sobre TDD.
+
+3
+00:00:11.593 --> 00:00:17.440
+Eu sou o Clóvis Fernandes e hoje
+iremos fazer uma pequena apresentação
+
+4
+00:00:17.440 --> 00:00:23.010
+sobre como seria fazer uma refatoração,
+assim alto nível,
+
+5
+00:00:23.010 --> 00:00:30.156
+nós iremos depois apresentar
+material de leitura detalhando,
+
+6
+00:00:30.156 --> 00:00:37.462
+o uso da singular responsability
+principle, está certo?
+
+7
+00:00:37.462 --> 00:00:43.996
+Então hoje a gente vai mostrar
+muito rapidamente a aplicação,
+
+8
+00:00:43.996 --> 00:00:50.131
+uma refatoração usando o SRP do SOLID.
+
+9
+00:00:50.131 --> 00:00:55.174
+Português é a responsabilidade única,
+não é?´Está certo?
+
+10
+00:00:55.174 --> 00:01:00.124
+É o principio da responsabilidade única
+que eu chamei a atenção na aula anterior
+
+11
+00:01:00.124 --> 00:01:02.190
+de apresentação do SOLID.
+
+12
+00:01:02.190 --> 00:01:05.900
+Volto a falar agora sobre esse princípio.
+
+13
+00:01:05.900 --> 00:01:11.185
+Quando o Uncle Bob chama de
+responsabilidade da classe,
+
+14
+00:01:11.185 --> 00:01:16.043
+ele está se referindo aquilo
+que nós quando fizemos
+
+15
+00:01:16.043 --> 00:01:19.590
+a definição dos cartões CRC,
+
+16
+00:01:19.590 --> 00:01:25.620
+nós falávamos que era a finalidade da
+classe, a descrição da classe, está certo?
+
+17
+00:01:25.620 --> 00:01:29.417
+É isso que nós estamos usando.
+
+18
+00:01:29.417 --> 00:01:35.780
+Então, o termo ficou o
+nome que o Uncle Bob deu,
+
+19
+00:01:35.780 --> 00:01:41.110
+não é o mais adequado, mas ficou e a gente
+tem que estar sempre explicando isso.
+
+20
+00:01:41.110 --> 00:01:45.718
+No fundo você vai sempre olhar para
+o que é tarefa ou que é papel ou que
+
+21
+00:01:45.718 --> 00:01:48.860
+aquela classe está exercendo, está certo?
+
+22
+00:01:48.860 --> 00:01:54.585
+E é isso que nós vamos querer
+que seja apenas papel,
+
+23
+00:01:54.585 --> 00:01:58.597
+uma tarefa, uma finalidade, está certo?
+
+24
+00:01:58.597 --> 00:02:01.880
+Ou uma responsabilidade
+como o Uncle Bob fala,
+
+25
+00:02:01.880 --> 00:02:07.270
+mas essa responsabilidade não é aquela
+que nós trabalhamos nos cartões CRC.
+
+26
+00:02:07.270 --> 00:02:13.580
+O R do CRC, responsability,
+ele quer dizer as responsabilidades,
+
+27
+00:02:13.580 --> 00:02:17.740
+tudo o que a classe faz ou sabe,
+está certo?
+
+28
+00:02:17.740 --> 00:02:22.708
+Obviamente, no nosso caso aqui, nós vamos
+estar tratando como se fosse tarefa,
+
+29
+00:02:22.708 --> 00:02:24.148
+finalidade da classe.
+
+30
+00:02:24.148 --> 00:02:24.870
+Está okay?
+
+31
+00:02:24.870 --> 00:02:30.066
+E, nesse sentido,
+como eu vou ter uma finalidade.
+
+32
+00:02:30.066 --> 00:02:35.894
+Devo ter, espero ter uma finalidade,
+todas as outras classes
+
+33
+00:02:35.894 --> 00:02:41.224
+que tenham acoplamento,
+dependam de mim, está certo?
+
+34
+00:02:41.224 --> 00:02:46.013
+Só vai existir uma razão para eu mudar,
+porque eu tenho uma finalidade,
+
+35
+00:02:46.013 --> 00:02:46.817
+está certo?
+
+36
+00:02:46.817 --> 00:02:49.530
+Agora, quando eu tenho duas finalidades,
+
+37
+00:02:49.530 --> 00:02:52.996
+aí a coisa já começa a ficar complicada,
+está certo?
+
+38
+00:02:52.996 --> 00:02:56.269
+Isso tem a ver com com
+a questão da coesão, não é?
+
+39
+00:02:56.269 --> 00:03:01.535
+Nós já tínhamos conversado
+também que todos os 5 princípios
+
+40
+00:03:01.535 --> 00:03:08.750
+trabalham com a coesão na classe,
+eu quero obter alta coesão, está certo?
+
+41
+00:03:08.750 --> 00:03:12.750
+E baixo acoplamento, alta coesão.
+
+42
+00:03:12.750 --> 00:03:18.101
+O conjunto de responsabilidades que eu
+defini para aquela classe devem ajudar
+
+43
+00:03:18.101 --> 00:03:23.630
+a satisfazer a finalidade da classe,
+a tarefa da classe.
+
+44
+00:03:23.630 --> 00:03:25.464
+Está certo?
+
+45
+00:03:25.464 --> 00:03:32.695
+Já o acoplamento eu quero ter
+baixo acoplamento, está certo?
+
+46
+00:03:32.695 --> 00:03:37.590
+E vão existir maneiras de eu trabalhar
+esse, de eu baixar esse acoplamento,
+
+47
+00:03:37.590 --> 00:03:41.440
+gerenciar ele para ficar
+de uma maneira mais
+
+48
+00:03:41.440 --> 00:03:45.569
+confortável para trabalhar, está certo?
+
+49
+00:03:45.569 --> 00:03:50.760
+Bom, com relação à questão da coesão,
+
+50
+00:03:50.760 --> 00:03:55.490
+quando eu tenho duas finalidades,
+está certo?
+
+51
+00:03:55.490 --> 00:04:02.002
+Aí, eu já começo a ter uma,
+grau de coesão baixo.
+
+52
+00:04:02.002 --> 00:04:06.740
+Imagine que a minha classe
+tenha 10 responsabilidades no
+
+53
+00:04:06.740 --> 00:04:09.033
+sentido lá do cartões CRC, não é?
+
+54
+00:04:09.033 --> 00:04:09.910
+Está certo?
+
+55
+00:04:09.910 --> 00:04:16.790
+E cada uma satisfaz uma finalidade
+diferente para a minha classe,
+
+56
+00:04:16.790 --> 00:04:20.961
+ou seja, eu tenho uma classe
+que tem 10 finalidades.
+
+57
+00:04:20.961 --> 00:04:21.950
+Está certo?
+
+58
+00:04:21.950 --> 00:04:25.878
+Ou seja, na verdade, uma classe
+desse tipo é amontoado de coisas,
+
+59
+00:04:25.878 --> 00:04:27.610
+não tem significado para mim.
+
+60
+00:04:27.610 --> 00:04:28.350
+Está certo?
+
+61
+00:04:28.350 --> 00:04:33.956
+Ou seja, as outras classes dependerem
+dessa classe com tão baixa coesão,
+
+62
+00:04:33.956 --> 00:04:34.743
+está certo?
+
+63
+00:04:34.743 --> 00:04:39.698
+Vão existir muitos problemas, porque toda
+a vez que eu fizer alguma mudança uma,
+
+64
+00:04:39.698 --> 00:04:43.170
+todas elas vão ter que ser testadas
+para saber se a mudança que eu fiz
+
+65
+00:04:43.170 --> 00:04:47.689
+numa responsabilidade das 10 afetou
+as outras ou não, está certo?
+
+66
+00:04:47.689 --> 00:04:49.830
+Então, isso é importante,
+
+67
+00:04:49.830 --> 00:04:55.890
+ter uma responsabilidade apenas e também
+ter número baixo de responsabilidades.
+
+68
+00:04:55.890 --> 00:04:57.526
+Isso é outra coisa importante também.
+
+69
+00:04:57.526 --> 00:05:01.834
+Quando a gente trabalhava com o cartão
+CRC, o cartão já era delimitador.
+
+70
+00:05:01.834 --> 00:05:06.182
+Aquele cartão,
+que consegue colocar no máximo, 15,
+
+71
+00:05:06.182 --> 00:05:11.220
+menos que 15 responsabilidades,
+sendo uma por linha, está certo?
+
+72
+00:05:11.220 --> 00:05:13.826
+Então, esse seria bom número também.
+
+73
+00:05:13.826 --> 00:05:14.645
+Está certo?
+
+74
+00:05:14.645 --> 00:05:19.480
+Entre 10 e 15 responsabilidades,
+10 seria mais agradável.
+
+75
+00:05:19.480 --> 00:05:25.000
+Porque se você fizer uma análise
+como nós mostraremos, não é,
+
+76
+00:05:25.000 --> 00:05:31.176
+da, sobre a, essas múltiplas finalidades,
+
+77
+00:05:31.176 --> 00:05:35.810
+você vai perceber que isso pode ocorrer,
+como eu falei dos acoplamentos.
+
+78
+00:05:35.810 --> 00:05:40.411
+Qual a influência que o
+acoplamento tem na coesão?
+
+79
+00:05:40.411 --> 00:05:43.090
+É isso que nós vamos mostrar.
+
+80
+00:05:43.090 --> 00:05:48.090
+Como nós estamos desenvolvendo isso com o
+TDD, à medida que novas responsabilidades,
+
+81
+00:05:48.090 --> 00:05:52.513
+no sentido que nós vinhamos trabalhando
+de requisitos, não é, elas vão sendo
+
+82
+00:05:52.513 --> 00:05:58.360
+incorporadas, adicionadas, eu vou criando
+novas classes, acoplando com outras.
+
+83
+00:05:58.360 --> 00:06:02.793
+Então, a questão da coesão eu não
+consigo trabalhar sem saber o
+
+84
+00:06:02.793 --> 00:06:06.581
+contexto que essa classe está,
+termos de acoplamento.
+
+85
+00:06:06.581 --> 00:06:08.920
+Quem depende dessa classe, está certo?
+
+86
+00:06:08.920 --> 00:06:13.430
+Porque dependendo do,
+
+87
+00:06:13.430 --> 00:06:18.630
+se tem poucas dependências,
+acoplamento baixo, está certo?
+
+88
+00:06:18.630 --> 00:06:23.799
+Pode acontecer que eu não precise,
+trabalhar se
+
+89
+00:06:23.799 --> 00:06:29.110
+eu tiver duas finalidades,
+está certo, num dado momento.
+
+90
+00:06:29.110 --> 00:06:35.109
+À medida que eu vou, novas classes
+por causa de novas responsabilidades,
+
+91
+00:06:35.109 --> 00:06:39.448
+os acoplamentos de novas classes a essa
+classe podem aumentar e aí, realmente,
+
+92
+00:06:39.448 --> 00:06:41.660
+pode ser que eu tenha que, realmente,
+
+93
+00:06:41.660 --> 00:06:46.103
+fazer uma refatoração para
+tratar esse tipo de problema.
+
+94
+00:06:46.103 --> 00:06:48.780
+Vamos exemplificar então.
+
+95
+00:06:48.780 --> 00:06:52.174
+Eu estou mostrando aí uma
+classe retângulo, não é?
+
+96
+00:06:52.174 --> 00:06:53.030
+Está certo?
+
+97
+00:06:53.030 --> 00:06:56.726
+A classe retângulo,
+ela tem 2 métodos apenas.
+
+98
+00:06:56.726 --> 00:07:01.498
+O método draw para desenhar e o
+método área que vai me voltar
+
+99
+00:07:01.498 --> 00:07:04.860
+double a área do retângulo, está certo?
+
+100
+00:07:04.860 --> 00:07:10.218
+A pergunta é: eu consigo dizer se há
+
+101
+00:07:10.218 --> 00:07:17.046
+alguma problema de finalidade
+só olhando essa classe?
+
+102
+00:07:17.046 --> 00:07:19.843
+Fica muito difícil, está certo?
+
+103
+00:07:19.843 --> 00:07:23.320
+Eu tenho só 2 métodos, mas eu podia,
+eu estou exemplificando,
+
+104
+00:07:23.320 --> 00:07:25.580
+podia ter mais métodos na verdade,
+está certo?
+
+105
+00:07:25.580 --> 00:07:27.440
+Eu estou só exemplificando isso.
+
+106
+00:07:27.440 --> 00:07:28.920
+Bom, o que é que acontece?
+
+107
+00:07:28.920 --> 00:07:32.891
+Eu vou examinar,
+vou olhar se tem mau cheiro, não é?
+
+108
+00:07:32.891 --> 00:07:33.870
+Está certo?
+
+109
+00:07:33.870 --> 00:07:36.245
+Será que tem mau cheiro?
+
+110
+00:07:36.245 --> 00:07:40.488
+Mas uma coisa é importante,
+para esse princípio,
+
+111
+00:07:40.488 --> 00:07:46.512
+eu tenho que olhar o contexto, quem está
+dependendo dessa classe, está certo?
+
+112
+00:07:46.512 --> 00:07:48.110
+Então, olhando isso,
+
+113
+00:07:48.110 --> 00:07:53.469
+vocês vejam que eu tenho uma aplicação
+gráfica que vai fazer uso do retângulo.
+
+114
+00:07:53.469 --> 00:07:54.310
+Está certo?
+
+115
+00:07:54.310 --> 00:07:58.624
+Ela depende da classe retângulo e
+ela depende também da interface
+
+116
+00:07:58.624 --> 00:08:01.986
+gráfica com o usuário,
+o g, u, i, o GUI, não é?
+
+117
+00:08:01.986 --> 00:08:02.880
+Está certo?
+
+118
+00:08:02.880 --> 00:08:05.248
+A graphical user interface.
+
+119
+00:08:05.248 --> 00:08:09.800
+A aplicação gráfica,
+ela desenha retângulo na tela.
+
+120
+00:08:09.800 --> 00:08:10.878
+Bom, outro,
+
+121
+00:08:10.878 --> 00:08:16.630
+a outra classe que depende do retângulo é
+a aplicação de geometria computacional.
+
+122
+00:08:16.630 --> 00:08:17.468
+Está certo?
+
+123
+00:08:17.468 --> 00:08:20.214
+A aplicação de geometria computacional,
+
+124
+00:08:20.214 --> 00:08:24.671
+ela usa o retângulo só para obter
+a matemática das formas geométricas.
+
+125
+00:08:24.671 --> 00:08:26.920
+Ele está interessado apenas nisso.
+
+126
+00:08:26.920 --> 00:08:31.310
+Nunca desenhe o retângulo na tela,
+está certo?
+
+127
+00:08:31.310 --> 00:08:35.820
+Então, vocês vejam que eu
+tenho duas classes que
+
+128
+00:08:35.820 --> 00:08:38.491
+dependem de retângulo, está certo?
+
+129
+00:08:38.491 --> 00:08:43.337
+Uma depende do método draw para desenhar,
+a outra depende do
+
+130
+00:08:43.337 --> 00:08:48.430
+método área e aí, a classe retângulo fica
+claro que ela tem duas tarefas, não é?
+
+131
+00:08:48.430 --> 00:08:53.950
+Para satisfazer as duas necessidades
+das classes que dependem dela.
+
+132
+00:08:53.950 --> 00:08:59.470
+Uma é fornecer modelo matemático para
+aplicação de geometria computacional
+
+133
+00:08:59.470 --> 00:09:06.108
+e a outra é de ajudar, não é, a renderizar
+o retângulo, numa interface gráfica.
+
+134
+00:09:06.108 --> 00:09:12.920
+Então, vocês vejam que eu
+tenho aqui duas tarefas,
+
+135
+00:09:12.920 --> 00:09:17.885
+duas razões para mudar e
+se eu mudar alguma coisa
+
+136
+00:09:17.885 --> 00:09:22.790
+no método,
+referente à renderização para desenhar.
+
+137
+00:09:22.790 --> 00:09:23.417
+Está certo?
+
+138
+00:09:23.417 --> 00:09:27.128
+De qualquer forma, ele vai afetar
+a aplicação de geometria computacional,
+
+139
+00:09:27.128 --> 00:09:29.709
+porque eu não sei o que
+é que vai acontecer.
+
+140
+00:09:29.709 --> 00:09:33.960
+Então, alterando alguma coisa aqui,
+mesmo que eu não
+
+141
+00:09:33.960 --> 00:09:38.856
+altere a interface do método draw ou área,
+
+142
+00:09:38.856 --> 00:09:42.864
+vai afetar a aplicação de
+geometria computacional.
+
+143
+00:09:42.864 --> 00:09:46.483
+Lá vou ter que testar de novo,
+para ver se agora, ainda está funcionando.
+
+144
+00:09:46.483 --> 00:09:47.120
+Está certo?
+
+145
+00:09:47.120 --> 00:09:52.188
+Mesma coisa se eu mudar alguma coisa
+na área, eu vou ter que testar
+
+146
+00:09:52.188 --> 00:09:57.240
+a aplicação de geometria computacional
+e também a aplicação gráfica.
+
+147
+00:09:57.240 --> 00:10:01.323
+porque eu não sei se a mudança
+que eu fiz vai afetar ou não,
+
+148
+00:10:01.323 --> 00:10:04.310
+então esse é o mau cheiro, né, tá certo.
+
+149
+00:10:04.310 --> 00:10:08.914
+Existem 2 razões,
+ou mais né, 2 no mínimo, né,
+
+150
+00:10:08.914 --> 00:10:13.717
+tá certo nesse caso,
+no exemplo, é 2, podem existir
+
+151
+00:10:13.717 --> 00:10:18.678
+outras classes mais do que 2,
+para eu fazer mudanças, entendeu?
+
+152
+00:10:18.678 --> 00:10:22.942
+Eu faço uma mudança que vai
+interferir mais gente do que deveria.
+
+153
+00:10:22.942 --> 00:10:27.398
+Se eu tenho uma finalidade só,
+eu faria uma mudança todo mundo que
+
+154
+00:10:27.398 --> 00:10:31.778
+estivesse interessado mim seria afetado,
+
+155
+00:10:31.778 --> 00:10:37.176
+tá certo mas quando eu tenho
+2 eu estou amplificando isso,
+
+156
+00:10:37.176 --> 00:10:41.004
+né tá certo e sem saber, às vezes eu
+estou fazendo coisas que não preciso.
+
+157
+00:10:41.004 --> 00:10:46.191
+Quando eu tenho uma só, todos que dependem
+de mim precisam ser testados de novo
+
+158
+00:10:46.191 --> 00:10:52.238
+porque eu realmente mudei, agora na outra,
+nesse exemplo que eu tenho 2 finalidades,
+
+159
+00:10:52.238 --> 00:10:56.120
+isso eu posso estar fazendo
+teste desnecessário, tá certo.
+
+160
+00:10:56.120 --> 00:10:58.989
+Então o que que a gente faz então?
+
+161
+00:10:58.989 --> 00:11:03.200
+A gente vai fazer aquilo
+que o princípio propõe.
+
+162
+00:11:03.200 --> 00:11:08.520
+No nosso caso, fazer uma classe
+para cada uma das finalidades
+
+163
+00:11:08.520 --> 00:11:13.970
+aquilo que o Uncle Bob
+chama de responsabilidade.
+
+164
+00:11:13.970 --> 00:11:20.250
+Então vocês percebam que eu
+separei 2 classes, né, tá certo.
+
+165
+00:11:20.250 --> 00:11:23.599
+O que eu estou chamando de
+responsabilidade aí é no sentido do
+
+166
+00:11:23.599 --> 00:11:25.900
+Uncle Bob, é na finalidade tá certo.
+
+167
+00:11:25.900 --> 00:11:31.053
+Então eu tenho uma classe que continua
+sendo o mesmo nome que é o retângulo,
+
+168
+00:11:31.053 --> 00:11:34.774
+então essa classe vai ter uma
+interferência mínima na, nenhuma na
+
+169
+00:11:34.774 --> 00:11:39.468
+verdade na aplicação gráfica porque a
+aplicação gráfica só usava o método draw.
+
+170
+00:11:39.468 --> 00:11:43.573
+O nome era retângulo então ele
+não tem alteração nenhuma,
+
+171
+00:11:43.573 --> 00:11:48.308
+tá certo, efeito nenhum essa
+operação de quebrar 2 classes.
+
+172
+00:11:48.308 --> 00:11:51.837
+Já a outra classe retângulo bom,
+a retângulo,
+
+173
+00:11:51.837 --> 00:11:57.664
+no sentido de renderizar faz uso também
+da classe nova retângulo geométrico.
+
+174
+00:11:57.664 --> 00:11:59.183
+O que é que acontece?
+
+175
+00:11:59.183 --> 00:12:04.787
+A aplicação geométrica, de geometria
+computacional com relação à assinatura
+
+176
+00:12:04.787 --> 00:12:09.668
+do método área, tá certo,
+não há mudança nenhuma,
+
+177
+00:12:09.668 --> 00:12:14.311
+mas o nome da classe da qual
+ela está acoplada mudou.
+
+178
+00:12:14.311 --> 00:12:18.734
+Antes era retângulo, agora passa
+a ser retângulo geométrico, tá certo,
+
+179
+00:12:18.734 --> 00:12:20.180
+houve alguma alteração.
+
+180
+00:12:20.180 --> 00:12:23.861
+O DIP, o Dependency Inversion Principle,
+
+181
+00:12:23.861 --> 00:12:29.068
+vai ajudar até eu eliminar essa
+dependência que eu acabei de colocar aqui,
+
+182
+00:12:29.068 --> 00:12:32.457
+quer dizer, eu poderia fazer essa mudança,
+
+183
+00:12:32.457 --> 00:12:37.642
+eu vou mostrar exemplo
+depois material de leitura,
+
+184
+00:12:37.642 --> 00:12:43.240
+que a gente mostra e até esse efeito
+colateral que continuou tendo agora,
+
+185
+00:12:43.240 --> 00:12:48.420
+vai sumir, tá certo, na hora que
+eu estiver fazendo a refatoração.
+
+186
+00:12:48.420 --> 00:12:53.750
+Vocês vejam que agora eu
+coloquei aqui o antes e o depois,
+
+187
+00:12:53.750 --> 00:12:59.061
+eu tenho antes retângulo e
+depois eu tenho o retângulo
+
+188
+00:12:59.061 --> 00:13:04.520
+e o retângulo geométrico, tá certo,
+eles estão até acoplados ao outro.
+
+189
+00:13:04.520 --> 00:13:06.149
+O que é que acontece aqui?
+
+190
+00:13:06.149 --> 00:13:09.860
+Não é uma coisa que é imediata,
+eu falo assim, eu quero,
+
+191
+00:13:09.860 --> 00:13:11.980
+eu encontrei esse
+retângulo e vou refatorar.
+
+192
+00:13:11.980 --> 00:13:15.200
+Não, é aquilo que eu mostrei,
+eu tenho que ver o contexto, tá certo,
+
+193
+00:13:15.200 --> 00:13:18.296
+eu tenho que ver o contexto.
+
+194
+00:13:18.296 --> 00:13:25.300
+Já quando aparece uma
+nova responsabilidade
+
+195
+00:13:25.300 --> 00:13:31.180
+que vai adicionar o contexto da
+aplicação de geometria computacional,
+
+196
+00:13:31.180 --> 00:13:36.840
+nessa hora é que eu vou fazer
+esse tipo de refatoração,
+
+197
+00:13:36.840 --> 00:13:41.574
+tá certo,
+porque aí eu vou perceber que eu vinha
+
+198
+00:13:41.574 --> 00:13:46.218
+tolerando ali,
+eu vinha tolerando porque ela,
+
+199
+00:13:46.218 --> 00:13:50.759
+é na verdade ela nem aparecia porque
+o contexto meu não exigia isso.
+
+200
+00:13:50.759 --> 00:13:56.112
+Mas a outra agora começou a usar só
+a parte da área, só a parte matemática.
+
+201
+00:13:56.112 --> 00:14:00.180
+Na verdade seria conjunto
+de métodos de retângulo que
+
+202
+00:14:00.180 --> 00:14:04.684
+fosse satisfatório para a aplicação
+de geometria computacional.
+
+203
+00:14:04.684 --> 00:14:08.580
+Então nessa hora é que eu vou
+fazer a refatoração, tá certo?
+
+204
+00:14:08.580 --> 00:14:13.453
+Então eu não teria, usando TDD,
+
+205
+00:14:13.453 --> 00:14:16.407
+dúvida de quando eu deveria fazer,
+tá certo?
+
+206
+00:14:16.407 --> 00:14:21.553
+O exemplo está só mostrando uma coisa
+que foi feita e proposto e apresentado
+
+207
+00:14:21.553 --> 00:14:26.580
+pelo Uncle Bob na década,
+no final da década de 80, tá certo?
+
+208
+00:14:26.580 --> 00:14:31.677
+Com isso a gente conclui a refatoração
+
+209
+00:14:31.677 --> 00:14:36.424
+que aplicamos o SRP, né, tá certo,
+
+210
+00:14:36.424 --> 00:14:42.838
+o Single Responsibility Principle
+que é o primeiro princípio,
+
+211
+00:14:42.838 --> 00:14:47.464
+a letra S, né,
+do SOLID o conjunto do SOLID,
+
+212
+00:14:47.464 --> 00:14:51.972
+para fazer uma refatoração
+que nós vimos que mau
+
+213
+00:14:51.972 --> 00:14:56.960
+cheiro significa violar o SRP, tá certo,
+
+214
+00:14:56.960 --> 00:15:01.797
+que ao invés de ter 1 tinha 2
+finalidades à classe, tá certo.
+
+215
+00:15:01.797 --> 00:15:03.910
+E aí o que é que nós fizemos?
+
+216
+00:15:03.910 --> 00:15:12.570
+Resolvemos criando 2 novas classes
+a partir daquela classe inicial, tá certo.
+
+217
+00:15:12.570 --> 00:15:16.030
+Obrigado.
+
+218
+00:15:16.030 --> 00:15:19.490
+[MÚSICA]

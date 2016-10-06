@@ -1,0 +1,649 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.991
+[MÚSICA] Este
+
+2
+00:00:07.991 --> 00:00:11.776
+é o curso de Orientação
+a Objetos com Java.
+
+3
+00:00:11.776 --> 00:00:17.758
+Meu nome é Eduardo Guerra e hoje
+vamos falar de assunto extremamente
+
+4
+00:00:17.758 --> 00:00:24.140
+importante que é como você pensar nos
+métodos orientados ao objeto, tá?
+
+5
+00:00:24.140 --> 00:00:28.225
+Na última aula a gente falou
+aí sobre métodos estáticos,
+
+6
+00:00:28.225 --> 00:00:32.310
+sobre aquela ideia da
+programação estruturada, né,
+
+7
+00:00:32.310 --> 00:00:38.768
+e hoje o objetivo dessa aula é mostrar
+como que você pensa nos métodos,
+
+8
+00:00:38.768 --> 00:00:44.730
+como que você cria os métodos segundo
+uma modelagem orientada a objetos.
+
+9
+00:00:44.730 --> 00:00:52.073
+Então eu vou voltar aqui slide que
+a gente colocou na última aula,
+
+10
+00:00:52.073 --> 00:00:56.095
+que é a gente pensando aí estruturado,
+né,?
+
+11
+00:00:56.095 --> 00:01:00.946
+A gente pensa estar passando tudo como
+parâmetro e enquanto a gente está
+
+12
+00:01:00.946 --> 00:01:06.078
+pensando orientado a objeto, a gente
+pensa invocar o método no objeto, né?
+
+13
+00:01:06.078 --> 00:01:10.237
+E aí esse método,
+ele vai estar trabalhando com
+
+14
+00:01:10.237 --> 00:01:15.486
+a estrutura de dados interna do objeto,
+tá?
+
+15
+00:01:15.486 --> 00:01:21.310
+Então vamos partir daqui e ver como que
+a gente cria métodos orientados a objeto.
+
+16
+00:01:21.310 --> 00:01:25.776
+Então vamos começar aí com o que
+talvez a maioria esteja acostumada,
+
+17
+00:01:25.776 --> 00:01:28.494
+que é com a programação estruturada, tá?
+
+18
+00:01:28.494 --> 00:01:33.635
+Então na programação estruturada a gente
+tem funções que ela basicamente recebe
+
+19
+00:01:33.635 --> 00:01:38.361
+parâmetro e vai estar retornando
+valor com base naquilo que recebeu.
+
+20
+00:01:38.361 --> 00:01:42.453
+Então, por exemplo,
+se eu tenho que ordenar uma lista,
+
+21
+00:01:42.453 --> 00:01:47.328
+essa lista, ela vai ser recebida
+como parâmetro e a função,
+
+22
+00:01:47.328 --> 00:01:50.907
+ela vai trabalhar cima
+daquilo que ela recebeu.
+
+23
+00:01:50.907 --> 00:01:55.290
+Na programação estruturada,
+a gente pode também ter variáveis
+
+24
+00:01:55.290 --> 00:02:00.157
+globais ou variáveis que são acessíveis
+dentro de determinado escopo, certo?
+
+25
+00:02:00.157 --> 00:02:03.422
+Que a função também pode acessar,
+então, por exemplo,
+
+26
+00:02:03.422 --> 00:02:07.619
+ao invés dessa lista ser passada como
+parâmetro, eu posso colocar essa lista,
+
+27
+00:02:07.619 --> 00:02:13.058
+por exemplo numa determinada posição
+de memória e numa variável global ou de
+
+28
+00:02:13.058 --> 00:02:18.203
+alguma outra forma e a função,
+ela ir nessa posição de
+
+29
+00:02:18.203 --> 00:02:24.079
+memória para poder recuperar aquelas
+informações e estar trabalhando com elas.
+
+30
+00:02:24.079 --> 00:02:29.280
+Já na programação orientada a objetos,
+como a gente viu, a gente tem uma classe,
+
+31
+00:02:29.280 --> 00:02:34.322
+a partir dessa classe criamos objetos,
+já vimos aí os construtores, que a gente
+
+32
+00:02:34.322 --> 00:02:39.479
+pode estar utilizando para passar
+parâmetros e parametrizar os objetos, tá?
+
+33
+00:02:39.479 --> 00:02:43.438
+Isso significa que cada objeto pode
+ter as suas próprias informações.
+
+34
+00:02:43.438 --> 00:02:47.150
+Então se eu tenho carro, ele pode ter
+a cor, ele pode ter a potência do motor,
+
+35
+00:02:47.150 --> 00:02:50.872
+ele pode ter informações que vão
+influenciar no seu comportamento.
+
+36
+00:02:50.872 --> 00:02:53.900
+Então não significa que todos
+os objetos de uma classe,
+
+37
+00:02:53.900 --> 00:02:56.630
+eles vão funcionar
+exatamente da mesma forma.
+
+38
+00:02:56.630 --> 00:02:57.176
+Porquê?
+
+39
+00:02:57.176 --> 00:03:02.164
+Porque os dados desses objetos podem estar
+influenciando nesse comportamento, tá?
+
+40
+00:03:02.164 --> 00:03:04.484
+E é pouquinho disso que a gente vai ver.
+
+41
+00:03:04.484 --> 00:03:08.303
+O objeto, como a gente viu,
+ele tem as variáveis de instância dele,
+
+42
+00:03:08.303 --> 00:03:09.775
+ele tem dados dentro dele.
+
+43
+00:03:09.775 --> 00:03:14.541
+Como eu falei, o carro, ele pode ter ali
+a potência e ele pode ter, por exemplo,
+
+44
+00:03:14.541 --> 00:03:18.721
+a eficiência de freio, pode ter,
+sei lá, o atrito do pneu,
+
+45
+00:03:18.721 --> 00:03:23.820
+então ele pode ter uma série de
+fatores que vão estar influenciando
+
+46
+00:03:23.820 --> 00:03:28.248
+no comportamento, por exemplo,
+da aceleração e da frenagem.
+
+47
+00:03:28.248 --> 00:03:31.968
+De repente o peso do carro,
+a carga que ele está levando.
+
+48
+00:03:31.968 --> 00:03:34.901
+Tudo isso pode ter
+influência nesses métodos.
+
+49
+00:03:34.901 --> 00:03:36.450
+E aí o que é que acontece?
+
+50
+00:03:36.450 --> 00:03:41.812
+Quando a gente pode chamar método,
+esse método pode receber parâmetro.
+
+51
+00:03:41.812 --> 00:03:46.181
+Vamos supor que método de acelerar
+no carro, ele pode por exemplo,
+
+52
+00:03:46.181 --> 00:03:52.255
+estar recebendo ali, por exemplo, o tempo
+que o cara pisou no acelerador ou pode,
+
+53
+00:03:52.255 --> 00:03:55.278
+sei lá,
+o quanto ele pisou no acelerador, né?
+
+54
+00:03:55.278 --> 00:03:58.103
+Então não precisa ser
+simplesmente acelerar.
+
+55
+00:03:58.103 --> 00:04:01.571
+Ele pode também estar recebendo
+parâmetro de fora, tá?
+
+56
+00:04:01.571 --> 00:04:03.226
+E o que é que ele vai fazer?
+
+57
+00:04:03.226 --> 00:04:05.333
+Ele vai pegar esses parâmetros.
+
+58
+00:04:05.333 --> 00:04:10.777
+Ele vai pegar informações internas para
+poder fazer aquele processamento, tá?
+
+59
+00:04:10.777 --> 00:04:15.938
+Então o objeto, ele não é igual ali na
+função, que era a função, ela tinha
+
+60
+00:04:15.938 --> 00:04:20.785
+o que ela estava recebendo como parâmetro
+e podia acessar aqueles dados globais.
+
+61
+00:04:20.785 --> 00:04:25.647
+O objeto, ele tem estado interno e
+normalmente ele vai utilizar informações
+
+62
+00:04:25.647 --> 00:04:29.994
+desse estado interno para poder
+realizar o seu processamento.
+
+63
+00:04:29.994 --> 00:04:33.910
+Vamos ver exemplo aqui para
+ficar bem claro isso daí?
+
+64
+00:04:33.910 --> 00:04:38.425
+Imagina, por exemplo,
+uma classe carrinho, que esteja aí,
+
+65
+00:04:38.425 --> 00:04:41.765
+que represente aí carrinho de compras,
+
+66
+00:04:41.765 --> 00:04:46.354
+por exemplo de e-commerce, alguma coisa
+desse tipo e aí eu vou perguntar,
+
+67
+00:04:46.354 --> 00:04:50.500
+por exemplo, para esse carrinho
+qual que é o valor total dele.
+
+68
+00:04:50.500 --> 00:04:53.274
+Como que ele vai me responder isso?
+
+69
+00:04:53.274 --> 00:04:58.142
+Ele vai me responder com base nas
+informações internas dele, que é,
+
+70
+00:04:58.142 --> 00:05:03.186
+por exemplo, uma lista de produtos
+que ele vai ter ali dentro dele, tá?
+
+71
+00:05:03.186 --> 00:05:09.115
+Então ele, por exemplo, vai lá cada
+produto, vai ver a quantidade, vai ver o
+
+72
+00:05:09.115 --> 00:05:14.957
+preço individual e vai realizar as contas
+para somar isso daí e me retornar o total.
+
+73
+00:05:14.957 --> 00:05:16.994
+Agora imagina, por exemplo,
+
+74
+00:05:16.994 --> 00:05:21.378
+que eu vou para o meu carrinho e
+pergunto qual que é o valor do frete.
+
+75
+00:05:21.378 --> 00:05:24.710
+E de repente ele fala assim: "mas
+espera aí, esse carrinho aí,
+
+76
+00:05:24.710 --> 00:05:26.630
+ele não tem a informação do endereço.
+
+77
+00:05:26.630 --> 00:05:31.060
+como é que eu vou saber calcular o frete
+se eu não tenho o endereço?" O endereço,
+
+78
+00:05:31.060 --> 00:05:35.351
+ele não faz, ele faz parte do escopo,
+sei lá, da compra que o cara está fazendo,
+
+79
+00:05:35.351 --> 00:05:37.203
+mas ele não faz parte do carrinho,
+
+80
+00:05:37.203 --> 00:05:40.430
+que é onde eu estou simplesmente
+colocando meus produtos.
+
+81
+00:05:40.430 --> 00:05:45.408
+Como que eu faço para o carrinho calcular
+o frete, então, se ele não tem o endereço?
+
+82
+00:05:45.408 --> 00:05:49.745
+Eu posso passar o endereço como parâmetro.
+
+83
+00:05:49.745 --> 00:05:54.550
+Então eu posso pensar no meu
+objeto da seguinte forma: olha,
+
+84
+00:05:54.550 --> 00:05:59.833
+para realizar determinado processamento,
+aquelas informações que ele tem internas,
+
+85
+00:05:59.833 --> 00:06:04.582
+ele vai utilizar aquelas informações, no
+caso, por exemplo, para calcular o frete,
+
+86
+00:06:04.582 --> 00:06:08.860
+ele precisa saber o volume, ele precisa
+saber o peso das coisas que estão no
+
+87
+00:06:08.860 --> 00:06:12.256
+carrinho, mas ele precisa
+também saber o endereço.
+
+88
+00:06:12.256 --> 00:06:14.080
+E aí ele pode, por exemplo,
+
+89
+00:06:14.080 --> 00:06:18.320
+estar recebendo aquele endereço como
+parâmetro e aí se a gente pensar
+
+90
+00:06:18.320 --> 00:06:22.765
+termos de sistema, a gente pode,
+por exemplo, ter uma classe compra.
+
+91
+00:06:22.765 --> 00:06:28.431
+Essa classe compra, dentro dela, ela
+tem o carrinho que fez parte da compra,
+
+92
+00:06:28.431 --> 00:06:33.216
+ela tem o endereço do comprador,
+e aí, para essa classe compra,
+
+93
+00:06:33.216 --> 00:06:38.120
+eu posso ter método para o cálculo do
+frete, para saber o valor do frete,
+
+94
+00:06:38.120 --> 00:06:44.283
+sem passar parâmetro nenhum, porque
+ela pode ir lá, pegar o seu endereço.
+
+95
+00:06:44.283 --> 00:06:48.403
+Ela vai lá, pega o seu carrinho
+e aí passa o endereço para o
+
+96
+00:06:48.403 --> 00:06:51.567
+carrinho perguntando
+qual que vai ser o frete.
+
+97
+00:06:51.567 --> 00:06:55.969
+Então eu posso ter, digamos assim,
+não seria o mesmo método,
+
+98
+00:06:55.969 --> 00:06:58.878
+mas seria o método de cálculo de frete,
+
+99
+00:06:58.878 --> 00:07:02.629
+ele pode estar diferentes classes,
+com escopos diferentes.
+
+100
+00:07:02.629 --> 00:07:07.115
+Enquanto, por exemplo, na classe
+compra ela tem todas as informações,
+
+101
+00:07:07.115 --> 00:07:10.485
+eu posso simplesmente
+perguntar qual é o frete?
+
+102
+00:07:10.485 --> 00:07:14.588
+Na classe do carrinho eu posso
+perguntar para ela qual que é o frete,
+
+103
+00:07:14.588 --> 00:07:17.113
+mas eu preciso passar o endereço para ela,
+
+104
+00:07:17.113 --> 00:07:21.370
+porque o endereço não faz parte
+do escopo daquela classe, certo?
+
+105
+00:07:21.370 --> 00:07:24.773
+Então sempre que você
+pensar métodos de objeto,
+
+106
+00:07:24.773 --> 00:07:29.709
+você tem que pensar que
+informações fazem parte do escopo
+
+107
+00:07:29.709 --> 00:07:34.031
+daquele objeto e que
+informações não fazem e que são
+
+108
+00:07:34.031 --> 00:07:39.042
+necessárias para que eu possa passar
+essas informações como parâmetro.
+
+109
+00:07:39.042 --> 00:07:41.588
+Então, toda vez que
+você pensar num método,
+
+110
+00:07:41.588 --> 00:07:46.127
+você tem que avaliar quais os dados que
+fazem parte do escopo daquela classe.
+
+111
+00:07:46.127 --> 00:07:49.330
+Se de repente você falar assim: "bom,
+o endereço,
+
+112
+00:07:49.330 --> 00:07:55.308
+ele não faz parte do meu carrinho,
+tá?" Então, siga com isso, tá?
+
+113
+00:07:55.308 --> 00:07:59.887
+Não force colocar uma informação dentro da
+
+114
+00:07:59.887 --> 00:08:04.553
+classe ou objeto porque você
+vai precisar para cálculo.
+
+115
+00:08:04.553 --> 00:08:07.116
+O que for de fora,
+você passa como parâmetro.
+
+116
+00:08:07.116 --> 00:08:12.115
+De repente, pode ser que num escopo maior,
+como no caso do nosso exemplo foi o caso
+
+117
+00:08:12.115 --> 00:08:16.646
+da classe compra, eu tenha todas essas
+informações e tenha, digamos assim,
+
+118
+00:08:16.646 --> 00:08:20.481
+uma outra versão desse método onde eu
+não preciso passar as informações.
+
+119
+00:08:20.481 --> 00:08:22.795
+Onde elas já estão todas dentro da classe.
+
+120
+00:08:22.795 --> 00:08:25.871
+Mas aí, por exemplo,
+a gente observa que por exemplo,
+
+121
+00:08:25.871 --> 00:08:29.409
+a classe compra ela não vai
+implementar aquele método de novo.
+
+122
+00:08:29.409 --> 00:08:34.323
+Ela simplesmente vai pegar as informações
+que ela tem e vai delegar parte daquela
+
+123
+00:08:34.323 --> 00:08:38.038
+execução para o objeto carrinho
+que está dentro dela, tá?
+
+124
+00:08:38.038 --> 00:08:42.376
+Mais uma vez a gente volta naquela
+questão da colaboração das classes
+
+125
+00:08:42.376 --> 00:08:44.663
+para criar as funcionalidades.
+
+126
+00:08:44.663 --> 00:08:49.755
+Olha, a minha experiência é que muitas
+vezes é difícil você acertar nas
+
+127
+00:08:49.755 --> 00:08:55.040
+primeiras vezes, mas com essas dicas aí,
+eu tenho certeza que vocês,
+
+128
+00:08:55.040 --> 00:08:59.125
+aos pouquinhos, vão pegando o
+jeito de como criar e dividir,
+
+129
+00:08:59.125 --> 00:09:03.550
+criar esses métodos e dividir
+a funcionalidade entre as classes.
+
+130
+00:09:03.550 --> 00:09:09.822
+Com isso daí, eu espero que vocês já
+consigam pensar melhor métodos orientados
+
+131
+00:09:09.822 --> 00:09:15.972
+a objetos e consigam pensar melhor quais
+informações estão dentro da classe,
+
+132
+00:09:15.972 --> 00:09:21.320
+quais vão vir de parâmetros para poder
+criar sistema orientado a objetos.
+
+133
+00:09:21.320 --> 00:09:25.465
+Muito obrigado por assistir à aula.
+
+134
+00:09:25.465 --> 00:09:29.610
+[MÚSICA]

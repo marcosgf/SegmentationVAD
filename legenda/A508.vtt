@@ -1,0 +1,615 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.588
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:09.588 --> 00:00:14.200
+eu sou Eduardo Guerra,
+bem vindos a mais hands-on.
+
+3
+00:00:14.200 --> 00:00:19.984
+Hoje a gente, a gente viu aquela aula, não
+é, do uso da interface Comparable, não é,
+
+4
+00:00:19.984 --> 00:00:24.464
+e nesse hands-on vamos ver como é que essa
+interface funciona, não é, como é que eu
+
+5
+00:00:24.464 --> 00:00:30.330
+faço, como é que eu crio uma classe e faço
+ela ser ordenada por método que já existe.
+
+6
+00:00:30.330 --> 00:00:37.726
+Então eu vou, vou criar aqui projeto, não
+é, que eu vou chamar de Concurso, certo?
+
+7
+00:00:37.726 --> 00:00:42.244
+Então eu vou colocar
+aqui criar projeto Java,
+
+8
+00:00:42.244 --> 00:00:50.940
+aí eu vou chamar aqui de Concurso que
+eu vou ordenar os candidatos, certo?
+
+9
+00:00:50.940 --> 00:00:56.980
+Então eu vou ter,
+
+10
+00:00:56.980 --> 00:01:03.940
+eu vou ter aqui, vamos lá,
+
+11
+00:01:03.940 --> 00:01:08.370
+vou criar aqui uma classe Candidato,
+certo?
+
+12
+00:01:08.370 --> 00:01:13.652
+Então bota aqui Candidato, certo,
+
+13
+00:01:13.652 --> 00:01:20.376
+e essa classe eu vou adicionar já
+nela aqui a interface Comparable,
+
+14
+00:01:20.376 --> 00:01:25.438
+certo, olha lá do java.lang Comparable,
+certo?
+
+15
+00:01:25.438 --> 00:01:33.490
+Então eu finalizo aqui ele já vai colocar
+o método compareTo, não é, não colocou?
+
+16
+00:01:33.490 --> 00:01:38.152
+Tudo bem, está, isso aqui utiliza os
+
+17
+00:01:38.152 --> 00:01:43.023
+tipos genéricos não é,
+eu vou colocar aqui,
+
+18
+00:01:43.023 --> 00:01:48.600
+quando eu coloco o compareTo eu tenho que
+dizer a quem ele pode ser comparado não é?
+
+19
+00:01:48.600 --> 00:01:54.450
+Então eu vou falar aqui que,
+opa, eu vou copiar aqui
+
+20
+00:01:54.450 --> 00:01:58.223
+eu vou dizer que ele pode ser
+comparado a outro candidato, não é?
+
+21
+00:01:58.223 --> 00:02:02.372
+Então vou chamar aqui do outro, certo?
+
+22
+00:02:02.372 --> 00:02:07.785
+Então o Candidato ele vai ter
+aqui 3 informações, certo?
+
+23
+00:02:07.785 --> 00:02:14.260
+Ele vai ter a nota, ele vai ter
+
+24
+00:02:14.260 --> 00:02:19.861
+se ele se cadastrou com uma deficiência,
+não é,
+
+25
+00:02:19.861 --> 00:02:25.620
+então deficiente,
+que concurso tem prioridade,
+
+26
+00:02:25.620 --> 00:02:31.066
+não é, e por fim vai ser a idade, certo?
+
+27
+00:02:31.066 --> 00:02:34.820
+Então vamos lá,
+
+28
+00:02:34.820 --> 00:02:39.150
+a primeira coisa que eu tenho que
+saber é se a nota é igual, não é?
+
+29
+00:02:39.150 --> 00:02:43.350
+Então se,
+o primeiro critério é a nota, não é,
+
+30
+00:02:43.350 --> 00:02:48.382
+olha aqui então para poder criar
+os candidatos eu vou criar aqui
+
+31
+00:02:48.382 --> 00:02:53.570
+construtor usando os campos,
+não é, o Eclipse já faz para mim,
+
+32
+00:02:53.570 --> 00:02:57.573
+certo, ele criou ali o meu
+construtor que recebe todas
+
+33
+00:02:57.573 --> 00:03:02.450
+as informações aí para eu poder
+fazer o teste depois, certo?
+
+34
+00:03:02.450 --> 00:03:07.014
+Então eu vou fazer aqui
+olha vou criar uns get
+
+35
+00:03:07.014 --> 00:03:11.872
+sets também não é,
+na verdade vou criar só get,
+
+36
+00:03:11.872 --> 00:03:16.771
+não é, então Source,
+Generate Getters and Setters,
+
+37
+00:03:16.771 --> 00:03:21.490
+olha lá, Select Getters, certo?
+
+38
+00:03:21.490 --> 00:03:26.785
+Então OK, ele colocou os
+getters ali botou uma distância
+
+39
+00:03:26.785 --> 00:03:33.120
+entre eles maior do que eu gostaria
+mas isso a gente arruma, vamos lá.
+
+40
+00:03:33.120 --> 00:03:38.131
+Então vamos lá, se a minha nota é
+
+41
+00:03:38.131 --> 00:03:43.518
+igual à nota do outro, certo,
+
+42
+00:03:43.518 --> 00:03:49.710
+aí eu tenho que comparar outro critério,
+certo?
+
+43
+00:03:49.710 --> 00:03:56.536
+Se não eu vou retornar,
+então aqui é assim se eu retorno
+
+44
+00:03:56.536 --> 00:04:02.240
+inteiro positivo quer dizer que ele,
+
+45
+00:04:02.240 --> 00:04:06.929
+ele é maior está?
+
+46
+00:04:06.929 --> 00:04:12.692
+Depois a gente testa se é isso mesmo,
+está, outro.getNota.
+
+47
+00:04:12.692 --> 00:04:17.363
+Então se a minha nota for
+maior ele é maior então esse,
+
+48
+00:04:17.363 --> 00:04:22.709
+vou retornar a minha nota
+menos a nota do outro, certo?
+
+49
+00:04:22.709 --> 00:04:27.728
+Já posso tirar esse return 0 aqui, está?
+
+50
+00:04:27.728 --> 00:04:34.612
+Então se a nota for igual eu tenho que
+ver se os dois são deficientes, não é?
+
+51
+00:04:34.612 --> 00:04:43.180
+Então se deficiente é igual
+a outro.deficiente está?
+
+52
+00:04:43.180 --> 00:04:46.473
+Se for igual eu vou resolver,
+
+53
+00:04:46.473 --> 00:04:52.510
+se não nesse caso vai ser,
+
+54
+00:04:52.510 --> 00:04:57.753
+aqui cima ou os 2 são deficientes
+ou os 2 não são deficientes, certo?
+
+55
+00:04:57.753 --> 00:05:01.990
+E aí então aqui eu vou
+fazer if deficiente,
+
+56
+00:05:01.990 --> 00:05:07.120
+return 1,
+
+57
+00:05:07.120 --> 00:05:13.449
+não é, que aí ele vai ser maior,
+se não return -1, está?
+
+58
+00:05:13.449 --> 00:05:18.386
+Bom nesses critérios de
+concurso normalmente se
+
+59
+00:05:18.386 --> 00:05:22.790
+eles tiveram a mesma nota ou se
+os 2 são ou não são deficientes,
+
+60
+00:05:22.790 --> 00:05:28.027
+o último desempate é na idade, não é,
+
+61
+00:05:28.027 --> 00:05:32.960
+aí se a idade for
+igual aí realmente eles empataram, não é?
+
+62
+00:05:32.960 --> 00:05:37.776
+Então vamos colocar aqui return
+
+63
+00:05:37.776 --> 00:05:42.309
+a minha idade menos a idade do outro,
+
+64
+00:05:42.309 --> 00:05:47.160
+certo, então se a minha for
+maior então eu vou ficar na frente,
+
+65
+00:05:47.160 --> 00:05:51.290
+certo, getIdade.
+
+66
+00:05:51.290 --> 00:05:58.112
+Aqui vez de usar o deficiente eu vou
+colocar aqui o isDeficiente, está?
+
+67
+00:05:58.112 --> 00:06:02.694
+Ok então esse aqui é o
+método compareTo não é?
+
+68
+00:06:02.694 --> 00:06:06.890
+Então eu vou vir aqui,
+vou criar aqui uma lista de candidatos,
+
+69
+00:06:06.890 --> 00:06:10.616
+então uma nova classe aqui,
+
+70
+00:06:10.616 --> 00:06:15.573
+chamar de principal não é,
+para a gente ver se está
+
+71
+00:06:15.573 --> 00:06:20.673
+ordenando direitinho aqui de
+acordo com o meu critério, está?
+
+72
+00:06:20.673 --> 00:06:25.940
+Então eu vou criar aqui uma lista,
+não é, de candidatos,
+
+73
+00:06:25.940 --> 00:06:30.830
+lista é igual a new
+
+74
+00:06:30.830 --> 00:06:37.200
+arrayList, opa vamos lá
+
+75
+00:06:37.200 --> 00:06:42.514
+arrayList, certo?
+
+76
+00:06:42.514 --> 00:06:47.480
+Ele vai reclamar aqui porque
+não tem import do list, não é,
+
+77
+00:06:47.480 --> 00:06:49.824
+a gente adiciona ali, certo?
+
+78
+00:06:49.824 --> 00:06:53.980
+E aí agora vamos adicionar
+candidatos na nossa lista.
+
+79
+00:06:53.980 --> 00:07:02.437
+Então lista.add candidato certo?
+
+80
+00:07:02.437 --> 00:07:06.710
+Vamos botar aqui new candidato,
+
+81
+00:07:06.710 --> 00:07:13.440
+que é que vamos colocar aqui?
+
+82
+00:07:13.440 --> 00:07:19.890
+Vamos fazer a nota até 100 então
+a nota esse aqui tirou 80,
+
+83
+00:07:19.890 --> 00:07:26.320
+não é,
+ele é deficiente e a idade dele é 30 anos,
+
+84
+00:07:26.320 --> 00:07:32.360
+certo?
+
+85
+00:07:32.360 --> 00:07:37.428
+[SEM ÁUDIO] esse daqui
+
+86
+00:07:37.428 --> 00:07:43.703
+também tirou 80 só que ele
+não é deficiente e a idade
+
+87
+00:07:43.703 --> 00:07:49.850
+dele é 25, certo?
+
+88
+00:07:49.850 --> 00:07:54.747
+Aí eu tenho outro aqui também
+que tirou 80 que também
+
+89
+00:07:54.747 --> 00:07:59.680
+não é deficiente mas ele,
+a idade dele é 28.
+
+90
+00:07:59.680 --> 00:08:04.290
+E aí por fim vamos ter aqui
+último candidato aqui mais,
+
+91
+00:08:04.290 --> 00:08:09.004
+mais tranquilo aqui, não é, que tem,
+
+92
+00:08:09.004 --> 00:08:14.275
+tirou uma nota melhor, não é,
+apesar de ter 20 anos só, não é?
+
+93
+00:08:14.275 --> 00:08:15.029
+Certo?
+
+94
+00:08:15.029 --> 00:08:19.450
+Vamos ver como que ele ordena isso aqui,
+certo?
+
+95
+00:08:19.450 --> 00:08:25.904
+Eu vou vir aqui no candidato, só para
+ficar mais fácil não é, todo, o objetivo,
+
+96
+00:08:25.904 --> 00:08:30.990
+ele tem método, então eu vou vir aqui,
+eu vou pedir uma ajudinha para o Eclipse,
+
+97
+00:08:30.990 --> 00:08:35.836
+Source, Override Implement Methods,
+eu vou sobreescrever o método da minha
+
+98
+00:08:35.836 --> 00:08:40.623
+superclasse, que é object,
+que é esse método toString, está,
+
+99
+00:08:40.623 --> 00:08:45.830
+é o método que ele usa para
+imprimir aquele objeto, está?
+
+100
+00:08:45.830 --> 00:08:50.800
+Então eu vou retornar a minha nota, certo,
+
+101
+00:08:50.800 --> 00:08:56.252
+vou botar aqui ponto e vírgula se ele
+
+102
+00:08:56.252 --> 00:09:01.906
+é deficiente e ponto
+
+103
+00:09:01.906 --> 00:09:07.504
+e vírgula, se ele é qualquer idade, está?
+
+104
+00:09:07.504 --> 00:09:12.760
+E essa aqui vai ser a forma
+de imprimir candidato.
+
+105
+00:09:12.760 --> 00:09:22.305
+[SEM ÁUDIO] Então eu vou vir aqui,
+
+106
+00:09:22.305 --> 00:09:27.594
+vou chamar aqui o Collections, certo,
+
+107
+00:09:27.594 --> 00:09:33.394
+deixa eu até já importar ele aqui,
+
+108
+00:09:33.394 --> 00:09:36.855
+é o Collections.sort.
+
+109
+00:09:36.855 --> 00:09:40.841
+Ele recebe ali a lista, não é,
+
+110
+00:09:40.841 --> 00:09:46.782
+e vai estar ordenando para mim essa,
+essa lista, está?
+
+111
+00:09:46.782 --> 00:09:52.424
+Então vamos ver agora,
+não é, vou percorrer aqui
+
+112
+00:09:52.424 --> 00:09:58.449
+a lista de candidatos, certo,
+
+113
+00:09:58.449 --> 00:10:04.845
+para ver se ele realmente
+ordenou direitinho, não é?
+
+114
+00:10:04.845 --> 00:10:07.996
+Então para cada candidato
+eu vou imprimir ele.
+
+115
+00:10:07.996 --> 00:10:12.925
+Aí fala assim " mas não precisa pegar as
+informações?" quando eu chamar isso daqui
+
+116
+00:10:12.925 --> 00:10:17.421
+ele vai chamar o método toString que
+foi esse aqui que eu defini, está?
+
+117
+00:10:17.421 --> 00:10:22.769
+Então eu vou rodar aqui [SEM
+
+118
+00:10:22.769 --> 00:10:27.415
+ÁUDIO] certo?
+
+119
+00:10:27.415 --> 00:10:32.639
+Então no caso aqui ele ordenou na
+
+120
+00:10:32.639 --> 00:10:38.081
+ordem do menor para o maior, não é,
+
+121
+00:10:38.081 --> 00:10:44.083
+significa que o primeiro colocado no
+concurso seria esse de 90, certo?
+
+122
+00:10:44.083 --> 00:10:50.200
+O segundo seria o que fez
+80 e é deficiente, não é,
+
+123
+00:10:50.200 --> 00:10:56.254
+seria o de 80 que não é deficiente mas tem
+28 anos porque ele é mais velho que esse
+
+124
+00:10:56.254 --> 00:11:01.248
+daqui, não é, ou seja ele está ordenando
+de acordo com o nosso critério ali, não é,
+
+125
+00:11:01.248 --> 00:11:07.090
+olha que interessante: eu tenho
+método já pronto mas que ele ordena
+
+126
+00:11:07.090 --> 00:11:12.193
+minha classe de acordo com
+o critério que eu defini
+
+127
+00:11:12.193 --> 00:11:19.688
+aqui e isso aqui é uma das aplicações
+de utilizar interfaces, está certo?
+
+128
+00:11:19.688 --> 00:11:24.670
+Espero que com esse exemplo
+prático aí tenha ficado mais claro
+
+129
+00:11:24.670 --> 00:11:29.250
+como que eu posso usar as interfaces
+para adicionar uma lógica
+
+130
+00:11:29.250 --> 00:11:34.290
+própria minha que vai ser invocado por
+método que já existe, que não entende,
+
+131
+00:11:34.290 --> 00:11:37.932
+não conhece a minha classe mas
+conhece a interface dela, está certo?
+
+132
+00:11:37.932 --> 00:11:40.875
+Muito obrigado, até ao próximo hands-on.
+
+133
+00:11:40.875 --> 00:11:46.230
+[MÚSICA] [MÚSICA]

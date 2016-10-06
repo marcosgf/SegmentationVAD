@@ -1,0 +1,232 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.731
+E aí pessoal, tudo bem?
+
+2
+00:00:02.731 --> 00:00:06.159
+Infelizmente não existe
+jeito fácil de rodar
+
+3
+00:00:06.159 --> 00:00:08.590
+aplicativo criado em
+outro Mac no simulador.
+
+4
+00:00:08.590 --> 00:00:11.792
+Nós precisamos criar aplicativo em branco,
+
+5
+00:00:11.792 --> 00:00:17.013
+encontrar a sua pasta no Mac e substituir
+o arquivo pelo que queremos testar.
+
+6
+00:00:17.013 --> 00:00:19.430
+Para começar vamos abrir o Finder.
+
+7
+00:00:19.430 --> 00:00:24.790
+Clique em i ou go e selecione
+a pasta escondida Biblioteca.
+
+8
+00:00:24.790 --> 00:00:28.168
+Para mostrá-la pressione a tecla Alt.
+
+9
+00:00:28.168 --> 00:00:33.759
+Encontre a pasta Developer,
+CoreSimulator, Devices.
+
+10
+00:00:33.759 --> 00:00:38.670
+Cada uma dessas pastas é de simulador de
+cada aparelho já executado pelo Xcode.
+
+11
+00:00:38.670 --> 00:00:44.350
+Como não sabemos de qual aparelho é cada
+pasta, vamos abrir o Xcode para descobrir.
+
+12
+00:00:44.350 --> 00:00:49.300
+Abra o Xcode, crie novo projeto,
+
+13
+00:00:49.300 --> 00:00:54.390
+Single View Application,
+dar o nome de Avaliar.
+
+14
+00:00:54.390 --> 00:00:58.800
+Mude o Bundle Identifier para
+
+15
+00:00:58.800 --> 00:01:03.900
+com.coursera.curso2.trabalho.
+
+16
+00:01:03.900 --> 00:01:07.040
+Selecione a opção Universal.
+
+17
+00:01:07.040 --> 00:01:11.930
+Nas opções de target do projeto,
+selecione Info.
+
+18
+00:01:11.930 --> 00:01:15.817
+Mude o Bundle Identifier para
+
+19
+00:01:15.817 --> 00:01:21.000
+com.coursera .curso2.trabalho.
+
+20
+00:01:21.000 --> 00:01:25.610
+Agora vamos descobrir qual o
+identificador para cada simulador.
+
+21
+00:01:25.610 --> 00:01:29.140
+Vai em Window Devices.
+
+22
+00:01:29.140 --> 00:01:32.011
+Aqui temos todos os simuladores.
+
+23
+00:01:32.011 --> 00:01:35.180
+Selecione o simulador de iPad Air2.
+
+24
+00:01:35.180 --> 00:01:37.276
+Veja o identificador.
+
+25
+00:01:37.276 --> 00:01:42.630
+Vamos procurar por uma pasta
+que tenha esse identificador.
+
+26
+00:01:42.630 --> 00:01:47.600
+Selecione a pasta, em seguida Data,
+
+27
+00:01:47.600 --> 00:01:52.140
+Containers, Bundle, Application.
+
+28
+00:01:52.140 --> 00:01:54.452
+Remova todas as pastas aqui,
+
+29
+00:01:54.452 --> 00:02:00.100
+pois correspondem a todos os
+aplicativos executados nesse simulador.
+
+30
+00:02:00.100 --> 00:02:03.690
+Agora vamos voltar ao Xcode.
+
+31
+00:02:03.690 --> 00:02:09.920
+Selecione o iPad Air2 e rode o aplicativo.
+
+32
+00:02:09.920 --> 00:02:16.831
+[SEM_ÁUDIO] Pare
+
+33
+00:02:16.831 --> 00:02:21.960
+a execução e feche o Xcode.
+
+34
+00:02:21.960 --> 00:02:27.410
+Veja que a pasta para esse
+aplicativo foi criada.
+
+35
+00:02:27.410 --> 00:02:28.642
+Clique nela.
+
+36
+00:02:28.642 --> 00:02:33.270
+Faça o download do aplicativo
+do seu colega de curso.
+
+37
+00:02:33.270 --> 00:02:41.550
+Descompacte, renomeie para Avaliar
+e substitua o arquivo nessa pasta.
+
+38
+00:02:41.550 --> 00:02:47.012
+[SEM_ÁUDIO] No
+
+39
+00:02:47.012 --> 00:02:52.658
+simulador, clique em Hardware e
+
+40
+00:02:52.658 --> 00:02:59.770
+Reboot.
+
+41
+00:02:59.770 --> 00:03:06.667
+[SEM_ÁUDIO] Agora
+
+42
+00:03:06.667 --> 00:03:12.470
+temos o aplicativo externo
+rodando no seu próprio simulador.
+
+43
+00:03:12.470 --> 00:03:17.243
+Como no trabalho final temos o
+desenvolvimento de uma build
+
+44
+00:03:17.243 --> 00:03:20.720
+universal que rode em
+iPhone 6 e iPad Air2,
+
+45
+00:03:20.720 --> 00:03:24.780
+esse procedimento deve ser
+repetido para iPhone 6.
+
+46
+00:03:24.780 --> 00:03:27.278
+Mas não se preocupe de ter apenas arquivo.
+
+47
+00:03:27.278 --> 00:03:28.922
+Por ser uma build universal,
+
+48
+00:03:28.922 --> 00:03:32.160
+o arquivo gerado pode ser
+aberto em ambos os simuladores.
+
+49
+00:03:32.160 --> 00:03:37.112
+Recomendamos que siga esses passos
+para o seu próprio aplicativo antes
+
+50
+00:03:37.112 --> 00:03:41.198
+de enviar para a plataforma do Coursera
+para ter a certeza que os seus colegas vão
+
+51
+00:03:41.198 --> 00:03:44.220
+conseguir executar o seu aplicativo
+no simulador do Mac deles.
+
+52
+00:03:44.220 --> 00:03:47.230
+Bom trabalho!

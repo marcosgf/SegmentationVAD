@@ -1,0 +1,785 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.000
+[MÚSICA]
+
+2
+00:00:08.000 --> 00:00:13.289
+[MÚSICA]
+>> Inaugurando o nosso
+
+3
+00:00:13.289 --> 00:00:19.077
+módulo de entrevistas eu trouxe o Marcelo
+Rigon que é presidente da IGDA Campinas.
+
+4
+00:00:19.077 --> 00:00:23.535
+IGDA Campinas é, numa tradução livre
+seria Associação Internacional de
+
+5
+00:00:23.535 --> 00:00:27.202
+Desenvolvedores de Jogos e é uma rede
+mundial de projetos colaborativos e
+
+6
+00:00:27.202 --> 00:00:29.870
+comunidades de pessoas
+envolvidas com a área de jogos.
+
+7
+00:00:29.870 --> 00:00:31.797
+Ele também é diretor da Ilex Games,
+
+8
+00:00:31.797 --> 00:00:36.027
+que é uma empresa que desenvolve jogos
+aliando diversão e conteúdo não é?
+
+9
+00:00:36.027 --> 00:00:40.503
+Responsável pela criação de mais de
+200 jogos educativos para o portal
+
+10
+00:00:40.503 --> 00:00:42.780
+educacional Clickideia, Marcelo.
+
+11
+00:00:42.780 --> 00:00:45.128
+>> Isso.
+>> Isso, é reconhecido pelo MEC,
+
+12
+00:00:45.128 --> 00:00:45.990
+esse portal.
+
+13
+00:00:45.990 --> 00:00:50.393
+E Marcelo você está aqui para falar pouco
+sobre essa questão então da documentação
+
+14
+00:00:50.393 --> 00:00:53.382
+de game, não é,
+do GDD ou Game Design Document.
+
+15
+00:00:53.382 --> 00:00:57.180
+Provavelmente você já passou
+pela experiência de desenvolver
+
+16
+00:00:57.180 --> 00:01:01.670
+games sem essa documentação e com
+a documentação também, não é?
+
+17
+00:01:01.670 --> 00:01:05.560
+Conta para a gente pouquinho como que
+o uso da documentação influenciou o
+
+18
+00:01:05.560 --> 00:01:07.110
+resultado final do seu trabalho.
+
+19
+00:01:07.110 --> 00:01:12.096
+>> Aí Júlia, muito obrigado por me
+chamar para participar desse programa e
+
+20
+00:01:12.096 --> 00:01:16.740
+basicamente assim,
+eu comecei eu era físico,
+
+21
+00:01:16.740 --> 00:01:21.118
+formado Física na Unicamp então não tinha
+uma formação background da área de game
+
+22
+00:01:21.118 --> 00:01:25.287
+design então justamente quando eu comecei
+a trabalhar na parte de jogos educativos
+
+23
+00:01:25.287 --> 00:01:29.500
+a gente não escrevia Game Design, que eu
+nem sabia exatamente o que é que era isso.
+
+24
+00:01:29.500 --> 00:01:34.066
+A gente praticamente era todos dos mini
+games curtos de uma semana ou menos e
+
+25
+00:01:34.066 --> 00:01:38.725
+a gente simplesmente saía fazendo
+porque a gente achava que precisava.
+
+26
+00:01:38.725 --> 00:01:43.460
+Só que começou a acontecer muita
+divergência aí de opinião.
+
+27
+00:01:43.460 --> 00:01:48.061
+Então, sei lá, a gente tinha combinado
+com o pedagógico de fazer tal coisa e aí
+
+28
+00:01:48.061 --> 00:01:52.840
+chegava na hora de entregar não, tinha
+monte de coisa para refazer e dizer sei lá
+
+29
+00:01:52.840 --> 00:01:59.340
+que era combinado, que a gente fez,
+que a gente não fez [INAUDIBLE].
+
+30
+00:01:59.340 --> 00:02:03.293
+E a gente inclusive começou a adotar
+a ideia de fazer os testes de pen and
+
+31
+00:02:03.293 --> 00:02:04.465
+paper para, então ok,
+
+32
+00:02:04.465 --> 00:02:08.330
+antes de gastar o esforço de fazer o jogo
+então vamos fazer uma documentação vamos
+
+33
+00:02:08.330 --> 00:02:12.340
+fazer teste se isso funciona e aí
+a gente parte para fazer os jogos.
+
+34
+00:02:12.340 --> 00:02:16.119
+E isso fez que com que tipo, a gente, o
+jogo que era para durar uma semana estava
+
+35
+00:02:16.119 --> 00:02:18.880
+durando mês ele voltou a sair
+mais ou menos uma semana.
+
+36
+00:02:18.880 --> 00:02:22.303
+Alguns tinham alguma coisa que a gente
+tinha que refazer porque realmente foi uma
+
+37
+00:02:22.303 --> 00:02:27.091
+coisa que quando foi na prática não era
+exatamente aquilo que precisava ser
+
+38
+00:02:27.091 --> 00:02:33.334
+mostrado mas caiu, sei lá, para 10% dos
+jogos realmente teve uma refatoração pouco
+
+39
+00:02:33.334 --> 00:02:38.182
+maior que não era erro de português no
+tutorial ou alguma coisa do gênero assim.
+
+40
+00:02:38.182 --> 00:02:41.654
+E mesmo atualmente,
+como a gente já estava mais experiente,
+
+41
+00:02:41.654 --> 00:02:45.820
+comecei a fazer uns jogos de celular e eu,
+como era teste de mercado assim,
+
+42
+00:02:45.820 --> 00:02:49.820
+eu falei "Acho que não vai precisar
+fazer Game Design Document".
+
+43
+00:02:49.820 --> 00:02:55.264
+E no final assim, o jogo ficou com
+metade das coisas que eu tinha
+
+44
+00:02:55.264 --> 00:03:00.220
+planejado porque na conversa ninguém
+lembra de tudo o que foi conversado.
+
+45
+00:03:00.220 --> 00:03:05.142
+Então mesmo tendo reunião toda semana
+para falar sobre o produto quando passava
+
+46
+00:03:05.142 --> 00:03:06.944
+uma semana vinha a arte final,
+
+47
+00:03:06.944 --> 00:03:10.768
+vinha essas coisas e não era o que
+eu tinha pedido e aí o trabalho
+
+48
+00:03:10.768 --> 00:03:15.670
+de refazer acabava tendo custo muito
+grande de novo cima desse projeto.
+
+49
+00:03:15.670 --> 00:03:18.796
+Então para mim é fundamental hoje fazer
+
+50
+00:03:18.796 --> 00:03:22.795
+Game Design Document para ter ali uma
+linha base para todo o mundo seguir e
+
+51
+00:03:22.795 --> 00:03:24.970
+saber que todo o mundo
+falando a mesma língua.
+
+52
+00:03:24.970 --> 00:03:29.602
+>> Entendi, para alinhar bem os objetivos
+mesmo daquele projeto como você
+
+53
+00:03:29.602 --> 00:03:33.669
+pensando na experiência que você vai
+transmitir através desse projeto.
+
+54
+00:03:33.669 --> 00:03:34.607
+>> Isso.
+>> Legal.
+
+55
+00:03:34.607 --> 00:03:39.405
+Então assim no processo de documentação
+você considera que a experiência que
+
+56
+00:03:39.405 --> 00:03:42.940
+vai ser construída, para o jogador,
+no ato de jogar não é,
+
+57
+00:03:42.940 --> 00:03:46.910
+você acha que o GDD facilita
+esse processo de criação,
+
+58
+00:03:46.910 --> 00:03:50.070
+ou ele torna esse processo
+mais restritivo, por exemplo?
+
+59
+00:03:50.070 --> 00:03:54.110
+>> O problema é como você implementa
+essa questão da documentação.
+
+60
+00:03:54.110 --> 00:03:58.641
+Por exemplo o Chris Crawford,
+ele tem o livro On Game Design, não é,
+
+61
+00:03:58.641 --> 00:04:03.401
+dele, que ele fala muito de uma figura que
+ele chama o Tiranossauro Rex das ideias.
+
+62
+00:04:03.401 --> 00:04:07.479
+Que basicamente é o seguinte: ele fala que
+toda a pessoa que é profissional na área
+
+63
+00:04:07.479 --> 00:04:11.428
+de game design ela tem que ser uma
+máquina de construir ideias de gameplay,
+
+64
+00:04:11.428 --> 00:04:13.210
+ideias de estética para jogo.
+
+65
+00:04:13.210 --> 00:04:15.819
+E aí, qual que é o processo que ele segue?
+
+66
+00:04:15.819 --> 00:04:20.419
+Ele pega e ele gera centenas de ideias,
+dezenas de ideias antes de começar
+
+67
+00:04:20.419 --> 00:04:24.680
+realmente a fazer jogo e aí ele deixa,
+essa parte tem que ser livre.
+
+68
+00:04:24.680 --> 00:04:27.798
+Então ele vai ter as ideias mais
+loucas que ele conseguir pensar,
+
+69
+00:04:27.798 --> 00:04:29.680
+ele vai ter e vai anotar algum lugar.
+
+70
+00:04:29.680 --> 00:04:34.346
+Aí depois ele solta o Tiranossauro Rex
+para devorar todas as ideias que
+
+71
+00:04:34.346 --> 00:04:36.639
+forem fadadas ao fracasso assim.
+
+72
+00:04:36.639 --> 00:04:40.698
+Então ele vai tentando fazer
+testes básicos assim ou,
+
+73
+00:04:40.698 --> 00:04:44.001
+mesmo pensando tipo "Se eu
+fizer isso aqui, com isso aqui,
+
+74
+00:04:44.001 --> 00:04:48.385
+não, não vai ficar, vai ficar ruim, vai
+ficar desengonçado não vai dar para usar".
+
+75
+00:04:48.385 --> 00:04:52.980
+Ou fazendo algum teste básico ou mostrando
+justamente para outras pessoas e aí ele
+
+76
+00:04:52.980 --> 00:04:57.832
+começa a consolidar aos poucos,
+que inclusive essa é uma das coisas
+
+77
+00:04:57.832 --> 00:05:02.274
+importantes de que na verdade
+existem várias documentações, não é?
+
+78
+00:05:02.274 --> 00:05:05.888
+E a primeira que o pessoal costuma
+fazer é High Game Concept,
+
+79
+00:05:05.888 --> 00:05:10.221
+que aí a gente faz uma descrição de uma
+página ou duas páginas, e você passa para
+
+80
+00:05:10.221 --> 00:05:13.450
+outras pessoas da área de Game Design
+e fala "O que é que você acha?".
+
+81
+00:05:13.450 --> 00:05:17.816
+Porque aí às vezes o seu Tiranossauro Rex
+não é forte o suficiente para destruir uma
+
+82
+00:05:17.816 --> 00:05:22.895
+ideia com alguma falha ali e às vezes eu
+quero dar outro feedback, melhora sabe?
+
+83
+00:05:22.895 --> 00:05:26.646
+Então desde o começo ir escrevendo
+é bom até para você não esquecer,
+
+84
+00:05:26.646 --> 00:05:30.453
+às vezes teve uma ideia muito boa e você
+vai "Amanhã eu escrevo" e às vezes já é o
+
+85
+00:05:30.453 --> 00:05:31.870
+suficiente para se perder.
+
+86
+00:05:31.870 --> 00:05:36.090
+>> Aí, essa ideia da troca é interessante
+porque às vezes a gente costuma,
+
+87
+00:05:36.090 --> 00:05:39.059
+principalmente quando a gente está
+começando a trabalhar com isso,
+
+88
+00:05:39.059 --> 00:05:42.579
+a gente acha que a gente teve uma ideia
+genial assim e que "Nossa, nunca ninguém
+
+89
+00:05:42.579 --> 00:05:46.162
+pensou nisto antes" e quando você vai
+apresentar para outra pessoa muita
+
+90
+00:05:46.162 --> 00:05:50.186
+vezes ela já conhece algo parecido ou até
+tipo transmite uma referência diferente.
+
+91
+00:05:50.186 --> 00:05:54.120
+Então é legal trabalhar esse, esse sistema
+assim numa, numa colaboração, não é?
+
+92
+00:05:54.120 --> 00:05:55.227
+>> Com certeza.
+
+93
+00:05:55.227 --> 00:06:00.225
+Que até é mito que sempre existe assim
+nessa área e de, de que você não
+
+94
+00:06:00.225 --> 00:06:04.320
+pode contar as ideias para as pessoas
+porque elas vão roubar as sua ideia.
+
+95
+00:06:04.320 --> 00:06:06.052
+Só que meu, eu tenho, quê eu?
+
+96
+00:06:06.052 --> 00:06:09.991
+Já tenho, na gaveta das ideias
+minhas que sobreviveram que eu quero
+
+97
+00:06:09.991 --> 00:06:12.220
+dia fazer eu tenho umas 10, 12 lá.
+
+98
+00:06:12.220 --> 00:06:15.301
+Então dificilmente eu vou pegar a ideia
+de uma outra pessoa e falar "Não, eu
+
+99
+00:06:15.301 --> 00:06:18.670
+vou deixar ali na gaveta todas as minhas
+ideias que eu já acho legal que eu tenho,
+
+100
+00:06:18.670 --> 00:06:22.170
+para fazer essa desse outro cara porque
+deve ser mais legal que a minha" sabe?
+
+101
+00:06:22.170 --> 00:06:25.116
+Não, todo o mundo ali é criativo,
+todo o mundo tem boas ideias,
+
+102
+00:06:25.116 --> 00:06:28.680
+você tem que assumir isso, que você não
+é melhor que as outras pessoas assim.
+
+103
+00:06:28.680 --> 00:06:30.220
+E você pode divulgar essa ideia,
+
+104
+00:06:30.220 --> 00:06:33.520
+claro não para todo o mundo porque
+não tem para quê você contar, sei lá,
+
+105
+00:06:33.520 --> 00:06:37.557
+seu sobrinho não é, a sua ideia porque ele
+não tem o ferramental para poder analisar
+
+106
+00:06:37.557 --> 00:06:41.022
+uma ideia que ainda não foi construída,
+ainda não está elaborada.
+
+107
+00:06:41.022 --> 00:06:45.870
+Mas outro game designer pode-te dar
+ótimas ideias, que não sei referências,
+
+108
+00:06:45.870 --> 00:06:50.112
+às vezes até para ajudar
+a formatar a sua ideia.
+
+109
+00:06:50.112 --> 00:06:54.689
+" pô, você tem você quer
+fazer jogo sobre psicopatia.
+
+110
+00:06:54.689 --> 00:06:59.064
+Pô, você já olhou sei lá, o Hatred,
+já olhou o, sei lá, Limbo,
+
+111
+00:06:59.064 --> 00:07:03.631
+que vai ser jogo dark e tal", e às vezes é
+jogo que você não conhece e realmente dá
+
+112
+00:07:03.631 --> 00:07:07.390
+uma ajuda muito boa poder ver outras
+pessoas que trabalharam com isso.
+
+113
+00:07:07.390 --> 00:07:13.892
+>> Legal você tem então uma rede de
+apoio assim com pessoas que sejam
+
+114
+00:07:13.892 --> 00:07:18.768
+de áreas diferentes, não é, que tenham
+visões diferentes mas que têm repertório
+
+115
+00:07:18.768 --> 00:07:22.270
+legal para contribuir criticamente com
+o que você está propondo então não é?
+
+116
+00:07:22.270 --> 00:07:27.396
+Acho que o IGDA, a ideia dele, assim
+a proposta seria justamente trabalhar
+
+117
+00:07:27.396 --> 00:07:29.224
+pouco com esse tipo de rede, não?
+
+118
+00:07:29.224 --> 00:07:31.179
+>> Sim, sim, a IGDA ela costuma...
+
+119
+00:07:31.179 --> 00:07:35.760
+Cada cidade é diferente, a IGDA, porque
+ela vai se moldando com as necessidades do
+
+120
+00:07:35.760 --> 00:07:40.460
+local assim, mas a ideia dela, original,
+que foi criado pelo Ernest Adams,
+
+121
+00:07:40.460 --> 00:07:44.845
+você já tinha a ESA, que já era uma
+associação que ajudava empresas,
+
+122
+00:07:44.845 --> 00:07:48.805
+só que as pessoas elas estavam lá,
+elas só iam realmente começar a trabalhar,
+
+123
+00:07:48.805 --> 00:07:51.834
+começar a ter feedback quando
+entrassem numa empresa.
+
+124
+00:07:51.834 --> 00:07:55.917
+Então eu falei "Vou criar uma associação
+aqui para juntar as pessoas" E aí as
+
+125
+00:07:55.917 --> 00:08:00.933
+pessoas discutem, trocam ideias, dá dicas,
+às vezes conversando com uma pessoa
+
+126
+00:08:00.933 --> 00:08:04.805
+num café, ou tipo num evento desses,
+a pessoa é contratada e ela fala "Pô,
+
+127
+00:08:04.805 --> 00:08:08.514
+aquele cara ali era ótimo artista,
+era ótimo programador, vou chamar ele
+
+128
+00:08:08.514 --> 00:08:11.772
+para trabalhar com a gente aqui."
+>> Legal, interessante.
+
+129
+00:08:11.772 --> 00:08:16.578
+E qual conselho que você daria assim para
+o pessoal que está começando a criar
+
+130
+00:08:16.578 --> 00:08:20.433
+os próprios games agora, com relação
+principalmente essa importância de
+
+131
+00:08:20.433 --> 00:08:22.357
+trabalhar com uma documentação, assim.
+
+132
+00:08:22.357 --> 00:08:24.362
+>> Essa é uma questão
+muito importante assim,
+
+133
+00:08:24.362 --> 00:08:27.109
+de você ter uma documentação
+e é assim: não tem uma certa.
+
+134
+00:08:27.109 --> 00:08:30.414
+Se você procurar na Internet você
+vai encontrar vários modelos,
+
+135
+00:08:30.414 --> 00:08:34.870
+templates de Game Design Document
+que você pode seguir e até muitas
+
+136
+00:08:34.870 --> 00:08:37.911
+coisas dependem do que
+você vai fazer assim.
+
+137
+00:08:37.911 --> 00:08:40.950
+Mas é importante até por você que,
+por exemplo,
+
+138
+00:08:40.950 --> 00:08:43.900
+tenho jogo que eu comecei
+a fazer à 12 anos atrás,
+
+139
+00:08:43.900 --> 00:08:48.960
+e aí o pessoal dispersou cada foi para
+lado, tem gente que está no Canadá,
+
+140
+00:08:48.960 --> 00:08:54.130
+tem gente que está tipo São Paulo,
+tem gente que está lá na Europa,
+
+141
+00:08:54.130 --> 00:09:00.099
+só que esse projeto ficou e eu nessa
+época eu escrevi esses documentos.
+
+142
+00:09:00.099 --> 00:09:03.145
+Aí agora como está muito mais fácil
+trabalhar à distância o pessoal me procura
+
+143
+00:09:03.145 --> 00:09:05.300
+"Pô vamos fazer de novo esse jogo,
+esse jogo era muito legal,
+
+144
+00:09:05.300 --> 00:09:10.076
+a gente já tinha vários concept arts do
+jogo, vamos tentar ressuscitar ele?" E pô
+
+145
+00:09:10.076 --> 00:09:14.700
+foi 12 anos atrás,
+se fosse pela memória não ia ter como.
+
+146
+00:09:14.700 --> 00:09:19.531
+Tanto que até o artista, eu passei para
+eles o arte conceito e ele falou "Caramba
+
+147
+00:09:19.531 --> 00:09:22.399
+eu não sabia que a gente tinha feito
+tanta arte conceito!" Mas porquê?
+
+148
+00:09:22.399 --> 00:09:23.870
+Porque estava tudo documentado lá.
+
+149
+00:09:23.870 --> 00:09:26.483
+>> Legal.
+>> E mesmo a gente, sei lá dia eu acordo
+
+150
+00:09:26.483 --> 00:09:30.720
+de mau humor, vai mudar as pessoas que
+eu acho legal e que eu não acho legal.
+
+151
+00:09:30.720 --> 00:09:35.120
+Então se ficar só pela minha memória,
+
+152
+00:09:35.120 --> 00:09:39.698
+com certeza vai mudando essa ideia e eu
+
+153
+00:09:39.698 --> 00:09:44.576
+vou acabar nunca chegando
+no final do jogo porque
+
+154
+00:09:44.576 --> 00:09:49.546
+eu não documentei as coisas e
+vão sendo tipo da minha cabeça,
+
+155
+00:09:49.546 --> 00:09:53.591
+então com o tempo vai mudando e
+não sinceramente para melhor.
+
+156
+00:09:53.591 --> 00:09:57.254
+>> Marcelo muito obrigado pela
+sua participação, de verdade,
+
+157
+00:09:57.254 --> 00:09:59.807
+agradeço a sua presença
+aqui no nosso curso.
+
+158
+00:09:59.807 --> 00:10:01.430
+>> Eh, eu que agradeço Júlia.
+
+159
+00:10:01.430 --> 00:10:04.055
+>> Na nossa próxima
+entrevista a gente vai falar
+
+160
+00:10:04.055 --> 00:10:07.150
+pouquinho de framework MDA
+no processo de game design.
+
+161
+00:10:07.150 --> 00:10:15.150
+[MÚSICA]
+
+162
+00:10:15.150 --> 00:10:23.480
+[MÚSICA] [MÚSICA]

@@ -1,0 +1,1022 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.198
+[MÚSICA] Após esse vídeo,
+
+2
+00:00:09.198 --> 00:00:14.232
+dada a função de
+transferência de sistema você
+
+3
+00:00:14.232 --> 00:00:19.390
+será capaz de calcular o erro regime
+permanente para entradas degrau,
+
+4
+00:00:19.390 --> 00:00:24.400
+rampa e parábola sem a necessidade de
+calcular a resposta completa do sistema.
+
+5
+00:00:24.400 --> 00:00:28.939
+Você já viu que dos requisitos
+do sistema está relacionado com
+
+6
+00:00:28.939 --> 00:00:31.470
+a referência ou com o sinal de erro.
+
+7
+00:00:31.470 --> 00:00:35.520
+Normalmente vamos querer que
+o sinal de saída acompanhe
+
+8
+00:00:35.520 --> 00:00:39.570
+a referência perfeitamente ou,
+pelo menos, com erro muito pequeno.
+
+9
+00:00:39.570 --> 00:00:40.375
+Por isso,
+
+10
+00:00:40.375 --> 00:00:46.221
+tanto para a análise quanto para o projeto
+é preciso saber calcular rapidamente
+
+11
+00:00:46.221 --> 00:00:51.210
+o valor do erro regime função dos
+parâmetros do sistema e do controlador.
+
+12
+00:00:51.210 --> 00:00:57.040
+E por quê nos interessamos pelo erro
+para entradas degrau, rampa e parábola?
+
+13
+00:00:57.040 --> 00:01:01.630
+Simples, porque essas são as
+referências mais comuns quando temos
+
+14
+00:01:01.630 --> 00:01:04.370
+requisito de erro regime permanente.
+
+15
+00:01:04.370 --> 00:01:10.500
+A entrada degrau representa valor
+constante que se quer atingir,
+
+16
+00:01:10.500 --> 00:01:15.060
+por exemplo, a altura para avião,
+helicóptero ou drone,
+
+17
+00:01:15.060 --> 00:01:20.460
+ou uma temperatura para corpo,
+ou a direção de apontamento para radar.
+
+18
+00:01:20.460 --> 00:01:23.645
+Essas são todas entradas degrau,
+
+19
+00:01:23.645 --> 00:01:28.655
+valor constante a ser atingido e é
+muito comum querermos que a saída
+
+20
+00:01:28.655 --> 00:01:33.240
+do sistema chegue a esse valor sem
+erro ou com erro muito pequeno.
+
+21
+00:01:33.240 --> 00:01:39.200
+A entrada rampa representa perfil com
+velocidade constante a ser seguido.
+
+22
+00:01:39.200 --> 00:01:44.300
+Por exemplo, para o pouso de aeronave
+ou para radar acompanhar satélite com
+
+23
+00:01:44.300 --> 00:01:49.366
+velocidade angular constante,
+ou ainda se temos perfil muito específico
+
+24
+00:01:49.366 --> 00:01:54.714
+de temperatura ou de resfriamento de
+material, ou ainda para uma câmera
+
+25
+00:01:54.714 --> 00:02:00.500
+acompanhar uma bola ou jogador
+correndo a uma velocidade constante.
+
+26
+00:02:00.500 --> 00:02:04.174
+Sempre que temos uma velocidade
+constante e queremos
+
+27
+00:02:04.174 --> 00:02:07.530
+acompanhar a posição temos entrada rampa.
+
+28
+00:02:07.530 --> 00:02:13.990
+A entrada parábola é menos comum,
+mas também temos bom exemplo para ela.
+
+29
+00:02:13.990 --> 00:02:17.985
+Uma parábola corresponde a uma
+aceleração constante como,
+
+30
+00:02:17.985 --> 00:02:20.890
+por exemplo, no lançamento de foguete.
+
+31
+00:02:20.890 --> 00:02:25.996
+Seguir uma entrada parábola significa
+seguir perfil de aceleração
+
+32
+00:02:25.996 --> 00:02:31.450
+ou desaceleração constante atingindo
+a posição desejada sem erro.
+
+33
+00:02:31.450 --> 00:02:37.140
+Mas vamos ao que interessa, calcular
+o erro regime para essas entradas.
+
+34
+00:02:37.140 --> 00:02:43.990
+Por exemplo, dada a seguinte função de
+transferência 1 sobre s mais 1 s mais 2.
+
+35
+00:02:43.990 --> 00:02:48.010
+Qual o erro regime permanente
+para uma entrada degrau unitário?
+
+36
+00:02:48.010 --> 00:02:52.690
+Podemos obter a transformada
+de Laplace da saída
+
+37
+00:02:52.690 --> 00:02:57.370
+multiplicando a Função de Transferência
+pela transformada da entrada e a 1 sobre s
+
+38
+00:02:57.370 --> 00:03:02.130
+e então subtraímos a saída da
+entrada para obter o erro.
+
+39
+00:03:02.130 --> 00:03:08.340
+Tirando o mínimo e fazendo a subtração
+obtemos a Transformada de Laplace do erro.
+
+40
+00:03:08.340 --> 00:03:12.090
+Expandimos a transformada
+do erro frações parciais,
+
+41
+00:03:12.090 --> 00:03:16.556
+achamos os resíduos A,
+
+42
+00:03:16.556 --> 00:03:22.030
+B e C e obtemos e de t usando uma
+tabela de Transformadas de Laplace.
+
+43
+00:03:22.030 --> 00:03:25.110
+E para t grande o suficiente,
+
+44
+00:03:25.110 --> 00:03:30.320
+como as duas exponenciais tendem a 0,
+o erro tende a 0,5.
+
+45
+00:03:30.320 --> 00:03:35.645
+Vamos denotar o valor final
+por e de infinito ou e ss
+
+46
+00:03:35.645 --> 00:03:40.970
+de steady state,
+que significa estado estacionário inglês.
+
+47
+00:03:40.970 --> 00:03:47.100
+Note que não precisávamos ter calculado
+os resíduos das outras frações,
+
+48
+00:03:47.100 --> 00:03:52.277
+só precisamos calcular o resíduo
+referente à fração com denominador s uma
+
+49
+00:03:52.277 --> 00:03:57.040
+vez que a transformada inversa das outras
+frações tende a 0 com o passar do tempo.
+
+50
+00:03:57.040 --> 00:04:02.404
+Ou seja, uma vez tendo a expressão para
+a transformada de Laplace do erro,
+
+51
+00:04:02.404 --> 00:04:07.783
+o valor final será o resíduo da fração
+com denominador s, que podemos obter
+
+52
+00:04:07.783 --> 00:04:12.750
+multiplicando a transformada do
+erro por s e fazendo s igual a 0.
+
+53
+00:04:12.750 --> 00:04:17.706
+Note, no entanto, que os denominadores
+das outras frações parciais
+
+54
+00:04:17.706 --> 00:04:23.174
+precisam ter parte real negativa,
+caso contrário as transformadas inversas
+
+55
+00:04:23.174 --> 00:04:28.170
+dessas frações não tenderão a 0 e
+não teremos valor final para o erro,
+
+56
+00:04:28.170 --> 00:04:31.770
+ele aumentará indefinidamente
+ou ficará oscilando.
+
+57
+00:04:31.770 --> 00:04:36.050
+Lembra do Teorema do Valor Final
+da Transformada de Laplace?
+
+58
+00:04:36.050 --> 00:04:42.806
+Ele diz que se existir valor final este
+valor final pode ser calculado como
+
+59
+00:04:42.806 --> 00:04:48.420
+o limite quando s tende a 0 e s vezes
+a Transformada de Laplace do sinal.
+
+60
+00:04:48.420 --> 00:04:53.495
+Então, no fundo,
+ao calcularmos apenas o resíduo da fração
+
+61
+00:04:53.495 --> 00:04:58.570
+com denominador s estamos aplicando
+o Teorema do Valor Final.
+
+62
+00:04:58.570 --> 00:05:04.370
+Vamos fazer a mesma coisa para uma
+função de transferência pouco diferente.
+
+63
+00:05:04.370 --> 00:05:08.690
+G de s será 2 sobre s mais 1 s mais 2.
+
+64
+00:05:08.690 --> 00:05:14.180
+A transformada do erro é a transformada
+da entrada menos a transformada da saída.
+
+65
+00:05:14.180 --> 00:05:19.038
+Fazendo a subtração das frações e
+simplificando chegamos a resultado
+
+66
+00:05:19.038 --> 00:05:23.969
+interessante, o s do denominador
+foi cancelado com o s do
+
+67
+00:05:23.969 --> 00:05:28.780
+numerador e não temos uma fração
+parcial com denominador s.
+
+68
+00:05:28.780 --> 00:05:33.647
+Creio que você já sabe que
+a transformada inversa de
+
+69
+00:05:33.647 --> 00:05:38.376
+A sobre s mais 1 é A vezes
+a exponencial de -t e que
+
+70
+00:05:38.376 --> 00:05:43.675
+a transformada inversa de B sobre s
+mais 2 é B vezes a exponencial de -2 t.
+
+71
+00:05:43.675 --> 00:05:44.440
+Não sabe?
+
+72
+00:05:44.440 --> 00:05:46.726
+Nem precisa olhar na tabela.
+
+73
+00:05:46.726 --> 00:05:52.310
+Como as exponenciais tendem a 0 com
+o passar do tempo, o erro tende a 0.
+
+74
+00:05:52.310 --> 00:05:57.145
+Ao invés de obter a transformada do
+erro e depois o valor final do erro,
+
+75
+00:05:57.145 --> 00:06:01.980
+podemos obter o valor final da saída
+e subtraí-lo do valor da entrada.
+
+76
+00:06:01.980 --> 00:06:05.880
+Voltando ao primeiro exemplo e
+usando o teorema do valor final,
+
+77
+00:06:05.880 --> 00:06:10.477
+chegamos à conclusão de que
+o valor final da saída é
+
+78
+00:06:10.477 --> 00:06:15.470
+meio e o erro regime será meio.
+
+79
+00:06:15.470 --> 00:06:22.160
+No segundo exemplo, o valor final
+de y será 1 e o erro regime será 0.
+
+80
+00:06:22.160 --> 00:06:26.892
+Então, você acha mais fácil
+obter a transformada do erro e
+
+81
+00:06:26.892 --> 00:06:28.920
+depois o valor final do erro?
+
+82
+00:06:28.920 --> 00:06:32.660
+Ou é melhor achar o valor final
+da saída e depois o erro?
+
+83
+00:06:32.660 --> 00:06:37.557
+Vamos ver mais exemplo: e se
+a função de transferência for
+
+84
+00:06:37.557 --> 00:06:42.825
+essa aqui G de s igual a s ao
+quadrado mais 6 s mais 9 sobre
+
+85
+00:06:42.825 --> 00:06:50.880
+s ao cubo mais 8 s ao
+quadrado mais 17 s mais 10.
+
+86
+00:06:50.880 --> 00:06:54.960
+O valor regime de y é 0,9 e o
+erro regime para uma entrada
+
+87
+00:06:54.960 --> 00:06:58.104
+degrau unitário é 0,1, mas como?
+
+88
+00:06:58.104 --> 00:07:01.455
+Na verdade, é bastante simples.
+
+89
+00:07:01.455 --> 00:07:07.416
+Y de s é G de s, u de s e como
+temos uma entrada degrau u de s é
+
+90
+00:07:07.416 --> 00:07:14.320
+1 sobre s e por causa do Teorema do Valor
+Final vamos multiplicar Y de s por s.
+
+91
+00:07:14.320 --> 00:07:19.652
+O s do Teorema do Valor Final se cancela
+com o 1 sobre s do degrau e para
+
+92
+00:07:19.652 --> 00:07:25.940
+achar o valor da saída regime permanente
+basta fazer todos os s iguais a 0,
+
+93
+00:07:25.940 --> 00:07:30.735
+o que equivale a sumir com
+todos os termos com s G de s.
+
+94
+00:07:30.735 --> 00:07:35.530
+E pronto,
+o valor regime da saída é 9 décimos.
+
+95
+00:07:35.530 --> 00:07:36.632
+Simples, não?
+
+96
+00:07:36.632 --> 00:07:42.063
+Então, só precisamos olhar para os termos
+que não têm s na função de transferência,
+
+97
+00:07:42.063 --> 00:07:46.260
+mas isso se estivermos interessados
+no erro para uma entrada degrau.
+
+98
+00:07:46.260 --> 00:07:48.707
+E se o degrau não for unitário?
+
+99
+00:07:48.707 --> 00:07:52.390
+Se, por exemplo, o degrau tiver valor 5.
+
+100
+00:07:52.390 --> 00:07:57.061
+Lembre-se, o sistema é linear
+então a saída para 5 vezes
+
+101
+00:07:57.061 --> 00:08:01.101
+a entrada é simplesmente 5
+vezes a saída e o erro para
+
+102
+00:08:01.101 --> 00:08:05.750
+degrau de amplitude 5 será 5 vezes
+o erro para degrau unitário.
+
+103
+00:08:05.750 --> 00:08:07.830
+Vamos ver mais exemplo.
+
+104
+00:08:07.830 --> 00:08:13.120
+Função de Transferência s ao
+quadrado mais 29 s mais 208 sobre
+
+105
+00:08:13.120 --> 00:08:19.150
+s ao cubo mais 6 s ao
+quadrado mais 10 s mais 208.
+
+106
+00:08:19.150 --> 00:08:23.020
+Qual o erro regime para entrada
+degrau de amplitude 10?
+
+107
+00:08:23.020 --> 00:08:25.844
+Erro regime 0?
+
+108
+00:08:25.844 --> 00:08:26.726
+Não!
+
+109
+00:08:26.726 --> 00:08:28.670
+Pegadinha!
+
+110
+00:08:28.670 --> 00:08:31.180
+Yeah, yeah!
+
+111
+00:08:31.180 --> 00:08:33.062
+Jazinga!
+
+112
+00:08:33.062 --> 00:08:37.086
+A saída diverge e não tem valor final.
+
+113
+00:08:37.086 --> 00:08:39.540
+O sistema é BIBO instável.
+
+114
+00:08:39.540 --> 00:08:41.440
+Confira no replay.
+
+115
+00:08:41.440 --> 00:08:43.570
+Pode isso, Arnaldo?
+
+116
+00:08:43.570 --> 00:08:49.092
+Então, verifique usando a Routh-Hurwitz
+que esse sistema não é estável.
+
+117
+00:08:49.092 --> 00:08:53.070
+Então, não existe uma valor
+final para uma entrada degrau.
+
+118
+00:08:53.070 --> 00:08:58.185
+No caso de uma entrada rampa,
+a saída do sistema
+
+119
+00:08:58.185 --> 00:09:03.300
+não tem valor final, então não
+podemos calcular o y de infinito.
+
+120
+00:09:03.300 --> 00:09:08.119
+Nesse caso realmente precisamos
+obter a expressão para e de s e
+
+121
+00:09:08.119 --> 00:09:12.770
+aplicar o Teorema do Valor Final
+e de s para obter e de infinito,
+
+122
+00:09:12.770 --> 00:09:18.470
+mas também precisamos verificar se e de
+t realmente está indo para valor final.
+
+123
+00:09:18.470 --> 00:09:23.405
+Vamos usar novamente o primeiro exemplo
+de Função de Transferência 1 sobre
+
+124
+00:09:23.405 --> 00:09:28.340
+s mais 1 s mais 2 e agora nossa
+entrada é uma rampa unitária.
+
+125
+00:09:28.340 --> 00:09:32.024
+Qual é o erro regime?
+
+126
+00:09:32.024 --> 00:09:36.206
+O erro é U- Y e Y é G vezes U e podemos
+
+127
+00:09:36.206 --> 00:09:40.880
+escrever E de s é igual a 1
+menos G de s vezes U de s.
+
+128
+00:09:40.880 --> 00:09:45.020
+Calculando 1 menos G de s para o
+nosso exemplo obtemos s ao quadrado
+
+129
+00:09:45.020 --> 00:09:49.160
+mais 3 s mais 1 sobre s mais 1 s mais 2.
+
+130
+00:09:49.160 --> 00:09:54.343
+Multiplicando esse resultado
+pela transformada da na entrada,
+
+131
+00:09:54.343 --> 00:09:57.920
+que é 1 sobre s quadrado,
+obtemos a expressão para i de s.
+
+132
+00:09:57.920 --> 00:10:03.803
+Note que na expansão frações
+parciais temos agora uma fração
+
+133
+00:10:03.803 --> 00:10:09.820
+com denominador s ao quadrado, e
+a inversa dessa fração resulta uma rampa.
+
+134
+00:10:09.820 --> 00:10:15.700
+Para que o erro tenda a valor finito
+precisamos ter o resíduo b igual a 0.
+
+135
+00:10:15.700 --> 00:10:20.240
+Se b for maior que 0,
+o erro está aumentando indefinidamente.
+
+136
+00:10:20.240 --> 00:10:25.654
+Infelizmente nesse caso b é
+igual a meio e teremos fator 0,5
+
+137
+00:10:25.654 --> 00:10:31.600
+vezes t no sinal do erro, que aumenta
+indefinidamente conforme o tempo passa.
+
+138
+00:10:31.600 --> 00:10:37.130
+Analisando apenas o resíduo de 1 sobre
+s ao quadrado não podemos dizer muita
+
+139
+00:10:37.130 --> 00:10:41.970
+coisa sobre o que acontece nos instantes
+logo após a aplicação da entrada rampa,
+
+140
+00:10:41.970 --> 00:10:45.095
+mas podemos dizer que,
+depois de algum tempo,
+
+141
+00:10:45.095 --> 00:10:50.276
+a saída não consegue acompanhar a entrada
+e o erro aumenta indefinidamente,
+
+142
+00:10:50.276 --> 00:10:52.460
+como ilustrado nesse gráfico.
+
+143
+00:10:52.460 --> 00:10:58.418
+Vamos calcular agora o e "iii"
+para aumentar a entrada rampa para
+
+144
+00:10:58.418 --> 00:11:02.160
+a função de transferência que apresenta
+erro 0 para uma entrada integral.
+
+145
+00:11:02.160 --> 00:11:07.800
+2 sobre s mais 1 s mais 2,
+a fórmula do erro é a mesma:
+
+146
+00:11:07.800 --> 00:11:13.203
+E de s é igual 1 menos G de
+s vezes U de s, mas agora,
+
+147
+00:11:13.203 --> 00:11:19.250
+1 menos G de s é igual a s ao quadrado
+mais 3s sobre s mais 1, s mais 2.
+
+148
+00:11:19.250 --> 00:11:25.490
+Multiplicamos 1 menos G de s por 1 sobre s
+ao quadrado que é a transformada da rampa
+
+149
+00:11:25.490 --> 00:11:31.070
+e verificamos que podemos simplificar
+s no numerador e no denominador.
+
+150
+00:11:31.070 --> 00:11:35.231
+E agora a expansão frações
+parciais não tem mais uma fração
+
+151
+00:11:35.231 --> 00:11:39.694
+com denominador s ao quadrado,
+calculando o resíduo a,
+
+152
+00:11:39.694 --> 00:11:44.573
+chegamos a a igual a 1,5 e
+a expressão para o erro é:
+
+153
+00:11:44.573 --> 00:11:49.830
+1,5 mais b vezes e a menos t,
+mais c vezes z a menos 2t,
+
+154
+00:11:49.830 --> 00:11:54.900
+ou seja,
+o erro para uma entrada rampa tende a 1,5.
+
+155
+00:11:54.900 --> 00:11:59.200
+Novamente não podemos precisar
+os instantes iniciais sem
+
+156
+00:11:59.200 --> 00:12:03.527
+calcular os outros resíduos,
+mas sabemos que depois de algum
+
+157
+00:12:03.527 --> 00:12:08.080
+tempo a saída irá acompanhar
+a entrada com erro que tende a 1,5.
+
+158
+00:12:08.080 --> 00:12:12.849
+Vamos agora usar uma função de
+transferência literal e calcular o
+
+159
+00:12:12.849 --> 00:12:15.460
+erro para uma entrada parábola.
+
+160
+00:12:15.460 --> 00:12:21.789
+A fórmula do erro é a mesma: E de s é
+igual a 1 menos G de s vezes U de s,
+
+161
+00:12:21.789 --> 00:12:27.420
+mas agora temos uma expressão literal
+para 1 menos G de s, e multiplicamos
+
+162
+00:12:27.420 --> 00:12:32.910
+1 menos G de s, por 1 sobre s ao cubo,
+que é a transformada da parábola.
+
+163
+00:12:32.910 --> 00:12:37.763
+A expansão frações parciais teria
+então termos 1 sobre s ao quadrado e
+
+164
+00:12:37.763 --> 00:12:41.067
+1 sobre s ao cubo,
+além dos termos referentes aos polos da
+
+165
+00:12:41.067 --> 00:12:44.220
+função de transferência que
+consideramos ser instável.
+
+166
+00:12:44.220 --> 00:12:49.300
+Se b ou c forem diferentes de 0,
+o erro difere.
+
+167
+00:12:49.300 --> 00:12:56.350
+Note que, para que c seja igual a 0,
+precisamos ter f igual a c.
+
+168
+00:12:56.350 --> 00:13:02.420
+Se isso acontecer, a expressão
+de E de s pode ser simplificada,
+
+169
+00:13:02.420 --> 00:13:08.490
+uma vez que podemos cancelar fator s
+comum no numerador e no denominador.
+
+170
+00:13:08.490 --> 00:13:12.434
+Agora, para que B também seja 0,
+
+171
+00:13:12.434 --> 00:13:19.100
+precisamos ter E igual a B e novamente
+podemos simplificar a expressão de E de s.
+
+172
+00:13:19.100 --> 00:13:26.380
+E agora podemos calcular o E "iii",
+que é d menos a, sobre f.
+
+173
+00:13:26.380 --> 00:13:32.173
+Para termos erro finito para uma
+entrada parábola precisamos ter
+
+174
+00:13:32.173 --> 00:13:38.290
+então: c igual a f e b igual a e,
+e o erro será d menos a sobre f.
+
+175
+00:13:38.290 --> 00:13:43.770
+Note que se a é igual a d, teremos erro
+nulo regime para uma entrada parábola.
+
+176
+00:13:43.770 --> 00:13:49.445
+Note também que c e f,
+e b e, são os coeficientes
+
+177
+00:13:49.445 --> 00:13:55.120
+de mesma potência de s no numerador e no
+denominador da função de transferência.
+
+178
+00:13:55.120 --> 00:14:00.016
+Se fizermos a mesma análise
+literal para a entrada rampa,
+
+179
+00:14:00.016 --> 00:14:05.121
+chegaremos à conclusão de que precisamos
+ter c igual a f, para que o erro
+
+180
+00:14:05.121 --> 00:14:11.050
+não divirja e que nesse caso o erro para
+entrada rampa será e menos b sobre f.
+
+181
+00:14:11.050 --> 00:14:15.484
+E fazendo a análise literal
+para a entrada integral,
+
+182
+00:14:15.484 --> 00:14:21.710
+chegamos à conclusão de que o e "iii" para
+uma entrada integral é f menos c sobre f.
+
+183
+00:14:21.710 --> 00:14:26.375
+Note que todos os casos estamos
+fazendo uma divisão por f,
+
+184
+00:14:26.375 --> 00:14:31.040
+então a função de transferência
+não pode ter polos na origem,
+
+185
+00:14:31.040 --> 00:14:36.090
+na verdade, mais que isso,
+o sistema precisa ser estável.
+
+186
+00:14:36.090 --> 00:14:40.582
+Então, se os coeficientes de
+s elevado a 0 são diferentes,
+
+187
+00:14:40.582 --> 00:14:46.324
+temos erro finito para a entrada de grau,
+dado por f menos c sobre f,
+
+188
+00:14:46.324 --> 00:14:51.170
+e erro infinito para
+entradas rampa e parábola.
+
+189
+00:14:51.170 --> 00:14:54.674
+Se os coeficientes de s
+elevado a 0 são iguais,
+
+190
+00:14:54.674 --> 00:14:57.400
+temos erro 0 para a entrada degrau.
+
+191
+00:14:57.400 --> 00:15:01.986
+Se tivermos erro 0 para
+degrau e os coeficientes de s
+
+192
+00:15:01.986 --> 00:15:07.141
+elevado a 1 forem diferentes,
+temos erro finito para entrada rampa,
+
+193
+00:15:07.141 --> 00:15:11.740
+dado por e menos b sobre f e erro
+infinito para entrada parábola.
+
+194
+00:15:11.740 --> 00:15:16.655
+Se tivermos erro 0 para
+entrada degrau e os
+
+195
+00:15:16.655 --> 00:15:21.570
+coeficientes de s elevado a 1 forem
+iguais, temos erro 0 para entrada rampa.
+
+196
+00:15:21.570 --> 00:15:24.673
+Se tivermos erro 0 para entrada
+
+197
+00:15:24.673 --> 00:15:29.668
+rampa e os coeficientes de s
+ao quadrado forem diferentes,
+
+198
+00:15:29.668 --> 00:15:34.840
+temos erro finito para entrada
+parábola dado por d menos a sobre f.
+
+199
+00:15:34.840 --> 00:15:39.683
+Se tivermos erro 0 para entrada
+rampa e os coeficientes de s
+
+200
+00:15:39.683 --> 00:15:44.380
+elevado ao quadrado forem iguais,
+temos erro 0 para entrada parábola.
+
+201
+00:15:44.380 --> 00:15:47.577
+Caso você utilize entradas diferentes,
+
+202
+00:15:47.577 --> 00:15:52.412
+você pode usar o mesmo procedimento
+que acabamos de usar para determinar o
+
+203
+00:15:52.412 --> 00:15:56.270
+valor do erro função dos coeficientes
+da função de transferência.
+
+204
+00:15:56.270 --> 00:16:00.880
+O teorema do valor final pode
+ser aplicado desde que o sinal
+
+205
+00:16:00.880 --> 00:16:04.710
+realmente tenda a valor
+constante quando tem aumento.
+
+206
+00:16:04.710 --> 00:16:09.703
+O fato de acharmos valor finito quando
+usamos o teorema não garante que o erro
+
+207
+00:16:09.703 --> 00:16:14.669
+tenda a valor constante uma vez que
+ele pode conter outras componentes
+
+208
+00:16:14.669 --> 00:16:18.050
+que vão divergir ou
+oscilar indefinidamente.
+
+209
+00:16:18.050 --> 00:16:22.396
+Agora, dada a função de
+transferência do sistema,
+
+210
+00:16:22.396 --> 00:16:28.210
+você já deve ser capaz de calcular o e
+regime permanente para entradas degrau,
+
+211
+00:16:28.210 --> 00:16:33.230
+rampa e parábola sem a necessidade de
+calcular a resposta completa do sistema.
+
+212
+00:16:33.230 --> 00:16:43.130
+[MÚSICA] [RUÍDO]

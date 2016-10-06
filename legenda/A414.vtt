@@ -1,0 +1,723 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.305
+[MÚSICA] [MÚSICA] Olá a todos.
+
+2
+00:00:09.305 --> 00:00:11.884
+Meu nome é Eduardo Guerra.
+
+3
+00:00:11.884 --> 00:00:14.360
+Este é o meu chapéu de TDD.
+
+4
+00:00:14.360 --> 00:00:19.201
+Estamos no curso de Desenvolvimento
+de Software Guiados por Teste.
+
+5
+00:00:19.201 --> 00:00:22.810
+Hoje vamos fazer o nosso
+segundo hands on de TDD,
+
+6
+00:00:22.810 --> 00:00:26.488
+hoje usando aqui o nosso chapéu do TDD.
+
+7
+00:00:26.488 --> 00:00:30.438
+A gente vai desenvolver tradutor, está?
+
+8
+00:00:30.438 --> 00:00:33.972
+A gente vai adicionar as palavras
+e ele vai retornar a tradução para
+
+9
+00:00:33.972 --> 00:00:34.865
+a gente, está?
+
+10
+00:00:34.865 --> 00:00:39.452
+E uma recomendação que eu dou, uma dica
+que eu dou para você que está começando no
+
+11
+00:00:39.452 --> 00:00:44.019
+TDD é fazer uma lista igual essa
+daqui com as funcionalidades.
+
+12
+00:00:44.019 --> 00:00:47.883
+Não são bem funcionalidades,
+com os casos de teste, não é?
+
+13
+00:00:47.883 --> 00:00:50.558
+Com os cenários que você quer, eh, eh,
+
+14
+00:00:50.558 --> 00:00:54.385
+que a sua classe ou o seu
+software resolva, está?
+
+15
+00:00:54.385 --> 00:00:58.940
+Então, vamos parar de conversa
+e vamos ao que interessa.
+
+16
+00:00:58.940 --> 00:01:01.713
+Então, aqui no Eclipse, não é?
+
+17
+00:01:01.713 --> 00:01:07.380
+Como sempre, eu começo com
+a criação de novo projeto Java.
+
+18
+00:01:07.380 --> 00:01:10.370
+Eu vou chamar ele de tradutor.
+
+19
+00:01:10.370 --> 00:01:15.450
+Então, tradutor.
+
+20
+00:01:15.450 --> 00:01:19.040
+Como vocês podem observar,
+
+21
+00:01:19.040 --> 00:01:23.200
+eu tenho eu estou aqui com o meu,
+
+22
+00:01:23.200 --> 00:01:28.847
+meu chapéu vermelho então,
+eu vou começar fazendo o teste, não é?
+
+23
+00:01:28.847 --> 00:01:32.342
+Vou começar fazendo eh, o teste falhar.
+
+24
+00:01:32.342 --> 00:01:37.160
+Eh, no caso eu não tenho nem
+teste ainda para falhar mas,
+
+25
+00:01:37.160 --> 00:01:39.152
+a gente vai começar por aí.
+
+26
+00:01:39.152 --> 00:01:42.531
+Então, eu começo aqui adicionando JUnit,
+
+27
+00:01:42.531 --> 00:01:46.011
+não é,
+para ele já acrescentar ele ali para mim.
+
+28
+00:01:46.011 --> 00:01:50.430
+Eu vou chamar ele de teste tradutor.
+
+29
+00:01:50.430 --> 00:01:55.710
+Vou adicionar o JUnit.
+
+30
+00:01:55.710 --> 00:02:03.970
+Vamos lá, vamos ver qual é o
+primeiro teste a ser criado.
+
+31
+00:02:03.970 --> 00:02:08.050
+Segundo a nossa lista aqui
+é tradutor sem palavras.
+
+32
+00:02:08.050 --> 00:02:13.414
+Então eh, eh,
+como é que eu testo tradutor sem palavras?
+
+33
+00:02:13.414 --> 00:02:14.206
+Não sei.
+
+34
+00:02:14.206 --> 00:02:15.592
+Vamos ver aqui.
+
+35
+00:02:15.592 --> 00:02:17.678
+Tradutor sem palavras.
+
+36
+00:02:17.678 --> 00:02:21.650
+Vamos pensar aqui como é que seria isso,
+não é?
+
+37
+00:02:21.650 --> 00:02:25.304
+Então eu vou pegar aqui.
+
+38
+00:02:25.304 --> 00:02:31.290
+Vou, eh, eh,
+vou criar novo tradutor, não é?
+
+39
+00:02:31.290 --> 00:02:37.870
+Tradutor t é igual a new Tradutor, não é?
+
+40
+00:02:37.870 --> 00:02:45.047
+Bom, como ele está sem palavras,
+eu vou verificar se ele está vazio, não é?
+
+41
+00:02:45.047 --> 00:02:50.002
+Então, eu vou criar aqui assertTrue, eh,
+
+42
+00:02:50.002 --> 00:02:53.390
+estaVazio.
+
+43
+00:02:53.390 --> 00:03:00.727
+Opa, faltou ali o t.estaVazio, certo?
+
+44
+00:03:00.727 --> 00:03:04.630
+Então, eu criei o meu teste.
+
+45
+00:03:04.630 --> 00:03:10.518
+Bom, eu considero ainda como parte do
+teste você fazer ele compilar, ok?
+
+46
+00:03:10.518 --> 00:03:16.433
+Então eu ainda estou com o meu
+chapéuzinho vermelho aqui, está?
+
+47
+00:03:16.433 --> 00:03:21.920
+Então eu vou vir aqui,
+vou usar o Eclipse aqui.
+
+48
+00:03:21.920 --> 00:03:28.260
+Olha lá, criar classe tradutor, então ok.
+
+49
+00:03:28.260 --> 00:03:36.340
+Ele criou ali a classe
+tradutor e o estaVazio.
+
+50
+00:03:36.340 --> 00:03:39.485
+Eu vou clicar aqui.
+
+51
+00:03:39.485 --> 00:03:40.410
+Opa.
+
+52
+00:03:40.410 --> 00:03:45.031
+Também, só para fazer ele compilar.
+
+53
+00:03:45.031 --> 00:03:47.973
+Então, eu salvo tudo aqui, não é?
+
+54
+00:03:47.973 --> 00:03:50.730
+Agora, eu tenho o teste, não é?
+
+55
+00:03:50.730 --> 00:03:53.596
+Vou rodar ele aqui.
+
+56
+00:03:53.596 --> 00:03:57.140
+Será que ele vai falhar?
+
+57
+00:03:57.140 --> 00:04:02.705
+Vamos lá, roda esse negócio.
+
+58
+00:04:02.705 --> 00:04:04.265
+Rodei o meu teste.
+
+59
+00:04:04.265 --> 00:04:05.825
+Olha lá, falhou.
+
+60
+00:04:05.825 --> 00:04:10.118
+Então, agora eu posso
+trocar para o chapéu verde,
+
+61
+00:04:10.118 --> 00:04:14.385
+onde o meu papel agora é
+fazer este teste aqui passar.
+
+62
+00:04:14.385 --> 00:04:15.444
+Está?
+Então,
+
+63
+00:04:15.444 --> 00:04:20.738
+a única coisa que ele precisa aqui é,
+é o tradutor estaVazio, não é?
+
+64
+00:04:20.738 --> 00:04:25.260
+Eu vou vir aqui, simplesmente,
+eu vou dar returnTrue.
+
+65
+00:04:25.260 --> 00:04:30.390
+Então, vou salvar aqui,
+
+66
+00:04:30.390 --> 00:04:36.555
+vou rodar o meu teste e o teste passa.
+
+67
+00:04:36.555 --> 00:04:42.235
+Então, eu posso vir aqui e dar
+ok na minha funcionalidade
+
+68
+00:04:42.235 --> 00:04:47.320
+inicial ali do tradutor sem palavras,
+está?
+
+69
+00:04:47.320 --> 00:04:52.554
+Eh, agora seria a vez da refatoração.
+
+70
+00:04:52.554 --> 00:04:56.002
+Mas, o meu código está pequeno ainda.
+
+71
+00:04:56.002 --> 00:04:58.126
+Eu não preciso refatorar, por enquanto.
+
+72
+00:04:58.126 --> 00:04:58.893
+Está?
+Então,
+
+73
+00:04:58.893 --> 00:05:02.927
+vou voltar aqui para o meu chapéuzinho
+vermelho e vou criar o próximo teste que
+
+74
+00:05:02.927 --> 00:05:04.886
+é de uma tradução.
+
+75
+00:05:04.886 --> 00:05:06.850
+Então, vamos lá.
+
+76
+00:05:06.850 --> 00:05:10.750
+Vamos criar aqui.
+
+77
+00:05:10.750 --> 00:05:16.950
+Test public void umaTraducao.
+
+78
+00:05:16.950 --> 00:05:23.490
+Então eh, eu vou vir aqui,
+vou criar o meu tradutor,
+
+79
+00:05:23.490 --> 00:05:29.134
+t é igual a newTradutor Então,
+
+80
+00:05:29.134 --> 00:05:34.280
+eu vou adicionar uma palavra.
+
+81
+00:05:34.280 --> 00:05:35.153
+Não é?
+Então,
+
+82
+00:05:35.153 --> 00:05:37.844
+eu vou adicionar a palavra
+com a tradução dela.
+
+83
+00:05:37.844 --> 00:05:45.734
+Então, eu vou vir aqui, t ponto
+adicionaPalavra e vou adicionar o quê?
+
+84
+00:05:45.734 --> 00:05:47.239
+Deixa eu pensar aqui.
+
+85
+00:05:47.239 --> 00:05:52.346
+Eu vou adicionar aqui, que bom é
+
+86
+00:05:52.346 --> 00:05:58.170
+good, certo?
+
+87
+00:05:58.170 --> 00:06:03.250
+Então, eu vou vir aqui, não é?
+
+88
+00:06:03.250 --> 00:06:05.050
+Eu vou pegar aqui.
+
+89
+00:06:05.050 --> 00:06:10.229
+Agora, eu vou dar assertFalse estaVazio,
+não é,
+
+90
+00:06:10.229 --> 00:06:16.182
+ou seja, ele não pode estar mais vazio e
+eu vou ter, verificar a tradução, não é?
+
+91
+00:06:16.182 --> 00:06:19.716
+Então, eu vou fazer aqui assert Equals.
+
+92
+00:06:19.716 --> 00:06:24.500
+Então, se eu perguntar para ele
+qual é que é a tradução de bom,
+
+93
+00:06:24.500 --> 00:06:26.710
+ele tem que dizer que é good.
+
+94
+00:06:26.710 --> 00:06:27.918
+Não é?
+
+95
+00:06:27.918 --> 00:06:31.950
+Então, t.traduzir.
+
+96
+00:06:31.950 --> 00:06:37.980
+Eh.
+
+97
+00:06:37.980 --> 00:06:42.810
+Eu vou colocar aqui, traduzir bom,
+
+98
+00:06:42.810 --> 00:06:46.890
+não é, ele tem que traduzir como good.
+
+99
+00:06:46.890 --> 00:06:47.433
+Está?
+
+100
+00:06:47.433 --> 00:06:52.191
+Então, ainda como parte do meu teste,
+eu vou fazer isso, eh, eh,
+
+101
+00:06:52.191 --> 00:06:55.770
+compilar, não é, ou seja,
+eu vou criar os métodos que não existem.
+
+102
+00:06:55.770 --> 00:07:00.420
+Então criei aqui.
+
+103
+00:07:00.420 --> 00:07:05.283
+Criei aqui.
+
+104
+00:07:05.283 --> 00:07:12.320
+Então, vou salvar aqui.
+
+105
+00:07:12.320 --> 00:07:13.002
+Certo?
+
+106
+00:07:13.002 --> 00:07:17.385
+Agora, eu já posso rodar o
+meu teste e ver ele falhar.
+
+107
+00:07:17.385 --> 00:07:23.777
+Então, já estou pronto para trocar
+para o meu chapéuzinho verde.
+
+108
+00:07:23.777 --> 00:07:24.540
+Está?
+
+109
+00:07:24.540 --> 00:07:28.690
+Então, vamos aqui no nosso tradutor.
+
+110
+00:07:28.690 --> 00:07:32.605
+Eh, eh,
+ver como é que eu posso fazer isso aqui.
+
+111
+00:07:32.605 --> 00:07:33.178
+Está?
+
+112
+00:07:33.178 --> 00:07:36.470
+Então, a primeira coisa,
+quando o Eclipse cria,
+
+113
+00:07:36.470 --> 00:07:41.882
+ele coloca aqui uns nomes mais
+genéricos aqui de parâmetro, não é?
+
+114
+00:07:41.882 --> 00:07:45.261
+Eh, então, eu vou, vou melhorar aqui.
+
+115
+00:07:45.261 --> 00:07:47.660
+Eu vou colocar o primeiro como palavra.
+
+116
+00:07:47.660 --> 00:07:54.900
+Então, vou botar aqui palavra e
+o segundo vai ser a tradução.
+
+117
+00:07:54.900 --> 00:08:01.190
+E aqui,
+
+118
+00:08:01.190 --> 00:08:03.872
+ele vai perguntar a palavra.
+
+119
+00:08:03.872 --> 00:08:07.351
+Vamos só ver aqui, no teste para ver.
+
+120
+00:08:07.351 --> 00:08:09.785
+Então, o primeiro aqui, a palavra, não é,
+
+121
+00:08:09.785 --> 00:08:12.360
+o bom e aqui ele também
+está passando a palavra.
+
+122
+00:08:12.360 --> 00:08:14.609
+Então, o que eu preciso fazer aqui?
+
+123
+00:08:14.609 --> 00:08:17.810
+Preciso guardar só a tradução
+por enquanto, não é?
+
+124
+00:08:17.810 --> 00:08:20.216
+Então, tradução, não é?
+
+125
+00:08:20.216 --> 00:08:22.840
+Vou criar aqui como privado.
+
+126
+00:08:22.840 --> 00:08:30.428
+Então, eu vou verificar aqui.
+
+127
+00:08:30.428 --> 00:08:37.540
+Eu vou guardar essa tradução aqui,
+this.traducao é igual a tradução.
+
+128
+00:08:37.540 --> 00:08:43.458
+[SEM ÁUDIO] E aqui,
+
+129
+00:08:43.458 --> 00:08:47.900
+no método traduzir,
+eu vou retornar a tradução.
+
+130
+00:08:47.900 --> 00:08:52.975
+Vou salvar, vou rodar.
+
+131
+00:08:52.975 --> 00:08:55.689
+Opa, ainda está com problema.
+
+132
+00:08:55.689 --> 00:08:57.122
+Onde é que é?
+
+133
+00:08:57.122 --> 00:09:00.665
+Aqui é no estaVazio,
+eu esqueci do estaVazio.
+
+134
+00:09:00.665 --> 00:09:06.670
+Então, ele vai estar vazio quando
+a tradução for igual a null, não é?
+
+135
+00:09:06.670 --> 00:09:13.990
+Ele retorna ali uma expressão boleana
+aqui, que faz essa verificação.
+
+136
+00:09:13.990 --> 00:09:17.150
+Vou botar assim para ficar mais claro.
+
+137
+00:09:17.150 --> 00:09:20.340
+Então eu salvo, rodo.
+
+138
+00:09:20.340 --> 00:09:26.003
+Ok, então está funcionando.
+
+139
+00:09:26.003 --> 00:09:28.993
+Agora, é a vez do meu
+chapéu da refatoração.
+
+140
+00:09:28.993 --> 00:09:31.760
+Tem alguma coisa que eu quero mudar aqui?
+
+141
+00:09:31.760 --> 00:09:32.658
+Tem, está?
+
+142
+00:09:32.658 --> 00:09:37.586
+Eu estava pensando melhor, eu acho que
+adicionar palavra, na verdade eu não
+
+143
+00:09:37.586 --> 00:09:41.642
+estou adicionando uma palavra, eu estou
+adicionando uma tradução para uma palavra.
+
+144
+00:09:41.642 --> 00:09:46.322
+Então no meu tradutor aqui, como eu
+é que tenho de traduzir, eu acho que,
+
+145
+00:09:46.322 --> 00:09:51.758
+de repente,
+esse método aqui o melhor nome para ele
+
+146
+00:09:51.758 --> 00:09:56.800
+seria adicionar tradução
+e não adicionar palavra.
+
+147
+00:09:56.800 --> 00:10:01.880
+Então, eu vou vir aqui vou refatorar.
+
+148
+00:10:01.880 --> 00:10:06.844
+Note que eu estou o tempo todo
+pensando na nomenclatura aqui e isso
+
+149
+00:10:06.844 --> 00:10:09.110
+é importante também, não é?
+
+150
+00:10:09.110 --> 00:10:13.202
+Adicionar,
+
+151
+00:10:14.690 --> 00:10:20.868
+adicionaTraducao, está?
+
+152
+00:10:20.868 --> 00:10:25.740
+E aí como eu usei o
+refatorar aqui do Eclipse,
+
+153
+00:10:25.740 --> 00:10:28.588
+ele vai também já alterar quem faz essa.
+
+154
+00:10:28.588 --> 00:10:29.851
+Está vendo.
+
+155
+00:10:29.851 --> 00:10:32.211
+alterou aqui no teste, também.
+
+156
+00:10:32.211 --> 00:10:36.725
+Então, não posso esquecer de quando
+eu estou refatorando, eu não,
+
+157
+00:10:36.725 --> 00:10:38.538
+eu só estou mudando a estrutura.
+
+158
+00:10:38.538 --> 00:10:41.514
+Não posso mudar, nem a minha classe,
+nem o meu teste.
+
+159
+00:10:41.514 --> 00:10:44.130
+Eu vou rodar,
+de novo aqui e está passando.
+
+160
+00:10:44.130 --> 00:10:47.910
+Eu posso já marcar aqui,
+que eu implementei isso daqui.
+
+161
+00:10:47.910 --> 00:10:53.554
+E os próximos aqui, a gente já vai
+ver no próximo hands on, está certo?
+
+162
+00:10:53.554 --> 00:10:55.410
+Na próxima parte desse hands on.
+
+163
+00:10:55.410 --> 00:10:57.740
+Muito obrigado, continua assistindo.
+
+164
+00:10:57.740 --> 00:11:03.090
+[MÚSICA]

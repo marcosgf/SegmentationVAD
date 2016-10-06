@@ -1,0 +1,381 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.685
+Olá, você já viu que o erro regime
+estacionário está ligado com o
+
+2
+00:00:04.685 --> 00:00:07.790
+ganho baixa frequência de malha aberta.
+
+3
+00:00:07.790 --> 00:00:12.867
+G(0) caso o sistema não
+seja do tipo 1 o ganho
+
+4
+00:00:12.867 --> 00:00:17.010
+baixa frequência é finito e há ai o
+regime estacionário para cada degrau.
+
+5
+00:00:17.010 --> 00:00:21.868
+Neste vídeo você vai aprender
+a ajustar a constante de erro sem
+
+6
+00:00:21.868 --> 00:00:24.680
+alterar muito ωc e a margem de fase.
+
+7
+00:00:24.680 --> 00:00:29.363
+Isso é importante nos casos que o
+comportamento no regime transitório está
+
+8
+00:00:29.363 --> 00:00:32.470
+adequado, e deve ser
+alterado o mínimo possível.
+
+9
+00:00:32.470 --> 00:00:36.108
+Mas ainda assim é necessário
+adequar o ganho DC.
+
+10
+00:00:36.108 --> 00:00:41.035
+Para aumentar o ganho baixas frequências
+uma alternativas é multiplicar o G(s)
+
+11
+00:00:41.035 --> 00:00:41.890
+por ganho K.
+
+12
+00:00:41.890 --> 00:00:47.040
+Isso resolveria o nosso problema
+baixas frequências, mas
+
+13
+00:00:47.040 --> 00:00:51.542
+você já viu que a frequência de cruzamento
+de 0DB, e a margem de fase seriam
+
+14
+00:00:51.542 --> 00:00:55.840
+alteradas podendo mudar substanciamente
+o comportametno regime transitório.
+
+15
+00:00:55.840 --> 00:00:59.369
+Uma saída para isso é usar
+compensador acrescentando pa
+
+16
+00:00:59.369 --> 00:01:02.400
+zero polo com frequências
+de quebra diferentes.
+
+17
+00:01:02.400 --> 00:01:07.324
+Novamente, lembrando do que você viu sobre
+as alterações trazidas para introdução
+
+18
+00:01:07.324 --> 00:01:10.110
+de zero e polo na função de transferência.
+
+19
+00:01:10.110 --> 00:01:13.443
+Se o zero tiver frequência de
+quebra menor do que a do polo,
+
+20
+00:01:13.443 --> 00:01:16.240
+o ganho é aumentado nas
+frequências mais altas.
+
+21
+00:01:16.240 --> 00:01:21.235
+Já a fase é alterada na vizinhança
+da média geométrica das frequências
+
+22
+00:01:21.235 --> 00:01:22.090
+de quebra.
+
+23
+00:01:22.090 --> 00:01:27.181
+Como queremos aumentar o ganho baixas
+frequências bastar inverter a ordem
+
+24
+00:01:27.181 --> 00:01:32.250
+das frequências de quebra isto é, fazer o
+módulo do polo ser menor que o do zero.
+
+25
+00:01:32.250 --> 00:01:37.103
+Assim, o ganho será aumentado frequências
+inferiores a do polo sem alterar o
+
+26
+00:01:37.103 --> 00:01:38.920
+ganho altas frequências.
+
+27
+00:01:38.920 --> 00:01:43.280
+Assim, alterando pouco a frequência de
+cruzamento de 0DB se o polo estiver
+
+28
+00:01:43.280 --> 00:01:44.650
+afastado desse valor.
+
+29
+00:01:44.650 --> 00:01:50.094
+Veja o diagrama de Bode,
+de compensador desse tipo para magnitude.
+
+30
+00:01:50.094 --> 00:01:53.968
+Cor de laranja o módulo devido ao zero.
+
+31
+00:01:53.968 --> 00:01:58.520
+Cor verde o módulo devido ao polo,
+e azul o resultado da soma.
+
+32
+00:01:58.520 --> 00:02:03.525
+Quanto a margem de fase
+também será pouco afetada
+
+33
+00:02:03.525 --> 00:02:08.530
+pois a vizinhança da média geométrica
+do polo e do zero estará longe de ωc.
+
+34
+00:02:08.530 --> 00:02:12.453
+A fase no o diagrama de Bode para esse
+compensador pode ser esboçada como na
+
+35
+00:02:12.453 --> 00:02:12.970
+figura.
+
+36
+00:02:12.970 --> 00:02:17.285
+Nela vemos que esse compensador diminui
+a fase entre nas frequências de quebra,
+
+37
+00:02:17.285 --> 00:02:21.600
+isso faz com que ele seja conhecido
+como compensador de atraso de fase.
+
+38
+00:02:21.600 --> 00:02:25.272
+Você pode ver que a fase volta a zero
+depois de cerca de cinco vezes
+
+39
+00:02:25.272 --> 00:02:27.120
+a frequência de quebra do zero.
+
+40
+00:02:27.120 --> 00:02:32.398
+Vamos fazer exemplo que gostariamos
+que o erro regime fosse menor ou igual
+
+41
+00:02:32.398 --> 00:02:37.878
+a 10% para cada degrau unitário
+para o seguinte sistema
+
+42
+00:02:37.878 --> 00:02:43.097
+G(s) = 10 / (s + 1) (s +
+2) esse sistema é tipo
+
+43
+00:02:43.097 --> 00:02:48.587
+zero então apresentará erro
+regime para cada degrau dado por,
+
+44
+00:02:48.587 --> 00:02:53.110
+ess = 1 / 1+Kp que Kp =
+
+45
+00:02:53.110 --> 00:02:58.637
+G(0) = 10/2 = 5 Portanto o erro regime
+
+46
+00:02:58.637 --> 00:03:03.892
+estacionário será ess = 1 / 1 + Kp = 1 /
+
+47
+00:03:03.892 --> 00:03:09.050
+1 + 5 = 1/6 que é aproximadamente 0,167.
+
+48
+00:03:09.050 --> 00:03:14.580
+Isso dará erro regime de
+aproximadamente 16,7% para cada degrau.
+
+49
+00:03:14.580 --> 00:03:16.316
+E não atende o nosso requisito,
+
+50
+00:03:16.316 --> 00:03:19.540
+para isso temos que alterar
+o ganho baixas frequências.
+
+51
+00:03:19.540 --> 00:03:24.857
+Vamos escolher compensador
+de atraso de fase,
+
+52
+00:03:24.857 --> 00:03:30.103
+C(s) = s -z / s- p Precisamos
+escolher z e p adequadamente
+
+53
+00:03:30.103 --> 00:03:34.380
+para isso vamos tentar diminuir
+o erro regime a metade.
+
+54
+00:03:34.380 --> 00:03:39.562
+ess depois do compensador
+indicado pelo subíndice C será
+
+55
+00:03:39.562 --> 00:03:44.751
+igual a 1 / 1 + Kp subíndice
+C que é igual a ess / 2
+
+56
+00:03:44.751 --> 00:03:50.410
+que será igual a 1/ 12 que
+é aproximadamente 0,083
+
+57
+00:03:50.410 --> 00:03:55.940
+de onde tiramos 11 = Kp sobre
+índice C que é igual a C
+
+58
+00:03:55.940 --> 00:04:01.408
+(0) G (0) = z/p * Kp que será
+
+59
+00:04:01.408 --> 00:04:07.790
+igual a z/p * 5 o que
+implica que z/p = 11/5 = 2,2.
+
+60
+00:04:07.790 --> 00:04:13.225
+Olhando a magnitude no diagrama de Bode
+de G(s), a frequência de cruzamento
+
+61
+00:04:13.225 --> 00:04:18.660
+de (0)dB ωc é de aproximadamente
+2,7rad por segundo.
+
+62
+00:04:18.660 --> 00:04:23.652
+Tipicamente, para evitar que a fase
+seja alterada próximo da frequência de
+
+63
+00:04:23.652 --> 00:04:28.112
+cruzamento de 0dB fazemos com que- ps ≤
+
+64
+00:04:28.112 --> 00:04:33.062
+ωc / 10 Para esse caso vamos escolher p =
+
+65
+00:04:33.062 --> 00:04:37.964
+-ωc / 10 = -2,27 então teremos,
+
+66
+00:04:37.964 --> 00:04:43.050
+2,2 = z/p = z/0,27 de onde z
+
+67
+00:04:43.050 --> 00:04:49.980
+= -0,61 isso nos dá o
+seguinte compensador,
+
+68
+00:04:49.980 --> 00:04:57.302
+C(s) = s + 0,61 / s + 0,27 a ser
+colocado série com G(s) nos
+
+69
+00:04:57.302 --> 00:05:02.289
+diagramas de Bode sem e com o compensador
+mostrados a seguir, você pode ver que o
+
+70
+00:05:02.289 --> 00:05:06.140
+ganho é alterado frequências abaixo
+da frequência de cruzamento do zero.
+
+71
+00:05:06.140 --> 00:05:10.599
+Contudo, há uma perda de margem de
+fase devido ao compensador, o que
+
+72
+00:05:10.599 --> 00:05:14.570
+deve diminuir o fator de amortecimento,
+aumentando pouco o sobresinal.
+
+73
+00:05:14.570 --> 00:05:19.612
+Simulando o sistema para
+cada degrau sem e com
+
+74
+00:05:19.612 --> 00:05:25.147
+o compensador você pode notar que de fato,
+o sistema com compensador
+
+75
+00:05:25.147 --> 00:05:30.812
+apresenta metade do erro regime do
+que apresenta sem, por outro lado
+
+76
+00:05:30.812 --> 00:05:36.970
+o tempo de subida é levemente alterado
+de 0,61 segundos para 0,64 segundos.
+
+77
+00:05:36.970 --> 00:05:42.770
+O sobresinal sobe de 22% para 23% isso
+se deve a mudança na margem de fase.
+
+78
+00:05:42.770 --> 00:05:49.661
+No próximo vídeo você aprenderá
+a fazer o projeto completo,
+
+79
+00:05:49.661 --> 00:05:54.102
+com o compensador de avanço de fase para
+atingir os requisitos de transitório,
+
+80
+00:05:54.102 --> 00:05:59.750
+e compensador de atraso de fase para
+satisfazer o requisito de erro regime.

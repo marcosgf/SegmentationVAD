@@ -1,0 +1,748 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.820
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.820 --> 00:00:13.924
+Esse é o curso de Orientação
+a Objetos com Java, meu
+
+3
+00:00:13.924 --> 00:00:20.478
+nome é Eduardo Guerra e hoje vamos falar
+sobre testes automatizados com JUnit.
+
+4
+00:00:20.478 --> 00:00:26.867
+O objetivo é que nessa aula você saia
+sabendo criar testes automatizados,
+
+5
+00:00:26.867 --> 00:00:32.306
+que você vá lá e teste a sua classe
+e possa cada vez simplesmente
+
+6
+00:00:32.306 --> 00:00:37.680
+ir lá mandar rodar de novo, reverificar
+todo aquele comportamento da sua classe,
+
+7
+00:00:37.680 --> 00:00:39.841
+hoje vamos aprender como fazer isso.
+
+8
+00:00:39.841 --> 00:00:41.934
+Antes de começar a explicar o JUnit,
+
+9
+00:00:41.934 --> 00:00:46.488
+vamos falar pouquinho sobre a importância
+de automatizar os seus testes.
+
+10
+00:00:46.488 --> 00:00:51.543
+Imagina esse cenário aqui: eu vou lá no
+meu projeto, crio uma funcionalidade A,
+
+11
+00:00:51.543 --> 00:00:55.181
+eu preciso ir lá e testar
+essa funcionalidade A.
+
+12
+00:00:55.181 --> 00:00:58.369
+Seguida eu vou lá e crio
+uma funcionalidade B,
+
+13
+00:00:58.369 --> 00:01:03.633
+o que vai acontecer é o seguinte: na
+hora de testar a implementação dessa
+
+14
+00:01:03.633 --> 00:01:08.530
+funcionalidade B,
+ela pode ter influenciado no código de A,
+
+15
+00:01:08.530 --> 00:01:11.980
+eu posso para criar esse B,
+eu posso ter mexido no A também.
+
+16
+00:01:11.980 --> 00:01:16.612
+Então na hora de testar eu não só tenho
+que testar a nova funcionalidade,
+
+17
+00:01:16.612 --> 00:01:19.400
+que é a B, mas também a funcionalidade A.
+
+18
+00:01:19.400 --> 00:01:23.080
+Esse tipo de teste a gente
+chama de teste de regressão,
+
+19
+00:01:23.080 --> 00:01:28.166
+a gente não deve só testar aquilo que é
+novo mas também testar o que já tinha para
+
+20
+00:01:28.166 --> 00:01:33.919
+ver se aquela coisa nova não atrapalhou
+nas coisas que já estavam funcionando.
+
+21
+00:01:33.919 --> 00:01:38.696
+E aí se eu for lá e criar uma
+funcionalidade C, eu vou precisar não só
+
+22
+00:01:38.696 --> 00:01:43.494
+testar C mas também a A e a B e com
+isso dá para a gente perceber que,
+
+23
+00:01:43.494 --> 00:01:48.701
+com o tempo, eu vou ter sempre mais
+coisas para testar independente se eu
+
+24
+00:01:48.701 --> 00:01:54.330
+estou desenvolvendo aos pouquinhos, eu vou
+precisando cada vez testar mais coisas.
+
+25
+00:01:54.330 --> 00:01:59.830
+Eu já participei de projeto que
+o tempo que o teste demorava,
+
+26
+00:01:59.830 --> 00:02:04.066
+que as pessoas demoravam para fazer
+os testes era maior do que o tempo de
+
+27
+00:02:04.066 --> 00:02:08.442
+desenvolvimento, para você ver
+como que esse tipo de coisa pode
+
+28
+00:02:08.442 --> 00:02:13.188
+influenciar e pode impactar
+no tempo do projeto.
+
+29
+00:02:13.188 --> 00:02:18.329
+E isso para o desenvolvimento ágil
+que trabalha com pequenas iterações,
+
+30
+00:02:18.329 --> 00:02:23.031
+digamos assim é inaceitável,
+você ter essa carga de testes.
+
+31
+00:02:23.031 --> 00:02:27.376
+Por isso é muito importante
+automatizar os testes, está?
+
+32
+00:02:27.376 --> 00:02:31.386
+Muitas vezes a gente não consegue
+automatizar todos os testes,
+
+33
+00:02:31.386 --> 00:02:36.811
+eu por exemplo participei a pouco
+tempo de projeto que mexia com
+
+34
+00:02:36.811 --> 00:02:41.910
+câmeras e pan tilts e software que
+interagia com esse tipo de hardware,
+
+35
+00:02:41.910 --> 00:02:47.087
+então essa parte do código a gente tinha
+testes manuais mas a maior parte do código
+
+36
+00:02:47.087 --> 00:02:52.293
+que era o que a gente conseguia era sempre
+importante tentar automatizar os testes.
+
+37
+00:02:52.293 --> 00:02:53.528
+Falando testes,
+
+38
+00:02:53.528 --> 00:02:58.861
+existem vários tipos de testes que a gente
+pode utilizar para diferentes propósitos.
+
+39
+00:02:58.861 --> 00:03:02.207
+Na aula anterior eu cheguei
+a falar alguns aqui.
+
+40
+00:03:02.207 --> 00:03:06.682
+Então eu vou colocar 3 tipos
+aqui de acordo com o escopo.
+
+41
+00:03:06.682 --> 00:03:11.364
+O teste de unidade ele testa uma
+única classe, único método ele,
+
+42
+00:03:11.364 --> 00:03:15.817
+digamos assim testa a unidade do software,
+separado do resto.
+
+43
+00:03:15.817 --> 00:03:18.777
+O teste de integração normalmente ele pega
+
+44
+00:03:18.777 --> 00:03:22.945
+componentes ou aquelas funcionalidades
+que têm várias classes
+
+45
+00:03:22.945 --> 00:03:27.673
+integradas para ver se juntas elas
+estão formando a funcionalidade não é?
+
+46
+00:03:27.673 --> 00:03:32.509
+Então por exemplo pegando aquele exemplo,
+lá da outra aula, do carrinho de compras
+
+47
+00:03:32.509 --> 00:03:37.653
+que colaborava lá por exemplo com a outra
+classe lá, o carrinho tinha a classe
+
+48
+00:03:37.653 --> 00:03:42.840
+responsável pela parte da entrega,
+não é, o endereço, a compra.
+
+49
+00:03:42.840 --> 00:03:43.868
+Então por exemplo,
+
+50
+00:03:43.868 --> 00:03:47.812
+testando o carrinho isolado das outras
+classes seria teste de unidade.
+
+51
+00:03:47.812 --> 00:03:51.956
+Se eu testasse, por exemplo a classe
+compra que utiliza o carrinho,
+
+52
+00:03:51.956 --> 00:03:56.427
+utiliza o endereço e tem várias coisas
+ali, digamos assim está combinando as
+
+53
+00:03:56.427 --> 00:04:00.977
+funcionalidades de várias classes para
+chegar numa única funcionalidade, não é,
+
+54
+00:04:00.977 --> 00:04:04.085
+para chegar numa execução,
+esse seria teste de integração.
+
+55
+00:04:04.085 --> 00:04:09.735
+Se eu estou testando o software do ponto
+de vista do usuário, eu chamo esse
+
+56
+00:04:09.735 --> 00:04:14.536
+teste de teste funcional, que é aquele
+que, eu não estou pensando se é a unidade,
+
+57
+00:04:14.536 --> 00:04:19.176
+se é o componente, eu estou testando o
+software do ponto de vista do usuário.
+
+58
+00:04:19.176 --> 00:04:23.756
+E o que a gente vai ver, como a gente
+está falando de automação de testes é que
+
+59
+00:04:23.756 --> 00:04:29.615
+muitas vezes não tem muita diferença
+como esses testes são criados,
+
+60
+00:04:29.615 --> 00:04:32.217
+é mais relação ao escopo deles.
+
+61
+00:04:32.217 --> 00:04:36.803
+Então se você está por exemplo,
+fazendo teste cima de uma classe
+
+62
+00:04:36.803 --> 00:04:40.900
+que ela está isolada do resto,
+você está fazendo teste de unidade.
+
+63
+00:04:40.900 --> 00:04:45.475
+Muitas vezes você pode fazer o teste
+exatamente da mesma forma só que aquele
+
+64
+00:04:45.475 --> 00:04:50.005
+teste ao invés de envolver uma classe
+ele está envolvendo várias que estão
+
+65
+00:04:50.005 --> 00:04:52.112
+combinando as suas funcionalidades,
+
+66
+00:04:52.112 --> 00:04:54.916
+então ele vai passar já
+a ser teste de integração.
+
+67
+00:04:54.916 --> 00:04:59.772
+Mas a ferramenta, a forma que você está
+criando o teste, muitas vezes é a mesma,
+
+68
+00:04:59.772 --> 00:05:02.084
+o que varia é o escopo daquele teste.
+
+69
+00:05:02.084 --> 00:05:08.541
+A gente vai aprender aqui, e vai utilizar
+durante o nosso curso, a ferramenta JUnit.
+
+70
+00:05:08.541 --> 00:05:13.340
+O JUnit ele é praticamente o padrão
+para a criação de testes Java.
+
+71
+00:05:13.340 --> 00:05:18.250
+Existem outras ferramentas, como o teste
+NJ, que você também pode utilizar,
+
+72
+00:05:18.250 --> 00:05:22.699
+que também são muito boas,
+tem funcionalidades bem interessantes,
+
+73
+00:05:22.699 --> 00:05:25.564
+mas no nosso curso a gente
+vai focar no JUnit.
+
+74
+00:05:25.564 --> 00:05:30.144
+Apesar do JUnit ele ser muito utilizado
+para testes de unidade ele também
+
+75
+00:05:30.144 --> 00:05:34.560
+é utilizado para outros tipos de
+testes como para testes funcionais,
+
+76
+00:05:34.560 --> 00:05:36.652
+para testes de integração.
+
+77
+00:05:36.652 --> 00:05:41.820
+Muitas vezes o JUnit ele é utilizado
+como base para outro framework,
+
+78
+00:05:41.820 --> 00:05:46.080
+para uma outra ferramenta para
+a realização desses testes.
+
+79
+00:05:46.080 --> 00:05:50.848
+O JUnit ele é basicamente uma
+biblioteca para a execução de testes,
+
+80
+00:05:50.848 --> 00:05:54.040
+para essa automação de testes,
+agora o que,
+
+81
+00:05:54.040 --> 00:05:57.933
+o objeto do seu teste aí
+fica ao seu critério.
+
+82
+00:05:57.933 --> 00:06:02.831
+Então a primeira coisa que a gente tem
+que saber é que uma classe do JUnit não
+
+83
+00:06:02.831 --> 00:06:04.710
+precisa ter nada de especial.
+
+84
+00:06:04.710 --> 00:06:09.520
+Eu simplesmente, por exemplo se eu
+quero fazer teste de uma calculadora eu
+
+85
+00:06:09.520 --> 00:06:14.442
+vou criar ali uma classe TestCalc, não é,
+e ela vai está fazendo aí esse teste.
+
+86
+00:06:14.442 --> 00:06:19.378
+Para eu criar método de teste que
+efetivamente vai estar testando alguma
+
+87
+00:06:19.378 --> 00:06:24.888
+coisa eu preciso colocar essa
+anotação @Test cima do método, está?
+
+88
+00:06:24.888 --> 00:06:29.930
+Então, por exemplo eu quero testar se
+a calculadora está testando corretamente
+
+89
+00:06:29.930 --> 00:06:35.769
+não é, então eu vou criar método chamado
+testeSoma onde eu vou realizar esse teste
+
+90
+00:06:35.769 --> 00:06:42.440
+e vou anotar com o @Test para que o JUnit
+saiba que aquele método é método de teste.
+
+91
+00:06:42.440 --> 00:06:48.280
+Não podemos esquecer de importar as
+classes do JUnit que a gente utilizar,
+
+92
+00:06:48.280 --> 00:06:52.341
+por exemplo se eu estou utilizando
+a anotação @Test eu preciso estar
+
+93
+00:06:52.341 --> 00:06:55.595
+importando essa anotação
+para dentro da minha classe,
+
+94
+00:06:55.595 --> 00:06:58.744
+então eu vou ter que ter
+lá import org.junit.Test.
+
+95
+00:06:58.744 --> 00:07:03.193
+Dentro do método de teste
+eu preciso exercitar aquela
+
+96
+00:07:03.193 --> 00:07:06.532
+funcionalidade que eu quero verificar.
+
+97
+00:07:06.532 --> 00:07:12.078
+Então por exemplo, eu estou criando
+aqui o meu objeto Calc e estou
+
+98
+00:07:12.078 --> 00:07:17.357
+invocando o método add nele
+para poder somar o 3 com
+
+99
+00:07:17.357 --> 00:07:22.800
+2 e retornar o resultado ali
+para a minha variável i, não é?
+
+100
+00:07:22.800 --> 00:07:26.202
+Então se eu estou fazendo o teste de uma
+funcionalidade eu tenho que rodar aquela
+
+101
+00:07:26.202 --> 00:07:27.030
+funcionalidade.
+
+102
+00:07:27.030 --> 00:07:31.656
+Nesse ponto é importante
+ressaltar que eu preciso estar
+
+103
+00:07:31.656 --> 00:07:36.724
+criando o cenário necessário para
+poder executar aquela funcionalidade.
+
+104
+00:07:36.724 --> 00:07:41.125
+Então de repente se eu preciso
+criar ali arquivo de configuração,
+
+105
+00:07:41.125 --> 00:07:44.847
+eu preciso setar alguma coisa
+no meu banco de dados, não é,
+
+106
+00:07:44.847 --> 00:07:49.841
+então nesse momento, antes de exercitar
+essa minha funcionalidade eu vou estar,
+
+107
+00:07:49.841 --> 00:07:54.705
+por exemplo às vezes eu preciso configurar
+uma variável no meu objeto ou num
+
+108
+00:07:54.705 --> 00:07:58.949
+objeto que eu estou passando
+como parâmetro eu preciso criar
+
+109
+00:07:58.949 --> 00:08:03.260
+objeto para passar como parâmetro
+então tudo isso vai, vai nessa parte.
+
+110
+00:08:03.260 --> 00:08:08.491
+de criar todo esse cenário, todo esse
+ambiente para que eu possa exercitar
+
+111
+00:08:08.491 --> 00:08:13.205
+a funcionalidade da forma que eu
+quero que ela seja exercitada.
+
+112
+00:08:13.205 --> 00:08:18.032
+Bom, a última coisa do teste que
+precisa é compara o resultado,
+
+113
+00:08:18.032 --> 00:08:21.906
+então por exemplo eu vou
+utilizar o método assert,
+
+114
+00:08:21.906 --> 00:08:25.366
+eu tenho vários métodos
+que eu posso utilizar,
+
+115
+00:08:25.366 --> 00:08:30.428
+bastante comum é o assertEquals que eu
+vou verificar por exemplo se o i que o
+
+116
+00:08:30.428 --> 00:08:35.434
+meu método add retornou
+se ele vai ser igual a 5.
+
+117
+00:08:35.434 --> 00:08:39.975
+Então só para vocês verem eu
+tenho aqui vários dos métodos
+
+118
+00:08:39.975 --> 00:08:44.699
+assert que eu posso utilizar eu
+tenho que verifica se é verdadeiro,
+
+119
+00:08:44.699 --> 00:08:49.679
+verifica se é falso, se compara se é
+igual, no caso a diferença entre o Equals
+
+120
+00:08:49.679 --> 00:08:54.534
+e o Same é que o Equals ele vai chamar
+o método Equals do objeto e o Same
+
+121
+00:08:54.534 --> 00:08:59.603
+vai verificar se é a mesma instância
+memória, verifica se é Null e
+
+122
+00:08:59.603 --> 00:09:04.631
+eu posso utilizar todos esses
+métodos e eu posso inclusivé criar o
+
+123
+00:09:04.631 --> 00:09:09.687
+meu próprio método de assert, não é, se
+eu tiver por exemplo uma comparação pouco
+
+124
+00:09:09.687 --> 00:09:14.070
+mais sofisticada que eu quero fazer no
+meu teste, nada impede de eu fazer isto.
+
+125
+00:09:14.070 --> 00:09:18.824
+Fique tranquilo que a gente vai,
+nos 'iii', não só no próximo, não é,
+
+126
+00:09:18.824 --> 00:09:23.809
+mas ao longo de todo o curso
+procurar sempre estar criando testes
+
+127
+00:09:23.809 --> 00:09:28.414
+e à medida que as aulas forem
+passando vocês vão ficar cada
+
+128
+00:09:28.414 --> 00:09:31.513
+vez melhor na criação
+de testes de unidade.
+
+129
+00:09:31.513 --> 00:09:36.545
+Justamente por isso que
+a gente decidiu colocar logo
+
+130
+00:09:36.545 --> 00:09:42.054
+no começo do curso essa parte de
+testes para que, à medida a gente for
+
+131
+00:09:42.054 --> 00:09:46.886
+vendo as outras partes a gente possa
+ir vendo como criar os testes para cada
+
+132
+00:09:46.886 --> 00:09:51.337
+tipo de coisa que a gente for
+vendo aí na orientação a objetos, não é,
+
+133
+00:09:51.337 --> 00:09:55.124
+com a colaboração de classes e etc.
+
+134
+00:09:55.124 --> 00:09:58.946
+Então por favor pare de
+dar print para testar,
+
+135
+00:09:58.946 --> 00:10:04.600
+pára de ficar imprimindo o resultado
+da sua classe na tela para testar,
+
+136
+00:10:04.600 --> 00:10:08.495
+agora você já sabe criar
+testes automatizados,
+
+137
+00:10:08.495 --> 00:10:12.151
+crie os seus testes verifica
+a sua funcionalidade.
+
+138
+00:10:12.151 --> 00:10:16.031
+Aquela mesma,
+aquele mesmo codigozinho que você fazia "
+
+139
+00:10:16.031 --> 00:10:19.140
+eu criei uma calculadora
+então eu vou pegar aqui,
+
+140
+00:10:19.140 --> 00:10:23.200
+vou mandar somar e vou imprimir o
+resultado e vou ver se está certo".
+
+141
+00:10:23.200 --> 00:10:27.863
+Ao invés de você fazer isso, pega esse
+código, coloca dentro de uma classe do
+
+142
+00:10:27.863 --> 00:10:32.938
+JUnit, ao invés de ficar vendo se o
+resultado está certo ou não coloca
+
+143
+00:10:32.938 --> 00:10:38.279
+assert para relamente verificar e utilize
+isso para que você sempre que precisar,
+
+144
+00:10:38.279 --> 00:10:42.720
+de repente você mexeu na classe ou você
+está mexendo no seu sistema você possa
+
+145
+00:10:42.720 --> 00:10:47.417
+sempre rodar aquele teste de novo e
+saber se ele ainda está funcionando,
+
+146
+00:10:47.417 --> 00:10:49.324
+se ele parou de funcionar e etc.
+
+147
+00:10:49.324 --> 00:10:53.069
+Eu espero que, não é complicado
+criar testes automatizados,
+
+148
+00:10:53.069 --> 00:10:57.288
+eu espero que com essa aula você já saiba
+agora utilizar o JUnit para a criação de
+
+149
+00:10:57.288 --> 00:11:01.761
+testes automatizados e espero também
+que você tenha visto a importância de
+
+150
+00:11:01.761 --> 00:11:06.571
+automatizar os testes, não só a
+importância de testar mas a importância de
+
+151
+00:11:06.571 --> 00:11:09.670
+automatizar o máximo
+possível os seus testes.
+
+152
+00:11:09.670 --> 00:11:15.149
+Muito obrigado por assistir.
+
+153
+00:11:15.149 --> 00:11:17.260
+[MÚSICA]

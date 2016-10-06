@@ -1,0 +1,432 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.408
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:09.408 --> 00:00:15.545
+meu nome é Eduardo Guerra, estamos aqui no
+curso de Orientação a Objetos com Java.
+
+3
+00:00:15.545 --> 00:00:19.563
+Hoje vamos ver pouquinho mais
+sobre testes automatizados,
+
+4
+00:00:19.563 --> 00:00:24.363
+hoje vamos como utilizar aqueles
+métodos de inicialização, finalização e
+
+5
+00:00:24.363 --> 00:00:28.650
+entender como que eles funcionam,
+qual é a ordem que eles são chamados.
+
+6
+00:00:28.650 --> 00:00:33.432
+Para isso a gente vai fazer exercício que
+a gente vai criar uma classe de testes com
+
+7
+00:00:33.432 --> 00:00:38.970
+3 testes, todos esses métodos de Before,
+BeforeClass,
+
+8
+00:00:38.970 --> 00:00:44.408
+o After, o AfterClass e vamos ver
+a ordem que isso daí executa,
+
+9
+00:00:44.408 --> 00:00:48.164
+então vamos fazer uma brincadeira aqui,
+não vamos criar exatamente teste,
+
+10
+00:00:48.164 --> 00:00:50.955
+mas para a gente fixar
+e ver na prática como,
+
+11
+00:00:50.955 --> 00:00:55.270
+qual é a ordem que esses métodos
+são invocados pelo JUnit.
+
+12
+00:00:55.270 --> 00:00:56.363
+Está pronto?
+
+13
+00:00:56.363 --> 00:01:03.550
+Vamos criar aqui então projeto,
+novo projeto,
+
+14
+00:01:03.550 --> 00:01:08.000
+vou chamar aqui de AntesDepois.
+
+15
+00:01:08.000 --> 00:01:12.670
+Nessa aula aqui eu vou mostrar jeito
+
+16
+00:01:12.670 --> 00:01:17.212
+talvez pouco mais simples de
+adicionar o JUnit no seu projeto.
+
+17
+00:01:17.212 --> 00:01:21.470
+Simplesmente se você não tem
+o JUnit ainda aí você manda
+
+18
+00:01:21.470 --> 00:01:25.937
+adicionar caso de teste do JUnit está?
+
+19
+00:01:25.937 --> 00:01:30.496
+Eu vou criar aqui o AntesDepois certo?
+
+20
+00:01:30.496 --> 00:01:35.788
+Quando eu der finish ele vai me perguntar,
+está vendo,
+
+21
+00:01:35.788 --> 00:01:42.130
+se eu quero que adicione o
+JUnit no class path do projeto.
+
+22
+00:01:42.130 --> 00:01:46.261
+Class path seria ali os locais
+onde ele vai procurar bibliotecas,
+
+23
+00:01:46.261 --> 00:01:48.975
+onde vai procurar classes, está certo?
+
+24
+00:01:48.975 --> 00:01:54.330
+Então eu confirmo aqui e eu posso ver
+aqui que ele adicionou o JUnit aqui,
+
+25
+00:01:54.330 --> 00:01:56.285
+era o que eu queria, está?
+
+26
+00:01:56.285 --> 00:01:58.070
+Então o que eu vou fazer?
+
+27
+00:01:58.070 --> 00:02:00.700
+Eu vou criar 3 testes certo?
+
+28
+00:02:00.700 --> 00:02:06.550
+E eu vou imprimir aqui cada vou
+
+29
+00:02:06.550 --> 00:02:12.790
+botar aqui teste A,
+
+30
+00:02:12.790 --> 00:02:17.010
+vamos botar 1 aqui, eu vou colocar
+igualzinho está no método, não é?
+
+31
+00:02:17.010 --> 00:02:21.070
+Então teste 1,
+
+32
+00:02:21.070 --> 00:02:28.484
+o teste 2 e o teste 3, certo?
+
+33
+00:02:28.484 --> 00:02:30.927
+Então ele vai imprimir aqui.
+
+34
+00:02:30.927 --> 00:02:34.411
+Então se eu mandar o
+JUnit rodar essa classe,
+
+35
+00:02:34.411 --> 00:02:37.640
+ele vai ter que rodar os 3 testes está?
+
+36
+00:02:37.640 --> 00:02:42.766
+Então se eu der play aqui ele
+vai executar, está certo?
+
+37
+00:02:42.766 --> 00:02:48.272
+Ele rodou aqui os testes, não é,
+como a gente não está testando nada ok?
+
+38
+00:02:48.272 --> 00:02:53.750
+Mas ele está imprimindo aqui no console
+Teste 1, Teste 2 e o Teste 3, está?
+
+39
+00:02:53.750 --> 00:03:02.070
+Então eu vou adicionar agora aqui
+método que vai ter o Before, certo?
+
+40
+00:03:02.070 --> 00:03:05.942
+Então eu vou criar aqui
+public void Before.
+
+41
+00:03:05.942 --> 00:03:10.628
+No caso método não precisa chamar Before,
+ele pode ter qualquer nome,
+
+42
+00:03:10.628 --> 00:03:14.881
+eu estou colocando Before aqui
+simplesmente para a gente saber não é?
+
+43
+00:03:14.881 --> 00:03:19.743
+Certo, então vou colocar aqui ele
+rodou o método que tem o @Before.
+
+44
+00:03:19.743 --> 00:03:23.980
+No caso aqui eu preciso importar,
+eu vou usar o próprio Eclipse aqui
+
+45
+00:03:23.980 --> 00:03:28.400
+a ajuda do Eclipse para
+importar esse Before, certo?
+
+46
+00:03:28.400 --> 00:03:33.663
+Vou colocar aqui também método After,
+certo?
+
+47
+00:03:33.663 --> 00:03:38.370
+Vou chamar o método com o mesmo nome,
+de After,
+
+48
+00:03:38.370 --> 00:03:43.670
+e vou imprimir,
+
+49
+00:03:43.670 --> 00:03:49.540
+opa faltou o s aqui,
+vou imprimir o @After aqui.
+
+50
+00:03:49.540 --> 00:03:55.970
+Então vou salvar
+
+51
+00:03:55.970 --> 00:04:02.750
+faltou aqui importar o After, certo?
+
+52
+00:04:02.750 --> 00:04:05.368
+Então eu salvo, eu vou rodar,
+
+53
+00:04:05.368 --> 00:04:11.407
+vamos ver o que é que ele vai estar
+imprimindo ali no console, certo?
+
+54
+00:04:11.407 --> 00:04:18.624
+Note que antes de cada teste ele roda
+o Before antes e o After depois, está?
+
+55
+00:04:18.624 --> 00:04:23.168
+Então ele vai rodar Before, Teste 1,
+After, Before, Teste 2, After,
+
+56
+00:04:23.168 --> 00:04:25.567
+Before, Teste 3, After certo?
+
+57
+00:04:25.567 --> 00:04:32.222
+Vamos ver agora como que se comporta
+métodos que tem o BeforeClass
+
+58
+00:04:32.222 --> 00:04:38.130
+já vou pedir uma ajuda aqui para o Eclipse
+achar essa classe para mim, certo?
+
+59
+00:04:38.130 --> 00:04:42.420
+Ele achou, public void
+
+60
+00:04:42.420 --> 00:04:48.523
+BeforeClass está?
+
+61
+00:04:48.523 --> 00:04:55.017
+Então eu vou imprimir aqui o
+
+62
+00:04:55.017 --> 00:05:04.842
+@ opa BeforeClass certo?
+
+63
+00:05:04.842 --> 00:05:10.533
+E eu vou colocar aqui da mesma
+forma o AfterClass, certo?
+
+64
+00:05:10.533 --> 00:05:17.611
+Já pedi para o Eclipse adicionar
+ali para mim também, certo?
+
+65
+00:05:17.611 --> 00:05:24.199
+Então AfterClass vou estar adicionando
+aqui, mandando imprimir, está?
+
+66
+00:05:24.199 --> 00:05:29.222
+Só para vocês não falarem que eu estou,
+que sou daqueles professores
+
+67
+00:05:29.222 --> 00:05:33.897
+que falam que " eu errei
+de propósito" e na
+
+68
+00:05:33.897 --> 00:05:39.290
+verdade errou mesmo eu vou falar
+aqui que vai dar erro está?
+
+69
+00:05:39.290 --> 00:05:44.410
+Então eu estou errando mesmo de
+propósito aqui para vocês verem, está?
+
+70
+00:05:44.410 --> 00:05:47.386
+Bom quando eu rodar aqui, certo?
+
+71
+00:05:47.386 --> 00:05:52.812
+Ele tem que dar esse problema
+"Initialization error" está?
+
+72
+00:05:52.812 --> 00:05:59.458
+Então note que ele fala aqui o método
+BeforeClass ele tem que ser estático está?
+
+73
+00:05:59.458 --> 00:06:02.383
+E o método AfterClass também
+tem que ser estático.
+
+74
+00:06:02.383 --> 00:06:07.141
+Essa foi uma questão aqui que eu não,
+preferi deixar para a aula prática e não
+
+75
+00:06:07.141 --> 00:06:11.356
+dei muita ênfase durante a aula
+que eu falei sobre isso está?
+
+76
+00:06:11.356 --> 00:06:16.160
+Mas tanto o método BeforeClass quanto
+o AfterClass ele tem que ser estático
+
+77
+00:06:16.160 --> 00:06:20.957
+então eu vou colocar os métodos
+aqui como estático está?
+
+78
+00:06:20.957 --> 00:06:24.652
+Isso aqui é uma exigência
+aqui do próprio JUnit está?
+
+79
+00:06:24.652 --> 00:06:29.358
+E agora sim eu vou rodar e eles,
+e vai funcionar, está?
+
+80
+00:06:29.358 --> 00:06:34.133
+Note que diferente do
+AfterClass e do BeforeClass,
+
+81
+00:06:34.133 --> 00:06:37.089
+diferente do Before e do After,
+
+82
+00:06:37.089 --> 00:06:42.797
+o BeforeClass ele vai rodar antes
+de todos os teste e o AfterClass
+
+83
+00:06:42.797 --> 00:06:47.732
+ele vai rodar depois de todos os testes,
+uma vez só cada.
+
+84
+00:06:47.732 --> 00:06:54.990
+Diferente do After e o Before que ele
+roda uma vez para cada teste, está?
+
+85
+00:06:54.990 --> 00:07:02.082
+Então o objetivo dessa aula é que você
+não esqueça mais essa ordem, não é?
+
+86
+00:07:02.082 --> 00:07:06.371
+A diferença do Before, do After,
+do BeforeClass e do AfterClass,
+
+87
+00:07:06.371 --> 00:07:10.973
+vendo assim na prática como que
+a ordem aqui que é executado,
+
+88
+00:07:10.973 --> 00:07:13.963
+que você não esqueça mais essa,
+
+89
+00:07:13.963 --> 00:07:19.238
+esse detalhe aí das classes de
+teste que a gente vai utilizar
+
+90
+00:07:19.238 --> 00:07:24.877
+bastante nos próximos exercícios daqui
+para a frente no curso inteiro, está ok?
+
+91
+00:07:24.877 --> 00:07:29.170
+Continue ligado no nosso curso,
+muito obrigado por assistir à aula.
+
+92
+00:07:29.170 --> 00:07:35.390
+[MÚSICA]

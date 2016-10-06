@@ -1,0 +1,856 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.117
+[MÚSICA] [MÚSICA] Olá.
+
+2
+00:00:09.117 --> 00:00:13.993
+Bem vindos ao curso de
+orientação a objetos com Java.
+
+3
+00:00:13.993 --> 00:00:18.372
+Eu sou o Clovis Fernandes
+e iremos dar continuidade
+
+4
+00:00:18.372 --> 00:00:21.085
+ao Hands-On sobre a modelagem CRC.
+
+5
+00:00:21.085 --> 00:00:27.872
+Iremos apresentar dos passos
+a 3 a 5 numa pequena aplicação.
+
+6
+00:00:27.872 --> 00:00:33.016
+No passo 3 iremos identificar
+as responsabilidades óbvias
+
+7
+00:00:33.016 --> 00:00:34.916
+cada classe que foi definida.
+
+8
+00:00:34.916 --> 00:00:39.530
+Nós tínhamos definidas então 3
+classes: biblioteca, livro e usuário.
+
+9
+00:00:39.530 --> 00:00:44.672
+Iremos então agora examinar
+quais são as responsabilidades
+
+10
+00:00:44.672 --> 00:00:49.437
+que naturalmente fazem sentido
+fazerem parte dessas classes.
+
+11
+00:00:49.437 --> 00:00:54.190
+Imagine você a classe biblioteca,
+quais são as responsabilidades
+
+12
+00:00:54.190 --> 00:00:58.755
+que poderiam ser consideradas óbvias?
+
+13
+00:00:58.755 --> 00:01:01.036
+Eu estou considerando aqui 3,
+
+14
+00:01:01.036 --> 00:01:05.795
+representando pela cor verde 3
+responsabilidades do tipo Sabe.
+
+15
+00:01:05.795 --> 00:01:09.794
+A biblioteca sabe o nome,
+a biblioteca sabe o catálogo de livros,
+
+16
+00:01:09.794 --> 00:01:12.040
+a biblioteca sabe a sua lista de usuários.
+
+17
+00:01:12.040 --> 00:01:15.948
+E estou identificando duas
+responsabilidades do tipo Faz.
+
+18
+00:01:15.948 --> 00:01:20.346
+Registra usuário, se usuário quer
+emprestar livro ele precisa de
+
+19
+00:01:20.346 --> 00:01:24.780
+estar registrado e então a classe
+biblioteca precisa registrar o usuário.
+
+20
+00:01:24.780 --> 00:01:28.338
+O usuário está querendo
+retirar algum livro.
+
+21
+00:01:28.338 --> 00:01:30.641
+Se ele se encontra registrado,
+
+22
+00:01:30.641 --> 00:01:35.551
+ele vai querer retirar livro que
+tenha sido adicionado ao catálogo.
+
+23
+00:01:35.551 --> 00:01:38.770
+Então eu adiciono esse
+novo livro ao catálogo.
+
+24
+00:01:38.770 --> 00:01:43.585
+Agora na classe livro o que é que
+vocês podem-me dizer a respeito
+
+25
+00:01:43.585 --> 00:01:47.223
+das responsabilidades que são óbvias?
+
+26
+00:01:47.223 --> 00:01:48.400
+Pense você.
+
+27
+00:01:48.400 --> 00:01:52.322
+Nesse exemplo, eu estou só usando as
+
+28
+00:01:52.322 --> 00:01:56.170
+responsabilidades do tipo Sabe e
+porque isso é que estão verde ai.
+
+29
+00:01:56.170 --> 00:02:00.330
+Sabe título, sabe autor,
+sabe número único de livro,
+
+30
+00:02:00.330 --> 00:02:05.343
+sabe a disponibilidade de empréstimo,
+se o livro está disponível para
+
+31
+00:02:05.343 --> 00:02:10.336
+empréstimo ou não, sabe o usuário,
+se o livro foi emprestado você
+
+32
+00:02:10.336 --> 00:02:15.001
+fica sabendo que usuário é que
+está com aquele livro emprestado.
+
+33
+00:02:15.001 --> 00:02:17.750
+Então essas são as que eu identifiquei.
+
+34
+00:02:17.750 --> 00:02:22.120
+Vamos agora dar uma olhada
+então na classe usuário.
+
+35
+00:02:22.120 --> 00:02:25.573
+O que você pode me dizer
+a respeito da classe usuário?
+
+36
+00:02:25.573 --> 00:02:29.660
+Quais são as responsabilidades
+óbvias para a classe usuário?
+
+37
+00:02:29.660 --> 00:02:33.895
+Vejamos se vocês vão chegar
+perto do que eu vou colocar.
+
+38
+00:02:33.895 --> 00:02:38.556
+O usuário sabe o nome, o usuário
+sabe a lista de livros emprestados,
+
+39
+00:02:38.556 --> 00:02:40.563
+que foram emprestados para ele.
+
+40
+00:02:40.563 --> 00:02:43.010
+Inicialmente ela é vazia, está certo?
+
+41
+00:02:43.010 --> 00:02:45.062
+Bom, eu faço isso sozinho?
+
+42
+00:02:45.062 --> 00:02:47.969
+Não.
+Normalmente todo esse processo da
+
+43
+00:02:47.969 --> 00:02:52.358
+modelagem CRC é feita com
+outros desenvolvedores e com
+
+44
+00:02:52.358 --> 00:02:54.848
+usuários e clientes do sistema.
+
+45
+00:02:54.848 --> 00:02:57.310
+Pessoas que entendem do sistema.
+
+46
+00:02:57.310 --> 00:03:01.199
+Pode ser que tanto os conhecedores
+quanto os desenvolvedores
+
+47
+00:03:01.199 --> 00:03:03.750
+esqueçam algumas responsabilidades.
+
+48
+00:03:03.750 --> 00:03:06.041
+Não tem problema nesse processo.
+
+49
+00:03:06.041 --> 00:03:09.043
+Elas vão aparecer mais cedo ou mais tarde.
+
+50
+00:03:09.043 --> 00:03:14.067
+Algum momento isso acaba aparecendo
+e não precisamos de nos preocupar
+
+51
+00:03:14.067 --> 00:03:19.039
+se estamos lembrando de todas
+as responsabilidades óbvias.
+
+52
+00:03:19.039 --> 00:03:25.160
+O passo 4 nós vamos identificar
+responsabilidades lá na especificação.
+
+53
+00:03:25.160 --> 00:03:29.984
+Por isso é que eu estou reapresentando
+a especificação do SAB e eu
+
+54
+00:03:29.984 --> 00:03:33.415
+vou examinar os verbos,
+as responsabilidades.
+
+55
+00:03:33.415 --> 00:03:39.240
+Enquanto que as classes de objetos
+eu faço uso de nomes e substantivos,
+
+56
+00:03:39.240 --> 00:03:44.060
+para responsabilidades eu olho
+os verbos e os predicados.
+
+57
+00:03:44.060 --> 00:03:47.574
+Eles é que vão indicar quais
+são as responsabilidades.
+
+58
+00:03:47.574 --> 00:03:52.252
+Então por exemplo: amarelo,
+eu estou identificando os verbos e
+
+59
+00:03:52.252 --> 00:03:57.388
+predicados que correspondem às
+responsabilidades do tipo sabe.
+
+60
+00:03:57.388 --> 00:04:02.410
+Então no caso ali eu tenho: tem nome,
+mantém catálogo de livros,
+
+61
+00:04:02.410 --> 00:04:08.092
+tem título, autor, número único
+de catálogo, cada com nome único
+
+62
+00:04:08.092 --> 00:04:13.920
+de usuário e verde eu estou representando
+as responsabilidades do tipo faz.
+
+63
+00:04:13.920 --> 00:04:19.930
+Emprestar livro, devolver o livro,
+registrar novo usuário da biblioteca,
+
+64
+00:04:19.930 --> 00:04:24.252
+exibir ordem crescente do número
+único de catálogo os livros
+
+65
+00:04:24.252 --> 00:04:29.274
+disponíveis para empréstimo,
+ou então exibir os livros já emprestados.
+
+66
+00:04:29.274 --> 00:04:34.176
+O que eu faço então, eu estou esquecendo
+pouco nesse momento de trabalhar com
+
+67
+00:04:34.176 --> 00:04:37.970
+as responsabilidades do tipo
+Sabe que elas são mais diretas,
+
+68
+00:04:37.970 --> 00:04:41.320
+elas correspondem a atributos,
+não é, está certo?
+
+69
+00:04:41.320 --> 00:04:44.704
+Então o que eu vou colocar para a gente
+começar a trabalhar aqui são com
+
+70
+00:04:44.704 --> 00:04:46.454
+as responsabilidades do tipo faz.
+
+71
+00:04:46.454 --> 00:04:50.870
+Então eu tenho emprestar livro, devolver
+livro, registrar novo usuário, exibir
+
+72
+00:04:50.870 --> 00:04:56.245
+livros disponíveis para empréstimo, exibir
+livros indisponíveis para empréstimo.
+
+73
+00:04:56.245 --> 00:05:01.834
+Inclusive, quando eu listo e retiro da
+especificação eu posso fazer pequenas
+
+74
+00:05:01.834 --> 00:05:07.120
+adaptações nos nomes para eles ficarem
+ou mais curtos ou mais apropriados,
+
+75
+00:05:07.120 --> 00:05:10.283
+para corresponderem às responsabilidades.
+
+76
+00:05:10.283 --> 00:05:15.063
+Já no passo 5 eu vou fazer a atribuição
+das responsabilidades que eu
+
+77
+00:05:15.063 --> 00:05:16.860
+acabei de identificar.
+
+78
+00:05:16.860 --> 00:05:21.837
+Normalmente, quando eu trabalho nas
+responsabilidades pelos verbos,
+
+79
+00:05:21.837 --> 00:05:27.950
+olhando os verbos na especificação do
+sistema que eu estou tentando automatizar,
+
+80
+00:05:27.950 --> 00:05:31.621
+Eu não sei para que classe elas vão
+pertencer então eu vou ter que analisar,
+
+81
+00:05:31.621 --> 00:05:32.902
+fazer uma análise disso.
+
+82
+00:05:32.902 --> 00:05:35.562
+E o processo é: eu vou
+olhando para cada classe.
+
+83
+00:05:35.562 --> 00:05:40.790
+Então no nosso caso nós temos 3 classes:
+eu vou olhar para as classes biblioteca,
+
+84
+00:05:40.790 --> 00:05:42.111
+livro e usuário.
+
+85
+00:05:42.111 --> 00:05:45.550
+Cada responsabilidade daquela minha lista.
+
+86
+00:05:45.550 --> 00:05:50.141
+Bom, eu não preciso olhar as do
+tipo sabe porque elas estão muito
+
+87
+00:05:50.141 --> 00:05:52.238
+associadas a cada classe.
+
+88
+00:05:52.238 --> 00:05:57.201
+Quando eu sei o nome da biblioteca,
+significa que eu estou essa
+
+89
+00:05:57.201 --> 00:06:01.494
+responsabilidade ela é da biblioteca
+então é muito simples desvendar,
+
+90
+00:06:01.494 --> 00:06:05.256
+fazer a atribuição das
+responsabilidades do tipo sabe.
+
+91
+00:06:05.256 --> 00:06:09.930
+As do tipo faz não é tão simples assim,
+demanda certo trabalho.
+
+92
+00:06:09.930 --> 00:06:12.175
+Então eu vou olhar cada classe,
+
+93
+00:06:12.175 --> 00:06:16.421
+pego a primeiro responsabilidade
+e vou olhando cada classe.
+
+94
+00:06:16.421 --> 00:06:19.519
+Essa responsabilidade faz
+sentido nessa classe?
+
+95
+00:06:19.519 --> 00:06:21.176
+O que é que pode acontecer?
+
+96
+00:06:21.176 --> 00:06:25.544
+Na classe já existia uma responsabilidade
+óbvia que faz a mesma coisa,
+
+97
+00:06:25.544 --> 00:06:27.145
+elas são muito análogas,
+
+98
+00:06:27.145 --> 00:06:31.905
+ela pode estar até escritas diferente
+mas podem fazer a mesma coisa.
+
+99
+00:06:31.905 --> 00:06:32.840
+Está certo?
+
+100
+00:06:32.840 --> 00:06:36.482
+Então se já existe,
+eu não vou fazer a atribuição.
+
+101
+00:06:36.482 --> 00:06:40.124
+Mas eu parto para olhar as
+outras porque uma mesma
+
+102
+00:06:40.124 --> 00:06:44.740
+responsabilidade ela pode
+aparecer várias classes.
+
+103
+00:06:44.740 --> 00:06:47.489
+Isso ai tem a ver com o polimorfismo,
+
+104
+00:06:47.489 --> 00:06:52.598
+eu posso ter responsabilidades de
+mesmo nome mas cuja lógica vai ser
+
+105
+00:06:52.598 --> 00:06:57.440
+diferente cada classe que ela
+fizer sentido ser atribuída.
+
+106
+00:06:57.440 --> 00:06:58.224
+Está certo?
+
+107
+00:06:58.224 --> 00:07:01.647
+Ai eu vou olhando,
+mesmo tendo feito a atribuição:
+
+108
+00:07:01.647 --> 00:07:06.319
+nesta classe faz sentido ser atribuído
+determinada responsabilidade?
+
+109
+00:07:06.319 --> 00:07:10.991
+Mesmo fazendo isso, eu tenho que
+olhar se faz sentido nas outras
+
+110
+00:07:10.991 --> 00:07:16.321
+classes também por causa dessa
+característica de polimorfismo.
+
+111
+00:07:16.321 --> 00:07:21.052
+Nós temos então neste caso 5
+responsabilidades do tipo faz: emprestar
+
+112
+00:07:21.052 --> 00:07:25.909
+livro, devolver livro, registrar novo
+usuário, exibir livros disponíveis
+
+113
+00:07:25.909 --> 00:07:30.112
+para empréstimo e exibir livros
+indisponíveis para empréstimo.
+
+114
+00:07:30.112 --> 00:07:34.814
+Por acaso, o emprestar livros vai
+valer por exemplo para a classe livro?
+
+115
+00:07:34.814 --> 00:07:39.391
+Eu não pergunto para o livro se eu
+devo emprestá-lo ou não ou se eu vou
+
+116
+00:07:39.391 --> 00:07:42.296
+devolver livro para o próprio livro.
+
+117
+00:07:42.296 --> 00:07:43.901
+Isso não faz sentido.
+
+118
+00:07:43.901 --> 00:07:46.566
+Então emprestar livro, devolver livro,
+
+119
+00:07:46.566 --> 00:07:49.306
+registrar novo usuário
+é para livro também?
+
+120
+00:07:49.306 --> 00:07:52.287
+Não.
+Exibir livros disponíveis de empréstimo?
+
+121
+00:07:52.287 --> 00:07:53.783
+Espera, eu sou livro.
+
+122
+00:07:53.783 --> 00:07:58.340
+Eu não tenho noção dos outros livros que
+existem disponíveis para empréstimo,
+
+123
+00:07:58.340 --> 00:08:00.174
+assim como estão indisponíveis.
+
+124
+00:08:00.174 --> 00:08:03.274
+Então essas 5 responsabilidades
+não servem para livro.
+
+125
+00:08:03.274 --> 00:08:06.905
+Eu vou perguntar para o usuário,
+emprestar o livro?
+
+126
+00:08:06.905 --> 00:08:07.876
+Também não.
+
+127
+00:08:07.876 --> 00:08:10.000
+Não cabe a ele decidir isso.
+
+128
+00:08:10.000 --> 00:08:11.052
+Está?
+Porque,
+
+129
+00:08:11.052 --> 00:08:15.186
+cabe a alguém que vai perguntar se
+o livro está disponível ou não.
+
+130
+00:08:15.186 --> 00:08:18.449
+Se o livro estiver disponível
+ele pode emprestar.
+
+131
+00:08:18.449 --> 00:08:23.009
+Então isso não pode ser o usuário
+porque o usuário não vai ter essa ação,
+
+132
+00:08:23.009 --> 00:08:27.794
+nem para devolver e obviamente a própria
+classe usuário não pode registrar
+
+133
+00:08:27.794 --> 00:08:32.570
+novo usuário porque para registrar novo
+usuário eu estou criando uma classe,
+
+134
+00:08:32.570 --> 00:08:33.968
+objeto da classe usuário.
+
+135
+00:08:33.968 --> 00:08:36.155
+Então eu não vou perguntar para o usuário.
+
+136
+00:08:36.155 --> 00:08:37.005
+Ele nem existe.
+
+137
+00:08:37.005 --> 00:08:37.700
+Está certo?
+
+138
+00:08:37.700 --> 00:08:39.910
+Então tem que ser para outro
+que eu tenho que perguntar.
+
+139
+00:08:39.910 --> 00:08:42.651
+E não pode ser para livro e
+não pode ser para o usuário.
+
+140
+00:08:42.651 --> 00:08:47.310
+Eu estou também tirando a palavra novo
+porque se eu vou registrar usuário,
+
+141
+00:08:47.310 --> 00:08:50.347
+já está implícito que ele é novo
+porque se ele não for novo,
+
+142
+00:08:50.347 --> 00:08:53.266
+ele já existe no sistema e então
+eu não preciso de registrar.
+
+143
+00:08:53.266 --> 00:08:54.995
+Então estou tirando essa palavra.
+
+144
+00:08:54.995 --> 00:08:58.771
+Aindo para o usuário: não cabe a ele
+exibir os livros disponíveis para
+
+145
+00:08:58.771 --> 00:09:03.607
+empréstimo porque o usuário só sabe os
+livros que ele tomou de empréstimo.
+
+146
+00:09:03.607 --> 00:09:07.995
+Ele não fica registrado nele todos
+os livros que estão disponíveis nem
+
+147
+00:09:07.995 --> 00:09:10.730
+os livros que estão indisponíveis
+então não cabe para livro.
+
+148
+00:09:10.730 --> 00:09:14.043
+Então, certamente,
+só sobrou para a biblioteca.
+
+149
+00:09:14.043 --> 00:09:14.644
+Ou seja,
+
+150
+00:09:14.644 --> 00:09:19.974
+fiz aqui uma análise por exceção que eu
+estou trabalhando esse tipo de coisa.
+
+151
+00:09:19.974 --> 00:09:24.513
+Notem que eu coloquei registrar
+usuário agora azul porquê?
+
+152
+00:09:24.513 --> 00:09:29.411
+Eu tinha registrado as
+responsabilidades do tipo faz
+
+153
+00:09:29.411 --> 00:09:32.832
+cada classe, que eram óbvias, azul.
+
+154
+00:09:32.832 --> 00:09:37.386
+Quando eu fiz a análise das
+responsabilidades que eu descobri
+
+155
+00:09:37.386 --> 00:09:40.511
+olhando a especificação do sistema SAB,
+
+156
+00:09:40.511 --> 00:09:46.410
+eu identifiquei 5 responsabilidades
+e elas estavam todas marrom.
+
+157
+00:09:46.410 --> 00:09:48.156
+O que é que acontece?
+
+158
+00:09:48.156 --> 00:09:53.664
+Já existia registrar usuário na
+classe biblioteca que tinha sido
+
+159
+00:09:53.664 --> 00:09:59.496
+levantado de forma óbvia, eu identifiquei
+como sendo uma responsabilidade óbvia.
+
+160
+00:09:59.496 --> 00:10:03.802
+Aqui eu levantei também registrar
+usuário como houve uma coincidência,
+
+161
+00:10:03.802 --> 00:10:07.226
+ele já existia e então eu não
+precisei de fazer a atribuição.
+
+162
+00:10:07.226 --> 00:10:11.023
+Essa registrar usuário que está azul,
+já existia biblioteca.
+
+163
+00:10:11.023 --> 00:10:14.750
+Então eu só atribui o emprestar livro,
+devolver livro exibir livros
+
+164
+00:10:14.750 --> 00:10:18.770
+disponíveis para empréstimo e exibir
+livros indisponíveis para empréstimo.
+
+165
+00:10:18.770 --> 00:10:21.224
+Como é que ficou então
+a classe biblioteca,
+
+166
+00:10:21.224 --> 00:10:23.774
+com as atribuições que eu acabei de fazer?
+
+167
+00:10:23.774 --> 00:10:25.696
+Verde as do tipo Sabe, sabe nome,
+
+168
+00:10:25.696 --> 00:10:28.589
+sabe catálogo de livros e
+sabe lista de usuários.
+
+169
+00:10:28.589 --> 00:10:30.385
+Azul tenho o registra usuário,
+
+170
+00:10:30.385 --> 00:10:35.686
+existia uma registra usuário também que
+tinha sido identificada na especificação,
+
+171
+00:10:35.686 --> 00:10:39.210
+como já existia não precisei
+de fazer a atribuição.
+
+172
+00:10:39.210 --> 00:10:43.710
+Uma antiga adiciona livro ao catálogo
+e 4 novas que eram o empresta livro,
+
+173
+00:10:43.710 --> 00:10:46.405
+devolve livro,
+exibe livros disponíveis para empréstimo,
+
+174
+00:10:46.405 --> 00:10:50.890
+exibe livros indisponíveis para
+empréstimo que foram atribuídas agora.
+
+175
+00:10:50.890 --> 00:10:56.390
+Então essas últimas 6 são todas
+responsabilidades do tipo faz.
+
+176
+00:10:56.390 --> 00:11:01.127
+As cores só estão identificando quando
+é que apareceram e foram atribuídas
+
+177
+00:11:01.127 --> 00:11:02.775
+para a classe biblioteca.
+
+178
+00:11:02.775 --> 00:11:07.766
+Encerramos então a parte 2 da
+modelagem CRC, desse Hands-On da
+
+179
+00:11:07.766 --> 00:11:12.663
+modelagem CRC que apresentamos
+os passos 3 a 5 da modelagem
+
+180
+00:11:12.663 --> 00:11:17.583
+CRC que estamos empregando neste curso.
+
+181
+00:11:17.583 --> 00:11:20.020
+Obrigado.
+
+182
+00:11:20.020 --> 00:11:22.460
+[MÚSICA]

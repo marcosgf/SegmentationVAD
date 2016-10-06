@@ -1,0 +1,312 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.581
+Olá.
+Neste vídeo,
+
+2
+00:00:01.581 --> 00:00:06.550
+você aprenderá a fazer projeto
+completo: com compensador de avanço
+
+3
+00:00:06.550 --> 00:00:11.113
+de fase para alterar as características da
+resposta transitória e o compensador de
+
+4
+00:00:11.113 --> 00:00:15.250
+atraso de fase para atender os
+requisitos de erro regime estacionário.
+
+5
+00:00:15.250 --> 00:00:20.416
+O sistema será G de s igual
+a 1 sobre s mais 5 vezes s
+
+6
+00:00:20.416 --> 00:00:25.504
+mais 10 Os requisitos são
+sobressinal menor do que
+
+7
+00:00:25.504 --> 00:00:30.480
+0,1 ou 10%, tempo de subida
+menor ou igual a 0,1 segundos
+
+8
+00:00:30.480 --> 00:00:35.440
+e erro regime estacionário menor ou igual
+a 0,05 para uma entrada de grau unitária.
+
+9
+00:00:35.440 --> 00:00:40.433
+Nossos requisitos de transitórios
+levam a margem de fase
+
+10
+00:00:40.433 --> 00:00:45.370
+maior ou igual a 59º e ômega c maior
+ou igual a 27 radianos por segundo.
+
+11
+00:00:45.370 --> 00:00:48.114
+Escolhendo os valores limítrofes,
+
+12
+00:00:48.114 --> 00:00:53.520
+chegamos a margem de fase de 59º e ômega
+c igual a 27 radianos por segundo.
+
+13
+00:00:53.520 --> 00:00:58.574
+Nessa frequência, a fase de G de J ômega
+
+14
+00:00:58.574 --> 00:01:03.189
+c é de -149º resultando
+uma margem de fase de 31º.
+
+15
+00:01:03.189 --> 00:01:07.845
+Assim, seria necessário que o compensador
+de avanço de fase adicionasse
+
+16
+00:01:07.845 --> 00:01:13.260
+a diferença entre essa margem de fase
+atual e a desejada, o que daria 28º.
+
+17
+00:01:13.260 --> 00:01:16.526
+Contudo, antevendo que a introdução de
+
+18
+00:01:16.526 --> 00:01:21.156
+compensador de atraso de fase
+reduz a margem de fase somaremos 5
+
+19
+00:01:21.156 --> 00:01:24.740
+graus a mais para tentar compensar
+antecipadamente essa perda.
+
+20
+00:01:24.740 --> 00:01:30.260
+Então, Fi igual a margem
+de fase menos fase de
+
+21
+00:01:30.260 --> 00:01:36.327
+G de J ômega c menos 180º mais
+esses 5º será igual a 59,
+
+22
+00:01:36.327 --> 00:01:41.800
+mais 149, menos 180, mais 5 igual a 33º.
+
+23
+00:01:41.800 --> 00:01:46.252
+Para essa margem de fase ser
+a máxima do compensador do avanço na
+
+24
+00:01:46.252 --> 00:01:50.694
+frequência de ômega c,
+teremos alfa igual a 1
+
+25
+00:01:50.694 --> 00:01:55.610
+menos seno de 33º sobre
+1 mais seno de 33º,
+
+26
+00:01:55.610 --> 00:02:00.914
+que é igual a 0,3 e T igual
+a 1 sobre ômega c raiz
+
+27
+00:02:00.914 --> 00:02:07.760
+de alfa que é igual a 1 sobre 27
+raiz de 0,3 que é igual a 0,07.
+
+28
+00:02:07.760 --> 00:02:12.700
+Finalmente, para completar o ganho
+do compensador de avanço de fase,
+
+29
+00:02:12.700 --> 00:02:15.335
+o ganho deve ser ajustado
+para que a frequência
+
+30
+00:02:15.335 --> 00:02:19.909
+de cruzamento de 0 dB seja
+27 radianos por segundo.
+
+31
+00:02:19.909 --> 00:02:25.939
+Então, K dB igual a 10 log
+de 0,3 menos o módulo de G
+
+32
+00:02:25.939 --> 00:02:31.252
+de 27 J dB que é igual a menos 5,3 mais
+
+33
+00:02:31.252 --> 00:02:36.518
+57,8 que é igual a 52,5 dB.
+
+34
+00:02:36.518 --> 00:02:41.654
+Isso resulta K igual
+a 10 elevado a 52,5 sobre
+
+35
+00:02:41.654 --> 00:02:47.183
+20 que é igual a 10 elevado a 2,62 que é,
+aproximadamente, 420.
+
+36
+00:02:47.183 --> 00:02:52.590
+O compensador de avanço de fase é,
+então, C 1 de S igual
+
+37
+00:02:52.590 --> 00:02:57.775
+a 420 vezes s vezes 0,07 mais 1
+
+38
+00:02:57.775 --> 00:03:03.440
+sobre s vezes 0,021 mais 1.
+
+39
+00:03:03.440 --> 00:03:08.589
+Calculando Kp para C 1 de S vezes
+
+40
+00:03:08.589 --> 00:03:14.243
+G de S teremos Kp igual a C 1 de
+0 vezes G de 0 que é igual a 420
+
+41
+00:03:14.243 --> 00:03:20.040
+sobre 5 vezes 10 que é igual
+a 420 sobre 50, o que dá 8,4.
+
+42
+00:03:20.040 --> 00:03:27.075
+Então, o erro regime será 1 sobre
+1 mais Kp igual a 1 sobre 1 mais
+
+43
+00:03:27.075 --> 00:03:33.260
+8,4 igual a 1 sobre 9,4 aproximadamente,
+0,11 para uma entrada de grau unitária.
+
+44
+00:03:33.260 --> 00:03:36.725
+O que não atende o nosso requisito,
+para atender,
+
+45
+00:03:36.725 --> 00:03:40.440
+temos que reduzir o erro
+a aproximadamente, metade.
+
+46
+00:03:40.440 --> 00:03:46.090
+Para isso, o erro deve ser igual
+a 1 sobre 20 que é igual a 0,05.
+
+47
+00:03:46.090 --> 00:03:51.017
+E isso deve ser igual a 1 sobre 1 mais Kp,
+de onde tiramos que kp deve
+
+48
+00:03:51.017 --> 00:03:55.913
+ser 19 que é, aproximadamente,
+o dobro do atual.
+
+49
+00:03:55.913 --> 00:04:00.891
+Então, escolhendo p igual a menos ômega
+c sobre 20 que dá, aproximadamente,
+
+50
+00:04:00.891 --> 00:04:04.862
+menos 0,14 Para que o ganho
+baixas frequências dobre,
+
+51
+00:04:04.862 --> 00:04:08.420
+devemos ter z igual a 2p
+que é igual a menos 0,28.
+
+52
+00:04:08.420 --> 00:04:13.368
+Com esses valores,
+o compensador de atraso de fase
+
+53
+00:04:13.368 --> 00:04:18.365
+fica C 2 de s igual a s menos
+z sobre s menos p igual a s
+
+54
+00:04:18.365 --> 00:04:22.356
+mais 0,14 sobre s mais 0,28 e o
+
+55
+00:04:22.356 --> 00:04:27.564
+compensador completo C de s igual a C
+
+56
+00:04:27.564 --> 00:04:32.985
+1 de s vezes C 2 de s
+igual a 420 vezes s vezes
+
+57
+00:04:32.985 --> 00:04:38.025
+0,07 mais 1 sobre s vezes 0,021 mais
+
+58
+00:04:38.025 --> 00:04:43.140
+1 vezes s mais 0,14 sobre s mais 0,28.
+
+59
+00:04:43.140 --> 00:04:47.261
+Simulando o sistema malha fechada
+com uma entrada de grau unitário,
+
+60
+00:04:47.261 --> 00:04:51.050
+para esse compensador obtemos
+o sobressinal de cerca de 10%,
+
+61
+00:04:51.050 --> 00:04:55.740
+e o tempo de subida de 0,07 segundos
+e erro regime de, aproximadamente,
+
+62
+00:04:55.740 --> 00:04:58.400
+5% de acordo com os requisitos de projeto.
+
+63
+00:04:58.400 --> 00:05:02.760
+Com isso,
+concluímos o projeto com sucesso.
+
+64
+00:05:02.760 --> 00:05:07.627
+No próximo vídeo, vamos usar a carta
+de Nichols Black para verificar as
+
+65
+00:05:07.627 --> 00:05:13.210
+alterações introduzidas pelo
+compensador de avanço e atraso de fase.

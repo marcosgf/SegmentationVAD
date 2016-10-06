@@ -1,0 +1,452 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.660
+[MÚSICA]
+
+2
+00:00:05.660 --> 00:00:11.320
+[MÚSICA]
+
+3
+00:00:11.320 --> 00:00:17.790
+[MÚSICA]
+
+4
+00:00:17.790 --> 00:00:26.718
+[MÚSICA] Após esse video,
+
+5
+00:00:26.718 --> 00:00:30.961
+você será capaz de explicar
+a impossibilidade de atender
+
+6
+00:00:30.961 --> 00:00:35.210
+a requisito de tempo de acomodação
+com controle proporcional.
+
+7
+00:00:35.210 --> 00:00:39.995
+Considere a seguinte função de
+transferência: G de s é igual a 4
+
+8
+00:00:39.995 --> 00:00:44.282
+sobre s s mais 4 e o
+requisito de desempenho,
+
+9
+00:00:44.282 --> 00:00:49.695
+tempo de acomodação para 5 por cento torno
+do valor final de no máximo 1 segundo.
+
+10
+00:00:49.695 --> 00:00:52.624
+Para atender a esse
+requisito de desempenho,
+
+11
+00:00:52.624 --> 00:00:55.260
+precisamos ter sigma maior ou igual a 3.
+
+12
+00:00:55.260 --> 00:00:59.429
+Vamos representar esse requisito de
+desempenho no Plano s e traçar o
+
+13
+00:00:59.429 --> 00:01:03.020
+Lugar Geométrico das Raízes
+da função de transferência.
+
+14
+00:01:03.020 --> 00:01:08.037
+Note que, como os ramos do LGR não
+passam pela região que atende aos
+
+15
+00:01:08.037 --> 00:01:13.070
+requisitos de desempenho, não conseguimos
+atender ao requisito apenas com o ganho k.
+
+16
+00:01:13.070 --> 00:01:19.000
+O tempo de acomodação para 5 por cento do
+valor final será cerca de 1,5 segundo,
+
+17
+00:01:19.000 --> 00:01:23.681
+já que sigma será 2, desde que usemos
+ganho para que os polos estejam
+
+18
+00:01:23.681 --> 00:01:26.770
+trecho vertical do
+Lugar Geométrico das Raízes.
+
+19
+00:01:26.770 --> 00:01:31.980
+É claro, que se o requisito do tempo
+de acomodação fosse de T s 5 por cento
+
+20
+00:01:31.980 --> 00:01:37.190
+menor igual a 1,5 segundos ou T s de
+5 por cento menor igual a 2 segundos,
+
+21
+00:01:37.190 --> 00:01:39.220
+seríamos capazes de atendê-lo,
+
+22
+00:01:39.220 --> 00:01:43.490
+mas nem sempre isso será possível só
+com o uso de controle proporcional.
+
+23
+00:01:43.490 --> 00:01:47.897
+Vamos ver exemplo de requisitos
+conflitantes de overshoot de instante
+
+24
+00:01:47.897 --> 00:01:48.470
+de pico.
+
+25
+00:01:48.470 --> 00:01:53.135
+Vamos usar a mesma função de
+transferência malha aberta: G de s igual
+
+26
+00:01:53.135 --> 00:01:57.654
+a 4 sobre s s mais 4 e os requisitos
+de desempenho são overshoot
+
+27
+00:01:57.654 --> 00:02:02.300
+máximo de 5 por cento e instante
+de pico máximo de 1 segundo.
+
+28
+00:02:02.300 --> 00:02:04.190
+Já temos o LGR do sistema.
+
+29
+00:02:04.190 --> 00:02:09.358
+O requisito de 5 por cento de
+overshoot nos leva a Csi de
+
+30
+00:02:09.358 --> 00:02:15.005
+0,69 e a ângulo beta de 46 graus
+e o requisito de instante de
+
+31
+00:02:15.005 --> 00:02:20.590
+pico de no máximo 1 segundo,
+nos leva a ômega d de no mínimo 3,14.
+
+32
+00:02:20.590 --> 00:02:26.610
+Vamos representar esses dois requisitos
+no Plano s, junto com o LGR do sistema.
+
+33
+00:02:26.610 --> 00:02:30.297
+Para atender o requisito de instante
+de pico o polo complexo deve
+
+34
+00:02:30.297 --> 00:02:35.250
+ter parte imaginária maior que 3,14 e
+para atender o requisito de overshoot ele
+
+35
+00:02:35.250 --> 00:02:39.050
+deve estar à baixo da linha com
+ângulo beta igual a 46 graus.
+
+36
+00:02:39.050 --> 00:02:43.761
+Note que o LGR não passa pela região do
+Plano s que atende simultaneamente aos
+
+37
+00:02:43.761 --> 00:02:48.694
+requisitos de desempenho,
+com simples ganho podemos atender apenas
+
+38
+00:02:48.694 --> 00:02:52.020
+dos requisitos,
+mas não os dois ao mesmo tempo.
+
+39
+00:02:52.020 --> 00:02:56.900
+Podemos calcular o ganho necessário para
+termos instante de pico de 1 segundo,
+
+40
+00:02:56.900 --> 00:03:03.040
+a função malha fechada é: T de s igual a 4
+k sobre s ao quadrado mais 4 s mais 4 k.
+
+41
+00:03:03.040 --> 00:03:08.304
+Sigma é igual a 2 e ômega d
+precisa ser 3,14, então ômega n
+
+42
+00:03:08.304 --> 00:03:14.552
+ao quadrado que é sigma ao quadrado mais
+ômega d ao quadrado precisa ser 13,86,
+
+43
+00:03:14.552 --> 00:03:20.970
+então com ganho k de 3,47 atendemos ao
+nosso requisito de instante de pico.
+
+44
+00:03:20.970 --> 00:03:26.647
+Como sigma é igual Csi vezes ômega n,
+chegamos a Csi igual a 0,54 e teremos
+
+45
+00:03:26.647 --> 00:03:31.528
+overshoot de 13 por cento, bem acima
+de nosso requisito de 5 por cento.
+
+46
+00:03:31.528 --> 00:03:36.536
+Também podemos calcular o ganho para
+obtermos overshoot de 5 por cento,
+
+47
+00:03:36.536 --> 00:03:39.940
+como sigma é igual a 2
+e Csi é igual a 0,69,
+
+48
+00:03:39.940 --> 00:03:45.940
+precisamos ter ômega n igual a 2,9,
+ou seja, o ganho k seria de 2,1.
+
+49
+00:03:45.940 --> 00:03:51.785
+Com Csi e ômega n calculamos o ômega d,
+que é aproximadamente 2,1 e o instante
+
+50
+00:03:51.785 --> 00:03:57.614
+de pico será cerca de 1,5 segundo,
+bem acima do requisito de 1 segundo.
+
+51
+00:03:57.614 --> 00:04:03.041
+Qualquer valor de ganho k maior do que
+3,47, fará com que o sistema atenda
+
+52
+00:04:03.041 --> 00:04:07.990
+ao requisito de instante de pico, mas ele
+não atenderá ao requisito de overshoot.
+
+53
+00:04:07.990 --> 00:04:13.494
+Qualquer ganho menor do que 2,1 e maior
+que 0 fará com que o sistema atenda
+
+54
+00:04:13.494 --> 00:04:19.908
+ao requisito de overshoot, mas ele não
+atenderá ao requisito de instante de pico.
+
+55
+00:04:19.908 --> 00:04:24.617
+Para valores de k entre 2,1 e
+3,47 o sistema não atenderá
+
+56
+00:04:24.617 --> 00:04:26.261
+nenhum dos requisitos.
+
+57
+00:04:26.261 --> 00:04:29.665
+É bastante comum que ao
+aumentarmos o ganho o sistema
+
+58
+00:04:29.665 --> 00:04:33.654
+passe a responder mais rápido e
+fique menos amortecido, isso é,
+
+59
+00:04:33.654 --> 00:04:39.185
+ao aumentarmos o ganho normalmente teremos
+tempos menores, mas overshoot maiores.
+
+60
+00:04:39.185 --> 00:04:43.330
+Diminuindo o ganho, normalmente diminuímos
+o overshoot, mas aumentamos os tempos.
+
+61
+00:04:43.330 --> 00:04:48.058
+Desse modo não é muito difícil nos
+depararmos com requisitos conflitantes de
+
+62
+00:04:48.058 --> 00:04:52.058
+tempo, seja de subida,
+de acomodação ou de pico e de overshoot,
+
+63
+00:04:52.058 --> 00:04:55.010
+uma vez que normalmente
+estamos interessados
+
+64
+00:04:55.010 --> 00:04:58.330
+sistemas que respondem rápido
+e com pouco oscilação.
+
+65
+00:04:58.330 --> 00:05:02.299
+Use o MATLAB e simule esse
+sistema com diferentes ganhos,
+
+66
+00:05:02.299 --> 00:05:06.750
+você pode criar novo modelo
+Simulink ou pode simular o sistema
+
+67
+00:05:06.750 --> 00:05:10.190
+malha fechada usando apenas
+a linha de comando do MATLAB.
+
+68
+00:05:10.190 --> 00:05:15.070
+Dessa vez, acho que nem vale apena mostrar
+para você como fazer isso no MATLAB.
+
+69
+00:05:15.070 --> 00:05:19.961
+Aqui estão as instruções que
+você vai precisar usar: G é
+
+70
+00:05:19.961 --> 00:05:25.348
+igual a zpk colchetes 0 menos 4 4,
+k igual a 2.1,
+
+71
+00:05:25.348 --> 00:05:31.142
+depois T é igual a feedback k
+vezes G vírgula 1 e step T.
+
+72
+00:05:31.142 --> 00:05:34.292
+A função feedback cria
+a função de transferência
+
+73
+00:05:34.292 --> 00:05:38.480
+malha fechada a partir da função
+de transferência malha aberta.
+
+74
+00:05:38.480 --> 00:05:41.602
+O primeiro parâmetro é o que
+está na malha direta, ou seja,
+
+75
+00:05:41.602 --> 00:05:44.360
+o ganho e a função de
+transferência malha aberta.
+
+76
+00:05:44.360 --> 00:05:48.186
+E o segundo parâmetro é o que
+está na malha de realimentação.
+
+77
+00:05:48.186 --> 00:05:53.070
+No nosso caso, ganho unitário, já que
+realimentamos exatamente o sinal de saída.
+
+78
+00:05:53.070 --> 00:05:58.432
+Altere o valor de k para 3,47,
+lembre de usar ponto no MATLAB,
+
+79
+00:05:58.432 --> 00:06:02.750
+crie novo sistema malha fechada e
+simule a resposta ao degrau novamente.
+
+80
+00:06:02.750 --> 00:06:07.775
+E verifique que o requisito de instante de
+pico é satisfeito, mas o de overshoot não.
+
+81
+00:06:07.775 --> 00:06:12.800
+E uma dica,
+você pode fazer isso tudo uma só linha.
+
+82
+00:06:12.800 --> 00:06:17.492
+Experimente usar: k igual
+a 3.47 ponto e vírgula T igual
+
+83
+00:06:17.492 --> 00:06:22.170
+a feedback k vezes G vírgula
+1 ponto e vírgula step T.
+
+84
+00:06:22.170 --> 00:06:27.588
+Agora ficou fácil simular o sistema malha
+fechada para diferentes valores de k,
+
+85
+00:06:27.588 --> 00:06:32.642
+seta para cima altera o valor
+de k e enter, por exemplo,
+
+86
+00:06:32.642 --> 00:06:38.078
+para k igual a 3 entre 2,1 e 3,47,
+você deve obter uma resposta
+
+87
+00:06:38.078 --> 00:06:44.020
+ao degrau com overshoot de 10,8 por cento
+e instante de pico de 1,11 segundos.
+
+88
+00:06:44.020 --> 00:06:48.640
+Agora, você já é capaz de explicar
+a impossibilidade de atender a requisito
+
+89
+00:06:48.640 --> 00:06:51.860
+de tempo de acomodação,
+com controle proporcional.
+
+90
+00:06:51.860 --> 00:06:56.042
+E é capaz também, de explicar
+a impossibilidade de atender requisitos
+
+91
+00:06:56.042 --> 00:06:59.190
+conflitantes de velocidade
+de reposta e overshoot.
+
+92
+00:06:59.190 --> 00:07:05.110
+No próximo video, você verá o efeito
+do acréscimo de 0 e polo no LGR.

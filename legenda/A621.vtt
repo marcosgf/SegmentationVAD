@@ -1,0 +1,220 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.202
+Vamos dizer que estou trabalhando em
+restaurante e ganhando 10 reais por hora,
+
+2
+00:00:05.202 --> 00:00:09.549
+mas além do meu salário por hora
+também recebo gorjetas a cada hora.
+
+3
+00:00:09.549 --> 00:00:14.197
+Então você pode fazer esta expressão
+inteira como quanto eu poderia
+
+4
+00:00:14.197 --> 00:00:16.000
+ganhar em uma certa hora.
+
+5
+00:00:16.000 --> 00:00:21.074
+Agora dá para perceber também que o número
+de gorjetas ou o total que posso ganhar
+
+6
+00:00:21.074 --> 00:00:25.256
+em uma hora pode mudar drasticamente
+de hora para hora, pode variar,
+
+7
+00:00:25.256 --> 00:00:29.553
+pode ser hora do almoço e ter muitas
+gorjetas, as pessoas podem escolher muita
+
+8
+00:00:29.553 --> 00:00:33.930
+coisa e na hora seguinte pode não ter
+clientes e as gorjetas podem ser poucas.
+
+9
+00:00:33.930 --> 00:00:38.933
+Dessa forma a parte que recebo de gorjetas
+aqui consideramos que seja uma variável,
+
+10
+00:00:38.933 --> 00:00:40.882
+a cada cenário pode mudar.
+
+11
+00:00:40.882 --> 00:00:47.268
+Por exemplo, em cenário que pode ser
+a hora de almoço recebo muitas gorjetas,
+
+12
+00:00:47.268 --> 00:00:53.300
+então elas são igual a,
+vamos dizer, igual a 30 reais.
+
+13
+00:00:53.300 --> 00:00:58.328
+Então o total que posso ganhar nessa
+hora vai ser, podemos voltar a esta
+
+14
+00:00:58.328 --> 00:01:04.092
+expressão que vai ser 10 mais e ao
+invés de escrever gorjetas aqui,
+
+15
+00:01:04.092 --> 00:01:08.015
+vou escrever 30, porque é o valor
+das minhas gorjetas nessa hora.
+
+16
+00:01:08.015 --> 00:01:14.030
+Isto vai ser igual a 40,
+vou fazer isso, vou pôr em amarelo.
+
+17
+00:01:14.030 --> 00:01:15.944
+Vai ser igual a 40 reais.
+
+18
+00:01:15.944 --> 00:01:20.857
+Mas digamos que logo em seguida o
+restaurante diminua o movimento fora
+
+19
+00:01:20.857 --> 00:01:23.152
+da hora de almoço por qualquer razão,
+
+20
+00:01:23.152 --> 00:01:26.267
+talvez o restaurante vizinho
+tenha uma promoção, sei lá.
+
+21
+00:01:26.267 --> 00:01:29.520
+Então na hora seguinte minhas
+gorjetas caem drasticamente,
+
+22
+00:01:29.520 --> 00:01:32.758
+minhas gorjetas caem para
+5 reais naquela hora.
+
+23
+00:01:32.758 --> 00:01:37.746
+Agora volto à expressão, o total que
+ganhei é meu salário por hora mais os 5
+
+24
+00:01:37.746 --> 00:01:43.396
+reais em gorjetas, mais os 5 reais
+em gorjetas que é igual a 15 reais.
+
+25
+00:01:43.396 --> 00:01:47.874
+Como vê toda essa expressão
+os 10 mais as gorjetas muda
+
+26
+00:01:47.874 --> 00:01:52.540
+dependendo de qual é o valor
+variável das gorjetas.
+
+27
+00:01:52.540 --> 00:01:56.624
+Eu não quero ver as palavras inteiras
+geralmente usadas em álgebra como
+
+28
+00:01:56.624 --> 00:01:58.394
+variáveis, temos preguiça,
+
+29
+00:01:58.394 --> 00:02:01.951
+então a tendência é usar
+símbolos mais fáceis de escrever.
+
+30
+00:02:01.951 --> 00:02:06.949
+Nesse contexto, ao invés de escrever
+gorjetas, talvez a gente possa escrever
+
+31
+00:02:06.949 --> 00:02:11.838
+somente 10 mais T, onde T representa
+a gorjeta que ganhamos em uma hora.
+
+32
+00:02:11.838 --> 00:02:17.339
+Dessa forma vamos dizer: "O que acontece
+quando T é igual a 30?" Bom T é igual
+
+33
+00:02:17.339 --> 00:02:23.460
+a 30 então teríamos, vou escrever, então
+o que acontece quando T é igual a 30,
+
+34
+00:02:23.460 --> 00:02:28.537
+temos uma situação em que T é igual a 30 e
+é calculado os 10 mais 30 que seriam 40.
+
+35
+00:02:28.537 --> 00:02:31.105
+O que aconteceria se T fosse igual a 5?
+
+36
+00:02:31.105 --> 00:02:34.834
+Bom seria calculado 10
+mais 5 que é igual a 15.
+
+37
+00:02:34.834 --> 00:02:38.904
+Eu quero ser claro não tivemos que usar
+exatamente T não tivemos realmente que
+
+38
+00:02:38.904 --> 00:02:42.921
+usar uma letra embora na álgebra
+tradicional praticamente use só letras,
+
+39
+00:02:42.921 --> 00:02:49.365
+poderíamos ter escrito isso como 10 mais
+X onde X é sua gorjeta por uma hora.
+
+40
+00:02:49.365 --> 00:02:54.124
+X pode não ser natural, ela não é
+a primeira letra na palavra gorjeta ou
+
+41
+00:02:54.124 --> 00:02:59.907
+poderia ter escrito mesmo 10 mais estrela,
+onde você pode dizer que estrela
+
+42
+00:02:59.907 --> 00:03:04.335
+representa o número de gorjetas numa hora,
+mas isso pode não fazer muito sentido.
+
+43
+00:03:04.335 --> 00:03:08.031
+Espero que isso te dê uma ideia geral
+do que realmente é uma variável.
+
+44
+00:03:08.031 --> 00:03:12.423
+Tudo é símbolo, tudo é símbolo que
+representa diferentes valores,
+
+45
+00:03:12.423 --> 00:03:20.130
+símbolo que representa valores variáveis
+por isso chamamos de variáveis.

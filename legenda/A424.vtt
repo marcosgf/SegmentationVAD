@@ -1,0 +1,728 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.950
+[MÚSICA]
+
+2
+00:00:06.950 --> 00:00:10.060
+Olá.
+
+3
+00:00:10.060 --> 00:00:13.003
+Bem vindo ao curso sobre TDD.
+
+4
+00:00:13.003 --> 00:00:20.080
+Nós vamos dar continuidade ao exame do
+código que tem múltiplos maus cheiros.
+
+5
+00:00:20.080 --> 00:00:25.283
+Essa é a segunda parte
+da vídeo aula que mostra
+
+6
+00:00:25.283 --> 00:00:31.280
+os maus cheiros até o segundo tipo de mau
+cheiro, nós tínhamos que examinar 5 tipos.
+
+7
+00:00:31.280 --> 00:00:36.000
+É o que nós estamos vendo agora
+nessa transparência aqui, tá certo.
+
+8
+00:00:36.000 --> 00:00:41.130
+Os 5 tipos de maus cheiros,
+que nós havíamos então identificados.
+
+9
+00:00:41.130 --> 00:00:45.015
+Nós agora vamos tratar dos
+maus cheiros de 1 e 2,
+
+10
+00:00:45.015 --> 00:00:48.655
+noutra parte nós iremos
+tratar do restante.
+
+11
+00:00:48.655 --> 00:00:53.945
+O mau cheiro 1,
+se refere aos nomes inapropriados.
+
+12
+00:00:53.945 --> 00:00:59.232
+Uma coisa importante que
+nós temos que ver que
+
+13
+00:00:59.232 --> 00:01:05.741
+aquela expressão da intenção
+ela fica expressa nos nomes,
+
+14
+00:01:05.741 --> 00:01:11.900
+tanto das variáveis, quer sejam variáveis
+de instância ou variáveis temporárias,
+
+15
+00:01:11.900 --> 00:01:16.190
+ou argumentos de métodos
+ou de construtores,
+
+16
+00:01:16.190 --> 00:01:18.581
+nomes de classes, nomes de interfaces.
+
+17
+00:01:18.581 --> 00:01:20.084
+Isso é muito importante.
+
+18
+00:01:20.084 --> 00:01:25.042
+Então é uma coisa realmente que vai ter
+uma importância fundamental para o seu
+
+19
+00:01:25.042 --> 00:01:29.028
+código ficar mais claro,
+mais compreensível, tá certo.
+
+20
+00:01:29.028 --> 00:01:32.411
+Então, no caso aqui,
+para nomes inapropriados,
+
+21
+00:01:32.411 --> 00:01:35.305
+nós vamos usar uma técnica simples,
+que no caso,
+
+22
+00:01:35.305 --> 00:01:39.590
+como estamos trabalhando com variáveis,
+nós vamos usar o Rename Variables.
+
+23
+00:01:39.590 --> 00:01:41.585
+Renomear as variáveis.
+
+24
+00:01:41.585 --> 00:01:42.440
+Tá certo?
+
+25
+00:01:42.440 --> 00:01:46.438
+Nós vamos acoplar também
+como as 3 variáveis,
+
+26
+00:01:46.438 --> 00:01:50.119
+elas de fato são variáveis de instância,
+
+27
+00:01:50.119 --> 00:01:54.800
+na área de refatoração costuma-se,
+muitos lugares,
+
+28
+00:01:54.800 --> 00:01:59.568
+convenciona-se identificar
+as variáveis de instância,
+
+29
+00:01:59.568 --> 00:02:04.619
+diferenciar das outras variáveis
+temporárias, por exemplo.
+
+30
+00:02:04.619 --> 00:02:08.124
+Então, uma técnica muito usada é colocar
+
+31
+00:02:08.124 --> 00:02:13.032
+prefixo antes do nome da variável
+que é o underline ou sublinhado.
+
+32
+00:02:13.032 --> 00:02:13.711
+Tá certo?
+
+33
+00:02:13.711 --> 00:02:15.520
+E é isso que nós vamos fazer.
+
+34
+00:02:15.520 --> 00:02:18.850
+Então, ou seja,
+ao colocar os nomes apropriados,
+
+35
+00:02:18.850 --> 00:02:23.098
+nós vamos renomear colocando os nomes
+que realmente expressem a intenção.
+
+36
+00:02:23.098 --> 00:02:28.088
+E, normalmente essa intenção ela aparece
+no comentário muitas vezes que está do
+
+37
+00:02:28.088 --> 00:02:29.220
+lado, tá certo?
+
+38
+00:02:29.220 --> 00:02:33.870
+Mesmo quando não tem comentário naquilo
+que eu estou querendo representar no meu
+
+39
+00:02:33.870 --> 00:02:37.760
+código, né, eu vou expressar
+isso na variável, tá certo?
+
+40
+00:02:37.760 --> 00:02:39.937
+O nome da variável.
+
+41
+00:02:39.937 --> 00:02:44.970
+Então aqui eu antes de pedir para
+vocês pararem vídeo, tá certo.
+
+42
+00:02:44.970 --> 00:02:50.439
+Eu vou dizer que o certo seria fazer
+para cada refatoração que eu uso
+
+43
+00:02:50.439 --> 00:02:55.240
+rename variables, eu deveria
+testar a minha bateria, tá certo?
+
+44
+00:02:55.240 --> 00:02:57.618
+Para ver se eu não substituí errado.
+
+45
+00:02:57.618 --> 00:03:03.341
+Como nós vamos usar isso de uma
+maneira automática através do eclipse
+
+46
+00:03:03.341 --> 00:03:08.347
+ou de qualquer ambiente da linguagem Java.
+
+47
+00:03:08.347 --> 00:03:12.895
+A chance de cometer erro nesse
+caso é mínima, tá certo?
+
+48
+00:03:12.895 --> 00:03:16.900
+Então, nós vamos renomear todas
+as 3 variáveis, né, tá certo?
+
+49
+00:03:16.900 --> 00:03:21.971
+Vamos dar nomes apropriados que expressem
+a intenção delas e vamos colocar
+
+50
+00:03:21.971 --> 00:03:27.321
+o prefixo, tá certo, antes do nome nós
+vamos colocar o underline, tá certo?
+
+51
+00:03:27.321 --> 00:03:30.918
+Para isso nós só vamos fazer teste,
+então é ciclo, né.
+
+52
+00:03:30.918 --> 00:03:34.121
+No ciclo de refatoração é
+ciclo só que eu vou fazer.
+
+53
+00:03:34.121 --> 00:03:36.973
+Eu venho,
+troco todos os nomes das variáveis,
+
+54
+00:03:36.973 --> 00:03:40.824
+coloco nomes mais apropriados
+e testo uma vez, tá certo?
+
+55
+00:03:40.824 --> 00:03:42.210
+Só para garantir.
+
+56
+00:03:42.210 --> 00:03:47.780
+Então, vocês vejam aí, os nomes que
+eu escolhi aí são bem apropriados.
+
+57
+00:03:47.780 --> 00:03:51.049
+O age que português seria de idade,
+né, tá certo.
+
+58
+00:03:51.049 --> 00:03:55.948
+O que estou querendo dizer ali é o
+limite de uma idade que pode ser idoso
+
+59
+00:03:55.948 --> 00:04:00.530
+ou abaixo do idoso,
+no inglês é o sênior, certo?
+
+60
+00:04:00.530 --> 00:04:02.390
+Então, eu estou colocando sênior.
+
+61
+00:04:02.390 --> 00:04:04.730
+Estou fazendo isso para as outras todas,
+né.
+
+62
+00:04:04.730 --> 00:04:05.270
+tá certo.
+
+63
+00:04:05.270 --> 00:04:08.624
+Eu estou colocando, eu olho qual
+é o comentário e consigo, então,
+
+64
+00:04:08.624 --> 00:04:10.027
+colocar nome apropriado.
+
+65
+00:04:10.027 --> 00:04:12.834
+Esses comentários eles já podem
+desaparecer se eu quiser,
+
+66
+00:04:12.834 --> 00:04:17.197
+eu vou deixá-los ainda por certo
+tempo porque eu vou tratar primeiro
+
+67
+00:04:17.197 --> 00:04:21.194
+o próximo mau cheiro sobre
+as boolenas negativas.
+
+68
+00:04:21.194 --> 00:04:27.276
+Como essas variáveis todas são booleanas,
+tá certo, convenciona-se também,
+
+69
+00:04:27.276 --> 00:04:32.914
+usar o is ou é se fosse falar português,
+tá certo, que ajuda a fazer a leitura.
+
+70
+00:04:32.914 --> 00:04:38.005
+Então vocês percebam que eu posso
+ler if não é sênior, if não é,
+
+71
+00:04:38.005 --> 00:04:43.970
+not is already subsidized,
+ou seja, fica muito mais claro.
+
+72
+00:04:43.970 --> 00:04:47.150
+A última que eu estou substituindo
+ela ficou muito mais clara,
+
+73
+00:04:47.150 --> 00:04:52.413
+porque vez de eu dizer que era not not
+full time, o not full time eu substituí
+
+74
+00:04:52.413 --> 00:04:57.533
+por part time, se ele não é tempo
+integral, ele é tempo parcial,
+
+75
+00:04:57.533 --> 00:05:02.339
+Então ficou not is part time,
+ficou muito mais claro para mim isso.
+
+76
+00:05:02.339 --> 00:05:07.930
+Então, agora eu gostaria que vocês apenas
+20 segundos respondessem à pergunta.
+
+77
+00:05:07.930 --> 00:05:11.997
+Vocês parem o vídeo e podem dar
+continuidade depois de 20 segundos que
+
+78
+00:05:11.997 --> 00:05:13.370
+a gente continua aqui.
+
+79
+00:05:13.370 --> 00:05:21.842
+[SEM_ÁUDIO] Bom, vocês agora devem ter
+tido mais facilidade para acertar, né.
+
+80
+00:05:21.842 --> 00:05:22.567
+tá certo.
+
+81
+00:05:22.567 --> 00:05:28.220
+Principalmente nesse código que a parte
+else não está muito longe, né, tá certo.
+
+82
+00:05:28.220 --> 00:05:31.265
+Então fica muito mais fácil de descobrir.
+
+83
+00:05:31.265 --> 00:05:33.953
+Junto com o comentário fica mais fácil.
+
+84
+00:05:33.953 --> 00:05:38.807
+Mas ainda assim dá certo trabalho de
+entender por causa do problema do not,
+
+85
+00:05:38.807 --> 00:05:39.567
+tá certo.
+
+86
+00:05:39.567 --> 00:05:44.135
+Então, nós conseguimos com isso,
+usando nomes apropriados,
+
+87
+00:05:44.135 --> 00:05:47.886
+expressar a intenção de uma
+maneira mais adequada, tá certo?
+
+88
+00:05:47.886 --> 00:05:50.730
+Vamos passar agora para
+tratar o mau cheiro 2.
+
+89
+00:05:50.730 --> 00:05:53.296
+Os ifs com expressões booleanas negativas.
+
+90
+00:05:53.296 --> 00:05:58.737
+Como eu disse, o ser humano, o cérebro do
+ser humano não sabe tratar a negativa.
+
+91
+00:05:58.737 --> 00:06:01.820
+Se você falar assim: não faz isso,
+
+92
+00:06:01.820 --> 00:06:06.650
+não faz isso e pensa que você
+vai gravar e não vai fazer,
+
+93
+00:06:06.650 --> 00:06:11.480
+na verdade, você está reforçando o seu
+cérebro, faz isso, faz isso, faz isso.
+
+94
+00:06:11.480 --> 00:06:12.269
+Tá certo?
+
+95
+00:06:12.269 --> 00:06:16.405
+Então o não,
+ele atrapalha o entendimento das frases.
+
+96
+00:06:16.405 --> 00:06:20.178
+A primeira coisa que nós vamos ter que
+fazer é tornar essas expressões boolenas
+
+97
+00:06:20.178 --> 00:06:21.330
+positivas, tá certo?
+
+98
+00:06:21.330 --> 00:06:26.404
+E nós vamos fazer isso uma de cada vez,
+porque nós podemos errar isso.
+
+99
+00:06:26.404 --> 00:06:30.230
+Tornar a expressão booleana
+no caso do if then else,
+
+100
+00:06:30.230 --> 00:06:35.168
+significa que eu tenho que inverter
+aquilo que eu colocava no then
+
+101
+00:06:35.168 --> 00:06:40.320
+agora passa a ser o que ia no else,
+o que vai no else é o que estava no then.
+
+102
+00:06:40.320 --> 00:06:41.965
+Nós temos que inverter.
+
+103
+00:06:41.965 --> 00:06:45.655
+Para garantir que nós não
+estamos fazendo errado isso,
+
+104
+00:06:45.655 --> 00:06:50.990
+nós fazemos a refatoração para if then
+else, para uma expressão booleana
+
+105
+00:06:50.990 --> 00:06:55.840
+trocando de negativa para positiva,
+nós tiramos o not, tá certo?
+
+106
+00:06:55.840 --> 00:06:58.783
+Então, você é obrigado
+a inverter o if then else.
+
+107
+00:06:58.783 --> 00:07:03.145
+E aí testamos, pois nós podemos fazer
+errado de alguma forma, tá certo?
+
+108
+00:07:03.145 --> 00:07:05.021
+Aí nós testamos, Essa é a ideia.
+
+109
+00:07:05.021 --> 00:07:09.510
+Então vamos dar uma olhada aqui, como eu
+tenho 3 variáveis booleanas nós vamos
+
+110
+00:07:09.510 --> 00:07:15.240
+fazer ciclo, nós vamos ciclar 3
+vezes o nosso ciclo de refatoração.
+
+111
+00:07:15.240 --> 00:07:19.700
+Três vezes nós vamos fazer pois existem
+3 variáveis boolenas, tá certo?
+
+112
+00:07:19.700 --> 00:07:22.754
+Então, como é que fica
+agora o nosso código aqui?
+
+113
+00:07:22.754 --> 00:07:25.315
+Olha, já começa a fica muito mais claro.
+
+114
+00:07:25.315 --> 00:07:26.595
+Né, tá certo?
+
+115
+00:07:26.595 --> 00:07:32.139
+Por que eu trago a informação que é
+relevante para mim muito próximo,
+
+116
+00:07:32.139 --> 00:07:33.259
+né, tá certo.
+
+117
+00:07:33.259 --> 00:07:39.198
+Então quando eu pergunto agora, invés
+de perguntar if not senior, tá certo.
+
+118
+00:07:39.198 --> 00:07:41.890
+Eu já pergunto if is senior.
+
+119
+00:07:41.890 --> 00:07:45.020
+Aí o discount é 0.
+
+120
+00:07:45.020 --> 00:07:51.130
+Caso contrário, if is already subsidized,
+
+121
+00:07:51.130 --> 00:07:55.350
+tá certo, eu já ponho desconto 250.
+
+122
+00:07:55.350 --> 00:07:58.650
+Ou seja, as coisas começaram
+a ficar muito mais próximas.
+
+123
+00:07:58.650 --> 00:08:04.734
+Então, eu vou dar só 5 segundos para vocês
+pararem o vídeo e descobrirem qual é o
+
+124
+00:08:04.734 --> 00:08:10.360
+desconto se o cliente já foi subsidiado,
+tá certo?
+
+125
+00:08:10.360 --> 00:08:12.833
+Então, vamos lá.
+
+126
+00:08:12.833 --> 00:08:14.842
+Parem o vídeo.
+
+127
+00:08:14.842 --> 00:08:18.225
+[SEM_ÁUDIO] Voltando.
+
+128
+00:08:18.225 --> 00:08:23.670
+Agora, dificilmente,
+tendo colocado uma variável
+
+129
+00:08:23.670 --> 00:08:28.690
+expressando a intenção muito mais clara,
+tá certo?
+
+130
+00:08:28.690 --> 00:08:35.770
+Tendo trabalhado com uma expressão
+booleana no meu if positiva, tá certo?
+
+131
+00:08:35.770 --> 00:08:41.615
+Certamente, você deve ter
+acertado com menos de 5 segundos,
+
+132
+00:08:41.615 --> 00:08:45.480
+tá certo, que a resposta é 250, tá certo?
+
+133
+00:08:45.480 --> 00:08:50.103
+Ou seja, você talvez já soubesse dessa
+resposta por causa dos testes que a gente
+
+134
+00:08:50.103 --> 00:08:51.687
+vem repetindo, tá certo.
+
+135
+00:08:51.687 --> 00:08:55.666
+Mas agora você consegue encontrar
+isso muito mais rapidamente do que
+
+136
+00:08:55.666 --> 00:08:57.320
+anteriormente, tá certo?
+
+137
+00:08:57.320 --> 00:09:03.701
+E se eu perguntar também para vocês, qual
+é o desconto se o cliente é full time?
+
+138
+00:09:03.701 --> 00:09:06.885
+Também é muito rapidamente
+que vai acontecer isso.
+
+139
+00:09:06.885 --> 00:09:07.449
+Tá certo?
+
+140
+00:09:07.449 --> 00:09:11.156
+Vocês vão conseguir encontrar nesse
+código muito mais rapidamente.
+
+141
+00:09:11.156 --> 00:09:16.170
+Com isso nós encerramos essa vídeo aula,
+que nós quebramos duas partes, tá certo?
+
+142
+00:09:16.170 --> 00:09:22.400
+Nós encerramos agora a vídeo aula
+até o mau cheiro 2, tá certo?
+
+143
+00:09:22.400 --> 00:09:27.630
+E nós mostramos para vocês que,
+simplesmente, fazendo esses 2,
+
+144
+00:09:27.630 --> 00:09:33.599
+a refatoração desses 2 mau cheiros,
+o código já ficou muito mais claro
+
+145
+00:09:33.599 --> 00:09:39.870
+e muito mais fácil de encontrar coisas que
+eu perguntar sobre o código, tá certo?
+
+146
+00:09:39.870 --> 00:09:44.380
+Para qualquer uma das perguntas que eu
+quiser fazer ali, fica muito mais rápido.
+
+147
+00:09:44.380 --> 00:09:46.772
+Claro, o que é que acontece?
+
+148
+00:09:46.772 --> 00:09:51.443
+Existe, como nós vimos,
+mais 3 tipos de maus cheiros que
+
+149
+00:09:51.443 --> 00:09:56.180
+ainda atrapalham, quer dizer,
+ao eliminar esses novos,
+
+150
+00:09:56.180 --> 00:10:01.506
+esses 3 tipos adicionais,
+o nosso código vai ficar muito mais claro,
+
+151
+00:10:01.506 --> 00:10:07.680
+muito mais compreensível e
+fácil de aceitar acréscimos,
+
+152
+00:10:07.680 --> 00:10:13.279
+alterações ou incorporações do
+código com outras funcionalidades,
+
+153
+00:10:13.279 --> 00:10:15.570
+com outras responsabilidades.
+
+154
+00:10:15.570 --> 00:10:18.560
+Obrigado.
+
+155
+00:10:18.560 --> 00:10:21.550
+[MÚSICA]

@@ -1,0 +1,634 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.265
+[MÚSICA] [MÚSICA] Após esse vídeo,
+
+2
+00:00:09.265 --> 00:00:13.216
+você será capaz de explicar o
+funcionamento do controle com
+
+3
+00:00:13.216 --> 00:00:17.348
+realimentação e de explicar e
+ilustrar a importância de modelos
+
+4
+00:00:17.348 --> 00:00:21.210
+teóricos para a análise e o
+projeto do controle de sistemas.
+
+5
+00:00:21.210 --> 00:00:25.271
+Uma forma bastante comum e eficiente
+de modificar a relação entrada/saída do
+
+6
+00:00:25.271 --> 00:00:29.058
+sistema, é a utilização do controle
+proporcional, que consiste
+
+7
+00:00:29.058 --> 00:00:33.756
+fazer com que a entrada do sistema
+seja proporcional ao sinal de erro.
+
+8
+00:00:33.756 --> 00:00:39.734
+Ou seja, o sinal de entrada u(t) será
+uma constante k chamada de ganho,
+
+9
+00:00:39.734 --> 00:00:45.620
+multiplicada pelo sinal de
+erro e(t) ou u(t) = k*e(t).
+
+10
+00:00:45.620 --> 00:00:49.431
+É claro que nem sempre o controle
+proporcional será suficiente,
+
+11
+00:00:49.431 --> 00:00:51.795
+mas ele é a base do controle de sistemas.
+
+12
+00:00:51.795 --> 00:00:54.440
+Entendendo bem o controle proporcional,
+
+13
+00:00:54.440 --> 00:00:57.970
+você vai entender facilmente
+outros tipos de controle.
+
+14
+00:00:57.970 --> 00:01:02.381
+Bem, uma vez definido o controle
+ou controlador a ser utilizado,
+
+15
+00:01:02.381 --> 00:01:05.680
+precisamos ajustar o valor
+ou valores do controle.
+
+16
+00:01:05.680 --> 00:01:07.781
+No caso do controle proporcional,
+
+17
+00:01:07.781 --> 00:01:10.450
+precisamos ajustar o
+ganho do sinal de erro.
+
+18
+00:01:10.450 --> 00:01:12.911
+Podemos fazer isso experimentalmente,
+
+19
+00:01:12.911 --> 00:01:17.350
+testando diferentes valores de ganho
+e analisando a resposta do sistema.
+
+20
+00:01:17.350 --> 00:01:21.350
+Após alguns experimentos, podemos
+chegar à valor satisfatório de ganho e
+
+21
+00:01:21.350 --> 00:01:24.250
+teremos projetado o nosso
+controlador proporcional.
+
+22
+00:01:24.250 --> 00:01:28.890
+Mas já deu preguiça só de pensar
+fazer todos esses testes.
+
+23
+00:01:28.890 --> 00:01:33.507
+Isso pode levar muito tempo e
+poderá consumir recursos preciosos,
+
+24
+00:01:33.507 --> 00:01:36.348
+além de ser potencialmente perigoso.
+
+25
+00:01:36.348 --> 00:01:40.895
+Valor de ganho muito inadequado,
+poderá danificar o sistema.
+
+26
+00:01:40.895 --> 00:01:43.095
+Vamos ver exemplo prático.
+
+27
+00:01:43.095 --> 00:01:47.702
+[MÚSICA] Estou aqui no túnel
+de vento para exemplificar o
+
+28
+00:01:47.702 --> 00:01:50.010
+ajuste do ganho do controle.
+
+29
+00:01:50.010 --> 00:01:52.924
+Vou testar ganho pequeno demais,
+
+30
+00:01:52.924 --> 00:01:58.005
+depois ganho elevado demais
+e finalmente ganho adequado.
+
+31
+00:01:58.005 --> 00:02:00.940
+O sistema vai ser o meu corpo.
+
+32
+00:02:00.940 --> 00:02:06.000
+A saída é a direção de
+apontamento da minha cabeça.
+
+33
+00:02:06.000 --> 00:02:10.960
+A entrada do sistema vai ser o ângulo
+que eu vou formar com os meus braços,
+
+34
+00:02:10.960 --> 00:02:15.743
+para poder virar para lado e para
+o outro e a referência vai ser uma
+
+35
+00:02:15.743 --> 00:02:20.490
+direção 90 graus à direitra
+da minha direção inicial.
+
+36
+00:02:20.490 --> 00:02:21.539
+Vamos lá!
+
+37
+00:02:21.539 --> 00:02:28.080
+Atenção, essa não é a posição
+correta para voar no túnel de vento.
+
+38
+00:02:28.080 --> 00:02:32.943
+Ela está sendo usada apenas para ilustrar
+os conceitos de controle de sistemas.
+
+39
+00:02:32.943 --> 00:02:35.670
+Consulte sempre instrutor qualificado.
+
+40
+00:02:35.670 --> 00:02:39.402
+Primeiro, ganho pequeno demais.
+
+41
+00:02:39.402 --> 00:02:42.090
+[VENTO] Ganho pequeno.
+
+42
+00:02:42.090 --> 00:02:48.510
+[VENTO]
+
+43
+00:02:48.510 --> 00:02:55.348
+[VENTO] Você deve ter
+
+44
+00:02:55.348 --> 00:03:00.570
+reparado que eu virei lentamente para a
+direita e depois também voltei lentamente.
+
+45
+00:03:00.570 --> 00:03:08.750
+Continuando nosso exemplo,
+agora vou usar ganho elevado demais.
+
+46
+00:03:08.750 --> 00:03:13.970
+É até perigoso, ganho inadequedo.
+
+47
+00:03:13.970 --> 00:03:16.219
+posso bater nas paredes.
+
+48
+00:03:16.219 --> 00:03:20.010
+Finalmente usando ganho mais adequado.
+
+49
+00:03:20.010 --> 00:03:27.390
+[VENTO] Ganho adequado.
+
+50
+00:03:27.390 --> 00:03:35.390
+[VENTO] Beleza!
+
+51
+00:03:35.390 --> 00:03:43.450
+[VENTO] [VENTO] Valeu!
+
+52
+00:03:43.450 --> 00:03:46.624
+Vamos comparar os 3
+ganhos simultaneamente.
+
+53
+00:03:46.624 --> 00:03:51.080
+Agora você percebe claramente
+a diferença na velocidade de giro.
+
+54
+00:03:51.080 --> 00:03:57.599
+[MÚSICA] Vamos entender melhor
+o que está acontencendo.
+
+55
+00:03:57.599 --> 00:04:00.905
+Primeiro vamos ver como
+a entrada afeta a saída.
+
+56
+00:04:00.905 --> 00:04:02.821
+Ao mudar o ângulo dos braços,
+
+57
+00:04:02.821 --> 00:04:07.510
+o ar deixa de bater uniformemente
+neles e provoca giro para a direita.
+
+58
+00:04:07.510 --> 00:04:11.710
+É fácil perceber que quanto maior
+esse ângulo, mais rápido será o giro.
+
+59
+00:04:11.710 --> 00:04:16.528
+Após o giro começar,
+voltar o ângulo dos braços para zero
+
+60
+00:04:16.528 --> 00:04:20.230
+não vai parar o giro instantaneamente,
+por causa da inércia.
+
+61
+00:04:20.230 --> 00:04:22.217
+Para parar o giro rapidamente,
+
+62
+00:04:22.217 --> 00:04:26.350
+é preciso que os braços façam
+ângulo contrário ao do movimento.
+
+63
+00:04:26.350 --> 00:04:30.472
+Então usamos o ângulo dos braços
+tanto para iniciar o giro e
+
+64
+00:04:30.472 --> 00:04:34.328
+aumentar a sua velocidade,
+quanto para parar o giro.
+
+65
+00:04:34.328 --> 00:04:37.010
+O ângulo zero o giro tende a continuar,
+
+66
+00:04:37.010 --> 00:04:41.170
+mas a velocidade vai diminuindo
+devido à resistência do ar.
+
+67
+00:04:41.170 --> 00:04:43.496
+Já vimos como a entrada afeta a saída.
+
+68
+00:04:43.496 --> 00:04:48.090
+Vamos ver agora como o sinal de entrada
+é gerado a partir de sinal de erro.
+
+69
+00:04:48.090 --> 00:04:50.816
+Inicialmente temos erro de 90 graus,
+
+70
+00:04:50.816 --> 00:04:55.140
+já que a nossa posição inicial é 0
+graus e a referência é 90 graus.
+
+71
+00:04:55.140 --> 00:05:01.060
+Esse erro de 90 graus é multiplicado pelo
+ganho k gerando o sinal de entrada u.
+
+72
+00:05:01.060 --> 00:05:05.654
+Esse sinal de entrada u faz com que
+o corpo gire na direção desejada,
+
+73
+00:05:05.654 --> 00:05:08.810
+fazendo a saída aumentar
+e diminuindo o erro.
+
+74
+00:05:08.810 --> 00:05:13.618
+Assim, à medida que o tempo passa,
+a saída vai aumentando e
+
+75
+00:05:13.618 --> 00:05:18.280
+o erro vai diminuindo, o que faz com
+que o sinal de entrada também diminua.
+
+76
+00:05:18.280 --> 00:05:21.164
+Se o ganho que for
+utilizado for muito pequeno,
+
+77
+00:05:21.164 --> 00:05:25.865
+o sinal de entrada também será pequeno
+e a saída irá aumentar muito devagar.
+
+78
+00:05:25.865 --> 00:05:28.526
+Vamos visualisar isso graficamente.
+
+79
+00:05:28.526 --> 00:05:32.142
+Vemos a saída indo bem
+lentamente para a referência e à
+
+80
+00:05:32.142 --> 00:05:36.220
+medida que o tempo passa a saída
+vai aumentar cada vez mais devagar.
+
+81
+00:05:36.220 --> 00:05:41.150
+Se o ganho k for muito grande, o sinal
+de entrada será elevado e a saída irá
+
+82
+00:05:41.150 --> 00:05:45.640
+aumentar muito rápido, fazendo com
+que saída passe do valor desejado.
+
+83
+00:05:45.640 --> 00:05:47.966
+Vamos visualizar isso graficamente.
+
+84
+00:05:47.966 --> 00:05:52.910
+A saída aumenta rapidamente, passando do
+valor de referência e depois voltando.
+
+85
+00:05:52.910 --> 00:05:54.669
+Dependendo do sistema,
+
+86
+00:05:54.669 --> 00:06:00.040
+ganhos elevados podem fazer a saída
+do sistema aumentar indefinidamente.
+
+87
+00:06:00.040 --> 00:06:03.438
+[MÚSICA] Vamos ver mais uma vez,
+
+88
+00:06:03.438 --> 00:06:07.999
+o exemplo de corpo queda livre,
+mas dessa vez,
+
+89
+00:06:07.999 --> 00:06:12.897
+nós não vamos usar o simulador,
+nós vamos usar a queda livre de verdade.
+
+90
+00:06:12.897 --> 00:06:17.192
+Desse jeito, eu vou ter certeza de que
+você entendeu como funciona o ajuste do
+
+91
+00:06:17.192 --> 00:06:19.762
+controle com realimentação
+e principalmente,
+
+92
+00:06:19.762 --> 00:06:24.005
+que ganho muito elevado
+pode ser muito prejudicial.
+
+93
+00:06:24.005 --> 00:06:25.032
+Vamos lá!
+
+94
+00:06:25.032 --> 00:06:29.975
+Atenção, esta não e a posição
+correta para queda livre.
+
+95
+00:06:29.975 --> 00:06:34.653
+Ela está sendo usada apenas para ilustrar
+os conceitos de controle de sistemas.
+
+96
+00:06:34.653 --> 00:06:38.228
+Consulte sempre instrutor qualificado.
+
+97
+00:06:38.228 --> 00:06:43.620
+[VENTO] Vou começar com ganho pequeno.
+
+98
+00:06:43.620 --> 00:06:48.040
+[VENTO] Agora com ganho muito grande.
+
+99
+00:06:48.040 --> 00:06:53.106
+[VENTO] Com ganho
+
+100
+00:06:53.106 --> 00:06:59.243
+muito grande eu saí girando e
+a câmera nem conseguiu me acompanhar.
+
+101
+00:06:59.243 --> 00:07:01.270
+[VENTO] Com ganho adequado.
+
+102
+00:07:01.270 --> 00:07:06.500
+[VENTO] Visualizando os 3
+ganhos simultaneamente.
+
+103
+00:07:06.500 --> 00:07:12.714
+[MÚSICA] Espero que você tenha entendido
+
+104
+00:07:12.714 --> 00:07:17.645
+bem o funcionamento básico do controle de
+malha fechada e que ajuste experimental
+
+105
+00:07:17.645 --> 00:07:21.440
+do ganho, além de ineficiente,
+pode ser potencialmente perigoso.
+
+106
+00:07:21.440 --> 00:07:26.030
+Relembrando, o controle de
+sistemas basicamente consiste da
+
+107
+00:07:26.030 --> 00:07:30.930
+Análise do Projeto, com o objetivo de
+verificar e adequar o comportamento
+
+108
+00:07:30.930 --> 00:07:33.750
+de sistema aos requisitos de desempenho.
+
+109
+00:07:33.750 --> 00:07:37.422
+Na análise verificamos se o
+sistema atende aos requisitos,
+
+110
+00:07:37.422 --> 00:07:41.750
+no projeto ajustamos o desempenho
+para que ele atenda aos requisitos.
+
+111
+00:07:41.750 --> 00:07:45.201
+Para realizar a análise e o
+projeto de forma mais eficiente,
+
+112
+00:07:45.201 --> 00:07:48.789
+mais rápida e consumindo menos recursos,
+ao invés de testarmos o
+
+113
+00:07:48.789 --> 00:07:53.198
+sistema e o controle, utilizamos modelos
+matemáticos para realizar análise
+
+114
+00:07:53.198 --> 00:07:58.156
+de projetos teóricos e para isso nem
+precisamos ter o sistema real disponível.
+
+115
+00:07:58.156 --> 00:08:01.984
+Ele pode estar muito longe ou
+ainda nem ter sido construído.
+
+116
+00:08:01.984 --> 00:08:04.072
+Com a análise e o projeto teórico,
+
+117
+00:08:04.072 --> 00:08:07.680
+poupamos recursos e não
+corremos riscos desnecessários.
+
+118
+00:08:07.680 --> 00:08:11.606
+Uma vez que a análise e projeto
+teóricos tenham sido finalizados,
+
+119
+00:08:11.606 --> 00:08:15.333
+podemos fazer simulações para
+validar o projeto e finalmente
+
+120
+00:08:15.333 --> 00:08:19.200
+validá-lo experimentalmente
+no sistema ou protótipo.
+
+121
+00:08:19.200 --> 00:08:24.168
+Na análise com modelo matemático,
+utilizamos ferramentas matemáticas
+
+122
+00:08:24.168 --> 00:08:27.640
+para calcular a saída do sistema
+para diferentes entradas.
+
+123
+00:08:27.640 --> 00:08:32.648
+Com o modelo matemático, podemos também
+associar características da saída com
+
+124
+00:08:32.648 --> 00:08:37.857
+características do sistema, o que pode nos
+poupar da necessidade de calcular a saída,
+
+125
+00:08:37.857 --> 00:08:41.500
+deixando tanto a análise quanto o projeto,
+mais eficientes.
+
+126
+00:08:41.500 --> 00:08:45.101
+No projeto,
+usamos os mesmos modelos matemáticos,
+
+127
+00:08:45.101 --> 00:08:49.110
+para ajustar o parâmetro ou
+os parâmetros do controlador.
+
+128
+00:08:49.110 --> 00:08:53.775
+No caso do ganho, utilizamos o modelo
+matemático do sistema para decidir
+
+129
+00:08:53.775 --> 00:08:58.365
+qual ganho resulta no desempenho desejado
+ou no melhor desempenho possível,
+
+130
+00:08:58.365 --> 00:08:59.810
+segundo os requisitos.
+
+131
+00:08:59.810 --> 00:09:05.480
+E isso, sem precisarmos testar cada
+dos possíveis valores no sistema real.
+
+132
+00:09:05.480 --> 00:09:09.900
+Agora você já deve ser capaz de explicar
+o funcionamento do controle com
+
+133
+00:09:09.900 --> 00:09:14.614
+realimentação e de explicar e ilustrar
+a importância de modelos teóricos
+
+134
+00:09:14.614 --> 00:09:17.870
+para análise e o projeto
+de controle de sistemas.
+
+135
+00:09:17.870 --> 00:09:27.430
+[MÚSICA] [SOM}

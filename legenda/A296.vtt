@@ -1,0 +1,714 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.797
+[MÚSICA] Após
+
+2
+00:00:07.797 --> 00:00:12.995
+este vídeo você será capaz
+de explicar e ilustrar
+
+3
+00:00:12.995 --> 00:00:18.086
+a BIBO estabilidade e será capaz
+também de citar que condições
+
+4
+00:00:18.086 --> 00:00:23.030
+são necessárias e suficientes para
+que sistema seja BIBO estável.
+
+5
+00:00:23.030 --> 00:00:27.300
+Primeiro vamos definir o que
+entendemos por estabilidade.
+
+6
+00:00:27.300 --> 00:00:31.441
+Intuitivamente, você pode
+achar que sistema estável é
+
+7
+00:00:31.441 --> 00:00:35.390
+aquele no qual a saída é
+limitada ou não diverge.
+
+8
+00:00:35.390 --> 00:00:39.945
+Essa realmente é uma boa noção mas
+precisamos ser pouco mais rigorosos,
+
+9
+00:00:39.945 --> 00:00:44.500
+mesmo porque existem diferentes
+definições de estabilidade.
+
+10
+00:00:44.500 --> 00:00:50.530
+Nesse curso estamos interessados na
+BIBO estabilidade ou estabilidade BIBO.
+
+11
+00:00:50.530 --> 00:00:55.080
+BIBO vem do inglês
+Bounded Input Bounded Output
+
+12
+00:00:55.080 --> 00:00:59.630
+e significa
+Entrada Limitada Saída Limitada.
+
+13
+00:00:59.630 --> 00:01:04.120
+e sistema é BIBO estável se e somente se,
+
+14
+00:01:04.120 --> 00:01:08.610
+para toda e qualquer entrada
+limitada a saída for limitada.
+
+15
+00:01:08.610 --> 00:01:13.990
+Isso quer dizer que,
+se existir pelo menos uma entrada limitada
+
+16
+00:01:13.990 --> 00:01:19.660
+para a qual a saída do sistema divirja
+esse sistema não é BIBO estável.
+
+17
+00:01:19.660 --> 00:01:24.462
+Vale ressaltar que a BIBO
+estabilidade é do sistema e não de
+
+18
+00:01:24.462 --> 00:01:27.967
+uma saída e nem para
+uma entrada específica.
+
+19
+00:01:27.967 --> 00:01:32.513
+A saída ser limitada para uma entrada
+não quer dizer nada sobre a BIBO
+
+20
+00:01:32.513 --> 00:01:34.360
+estabilidade do sistema.
+
+21
+00:01:34.360 --> 00:01:40.735
+Reforçando: sistema é BIBO estável
+se e somente se a saída for
+
+22
+00:01:40.735 --> 00:01:45.200
+limitada para toda e
+qualquer entrada limitada.
+
+23
+00:01:45.200 --> 00:01:50.010
+E quando a saída será limitada para
+toda e qualquer entrada limitada?
+
+24
+00:01:50.010 --> 00:01:56.960
+Primeiro vamos ver como seria uma entrada
+limitada e uma entrada ilimitada.
+
+25
+00:01:56.960 --> 00:02:02.370
+Na verdade ao invés de chamar à
+chamada ilimitada de ilimitada,
+
+26
+00:02:02.370 --> 00:02:05.831
+vou-me referir a ela
+como entrada que diverge.
+
+27
+00:02:05.831 --> 00:02:07.780
+A mesma coisa para a saída.
+
+28
+00:02:07.780 --> 00:02:12.648
+Então como seria
+a Transformada de Laplace de
+
+29
+00:02:12.648 --> 00:02:15.790
+entrada limitada e de
+uma entrada que diverge?
+
+30
+00:02:15.790 --> 00:02:20.079
+Vamos voltar à tabela de
+Transformadas de Laplace.
+
+31
+00:02:20.079 --> 00:02:24.650
+Nessa parte da tabela temos
+sinal limitado o degrau,
+
+32
+00:02:24.650 --> 00:02:29.405
+2 sinais que divergem,
+a rampa e a parábola e sinal que
+
+33
+00:02:29.405 --> 00:02:34.438
+pode ser limitado ou pode divergir
+dependendo do valor de a.
+
+34
+00:02:34.438 --> 00:02:40.535
+Se a for maior que 0, a exponencial
+diverge, caso contrário ela é limitada.
+
+35
+00:02:40.535 --> 00:02:45.156
+Na segunda parte da tabela
+temos 2 sinais limitados,
+
+36
+00:02:45.156 --> 00:02:50.215
+o seno e o cosseno, e 2 sinais que
+podem ser limitados ou podem divergir,
+
+37
+00:02:50.215 --> 00:02:52.575
+novamente dependendo do valor de a.
+
+38
+00:02:52.575 --> 00:02:58.420
+Se a for positivo, a exponencial
+vezes o seno, ou o cosseno, diverge,
+
+39
+00:02:58.420 --> 00:03:05.200
+se a for negativo, ou nulo, a exponencial
+vezes o seno ou o cosseno é limitada.
+
+40
+00:03:05.200 --> 00:03:11.304
+Vamos acrescentar alguns pares de
+Transformada à nossa tabela: t vezes seno,
+
+41
+00:03:11.304 --> 00:03:14.840
+t vezes cosseno e t vezes exponencial.
+
+42
+00:03:14.840 --> 00:03:19.884
+Os 2 primeiros sinais divergem
+e o terceiro vai depender
+
+43
+00:03:19.884 --> 00:03:25.806
+novamente do valor de a Com a positivo
+t vezes a exponencial diverge,
+
+44
+00:03:25.806 --> 00:03:29.990
+com a negativo t vezes
+a exponencial é limitada.
+
+45
+00:03:29.990 --> 00:03:32.852
+Vamos ver se descobrimos algo
+
+46
+00:03:32.852 --> 00:03:37.840
+comum entre os sinais limitados
+e os sinais que divergem.
+
+47
+00:03:37.840 --> 00:03:42.050
+Vamos começar dividindo os
+sinais nesses 2 grupos.
+
+48
+00:03:42.050 --> 00:03:47.309
+No grupo de sinais limitados temos
+o degrau, a exponencial negativa,
+
+49
+00:03:47.309 --> 00:03:51.084
+o seno, o cosseno,
+a exponencial negativa vezes seno,
+
+50
+00:03:51.084 --> 00:03:55.570
+a exponencial negativa vezes cosseno
+e t vezes a exponencial negativa.
+
+51
+00:03:55.570 --> 00:04:02.221
+No grupo dos sinais que divergem temos a
+rampa, a parábola, a exponencial positiva,
+
+52
+00:04:02.221 --> 00:04:06.310
+a exponencial positiva vezes o seno,
+a exponencial positiva vezes o cosseno,
+
+53
+00:04:06.310 --> 00:04:11.090
+t vezes seno, t vezes cosseno e
+t vezes a exponencial positiva.
+
+54
+00:04:11.090 --> 00:04:15.432
+Vamos dar uma olhada nas
+Transformadas de Laplace desses
+
+55
+00:04:15.432 --> 00:04:18.605
+sinais e tentar descobrir algum padrão.
+
+56
+00:04:18.605 --> 00:04:23.126
+Alguma semelhança entre os sinais
+limitados e alguma diferença entre
+
+57
+00:04:23.126 --> 00:04:26.120
+os sinais limitados e
+os sinais que divergem.
+
+58
+00:04:26.120 --> 00:04:30.461
+Vamos reorganizar as
+Transformadas de Laplace e vamos
+
+59
+00:04:30.461 --> 00:04:34.870
+analisar as primeiras
+Transformadas que correspondem
+
+60
+00:04:34.870 --> 00:04:39.840
+a exponenciais negativas e positivas
+e t vezes essas exponenciais.
+
+61
+00:04:39.840 --> 00:04:45.055
+Note que se o polo da Transformada
+de Laplace é negativo,
+
+62
+00:04:45.055 --> 00:04:50.270
+o sinal é limitado.
+
+63
+00:04:50.270 --> 00:04:55.215
+Note agora que se tivermos único
+polo na origem o sinal é limitado,
+
+64
+00:04:55.215 --> 00:05:00.160
+mas se tivermos 2 ou mais polos
+na origem o sinal diverge.
+
+65
+00:05:00.160 --> 00:05:04.495
+Vamos analisar agora as
+Transformadas do seno e do cosseno
+
+66
+00:05:04.495 --> 00:05:08.830
+multiplicadas por exponenciais
+negativas e positivas.
+
+67
+00:05:08.830 --> 00:05:12.920
+Talvez as coisas fiquem mais
+claras se expressarmos as
+
+68
+00:05:12.920 --> 00:05:17.010
+Transformadas de Laplace de maneira
+diferente, explicitando os polos.
+
+69
+00:05:17.010 --> 00:05:21.697
+Podemos expandir o denominador e
+usar a fórmula de Bhaskara para
+
+70
+00:05:21.697 --> 00:05:24.140
+encontrar as raízes ou os pólos.
+
+71
+00:05:24.140 --> 00:05:28.774
+e notamos que se os polos
+complexos conjugados têm parte
+
+72
+00:05:28.774 --> 00:05:31.640
+real negativa o sinal é limitado.
+
+73
+00:05:31.640 --> 00:05:35.170
+Se a parte real for
+positiva o sinal diverge.
+
+74
+00:05:35.170 --> 00:05:40.015
+Note também que se tivermos também único
+par de polos complexos conjugados,
+
+75
+00:05:40.015 --> 00:05:44.771
+com parte real nula, o sinal é
+limitado mas se esse par de polos for
+
+76
+00:05:44.771 --> 00:05:47.480
+repetido, o sinal vai divergir.
+
+77
+00:05:47.480 --> 00:05:52.105
+Então, a que conclusão
+podemos chegar com relação
+
+78
+00:05:52.105 --> 00:05:56.730
+ao sinal ser limitado ou divergir
+e a sua Transformada de Laplace?
+
+79
+00:05:56.730 --> 00:06:01.496
+Se os polos da Transformada de
+Laplace tiverem parte real negativa,
+
+80
+00:06:01.496 --> 00:06:07.260
+o sinal será limitado, mas se eles tiverem
+parte real positiva o sinal vai divergir.
+
+81
+00:06:07.260 --> 00:06:12.227
+Polo simples na origem ou par simples
+de polos complexos conjugados
+
+82
+00:06:12.227 --> 00:06:15.110
+com parte real nula, sinal limitado.
+
+83
+00:06:15.110 --> 00:06:20.900
+Polo duplo, triplo ou com multiplicidade
+maior na origem, o sinal diverge.
+
+84
+00:06:20.900 --> 00:06:25.181
+Par de polos complexos com parte
+real nula e multiplicidade maior que
+
+85
+00:06:25.181 --> 00:06:26.690
+o sinal diverge também.
+
+86
+00:06:26.690 --> 00:06:31.941
+Muito bem, o sinal de entrada deve então
+ter polos reais negativos ou polos
+
+87
+00:06:31.941 --> 00:06:37.742
+complexos conjugados com parte real
+negativa ou ter único polo na origem ou
+
+88
+00:06:37.742 --> 00:06:43.633
+ter pares de polos complexos conjugados
+com parte real nula, não repetidos.
+
+89
+00:06:43.633 --> 00:06:46.042
+E para que a saída seja limitada,
+
+90
+00:06:46.042 --> 00:06:51.329
+a Transformada de Laplace da saída deve
+ter as mesmas características: polos
+
+91
+00:06:51.329 --> 00:06:56.220
+com parte real negativa ou nula e sem
+multiplicidade se a parte real for nula.
+
+92
+00:06:56.220 --> 00:07:00.700
+Agora como deve ser a Função de
+Transferência para que isso aconteça?
+
+93
+00:07:00.700 --> 00:07:05.398
+Vamos usar uma Função de Transferência
+e uma Transformada do sinal de
+
+94
+00:07:05.398 --> 00:07:09.252
+entrada literais,
+ambas com denominador fatorado.
+
+95
+00:07:09.252 --> 00:07:14.480
+A função de Transferência tem n polos e
+a Transformada da entrada mais m polos.
+
+96
+00:07:14.480 --> 00:07:19.481
+A Transformada de Laplace da saída é o
+produto da função de transferência e da
+
+97
+00:07:19.481 --> 00:07:24.494
+Transformada da entrada e você lembra
+que podemos expandir a Transformada
+
+98
+00:07:24.494 --> 00:07:25.800
+frações parciais.
+
+99
+00:07:25.800 --> 00:07:31.052
+Vamos separar as frações parciais
+2 grupos: referente aos polos da
+
+100
+00:07:31.052 --> 00:07:35.420
+Função de Transferência e outro referente
+aos polos da Transformada da entrada.
+
+101
+00:07:35.420 --> 00:07:40.074
+Os denominadores das frações
+parciais de Y(s) são
+
+102
+00:07:40.074 --> 00:07:45.156
+exatamente os mesmos das frações
+parciais de U(s) e se u(t)
+
+103
+00:07:45.156 --> 00:07:49.660
+é limitado então yU(t)
+também será limitado.
+
+104
+00:07:49.660 --> 00:07:57.030
+Ou seja para saber se a saída é limitada
+ou não podemos analisar apenas yG(t).
+
+105
+00:07:57.030 --> 00:08:02.175
+Ou melhor yG(s),
+todas as frações parciais de yG(s)
+
+106
+00:08:02.175 --> 00:08:07.320
+precisam corresponder a sinais limitados
+para que a saída seja limitada.
+
+107
+00:08:07.320 --> 00:08:12.560
+Se apenas uma das frações parciais
+de yG(s) tiver a Transformada
+
+108
+00:08:12.560 --> 00:08:17.800
+inversa ilimitada,
+yG(t) será ilimitada e y(t) também.
+
+109
+00:08:17.800 --> 00:08:22.707
+Então não podemos ter nenhum polo da
+Função de Transferência com parte
+
+110
+00:08:22.707 --> 00:08:23.880
+real positiva.
+
+111
+00:08:23.880 --> 00:08:25.555
+Mas isso é suficiente?
+
+112
+00:08:25.555 --> 00:08:29.131
+A Função de Transferência
+pode ter polo na origem ou
+
+113
+00:08:29.131 --> 00:08:32.110
+par de polos complexos
+conjugados com parte real nula?
+
+114
+00:08:32.110 --> 00:08:33.464
+A resposta é não.
+
+115
+00:08:33.464 --> 00:08:36.536
+Vamos ver exemplo numérico simples.
+
+116
+00:08:36.536 --> 00:08:40.943
+A Função de Transferência será 1
+sobre s e a entrada degrau unitário,
+
+117
+00:08:40.943 --> 00:08:42.600
+que é uma entrada limitada.
+
+118
+00:08:42.600 --> 00:08:47.548
+A Transformada da saída será 1 sobre
+s ao quadrado e a saída é uma rampa
+
+119
+00:08:47.548 --> 00:08:48.580
+que diverge.
+
+120
+00:08:48.580 --> 00:08:53.511
+Ou seja se o sistema tiver polo na
+origem existe uma entrada limitada
+
+121
+00:08:53.511 --> 00:08:56.110
+que gera uma saída que vai divergir.
+
+122
+00:08:56.110 --> 00:09:00.417
+Quando temos mesmo polo na Função de
+Transferência e na Transformada da
+
+123
+00:09:00.417 --> 00:09:04.554
+entrada, não podemos fazer a separação
+total das frações parciais
+
+124
+00:09:04.554 --> 00:09:08.070
+porque uma das frações terá
+o denominador ao quadrado.
+
+125
+00:09:08.070 --> 00:09:12.820
+Vamos ver exemplo com par de polos
+complexos conjugados com parte real nula.
+
+126
+00:09:12.820 --> 00:09:17.570
+A Função de Transferência será
+1 sobre s ao quadrado mais 1,
+
+127
+00:09:17.570 --> 00:09:20.207
+e a entrada será cosseno de t.
+
+128
+00:09:20.207 --> 00:09:25.689
+Então a Função de Transferência
+tem par de polos mais ou menos i.
+
+129
+00:09:25.689 --> 00:09:30.374
+Multiplicando G(s) por U(s) e
+fazendo a Transformada inversa
+
+130
+00:09:30.374 --> 00:09:35.630
+obtemos y(t) que é meio de t vezes
+seno de t, uma saída que diverge.
+
+131
+00:09:35.630 --> 00:09:40.571
+Concluímos então que para sistema
+seja BIBO estável todos os
+
+132
+00:09:40.571 --> 00:09:44.510
+polos da função de transferência
+devem ter parte real negativa.
+
+133
+00:09:44.510 --> 00:09:49.892
+Se eles forem polos reais, devem ser
+negativos e se forem complexos conjugados,
+
+134
+00:09:49.892 --> 00:09:52.000
+devem ter parte real negativa.
+
+135
+00:09:52.000 --> 00:09:56.385
+Se dos polos tiver parte real positiva,
+a fração parcial
+
+136
+00:09:56.385 --> 00:10:00.770
+correspondente a esse polo irá
+resultar termo que diverge na saída.
+
+137
+00:10:00.770 --> 00:10:03.388
+Se o sistema tiver polo na origem,
+
+138
+00:10:03.388 --> 00:10:07.700
+uma entrada degrau irá resultar
+uma saída que diverge.
+
+139
+00:10:07.700 --> 00:10:13.220
+Se o sistema tiver par de polos complexos
+conjugados com parte real nula,
+
+140
+00:10:13.220 --> 00:10:18.740
+uma entrada senoidal específica irá
+resultar uma saída que diverge.
+
+141
+00:10:18.740 --> 00:10:23.725
+E como para ser BIBO estável sistema
+precisa ter a saída limitada para
+
+142
+00:10:23.725 --> 00:10:28.710
+toda e qualquer entrada limitada, essas
+duas situações precisam ser evitadas.
+
+143
+00:10:28.710 --> 00:10:32.808
+Agora você já deve ser capaz
+de explicar e ilustrar
+
+144
+00:10:32.808 --> 00:10:36.363
+a BIBO estabilidade e de
+citar que condições são
+
+145
+00:10:36.363 --> 00:10:40.830
+necessárias e suficientes para
+que sistema seja BIBO estável.
+
+146
+00:10:40.830 --> 00:10:46.025
+No próximo vídeo você verá que é possível
+verificar a BIBO estabilidade sem ter
+
+147
+00:10:46.025 --> 00:10:52.726
+que calcular todos os polos do sistema,
+mais de nossos truques matemáticos.
+
+148
+00:10:52.726 --> 00:11:00.770
+[MÚSICA] [SOM] [SOM]

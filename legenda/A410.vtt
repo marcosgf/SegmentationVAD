@@ -1,0 +1,1008 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.537
+[MÚSICA] [MÚSICA] Olá.
+
+2
+00:00:08.537 --> 00:00:14.732
+Bem-vindo ao curso TDD- Desenvolvimento
+de Software Guiado por Testes.
+
+3
+00:00:14.732 --> 00:00:16.300
+Eu sou Clovis Fernandes.
+
+4
+00:00:16.300 --> 00:00:20.090
+Hoje, nós vamos falar de conjunto
+de siglas que aparece aí.
+
+5
+00:00:20.090 --> 00:00:23.340
+Bom.
+Vou aproveitar para dizer que eu demorei
+
+6
+00:00:23.340 --> 00:00:27.425
+para aprender a diferença
+entre sigla e acrônimo.
+
+7
+00:00:27.425 --> 00:00:33.882
+Então, vocês vejam que aí eu tenho,
+por exemplo, ITA.
+
+8
+00:00:33.882 --> 00:00:41.319
+ITA, é acrônimo para
+Instituto Tecnológico de Aeronáutica.
+
+9
+00:00:41.319 --> 00:00:48.637
+Já, por exemplo, a palavra IBM é uma sigla
+para International Business Machine.
+
+10
+00:00:48.637 --> 00:00:51.460
+O que diferencia, então,
+sigla de acrônimo?
+
+11
+00:00:51.460 --> 00:00:55.175
+O acrônimo,
+eu posso ler como se fosse uma palavra.
+
+12
+00:00:55.175 --> 00:00:56.530
+ITA é acrônimo.
+
+13
+00:00:56.530 --> 00:01:01.340
+IBM, como eu soletro
+cada letra é uma sigla.
+
+14
+00:01:01.340 --> 00:01:06.540
+Nós temos aí, a sigla TDD.
+
+15
+00:01:06.540 --> 00:01:10.069
+Então, TDD é uma sigla porque
+eu leio letra por letra.
+
+16
+00:01:10.069 --> 00:01:14.480
+Então TDD é o
+Text Driven Development ou Designer,
+
+17
+00:01:14.480 --> 00:01:17.631
+que corresponde a desenvolvimento,
+português, não é?
+
+18
+00:01:17.631 --> 00:01:20.240
+Desenvolvimento de
+Software Guiado por Testes.
+
+19
+00:01:20.240 --> 00:01:26.414
+Ao final dessa aula,
+você saberá que não é preciso fazer
+
+20
+00:01:26.414 --> 00:01:34.104
+projecto antecipado e completo
+do curso para você fazer o TDD.
+
+21
+00:01:34.104 --> 00:01:39.110
+Então, essas siglas que estão aí
+se referem mais ou menos a isso.
+
+22
+00:01:39.110 --> 00:01:44.838
+Então, quando eu falo o BDUF
+vou misturar com acrônimo.
+
+23
+00:01:44.838 --> 00:01:51.196
+Vou ler como se fosse sigla e acrônimo,
+BDUF Big Design Up Front,
+
+24
+00:01:51.196 --> 00:01:56.054
+que é o projecto grande antecipadamente.
+
+25
+00:01:56.054 --> 00:01:59.529
+Então, eu estou querendo
+dizer para vocês que eu,
+
+26
+00:01:59.529 --> 00:02:04.618
+para fazer TDD eu não preciso fazer
+isso antes de implementar e também não
+
+27
+00:02:04.618 --> 00:02:09.840
+vou fazer a outra sigla que é o NoDUF.
+
+28
+00:02:09.840 --> 00:02:13.590
+No, D, U, F.
+
+29
+00:02:13.590 --> 00:02:20.058
+Eu não vou usar essa que é Nenhum,
+Design algum antecipadamente.
+
+30
+00:02:20.058 --> 00:02:21.505
+No Design Up Front.
+
+31
+00:02:21.505 --> 00:02:24.320
+Nem, não vou fazer nada disso também.
+
+32
+00:02:24.320 --> 00:02:30.872
+Então, na aula de hoje o que eu
+quero ver é eu preciso fazer
+
+33
+00:02:30.872 --> 00:02:36.793
+projecto antecipado e completo
+antes para fazer o TDD?
+
+34
+00:02:36.793 --> 00:02:41.828
+Vamos tentar responder e mostrar
+que não e nem o seu oposto
+
+35
+00:02:41.828 --> 00:02:47.260
+que é não fazer nada que muitas
+pessoas da comunidade do TDD,
+
+36
+00:02:47.260 --> 00:02:51.610
+acham que isso é certo,
+nós discordamos pouco.
+
+37
+00:02:51.610 --> 00:02:55.910
+Então, o que é que vem a ser o BDUF?
+
+38
+00:02:55.910 --> 00:02:58.592
+Big Design Up Front.
+
+39
+00:02:58.592 --> 00:03:03.099
+Projeto Grande feito antecipadamente.
+
+40
+00:03:03.099 --> 00:03:04.383
+Está certo?
+
+41
+00:03:04.383 --> 00:03:08.940
+Nós vamos tentar mostrar que no TDD,
+isso não vai ser necessário.
+
+42
+00:03:08.940 --> 00:03:14.860
+O BDUF corresponde, então,
+a projecto da sua aplicação que
+
+43
+00:03:14.860 --> 00:03:20.490
+seria feito e completado e aperfeiçoado
+antes da implementação começar.
+
+44
+00:03:20.490 --> 00:03:23.540
+Isso, normalmente,
+é feito outros projetos.
+
+45
+00:03:23.540 --> 00:03:28.178
+O processo cascata exemplifica bem o BDUF.
+
+46
+00:03:28.178 --> 00:03:29.274
+Uau!
+aqui!
+
+47
+00:03:29.274 --> 00:03:32.370
+linda cascata que estamos vendo aí!
+
+48
+00:03:32.370 --> 00:03:34.935
+Mas não é dessa cascata
+que eu estou falando,
+
+49
+00:03:34.935 --> 00:03:37.229
+mas o nome foi derivado por causa disso.
+
+50
+00:03:37.229 --> 00:03:42.086
+O que eu estou falando é desse processo
+de desenvolvimento de software,
+
+51
+00:03:42.086 --> 00:03:46.725
+que eu tenho lá cima os requisitos,
+uma análise de requisitos,
+
+52
+00:03:46.725 --> 00:03:50.620
+o projeto, a implementação,
+a verificação e testes,
+
+53
+00:03:50.620 --> 00:03:56.440
+o software é colocado
+produção e entra manutenção.
+
+54
+00:03:56.440 --> 00:04:01.220
+O BDUF, esse Big Design Up Front,
+
+55
+00:04:01.220 --> 00:04:04.920
+ele corresponde à análise
+de requisitos e ao design,
+
+56
+00:04:04.920 --> 00:04:08.429
+exatamente antes da implementação.
+
+57
+00:04:08.429 --> 00:04:13.730
+Se o BDUF não é uma boa alternativa
+para o TDD, porque eu não quero,
+
+58
+00:04:13.730 --> 00:04:18.971
+nesse processo de cascata,
+eu perco muito tempo fazendo
+
+59
+00:04:18.971 --> 00:04:25.780
+a especificação de coisas que podem ser
+ou inúteis ou que vão mudar no futuro.
+
+60
+00:04:25.780 --> 00:04:28.250
+Eu levo muito tempo fazendo isso.
+
+61
+00:04:28.250 --> 00:04:34.956
+Depois, faço o projeto de tudo e aí começo
+a implementar e só depois vou testar.
+
+62
+00:04:34.956 --> 00:04:39.900
+TDD a gente não faz isso, né,
+o nosso processo é testar antes,
+
+63
+00:04:39.900 --> 00:04:43.930
+fazer falhar,
+
+64
+00:04:43.930 --> 00:04:48.027
+fazer o código funcionar, refatorar.
+
+65
+00:04:48.027 --> 00:04:51.033
+É esse ciclo que nós vamos seguir.
+
+66
+00:04:51.033 --> 00:04:54.540
+Então, se o BDUF não é
+uma boa alternativa,
+
+67
+00:04:54.540 --> 00:04:58.519
+qual é que é a alternativa boa para isso?
+
+68
+00:04:58.519 --> 00:05:01.795
+Obviamente, na comunidade TDD,
+
+69
+00:05:01.795 --> 00:05:07.409
+existem muitos que praticam e
+acham que o oposto disso do BDUF,
+
+70
+00:05:07.409 --> 00:05:11.089
+que é fazer tudo antes da implementação,
+o oposto,
+
+71
+00:05:11.089 --> 00:05:17.160
+que é não fazer muita coisa antes
+da implementação, está certo?
+
+72
+00:05:17.160 --> 00:05:18.001
+Seria o ideal.
+
+73
+00:05:18.001 --> 00:05:19.166
+Eu vou mostrar aqui,
+
+74
+00:05:19.166 --> 00:05:24.525
+com alguns exemplos não computacionais
+que isso talvez não seja uma coisa boa.
+
+75
+00:05:24.525 --> 00:05:30.750
+Eu vou estar chamando isso de NoDUF,
+No Design Up Front,
+
+76
+00:05:30.750 --> 00:05:35.604
+português, design algum antecipadamente,
+
+77
+00:05:35.604 --> 00:05:40.270
+ou seja, não vou fazer nenhum design,
+está certo?
+
+78
+00:05:40.270 --> 00:05:41.750
+Antecipadamente.
+
+79
+00:05:41.750 --> 00:05:44.450
+Será que essa é uma boa alternativa?
+
+80
+00:05:44.450 --> 00:05:48.140
+Bom, quero lembrar que essa sigla NoDUF,
+
+81
+00:05:48.140 --> 00:05:54.250
+não é usualmente empregada na
+literatura ou na indústria de software.
+
+82
+00:05:54.250 --> 00:05:56.769
+Eu estou usando aqui é, exatamente,
+
+83
+00:05:56.769 --> 00:06:01.951
+só para pontuar a conceituação sobre
+o que estou querendo dizer, que é,
+
+84
+00:06:01.951 --> 00:06:07.290
+não fazer quase nenhum projeto antecipado.
+
+85
+00:06:07.290 --> 00:06:12.750
+Então, eu estou chamando de NoDUF,
+No Design Up Front.
+
+86
+00:06:12.750 --> 00:06:14.826
+Projeto Algum Antecipadamente.
+
+87
+00:06:14.826 --> 00:06:18.120
+Eu não vou fazer nada
+antecipadamente ou muito pouco.
+
+88
+00:06:18.120 --> 00:06:19.750
+Está certo?
+
+89
+00:06:19.750 --> 00:06:26.798
+Isso é o que a comunidade TDD,
+muitos pensam e fazem uso disso.
+
+90
+00:06:26.798 --> 00:06:30.410
+Eu discordo e vou mostrar alguns exemplos,
+
+91
+00:06:30.410 --> 00:06:33.920
+não computacionais que
+vão exemplificar isso.
+
+92
+00:06:33.920 --> 00:06:38.597
+Suponha que, na imagem a seguir, eu queira
+fazer uma corrida campestre de motos e
+
+93
+00:06:38.597 --> 00:06:42.301
+aí eu tenho duas perguntas que
+eu gostaria de fazer para,
+
+94
+00:06:42.301 --> 00:06:44.425
+você olha a imagem, está certo?
+
+95
+00:06:44.425 --> 00:06:46.770
+E vai responder: seria bom local?
+
+96
+00:06:46.770 --> 00:06:52.030
+Eu tenho informações suficientes
+para começar essa corrida?
+
+97
+00:06:52.030 --> 00:06:52.841
+Está certo?
+
+98
+00:06:52.841 --> 00:07:00.430
+Então, esse é trechinho de uma imagem,
+eu estou mostrando onde eu vejo,
+
+99
+00:07:00.430 --> 00:07:05.434
+que tem grana, que tem uma trilha no meio.
+
+100
+00:07:05.434 --> 00:07:06.970
+Está certo?
+
+101
+00:07:06.970 --> 00:07:09.794
+Então, olhando isso o que
+é que você pode imaginar?
+
+102
+00:07:09.794 --> 00:07:13.977
+Aparentemente sim, eu posso fazer
+uma corrida de motos aí, mas,
+
+103
+00:07:13.977 --> 00:07:19.255
+veja eu não tenho informações suficientes,
+eu tenho poucas informações,
+
+104
+00:07:19.255 --> 00:07:25.040
+eu estou olhando de uma maneira muito
+restrita esse meu local, está certo?
+
+105
+00:07:25.040 --> 00:07:28.400
+Agora, vamos ampliar esse local.
+
+106
+00:07:28.400 --> 00:07:29.050
+Uau!
+
+107
+00:07:29.050 --> 00:07:31.650
+Uma bela vista também.
+
+108
+00:07:31.650 --> 00:07:35.543
+Mas, as duas perguntas, não é?
+
+109
+00:07:35.543 --> 00:07:38.330
+Será que é bom local?
+
+110
+00:07:38.330 --> 00:07:40.982
+E tenho informações suficientes?
+
+111
+00:07:40.982 --> 00:07:45.883
+Agora, eu tenho mais informações
+e certamente, esse não é bom
+
+112
+00:07:45.883 --> 00:07:50.806
+local para fazer uma corrida de motos,
+uma corrida campestre de motos,
+
+113
+00:07:50.806 --> 00:07:54.440
+porque o lugar é muito perigoso,
+está à beira de precipícios.
+
+114
+00:07:54.440 --> 00:08:00.397
+Então, bastou eu ampliar pouquinho,
+olhar pouquinho à frente,
+
+115
+00:08:00.397 --> 00:08:05.440
+ter pouquinho mais de informação,
+eu já pude tomar uma decisão.
+
+116
+00:08:05.440 --> 00:08:11.584
+O NoDUF corresponde a você estar olhando
+
+117
+00:08:11.584 --> 00:08:17.630
+de maneira limitada e não
+ver à frente alguma coisa.
+
+118
+00:08:17.630 --> 00:08:19.624
+Então, não é uma boa coisa.
+
+119
+00:08:19.624 --> 00:08:23.492
+A gente viu que não é uma boa coisa ter,
+querer fazer,
+
+120
+00:08:23.492 --> 00:08:26.634
+ter todas as informações antes, não é?
+
+121
+00:08:26.634 --> 00:08:28.490
+No Big Design Up Front.
+
+122
+00:08:28.490 --> 00:08:33.981
+Mas, também no NoDUF,
+não ter nenhuma informação,
+
+123
+00:08:33.981 --> 00:08:37.782
+ou ter muito pouca informação,
+também não é uma coisa boa.
+
+124
+00:08:37.782 --> 00:08:44.240
+Imagina agora que eu queira fazer uma
+pesquisa de campo sobre biodiversidade.
+
+125
+00:08:44.240 --> 00:08:45.794
+num determinado local.
+
+126
+00:08:45.794 --> 00:08:48.902
+Vamos responder novamente
+às mesmas perguntas.
+
+127
+00:08:48.902 --> 00:08:50.160
+Seria bom local?
+
+128
+00:08:50.160 --> 00:08:54.185
+Eu tenho informações
+suficientes para começar?
+
+129
+00:08:54.185 --> 00:08:57.327
+Então, esse é o trecho
+do que eu quero fazer.
+
+130
+00:08:57.327 --> 00:08:58.210
+Está certo?
+
+131
+00:08:58.210 --> 00:09:02.776
+Fazer essa análise de campo,
+essa exploração de campo,
+
+132
+00:09:02.776 --> 00:09:05.926
+de biodiversidade, está certo?
+
+133
+00:09:05.926 --> 00:09:12.848
+Olhando para isso, aparentemente sim,
+seria bom local, tenho muita vegetação,
+
+134
+00:09:12.848 --> 00:09:18.289
+certamente eu vou ter muitos
+animais e outras informações ali.
+
+135
+00:09:18.289 --> 00:09:22.980
+Só que também eu não tenho
+muitas informações suficientes.
+
+136
+00:09:22.980 --> 00:09:25.453
+No caso agora, vou olhar, ampliar,
+
+137
+00:09:25.453 --> 00:09:28.496
+eu estou olhando de uma
+maneira muito limitada, não é?
+
+138
+00:09:28.496 --> 00:09:29.220
+Está certo?
+
+139
+00:09:29.220 --> 00:09:32.380
+Agora, vamos ampliar isso pouquinho?
+
+140
+00:09:32.380 --> 00:09:33.082
+Pronto.
+
+141
+00:09:33.082 --> 00:09:35.200
+Uau!
+Uma bela cena também.
+
+142
+00:09:35.200 --> 00:09:35.906
+Está certo?
+
+143
+00:09:35.906 --> 00:09:38.740
+Vocês vejam que agora,
+eu tenho mais informações.
+
+144
+00:09:38.740 --> 00:09:39.645
+Está certo?
+
+145
+00:09:39.645 --> 00:09:42.033
+Eu tenho mais informações agora.
+
+146
+00:09:42.033 --> 00:09:47.089
+Quer dizer, bastou olhar
+pouquinho além e eu já consigo
+
+147
+00:09:47.089 --> 00:09:53.279
+vislumbrar outras necessidades para
+essa minha pesquisa aí, está certo?
+
+148
+00:09:53.279 --> 00:09:57.980
+Eu tenho montanhas, eu tenho vale extenso.
+
+149
+00:09:57.980 --> 00:10:02.370
+Então, talvez eu precise
+que algum dos biólogos
+
+150
+00:10:02.370 --> 00:10:07.120
+façam escaladas, façam rappel.
+
+151
+00:10:07.120 --> 00:10:12.456
+e gostaria de saber também algumas
+outras informações adicionais,
+
+152
+00:10:12.456 --> 00:10:16.575
+como chuva,
+clima da região etcetera e tal.
+
+153
+00:10:16.575 --> 00:10:22.070
+A resposta nesse caso, certamente sim,
+porque ao olhar pouquinho
+
+154
+00:10:22.070 --> 00:10:27.930
+mais eu consigo vislumbrar mais sobre
+
+155
+00:10:27.930 --> 00:10:32.350
+a pesquisa de campo e a resposta é
+certamente sim, é bom local para isso.
+
+156
+00:10:32.350 --> 00:10:38.048
+E eu agora tenho a informação
+suficiente para uma tomada de decisão,
+
+157
+00:10:38.048 --> 00:10:40.320
+preliminar, pelo menos.
+
+158
+00:10:40.320 --> 00:10:42.173
+Está certo?
+
+159
+00:10:42.173 --> 00:10:47.090
+Então, a chave aqui é isso: conjunto de
+
+160
+00:10:47.090 --> 00:10:52.580
+informações suficiente, quer dizer,
+agora eu tenho mais informações.
+
+161
+00:10:52.580 --> 00:10:56.797
+Ou seja,
+eu não preciso ter todas as informações,
+
+162
+00:10:56.797 --> 00:11:01.241
+por exemplo,
+dessa última pesquisa de campo,
+
+163
+00:11:01.241 --> 00:11:06.193
+informações topográficas e
+coisas adicionais sobre isso,
+
+164
+00:11:06.193 --> 00:11:09.590
+eu não preciso ter conjunto
+de informações completas.
+
+165
+00:11:09.590 --> 00:11:13.415
+Mas eu preciso ter conjunto
+de informações suficientes,
+
+166
+00:11:13.415 --> 00:11:16.490
+para eu poder iniciar
+a minha pesquisa de campo.
+
+167
+00:11:16.490 --> 00:11:21.651
+Então, a chave não é ter muita
+informação antes de começar
+
+168
+00:11:21.651 --> 00:11:26.960
+a implementar e nem quase nenhuma
+informação antes de começar a implementar.
+
+169
+00:11:26.960 --> 00:11:29.857
+É ter o conjunto de
+informações suficiente.
+
+170
+00:11:29.857 --> 00:11:33.899
+Como nós vamos chegar a definir
+o que é informação suficiente,
+
+171
+00:11:33.899 --> 00:11:36.033
+isso vai ser outra coisa.
+
+172
+00:11:36.033 --> 00:11:41.720
+Nessa nossa aula,
+eu espero que você tenha então entendido
+
+173
+00:11:41.720 --> 00:11:46.410
+que o desenvolvimento de
+
+174
+00:11:46.410 --> 00:11:52.520
+software usando a abordagem BDUF,
+ou seja, Big Design Up Front,
+
+175
+00:11:52.520 --> 00:11:57.005
+não é uma coisa boa, nem o seu oposto,
+quase nenhuma informação.
+
+176
+00:11:57.005 --> 00:12:02.922
+No BDUF, você demora a começar
+
+177
+00:12:02.922 --> 00:12:08.358
+a implementar e o seu sistema
+já vai ficar muito rígido,
+
+178
+00:12:08.358 --> 00:12:13.001
+porque eu tomo muitas decisões
+antecipadamente e se precisar mudar alguma
+
+179
+00:12:13.001 --> 00:12:17.160
+coisa, eu vou ter dificuldade,
+exatamente por causa dessa rigidez.
+
+180
+00:12:17.160 --> 00:12:23.945
+No caso do NoDuf ou seja, eu não
+tenho design nenhum, né, está certo?
+
+181
+00:12:23.945 --> 00:12:28.539
+Nem de requisitos, nem do design
+propriamente dito, está certo?
+
+182
+00:12:28.539 --> 00:12:29.649
+O que é que acontece?
+
+183
+00:12:29.649 --> 00:12:33.416
+Às vezes, eu não tenho todos os
+requisitos, eu não tenho informações,
+
+184
+00:12:33.416 --> 00:12:37.627
+eu não consegui olhar para a frente
+sobre alguns percalços que eu
+
+185
+00:12:37.627 --> 00:12:40.110
+possa ter no meu desenvolvimento.
+
+186
+00:12:40.110 --> 00:12:43.740
+E ao fazer isso,
+
+187
+00:12:43.740 --> 00:12:49.114
+talvez eu tenha problemas no futuro,
+porque eu posso seguir, o projeto
+
+188
+00:12:49.114 --> 00:12:53.800
+vai sendo seguido para desenvolvimento
+que pode me levar a problemas.
+
+189
+00:12:53.800 --> 00:12:54.468
+Está certo?
+
+190
+00:12:54.468 --> 00:12:58.120
+Ele talvez não esteja muito pronto
+também para mudanças inesperadas.
+
+191
+00:12:58.120 --> 00:13:04.897
+Eu vou contar caso aqui para vocês,
+pessoal, hoje ele é grande cientista,
+
+192
+00:13:04.897 --> 00:13:10.000
+começou a fazer uma tese de mestrado
+comigo, torno de 2003, 2004,
+
+193
+00:13:10.000 --> 00:13:16.369
+que era sobre repositório inteligente
+para gerenciar o perl programming,
+
+194
+00:13:16.369 --> 00:13:21.464
+né, na modelagem ágil, que ele
+começou a programar esse repositório
+
+195
+00:13:21.464 --> 00:13:26.175
+inteligente usando o TDD,
+TDD individual, né, está certo?
+
+196
+00:13:26.175 --> 00:13:30.712
+Chegou dado momento,
+e ele estava usando essa técnica,
+
+197
+00:13:30.712 --> 00:13:36.138
+que eu vou colocando os meus requisitos,
+e eu imagino que vai
+
+198
+00:13:36.138 --> 00:13:42.409
+emergir uma arquitetura,
+projeto do meu sistema que seja saudável.
+
+199
+00:13:42.409 --> 00:13:47.498
+Quando ele veio me apresentar esse
+projeto, o projeto tinha muitas falhas,
+
+200
+00:13:47.498 --> 00:13:50.694
+ele não conseguia me
+responder muitas coisas,
+
+201
+00:13:50.694 --> 00:13:53.970
+ele não era muito inteligente,
+o que é que faltou?
+
+202
+00:13:53.970 --> 00:13:59.375
+Faltou ele ter uma visão
+pouquinho mais antecipada disso,
+
+203
+00:13:59.375 --> 00:14:03.791
+ele teria que ter olhado a literatura
+sobre outros repositórios
+
+204
+00:14:03.791 --> 00:14:08.058
+inteligentes para fazer
+análises parecidas,
+
+205
+00:14:08.058 --> 00:14:12.672
+e ao não ter olhado isso,
+ele fez uma arquitetura que acabou sendo
+
+206
+00:14:12.672 --> 00:14:17.810
+inadequada para suportar
+os novos requisitos.
+
+207
+00:14:17.810 --> 00:14:21.880
+Ou seja, mesmo você querendo não,
+
+208
+00:14:21.880 --> 00:14:25.550
+não seguindo plenamente o TDD,
+
+209
+00:14:25.550 --> 00:14:29.990
+olhando o suficiente para a frente,
+você pode ter problemas.
+
+210
+00:14:29.990 --> 00:14:35.620
+A conclusão a que nós devemos chegar,
+é que o certo é fazer projeto
+
+211
+00:14:35.620 --> 00:14:40.900
+suficiente antecipadamente,
+nem muito, nem pouco.
+
+212
+00:14:40.900 --> 00:14:45.864
+O suficiente, e fazer o suficiente não
+é uma coisa também que a gente tem
+
+213
+00:14:45.864 --> 00:14:47.950
+certeza do que vai ser feito.
+
+214
+00:14:47.950 --> 00:14:53.801
+Nós sempre vamos ficar dúvida,
+mas esse é o assunto da próxima aula.
+
+215
+00:14:53.801 --> 00:14:58.370
+Espero então que tenha ficado
+claro que você não vai
+
+216
+00:14:58.370 --> 00:15:03.230
+precisar fazer projeto
+usando o BDUF ou NoDuf.
+
+217
+00:15:03.230 --> 00:15:10.130
+Obrigado!

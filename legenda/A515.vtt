@@ -1,0 +1,603 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.540
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.540 --> 00:00:12.480
+Esse é o curso de Orientação
+a Objeto com Java.
+
+3
+00:00:12.480 --> 00:00:14.550
+Meu nome é Eduardo Guerra.
+
+4
+00:00:14.550 --> 00:00:17.430
+Hoje vocês vão conhecer as exceções.
+
+5
+00:00:17.430 --> 00:00:22.352
+A gente vai entender como as exceções
+funcionam e como elas podem ser utilizadas
+
+6
+00:00:22.352 --> 00:00:24.420
+para fazer o tratamento de erro.
+
+7
+00:00:24.420 --> 00:00:29.475
+Na aula anterior a gente viu aí outras
+abordagens pra tratar erro, vimos vários
+
+8
+00:00:29.475 --> 00:00:33.700
+problemas nela e hoje vamos aprender
+a usar as exceções para fazer isso.
+
+9
+00:00:33.700 --> 00:00:34.338
+Certo?
+
+10
+00:00:34.338 --> 00:00:37.708
+Bom, para começar o que
+é que é uma exceção?
+
+11
+00:00:37.708 --> 00:00:42.221
+Exceção é uma classe especial,
+que vai estar representando esse erro,
+
+12
+00:00:42.221 --> 00:00:44.930
+vai estar representando
+problema que aconteceu.
+
+13
+00:00:44.930 --> 00:00:49.608
+E essas classes elas têm as
+características de poder ser
+
+14
+00:00:49.608 --> 00:00:52.248
+lançada para quem chamou o método.
+
+15
+00:00:52.248 --> 00:00:56.706
+Você pode simplesmente falar assim: "Olha,
+deu erro aqui,
+
+16
+00:00:56.706 --> 00:01:00.957
+está representado por uma exceção,
+joga para quem chamou".
+
+17
+00:01:00.957 --> 00:01:06.061
+Para uma classe ser uma exceção ela tem
+que ser uma subclasse de "Exception".
+
+18
+00:01:06.061 --> 00:01:10.856
+Mais para frente, nessa aula mesmo, eu vou
+falar de outros casos aí de classes que
+
+19
+00:01:10.856 --> 00:01:13.903
+podem ser lançadas,
+mas para criar uma exceção,
+
+20
+00:01:13.903 --> 00:01:17.370
+ela tem que ser uma subclasse
+de "exception", basta isso.
+
+21
+00:01:17.370 --> 00:01:22.460
+Se ela for uma subclasse de "exception"
+você consegue lançar ela como erro.
+
+22
+00:01:22.460 --> 00:01:24.687
+Então como é que a gente faz isso?
+
+23
+00:01:24.687 --> 00:01:30.780
+Todo o método que pode dar
+erro na execução dele,
+
+24
+00:01:30.780 --> 00:01:34.408
+ele tem que declarar isso
+a partir dessa cláusula "throws".
+
+25
+00:01:34.408 --> 00:01:39.429
+Então, se esse método
+aqui ele tem esse "throws
+
+26
+00:01:39.429 --> 00:01:44.113
+MinhaException" quer dizer que ele pode
+
+27
+00:01:44.113 --> 00:01:48.990
+lançar uma "MinhaException",
+como resultado da sua execução.
+
+28
+00:01:48.990 --> 00:01:54.665
+E durante a execução do método,
+eu posso verificar se houve,
+
+29
+00:01:54.665 --> 00:02:00.335
+que deu erro, eu posso ir lá e
+dar "throw new MinhaException".
+
+30
+00:02:00.335 --> 00:02:07.641
+E aí ou seja, eu crio a minha exceção
+e jogo ela, mas para fazer isso,
+
+31
+00:02:07.641 --> 00:02:12.809
+o método tem que declarar que
+pode jogar uma exceção daquela.
+
+32
+00:02:12.809 --> 00:02:18.349
+É mais ou menos como se o método falasse
+o seguinte: "Olha, você vai me executar,
+
+33
+00:02:18.349 --> 00:02:22.856
+eu tenho tal retorno, você tem que me dar
+tais parâmetros, e pode ser que se der
+
+34
+00:02:22.856 --> 00:02:29.100
+erro, eu vá te jogar essa exceção." Para
+que quem chama já fique preparado pra ela.
+
+35
+00:02:29.100 --> 00:02:31.348
+E aí quem chama tem duas opções.
+
+36
+00:02:31.348 --> 00:02:35.355
+Uma delas é tratar essa exceção,
+como é que ele faz isso?
+
+37
+00:02:35.355 --> 00:02:37.822
+A partir de bloco do "try catch".
+
+38
+00:02:37.822 --> 00:02:43.824
+O "try" é mais ou menos: "tenta executar
+esse método" "para ver se vai dar erro".
+
+39
+00:02:43.824 --> 00:02:49.010
+E aí o "catch" é bloco que ele vai
+quando o erro efetivamente acontece.
+
+40
+00:02:49.010 --> 00:02:51.506
+Então, o que é que você pode fazer?
+
+41
+00:02:51.506 --> 00:02:55.363
+Você pode falar assim:"Oh,
+tenta reexecutar aí".
+
+42
+00:02:55.363 --> 00:02:57.347
+Aconteceu a minha execeção?
+
+43
+00:02:57.347 --> 00:03:03.560
+Eu vou lá então, vou tratar aquele método,
+vou fazer tratamento para esse erro.
+
+44
+00:03:03.560 --> 00:03:08.650
+Vamos supor por exemplo,
+imagina você tentar abrir arquivo,
+
+45
+00:03:08.650 --> 00:03:10.876
+você recebe erro que ele não existe.
+
+46
+00:03:10.876 --> 00:03:15.545
+Você pode no tratamento desse erro
+falar assim: "Então vá lá e crie o
+
+47
+00:03:15.545 --> 00:03:17.690
+arquivo e tente de novo".
+
+48
+00:03:17.690 --> 00:03:24.670
+E então você pode obviamente
+aqui numa situação fictícia.
+
+49
+00:03:24.670 --> 00:03:28.698
+Então você pode tratar o erro,
+você pode escolher o que fazer.
+
+50
+00:03:28.698 --> 00:03:33.260
+Às vezes por exemplo, se você está
+fazendo acesso de rede você pode
+
+51
+00:03:33.260 --> 00:03:37.345
+tentar de novo até número
+determinado de vezes.
+
+52
+00:03:37.345 --> 00:03:41.908
+Então tudo isso é questão
+de você saber como
+
+53
+00:03:41.908 --> 00:03:46.894
+lidar aí com o erro e usar o bloco "try
+
+54
+00:03:46.894 --> 00:03:52.006
+catch" para conseguir tratar caso de erro.
+
+55
+00:03:52.006 --> 00:03:57.920
+Uma outra opção é você passar o
+problema para quem te chamou.
+
+56
+00:03:57.920 --> 00:04:01.460
+Você falou: " eu chamei método
+pode ser que ele dê uma exceção.
+
+57
+00:04:01.460 --> 00:04:04.164
+Só que eu não quero lidar com isso agora".
+
+58
+00:04:04.164 --> 00:04:08.361
+Eu vou deixar aqui para quem me
+chamo lidar com essa exceção.
+
+59
+00:04:08.361 --> 00:04:10.025
+Então o que é que você faz?
+
+60
+00:04:10.025 --> 00:04:14.963
+Você também declara que você pode
+julgar uma "MinhaException" ou seja,
+
+61
+00:04:14.963 --> 00:04:17.318
+eu passo o erro para a frente.
+
+62
+00:04:17.318 --> 00:04:22.610
+E aí o que é importante a gente saber
+é que você pode tanto tratar o erro,
+
+63
+00:04:22.610 --> 00:04:26.010
+quanto pode passar para
+quem te chamou tratar,
+
+64
+00:04:26.010 --> 00:04:30.580
+só que uma coisa que você não pode fazer,
+é simplesmente ignorar o erro.
+
+65
+00:04:30.580 --> 00:04:35.335
+Então você não pode simplesmente chamar
+método que declara uma exceção e
+
+66
+00:04:35.335 --> 00:04:38.482
+falar: "Não, eu não estou nem aí,
+não vou fazer nada".
+
+67
+00:04:38.482 --> 00:04:43.186
+Não, ou você declara que você também joga
+essa exceção, ou você trata aquele erro.
+
+68
+00:04:43.186 --> 00:04:44.947
+Você não pode ignorar.
+
+69
+00:04:44.947 --> 00:04:48.130
+É tipo,
+está uma bomba aí na sua mão, e aí?
+
+70
+00:04:48.130 --> 00:04:52.635
+Você vai apagar o fogo ou você
+vai jogar essa bola no próximo?
+
+71
+00:04:52.635 --> 00:04:55.628
+Você não pode ficar alí simplesmente
+com a bomba ou ignorar ela,
+
+72
+00:04:55.628 --> 00:04:56.681
+que ela vai explodir.
+
+73
+00:04:56.681 --> 00:04:57.580
+Não vai dar certo.
+
+74
+00:04:57.580 --> 00:05:01.882
+Bom, Java a gente tem uma
+hierarquia de classes que
+
+75
+00:05:01.882 --> 00:05:06.641
+podem ser exceções,
+que podem ser lançadas.
+
+76
+00:05:06.641 --> 00:05:09.898
+Aqui cima a gente tem o "throwable".
+
+77
+00:05:09.898 --> 00:05:14.679
+E a gente tem abaixo dele a classe
+"error" e a classe "exception" e
+
+78
+00:05:14.679 --> 00:05:16.900
+dentro das classes "exception",
+
+79
+00:05:16.900 --> 00:05:21.917
+a gente tem o "RuntimeException"
+que é tipo de exceção diferente.
+
+80
+00:05:21.917 --> 00:05:25.830
+Vamos ver cada e vamos
+ver alguns exemplos aí.
+
+81
+00:05:25.830 --> 00:05:31.584
+A subclasse de erro,
+que é tipo especial de "throwable",
+
+82
+00:05:31.584 --> 00:05:36.544
+é aquele tipo de problema que
+dificilmente você vai conseguir
+
+83
+00:05:36.544 --> 00:05:40.180
+fazer alguma coisa
+relação para tratar ele.
+
+84
+00:05:40.180 --> 00:05:44.016
+Por exemplo, "CoderMalfunction,
+FactoryConfiguration,
+
+85
+00:05:44.016 --> 00:05:49.054
+VirtualMachineError" às vezes são erros
+que as vezes é erros de hardware,
+
+86
+00:05:49.054 --> 00:05:52.449
+às vezes é erro sei lá,
+no sistema operacional.
+
+87
+00:05:52.449 --> 00:05:54.920
+Coisas que está fora do seu controle.
+
+88
+00:05:54.920 --> 00:06:00.355
+Então esses aí são as subclasses de erro,
+
+89
+00:06:00.355 --> 00:06:05.152
+as "RuntimeException' são aqueles erros,
+digamos assim,
+
+90
+00:06:05.152 --> 00:06:09.140
+normais que você não é obrigado a tratar.
+
+91
+00:06:09.140 --> 00:06:13.761
+Então, tudo aquilo que eu valei de
+"throw" " você tem que colocar 'throw',
+
+92
+00:06:13.761 --> 00:06:17.140
+ou 'trycatch" isso não vale
+para o "RuntimeException".
+
+93
+00:06:17.140 --> 00:06:21.715
+Normalmente, o RuntimeException é aquele
+erro, que acaba sendo erro meio que de
+
+94
+00:06:21.715 --> 00:06:26.290
+codificação, é aquele erro
+que não deveria acontecer.
+
+95
+00:06:26.290 --> 00:06:31.994
+Então por exemplo, "ArithmeticException"
+sei lá, você tem uma divisão por 0.
+
+96
+00:06:31.994 --> 00:06:36.140
+"ClassCastException", que
+é você tentar fazer
+
+97
+00:06:36.140 --> 00:06:40.371
+"cast" de objeto para uma
+classe que não é a dele.
+
+98
+00:06:40.371 --> 00:06:45.347
+O "NullPointerException"
+você tentar chamar método de
+
+99
+00:06:45.347 --> 00:06:49.590
+uma variável que está com o valor nulo.
+
+100
+00:06:49.590 --> 00:06:53.003
+O "IndexOutofBoundsException" que é no
+caso de você tentar acessar índice por
+
+101
+00:06:53.003 --> 00:06:58.830
+exemplo de "array",
+que é maior que o tamanho dele.
+
+102
+00:06:58.830 --> 00:07:02.040
+Então, são erros que
+não deveriam acontecer,
+
+103
+00:07:02.040 --> 00:07:06.464
+esses casos eles são, ele jogam o
+"RuntimeException" se você quiser,
+
+104
+00:07:06.464 --> 00:07:11.128
+você pode criar uma "RuntimeException",
+você pode lançar da mesma forma.
+
+105
+00:07:11.128 --> 00:07:15.452
+A grande diferença é que você não é
+obrigado a declarar que o método joga
+
+106
+00:07:15.452 --> 00:07:20.330
+aquela "RuntimeException", nem você
+é obrigado a tratar aquela exceção de
+
+107
+00:07:20.330 --> 00:07:25.447
+forma explícita com o "try
+catch" ou declarando o "throws".
+
+108
+00:07:25.447 --> 00:07:30.553
+E por fim a gente tem as exceções aí
+que são as exceções, digamos assim,
+
+109
+00:07:30.553 --> 00:07:34.747
+normais, que são aqueles erros que
+podem acontecer durante a execução,
+
+110
+00:07:34.747 --> 00:07:36.794
+que normalmente você vai querer tratar.
+
+111
+00:07:36.794 --> 00:07:42.096
+Por exemplo, "SQLException"
+uma "IOException" uma exceção
+
+112
+00:07:42.096 --> 00:07:47.515
+de impressão, talvez formato de data.
+
+113
+00:07:47.515 --> 00:07:51.805
+São coisas que podem acontecer por
+exemplo, você pode rodar uma "query" que
+
+114
+00:07:51.805 --> 00:07:56.472
+esteja errada, você pode tentar acessar
+uma tabela que você não tem permissão,
+
+115
+00:07:56.472 --> 00:07:59.809
+você pode tentar acessar
+arquivo que está bloqueado,
+
+116
+00:07:59.809 --> 00:08:03.809
+você pode dar erro na impressora,
+ele vai te jogar "PrintException".
+
+117
+00:08:03.809 --> 00:08:05.676
+São coisas que podem acontecer,
+
+118
+00:08:05.676 --> 00:08:11.678
+não é porque o código está errado que ele
+está acessando lá "array" que não deveria.
+
+119
+00:08:11.678 --> 00:08:16.347
+Esses erros aí são erros que
+realmente podem acontecer.
+
+120
+00:08:16.347 --> 00:08:20.964
+Esses aí são as "Exceptions" que
+a gente é obrigado a tratar.
+
+121
+00:08:20.964 --> 00:08:25.600
+Então com isso, eu acho que deve ter
+dado pra entender melhor as exceções.
+
+122
+00:08:25.600 --> 00:08:28.989
+Tenho certeza aí que deu para
+ter uma ideia como é que é.
+
+123
+00:08:28.989 --> 00:08:34.145
+Você simplesmente joga elas para cima,
+a gente viu pouquinho aí também de como
+
+124
+00:08:34.145 --> 00:08:39.843
+elas funcionam e vimos alguns
+exemplos aí de exceções, de ''errors,
+
+125
+00:08:39.843 --> 00:08:45.330
+RuntimException, exception" e
+entendemos a diferença aí entre eles.
+
+126
+00:08:45.330 --> 00:08:48.320
+Vejo você na próxima aula.
+
+127
+00:08:48.320 --> 00:08:52.740
+[MÚSICA]

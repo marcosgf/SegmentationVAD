@@ -1,0 +1,86 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.605
+[MÚSICA] E aí,
+
+2
+00:00:05.605 --> 00:00:09.980
+pessoal, tudo bem?
+
+3
+00:00:09.980 --> 00:00:14.367
+Nessa aula vamos finalizar o nosso jogo
+simples adicionando alguns efeitos
+
+4
+00:00:14.367 --> 00:00:14.990
+sonoros.
+
+5
+00:00:14.990 --> 00:00:21.436
+Crie 2 variáveis SKAction chamadas
+explosionSound e coinSound Na função
+
+6
+00:00:21.436 --> 00:00:27.540
+didMoveToView, inicialize essas duas ações
+de som como vimos no módulo anterior.
+
+7
+00:00:27.540 --> 00:00:34.260
+Use SKAction.playSoundFileNamed e passe
+como argumento o nome dos arquivos de som,
+
+8
+00:00:34.260 --> 00:00:38.320
+no caso, explosion e coin.
+
+9
+00:00:38.320 --> 00:00:42.380
+Execute a função de som
+explosionSound na função GameOver.
+
+10
+00:00:42.380 --> 00:00:45.920
+e a ação coinSound na função AddScore.
+
+11
+00:00:45.920 --> 00:00:50.768
+Vamos aproveitar e remover o
+computador de nós e o indicador
+
+12
+00:00:50.768 --> 00:00:54.250
+de quadros por segundo através
+do código do GameViewController.
+
+13
+00:00:54.250 --> 00:00:59.180
+fazendo showFPS = false
+
+14
+00:00:59.180 --> 00:01:04.060
+e showNodeCount = false.
+
+15
+00:01:04.060 --> 00:01:07.480
+Rode no simulador para ver
+esse jogo simples finalizado.
+
+16
+00:01:07.480 --> 00:01:14.600
+[SOM_DE_JOGO]
+
+17
+00:01:14.600 --> 00:01:21.470
+[SOM_DE_JOGO] [SOM_DE_JOGO]
+
+18
+00:01:21.470 --> 00:01:26.612
+Na próxima aula faremos uma
+recapitulação do módulo.
+
+19
+00:01:26.612 --> 00:01:27.400
+Até lá.

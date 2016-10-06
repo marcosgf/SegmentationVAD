@@ -1,0 +1,322 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.458
+Olá.
+Você viu como modelar o atraso na função
+
+2
+00:00:03.458 --> 00:00:05.010
+de transferência.
+
+3
+00:00:05.010 --> 00:00:09.490
+Agora, isso não nos diz muito sobre
+o efeito do atraso na prática.
+
+4
+00:00:09.490 --> 00:00:13.873
+Para entender isso, você vai aprender
+a representar o efeito do atraso
+
+5
+00:00:13.873 --> 00:00:18.540
+no diagrama de Bode para ver como ele
+afeta os índices de resposta transitória.
+
+6
+00:00:18.540 --> 00:00:21.820
+Como você aprendeu anteriormente,
+
+7
+00:00:21.820 --> 00:00:25.526
+o atraso de delta unidades de
+tempo equivale a multiplicar
+
+8
+00:00:25.526 --> 00:00:30.412
+a função de transferência do sistema sem
+atraso por e elevado a menos delta s.
+
+9
+00:00:30.412 --> 00:00:36.050
+Então vamos separar a função de
+transferência do sistema 2 partes:
+
+10
+00:00:36.050 --> 00:00:41.394
+G de s é igual a G n de s
+e elevado a menos delta s.
+
+11
+00:00:41.394 --> 00:00:46.460
+que Gn (s) é a função de transferência
+sem considerar o atraso.
+
+12
+00:00:46.460 --> 00:00:51.681
+Assim, o módulo de G de j
+ômega dB é igual ao módulo
+
+13
+00:00:51.681 --> 00:00:57.650
+de G n de j ômega dB mais o módulo
+de e elevado a j delta ômega
+
+14
+00:00:57.650 --> 00:01:03.016
+dB que é igual ao módulo de G n de j
+ômega dB E a fase de G de j ômega é
+
+15
+00:01:03.016 --> 00:01:09.950
+igual à fase de G n de j ômega mais a fase
+de e elevado a menos j delta ômega,
+
+16
+00:01:09.950 --> 00:01:14.305
+que é igual a fase de G n de
+j ômega menos delta ômega.
+
+17
+00:01:14.305 --> 00:01:18.660
+Ou seja, podemos traçar o diagrama
+de Bode para Gn de j ômega.
+
+18
+00:01:18.660 --> 00:01:23.710
+O diagrama de módulo de G de j ômega será
+exatamente o mesmo de Gn de j ômega.
+
+19
+00:01:23.710 --> 00:01:27.760
+Já para obter o diagrama
+de fase de G de j ômega,
+
+20
+00:01:27.760 --> 00:01:32.139
+basta traçar o de Gn de j ômega com as
+regras usuais nas frequências de quebra e
+
+21
+00:01:32.139 --> 00:01:36.370
+depois subtrair δω (delta ômega)
+para cada valor de ω (ômega).
+
+22
+00:01:36.370 --> 00:01:41.918
+Neste exemplo vamos traçar os diagramas
+exatos para cada caso para os seguintes
+
+23
+00:01:41.918 --> 00:01:47.161
+sistemas: G de s igual a G n de s,
+e elevado a menos delta
+
+24
+00:01:47.161 --> 00:01:52.882
+s que é igual a 4 sobre s
+mais 0,1 vezes s mais 1,
+
+25
+00:01:52.882 --> 00:01:57.620
+tudo isso multiplicado por
+e elevado a menos 0,2 s.
+
+26
+00:01:57.620 --> 00:02:02.190
+Então vamos separar a função de
+transferência do sistema 2 partes.
+
+27
+00:02:02.190 --> 00:02:06.561
+G de s igual a G n de s
+elevado a menos delta s,
+
+28
+00:02:06.561 --> 00:02:11.100
+que Gn de s é a função de
+transferência sem considerar o atraso.
+
+29
+00:02:11.100 --> 00:02:15.707
+No diagrama do módulo vemos que
+a frequência de cruzamento de 0 dB
+
+30
+00:02:15.707 --> 00:02:18.990
+é ômega c igual a 1,9
+radianos por segundo.
+
+31
+00:02:18.990 --> 00:02:24.899
+O diagrama de fase de Gn de j ômega,
+
+32
+00:02:24.899 --> 00:02:28.720
+essa frequência equivale a uma
+margem de fase de 31 graus.
+
+33
+00:02:28.720 --> 00:02:36.034
+Com esse valor podemos estimar
+o fator de amortecimento,
+
+34
+00:02:36.034 --> 00:02:40.977
+si aproximadamente pm sobre 100
+que dá 0,31 e o sobressinal
+
+35
+00:02:40.977 --> 00:02:45.266
+mp igual a menos pi vezes
+0,31 sobre a raiz de
+
+36
+00:02:45.266 --> 00:02:49.910
+1 menos 0,31 ao quadrado
+que é igual a 0,36.
+
+37
+00:02:49.910 --> 00:02:55.080
+Já o tempo de subida deve
+ser tr é igual a pi menos
+
+38
+00:02:55.080 --> 00:03:00.092
+arco cosseno de 0,31
+sobre 1,9 vezes a raiz
+
+39
+00:03:00.092 --> 00:03:04.679
+de 1 menos 0,31 ao quadrado,
+que dá 1 segundo.
+
+40
+00:03:04.679 --> 00:03:09.562
+Agora, olhando os diagramas com atraso,
+sabemos que o ganho não vai mudar,
+
+41
+00:03:09.562 --> 00:03:15.048
+de forma que a frequência de cruzamento
+de 0 dB permanece sendo 1,9 rad/s.
+
+42
+00:03:15.048 --> 00:03:19.950
+Já a margem de fase é reduzida
+para cerca de 10 graus,
+
+43
+00:03:19.950 --> 00:03:25.481
+o que reduz o fator de
+amortecimento a si igual
+
+44
+00:03:25.481 --> 00:03:30.558
+a PM sobre 100 igual a 0,10 resultando na
+
+45
+00:03:30.558 --> 00:03:35.913
+estimativa de sobressinal Mp
+igual a e elevado a menos pi 0,10
+
+46
+00:03:35.913 --> 00:03:41.667
+sobre raiz de menos 1,10 ao quadrado,
+que dá 0,73.
+
+47
+00:03:41.667 --> 00:03:44.750
+E o tempo de subida,
+
+48
+00:03:44.750 --> 00:03:49.614
+tr igual a pi menos arco cosseno
+de 0,10 sobre 1,9 vezes a raiz de
+
+49
+00:03:49.614 --> 00:03:54.553
+1 menos 0,10 ao quadrado, que dá 0,88.
+
+50
+00:03:54.553 --> 00:03:59.675
+Vamos conferir estas estimativas
+na resposta ao degrau unitário,
+
+51
+00:03:59.675 --> 00:04:01.950
+primeiramente para o sistema sem atraso.
+
+52
+00:04:01.950 --> 00:04:09.690
+Da figura, concluímos que Mp igual
+a 0,41 e Tr igual a 0,92 segundos.
+
+53
+00:04:09.690 --> 00:04:15.077
+Agora, para o sistema com
+atraso tem-se a seguinte
+
+54
+00:04:15.077 --> 00:04:21.400
+figura: onde podemos concluir que Mp
+igual a 0,79 e tr igual a 1 segundo.
+
+55
+00:04:21.400 --> 00:04:28.779
+Os valores estão próximos de
+nossas estimativas, particular
+
+56
+00:04:28.779 --> 00:04:33.070
+para o sobressinal, que foi radicalmente
+aumentado pelo atraso de transporte.
+
+57
+00:04:33.070 --> 00:04:34.057
+Além disso,
+
+58
+00:04:34.057 --> 00:04:38.878
+você pode observar que o comportamento
+da saída foi substancialmente
+
+59
+00:04:38.878 --> 00:04:42.770
+mais oscilatório devido à redução da
+margem de fase ocasionada pelo atraso.
+
+60
+00:04:42.770 --> 00:04:48.420
+Esse efeito poderia, inclusive, levar à
+instabilidade do sistema Malha Fechada.
+
+61
+00:04:48.420 --> 00:04:52.600
+Agora você é capaz de determinar
+a perda de desempenho devida ao atraso.
+
+62
+00:04:52.600 --> 00:04:57.546
+Com isso, você está apto a compensar
+essa perda, ajustando o ganho de forma
+
+63
+00:04:57.546 --> 00:05:02.580
+a diminuir a frequência de cruzamento de
+0 dB e, assim, aumentar a margem de fase.
+
+64
+00:05:02.580 --> 00:05:06.500
+No video seguinte, você aprenderá
+a usar o diagrama da Nyquist para
+
+65
+00:05:06.500 --> 00:05:09.200
+visualizar o efeito do
+atraso de transporte.
+
+66
+00:05:09.200 --> 00:05:14.440
+Obrigado!

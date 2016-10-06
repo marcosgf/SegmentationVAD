@@ -1,0 +1,642 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.720
+[MÚSICA]
+
+2
+00:00:05.720 --> 00:00:11.475
+Olá!
+
+3
+00:00:11.475 --> 00:00:16.335
+Retomando o módulo "Inferindo
+Propriedades e Características de uma
+
+4
+00:00:16.335 --> 00:00:21.332
+População" gostaria de discutir
+com vocês a questão da correlação.
+
+5
+00:00:21.332 --> 00:00:26.287
+Nessa lição nós vamos concentrar
+na importância que correlação
+
+6
+00:00:26.287 --> 00:00:28.060
+tem para marketing.
+
+7
+00:00:28.060 --> 00:00:34.180
+Em marketing existe
+grande impacto prático,
+
+8
+00:00:34.180 --> 00:00:41.993
+de carácter exploratório, que nós podemos
+utilizar essa técnica a fim de entender
+
+9
+00:00:41.993 --> 00:00:46.990
+pouco melhor,
+por exemplo se algum esforço de vendas,
+
+10
+00:00:46.990 --> 00:00:52.970
+no ponto de venda surtiu efeito em vendas.
+
+11
+00:00:52.970 --> 00:00:58.369
+Por exemplo se o preço colocado no produto
+
+12
+00:00:58.369 --> 00:01:03.795
+afetou a propensão dos
+indivíduos a comprar o produto.
+
+13
+00:01:03.795 --> 00:01:08.290
+Por exemplo se a ação que
+eu fiz de propaganda na TV
+
+14
+00:01:08.290 --> 00:01:12.420
+afetou a atitude com
+relação a minha marca,
+
+15
+00:01:12.420 --> 00:01:17.350
+ou mesmo afetou a disposição
+deles de comprar o produto.
+
+16
+00:01:17.350 --> 00:01:21.118
+Então para marketing correlação
+é algo super importante.
+
+17
+00:01:21.118 --> 00:01:25.390
+Nesse momento eu,
+estamos mais preocupados em
+
+18
+00:01:25.390 --> 00:01:29.862
+identificar a associação entre variáveis,
+
+19
+00:01:29.862 --> 00:01:34.201
+ainda não entraremos no
+tópico sobre causalidade.
+
+20
+00:01:34.201 --> 00:01:39.100
+Aqui nós queremos justamente verificar
+se existe a relação entre duas variáveis
+
+21
+00:01:39.100 --> 00:01:43.598
+e para marketing isso
+é bastante importante.
+
+22
+00:01:43.598 --> 00:01:51.730
+Em correlação nós estaremos
+fazendo uma análise bidimensional.
+
+23
+00:01:51.730 --> 00:01:54.956
+Qual que é o objetivo da
+análise bidimensional?
+
+24
+00:01:54.956 --> 00:01:59.156
+É encontrar a associação ou
+relação entre variáveis e essas
+
+25
+00:01:59.156 --> 00:02:04.288
+relações elas podem ser
+identificadas por meio de gráficos,
+
+26
+00:02:04.288 --> 00:02:09.730
+ou mesmo medidas numéricas o que
+facilita bastante a vida do profissional
+
+27
+00:02:09.730 --> 00:02:15.997
+de marketing que precisa endereçar
+problemas que envolvem orçamento,
+
+28
+00:02:15.997 --> 00:02:21.446
+custo e envolve resultados:
+compra ou não de produtos.
+
+29
+00:02:21.446 --> 00:02:26.725
+Vale frisar que a associação está
+relacionada à mudança de opinião sobre o
+
+30
+00:02:26.725 --> 00:02:32.690
+comportamento de uma variável na presença
+de informação de uma outra variável.
+
+31
+00:02:32.690 --> 00:02:37.722
+Então no caso quando eu chamo de
+variáveis, assim como eu falei para vocês,
+
+32
+00:02:37.722 --> 00:02:43.730
+existem exemplos de consumo de produto e
+desconto que eu ofereço naquele produto,
+
+33
+00:02:43.730 --> 00:02:48.370
+naquele ponto de venda,
+numa determinada época do tempo.
+
+34
+00:02:48.370 --> 00:02:53.989
+A associação entre duas
+variáveis quantitativas
+
+35
+00:02:53.989 --> 00:02:58.949
+ela pode ser analisada com base
+num gráfico que é conhecido como
+
+36
+00:02:58.949 --> 00:03:03.060
+gráfico de dispersão ou também
+como diagrama de dispersão.
+
+37
+00:03:03.060 --> 00:03:08.400
+Esse é recurso gráfico,
+visual, bastante poderoso,
+
+38
+00:03:08.400 --> 00:03:13.750
+que nos permite visualizar o comportamento
+do conjunto de duas variáveis.
+
+39
+00:03:13.750 --> 00:03:19.610
+Em apresentações que você precisa fazer
+
+40
+00:03:19.610 --> 00:03:27.423
+relacionadas a variáveis
+diretamente ligadas a marketing,
+
+41
+00:03:27.423 --> 00:03:32.272
+o diagrama de dispersão já permite
+a gente inferir sobre a associação dessas
+
+42
+00:03:32.272 --> 00:03:36.561
+duas variáveis, como elas se comportam.
+
+43
+00:03:36.561 --> 00:03:41.813
+Existe também uma outra
+forma de medir a associação
+
+44
+00:03:41.813 --> 00:03:47.190
+entre duas variáveis que é justamente
+o coeficiente de correlação linear.
+
+45
+00:03:47.190 --> 00:03:52.079
+O coeficiente de correlação linear
+ele mede a intensidade da associação
+
+46
+00:03:52.079 --> 00:03:53.690
+entre duas variáveis.
+
+47
+00:03:53.690 --> 00:03:58.326
+Essa questão da intensidade é bastante
+importante porque complementa a nossa
+
+48
+00:03:58.326 --> 00:04:03.464
+análise do diagrama de dispersão
+nos informando com pouquinho mais
+
+49
+00:04:03.464 --> 00:04:09.349
+de precisão se a associação ela é positiva
+ou negativa por exemplo ou inclusive
+
+50
+00:04:09.349 --> 00:04:15.094
+utilizando de algum teste de hipótese como
+a gente viu na lição de teste de hipótese,
+
+51
+00:04:15.094 --> 00:04:19.650
+para informar se essa correlação
+ela é ou não significativa.
+
+52
+00:04:19.650 --> 00:04:23.606
+Então vamos primeiro para
+o gráfico de dispersão.
+
+53
+00:04:23.606 --> 00:04:27.200
+Como a gente pode ver no
+gráfico de dispersão,
+
+54
+00:04:27.200 --> 00:04:31.400
+existe aí no eixo y vendas,
+
+55
+00:04:31.400 --> 00:04:36.570
+em milhares de reais e no
+eixo x o impacto de promoção.
+
+56
+00:04:36.570 --> 00:04:44.376
+Então quantos dias eu ofereci
+desconto daquele produto,
+
+57
+00:04:44.376 --> 00:04:48.720
+naquele ponto de venda,
+naquela determinada região?
+
+58
+00:04:48.720 --> 00:04:55.790
+Qual é associação que existe desses
+dias de promoção com a venda?
+
+59
+00:04:55.790 --> 00:05:01.560
+Será que o consumidor ele se sensibilizou
+mais com relação ao produto ou não?
+
+60
+00:05:01.560 --> 00:05:07.094
+Nesse momento é interessante
+a gente observar
+
+61
+00:05:07.094 --> 00:05:14.472
+que os pontos eles caminham na
+direção do quadrante superior direito.
+
+62
+00:05:14.472 --> 00:05:19.898
+Com base no gráfico de dispersão eu
+já consigo observar a associação
+
+63
+00:05:19.898 --> 00:05:27.725
+positiva entre vendas e o
+impacto da promoção em dias.
+
+64
+00:05:27.725 --> 00:05:32.509
+Visualmente a gente consegue
+perceber que os pontos
+
+65
+00:05:32.509 --> 00:05:37.091
+eles caminham na direção do
+quadrante superior direito.
+
+66
+00:05:37.091 --> 00:05:42.045
+Com base no diagrama de
+dispersão a gente consegue
+
+67
+00:05:42.045 --> 00:05:46.990
+já inferir o tipo de associação
+que existe entre as variáveis.
+
+68
+00:05:46.990 --> 00:05:53.260
+Nós estamos vendo vendas e
+intensidade de promoção.
+
+69
+00:05:53.260 --> 00:05:58.315
+Basicamente o diagrama ele
+vai nos informar se existe
+
+70
+00:05:58.315 --> 00:06:03.449
+uma associação positiva, negativa,
+ou se não existe associação.
+
+71
+00:06:03.449 --> 00:06:10.098
+Então esse primeiro gráfico, mostra
+para a gente de maneira bastante clara,
+
+72
+00:06:10.098 --> 00:06:15.560
+uma tendência de crescimento,
+então quanto maior promoção, maior vendas.
+
+73
+00:06:15.560 --> 00:06:19.625
+Então os pontos eles estão
+dispersos de forma a eu,
+
+74
+00:06:19.625 --> 00:06:25.312
+inclusive ser capaz de traçar
+uma linha de tendência,
+
+75
+00:06:25.312 --> 00:06:31.221
+que vai do 0 até ao canto
+superior direito do gráfico.
+
+76
+00:06:31.221 --> 00:06:35.524
+Quando os pontos se comportam
+dessa forma no gráfico,
+
+77
+00:06:35.524 --> 00:06:39.390
+eu posso afirmar que existe
+uma associação positiva.
+
+78
+00:06:39.390 --> 00:06:44.345
+E por hora eu só afirmaria uma associação
+positiva, eu não consigo ainda inferir
+
+79
+00:06:44.345 --> 00:06:49.300
+qual a intensidade dessa associação
+positiva e se ela é significativa ou não.
+
+80
+00:06:49.300 --> 00:06:54.413
+Uma outra, outro comportamento
+
+81
+00:06:54.413 --> 00:06:57.887
+que existe de associação entre duas
+
+82
+00:06:57.887 --> 00:07:02.600
+variáveis é justamente a inversa,
+a associação negativa.
+
+83
+00:07:02.600 --> 00:07:07.022
+Então se eu olhar no próximo gráfico,
+
+84
+00:07:07.022 --> 00:07:12.376
+os pontos eles estão
+dispersos de forma a eu
+
+85
+00:07:12.376 --> 00:07:17.533
+conseguir traçar uma
+curva de tendência que
+
+86
+00:07:17.533 --> 00:07:25.883
+vai do topo superior esquerdo
+para o canto inferior direito,
+
+87
+00:07:25.883 --> 00:07:30.425
+então de forma que essas duas variáveis,
+
+88
+00:07:30.425 --> 00:07:35.989
+por exemplo se eu aumentar preço
+o que vai acontecer com vendas?
+
+89
+00:07:35.989 --> 00:07:39.180
+Aumentando o preço, vendas vai cair.
+
+90
+00:07:39.180 --> 00:07:46.885
+E aí finalmente uma terceira inferência
+que eu tiro desse diagrama de dispersão,
+
+91
+00:07:46.885 --> 00:07:51.957
+é quando na verdade eu não consigo
+afirmar que existe uma associação entre
+
+92
+00:07:51.957 --> 00:07:58.175
+essas duas variáveis e esse
+gráfico ele mostra claramente
+
+93
+00:07:58.175 --> 00:08:04.067
+que se eu aumentar ou diminuir essa ação,
+
+94
+00:08:04.067 --> 00:08:09.021
+as vendas elas reagem de maneira talvez
+
+95
+00:08:09.021 --> 00:08:13.773
+até aleatória, sem padrão definido.
+
+96
+00:08:13.773 --> 00:08:18.935
+Agora que nós fomos capazes
+de entender como os diagramas
+
+97
+00:08:18.935 --> 00:08:24.761
+de dispersão eles se comportam,
+é interessante nós aprendermos
+
+98
+00:08:24.761 --> 00:08:29.995
+como calcular coeficiente,
+que vai nos informar a intensidade
+
+99
+00:08:29.995 --> 00:08:35.128
+e vai permitir inclusive, fazer teste
+de hipótese em cima dessa intensidade.
+
+100
+00:08:35.128 --> 00:08:40.190
+O coeficiente de correlação linear,
+ele basicamente leva em consideração
+
+101
+00:08:40.190 --> 00:08:45.300
+a covariância de duas variáveis,
+assim como a gente pode ver na fórmula,
+
+102
+00:08:45.300 --> 00:08:50.339
+dividida pelo produto do desvio
+padrão dessas duas variáveis.
+
+103
+00:08:50.339 --> 00:08:54.159
+Muito bem, grande parte dos pacotes hoje,
+
+104
+00:08:54.159 --> 00:08:59.882
+de softwares estatísticos e até em
+Excel eles já calculam isso para nós,
+
+105
+00:08:59.882 --> 00:09:04.930
+a gente não precisa calcular isso na mão,
+como no passado a gente precisava.
+
+106
+00:09:04.930 --> 00:09:09.570
+O que eu gostaria que você
+tivesse uma boa noção,
+
+107
+00:09:09.570 --> 00:09:14.210
+é de como esse coeficiente, ele varia.
+
+108
+00:09:14.210 --> 00:09:18.734
+Então o coeficiente que é conhecido
+numa anotação estatística,
+
+109
+00:09:18.734 --> 00:09:24.310
+como o r minúsculo, ele varia de -1 a 1.
+
+110
+00:09:24.310 --> 00:09:29.737
+Onde, se ele estiver próximo do 0,
+
+111
+00:09:29.737 --> 00:09:36.430
+é como aquele gráfico que nós vimos de
+dispersão, onde não não havia associação.
+
+112
+00:09:36.430 --> 00:09:39.940
+Os pontos estarão dispersos,
+
+113
+00:09:39.940 --> 00:09:44.860
+no gráfico e a correlação no
+final seria muito próxima de 0.
+
+114
+00:09:44.860 --> 00:09:49.305
+Essa medida de associação
+linear entre duas variáveis,
+
+115
+00:09:49.305 --> 00:09:55.851
+ela pode também nos informar
+coeficiente próximo de 1, 1 positivo.
+
+116
+00:09:55.851 --> 00:10:00.675
+Isso nos indica que a correlação
+entre essas duas variáveis,
+
+117
+00:10:00.675 --> 00:10:04.177
+ou seja a associação bilateral,
+ela é positiva.
+
+118
+00:10:04.177 --> 00:10:09.885
+Agora esse coeficiente ele
+pode também nos informar
+
+119
+00:10:09.885 --> 00:10:15.004
+número próximo de -1, ou seja, negativo.
+
+120
+00:10:15.004 --> 00:10:19.847
+Aí o que eu posso inferir é que
+a associação entre essas duas variáveis,
+
+121
+00:10:19.847 --> 00:10:20.980
+ela é negativa.
+
+122
+00:10:20.980 --> 00:10:24.341
+Como a gente viu no exemplo
+do diagrama de dispersão,
+
+123
+00:10:24.341 --> 00:10:28.460
+onde o aumento de preço,
+acabava levando a uma quebra de vendas.
+
+124
+00:10:28.460 --> 00:10:31.998
+E uma diminuição de preço acaba
+levando a aumento de vendas.
+
+125
+00:10:31.998 --> 00:10:36.626
+Uma vez que nós entendemos como
+a correlação funciona, eu convido vocês
+
+126
+00:10:36.626 --> 00:10:42.978
+a assistirem video, que é Ted Talk
+de uma professora de estatística,
+
+127
+00:10:42.978 --> 00:10:49.415
+que endereça justamente a esse tema
+que estamos vendo nessa videoaula.
+
+128
+00:10:49.415 --> 00:10:51.311
+E após assistir esse vídeo,
+
+129
+00:10:51.311 --> 00:10:57.057
+volte para a próxima videoaula que
+vai de maneira bem direta e curta,
+
+130
+00:10:57.057 --> 00:11:01.988
+endereçar os riscos de
+correlações espúrias,
+
+131
+00:11:01.988 --> 00:11:07.510
+ou seja, associações não diretas,
+entre duas variáveis.
+
+132
+00:11:07.510 --> 00:11:15.510
+Espero vocês no próximo vídeo.
+
+133
+00:11:15.510 --> 00:11:22.445
+[SEM ÁUDIO]
+
+134
+00:11:22.445 --> 00:11:29.380
+[SEM ÁUDIO]

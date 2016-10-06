@@ -1,0 +1,670 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.897
+Após esse vídeo, você será capaz
+de explicar onde os ramos do
+
+2
+00:00:04.897 --> 00:00:09.227
+LGR começam e terminam e será
+capaz também de calcular
+
+3
+00:00:09.227 --> 00:00:13.460
+com que ângulo eles partem
+e chegam de polos e zeros.
+
+4
+00:00:13.460 --> 00:00:17.926
+Para ilustrar a 4ª regra,
+vamos escrever o denominador da função de
+
+5
+00:00:17.926 --> 00:00:22.575
+transferência malha fechada
+como: denominador de T de s
+
+6
+00:00:22.575 --> 00:00:27.401
+igual a denominador de G de s
+mais k numerador de G de s.
+
+7
+00:00:27.401 --> 00:00:30.000
+Para k muito próximo de 0,
+
+8
+00:00:30.000 --> 00:00:35.010
+podemos aproximar o denominador malha
+fechada pelo denominador malha aberta.
+
+9
+00:00:35.010 --> 00:00:41.770
+Então os ramos do LGR começam nos polos
+malha aberta para k próximo de 0.
+
+10
+00:00:41.770 --> 00:00:47.191
+E para k muito grande podemos desprezar
+o denominador de G de s e fazer
+
+11
+00:00:47.191 --> 00:00:53.912
+a aproximação: denominador de T de s é
+aproximadamente k numerador de G de s.
+
+12
+00:00:53.912 --> 00:00:56.038
+Então para k muito grande,
+
+13
+00:00:56.038 --> 00:01:00.370
+os polos malha fechada estão
+próximos dos zeros malha aberta.
+
+14
+00:01:00.370 --> 00:01:02.029
+Quanto maior o valor de k,
+
+15
+00:01:02.029 --> 00:01:06.790
+mais próximos dos zeros malha aberta
+estarão os polos malha fechada.
+
+16
+00:01:06.790 --> 00:01:11.950
+E a 4ª regra é então: os
+ramos do Lugar Geométrico
+
+17
+00:01:11.950 --> 00:01:17.110
+das Raízes começam nos polos malha aberta
+e terminam nos zeros malha aberta.
+
+18
+00:01:17.110 --> 00:01:20.520
+Mas e se tivermos mais polos do que zeros?
+
+19
+00:01:20.520 --> 00:01:26.100
+A regra 1 diz que o número de ramos é
+igual ao número de polos malha fechada.
+
+20
+00:01:26.100 --> 00:01:32.310
+E, se tivermos por exemplo 3 polos malha
+aberta e apenas 1 zero malha aberta,
+
+21
+00:01:32.310 --> 00:01:40.360
+o LGR terá 3 ramos, cada deles começará
+para k próximo de 0 cada dos três polos.
+
+22
+00:01:40.360 --> 00:01:42.971
+E os 3 ramos irão para único zero?
+
+23
+00:01:42.971 --> 00:01:46.950
+E se a função de transferência
+não tivesse nenhum zero?
+
+24
+00:01:46.950 --> 00:01:50.888
+Nesse caso,
+quando temos mais polos do que zeros,
+
+25
+00:01:50.888 --> 00:01:55.989
+que é a situação mais comum,
+utilizamos a regra 5: seja n o número
+
+26
+00:01:55.989 --> 00:02:01.390
+de polos e m o número de zeros da
+função de transferência malha aberta,
+
+27
+00:02:01.390 --> 00:02:05.770
+a regra 5 diz que, se o n maior que m,
+
+28
+00:02:05.770 --> 00:02:11.261
+n menos m ramos do Lugar Geométrico das
+Raízes vão para o infinito tendendo
+
+29
+00:02:11.261 --> 00:02:17.423
+a assíntotas com ângulos 180 graus mais
+l 360 graus dividido por n menos m.
+
+30
+00:02:17.423 --> 00:02:22.328
+E essas assíntotas se cruzam
+no eixo real no somatório dos
+
+31
+00:02:22.328 --> 00:02:26.650
+polos menos somatório dos
+zeros dividido por n menos m.
+
+32
+00:02:26.650 --> 00:02:33.670
+Vamos ver como essa regra se aplica
+a sistemas sem zeros e com 1, 2 e 3 polos.
+
+33
+00:02:33.670 --> 00:02:37.715
+Para n igual a 1 e m igual a 0,
+
+34
+00:02:37.715 --> 00:02:41.760
+a regra 5 na verdade já é
+contemplada pela regra 3.
+
+35
+00:02:41.760 --> 00:02:46.025
+Mas vamos ver o que a regra,
+ao que a regra 5 nos leva.
+
+36
+00:02:46.025 --> 00:02:50.290
+Teremos uma assíntota com
+fase mais ou menos 180 graus,
+
+37
+00:02:50.290 --> 00:02:54.355
+que cruzará o eixo real na
+própria posição do polo.
+
+38
+00:02:54.355 --> 00:02:58.420
+Ou seja a assíntota é o
+próprio eixo real negativo.
+
+39
+00:02:58.420 --> 00:03:04.991
+Nesse caso o LGR não tende à assíntota,
+ele já está sobre a assíntota, uma
+
+40
+00:03:04.991 --> 00:03:11.030
+vez que pela regra 3 o eixo real negativo,
+à esquerda do polo, faz parte do LGR.
+
+41
+00:03:11.030 --> 00:03:17.340
+Para n igual a 2 e m igual a 0,
+as coisas ficam pouco mais interessantes.
+
+42
+00:03:17.340 --> 00:03:23.650
+Temos 2 assíntotas com fase 180
+graus mais l 360 graus sobre 2.
+
+43
+00:03:23.650 --> 00:03:29.640
+Uma assíntota terá fase 90 graus e
+a outra 270 graus ou menos 90 graus
+
+44
+00:03:29.640 --> 00:03:34.800
+e essas 2 assíntotas cruzarão o eixo
+real no ponto médio entre os 2 polos,
+
+45
+00:03:34.800 --> 00:03:39.600
+que é o que já tínhamos obtido para
+o sistema do tipo 1 sem zeros.
+
+46
+00:03:39.600 --> 00:03:44.190
+Para n igual a 3 e m igual a 0,
+teremos 3 assíntotas
+
+47
+00:03:44.190 --> 00:03:48.780
+com fase 180 graus mais l
+360 graus dividido por 3.
+
+48
+00:03:48.780 --> 00:03:51.602
+Uma assíntota terá fase 60 graus,
+
+49
+00:03:51.602 --> 00:03:56.440
+a outra 180 graus e a outra
+300 graus ou menos 60 graus.
+
+50
+00:03:56.440 --> 00:04:00.376
+Lembre-se, a regra 2 nos
+diz que o LGR é simétrico,
+
+51
+00:04:00.376 --> 00:04:03.800
+então se temos uma
+assíntota com ângulo alfa,
+
+52
+00:04:03.800 --> 00:04:09.522
+teremos também uma assíntota com ângulo
+menos alfa, que foi o caso dos 90 graus
+
+53
+00:04:09.522 --> 00:04:14.917
+para n menos m igual a 2 e agora os
+60 graus para n menos m igual a 3.
+
+54
+00:04:14.917 --> 00:04:20.320
+E essas 2 assíntotas cruzarão o eixo real
+na média aritmética entre os 3 polos.
+
+55
+00:04:20.320 --> 00:04:25.320
+Note que os ângulos das assíntotas
+dependem apenas do grau relativo de
+
+56
+00:04:25.320 --> 00:04:27.690
+G de s ou da diferença entre n e m.
+
+57
+00:04:27.690 --> 00:04:33.220
+Já o ponto de cruzamento das assíntotas
+vai depender do grau relativo,
+
+58
+00:04:33.220 --> 00:04:37.589
+mas também depende dos polos e dos
+zeros específicos de cada caso.
+
+59
+00:04:37.589 --> 00:04:42.523
+Podemos considerar que esse ponto seria
+algo como o centro de massa dos polos e
+
+60
+00:04:42.523 --> 00:04:43.060
+zeros.
+
+61
+00:04:43.060 --> 00:04:47.302
+Lembre-se de que você deve somar
+os polos e subtrair os zeros,
+
+62
+00:04:47.302 --> 00:04:52.198
+assim como o número de polos entra como
+número positivo e o número de zeros
+
+63
+00:04:52.198 --> 00:04:55.250
+entra como número negativo no denominador.
+
+64
+00:04:55.250 --> 00:05:00.439
+Vamos fazer uma demonstração das
+assíntotas para esse último caso,
+
+65
+00:05:00.439 --> 00:05:05.726
+com n igual a 3 e m igual a 0,
+teremos o denominador de T de s vai
+
+66
+00:05:05.726 --> 00:05:10.776
+ser s menos p1 s menos p2 s
+menos p3 mais k vezes ganho b
+
+67
+00:05:10.776 --> 00:05:16.618
+0 e os polos malha fechada são
+as raízes da equação s menos p1
+
+68
+00:05:16.618 --> 00:05:21.677
+s menos p2 s menos p3 mais k b,
+k b 0 igual a 0,
+
+69
+00:05:21.677 --> 00:05:27.151
+ou seja, se quadradinho é polo
+malha fechada, precisamos ter
+
+70
+00:05:27.151 --> 00:05:32.473
+quadradinho menos p1 quadradinho menos p2
+quadradinho menos p3 mais k b 0 igual a 0,
+
+71
+00:05:32.473 --> 00:05:38.457
+que podemos reescrever passando o k b
+0 para o lado direito como quadradinho
+
+72
+00:05:38.457 --> 00:05:43.275
+menos p1 quadradinho menos p2 quadradinho
+menos p3 igual a menos k vezes b 0.
+
+73
+00:05:43.275 --> 00:05:48.199
+Agora note que, para k muito grande,
+a raiz desse polinômio,
+
+74
+00:05:48.199 --> 00:05:52.600
+que é o quadradinho, também precisa
+ser muito grande módulo, já que p1,
+
+75
+00:05:52.600 --> 00:05:56.750
+p2 e p3 são polos malha aberta
+e não podem ser alterados.
+
+76
+00:05:56.750 --> 00:06:00.363
+E para quadradinho muito grande,
+
+77
+00:06:00.363 --> 00:06:05.600
+podemos aproximar quadradinho
+menos o polo por quadradinho,
+
+78
+00:06:05.600 --> 00:06:11.200
+ficando com quadradinho ao cubo
+aproximadamente igual a menos k vezes b 0.
+
+79
+00:06:11.200 --> 00:06:16.077
+Então a fase de quadradinho ao cubo
+vai ser a fase de menos k b 0,
+
+80
+00:06:16.077 --> 00:06:18.110
+que é menos 180 graus.
+
+81
+00:06:18.110 --> 00:06:22.046
+E aí nós temos que a fase de
+quadradinho vai ter que ser
+
+82
+00:06:22.046 --> 00:06:27.164
+aproximadamente 180 graus mais
+l 360 graus dividido por 3.
+
+83
+00:06:27.164 --> 00:06:31.555
+Para o cruzamento das assíntotas
+fazemos algo parecido.
+
+84
+00:06:31.555 --> 00:06:35.822
+Mas, ao invés de aproximar o polinômio
+quadradinho menos p1 quadradinho menos p2
+
+85
+00:06:35.822 --> 00:06:38.200
+quadradinho menos p3 por
+quadradinho ao cubo,
+
+86
+00:06:38.200 --> 00:06:41.560
+o aproximamos por quadradinho
+menos alfa ao cubo.
+
+87
+00:06:41.560 --> 00:06:46.359
+Pode ser demonstrado que alfa é
+a média aritmética dos 3 polos e que,
+
+88
+00:06:46.359 --> 00:06:51.323
+no caso geral, nós temos: alfa é igual
+ao somatório dos polos menos o somatório
+
+89
+00:06:51.323 --> 00:06:53.340
+dos zeros dividido por n menos m.
+
+90
+00:06:53.340 --> 00:06:57.394
+A regra 6 na verdade é mais uma
+constatação do que uma regra
+
+91
+00:06:57.394 --> 00:06:58.900
+propriamente dita.
+
+92
+00:06:58.900 --> 00:07:04.677
+A regra 4 nos diz que os ramos do LGR
+começam nos polos e terminam nos zeros e,
+
+93
+00:07:04.677 --> 00:07:07.740
+se tivermos polos e zeros
+complexos conjugados,
+
+94
+00:07:07.740 --> 00:07:12.977
+os ramos irão partir dos polos complexos
+conjugados segundo determinado
+
+95
+00:07:12.977 --> 00:07:17.540
+ângulo e chegarão aos zeros complexos
+conjugados segundo determinado ângulo.
+
+96
+00:07:17.540 --> 00:07:19.380
+E como calculamos esses ângulos?
+
+97
+00:07:19.380 --> 00:07:24.315
+Simples: consideramos ponto muito próximo
+do polo ou do zero complexo conjugado,
+
+98
+00:07:24.315 --> 00:07:26.987
+de modo que para os demais polos e zeros
+
+99
+00:07:26.987 --> 00:07:31.025
+esse poto está exatamente
+sobre o polo ou zero complexo.
+
+100
+00:07:31.025 --> 00:07:35.974
+Então calculamos os ângulos para os
+demais polos e zeros e vemos qual deve
+
+101
+00:07:35.974 --> 00:07:39.750
+ser o ângulo com relação ao polo
+ou zero complexo conjugado.
+
+102
+00:07:39.750 --> 00:07:44.630
+Regra 6: para determinar o ângulo
+de partida de polo complexo
+
+103
+00:07:44.630 --> 00:07:49.297
+p1: Primeiro, calcule todos os
+ângulos fazendo s igual a p1.
+
+104
+00:07:49.297 --> 00:07:55.050
+Segundo, o ângulo de partida do ramo será
+a diferença entre o resultado e 180 graus.
+
+105
+00:07:55.050 --> 00:08:00.130
+Para o ângulo de chegada zero,
+o procedimento é basicamente o mesmo.
+
+106
+00:08:00.130 --> 00:08:03.752
+Vamos ver exemplo com sistema
+de 3ª ordem do tipo 1,
+
+107
+00:08:03.752 --> 00:08:07.970
+com par de polos complexos conjugados
+imaginários puros e 2 zeros,
+
+108
+00:08:07.970 --> 00:08:11.710
+o que ilustrará a importância da
+correta determinação desses ângulos.
+
+109
+00:08:11.710 --> 00:08:16.526
+A função de transferência para esse nosso
+exemplo é: G de s é igual a s mais 2
+
+110
+00:08:16.526 --> 00:08:19.740
+s mais 4 sobre s s ao quadrado mais 4.
+
+111
+00:08:19.740 --> 00:08:25.776
+Temos 3 ramos: eixo real, o trecho entre
+0 e o menos 2 faz parte do LGR e já é
+
+112
+00:08:25.776 --> 00:08:30.900
+desses ramos, a reta real negativa a
+partir de menos 4 também faz parte do LGR.
+
+113
+00:08:30.900 --> 00:08:35.767
+Como n igual a 3 e m igual a 2 temos
+apenas uma assíntota a 180 graus,
+
+114
+00:08:35.767 --> 00:08:38.950
+que é justamente a reta real
+negativa a partir de menos 4.
+
+115
+00:08:38.950 --> 00:08:43.600
+2 ramos do LGR devem começar nos 2
+polos que estão mais ou menos 2j,
+
+116
+00:08:43.600 --> 00:08:46.782
+como LGR é simétrico relação ao eixo real,
+
+117
+00:08:46.782 --> 00:08:51.240
+precisamos calcular o ângulo
+de partida apenas do polo 2j.
+
+118
+00:08:51.240 --> 00:08:56.003
+Vamos fazer s igual a 2j e calcular os
+ângulos com relação aos outros polos e
+
+119
+00:08:56.003 --> 00:08:56.540
+zeros.
+
+120
+00:08:56.540 --> 00:09:01.700
+Temos então que a soma dos outros
+ângulos é menos 108,4 graus.
+
+121
+00:09:01.700 --> 00:09:06.954
+E como a fase de G de quadradinho
+é aproximadamente menos 108,4
+
+122
+00:09:06.954 --> 00:09:12.699
+graus menos a fase de quadradinho
+menos 2j, precisamos ter menos 108,4
+
+123
+00:09:12.699 --> 00:09:17.952
+graus menos a fase de quadradinho
+menos 2j aproximadamente 180 graus,
+
+124
+00:09:17.952 --> 00:09:22.735
+o que nos leva à fase de quadradinho
+menos 2j aproximadamente igual
+
+125
+00:09:22.735 --> 00:09:27.250
+a menos 288,4 graus,
+que equivale a 71,6 graus.
+
+126
+00:09:27.250 --> 00:09:35.390
+Ou seja, o ramo parte do polo 2j com
+ângulo 71,6 graus ou menos 288,4 graus.
+
+127
+00:09:35.390 --> 00:09:39.710
+Note que com esse ângulo o ramo vai
+inicialmente para o semiplano direito.
+
+128
+00:09:39.710 --> 00:09:44.134
+Então o sistema malha fechada fica
+instável para valores de ganho
+
+129
+00:09:44.134 --> 00:09:45.230
+próximos de 0.
+
+130
+00:09:45.230 --> 00:09:50.056
+Você pode fazer a mesma análise
+para G de s igual a s mais 2
+
+131
+00:09:50.056 --> 00:09:54.436
+s mais 1 sobre s s ao quadrado
+mais 4 e você pode constatar que,
+
+132
+00:09:54.436 --> 00:09:57.909
+para ganhos próximos de 0,
+o sistema será estável
+
+133
+00:09:57.909 --> 00:10:02.890
+malha fechada e o procedimento no caso
+de zeros complexos é exatamente o mesmo.
+
+134
+00:10:02.890 --> 00:10:07.875
+Agora você já é capaz de explicar onde
+os ângulos do LGR começam e terminam e
+
+135
+00:10:07.875 --> 00:10:12.710
+de calcular com que ângulos eles partem
+e chegam de polos e zeros complexos.
+
+136
+00:10:12.710 --> 00:10:17.373
+No próximo vídeo você verá como determinar
+os pontos de cruzamento do eixo imaginário
+
+137
+00:10:17.373 --> 00:10:20.047
+e os pontos de saída e
+de entrada dos ramos
+
+138
+00:10:20.047 --> 00:10:23.220
+do Lugar Geométrico das
+Raízes no eixo real.

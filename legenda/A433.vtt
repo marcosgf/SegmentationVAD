@@ -1,0 +1,425 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.138
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:09.138 --> 00:00:13.705
+estamos de volta aqui,
+continuando o nosso hands on.
+
+3
+00:00:13.705 --> 00:00:17.800
+Temos teste falhando aqui
+que utiliza mock object.
+
+4
+00:00:17.800 --> 00:00:22.769
+O que para quem faz TDD é sempre uma boa
+notícia ter teste falhando, principalmente
+
+5
+00:00:22.769 --> 00:00:27.757
+se for teste que você não implementou
+ainda, porque já sabe o que tem que fazer.
+
+6
+00:00:27.757 --> 00:00:32.042
+Então, a gente tem aqui o carrinho
+de compras, inserimos o mock,
+
+7
+00:00:32.042 --> 00:00:37.050
+que tem que receber essa notificação
+quando o produto é adicionado.
+
+8
+00:00:37.050 --> 00:00:41.977
+Então, a gente implementou aqui o mock,
+né, e quando é chamado esse
+
+9
+00:00:41.977 --> 00:00:45.530
+produto adicionado ele guarda,
+e depois compara esses valores.
+
+10
+00:00:45.530 --> 00:00:49.231
+Então vamos lá no nosso
+carrinho de compra, né,
+
+11
+00:00:49.231 --> 00:00:54.110
+e vamos guardar aqui,
+implementar aqui essa lógica.
+
+12
+00:00:54.110 --> 00:00:56.160
+Então o que é que eu preciso fazer?
+
+13
+00:00:56.160 --> 00:00:59.295
+Eu vou guardar aqui esse observador,
+então,
+
+14
+00:00:59.295 --> 00:01:04.190
+eu vou criar aqui uma variável para ele,
+está?
+
+15
+00:01:04.190 --> 00:01:07.404
+E aqui no momento que eu adicionar,
+
+16
+00:01:07.404 --> 00:01:12.123
+eu vou fazer o observador receber,
+ou melhor,
+
+17
+00:01:12.123 --> 00:01:17.194
+olha o erro aí acontecendo,
+this ponto observador,
+
+18
+00:01:17.194 --> 00:01:22.110
+que ele pega lá,
+pegando aqui este observador.
+
+19
+00:01:22.110 --> 00:01:27.064
+Excelente, então eu guardei já e o que eu
+
+20
+00:01:27.064 --> 00:01:32.040
+preciso fazer agora é quando
+eu adicionar o produto,
+
+21
+00:01:32.040 --> 00:01:37.291
+eu vou vir aqui,
+no observador e vou notificar,
+
+22
+00:01:37.291 --> 00:01:40.707
+né, que o produto foi adicionado.
+
+23
+00:01:40.707 --> 00:01:44.891
+Então, no lugar do nome eu
+vou pegar o p ponto get nome,
+
+24
+00:01:44.891 --> 00:01:50.338
+e no lugar de valor eu vou pegar
+o p ponto get valor, certo?
+
+25
+00:01:50.338 --> 00:01:53.980
+Então, acho que é isso, vamos ver,
+
+26
+00:01:53.980 --> 00:01:57.430
+vamos rodar o teste aqui para
+ver se está funcionando.
+
+27
+00:01:57.430 --> 00:02:02.578
+Opa, Null Pointer Exception?
+
+28
+00:02:02.578 --> 00:02:07.680
+Aqui dá para ver que, só que olha lá,
+
+29
+00:02:07.680 --> 00:02:11.880
+ele deu pau no teste anterior,
+
+30
+00:02:11.880 --> 00:02:17.275
+porque aqui ele não tem observador,
+então, ele está dando null.
+
+31
+00:02:17.275 --> 00:02:22.670
+Aí, olha a importância de rodar
+também os testes antigos, né?
+
+32
+00:02:22.670 --> 00:02:29.921
+Então aqui, eu vou fazer if, ele só vai
+fazer isso aqui se o observador for
+
+33
+00:02:29.921 --> 00:02:33.840
+diferente de nulo.
+
+34
+00:02:33.840 --> 00:02:38.290
+Então, será que funciona agora?
+
+35
+00:02:38.290 --> 00:02:39.973
+Rodo aqui, passou.
+
+36
+00:02:39.973 --> 00:02:43.618
+Então vamos seguir aqui
+com os nossos testes,
+
+37
+00:02:43.618 --> 00:02:47.853
+a gente não quer poder
+adicionar observador só,
+
+38
+00:02:47.853 --> 00:02:53.140
+mas a gente quer poder adicionar vários,
+então,
+
+39
+00:02:53.140 --> 00:02:58.806
+eu vou vir aqui e escuta
+Adição de Produto,
+
+40
+00:02:58.806 --> 00:03:04.269
+então eu vou colocar aqui
+adicionar 2 observadores,
+
+41
+00:03:04.269 --> 00:03:09.130
+adicionar DoisObservadores, está?
+
+42
+00:03:09.130 --> 00:03:13.030
+Então esse cara aqui eu vou
+chamar de mock 1, certo?
+
+43
+00:03:13.030 --> 00:03:18.946
+E eu vou criar aqui mock 2 então,
+
+44
+00:03:18.946 --> 00:03:23.290
+eu vou dar Ctrl C aqui,
+
+45
+00:03:23.290 --> 00:03:28.666
+vou chamar aqui, vou criar outro
+observador que eu vou chamar de mock
+
+46
+00:03:28.666 --> 00:03:34.142
+2 [SEM_ÁUDIO]
+
+47
+00:03:34.142 --> 00:03:40.829
+e adiciono os 2 e aí na hora de verificar
+aqui se o produto realmente foi recebido,
+
+48
+00:03:40.829 --> 00:03:44.250
+eu tenho que verificar se os 2
+estão recebendo esse produto.
+
+49
+00:03:44.250 --> 00:03:46.056
+Então vamos lá.
+
+50
+00:03:46.056 --> 00:03:53.534
+Mock 1, Mock 2, tome cuidado com os Ctrl C
+e Ctrl V para não deixar nada para trás.
+
+51
+00:03:53.534 --> 00:03:58.381
+Então eu vou rodar aqui, eu salvo, nesse
+caso eu nem precisei mexer no meu Mock,
+
+52
+00:03:58.381 --> 00:04:02.111
+o meu mock já está criado,
+aquele mock que eu criei lá,
+
+53
+00:04:02.111 --> 00:04:04.850
+ele é suficiente para esse teste aqui.
+
+54
+00:04:04.850 --> 00:04:10.270
+Então eu vou rodar,
+então ele está dando problema porque
+
+55
+00:04:10.270 --> 00:04:16.550
+o meu mock 1 não está recebendo.
+
+56
+00:04:16.550 --> 00:04:20.381
+Observa que como a verificação é igual,
+você fala assim,
+
+57
+00:04:20.381 --> 00:04:23.830
+como ele está esperando o
+tênis mas está sendo Null.
+
+58
+00:04:23.830 --> 00:04:25.215
+Mas onde isso?
+
+59
+00:04:25.215 --> 00:04:29.270
+Você pode clicar aqui e
+ver que foi no mock 1.
+
+60
+00:04:29.270 --> 00:04:32.790
+Então, vamos para, né,
+
+61
+00:04:32.790 --> 00:04:38.201
+tiramos o nosso chapéu
+vermelho e vamos colocar
+
+62
+00:04:38.201 --> 00:04:43.240
+o nosso chapeuzinho verde e vamos lá no
+carrinho de compras arrumar isso daí.
+
+63
+00:04:43.240 --> 00:04:47.235
+Bom, a gente percebe que o observador
+não dá mais para ser mais uma classe,
+
+64
+00:04:47.235 --> 00:04:50.000
+objeto ali individual,
+que ele tem que ser uma lista.
+
+65
+00:04:50.000 --> 00:04:54.947
+Então, a gente vai transformar
+aqui o observador numa
+
+66
+00:04:54.947 --> 00:05:00.043
+lista de observador carrinho,
+vamos chamar aqui de observadores,
+
+67
+00:05:00.043 --> 00:05:04.458
+vamos inicializar essa lista, né,
+
+68
+00:05:04.458 --> 00:05:10.016
+com Array List, [SEM_ÁUDIO]
+
+69
+00:05:10.016 --> 00:05:16.249
+aqui ao invés de simplesmente
+atribuir para a variável,
+
+70
+00:05:16.249 --> 00:05:21.739
+vamos adicionar observadores
+ponto adiciona,
+
+71
+00:05:21.739 --> 00:05:26.907
+né, esse observador, e aqui,
+
+72
+00:05:26.907 --> 00:05:32.138
+ao invés de ele verificar
+se o observador é null,
+
+73
+00:05:32.138 --> 00:05:39.110
+eu vou trocar aqui por for
+né, observador carrinho,
+
+74
+00:05:39.110 --> 00:05:45.144
+que vai pegar todos os,
+será que ele vai dar problema ali,
+
+75
+00:05:45.144 --> 00:05:48.890
+aquele problema, já que eu estou
+tirando a verificação de null?
+
+76
+00:05:48.890 --> 00:05:51.950
+Não sei, vamos ver o que é que
+o teste fala para a gente.
+
+77
+00:05:51.950 --> 00:05:57.079
+Então vamos salvar,
+vamos rodar aqui o teste, opa, funcionou!
+
+78
+00:05:57.079 --> 00:06:03.161
+Então, aquilo que eu fiz ali,
+a princípio estava correto, está?
+
+79
+00:06:03.161 --> 00:06:05.340
+E aí, acabou os teste?
+
+80
+00:06:05.340 --> 00:06:11.342
+Bom, vou criar aqui uma situação que é o
+seguinte: imagine que desses observadores,
+
+81
+00:06:11.342 --> 00:06:12.950
+ele jogue uma exceção.
+
+82
+00:06:12.950 --> 00:06:21.320
+Então, eu quero que os próximos
+observadores continuem sendo adicionados.
+
+83
+00:06:21.320 --> 00:06:24.708
+Será que eu consigo
+fazer isso com os mocks?
+
+84
+00:06:24.708 --> 00:06:26.997
+Como é que eu tenho que fazer?
+
+85
+00:06:26.997 --> 00:06:28.840
+Eu modifico o meu mock?
+
+86
+00:06:28.840 --> 00:06:30.946
+Como é que eu faço?
+
+87
+00:06:30.946 --> 00:06:37.258
+Então, eu vou encerrar aqui essa parte
+do video e vou deixar para a próxima,
+
+88
+00:06:37.258 --> 00:06:43.160
+tente dar uma pensada aí,
+como é que a gente faria esse teste e
+
+89
+00:06:43.160 --> 00:06:48.450
+continuamos aí o nosso hands
+on de TDD no próximo video.
+
+90
+00:06:48.450 --> 00:06:53.130
+Continue assistindo.
+
+91
+00:06:53.130 --> 00:06:55.470
+[MÚSICA]

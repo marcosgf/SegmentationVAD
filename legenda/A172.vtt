@@ -1,0 +1,244 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.175
+[MÚSICA] [SEM_ÁUDIO] E aí,
+
+2
+00:00:09.175 --> 00:00:10.277
+pessoal, tudo bem?
+
+3
+00:00:10.277 --> 00:00:13.350
+Nessa aula,
+conheceremos pouco mais sobre SKActions.
+
+4
+00:00:13.350 --> 00:00:18.790
+Além de ações para tocar efeitos sonoros
+e trocar texturas de sprite animado,
+
+5
+00:00:18.790 --> 00:00:23.991
+SKAction também pode ser usado para
+animações de posição, rotação,
+
+6
+00:00:23.991 --> 00:00:28.350
+tamanho, transparência, cores e outros.
+
+7
+00:00:28.350 --> 00:00:33.294
+Veja a referência dessa classe no
+material de apoio para conhecer todas as
+
+8
+00:00:33.294 --> 00:00:34.580
+possibilidades.
+
+9
+00:00:34.580 --> 00:00:39.420
+Você já deve ter notado que o jogo que
+implementamos está pouco fácil demais,
+
+10
+00:00:39.420 --> 00:00:42.580
+pois o jogador tem o
+poder de teletransporte.
+
+11
+00:00:42.580 --> 00:00:46.005
+Quando tiramos o dedo da tela
+e tocamos em outro ponto,
+
+12
+00:00:46.005 --> 00:00:49.800
+o playerNode imediatamente se
+teletransporta para essa posição.
+
+13
+00:00:49.800 --> 00:00:54.798
+Vamos adicionar uma ação que
+faz uma animação de posição do
+
+14
+00:00:54.798 --> 00:00:58.703
+playerNode do ponto que ele está para
+o ponto onde foi tocado na tela.
+
+15
+00:00:58.703 --> 00:01:04.210
+Assim, se o inimigo estiver passando
+no meio deste caminho, o jogador
+
+16
+00:01:04.210 --> 00:01:09.840
+colide e dá game over.
+
+17
+00:01:09.840 --> 00:01:16.003
+[SEM_ÁUDIO] Na
+
+18
+00:01:16.003 --> 00:01:21.750
+função touchesBegan,
+crie uma animação SKAction.moveTo()
+
+19
+00:01:21.750 --> 00:01:26.820
+passando como argumento a posição do toque
+na tela e a duração deste movimento.
+
+20
+00:01:26.820 --> 00:01:31.210
+Colocamos aqui uma duração curta,
+de 0.1 segundo.
+
+21
+00:01:31.210 --> 00:01:36.225
+E então substituímos a atualização
+imediata da posição pela execução
+
+22
+00:01:36.225 --> 00:01:42.090
+dessa animação para o playerNode, fazendo
+playerNode.runAction(moveAnimation).
+
+23
+00:01:42.090 --> 00:01:48.700
+Rode no simulador para ver o resultado.
+
+24
+00:01:48.700 --> 00:01:52.234
+Você pode perceber que o jogador
+não se teletransporta mais e,
+
+25
+00:01:52.234 --> 00:01:55.310
+se o inimigo estiver no meio do caminho,
+dá game over.
+
+26
+00:01:55.310 --> 00:02:01.312
+[SEM_ÁUDIO] Vamos
+
+27
+00:02:01.312 --> 00:02:06.160
+agora ver como fazer uma
+sequência de animações.
+
+28
+00:02:06.160 --> 00:02:11.000
+Vamos fazer que quando o jogador pega
+uma moeda, ela fica com tamanho zero,
+
+29
+00:02:11.000 --> 00:02:15.726
+faz uma animação rápida para
+50% maior que seu tamanho
+
+30
+00:02:15.726 --> 00:02:19.964
+original e logo em seguida
+volta para o tamanho original.
+
+31
+00:02:19.964 --> 00:02:25.090
+Primeiro, criamos uma variável
+CGFloat chamada coinOriginalScale
+
+32
+00:02:25.090 --> 00:02:29.760
+e na função didMoveToView(), logo após
+a variável coinNode ser preenchida,
+
+33
+00:02:29.760 --> 00:02:34.430
+atualizamos a variável
+coinOriginalScale com o valor xScale.
+
+34
+00:02:34.430 --> 00:02:39.459
+Pegamos o valor da escala apenas do
+eixo x pois o nosso sprite é quadrado,
+
+35
+00:02:39.459 --> 00:02:42.350
+então tanto faz pegar o xScale ou yScale.
+
+36
+00:02:42.350 --> 00:02:47.900
+Na função AddScore(), crie uma
+constante chamada scaleAnimation1,
+
+37
+00:02:47.900 --> 00:02:54.200
+que será SKAction.scaleTo(),
+escalando para 50% do tamanho original.
+
+38
+00:02:54.200 --> 00:03:02.780
+Ou seja, coinOriginalScale vezes
+1.5 e com a duração 0.1 segundo.
+
+39
+00:03:02.780 --> 00:03:07.105
+ScaleAnimation2 é uma animação que retorna
+para o tamanho original com duração 0.2
+
+40
+00:03:07.105 --> 00:03:07.640
+segundo.
+
+41
+00:03:07.640 --> 00:03:11.300
+E para fazer uma sequência de
+animações é muito simples.
+
+42
+00:03:11.300 --> 00:03:15.180
+Basta criar uma constante
+chamada scaleAnimationSequence,
+
+43
+00:03:15.180 --> 00:03:22.570
+que é SKAction.sequence() e recebe vetor
+de ações para serem executadas em ordem.
+
+44
+00:03:22.570 --> 00:03:26.250
+No caso,
+scaleAnimation1 e scaleAnimation2.
+
+45
+00:03:26.250 --> 00:03:30.650
+E, por fim, executamos a ação
+scaleAnimationSequence para o coinNode.
+
+46
+00:03:30.650 --> 00:03:33.990
+Rode no simulador para ver o resultado.
+
+47
+00:03:33.990 --> 00:03:40.630
+Além dessas ações que vimos nessa aula,
+existem várias outras.
+
+48
+00:03:40.630 --> 00:03:44.621
+Não deixe de ver a referência da
+classe para conhecer todas as opções.
+
+49
+00:03:44.621 --> 00:03:47.270
+O link está no material
+de apoio deste módulo.
+
+50
+00:03:47.270 --> 00:03:52.240
+Na próxima aula veremos como adicionar
+efeitos de partículas no jogo.
+
+51
+00:03:52.240 --> 00:03:55.290
+Até lá!

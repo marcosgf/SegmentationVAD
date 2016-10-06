@@ -1,0 +1,202 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.631
+Olá.
+
+2
+00:00:00.631 --> 00:00:06.810
+Você aprendeu que o controlador PD pode
+ser encarado como "caso extremo" do
+
+3
+00:00:06.810 --> 00:00:12.195
+controlador de avanço de fase, quando o
+polo tem frequência de quebra infinita.
+
+4
+00:00:12.195 --> 00:00:14.151
+E o que dizer do atraso de fase,
+
+5
+00:00:14.151 --> 00:00:17.510
+no qual o polo vem frequência
+mais baixa do que a do zero.
+
+6
+00:00:17.510 --> 00:00:22.740
+Neste vídeo, você aprenderá a projetar
+o controlador proporcional integrativo,
+
+7
+00:00:22.740 --> 00:00:23.929
+ou simplesmente PI.
+
+8
+00:00:23.929 --> 00:00:28.154
+que pode ser encarado como "caso
+extremo" do compensador de atraso,
+
+9
+00:00:28.154 --> 00:00:30.740
+que o polo vem frequência de quebra zero.
+
+10
+00:00:30.740 --> 00:00:34.166
+Você aprendeu que,
+para reduzir o erro regime,
+
+11
+00:00:34.166 --> 00:00:37.840
+é necessário aumentar o
+ganho baixas frequências.
+
+12
+00:00:37.840 --> 00:00:41.700
+Para isto, introduziu-se polo
+com frequência de quebra baixa.
+
+13
+00:00:41.700 --> 00:00:46.356
+Contudo, como o polo reduz
+a fase do sistema, foi
+
+14
+00:00:46.356 --> 00:00:50.660
+necessário cancelar esse efeito colocando
+zero com frequência superior à do polo,
+
+15
+00:00:50.660 --> 00:00:54.107
+mas ainda bem abaixo de ômega c.
+
+16
+00:00:54.107 --> 00:00:57.783
+O resultado foi o compensador
+de atraso de fase,
+
+17
+00:00:57.783 --> 00:01:01.140
+cujo diagrama de Bode do módulo
+pode ser visto na figura.
+
+18
+00:01:01.140 --> 00:01:06.715
+Com isto, consegue-se aumento
+
+19
+00:01:06.715 --> 00:01:12.290
+do ganho baixas frequências de:
+módulo de z1 sobre módulo de p1.
+
+20
+00:01:12.290 --> 00:01:19.886
+Assim, aumenta-se c de 0 vezes z de 0,
+aumentando o valor das constantes de erro.
+
+21
+00:01:19.886 --> 00:01:23.840
+Por sua vez, o resultado é uma
+diminuição no erro regime.
+
+22
+00:01:23.840 --> 00:01:28.330
+Porém, e se necessitássemos
+zerar o erro regime?
+
+23
+00:01:28.330 --> 00:01:32.940
+Isso seria querer aumentar c de
+0 vezes z de 0 para infinito.
+
+24
+00:01:32.940 --> 00:01:37.110
+Como o ganho depende de módulo
+de z1 sobre módulo de p1,
+
+25
+00:01:37.110 --> 00:01:41.220
+fazer módulo de p1 igual a zero deve
+elevar esse ganho para infinito.
+
+26
+00:01:41.220 --> 00:01:46.742
+Com isso, o diagrama de Bode do ganho do
+controlador ficaria com uma inclinação
+
+27
+00:01:46.742 --> 00:01:51.010
+de menos 20dB por década para qualquer
+frequência menor do que o módulo de z1,
+
+28
+00:01:51.010 --> 00:01:52.258
+como no esboço.
+
+29
+00:01:52.258 --> 00:01:55.914
+Você pode ver que o ganho
+cresce indefinidamente
+
+30
+00:01:55.914 --> 00:01:58.150
+quanto menor é a frequência.
+
+31
+00:01:58.150 --> 00:02:02.600
+Contudo, após a frequência de quebra
+do zero, o ganho retorna para zero.
+
+32
+00:02:02.600 --> 00:02:06.014
+O controlador tem a seguinte
+função de transferência: C
+
+33
+00:02:06.014 --> 00:02:09.780
+de s igual a s menos z1 sobre s.
+
+34
+00:02:09.780 --> 00:02:15.110
+A fim de conferir grau de liberdade a mais
+para ajustar o ganho de malha fechada,
+
+35
+00:02:15.110 --> 00:02:20.203
+pode-se multiplicar C de s por Kp,
+obtendo C linha de s igual
+
+36
+00:02:20.203 --> 00:02:25.120
+a Kp vezes C de s igual a Kp
+vezes s menos z1 sobre s,
+
+37
+00:02:25.120 --> 00:02:30.153
+que é igual a Kp menos Kp z1 sobre s,
+que pode ser
+
+38
+00:02:30.153 --> 00:02:36.600
+igualado a Kp mais Ki sobre s, que é
+a fórmula canônica de controlador PI.
+
+39
+00:02:36.600 --> 00:02:41.746
+O ganho Kp é responsável pelo nome
+proporcional, enquanto Ki com s no
+
+40
+00:02:41.746 --> 00:02:46.825
+denominador é o termo integrativo,
+justificando o nome PI.
+
+41
+00:02:46.825 --> 00:02:53.780
+O único cuidado a se tomar é de selecionar
+módulo de z1 igual a K1 sobre Kp,
+
+42
+00:02:53.780 --> 00:02:59.820
+suficientemente menor que ômega c, para
+que não afete a margem de fase do sistema.

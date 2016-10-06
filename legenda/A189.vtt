@@ -1,0 +1,468 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.217
+[Música] Fala,
+
+2
+00:00:05.217 --> 00:00:09.919
+pessoal, tudo bem?
+
+3
+00:00:09.919 --> 00:00:14.394
+Nessa primeira aula deste módulo
+5 vou mostrar para vocês os
+
+4
+00:00:14.394 --> 00:00:18.810
+primeiros passos necessários para se
+publicar aplicativo na App Store.
+
+5
+00:00:18.810 --> 00:00:21.482
+Apesar de ser processo
+relativamente fácil,
+
+6
+00:00:21.482 --> 00:00:24.030
+há uma série de passos
+que precisamos seguir.
+
+7
+00:00:24.030 --> 00:00:27.874
+Para que você possa publicar o seu
+aplicativo, é necessário que você
+
+8
+00:00:27.874 --> 00:00:31.930
+tenha uma conta de desenvolvedor e
+alguns certificados em sua máquina.
+
+9
+00:00:31.930 --> 00:00:36.310
+Também precisamos deixar o seu
+aplicativo preparado para ser publicado.
+
+10
+00:00:36.310 --> 00:00:40.435
+Mas antes de prosseguir, é necessário
+que você tenha cartão de crédito
+
+11
+00:00:40.435 --> 00:00:45.540
+internacional, pois você precisará pagar
+por sua conta de desenvolvedor em dólares.
+
+12
+00:00:45.540 --> 00:00:49.470
+Vamos começar esta aula criando
+uma conta Apple de desenvolvedor.
+
+13
+00:00:49.470 --> 00:00:55.720
+Para isso, abra o seu navegador e
+digite o endereço developer.apple.com
+
+14
+00:00:55.720 --> 00:01:01.705
+/programs.
+
+15
+00:01:01.705 --> 00:01:04.206
+Este é o site de desenvolvedores da Apple.
+
+16
+00:01:04.206 --> 00:01:07.690
+Para continuar,
+clique neste botão azul escrito Enroll.
+
+17
+00:01:07.690 --> 00:01:12.253
+Nesta sessão há algumas informações sobre
+o programa de desenvolvedores da Apple.
+
+18
+00:01:12.253 --> 00:01:15.029
+Quando você estiver pronto para continuar,
+
+19
+00:01:15.029 --> 00:01:19.020
+role a página para baixo e
+clique em Start Your Enrollment.
+
+20
+00:01:19.020 --> 00:01:24.240
+Nesta nova sessão você deverá entrar com
+sua Apple ID ou criar uma nova conta.
+
+21
+00:01:24.240 --> 00:01:29.230
+Caso você já tenha uma conta que você usa
+para baixar apps ou acessar o iTunes,
+
+22
+00:01:29.230 --> 00:01:34.120
+você poderá usá-la aqui, mas eu recomendo
+que você crie uma nova conta para
+
+23
+00:01:34.120 --> 00:01:38.120
+que você separe sua conta pessoal
+de sua conta de desenvolvedor.
+
+24
+00:01:38.120 --> 00:01:40.755
+Vamos então criar uma nova Apple ID.
+
+25
+00:01:40.755 --> 00:01:42.720
+Clique em Create Apple ID.
+
+26
+00:01:42.720 --> 00:01:50.476
+Nesta sessão, você deverá preencher
+uma série de informações.
+
+27
+00:01:50.476 --> 00:01:55.390
+Algumas informações como senha, pergunta
+de segurança e e-mail de recuperação
+
+28
+00:01:55.390 --> 00:01:57.653
+devem ser preenchidas com cautela,
+
+29
+00:01:57.653 --> 00:02:02.040
+pois são muito importantes caso você
+se esqueça de sua senha no futuro.
+
+30
+00:02:02.040 --> 00:02:04.681
+Para o e-mail de sua
+Apple ID você deve usar
+
+31
+00:02:04.681 --> 00:02:07.260
+e-mail que esteja ativo e que seja válido.
+
+32
+00:02:07.260 --> 00:02:11.066
+Também vale lembrar que é recomendável
+que você use o e-mail que você
+
+33
+00:02:11.066 --> 00:02:12.320
+usa frequentemente,
+
+34
+00:02:12.320 --> 00:02:17.297
+uma vez que todo o contato da Apple em
+relação à sua conta será através dele.
+
+35
+00:02:17.297 --> 00:02:22.210
+Sua senha deve seguir uma série de
+recomendações: ela deve ter, pelo menos,
+
+36
+00:02:22.210 --> 00:02:27.187
+8 caracteres, sendo pelo menos uma
+letra minúscula, uma maiúscula,
+
+37
+00:02:27.187 --> 00:02:31.510
+número e não ter mais de dois
+caracteres repetidos em sequência.
+
+38
+00:02:31.510 --> 00:02:34.568
+A minha senha foi
+classificada como moderada,
+
+39
+00:02:34.568 --> 00:02:38.550
+porque usei alguns números em
+sequência e uma palavra comum.
+
+40
+00:02:38.550 --> 00:02:42.778
+Tentem ser mais criativos que eu e sua
+senha receberá uma classificação melhor
+
+41
+00:02:42.778 --> 00:02:43.490
+que a minha.
+
+42
+00:02:43.490 --> 00:02:47.813
+Continue preenchendo as informações
+pedidas até que esteja tudo pronto.
+
+43
+00:02:47.813 --> 00:02:54.530
+Selecione seu idioma preferido,
+[BARULHO_DAS_TECLAS]
+
+44
+00:02:54.530 --> 00:02:59.250
+digitalize o código de segurança e,
+por fim, clique em Create Apple ID.
+
+45
+00:02:59.250 --> 00:03:03.848
+Nesta tela você receberá mensagem de que
+e-mail foi enviado para a conta que você
+
+46
+00:03:03.848 --> 00:03:04.510
+forneceu.
+
+47
+00:03:04.510 --> 00:03:07.632
+Então o nosso próximo
+passo é abrir este e-mail
+
+48
+00:03:07.632 --> 00:03:10.060
+e provar para a Apple que você é você.
+
+49
+00:03:10.060 --> 00:03:13.302
+Abra seu e-mail e clique
+na nova mensagem da Apple.
+
+50
+00:03:13.302 --> 00:03:16.850
+Para verificar sua autenticidade
+clique em Verify now.
+
+51
+00:03:16.850 --> 00:03:23.168
+Nesta nova página digite o e-mail
+e a senha de sua nova Apple ID.
+
+52
+00:03:23.168 --> 00:03:25.550
+Depois clique em Verify e-mail.
+
+53
+00:03:25.550 --> 00:03:26.191
+Pronto!
+
+54
+00:03:26.191 --> 00:03:29.473
+Seu Apple ID foi criado,
+mas isto é o só o começo.
+
+55
+00:03:29.473 --> 00:03:34.145
+O próximo passo é acessar o Member Center
+e entrar no programa de desenvolvedores
+
+56
+00:03:34.145 --> 00:03:34.689
+da Apple.
+
+57
+00:03:34.689 --> 00:03:37.900
+Vamos, então, novamente para
+a sessão de desenvolvedores.
+
+58
+00:03:37.900 --> 00:03:39.991
+Agora, clique em Member Center.
+
+59
+00:03:39.991 --> 00:03:44.787
+Serão exibidos os termos legais da Apple,
+depois de ler tudo e se você concordar
+
+60
+00:03:44.787 --> 00:03:49.450
+com o que está escrito, clique no check
+box embaixo do texto e clique em Submit.
+
+61
+00:03:49.450 --> 00:03:52.681
+Nessa nova sessão,
+clique em Programms and Add-ons.
+
+62
+00:03:52.681 --> 00:03:57.555
+Para se tornar membro do programa de
+desenvolvimento da Apple clique em Enroll
+
+63
+00:03:57.555 --> 00:04:01.535
+now e estamos de volta nesta página,
+onde a nossa aula começou.
+
+64
+00:04:01.535 --> 00:04:05.010
+De novo, clique em
+Start Your Enrollment para seguir.
+
+65
+00:04:05.010 --> 00:04:09.021
+Agora que você está logado com sua conta
+Apple, uma nova tela será exibida.
+
+66
+00:04:09.021 --> 00:04:12.549
+Nesta tela, você tem de escolher
+o tipo de conta que você quer.
+
+67
+00:04:12.549 --> 00:04:17.190
+Você pode escolher uma conta individual,
+empresarial ou governamental.
+
+68
+00:04:17.190 --> 00:04:21.128
+Para os propósitos deste curso,
+vamos escolher a conta individual.
+
+69
+00:04:21.128 --> 00:04:25.009
+Nesta sessão você deverá preencher
+algumas informações pessoais,
+
+70
+00:04:25.009 --> 00:04:26.550
+como telefone e endereço.
+
+71
+00:04:26.550 --> 00:04:30.902
+Quando for preencher o seu número de
+telefone, coloque primeiro o código do
+
+72
+00:04:30.902 --> 00:04:34.724
+Brasil, depois o DDD e seu telefone
+juntos sem espaço nem hífen.
+
+73
+00:04:34.724 --> 00:04:37.330
+Após preencher todas estas informações,
+
+74
+00:04:37.330 --> 00:04:41.900
+você terá que concordar com os termos da
+Apple novamente caso queria prosseguir.
+
+75
+00:04:41.900 --> 00:04:46.450
+Nesta tela, verifique se suas informações
+estão corretas e clique em Continue.
+
+76
+00:04:46.450 --> 00:04:50.950
+Você está a passo de adquirir a sua
+conta de desenvolvedor da Apple.
+
+77
+00:04:50.950 --> 00:04:55.450
+Como descrito na tela, esta conta
+vale por ano e custa 99 dólares.
+
+78
+00:04:55.450 --> 00:05:01.130
+Para prosseguir, você deve ter em mãos
+seu cartão de crédito internacional.
+
+79
+00:05:01.130 --> 00:05:05.710
+Nesta sessão, você deve preencher as
+informações de seu cartão de crédito.
+
+80
+00:05:05.710 --> 00:05:09.278
+Você deve escolher primeiro
+a bandeira do seu cartão, seu número,
+
+81
+00:05:09.278 --> 00:05:11.619
+o nome gravado nele e
+a data em que ele expira.
+
+82
+00:05:11.619 --> 00:05:14.642
+Na segunda parte do formulário
+você deve colocar o endereço
+
+83
+00:05:14.642 --> 00:05:17.310
+que você utilizou quando
+fez seu cartão de crédito.
+
+84
+00:05:17.310 --> 00:05:22.279
+As informações pedidas são país,
+seu endereço, cidade, estado,
+
+85
+00:05:22.279 --> 00:05:25.660
+código postal e telefone para contato.
+
+86
+00:05:25.660 --> 00:05:30.910
+Não se esqueça de colocar o código
+do Brasil ou +55 antes do DDD.
+
+87
+00:05:30.910 --> 00:05:34.982
+Tudo o que você precisa fazer agora é
+clicar em Continue e seguir os passos
+
+88
+00:05:34.982 --> 00:05:36.730
+finais apresentados no site.
+
+89
+00:05:36.730 --> 00:05:41.253
+A Apple vai mandar as informações de seu
+cartão para a sua operadora para que as
+
+90
+00:05:41.253 --> 00:05:44.028
+informações que você
+digitou sejam checadas.
+
+91
+00:05:44.028 --> 00:05:45.691
+Depois de tudo confirmado,
+
+92
+00:05:45.691 --> 00:05:50.267
+você terá 99 dólares a menos na sua conta
+e uma conta de desenvolvedor novinha.
+
+93
+00:05:50.267 --> 00:05:55.044
+Como esse procedimento, geralmente, leva
+de a dois dias, vamos encerrar essa aula
+
+94
+00:05:55.044 --> 00:06:00.215
+por aqui, porque precisaremos de sua conta
+pronta para alguns dos próximos passos.
+
+95
+00:06:00.215 --> 00:06:03.812
+Depois que você receber seu e-mail de
+confirmação do pagamento e sua conta
+
+96
+00:06:03.812 --> 00:06:07.130
+estiver liberada,
+não deixe de ver as próximas aulas.
+
+97
+00:06:07.130 --> 00:06:10.875
+Vamos ver como rodar o aplicativo
+em seu próprio iPhone.
+
+98
+00:06:10.875 --> 00:06:11.430
+Até lá!

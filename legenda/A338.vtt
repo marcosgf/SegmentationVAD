@@ -1,0 +1,294 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.976
+Olá.
+Neste vídeo você aprenderá a modelar o
+
+2
+00:00:02.976 --> 00:00:07.170
+atraso de transporte na função
+de transferência do sistema.
+
+3
+00:00:07.170 --> 00:00:09.907
+O atraso é fenômeno muito comum
+
+4
+00:00:09.907 --> 00:00:14.286
+sistemas reais quando o sistema
+não começa responder imediatamente
+
+5
+00:00:14.286 --> 00:00:18.330
+mas leva algum tempo a exibir sua
+saída os efeitos de uma entrada.
+
+6
+00:00:18.330 --> 00:00:22.950
+O sistema mais simples com
+atraso é o chamado atraso furo,
+
+7
+00:00:22.950 --> 00:00:27.565
+onde a saída tem o mesmo formato da
+entrada mas após intervalo de tempo delta
+
+8
+00:00:27.565 --> 00:00:32.900
+maior do que 0, isto é y de t
+será igual à u de t menos delta.
+
+9
+00:00:32.900 --> 00:00:38.974
+Nesse caso, a saída y será sempre igual
+ao valor que a entrada u apresentou,
+
+10
+00:00:38.974 --> 00:00:41.110
+delta unidade de tempo antes.
+
+11
+00:00:41.110 --> 00:00:45.719
+Das propriedades da Transformada de
+Laplace você já aprendeu no curso de
+
+12
+00:00:45.719 --> 00:00:50.776
+introdução ao controle de sistemas que
+a transformada de Laplace de f de t
+
+13
+00:00:50.776 --> 00:00:56.392
+menos delta será igual a e elevado
+a menos delta s vezes a transformada
+
+14
+00:00:56.392 --> 00:01:03.560
+de Laplace de f de t, de onde Y de s será
+igual a e elevado a menos delta s, U de s.
+
+15
+00:01:03.560 --> 00:01:08.848
+Agora suponha que você tenha o sistema
+dado na forma de equações diferenciais
+
+16
+00:01:08.848 --> 00:01:14.160
+ordinárias, como somatório de i
+igual a 0 até n, coeficientes,
+
+17
+00:01:14.160 --> 00:01:19.456
+a i vezes a i-ésima derivada
+de Y igual a somatório de
+
+18
+00:01:19.456 --> 00:01:25.530
+i igual a 0 até m coeficientes b i vezes
+a i-ésima derivada de u de t menos delta.
+
+19
+00:01:25.530 --> 00:01:29.282
+Com m menor ou igual a n para
+que o sistema seja próprio.
+
+20
+00:01:29.282 --> 00:01:35.033
+Termos da função de transferência,
+podemos descrever Y de s igual a G de s,
+
+21
+00:01:35.033 --> 00:01:41.340
+U de s que é igual a somatório de i
+igual a 0 até m, b i, e elevado a s i,
+
+22
+00:01:41.340 --> 00:01:46.190
+sobre somatório de i igual a 0 até n,
+a i, s elevado a i,
+
+23
+00:01:46.190 --> 00:01:51.410
+tudo isso multiplicado por e elevado
+a menos delta s, vezes U de s.
+
+24
+00:01:51.410 --> 00:01:56.343
+Então a função de transferência
+será a mesma que você teria para
+
+25
+00:01:56.343 --> 00:02:00.640
+o sistema sem o atraso,
+apenas multiplicada por menos delta s.
+
+26
+00:02:00.640 --> 00:02:04.439
+E o que deve acontecer
+na resposta frequência?
+
+27
+00:02:04.439 --> 00:02:09.610
+Ora, ao substituir s por j ômega,
+a parte da função de transferência, que é
+
+28
+00:02:09.610 --> 00:02:15.070
+uma razão de polinômios, permanecerá sendo
+aquela que seria se não houvesse o atraso,
+
+29
+00:02:15.070 --> 00:02:20.280
+porém o termo e elevado a menos j
+ômega delta, aparecerá multiplicando.
+
+30
+00:02:20.280 --> 00:02:24.895
+Então vamos separar a função de
+transferência do sistema 2 partes.
+
+31
+00:02:24.895 --> 00:02:32.062
+G de s igual a G subíndice n s
+vezes e elevado a menos delta s,
+
+32
+00:02:32.062 --> 00:02:36.560
+que G n s é a função de transferência
+sem considerar o atraso.
+
+33
+00:02:36.560 --> 00:02:40.910
+Então módulo de G de j
+ômega dB será igual ao
+
+34
+00:02:40.910 --> 00:02:45.825
+módulo de G n de j ômega dB mais
+o módulo de e elevado a menos j
+
+35
+00:02:45.825 --> 00:02:50.350
+delta ômega dB que será igual
+ao módulo de G n de j ômega dB.
+
+36
+00:02:50.350 --> 00:02:51.391
+Isso porque?
+
+37
+00:02:51.391 --> 00:02:56.335
+Pela Identidade de Euler,
+e elevado a menos j delta ômega será igual
+
+38
+00:02:56.335 --> 00:03:01.136
+a cosseno de delta ômega menos j
+seno de delta ômega de onde o módulo
+
+39
+00:03:01.136 --> 00:03:06.092
+de e elevado a menos j delta ômega
+será igual a raíz de cosseno ao
+
+40
+00:03:06.092 --> 00:03:11.147
+quadrado de delta ômega mais seno ao
+quadrado de delta ômega que é igual a 1.
+
+41
+00:03:11.147 --> 00:03:16.240
+Esse termo tem módulo unitário, então
+não afetará o módulo de G de j ômega.
+
+42
+00:03:16.240 --> 00:03:22.476
+Quanto à fase, a fase de e de ômega
+será igual a fase de G n de j ômega mais
+
+43
+00:03:22.476 --> 00:03:28.470
+a fase de e a menos j delta ômega, que é
+igual a fase de G n menos delta ômega.
+
+44
+00:03:28.470 --> 00:03:29.653
+Isso porque?
+
+45
+00:03:29.653 --> 00:03:35.920
+Novamente recorrendo a Identidade de
+Euler, e elevado a menos j delta ômega,
+
+46
+00:03:35.920 --> 00:03:40.120
+igual a cosseno de delta ômega
+menos j seno de delta ômega.
+
+47
+00:03:40.120 --> 00:03:45.138
+A fase de e elevado a menos
+j delta ômega será igual
+
+48
+00:03:45.138 --> 00:03:50.410
+a arco tangente da parte imaginária
+de e elevado a menos j delta ômega
+
+49
+00:03:50.410 --> 00:03:55.440
+sobre a parte real de e elevado a menos j
+delta ômega, que é igual ao arco tangente
+
+50
+00:03:55.440 --> 00:03:59.699
+de menos seno de delta ômega sobre o
+cosseno de delta ômega, que é igual ao
+
+51
+00:03:59.699 --> 00:04:04.330
+arco tangente de menos a tangente de delta
+ômega que é igual a menos delta ômega.
+
+52
+00:04:04.330 --> 00:04:06.696
+A fase vale menos delta ômega.
+
+53
+00:04:06.696 --> 00:04:08.425
+O que isso quer dizer?
+
+54
+00:04:08.425 --> 00:04:11.962
+Isso quer dizer que a fase passará
+a decrescer segundo uma reta de inclinação
+
+55
+00:04:11.962 --> 00:04:15.354
+menos delta além das mudanças
+na frequência de quebra.
+
+56
+00:04:15.354 --> 00:04:19.143
+Se fizermos o diagrama de Bode com
+'iii' de delta ômega no eixo X,
+
+57
+00:04:19.143 --> 00:04:23.054
+então a fase decrescerá exponencialmente
+conforme o eixo avança, ou seja,
+
+58
+00:04:23.054 --> 00:04:27.430
+a fase jamais convergirá para valor,
+como você tinha visto até agora.
+
+59
+00:04:27.430 --> 00:04:32.421
+Nos próximos vídeos você aprenderá
+a interpretar o que isso causa no sistema
+
+60
+00:04:32.421 --> 00:04:35.230
+termos do desempenho da malha de controle.

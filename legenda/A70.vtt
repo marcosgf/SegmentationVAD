@@ -1,0 +1,675 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.190
+[MÚSICA] Olá!
+
+2
+00:00:07.190 --> 00:00:14.059
+Agora que nós já vimos
+como fazer clusters,
+
+3
+00:00:14.059 --> 00:00:18.920
+como medir distância Euclidiana,
+como fazer aglomeração dos dados,
+
+4
+00:00:18.920 --> 00:00:24.170
+como formar grupos homogêneos,
+nós vamos fazer uma aplicação prática
+
+5
+00:00:24.170 --> 00:00:28.930
+e eu espero que você tenha gostado dos 2
+comerciais que você acabou de assistir.
+
+6
+00:00:28.930 --> 00:00:34.202
+Esses comerciais você viu que a pasta de
+dentes num dos comerciais falava muito
+
+7
+00:00:34.202 --> 00:00:39.730
+em prevenção de cárie, em proteção,
+em coisas mais entre aspas médicas,
+
+8
+00:00:39.730 --> 00:00:44.115
+científicas enquanto que a outra
+falava mais em clareamento,
+
+9
+00:00:44.115 --> 00:00:47.280
+dentes brilhantes, coisas mais estéticas.
+
+10
+00:00:47.280 --> 00:00:52.394
+É exatamente por aí que nós vamos: como
+será que a empresa chegou à conclusão
+
+11
+00:00:52.394 --> 00:00:57.445
+que deveria ter 2 produtos posicionados
+para 2 segmentos diferentes?
+
+12
+00:00:57.445 --> 00:01:03.310
+Ela fez provavelmente algumas pesquisas
+e nós vamos mostrar para você exemplo.
+
+13
+00:01:03.310 --> 00:01:07.643
+Imagine você que nós temos
+problema que é como dividir os
+
+14
+00:01:07.643 --> 00:01:11.280
+consumidores em clusters, como separá-los?
+
+15
+00:01:11.280 --> 00:01:15.575
+Primeira coisa quando a gente não sabe
+muito sobre problema é fazer uma pesquisa
+
+16
+00:01:15.575 --> 00:01:19.558
+qualitativa, ir a campo, conversar
+com consumidores, fazer focus group,
+
+17
+00:01:19.558 --> 00:01:24.258
+enfim coletar dados e perceber que
+existem tendências entre os consumidores,
+
+18
+00:01:24.258 --> 00:01:26.460
+tendências mas nada quantitativo.
+
+19
+00:01:26.460 --> 00:01:31.195
+Depois a gente vai passar para uma
+pesquisa quantitativa, ir a campo,
+
+20
+00:01:31.195 --> 00:01:36.162
+entrevistar número maior de consumidores
+e obter informações sobre o que
+
+21
+00:01:36.162 --> 00:01:41.012
+os consumidores mais valorizam, quem
+eles mais buscam numa pasta de dentes.
+
+22
+00:01:41.012 --> 00:01:44.455
+Foi exatamente isso que foi
+feito com 30 respondentes.
+
+23
+00:01:44.455 --> 00:01:49.301
+E para cada foi dado para eles, perguntado
+para eles fazer numa avaliação numa escala
+
+24
+00:01:49.301 --> 00:01:53.921
+Likert de 7 pontos, onde 1 corresponde
+ao discordo totalmente e 7 concordo
+
+25
+00:01:53.921 --> 00:01:59.070
+totalmente, quantos que eles atribuiriam
+de nota para a seguinte afirmação:
+
+26
+00:01:59.070 --> 00:02:04.230
+é importante comprar uma pasta
+de dentes que previna cáries.
+
+27
+00:02:04.230 --> 00:02:06.894
+Se ele achasse importante
+ele daria a nota 7,
+
+28
+00:02:06.894 --> 00:02:09.640
+se ele achasse que não
+tem importância nota 1.
+
+29
+00:02:09.640 --> 00:02:13.144
+Óbvio que alguns vão dar nota 2,
+outros vão dar nota 6,
+
+30
+00:02:13.144 --> 00:02:16.064
+alguns vão estar indecisos
+e assim por diante.
+
+31
+00:02:16.064 --> 00:02:20.568
+Da mesma forma foi feito nessa pesquisa,
+a segunda afirmação que é: eu gosto
+
+32
+00:02:20.568 --> 00:02:23.750
+de pasta de dentes que deixe
+os meus dentes brilhantes.
+
+33
+00:02:23.750 --> 00:02:27.992
+Você está vendo que na primeira ele falou
+em cárie e na segunda ele falou em dentes
+
+34
+00:02:27.992 --> 00:02:28.752
+brilhantes.
+
+35
+00:02:28.752 --> 00:02:32.586
+Uma terceira pergunta poderia ser,
+ou afirmação,
+
+36
+00:02:32.586 --> 00:02:35.940
+uma pasta deve fortalecer a gengiva.
+
+37
+00:02:35.940 --> 00:02:40.100
+A quarta, eu prefiro uma
+pasta que refresque o hálito.
+
+38
+00:02:40.100 --> 00:02:45.231
+Uma quinta afirmação é:
+prevenção de desgaste
+
+39
+00:02:45.231 --> 00:02:50.690
+do dente não é benefício importante
+oferecido por uma pasta de dentes.
+
+40
+00:02:50.690 --> 00:02:55.075
+Muita atenção porque aqui essa
+pergunta foi feita com a palavra não,
+
+41
+00:02:55.075 --> 00:02:59.778
+de modo que o respondente tenha que
+prestar atenção se ele está dando nota
+
+42
+00:02:59.778 --> 00:03:05.440
+alta aqui ele deveria dar uma nota menor,
+se ele acha que é importante.
+
+43
+00:03:05.440 --> 00:03:10.427
+E a sexta e última pergunta é: o aspeto
+mais relevante ao se escolher uma pasta de
+
+44
+00:03:10.427 --> 00:03:12.820
+dentes é garantir dentes atraentes.
+
+45
+00:03:12.820 --> 00:03:16.945
+Vai-se a campo, faz a pesquisa,
+obtém-se essa base de dados.
+
+46
+00:03:16.945 --> 00:03:21.118
+Por exemplo o respondente 1 deu
+nota 7 para a prevenção de cáries,
+
+47
+00:03:21.118 --> 00:03:25.240
+mas ele deu nota 3 para aquela
+afirmativa sobre dentes brilhantes.
+
+48
+00:03:25.240 --> 00:03:28.795
+Com base nessa base de dados
+nós já podemos fazer clusters.
+
+49
+00:03:28.795 --> 00:03:33.370
+Será que esses 30 respondentes
+estão divididos em alguns clusters?
+
+50
+00:03:33.370 --> 00:03:34.980
+Clusters homogêneos?
+
+51
+00:03:34.980 --> 00:03:36.350
+Quantos clusters?
+
+52
+00:03:36.350 --> 00:03:42.765
+Esta aplicação passa pelo software
+que nós vamos mostrar na próxima,
+
+53
+00:03:42.765 --> 00:03:47.250
+no próximo vídeo,
+que é o STATA e obtém-se dendrograma.
+
+54
+00:03:47.250 --> 00:03:52.015
+Esse dendrograma que você está vendo
+aqui foi obtido com aquela base de
+
+55
+00:03:52.015 --> 00:03:54.040
+dados de 30 respondentes.
+
+56
+00:03:54.040 --> 00:03:58.480
+Ainda não mostramos para você como fazer o
+dendrograma mas você já está em condições
+
+57
+00:03:58.480 --> 00:04:02.920
+de olhando o dendrograma saber
+quantos grupos você indicaria
+
+58
+00:04:02.920 --> 00:04:06.010
+para a empresa da pasta de dentes.
+
+59
+00:04:06.010 --> 00:04:11.342
+Ora, esta solução não é uma
+solução única mas você está vendo
+
+60
+00:04:11.342 --> 00:04:16.814
+claramente que estes consumidores
+estão formando 3 grupos diferentes.
+
+61
+00:04:16.814 --> 00:04:20.390
+Você poderia definir 2 grupos, poderia,
+
+62
+00:04:20.390 --> 00:04:24.615
+mas se você definir 3 você está
+cortando o dendrograma no ponto ideal,
+
+63
+00:04:24.615 --> 00:04:28.840
+no ponto tecnicamente mais recomendável,
+Porquê?
+
+64
+00:04:28.840 --> 00:04:32.312
+Visualmente as distãncias
+são bem diferentes,
+
+65
+00:04:32.312 --> 00:04:36.198
+quando você corta em 3,
+você tem 3 grupos distintos.
+
+66
+00:04:36.198 --> 00:04:41.045
+Se você cortar em 2 você vai ter 2 grupos
+distintos porém você está perdendo
+
+67
+00:04:41.045 --> 00:04:46.310
+informações e quantos mais segmentos você
+tiver melhor para você fazer marketing
+
+68
+00:04:46.310 --> 00:04:52.280
+objetivo com foco naquela,
+naquele público alvo ou naquele target.
+
+69
+00:04:52.280 --> 00:04:55.239
+Então a solução melhor aqui é 3 grupos.
+
+70
+00:04:55.239 --> 00:04:58.120
+Agora que a gente já definiu 3 grupos,
+
+71
+00:04:58.120 --> 00:05:03.699
+vem o passo mais importante do ponto de
+vista de marketing que é interpretar,
+
+72
+00:05:03.699 --> 00:05:08.546
+eu preciso entender, eu quero saber qual o
+meu plano de marketing que eu vou adotar
+
+73
+00:05:08.546 --> 00:05:13.375
+para esses 3 grupos e para isso a primeira
+coisa é interpretar os 3 grupos.
+
+74
+00:05:13.375 --> 00:05:16.893
+Para interpretar os 3
+grupos uma vez definidos,
+
+75
+00:05:16.893 --> 00:05:22.212
+eu peço para o nosso software fazer
+o cálculo das médias das respostas
+
+76
+00:05:22.212 --> 00:05:27.813
+de cada variável para cada dos grupos, que
+é o que você está vendo nessa tabela aqui.
+
+77
+00:05:27.813 --> 00:05:32.803
+Essa tabela nada mais é que uma tabela dos
+centroides ou médias das variáveis para
+
+78
+00:05:32.803 --> 00:05:33.525
+os grupos.
+
+79
+00:05:33.525 --> 00:05:38.905
+Por exemplo, o grupo 1 atribuiu para
+a prevenção de cáries a média de 5,8.
+
+80
+00:05:38.905 --> 00:05:43.400
+É uma média relativamente alta se
+você considerar que o máximo era 7.
+
+81
+00:05:43.400 --> 00:05:50.253
+Esse mesmo grupo deu uma média
+de 3,4 para dentes brilhantes.
+
+82
+00:05:50.253 --> 00:05:55.165
+Ora 3,4 numa escala de 1 a 7
+está muito perto da indecisão
+
+83
+00:05:55.165 --> 00:05:58.040
+e pouca informação nos dá esse número.
+
+84
+00:05:58.040 --> 00:06:03.102
+Já o número do lado, que é o grupo 1
+para a variável gengiva fortalecida você
+
+85
+00:06:03.102 --> 00:06:08.930
+vê que a média deu 6,3
+portanto está mais perto do 7,
+
+86
+00:06:08.930 --> 00:06:13.979
+as pessoas concordam que dente,
+gengiva fortalecida é uma
+
+87
+00:06:13.979 --> 00:06:18.939
+coisa relevante para elas,
+assim como a nota 1,9,
+
+88
+00:06:18.939 --> 00:06:24.085
+é uma nota que me diz muito, porque
+como está escrito que esse grupo deu uma
+
+89
+00:06:24.085 --> 00:06:29.319
+nota baixa para a não prevenção de
+desgaste e não prevenção de desgaste tinha
+
+90
+00:06:29.319 --> 00:06:34.370
+alerta na formulação da
+pergunta a palavra não,
+
+91
+00:06:34.370 --> 00:06:39.400
+você pode dizer que considera que
+prevenção de desgaste é importante,
+
+92
+00:06:39.400 --> 00:06:46.098
+ele discorda que não é importante,
+por isso ele deu uma média de 1,9.
+
+93
+00:06:46.098 --> 00:06:50.700
+Esse grupo é grupo que está
+muito preocupado com a saúde dos
+
+94
+00:06:50.700 --> 00:06:54.910
+dentes e é grupo que não dá
+tanto valor para a estética.
+
+95
+00:06:54.910 --> 00:06:55.607
+Porquê?
+
+96
+00:06:55.607 --> 00:06:58.624
+Porque em notas de dentes brilhantes,
+
+97
+00:06:58.624 --> 00:07:03.130
+hálito fresco e dentes atraentes
+as notas foram baixas.
+
+98
+00:07:03.130 --> 00:07:08.581
+Esse grupo nós podemos denominar,
+por exemplo consumidores saudáveis.
+
+99
+00:07:08.581 --> 00:07:11.010
+Vamos analisar agora o grupo 3.
+
+100
+00:07:11.010 --> 00:07:16.078
+O grupo 3 nós podemos perceber
+que ele ficou muito indeciso com
+
+101
+00:07:16.078 --> 00:07:23.350
+relação às variáveis 1,
+3 e também com a variável 5,
+
+102
+00:07:23.350 --> 00:07:29.265
+mas é grupo que deu notas muito altas
+para as variáveis dentes brilhantes,
+
+103
+00:07:29.265 --> 00:07:33.993
+hálito fresco e dentes atraentes,
+ele deu 5,8,
+
+104
+00:07:33.993 --> 00:07:39.230
+6 e 5,9, portanto é grupo que se
+preocupa muito com a estética.
+
+105
+00:07:39.230 --> 00:07:44.726
+Dentes brilhantes, hálito fresco,
+dentes atraentes, qual seria o nome que
+
+106
+00:07:44.726 --> 00:07:51.090
+juntaria essas 3 variáveis para
+a gente dar nome para esse cluster?
+
+107
+00:07:51.090 --> 00:07:54.950
+Que tal consumidores estéticos,
+
+108
+00:07:54.950 --> 00:07:58.019
+ou consumidores que se
+preocupam com a estética?
+
+109
+00:07:58.019 --> 00:08:00.723
+Está faltando analisar somente o grupo 2.
+
+110
+00:08:00.723 --> 00:08:04.828
+Eu deixei o grupo 2 por último porque
+ele é pouco mais difícil de analisar.
+
+111
+00:08:04.828 --> 00:08:06.261
+E ele é mais difícil porquê?
+
+112
+00:08:06.261 --> 00:08:11.020
+Porque ele andou dando notas relativamente
+baixas para todas as variáveis.
+
+113
+00:08:11.020 --> 00:08:15.832
+Note, para a variável
+prevenção de cáries nota 1,7,
+
+114
+00:08:15.832 --> 00:08:21.095
+muito próximo do limite inferior 1,
+a nota que ele deu para gengiva
+
+115
+00:08:21.095 --> 00:08:27.014
+fortalecida 1,9 e não prevenção
+de desgaste nota 5,6.
+
+116
+00:08:27.014 --> 00:08:30.053
+As demais notas ficaram na média, 3,2,
+
+117
+00:08:30.053 --> 00:08:34.993
+3,4 que como a gente já
+falou notas entre 3, 4 e até
+
+118
+00:08:34.993 --> 00:08:40.470
+4,8 nos dão poucas informações porque
+estão muito perto da faixa da indecisão.
+
+119
+00:08:40.470 --> 00:08:45.720
+A indecisão entre 1 e 7 é a nota 4
+que é não concordo nem discordo.
+
+120
+00:08:45.720 --> 00:08:50.379
+Então este grupo que deu nota baixa para
+a maioria das variáveis nós podemos dizer
+
+121
+00:08:50.379 --> 00:08:54.727
+que é grupo de consumidores que não
+se preocupam com a saúde bocal,
+
+122
+00:08:54.727 --> 00:09:00.872
+consumidores desligados, consumidores
+que são pouco interessados no assunto.
+
+123
+00:09:00.872 --> 00:09:05.020
+Com isto você tem agora
+30 pessoas que foram
+
+124
+00:09:05.020 --> 00:09:09.931
+divididas em 3 grupos
+homogêneos e você pode então
+
+125
+00:09:09.931 --> 00:09:14.810
+dizer que você tem grupo muito importante,
+que é o seu grupo número 1,
+
+126
+00:09:14.810 --> 00:09:18.773
+que se preocupa com a saúde bocal
+e você tem grupo muito importante,
+
+127
+00:09:18.773 --> 00:09:23.786
+que é o grupo 3, que se preocupa com
+a sua estética, estética dos dentes e
+
+128
+00:09:23.786 --> 00:09:29.760
+por isso você pode então pensar em ter
+produto dirigido para aquele grupo
+
+129
+00:09:29.760 --> 00:09:34.830
+de consumidores preocupados com a estética
+e outro produto, completamente diferente,
+
+130
+00:09:34.830 --> 00:09:38.801
+dirigido para os consumidores que
+se preocupam com saúde bocal.
+
+131
+00:09:38.801 --> 00:09:40.145
+Esses números 13,
+
+132
+00:09:40.145 --> 00:09:45.240
+9 e 8 que você está vendo é o número
+de elementos que está em cada grupo.
+
+133
+00:09:45.240 --> 00:09:50.760
+Com isso você tem uma dimensão do tamanho
+do cluster, você tem uma dimensão também
+
+134
+00:09:50.760 --> 00:09:56.734
+de como o cluster se comporta e pode
+fazer plano de marketing profissional.
+
+135
+00:09:56.734 --> 00:10:00.680
+Agora que nós vimos como
+interpretar os clusters,
+
+136
+00:10:00.680 --> 00:10:05.479
+como fazer produtos dirigidos a eles,
+nós estamos em condições de ir para o
+
+137
+00:10:05.479 --> 00:10:10.708
+último passo do nosso módulo que é usar o
+nosso software para para fazer os clusters
+
+138
+00:10:10.708 --> 00:10:15.620
+e fazer o dendrograma, fazer o cálculo
+das médias e fazer o número de grupos.
+
+139
+00:10:15.620 --> 00:10:20.340
+[SEM ÁUDIO]
+
+140
+00:10:20.340 --> 00:10:25.060
+[SEM ÁUDIO]

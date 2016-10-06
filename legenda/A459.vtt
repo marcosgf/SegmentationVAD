@@ -1,0 +1,391 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.781
+[MÚSICA] Olá a todos.
+
+2
+00:00:09.781 --> 00:00:17.414
+Bem vindos de volta ao curso de
+Orientação a Objetos com Java.
+
+3
+00:00:17.414 --> 00:00:21.754
+Essa aula é para você que
+nunca programou Java e está
+
+4
+00:00:21.754 --> 00:00:26.507
+montando o seu ambiente aí de
+trabalho pela primeira vez.
+
+5
+00:00:26.507 --> 00:00:31.449
+Eu vou mostrar como criar uma classe
+e compilar utilizando linha de
+
+6
+00:00:31.449 --> 00:00:35.878
+comando e depois vou mostrar como fazer
+isso utilizando a ferramenta eclipse
+
+7
+00:00:35.878 --> 00:00:38.270
+que a gente vai utilizar durante o curso.
+
+8
+00:00:38.270 --> 00:00:45.405
+Como você pode ver aqui, certo,
+se eu digitar aqui Java, certo,
+
+9
+00:00:45.405 --> 00:00:50.589
+ele vai encontrar aqui então,
+antes de você
+
+10
+00:00:50.589 --> 00:00:56.822
+rodar isso tudo você precisa de instalar
+a máquina virtual Java com o SDK,
+
+11
+00:00:56.822 --> 00:01:02.047
+e tem o comando também dai vou limpar
+a tela aqui, para vocês verem,
+
+12
+00:01:02.047 --> 00:01:07.975
+tem o comando também Javac que é o que
+a gente utiliza para compilar, certo?
+
+13
+00:01:07.975 --> 00:01:13.181
+Então se você digitar o Java e o Javac
+no seu diretório de trabalho e ele
+
+14
+00:01:13.181 --> 00:01:19.260
+reconhecer, significa que você está pronto
+para compilar e rodar programa Java, tá?
+
+15
+00:01:19.260 --> 00:01:25.435
+Eu vou criar aqui uma classe, o famoso
+HelloWord, que simplesmente imprime
+
+16
+00:01:25.435 --> 00:01:31.795
+alguma coisa na tela e vou chamar
+aqui de minha primeira classe.
+
+17
+00:01:31.795 --> 00:01:36.554
+Então eu começo criando
+aqui o public class,
+
+18
+00:01:36.554 --> 00:01:41.310
+PrimeiraClasse, certo,
+
+19
+00:01:41.310 --> 00:01:46.543
+é, e para ser uma classe executável Java,
+certo,
+
+20
+00:01:46.543 --> 00:01:52.614
+precisa ter método chamado Main,
+que depois a gente vai entender melhor.
+
+21
+00:01:52.614 --> 00:01:57.127
+A gente vai escrever public
+static void main, tá?
+
+22
+00:01:57.127 --> 00:02:02.906
+Como parâmetro eu passo array de strings,
+tá?
+
+23
+00:02:02.906 --> 00:02:06.950
+Que são os argumentos deste programa, tá?
+
+24
+00:02:06.950 --> 00:02:11.350
+É, então eu vou agora,
+
+25
+00:02:11.350 --> 00:02:18.240
+dentro do método Main,
+eu vou colocar o System.out.
+
+26
+00:02:18.240 --> 00:02:22.880
+println, que é o comando que eu
+utilizo para imprimir no console,
+
+27
+00:02:22.880 --> 00:02:27.348
+certo, e vou colocar aqui
+
+28
+00:02:27.348 --> 00:02:33.102
+Olá Cursera,
+
+29
+00:02:33.102 --> 00:02:37.613
+opa, Coursera!, certo?
+
+30
+00:02:37.613 --> 00:02:39.440
+Então o que eu vou fazer?
+
+31
+00:02:39.440 --> 00:02:45.244
+Eu vou salvar esse arquivo aqui ó, ele
+tem que ter o mesmo nome da classe, tá?
+
+32
+00:02:45.244 --> 00:02:49.938
+E então eu vou vir aqui no
+meu diretório de trabalho tá,
+
+33
+00:02:49.938 --> 00:02:54.972
+vou chamar ele de PrimeiraClasse.java,
+certo?
+
+34
+00:02:54.972 --> 00:02:59.247
+Então vou vir aqui, vou salvar certo,
+
+35
+00:02:59.247 --> 00:03:03.491
+note que agora ele já reconheceu
+aqui como arquivo java,
+
+36
+00:03:03.491 --> 00:03:08.700
+e eu vou vir agora na minha linha
+de comando e vou escrever javac
+
+37
+00:03:08.700 --> 00:03:13.915
+PrimeiraClasse.java, certo?
+
+38
+00:03:13.915 --> 00:03:18.722
+Então nesse momento ele vai compilar,
+certo, o arquivo.
+
+39
+00:03:18.722 --> 00:03:23.931
+Note que se tivesse erro aqui,
+só para mostrar para vocês
+
+40
+00:03:23.931 --> 00:03:29.165
+eu vou tirar aqui uma,
+pedaço aqui, e vou salvar de novo,
+
+41
+00:03:29.165 --> 00:03:33.840
+né, ele apontaria erro,
+está vendo ele falou aqui,
+
+42
+00:03:33.840 --> 00:03:38.947
+olha eu esperava ponto e vírgula porque
+aqui ele está dentro da das aspas,
+
+43
+00:03:38.947 --> 00:03:42.730
+então eu vou voltar aqui para
+conseguir compilar da forma correta,
+
+44
+00:03:42.730 --> 00:03:47.300
+vou salvar,
+vou ver aqui e compilar novamente.
+
+45
+00:03:47.300 --> 00:03:51.677
+Como que eu faço para
+executar essa classe Java?
+
+46
+00:03:51.677 --> 00:03:58.100
+Eu simplesmente uso Java PrimeiraClasse",
+certo?
+
+47
+00:03:58.100 --> 00:04:06.358
+Eu rodo ali, certo, ele imprime aqui
+no console o Olá Coursera!, tá certo?
+
+48
+00:04:06.358 --> 00:04:11.396
+Bom, agora que a gente viu como fazer
+isso de linha de comando a gente sabe que
+
+49
+00:04:11.396 --> 00:04:16.343
+ninguém realmente trabalha compilando
+classe por classe e linha de comando.
+
+50
+00:04:16.343 --> 00:04:21.125
+Eu vou mostrar para vocês a ferramenta
+eclipse que é a ferramenta que a gente vai
+
+51
+00:04:21.125 --> 00:04:23.360
+estar utilizando aí durante o curso.
+
+52
+00:04:23.360 --> 00:04:29.223
+Eu vou abrir aqui o eclipse,
+então dentro do eclipse
+
+53
+00:04:29.223 --> 00:04:35.060
+para eu poder fazer alguma coisa
+eu preciso estar criando projeto,
+
+54
+00:04:35.060 --> 00:04:40.100
+e então é,
+eu vou criar aqui novo projeto Java,
+
+55
+00:04:40.100 --> 00:04:44.964
+eu vou chamar de Saudação, certo?
+
+56
+00:04:44.964 --> 00:04:49.953
+E aí dentro desse projeto ele tem uma
+
+57
+00:04:49.953 --> 00:04:54.810
+pasta aqui de código, eu venho aqui na
+pasta de código e vou criar uma nova
+
+58
+00:04:54.810 --> 00:04:59.668
+classe que eu vou chamar
+aqui de Primeira Classe.
+
+59
+00:04:59.668 --> 00:05:04.740
+Nota que aqui ó, já tem uma série de
+coisas aqui que vai me facilitar,
+
+60
+00:05:04.740 --> 00:05:09.181
+eu posso por exemplo pedir para
+ele já criar o método Main, certo?
+
+61
+00:05:09.181 --> 00:05:12.280
+À medida que o curso for
+
+62
+00:05:12.280 --> 00:05:16.700
+passando a gente vai mostrando alguns
+atalhos que têm aí no eclipse.
+
+63
+00:05:16.700 --> 00:05:22.805
+Que eu particularmente gosto bastante
+é simplesmente escrever sysout e ele,
+
+64
+00:05:22.805 --> 00:05:30.488
+é, eu aperto ctrl + espaço e ele já
+transforma no System.out.println, certo?
+
+65
+00:05:30.488 --> 00:05:37.465
+Então eu vou vir aqui e vou
+escrever: Olá Coursera!, certo?
+
+66
+00:05:37.465 --> 00:05:38.667
+Vou salvar.
+
+67
+00:05:38.667 --> 00:05:43.454
+Aqui no eclipse à medida que eu vou
+salvando ele já vai de uma certa
+
+68
+00:05:43.454 --> 00:05:46.770
+forma compilando,
+então se eu tivesse aquele erro aqui ó,
+
+69
+00:05:46.770 --> 00:05:51.035
+ele já sublinha e já me mostra, certo?
+
+70
+00:05:51.035 --> 00:05:54.382
+Se eu clicar aqui ó, certo,
+
+71
+00:05:54.382 --> 00:05:58.747
+ele me mostra qual que é problema, tá?
+
+72
+00:05:58.747 --> 00:06:04.391
+Uma coisa bacana do eclipse é que
+ele tem uns quickfix, que ele pode,
+
+73
+00:06:04.391 --> 00:06:09.620
+está vendo, ele colocou aqui,
+não colocou no lugar certo
+
+74
+00:06:09.620 --> 00:06:15.617
+mas muitas vezes a ajuda que ele oferece
+é bastante útil e pode ajudar bastante.
+
+75
+00:06:15.617 --> 00:06:20.920
+Aqui para gente executar eu simplesmente
+vou vir e vou clicar aqui cima,
+
+76
+00:06:20.920 --> 00:06:26.960
+certo, e aqui na parte de baixo ó,
+certo, ele tem o console,
+
+77
+00:06:26.960 --> 00:06:31.545
+o resultado do console, onde ele
+vai estar colocando o Olá Coursera!
+
+78
+00:06:31.545 --> 00:06:36.416
+Bom, eu espero que com essa aula
+vocês estejam mais familiar com o
+
+79
+00:06:36.416 --> 00:06:41.085
+ambiente que a gente vai trabalhar,
+sabendo tanto se o Java está
+
+80
+00:06:41.085 --> 00:06:46.138
+instalado como rodar na linha de comando,
+quanto fazendo
+
+81
+00:06:46.138 --> 00:06:50.010
+isso a partir do IDE Eclipse que é o que
+a gente vai utilizar durante o curso.
+
+82
+00:06:50.010 --> 00:06:57.730
+Até a próxima aula!

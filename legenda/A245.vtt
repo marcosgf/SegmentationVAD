@@ -1,0 +1,143 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:17.236
+[MÚSICA] E aí, pessoal, tudo bem?
+
+3
+00:00:17.236 --> 00:00:23.080
+Nessa aula vamos juntar todos os conceitos
+vistos no módulo e criar programa simples.
+
+4
+00:00:23.080 --> 00:00:27.660
+Vamos definir novamente a classe Pessoa,
+mas com algumas alterações.
+
+5
+00:00:27.660 --> 00:00:30.785
+Vamos criar peso e altura
+como variáveis opcionais,
+
+6
+00:00:30.785 --> 00:00:34.680
+assim não precisamos inicializá-las
+no momento da declaração.
+
+7
+00:00:34.680 --> 00:00:39.620
+Vamos criar o inicializador para facilitar
+a criação dos objetos dessa classe.
+
+8
+00:00:39.620 --> 00:00:43.967
+Para a função de cálculo de IMC temos
+agora que desembrulhar as variáveis
+
+9
+00:00:43.967 --> 00:00:49.366
+opcionais, e adicionamos uma função
+nova que analisa o IMC, retornando
+
+10
+00:00:49.366 --> 00:00:54.810
+uma string que mostra se o IMC representa
+peso saudável, sobrepeso ou obesidade.
+
+11
+00:00:54.810 --> 00:00:59.244
+Lembre-se de pausar o vídeo em qualquer
+momento para você poder digitar e copiar o
+
+12
+00:00:59.244 --> 00:01:01.700
+código testando no seu próprio playground.
+
+13
+00:01:01.700 --> 00:01:06.071
+Vamos criar 3 objetos: A pessoa1,
+
+14
+00:01:06.071 --> 00:01:11.545
+a pessoa2, e a pessoa3,
+com nomes e pesos diferentes.
+
+15
+00:01:11.545 --> 00:01:14.590
+Vamos criar vetor com esses objetos.
+
+16
+00:01:14.590 --> 00:01:17.276
+Crie vetor nulo da classe Pessoa.
+
+17
+00:01:17.276 --> 00:01:22.248
+Podemos atribuir os elementos iniciais
+desse vetor colocando os objetos que
+
+18
+00:01:22.248 --> 00:01:24.480
+já foram criados entre os colchetes,
+
+19
+00:01:24.480 --> 00:01:28.590
+e podemos adicionar o objeto da
+pessoa3 com o comando append.
+
+20
+00:01:28.590 --> 00:01:34.920
+Vamos criar uma função que retorne o
+nome da pessoa e a situação do seu peso.
+
+21
+00:01:34.920 --> 00:01:37.970
+Essa função tem como parâmetro uma pessoa.
+
+22
+00:01:37.970 --> 00:01:42.290
+E retorna o atributo nome,
+e executa a função AnalisaIMC.
+
+23
+00:01:42.290 --> 00:01:42.874
+Por fim,
+
+24
+00:01:42.874 --> 00:01:48.070
+vamos chamar essa função que acabamos de
+criar para cada elemento do arrayPessoas.
+
+25
+00:01:48.070 --> 00:01:50.245
+Através do comando de laço for in,
+
+26
+00:01:50.245 --> 00:01:53.850
+acessamos cada elemento do
+vetor e executamos a função.
+
+27
+00:01:53.850 --> 00:01:59.930
+Podemos ver aqui os valores impressos.
+
+28
+00:01:59.930 --> 00:02:04.334
+Terminamos aqui o nosso programa simples
+que junta a maioria dos conceitos que
+
+29
+00:02:04.334 --> 00:02:06.010
+vimos nas aulas anteriores.
+
+30
+00:02:06.010 --> 00:02:10.622
+Na próxima aula faremos uma
+recapitulação do módulo.
+
+31
+00:02:10.622 --> 00:02:11.330
+Até lá.

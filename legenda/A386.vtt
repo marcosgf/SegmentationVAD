@@ -1,0 +1,331 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.750
+Após esse vídeo,
+você será capaz de projetar
+
+2
+00:00:02.750 --> 00:00:07.202
+controlador de avanço de fase para
+sistema de terceira ordem, com o 0.
+
+3
+00:00:07.202 --> 00:00:12.109
+E generalizar esse procedimento para
+sistemas de qualquer ordem com ou
+
+4
+00:00:12.109 --> 00:00:13.100
+sem os zeros.
+
+5
+00:00:13.100 --> 00:00:17.458
+A função de transferência de
+malha aberta do sistema é 20,
+
+6
+00:00:17.458 --> 00:00:20.399
+s mais 15 sobre s s mais 10, s mais 20.
+
+7
+00:00:20.399 --> 00:00:24.390
+E os requisitos de desempenho
+são overshoot de 25 porcento,
+
+8
+00:00:24.390 --> 00:00:28.114
+e instante de pico de 150 milisegundos.
+
+9
+00:00:28.114 --> 00:00:33.794
+O overshoot de 25 porcento nos
+leva a csi de 0,404 e instante
+
+10
+00:00:33.794 --> 00:00:38.878
+de pico de 150 milisegundos,
+nos leva a ômega d de 21,
+
+11
+00:00:38.878 --> 00:00:45.687
+e os polos desejados malha fechada
+serão 9,3 mais ou menos 21j ou seja,
+
+12
+00:00:45.687 --> 00:00:49.900
+nosso quadradinho d é menos 9,3 mais 21j.
+
+13
+00:00:49.900 --> 00:00:55.170
+Calculando a fase chegamos
+a menos 190,2 graus,
+
+14
+00:00:55.170 --> 00:00:59.080
+então precisamos de avanço de 10,2 graus.
+
+15
+00:00:59.080 --> 00:01:04.105
+Dessa vez vamos posicionar o
+polo e 0 a mesma distância
+
+16
+00:01:04.105 --> 00:01:09.130
+da parte real do polo desejado,
+o 0 a direita e o polo a esquerda.
+
+17
+00:01:09.130 --> 00:01:14.125
+O a será 9,3 menos 21 vezes a tangente de
+
+18
+00:01:14.125 --> 00:01:18.558
+10,2 graus sobre 2, o que dá 7,4.
+
+19
+00:01:18.558 --> 00:01:26.765
+E o b será 9,3 mais 21 vezes a tangente
+de 10,2 graus sobre 2, o que dá 11,2.
+
+20
+00:01:26.765 --> 00:01:30.890
+Temos então a igual
+a 7,4 e b igual a 11,2.
+
+21
+00:01:30.890 --> 00:01:35.900
+Calculando o ganho temos k igual a 1
+sobre 20, módulo de quadradinho d,
+
+22
+00:01:35.900 --> 00:01:40.910
+módulo de quadradinho d mais 10,
+módulo de quadradinho d mais 20,
+
+23
+00:01:40.910 --> 00:01:47.703
+módulo de quadradinho d mais 15,
+o ganho k vai ser 1 sobre 20,
+
+24
+00:01:47.703 --> 00:01:54.810
+23 vezes 21 vezes 23,6 sobre 21,8
+que dá aproximadamente 26,1.
+
+25
+00:01:54.810 --> 00:01:59.800
+E não, eu não esqueci da distância
+até ao polo e o 0 do controlador.
+
+26
+00:01:59.800 --> 00:02:01.977
+Essas distâncias são as mesmas,
+
+27
+00:02:01.977 --> 00:02:05.640
+então elas vão ser canceladas
+na hora de calcularmos k.
+
+28
+00:02:05.640 --> 00:02:14.040
+Então temos C de s igual 26,1
+s mais 7,4 sobre s mais 11,2.
+
+29
+00:02:14.040 --> 00:02:21.276
+Com esse controlador temos polos
+malha fechada 9,34 mais ou menos 21j.
+
+30
+00:02:21.276 --> 00:02:25.590
+Simulando o sistema temos
+overshoot de 23,2 porcento,
+
+31
+00:02:25.590 --> 00:02:31.381
+e o instante de pico de 148 milisegundos,
+as diferenças são devidas
+
+32
+00:02:31.381 --> 00:02:36.220
+as pequenas aproximações que fizemos e aos
+dois polos e dois zeros a mais do sistema.
+
+33
+00:02:36.220 --> 00:02:40.160
+Mas como esses polos e zeros estão
+próximos entre si seu efeito é
+
+34
+00:02:40.160 --> 00:02:41.880
+parcialmente cancelado.
+
+35
+00:02:41.880 --> 00:02:46.985
+Para simular a resposta ao degrau desse
+sistema, utilize as seguintes instruções:
+
+36
+00:02:46.985 --> 00:02:51.524
+G igual a zpk menos 15
+0 menos 10 menos 20,
+
+37
+00:02:51.524 --> 00:02:56.617
+e 20 C igual a zpk menos 7.4 menos 11.2
+
+38
+00:02:56.617 --> 00:03:03.280
+26.2 T igual a feedback
+C vezes G,1 e step T.
+
+39
+00:03:03.280 --> 00:03:07.960
+Opcionalmente você pode simular
+a resposta usando o Simulink.
+
+40
+00:03:07.960 --> 00:03:10.476
+Agora, você já é capaz de projetar
+
+41
+00:03:10.476 --> 00:03:15.304
+controlador de avanço de fase para
+sistema de terceira ordem e generalisar
+
+42
+00:03:15.304 --> 00:03:19.930
+esse procedimento para sistemas de
+qualquer ordem, sem ou com os zeros.
+
+43
+00:03:19.930 --> 00:03:24.495
+Você vai ter que fazer mais contas,
+você vai ter mais fases para
+
+44
+00:03:24.495 --> 00:03:29.090
+calcular e mais módulos,
+mas o procedimento é exatamente o mesmo.
+
+45
+00:03:29.090 --> 00:03:34.063
+Uma dica, não é muito bom tentar
+projetar controladores de
+
+46
+00:03:34.063 --> 00:03:38.710
+avanço de fase com contribuições
+de fase maiores do que 40 graus.
+
+47
+00:03:38.710 --> 00:03:43.085
+Se a contribuição de fase necessária for
+maior do que 40 graus,
+
+48
+00:03:43.085 --> 00:03:47.460
+isso significa que você está
+querendo exigir muito do sistema.
+
+49
+00:03:47.460 --> 00:03:52.400
+Está querendo que Fusca por exemplo,
+corra exatamente como Ferrari.
+
+50
+00:03:52.400 --> 00:03:56.640
+Avanços de fase de até 30 e 40 graus,
+
+51
+00:03:56.640 --> 00:04:01.960
+vão deixar o sistema bem mais rápido e bem
+mais amortecido que o sistema original.
+
+52
+00:04:01.960 --> 00:04:05.480
+mais do que isso,
+é melhor você trocar o seu sistema.
+
+53
+00:04:05.480 --> 00:04:11.060
+Bom, mas se é tão simples assim
+projetar controlador de avanço de fase,
+
+54
+00:04:11.060 --> 00:04:14.621
+porque vimos como traçar o
+lugar geométrico das raízes,
+
+55
+00:04:14.621 --> 00:04:18.385
+esboçando o lugar geométrico
+podemos verificar se é possível
+
+56
+00:04:18.385 --> 00:04:21.910
+atender aos requisitos de
+desempenho apenas com o ganho k.
+
+57
+00:04:21.910 --> 00:04:26.137
+O que normalmente irá acontecer se
+a fase de G de quadradinho d for
+
+58
+00:04:26.137 --> 00:04:28.180
+maior que menos 180 graus.
+
+59
+00:04:28.180 --> 00:04:33.210
+Além disso,
+esboçando o LGR sem e com o controlador,
+
+60
+00:04:33.210 --> 00:04:38.240
+podemos visualizar facilmente se o sistema
+poderá ter polos instáveis malha fechada.
+
+61
+00:04:38.240 --> 00:04:42.776
+Não adianta nada posicionar par de
+polos exatamente onde desejamos se
+
+62
+00:04:42.776 --> 00:04:45.730
+terceiro polo estiver no
+semi plano da direita.
+
+63
+00:04:45.730 --> 00:04:50.822
+Por exemplo, projete controlador de
+avanço de fase ou mesmo controlador PD,
+
+64
+00:04:50.822 --> 00:04:55.740
+de modo a posicionar os polos
+de 20 s menos 5 s s mais 10
+
+65
+00:04:55.740 --> 00:04:58.764
+s menos 10 menos 5 mais 6j,
+
+66
+00:04:58.764 --> 00:05:04.310
+e depois verifique onde estão
+todos os polos desse sistema.
+
+67
+00:05:04.310 --> 00:05:09.173
+No próximo vídeo, você verá que se
+ajustar o valor do ganho para atender
+
+68
+00:05:09.173 --> 00:05:11.982
+a requisito de erro regime permanente,
+
+69
+00:05:11.982 --> 00:05:16.000
+você estará alterando também
+a posição dos polos malha fechada.

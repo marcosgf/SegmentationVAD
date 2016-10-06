@@ -1,0 +1,124 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:16.794
+[MÚSICA] E aí pessoal, tudo bem?
+
+3
+00:00:16.794 --> 00:00:21.540
+Nessa aula vamos ver como
+criar arquivo Swift no Xcode.
+
+4
+00:00:21.540 --> 00:00:26.660
+Por padrão, ao criar projeto com
+template "Single View Application",
+
+5
+00:00:26.660 --> 00:00:28.960
+o Xcode já cria 2 arquivos swift.
+
+6
+00:00:28.960 --> 00:00:34.570
+O AppDelegate.swift contem a classe que
+gerencia os eventos do seu aplicativo.
+
+7
+00:00:34.570 --> 00:00:39.470
+Por exemplo quando o aplicativo é aberto,
+quando ele é interrompido,
+
+8
+00:00:39.470 --> 00:00:41.360
+quando ele é fechado e etc.
+
+9
+00:00:41.360 --> 00:00:45.370
+Vimos o ViewController.swift
+na aula anterior.
+
+10
+00:00:45.370 --> 00:00:49.478
+Ele contem a classe que gerencia
+ViewController e possui as funções
+
+11
+00:00:49.478 --> 00:00:53.870
+viewDidLoad, que é chamada assim que a
+ViewController é carregada no aplicativo,
+
+12
+00:00:53.870 --> 00:00:57.830
+e a função didReceiveMemoryWarning,
+que é chamada
+
+13
+00:00:57.830 --> 00:01:01.730
+caso a sua ViewController esteja
+utilizando muita memória do dispositivo.
+
+14
+00:01:01.730 --> 00:01:06.461
+Na função viewDidLoad vamos digitar
+uma linha de código para imprimir
+
+15
+00:01:06.461 --> 00:01:07.710
+texto no console.
+
+16
+00:01:07.710 --> 00:01:11.950
+Rode o aplicativo.
+
+17
+00:01:11.950 --> 00:01:20.933
+[SEM_ÁUDIO] Logo que
+a ViewController é carregada,
+
+18
+00:01:20.933 --> 00:01:25.360
+essa função é chamada e então é impressa
+a frase "Hello World!" no console.
+
+19
+00:01:25.360 --> 00:01:28.920
+Vamos criar agora o nosso
+próprio arquivo swift.
+
+20
+00:01:28.920 --> 00:01:34.300
+Clique com o botão direito do mouse na
+pasta do seu projeto e clique "New File".
+
+21
+00:01:34.300 --> 00:01:41.626
+Selecione a categoria "iOS",
+"Source", e escolha "Swift File".
+
+22
+00:01:41.626 --> 00:01:47.423
+Dê nome para o arquivo
+e clique em "Create".
+
+23
+00:01:47.423 --> 00:01:51.889
+Nesse arquivo você pode
+criar uma nova classe,
+
+24
+00:01:51.889 --> 00:01:55.520
+uma estrutura,
+uma extensão de uma classe, e etc.
+
+25
+00:01:55.520 --> 00:02:01.815
+Na próxima aula, veremos como
+criar labels, imagens e botões.
+
+26
+00:02:01.815 --> 00:02:02.620
+Até lá!

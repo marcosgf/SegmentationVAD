@@ -1,0 +1,336 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.315
+Olá.
+Neste vídeo você aprenderá a traçar o
+
+2
+00:00:02.315 --> 00:00:06.700
+diagrama de Bode para sistemas de 2ª
+ordem estáveis com polos reais negativos.
+
+3
+00:00:06.700 --> 00:00:11.695
+A função de transferência
+geral para esses casos será
+
+4
+00:00:11.695 --> 00:00:16.630
+G de S = a K sobre S- p1 vezes S- p2.
+
+5
+00:00:16.630 --> 00:00:18.604
+Com p1 menor do que p2.
+
+6
+00:00:18.604 --> 00:00:20.580
+Ambos menores do que 0.
+
+7
+00:00:20.580 --> 00:00:23.296
+Vamos começar novamente com o módulo.
+
+8
+00:00:23.296 --> 00:00:28.484
+O módulo de G de J ômega dB será
+igual a 20log do módulo de K - 20log
+
+9
+00:00:28.484 --> 00:00:34.310
+do módulo de J ômega- p1 -
+20log do módulo de J ômega- p2.
+
+10
+00:00:34.310 --> 00:00:36.043
+Veja que interessante.
+
+11
+00:00:36.043 --> 00:00:37.610
+Ao usar o módulo dB,
+
+12
+00:00:37.610 --> 00:00:42.740
+o que obtemos é que o módulo total é
+a soma dos módulos devidos a cada parte.
+
+13
+00:00:42.740 --> 00:00:46.968
+Os termos associados aos polos aparecem
+com sinais negativos porque estão no
+
+14
+00:00:46.968 --> 00:00:49.320
+denominador da função de transferência.
+
+15
+00:00:49.320 --> 00:00:53.960
+Se aplicarmos o procedimento análogo ao
+feito no vídeo anterior a cada dos polos,
+
+16
+00:00:53.960 --> 00:00:58.600
+vamos ter duas frequências de
+quebra associadas a p1 e a p2.
+
+17
+00:00:58.600 --> 00:01:04.298
+Observe que, como p1 é menor do
+que p2 e ambos são negativos,
+
+18
+00:01:04.298 --> 00:01:06.790
+o módulo de p2 é maior do que o de p1.
+
+19
+00:01:06.790 --> 00:01:11.950
+Então, para frequência crescente,
+a primeira quebra se dará p1.
+
+20
+00:01:11.950 --> 00:01:14.800
+Depois, teremos uma segunda quebra p2.
+
+21
+00:01:14.800 --> 00:01:16.530
+Vamos analisar cada caso.
+
+22
+00:01:16.530 --> 00:01:22.090
+Para ômega menor do que o módulo de p1,
+predominam p1 e p2 nos módulos.
+
+23
+00:01:22.090 --> 00:01:26.963
+E o módulo de G de J ômega é,
+aproximadamente, 20log do módulo de K -
+
+24
+00:01:26.963 --> 00:01:31.430
+20log do módulo de p1-
+20log do módulo de p2.
+
+25
+00:01:31.430 --> 00:01:37.280
+Ao atingir o primeiro ponto de quebra,
+mas ainda antes do segundo, isto é,
+
+26
+00:01:37.280 --> 00:01:42.010
+quando ômega é maior do que o módulo
+de p1 e menor do que o módulo de p2,
+
+27
+00:01:42.010 --> 00:01:46.955
+a variação do módulo com a frequência
+pode ser expressa por delta de
+
+28
+00:01:46.955 --> 00:01:51.900
+módulo de G de J ômega aproximadamente
+igual a- 20log de ômega,
+
+29
+00:01:51.900 --> 00:01:56.940
+isto é, o módulo começa a decrescer com
+uma assíntota de -20 dB por década.
+
+30
+00:01:56.940 --> 00:02:01.596
+Finalmente, ao atingir a segunda
+frequência de quebra quando o
+
+31
+00:02:01.596 --> 00:02:06.589
+ômega é maior do que o módulo de p2,
+a variação de ômega será igual a-
+
+32
+00:02:06.589 --> 00:02:11.570
+20log de ômega- 20log de ômega
+que é igual a- 40log de ômega.
+
+33
+00:02:11.570 --> 00:02:16.210
+Veja só, o módulo começa
+a decair com- 40 dB por década.
+
+34
+00:02:16.210 --> 00:02:18.099
+- 20dB para cada dos polos.
+
+35
+00:02:18.099 --> 00:02:22.618
+Vamos ver o gráfico das assíntotas para
+esse caso com p1 e p2 separados por duas
+
+36
+00:02:22.618 --> 00:02:23.240
+décadas.
+
+37
+00:02:23.240 --> 00:02:28.170
+Podemos notar claramente as frequências
+
+38
+00:02:28.170 --> 00:02:33.100
+de quebra p1 e p2 igual a 100 vezes p1
+quando as assíntotas mudam de inclinação.
+
+39
+00:02:33.100 --> 00:02:37.711
+A aproximação para as assíntotas
+representa muito bem o comportamento do
+
+40
+00:02:37.711 --> 00:02:38.305
+módulo.
+
+41
+00:02:38.305 --> 00:02:40.920
+Vamos agora ver o que acontece com a fase.
+
+42
+00:02:40.920 --> 00:02:45.808
+A fase de G de J ômega é
+dada pela fase de K sobre J
+
+43
+00:02:45.808 --> 00:02:51.315
+ômega- p1 vezes J ômega- p2,
+que será igual ao arco tangente de
+
+44
+00:02:51.315 --> 00:02:56.548
+ômega sobre p1- o arco tangente de ômega
+sobre p2 para K maior do que 0, isto é,
+
+45
+00:02:56.548 --> 00:03:01.780
+a fase também pode ser decomposta nas
+contribuições individuais de cada polo.
+
+46
+00:03:01.780 --> 00:03:04.932
+Assim, podemos tratar as
+assíntotas para três situações,
+
+47
+00:03:04.932 --> 00:03:06.610
+como fizemos no caso do módulo.
+
+48
+00:03:06.610 --> 00:03:09.489
+Para ômega menor do que módulo de p1,
+a fase é 0,
+
+49
+00:03:09.489 --> 00:03:13.070
+pois as partes imaginárias são
+muito menores do que as reais.
+
+50
+00:03:13.070 --> 00:03:18.090
+Ao atingir o primeiro ponto de quebra,
+ainda antes do segundo,
+
+51
+00:03:18.090 --> 00:03:21.918
+quando o ômega é maior maior do que o
+módulo de p1 e menor do que o módulo
+
+52
+00:03:21.918 --> 00:03:26.089
+de p2, a parte correspondente ao
+termo envolvendo o p1 contribui com-
+
+53
+00:03:26.089 --> 00:03:30.550
+90º enquanto a associada p2
+continua contribuindo com 0.
+
+54
+00:03:30.550 --> 00:03:34.670
+Então, a fase de G de J ômega é,
+aproximadamente,- 90º.
+
+55
+00:03:34.670 --> 00:03:39.152
+Finalmente, ao atingir a segunda
+frequência de quebra, isto é,
+
+56
+00:03:39.152 --> 00:03:42.120
+quando o ômega é maior
+do que o módulo de p2,
+
+57
+00:03:42.120 --> 00:03:47.427
+cada dos termos do denominador
+contribui com- 90º totalizando - 180º,
+
+58
+00:03:47.427 --> 00:03:51.070
+e a fase de G de J ômega é,
+aproximadamente,- 180º.
+
+59
+00:03:51.070 --> 00:03:55.319
+Da mesma forma que fizemos para o
+caso do sistema de primeira ordem,
+
+60
+00:03:55.319 --> 00:03:59.370
+podemos unir as assíntotas por retas,
+iniciando meia década antes
+
+61
+00:03:59.370 --> 00:04:03.010
+e terminando meia década depois
+de cada frequência de quebra.
+
+62
+00:04:03.010 --> 00:04:04.796
+Vejamos como fica no gráfico.
+
+63
+00:04:04.796 --> 00:04:05.620
+Mais uma vez,
+
+64
+00:04:05.620 --> 00:04:10.510
+a aproximação por assíntotas representa
+bem os valores pontos mais distantes das
+
+65
+00:04:10.510 --> 00:04:14.616
+frequências de quebra e a interpolação
+nas proximidades das quebras tangenciam
+
+66
+00:04:14.616 --> 00:04:18.010
+as curvas no valor correspondente
+à fase na frequência de quebra.
+
+67
+00:04:18.010 --> 00:04:22.350
+O erro máximo é da ordem de
+11º para mais e para menos.
+
+68
+00:04:22.350 --> 00:04:23.293
+Neste vídeo,
+
+69
+00:04:23.293 --> 00:04:28.560
+você aprendeu a esboçar o diagrama de
+Bode para sistemas de 2ª ordem estáveis.
+
+70
+00:04:28.560 --> 00:04:33.606
+No próximo vídeo, você verá o que
+acontece quando dos polos está na origem,
+
+71
+00:04:33.606 --> 00:04:36.060
+isto é, quando o sistema é do tipo 1.

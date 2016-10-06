@@ -1,0 +1,631 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.382
+[MÚSICA] E aí,
+
+2
+00:00:05.382 --> 00:00:10.180
+pessoal, tudo bem?
+
+3
+00:00:10.180 --> 00:00:13.744
+Agora que temos as informações do Game
+Center configuradas no iTunes Connect,
+
+4
+00:00:13.744 --> 00:00:16.310
+vamos aprender como utilizá-las
+no nosso aplicativo.
+
+5
+00:00:16.310 --> 00:00:21.461
+Temos aqui aplicativo simples que tem uma
+label representando a nossa pontuação,
+
+6
+00:00:21.461 --> 00:00:24.190
+e botão + que incrementa em 1 esse valor.
+
+7
+00:00:24.190 --> 00:00:29.054
+Tem botão que mostrará a tela de
+Leaderboard e outro que mostrará a tela
+
+8
+00:00:29.054 --> 00:00:31.300
+de Achievements do Game Center.
+
+9
+00:00:31.300 --> 00:00:34.812
+Se você não sabe como criar esse
+aplicativo pelo Story Board,
+
+10
+00:00:34.812 --> 00:00:38.470
+assista o primeiro curso desse
+programa de cursos integrados.
+
+11
+00:00:38.470 --> 00:00:40.057
+O link está no material de apoio.
+
+12
+00:00:40.057 --> 00:00:44.513
+Você pode também incluir o Game Center
+direto no código de algum jogo que fizemos
+
+13
+00:00:44.513 --> 00:00:46.880
+nesse curso usando SpriteKit.
+
+14
+00:00:46.880 --> 00:00:51.057
+Estamos mostrando como incluir
+Game Center no aplicativo sem
+
+15
+00:00:51.057 --> 00:00:55.601
+SpriteKit apenas para exemplificar que
+podemos também incluir o Game Center
+
+16
+00:00:55.601 --> 00:00:57.570
+em aplicativos que não são jogos.
+
+17
+00:00:57.570 --> 00:01:02.475
+No caso, a Label representa
+a pontuação do seu jogo, e o botão +,
+
+18
+00:01:02.475 --> 00:01:06.270
+a função AddScore que soma pontos quando
+o jogador pega uma moeda, por exemplo.
+
+19
+00:01:06.270 --> 00:01:11.150
+Os botões Leaderboard e Achievements
+você pode incluir no menu do seu jogo.
+
+20
+00:01:11.150 --> 00:01:14.660
+Vamos agora incluir o Game Center.
+
+21
+00:01:14.660 --> 00:01:21.670
+Clique no seu projeto, na target,
+
+22
+00:01:21.670 --> 00:01:26.340
+e coloque o Bundle Identifier exatamente
+igual ao que escolhemos no iTunes Connect.
+
+23
+00:01:26.340 --> 00:01:30.804
+Nessa aba General, você não não conseguirá
+mudar o Bundle Identifier porque ele
+
+24
+00:01:30.804 --> 00:01:32.980
+utiliza o nome do projeto como padrão.
+
+25
+00:01:32.980 --> 00:01:37.740
+Vamos mudar na aba Info.
+
+26
+00:01:37.740 --> 00:01:39.630
+Aqui onde está escrito Bundle Identifier,
+
+27
+00:01:39.630 --> 00:01:42.500
+vamos digitar o identificador que
+escolhemos no iTunes Connect.
+
+28
+00:01:42.500 --> 00:01:49.910
+Feito isso, clique em Capabilities
+e ative o Game Center.
+
+29
+00:01:49.910 --> 00:01:54.450
+O Xcode irá pedir com que você
+associe a sua conta de desenvolvedor.
+
+30
+00:01:54.450 --> 00:02:01.445
+Clique em Add e digite a sua conta.
+
+31
+00:02:01.445 --> 00:02:08.440
+Clique em Choose.
+
+32
+00:02:08.440 --> 00:02:13.680
+O Xcode automaticamente ''linkará''
+o seu projeto com a sua conta,
+
+33
+00:02:13.680 --> 00:02:17.960
+já com todas as configurações necessárias
+para integrar com o Game Center.
+
+34
+00:02:17.960 --> 00:02:22.115
+Agora vamos voltar para
+o ViewController.swift,
+
+35
+00:02:22.115 --> 00:02:26.270
+e vamos incluir a biblioteca do Game Kit.
+
+36
+00:02:26.270 --> 00:02:30.652
+A primeira coisa que devemos fazer é
+autenticar o jogador logo que ele entra no
+
+37
+00:02:30.652 --> 00:02:31.470
+aplicativo.
+
+38
+00:02:31.470 --> 00:02:37.101
+[SEM_ÁUDIO] Vamos
+
+39
+00:02:37.101 --> 00:02:41.840
+criar uma variável que diz se o
+Game Center está ativado ou não.
+
+40
+00:02:41.840 --> 00:02:46.220
+Na função viewDidLoad vamos chamar
+uma função que autentica o usuário.
+
+41
+00:02:46.220 --> 00:02:48.191
+E vamos criar essa função.
+
+42
+00:02:48.191 --> 00:02:52.788
+A função que autentica o jogador cria
+uma variável do tipo Local Player,
+
+43
+00:02:52.788 --> 00:02:54.800
+e envia pedido de autenticação.
+
+44
+00:02:54.800 --> 00:03:00.000
+Nós temos que fornecer uma função que lida
+com a resposta do pedido de autenticação.
+
+45
+00:03:00.000 --> 00:03:05.343
+[SEM_ÁUDIO] Essa
+
+46
+00:03:05.343 --> 00:03:10.030
+função recebe como parâmetro
+UIViewController, e NSError.
+
+47
+00:03:10.030 --> 00:03:16.030
+Se na resposta de pedido de autenticação
+o valor de View Controller é nulo,
+
+48
+00:03:16.030 --> 00:03:19.660
+significa que a tela de login do
+Game Center deve ser mostrada.
+
+49
+00:03:19.660 --> 00:03:22.700
+Então é chamada a função
+PresentViewController.
+
+50
+00:03:22.700 --> 00:03:27.976
+Caso contrário,
+se não há uma tela para ser mostrada,
+
+51
+00:03:27.976 --> 00:03:31.040
+verificamos se o jogador
+está realmente autenticado.
+
+52
+00:03:31.040 --> 00:03:33.647
+Se ele estiver autenticado,
+
+53
+00:03:33.647 --> 00:03:38.870
+nós atualizamos a variável
+GameCenterEnabled como true.
+
+54
+00:03:38.870 --> 00:03:43.035
+Caso contrário, como false.
+
+55
+00:03:43.035 --> 00:03:44.639
+Uma vez que o jogador está autenticado,
+
+56
+00:03:44.639 --> 00:03:47.200
+vamos criar uma função que envia
+a pontuação para o Game Center.
+
+57
+00:03:47.200 --> 00:03:52.750
+Essa função reportScore recebe como
+parâmetro inteiro de pontuação.
+
+58
+00:03:52.750 --> 00:03:58.355
+Ela primeiro cria uma variável
+do tipo GKScore que recebe como
+
+59
+00:03:58.355 --> 00:04:02.460
+parâmetro o identificador que criamos no
+iTunes Connect para o nosso Leader Board.
+
+60
+00:04:02.460 --> 00:04:06.100
+Depois temos que configurar
+o valor que será enviado.
+
+61
+00:04:06.100 --> 00:04:09.710
+Este valor deve ser convertido para Int64.
+
+62
+00:04:09.710 --> 00:04:14.635
+E por fim, enviamos a pontuação para
+o Game Center que também deve ser
+
+63
+00:04:14.635 --> 00:04:17.790
+fornecida uma função que lida com
+a resposta de envio de pontuação.
+
+64
+00:04:17.790 --> 00:04:21.580
+Essa função recebe como parâmetro NSError.
+
+65
+00:04:21.580 --> 00:04:27.101
+Se esse erro for diferente de nulo,
+imprimimos esse erro,
+
+66
+00:04:27.101 --> 00:04:30.460
+caso contrário, imprimimos que o Score
+foi enviado, e o valor do Score.
+
+67
+00:04:30.460 --> 00:04:35.317
+Vamos fazer que a cada toque do botão
++ esse Score seja enviado para o
+
+68
+00:04:35.317 --> 00:04:36.350
+Game Center.
+
+69
+00:04:36.350 --> 00:04:40.070
+Vamos criar uma função que
+faz o pedido de conquista.
+
+70
+00:04:40.070 --> 00:04:43.383
+Essa função recebe como
+parâmetro uma string que é
+
+71
+00:04:43.383 --> 00:04:47.230
+identificador de conquista que
+criamos no iTunes Connect,
+
+72
+00:04:47.230 --> 00:04:51.480
+e recebe como parâmetro também
+a porcentagem completa dessa conquista.
+
+73
+00:04:51.480 --> 00:04:56.595
+Primeiro é criado uma variável
+
+74
+00:04:56.595 --> 00:05:01.710
+do tipo GKAchievements, que recebe como
+parâmetro identificador da conquista.
+
+75
+00:05:01.710 --> 00:05:05.896
+Depois é configurada a porcentagem
+completa dessa conquista e é
+
+76
+00:05:05.896 --> 00:05:09.240
+configurada a variável
+showsCompletionBanner,
+
+77
+00:05:09.240 --> 00:05:13.080
+para que banner seja mostrado quando
+o jogador ganhar uma conquista.
+
+78
+00:05:13.080 --> 00:05:18.957
+E por fim, enviado o pedido de
+conquista para o Game Center,
+
+79
+00:05:18.957 --> 00:05:23.756
+que também recebe como parâmetro vetor de
+Achievements e uma função que lida com
+
+80
+00:05:23.756 --> 00:05:25.750
+a resposta de pedido de conquista.
+
+81
+00:05:25.750 --> 00:05:31.458
+Essa função recebe também como parâmetro
+NSError e se esse erro for diferente
+
+82
+00:05:31.458 --> 00:05:35.710
+de nulo, ele é impresso na tela, caso
+contrário, é impresso conquista enviada.
+
+83
+00:05:35.710 --> 00:05:40.122
+Vamos definir as condições de
+conquistas ao apertar o botão +.
+
+84
+00:05:40.122 --> 00:05:45.113
+Se a pontuação for igual a três, vamos
+enviar pedido de conquista passando como
+
+85
+00:05:45.113 --> 00:05:49.003
+parametro o Id da conquista 1,
+e a porcentagem 100%.
+
+86
+00:05:49.003 --> 00:05:52.650
+Também vamos enviar o pedido
+de conquista 2 atualizando
+
+87
+00:05:52.650 --> 00:05:55.540
+o valor da porcentagem a cada
+vez que o botão é clicado.
+
+88
+00:05:55.540 --> 00:05:58.611
+Como a conquista 2 é ganhar 10 pontos,
+
+89
+00:05:58.611 --> 00:06:03.450
+a cada ponto ganho é equivalente
+a 10% completo da conquista.
+
+90
+00:06:03.450 --> 00:06:08.530
+Assim, quando ele tiver 10 pontos, será
+enviado pedido de 100% dessa conquista.
+
+91
+00:06:08.530 --> 00:06:12.916
+Por fim, vamos criar uma função que
+mostrará a interface do Game Center no
+
+92
+00:06:12.916 --> 00:06:14.130
+nosso aplicativo.
+
+93
+00:06:14.130 --> 00:06:17.870
+Para isso é necessário incluir
+delegate na nossa ViewController.
+
+94
+00:06:17.870 --> 00:06:20.699
+Precisamos implementar
+a função de delegate que
+
+95
+00:06:20.699 --> 00:06:23.600
+remove a tela do Game Center
+do nosso aplicativo.
+
+96
+00:06:23.600 --> 00:06:27.865
+Essa função esconde a ViewController
+do Game Center quando o usuário tiver
+
+97
+00:06:27.865 --> 00:06:29.230
+terminado de usá-la.
+
+98
+00:06:29.230 --> 00:06:34.020
+Vamos criar agora a função que mostra
+o ViewController da Game Center.
+
+99
+00:06:34.020 --> 00:06:38.822
+Essa função recebe como
+parâmetro Id que serve para
+
+100
+00:06:38.822 --> 00:06:42.130
+dizer se ela deve mostrar uma
+LeaderBoard ou os Achievements.
+
+101
+00:06:42.130 --> 00:06:46.650
+Primeiro é criada uma variável de
+ViewController da Game Center.
+
+102
+00:06:46.650 --> 00:06:51.552
+Então é associado o delegate dessa
+ViewController e é configurado o estado
+
+103
+00:06:51.552 --> 00:06:53.980
+do Game Center que vai ser mostrado.
+
+104
+00:06:53.980 --> 00:06:56.237
+Se o estado for uma Leader Board,
+
+105
+00:06:56.237 --> 00:07:00.840
+então devemos configurar o Id de
+LeaderBoard que vai ser mostrado.
+
+106
+00:07:00.840 --> 00:07:05.070
+Se o estado for Achievements não
+é necessário configurar o Id.
+
+107
+00:07:05.070 --> 00:07:09.430
+E por fim, é mostrado o
+ViewController do Game Center.
+
+108
+00:07:09.430 --> 00:07:14.130
+Nós mostramos a tela de Game Center
+apenas se o usuário estiver autenticado.
+
+109
+00:07:14.130 --> 00:07:19.030
+Se o usuário não estiver autenticado,
+devemos mostrar uma mensagem para o
+
+110
+00:07:19.030 --> 00:07:21.920
+jogador que o Game Center
+não está ativado.
+
+111
+00:07:21.920 --> 00:07:27.050
+Por fim, vamos implementar a ação do botão
+Leader Board e do botão Achievements.
+
+112
+00:07:27.050 --> 00:07:31.328
+Essas funções tentam primeiro autenticar
+o usuário para depois mostrar o
+
+113
+00:07:31.328 --> 00:07:33.820
+Leader Board ou mostrar os Achievements.
+
+114
+00:07:33.820 --> 00:07:42.030
+[SEM_ÁUDIO] Vamos rodar no
+simulador para ver o resultado.
+
+115
+00:07:42.030 --> 00:07:45.904
+Você pode notar que logo depois
+que o aplicativo é carregado,
+
+116
+00:07:45.904 --> 00:07:49.420
+a tela de login do Game Center
+é mostrada para o usuário.
+
+117
+00:07:49.420 --> 00:07:58.280
+[SEM_ÁUDIO] Vamos fazer o login de teste.
+
+118
+00:07:58.280 --> 00:08:06.810
+[SEM_ÁUDIO] Aqui em cima podemos ver
+que eu estou logado no Game Center.
+
+119
+00:08:06.810 --> 00:08:10.720
+O botão + incrementa em 1 a pontuação.
+
+120
+00:08:10.720 --> 00:08:14.210
+Podemos ver que eu ganhei
+a conquista dos 3 pontos.
+
+121
+00:08:14.210 --> 00:08:17.257
+Se clicarmos no botão de Achievements,
+
+122
+00:08:17.257 --> 00:08:21.120
+será mostrada a tela de
+conquistas do Game Center.
+
+123
+00:08:21.120 --> 00:08:25.790
+Podemos ver que eu ganhei
+a conquista de 3 pontos.
+
+124
+00:08:25.790 --> 00:08:30.080
+E a conquista de 10
+pontos está 30% completa.
+
+125
+00:08:30.080 --> 00:08:34.150
+Vamos ganhar os 10 pontos para
+conseguir 100% dessa conquista.
+
+126
+00:08:34.150 --> 00:08:42.001
+[SEM_ÁUDIO] E chegamos a 10 pontos.
+
+127
+00:08:42.001 --> 00:08:46.660
+O banner foi mostrado que eu acumulei
+10 pontos e ganhei a essa conquista.
+
+128
+00:08:46.660 --> 00:08:51.840
+E se clicarmos os Achievements podemos
+ver essa conquista 100% completa.
+
+129
+00:08:51.840 --> 00:08:56.755
+Com isso você acabou de aprender como
+integrar as Leader Boards Achievements
+
+130
+00:08:56.755 --> 00:08:58.050
+no seu aplicativo.
+
+131
+00:08:58.050 --> 00:09:03.024
+Caso você tenha se tornado membro no
+programa de desenvolvedores Apple,
+
+132
+00:09:03.024 --> 00:09:07.166
+como desafio, implemente Leaderboard
+e no mínimo 3 conquistas
+
+133
+00:09:07.166 --> 00:09:11.590
+para o jogo Alien Escape que implementamos
+no terceiro módulo desse curso.
+
+134
+00:09:11.590 --> 00:09:14.660
+Até a próxima.

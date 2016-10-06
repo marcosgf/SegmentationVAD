@@ -1,0 +1,156 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:15.804
+[MÚSICA] E aí, pessoal!
+
+3
+00:00:15.804 --> 00:00:17.750
+Tudo bem?
+
+4
+00:00:17.750 --> 00:00:21.590
+Nessa aula, vamos conhecer
+pouco mais sobre o storyboard.
+
+5
+00:00:21.590 --> 00:00:25.685
+Clique no storyboard.
+
+6
+00:00:25.685 --> 00:00:29.780
+Do lado esquerdo, temos a hierarquia de
+todos os objetos criados no storyboard.
+
+7
+00:00:29.780 --> 00:00:34.396
+Por exemplo, este objeto "View" está
+dentro de "View Controller", que por sua
+
+8
+00:00:34.396 --> 00:00:38.901
+vez está dentro de "View Controller
+Scene", Na barra lateral direita,
+
+9
+00:00:38.901 --> 00:00:43.840
+temos botões para mostrar as
+configurações do arquivo do storyboard,
+
+10
+00:00:43.840 --> 00:00:48.190
+uma ajuda rápida sobre o
+elemento que está selecionado,
+
+11
+00:00:48.190 --> 00:00:53.640
+as configurações de identidade do
+elemento, onde você pode definir a classe,
+
+12
+00:00:53.640 --> 00:00:56.980
+configurações de atributos do objeto,
+
+13
+00:00:56.980 --> 00:01:01.573
+configurações de tamanho,
+posição e alinhamento, e,
+
+14
+00:01:01.573 --> 00:01:06.670
+por último, as configurações de
+conexões entre os objetos e o código.
+
+15
+00:01:06.670 --> 00:01:08.521
+No canto inferior direito,
+
+16
+00:01:08.521 --> 00:01:13.390
+clique no terceiro botão para abrir
+a biblioteca de objetos de interface.
+
+17
+00:01:13.390 --> 00:01:19.440
+Para adicionar objeto na sua interface,
+basta arrastar e soltar nessa área.
+
+18
+00:01:19.440 --> 00:01:23.929
+Você pode notar que o objeto que
+acabamos de criar também aparece na
+
+19
+00:01:23.929 --> 00:01:25.460
+lista de hierarquia.
+
+20
+00:01:25.460 --> 00:01:31.120
+Na barra lateral direita, temos todas as
+opções de configurações desse objeto.
+
+21
+00:01:31.120 --> 00:01:35.495
+Note que a área disponível para montar
+a interface da tela é quadrada,
+
+22
+00:01:35.495 --> 00:01:39.870
+mas não existe nenhum device
+iOS com a tela nessa proporção.
+
+23
+00:01:39.870 --> 00:01:43.990
+Você pode mudar o layout
+dessa área caso queira montar
+
+24
+00:01:43.990 --> 00:01:48.110
+uma configuração diferente para
+cada formato e orientação de tela.
+
+25
+00:01:48.110 --> 00:01:54.179
+[SEM_ÁUDIO] Ou pode deixar
+no modo padrão e utilizar as
+
+26
+00:01:54.179 --> 00:01:58.810
+ferramentas de alinhamento relativo, para
+que os objetos mudem de tamanho e posição,
+
+27
+00:01:58.810 --> 00:02:01.320
+adaptando para os
+diferentes tipos de tela.
+
+28
+00:02:01.320 --> 00:02:05.078
+No canto inferior direito,
+você tem as configurações de alinhamento,
+
+29
+00:02:05.078 --> 00:02:07.120
+que são chamadas de "Constraints".
+
+30
+00:02:07.120 --> 00:02:11.805
+Você aprenderá como utilizar Constraints
+no segundo curso desse programa de
+
+31
+00:02:11.805 --> 00:02:13.110
+cursos integrados.
+
+32
+00:02:13.110 --> 00:02:20.046
+Na próxima aula, você conhecerá os
+objetos de "View" e "View Controller".
+
+33
+00:02:20.046 --> 00:02:20.760
+Até lá.

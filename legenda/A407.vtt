@@ -1,0 +1,588 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.609
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.609 --> 00:00:11.374
+bem vindo ao curso sobre TDD.
+
+3
+00:00:11.374 --> 00:00:18.180
+Eu sou Clovis Fernandes e hoje
+iremos responder, por que refatorar?
+
+4
+00:00:18.180 --> 00:00:23.920
+Nós temos mostrado que no TDD,
+no ciclo do TDD,
+
+5
+00:00:23.920 --> 00:00:30.071
+nós temos a fase de refatoração
+então por que refatorar?
+
+6
+00:00:30.071 --> 00:00:34.456
+Para garantir qualidade no
+software produzido, para obter,
+
+7
+00:00:34.456 --> 00:00:42.050
+para produzir software de qualidade, é
+isso que nós esperamos mostrar nessa aula.
+
+8
+00:00:42.050 --> 00:00:45.160
+Então, por que refatorar?
+
+9
+00:00:45.160 --> 00:00:50.020
+Para obter software de qualidade,
+para obter qualidade no software.
+
+10
+00:00:50.020 --> 00:00:54.667
+Nós examinamos o software,
+
+11
+00:00:54.667 --> 00:00:58.578
+nós vamos verificar
+algumas características,
+
+12
+00:00:58.578 --> 00:01:02.000
+nós vamos ver mais para a frente,
+está certo?
+
+13
+00:01:02.000 --> 00:01:06.498
+Nós vamos examinar o fato de o software
+
+14
+00:01:06.498 --> 00:01:11.672
+apresentar alguns sintomas
+de que não tem qualidade,
+
+15
+00:01:11.672 --> 00:01:16.714
+está certo, esses sintomas a gente
+chama de mal cheiro, para adiantar,
+
+16
+00:01:16.714 --> 00:01:22.230
+mas então a gente vai examinar e no final,
+eu vou transformar esse software,
+
+17
+00:01:22.230 --> 00:01:28.460
+eu vou refatorar garantindo que ele
+tenha o mesmo comportamento, está certo?
+
+18
+00:01:28.460 --> 00:01:33.966
+E aí eu posso então,
+atestar que ele é software de qualidade,
+
+19
+00:01:33.966 --> 00:01:38.599
+ou seja, ao final desse
+proceso do TDD eu posso então
+
+20
+00:01:38.599 --> 00:01:43.052
+ter software com uma qualidade melhor.
+
+21
+00:01:43.052 --> 00:01:45.550
+O que eu quero obter é isso.
+
+22
+00:01:45.550 --> 00:01:49.960
+Quer dizer, como nós definimos
+anteriormente, software de qualidade?
+
+23
+00:01:49.960 --> 00:01:55.254
+Bom, quando eu estou fazendo ciclo de TDD,
+eu tenho lá caso
+
+24
+00:01:55.254 --> 00:02:00.860
+de teste gero teste no
+JUnit e faço ele falhar.
+
+25
+00:02:00.860 --> 00:02:06.060
+Depois eu passo, isso na parte vermelha,
+depois na parte verde
+
+26
+00:02:06.060 --> 00:02:11.140
+eu vou construir código
+para fazer ele funcionar.
+
+27
+00:02:11.140 --> 00:02:12.108
+Está certo?
+
+28
+00:02:12.108 --> 00:02:18.396
+Então isso é o mínimo que a gente espera,
+que ele já esteja funcionando, está certo?
+
+29
+00:02:18.396 --> 00:02:22.716
+Então a chance de o software
+atender a todos os requisitos é
+
+30
+00:02:22.716 --> 00:02:26.820
+bastante garantida nesse fato.
+
+31
+00:02:26.820 --> 00:02:29.659
+Pelo ciclo do TDD nós não garantimos?
+
+32
+00:02:29.659 --> 00:02:33.781
+É que eu construo software de
+muita qualidade ali, porque,
+
+33
+00:02:33.781 --> 00:02:38.010
+na verdade eu vou tentar fazer o mais
+rápido possível, o mais simples possível,
+
+34
+00:02:38.010 --> 00:02:43.327
+o desenvolvimento do código de
+produção para que determinado
+
+35
+00:02:43.327 --> 00:02:48.030
+caso de teste seja aprovado, está certo?
+
+36
+00:02:48.030 --> 00:02:49.761
+Então eu não me preocupo muito.
+
+37
+00:02:49.761 --> 00:02:52.140
+Lógico que com o tempo, com a experiência,
+
+38
+00:02:52.140 --> 00:02:57.282
+eu passo a já embutir muitos princípios
+
+39
+00:02:57.282 --> 00:03:02.598
+de qualidade na hora que eu já estou
+criando o código, melhor, está certo?
+
+40
+00:03:02.598 --> 00:03:04.860
+Mas eu, não é uma preocupação.
+
+41
+00:03:04.860 --> 00:03:12.300
+Então a preocupação depois é,
+para ter código de qualidade,
+
+42
+00:03:12.300 --> 00:03:17.770
+é que o código não só funcione,
+isso é o mínimo, é o básico, está certo?
+
+43
+00:03:17.770 --> 00:03:22.630
+É que ele seja escrito para os
+desenvolvedores, porque são,
+
+44
+00:03:22.630 --> 00:03:26.812
+eu que estou desenvolvendo e os meus
+colegas e os futuros desenvolvedores que
+
+45
+00:03:26.812 --> 00:03:30.524
+vão manter esse software,
+eles precisam entender,
+
+46
+00:03:30.524 --> 00:03:35.434
+então o código tem que ser escrito
+e refatorado para esse nível de
+
+47
+00:03:35.434 --> 00:03:39.430
+qualidade que os desenvolvedores não
+tenham muita dificuldade depois.
+
+48
+00:03:39.430 --> 00:03:44.390
+Então o código tem que estar limpo,
+claro, está certo?
+
+49
+00:03:44.390 --> 00:03:49.859
+Que seja fácil de ler, ou mais fácil
+possível de ler, ou mais fácil possível
+
+50
+00:03:49.859 --> 00:03:55.540
+de compreender, porque eu vou
+querer fazer e promover mudanças.
+
+51
+00:03:55.540 --> 00:04:01.680
+Então isso é o que reflete o que
+eu chamo de software de qualidade.
+
+52
+00:04:01.680 --> 00:04:05.420
+Conferir qualidade ao software,
+está certo?
+
+53
+00:04:05.420 --> 00:04:09.554
+É garantir essas coisas,
+que vai, no final,
+
+54
+00:04:09.554 --> 00:04:14.578
+vai fazer com que o processo
+todo garanta rapidez,
+
+55
+00:04:14.578 --> 00:04:18.742
+qualidade que eu estou
+atendendo os requisitos,
+
+56
+00:04:18.742 --> 00:04:22.510
+no nosso caso as responsabilidades,
+está certo?
+
+57
+00:04:22.510 --> 00:04:27.190
+E ao mesmo tempo, facilitando
+a vida dos futuros desenvolvedores.
+
+58
+00:04:27.190 --> 00:04:31.744
+Dois grandes problemas que a gente
+normalmente vai acumulando enquanto está
+
+59
+00:04:31.744 --> 00:04:36.960
+desenvolvendo software,
+com TDD ou não, não importa a técnica,
+
+60
+00:04:36.960 --> 00:04:42.490
+é a duplicação de código, está certo,
+que nós vamos ver mais para frente algumas
+
+61
+00:04:42.490 --> 00:04:48.020
+técnicas de como refatorar
+para eliminar essa duplicação.
+
+62
+00:04:48.020 --> 00:04:53.191
+Mas, uma coisa muito importante
+é a legibilidade do código.
+
+63
+00:04:53.191 --> 00:04:57.832
+Vocês vejam aí que eu tenho
+exemplinho de código limpo, né,
+
+64
+00:04:57.832 --> 00:05:01.902
+está certo, que está dizendo,
+se for legível,
+
+65
+00:05:01.902 --> 00:05:06.380
+seja feliz, caso contrário,
+refatore, está certo?
+
+66
+00:05:06.380 --> 00:05:07.859
+Por que isso?
+
+67
+00:05:07.859 --> 00:05:13.894
+Porque eu vou querer expressar
+a intenção minha está certo,
+
+68
+00:05:13.894 --> 00:05:16.260
+todas as partes do meu software.
+
+69
+00:05:16.260 --> 00:05:21.778
+Nas variáveis de instância eu quero
+escolher nomes que reflitam o significado
+
+70
+00:05:21.778 --> 00:05:26.654
+daquela variável de instância,
+vez de usar uma variável I, X, Y,
+
+71
+00:05:26.654 --> 00:05:31.682
+eu vou usar nome mais apropriado
+para a função daquela,
+
+72
+00:05:31.682 --> 00:05:35.694
+pode ser quantidade por exemplo,
+valor, quer dizer,
+
+73
+00:05:35.694 --> 00:05:40.031
+eu vou dar nomes que são
+expressivos e que constituam uma
+
+74
+00:05:40.031 --> 00:05:44.830
+intenção relativa aquele
+software que eu estou produzindo.
+
+75
+00:05:44.830 --> 00:05:48.186
+Vai valer também para as
+variáveis temporárias tá,
+
+76
+00:05:48.186 --> 00:05:53.274
+que eu vou dar nomes apropriados
+às variáveis temporárias também,
+
+77
+00:05:53.274 --> 00:05:56.317
+para que o código continue sendo legível.
+
+78
+00:05:56.317 --> 00:05:58.920
+Eu vou dar bons nomes para os métodos,
+
+79
+00:05:58.920 --> 00:06:04.720
+tanto para os métodos do código de
+produção, quanto para o código de teste.
+
+80
+00:06:04.720 --> 00:06:10.115
+Nós já mostramos algum exemplo no código
+de teste que eu estou também interessado,
+
+81
+00:06:10.115 --> 00:06:14.060
+mesmo no código de teste,
+de ter código de qualidade, está certo?
+
+82
+00:06:14.060 --> 00:06:17.820
+Nomes expressivos.
+
+83
+00:06:17.820 --> 00:06:23.190
+Os nomes das classes e os nomes
+das interfaces quer dizer,
+
+84
+00:06:23.190 --> 00:06:29.903
+eu quero ter expressado essa intenção de
+uma maneira que torne o código melhor.
+
+85
+00:06:29.903 --> 00:06:33.660
+Para isso,
+vamos fazer pequeno teste agora.
+
+86
+00:06:33.660 --> 00:06:39.106
+Eu vou querer que vocês
+leiam esses 2 códigos,
+
+87
+00:06:39.106 --> 00:06:44.050
+parem o video nesse
+ponto e digam para mim,
+
+88
+00:06:44.050 --> 00:06:50.178
+qual desses 2 trechos que são,
+o trecho vermelho ele apresenta
+
+89
+00:06:50.178 --> 00:06:56.706
+algum problema de qualidade e o de baixo
+supostamente já é uma refatoração.
+
+90
+00:06:56.706 --> 00:07:02.000
+Mas a pergunta aqui é,
+qual que é o mais legível, tá certo?
+
+91
+00:07:02.000 --> 00:07:07.710
+O rosa, cima ou o verde, embaixo?
+
+92
+00:07:07.710 --> 00:07:10.361
+Pare o video e me responda.
+
+93
+00:07:10.361 --> 00:07:15.892
+[SEM_ÁUDIO] Na minha opinião
+e na opinião da maioria
+
+94
+00:07:15.892 --> 00:07:21.177
+dos desenvolvedores de software,
+esse que está verde baixo,
+
+95
+00:07:21.177 --> 00:07:25.932
+está certo, é mais legível do
+que o que está cima, está certo.
+
+96
+00:07:25.932 --> 00:07:28.240
+Porque é que ele é mais legível?
+
+97
+00:07:28.240 --> 00:07:33.030
+Porque ele expressa a intenção,
+
+98
+00:07:33.030 --> 00:07:37.470
+a intenção do que eu estou querendo
+fazer fica expressa lá, está certo?
+
+99
+00:07:37.470 --> 00:07:42.783
+Então se vocês lerem ai, se é verão,
+
+100
+00:07:42.783 --> 00:07:49.260
+naquela data, então o custo é igual
+ao custo verão na quantidade.
+
+101
+00:07:49.260 --> 00:07:54.273
+Caso contrário, o custo é igual
+ao custo inverno na quantidade,
+
+102
+00:07:54.273 --> 00:07:59.487
+ou seja eu estou me expressando
+de uma maneira muito próxima
+
+103
+00:07:59.487 --> 00:08:04.340
+do que eu estava querendo
+realmente expressar,
+
+104
+00:08:04.340 --> 00:08:09.340
+para que as pessoas entendam
+isso com muita facilidade.
+
+105
+00:08:09.340 --> 00:08:15.112
+Então isso é para vocês verem que
+é importante, vai ser primordial,
+
+106
+00:08:15.112 --> 00:08:21.444
+eu tinha até apresentado que o expressar
+intenção era uma das principais
+
+107
+00:08:21.444 --> 00:08:27.013
+técnicas que nós usaríamos
+na produção de software.
+
+108
+00:08:27.013 --> 00:08:32.620
+E ela vale tanto quando a gente produz TDD
+ou quando não produz TDD, tanto faz isso.
+
+109
+00:08:32.620 --> 00:08:37.520
+Com isso,
+nós mostramos para vocês porque refatorar,
+
+110
+00:08:37.520 --> 00:08:40.613
+quer dizer,
+porque é que a gente vai refatorar?
+
+111
+00:08:40.613 --> 00:08:48.004
+Porque no TDD, nós nos preocupamos
+com o atender as responsabilidades,
+
+112
+00:08:48.004 --> 00:08:53.290
+atender os requisitos, vai funcionar,
+tem que funcionar de acordo
+
+113
+00:08:53.290 --> 00:08:58.330
+com as responsabilidades e os casos
+de teste para cada responsabilidade.
+
+114
+00:08:58.330 --> 00:09:01.377
+Então o comportamento eu estou garantindo,
+
+115
+00:09:01.377 --> 00:09:06.316
+mas como esse software vai ser usado por
+outros desenvolvedores e por mim mesmo,
+
+116
+00:09:06.316 --> 00:09:11.928
+daqui uma semana a gente já não lembra
+mais o que fez no código, está certo?
+
+117
+00:09:11.928 --> 00:09:17.900
+Nós na refatoração, vamos tornar
+esse código que não necessariamente
+
+118
+00:09:17.900 --> 00:09:22.809
+foi produzido com a intenção de ser código
+de qualidade, embora ele vai com o tempo,
+
+119
+00:09:22.809 --> 00:09:26.160
+você vai embutir muitas
+características de qualidade nele,
+
+120
+00:09:26.160 --> 00:09:31.040
+mas aí é por isso que existe
+a refatoração, é onde eu vou garantir
+
+121
+00:09:31.040 --> 00:09:35.711
+qualidade ao software,
+eu vou obter software de qualidade.
+
+122
+00:09:35.711 --> 00:09:36.580
+Obrigado.
+
+123
+00:09:36.580 --> 00:09:41.890
+[MÚSICA]

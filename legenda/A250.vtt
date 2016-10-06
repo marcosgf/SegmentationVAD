@@ -1,0 +1,238 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.967
+[MÚSICA] E aí,
+
+3
+00:00:13.967 --> 00:00:17.920
+pessoal, tudo bem?
+
+4
+00:00:17.920 --> 00:00:22.460
+Nessa aula vamos conhecer os
+elementos de View e View Controller.
+
+5
+00:00:22.460 --> 00:00:27.580
+Por padrão, ao criar projeto com o
+template Single View Application,
+
+6
+00:00:27.580 --> 00:00:31.640
+o Xcode cria uma única View Controller
+com uma View em branco.
+
+7
+00:00:31.640 --> 00:00:33.918
+A View Controller, como o nome diz,
+
+8
+00:00:33.918 --> 00:00:39.080
+serve para controlar e gerenciar Views
+para mostrar o conteúdo do seu aplicativo.
+
+9
+00:00:39.080 --> 00:00:43.681
+A View Controller desse template,
+já está conectada com código através da
+
+10
+00:00:43.681 --> 00:00:48.540
+classe View Controller,
+definida no arquivo ViewController.swift.
+
+11
+00:00:48.540 --> 00:00:54.932
+Essa classe já contém definidas as funções
+viewDidLoad, que é chamada assim que essa
+
+12
+00:00:54.932 --> 00:01:00.685
+View Controller é carregada no aplicativo
+e a função didReceiveMemoryWarning, que é
+
+13
+00:01:00.685 --> 00:01:05.110
+chamada caso a sua View Controller esteja
+utilizando muita memória do dispositivo.
+
+14
+00:01:05.110 --> 00:01:08.830
+Essa View Controller
+contém uma View principal.
+
+15
+00:01:08.830 --> 00:01:14.353
+As Views gerenciam uma área retangular
+da tela e são responsáveis por desenhar
+
+16
+00:01:14.353 --> 00:01:19.485
+o conteúdo, lidar com os eventos
+de múltiplos toques e gerenciar
+
+17
+00:01:19.485 --> 00:01:23.690
+o layout de qualquer SubView, ou seja,
+uma View que está dentro de outra View.
+
+18
+00:01:23.690 --> 00:01:28.970
+Nas configurações, se desejar, você pode
+modificar a cor de fundo dessa View.
+
+19
+00:01:28.970 --> 00:01:31.382
+Vamos adicionar uma SubView.
+
+20
+00:01:31.382 --> 00:01:38.850
+Na biblioteca de objetos procure por View,
+arraste e solte.
+
+21
+00:01:38.850 --> 00:01:44.750
+E troque a cor de fundo.
+
+22
+00:01:44.750 --> 00:01:51.505
+[SEM _ÁUDIO]
+
+23
+00:01:51.505 --> 00:01:58.260
+Você pode redimensioná-la também
+pelas configurações de tamanho.
+
+24
+00:01:58.260 --> 00:02:03.140
+Coloque 100 para a largura
+e 100 para a altura.
+
+25
+00:02:03.140 --> 00:02:08.390
+Também é possível modificar
+a posição pelos valores X e Y.
+
+26
+00:02:08.390 --> 00:02:14.120
+Copie essa SubView com Command C
+
+27
+00:02:14.120 --> 00:02:19.460
+e cole com Command V e
+modifique a cor de fundo.
+
+28
+00:02:19.460 --> 00:02:28.150
+[SEM_ÁUDIO] Você pode esconder elementos
+através da propriedade Hidden.
+
+29
+00:02:28.150 --> 00:02:32.430
+Para exemplificar,
+vamos escolher essa SubView vermelha.
+
+30
+00:02:32.430 --> 00:02:39.480
+Rode o aplicativo no simulador de
+iPhone 5s para ver o resultado.
+
+31
+00:02:39.480 --> 00:02:44.732
+Note que a SubView vermelha
+
+32
+00:02:44.732 --> 00:02:50.387
+está oculta e a SubView
+azul não está centralizada.
+
+33
+00:02:50.387 --> 00:02:55.127
+Isso acontece pois nós não definimos o
+alinhamento desse objeto para se ajustar
+
+34
+00:02:55.127 --> 00:02:56.930
+aos diferentes tamanhos de tela.
+
+35
+00:02:56.930 --> 00:03:04.558
+[SEM_ÁUDIO] Posicione
+
+36
+00:03:04.558 --> 00:03:10.380
+essa SubView no canto superior
+esquerdo da tela e rode o aplicativo.
+
+37
+00:03:10.380 --> 00:03:15.241
+[SEM_ÁUDIO] Essa é
+
+38
+00:03:15.241 --> 00:03:20.778
+a posição de origem X=0 e
+Y=0 Vamos redimensionar
+
+39
+00:03:20.778 --> 00:03:25.860
+essa View para tamanho
+proporcional ao iPhone 5s.
+
+40
+00:03:25.860 --> 00:03:32.300
+Coloque 320 para a largura
+e 568 para a altura.
+
+41
+00:03:32.300 --> 00:03:39.650
+Arraste a SubView vermelha para dentro
+da azul e tire a opção de ocultá-la.
+
+42
+00:03:39.650 --> 00:03:44.754
+[SEM_ÁUDIO] Para
+
+43
+00:03:44.754 --> 00:03:49.220
+uma melhor organização renomeie
+a View azul para ViewBackgroud.
+
+44
+00:03:49.220 --> 00:03:55.143
+[SEM_ÁUDIO] Duplique
+
+45
+00:03:55.143 --> 00:04:00.718
+a SubView vermelha, redimensione,
+
+46
+00:04:00.718 --> 00:04:08.535
+mude a posição e troque a cor de fundo.
+
+47
+00:04:08.535 --> 00:04:14.260
+Rode no simulador.
+
+48
+00:04:14.260 --> 00:04:18.870
+Dessa forma, você garante que ao rodar
+no iPhone 5s as posições e tamanhos
+
+49
+00:04:18.870 --> 00:04:22.250
+que você escolher para cada objeto,
+serão mantidos.
+
+50
+00:04:22.250 --> 00:04:28.027
+Na próxima aula, veremos como
+criar arquivos Swift no Xcode.
+
+51
+00:04:28.027 --> 00:04:28.790
+Até lá.

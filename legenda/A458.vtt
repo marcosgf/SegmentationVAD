@@ -1,0 +1,263 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.745
+[MÚSICA] [MÚSICA] Olá!
+
+2
+00:00:08.745 --> 00:00:12.191
+Bem vindo ao curso de
+Orientação a Objetos com Java.
+
+3
+00:00:12.191 --> 00:00:17.695
+Meu nome é Clovis Fernandes e hoje você
+será exposto ao conceito de Cartão CRC,
+
+4
+00:00:17.695 --> 00:00:19.821
+conceito muito importante,
+
+5
+00:00:19.821 --> 00:00:25.271
+muito interessante que vai facilitar
+o aprendizado de orientação a objeto.
+
+6
+00:00:25.271 --> 00:00:30.030
+Nós já mostramos toda a base de Cartão CRC
+para vocês nas aulas anteriores,
+
+7
+00:00:30.030 --> 00:00:34.433
+falamos de responsabilidades,
+falamos de lógica de responsabilidade,
+
+8
+00:00:34.433 --> 00:00:36.865
+classes colaboradoras e colaborações.
+
+9
+00:00:36.865 --> 00:00:41.744
+Com isso hoje iremos mostrar esse
+conceito realmente muito importante que é
+
+10
+00:00:41.744 --> 00:00:42.753
+Cartão CRC.
+
+11
+00:00:42.753 --> 00:00:48.090
+Cartão CRC e o seu papel na aprendizagem
+de conceitos de orientação a objetos.
+
+12
+00:00:48.090 --> 00:00:52.883
+CRC é uma sigla para classe,
+responsabilidade e colaboração.
+
+13
+00:00:52.883 --> 00:00:57.920
+Geralmente nós representamos o
+Cartão CRC cartões de papel mesmo,
+
+14
+00:00:57.920 --> 00:01:00.782
+como o que está representado aí na tela,
+
+15
+00:01:00.782 --> 00:01:05.427
+que você tem uma parte que vai o nome da
+classe, uma coluna que você vai listar
+
+16
+00:01:05.427 --> 00:01:09.340
+todas as responsabilidades
+daquela classe e uma outra coluna
+
+17
+00:01:09.340 --> 00:01:14.239
+que você vai listar todas as classes
+e colaborações das responsabilidades.
+
+18
+00:01:14.239 --> 00:01:19.118
+Exemplifico nesse Cartão CRC da
+classe Banco que eu apresento algumas
+
+19
+00:01:19.118 --> 00:01:23.912
+responsabilidades e algumas classes
+colaboradoras e as colaborações,
+
+20
+00:01:23.912 --> 00:01:28.330
+que nada mais são que responsabilidades
+das classes colaboradoras.
+
+21
+00:01:28.330 --> 00:01:31.838
+Iremos falar agora dos
+benefícios do uso de Cartão CRC.
+
+22
+00:01:31.838 --> 00:01:35.878
+Primeiramente ele nos ajuda
+a estruturar e organizar conceitos de
+
+23
+00:01:35.878 --> 00:01:38.549
+orientação a objetos de
+uma maneira mais informal,
+
+24
+00:01:38.549 --> 00:01:43.489
+fornece uma introdução mais fácil para
+a aprendizagem efetiva dos conceitos
+
+25
+00:01:43.489 --> 00:01:46.918
+de orientação a objetos,
+isso é muito importante.
+
+26
+00:01:46.918 --> 00:01:51.519
+Desde a sua criação os Cartões CRC foram
+criados para o aprendizado de orientação
+
+27
+00:01:51.519 --> 00:01:56.512
+a objetos Hoje dia ele continua sendo
+usado com essa finalidade, para consolidar
+
+28
+00:01:56.512 --> 00:02:01.936
+todo o conhecimento orientado a objetos
+que o desenvolvedor deve ter.
+
+29
+00:02:01.936 --> 00:02:06.899
+O cartão CRC é uma ferramenta que
+ainda é muito usado na indústria.
+
+30
+00:02:06.899 --> 00:02:11.721
+O Cartão CRC é o ponto inicial de muitas
+metodologias de orientação a objetos
+
+31
+00:02:11.721 --> 00:02:16.432
+pois ele facilita a identificação e
+caracterização das classes que a pessoa
+
+32
+00:02:16.432 --> 00:02:18.081
+vai usar na sua aplicação.
+
+33
+00:02:18.081 --> 00:02:22.969
+No nosso caso só iremos usar Cartão CRC
+nesse início porque nós iremos
+
+34
+00:02:22.969 --> 00:02:27.510
+aprofundar o desenvolvimento de
+software através de metodologias ágeis.
+
+35
+00:02:27.510 --> 00:02:33.470
+Mesmo assim nós iremos usar o
+Cartão CRC de uma maneira interessante
+
+36
+00:02:33.470 --> 00:02:39.430
+que vai servir para oferecer projeto
+simplificado para a nossa modelagem ágil,
+
+37
+00:02:39.430 --> 00:02:45.290
+ou seja, mesmo que eu esteja fazendo
+modelagem ágil eu estaria fundamentando
+
+38
+00:02:45.290 --> 00:02:50.592
+as classes iniciais através dos Cartões
+CRC, fazendo projeto mais simplificado.
+
+39
+00:02:50.592 --> 00:02:55.660
+Posteriormente, caso haja algum problema,
+o projeto vai se tornando mais
+
+40
+00:02:55.660 --> 00:03:01.051
+complexo ou quando eu vou agregando
+novos requisitos ao meu projeto,
+
+41
+00:03:01.051 --> 00:03:05.913
+eu vou voltando regularmente para
+trabalhar esses novos conceitos
+
+42
+00:03:05.913 --> 00:03:09.895
+também com Cartão CRC porque
+isso facilita estruturar,
+
+43
+00:03:09.895 --> 00:03:13.179
+rever e mudar quando novos
+requisitos são acrescidos.
+
+44
+00:03:13.179 --> 00:03:17.753
+Uma coisa que eu já falei anteriormente e
+que tem a ver com a colaboração: quando
+
+45
+00:03:17.753 --> 00:03:22.960
+uma classe precisa da colaboração da
+outra, automaticamente ela está se
+
+46
+00:03:22.960 --> 00:03:28.373
+acoplando à outra, a classe cliente
+depende da classe servidora ou da classe
+
+47
+00:03:28.373 --> 00:03:33.438
+colaboradora e isso fica
+representado como nós estamos vendo
+
+48
+00:03:33.438 --> 00:03:38.562
+aí UML na forma de uma associação,
+associação de uma classe com outra.
+
+49
+00:03:38.562 --> 00:03:43.176
+Na aula de hoje nós mostramos como
+caracterizar classes orientadas
+
+50
+00:03:43.176 --> 00:03:47.513
+a objetos através do Cartão CRC
+conceito muito importante e
+
+51
+00:03:47.513 --> 00:03:51.785
+que ao longo do curso iremos
+usar muitos dos seus conceitos,
+
+52
+00:03:51.785 --> 00:03:57.050
+principalmente responsabilidade
+e colaboração.
+
+53
+00:03:57.050 --> 00:03:59.987
+Muito obrigado.
+
+54
+00:03:59.987 --> 00:04:01.950
+[MÚSICA]

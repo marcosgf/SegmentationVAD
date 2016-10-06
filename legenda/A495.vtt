@@ -1,0 +1,569 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.969
+[MÚSICA] [MÚSICA] Olá a todos.
+
+2
+00:00:09.969 --> 00:00:14.356
+Esse é o curso de orientação
+a objetos com Java.
+
+3
+00:00:14.356 --> 00:00:18.407
+Vamos ver hoje como é que
+funciona a cadeia de construtores
+
+4
+00:00:18.407 --> 00:00:21.197
+dentro de uma hierarquia de classes.
+
+5
+00:00:21.197 --> 00:00:21.863
+Certo?
+
+6
+00:00:21.863 --> 00:00:26.745
+Então a ideia é que a gente crie
+ai 3 classes sendo uma herdando
+
+7
+00:00:26.745 --> 00:00:31.105
+da outra e ai vamos ver como é
+que essa cadeia de construtores é
+
+8
+00:00:31.105 --> 00:00:36.033
+invocada ai quando a gente chama
+a classe lá de baixo da hierarquia.
+
+9
+00:00:36.033 --> 00:00:42.640
+Então vou criar aqui novo projeto
+chamado Cadeia Construtores.
+
+10
+00:00:42.640 --> 00:00:43.830
+Certo?
+
+11
+00:00:43.830 --> 00:00:50.040
+Vou criar aqui então essas 3 classes.
+
+12
+00:00:50.040 --> 00:00:50.764
+Certo?
+
+13
+00:00:50.764 --> 00:00:56.060
+Então eu vou criar aqui:
+vou chamar aqui de,
+
+14
+00:00:56.060 --> 00:01:00.195
+vou chamar aqui de pai de todos,
+
+15
+00:01:00.195 --> 00:01:04.330
+vai ser aquele que vai estar
+lá cima da hierarquia.
+
+16
+00:01:04.330 --> 00:01:04.942
+Certo?
+
+17
+00:01:04.942 --> 00:01:12.060
+Então eu vou criar aqui construtor
+para ele public PaiDeTodos.
+
+18
+00:01:12.060 --> 00:01:13.709
+Certo?
+
+19
+00:01:13.709 --> 00:01:19.570
+E vou dar print aqui
+para a gente saber aqui.
+
+20
+00:01:19.570 --> 00:01:25.070
+Vou chamar de Construtor Pai de Todos.
+
+21
+00:01:25.070 --> 00:01:25.648
+Certo?
+
+22
+00:01:25.648 --> 00:01:30.120
+Então está passando ali pelo
+construtor da classe PaiDeTodos.
+
+23
+00:01:30.120 --> 00:01:31.584
+Certo?
+
+24
+00:01:31.584 --> 00:01:37.030
+Vou criar uma outra classe aqui
+
+25
+00:01:37.030 --> 00:01:41.756
+que vai ser, o nome dela vai ser DoMeio.
+
+26
+00:01:41.756 --> 00:01:43.082
+Certo?
+
+27
+00:01:43.082 --> 00:01:49.438
+Só para aproveitar e mostrar eu já posso
+colocar a minha superclasse aqui, certo?
+
+28
+00:01:49.438 --> 00:01:54.670
+Então eu já posso colocar aqui,
+eu quero que ela herde
+
+29
+00:01:54.670 --> 00:01:59.671
+aqui da classe PaiDeTodos e
+ainda posso até inclusive
+
+30
+00:01:59.671 --> 00:02:04.080
+marcar aqui dizendo que eu quero que ela
+crie os construtores da superclasse.
+
+31
+00:02:04.080 --> 00:02:04.890
+Certo?
+
+32
+00:02:04.890 --> 00:02:08.600
+Então ele já vai ter ali o DoMeio.
+
+33
+00:02:08.600 --> 00:02:09.167
+Certo?
+
+34
+00:02:09.167 --> 00:02:13.710
+Já tem, já criou ali o construtor
+para mim, já colocou o extends.
+
+35
+00:02:13.710 --> 00:02:14.390
+Não é?
+
+36
+00:02:14.390 --> 00:02:19.160
+E ai aqui,
+eu vou dar o SysOut e vou chamar aqui
+
+37
+00:02:19.160 --> 00:02:24.600
+Construtor DoMeio.
+
+38
+00:02:24.600 --> 00:02:28.900
+Salvei.
+
+39
+00:02:28.900 --> 00:02:34.413
+Minha última classe, vou vir aqui,
+vou criar aqui uma classe,
+
+40
+00:02:34.413 --> 00:02:40.227
+eu vou chamar de LáDeBaixo que é
+a mais abaixo ali da hierarquia.
+
+41
+00:02:40.227 --> 00:02:45.180
+Já vou dizer aqui que ela
+
+42
+00:02:45.180 --> 00:02:49.620
+aqui, DoMeio,
+
+43
+00:02:49.620 --> 00:02:55.910
+que ela vai herdar e
+estender a classe DoMeio.
+
+44
+00:02:55.910 --> 00:02:59.300
+Certo?
+
+45
+00:02:59.300 --> 00:03:03.460
+Então eu vou vir aqui e vou dar também
+
+46
+00:03:03.460 --> 00:03:13.170
+SysOut Construtor LaDeBaixo.
+
+47
+00:03:13.170 --> 00:03:14.725
+Certo?
+
+48
+00:03:14.725 --> 00:03:20.057
+Então vamos fazer o seguinte
+
+49
+00:03:20.057 --> 00:03:25.205
+agora para a gente ver qual é a ordem ai
+que esses construtores são invocados.
+
+50
+00:03:25.205 --> 00:03:30.203
+Eu vou criar uma classe
+principal que cria essa classe
+
+51
+00:03:30.203 --> 00:03:35.310
+LaDeBaixo e a gente vê ai o que é
+que ele vai imprimir no console.
+
+52
+00:03:35.310 --> 00:03:35.920
+Está?
+
+53
+00:03:35.920 --> 00:03:39.684
+Então eu venho aqui, crio uma nova classe.
+
+54
+00:03:39.684 --> 00:03:45.060
+Vou chamar ela de principal,
+coloco aqui o meu método main,
+
+55
+00:03:45.060 --> 00:03:48.860
+posso até desmarcar aquela questão ali.
+
+56
+00:03:48.860 --> 00:03:49.851
+Certo?
+
+57
+00:03:49.851 --> 00:03:54.100
+Vou criar aqui a classe LaDeBaixo,
+
+58
+00:03:54.100 --> 00:03:57.550
+certo?
+
+59
+00:03:57.550 --> 00:04:01.310
+New LaDeBaixo.
+
+60
+00:04:01.310 --> 00:04:08.550
+Então só isso daqui já vai estar
+invocando o construtor dela.
+
+61
+00:04:08.550 --> 00:04:11.418
+Está?
+Então eu vou rodar isso aqui e vamos ver o
+
+62
+00:04:11.418 --> 00:04:13.120
+que é que ele vai imprimir.
+
+63
+00:04:13.120 --> 00:04:20.258
+Ele rodou.
+
+64
+00:04:20.258 --> 00:04:26.010
+Note que a primeira coisa que ele
+imprime é o construtor PaiDeTodos.
+
+65
+00:04:26.010 --> 00:04:27.055
+Está?
+Porquê?
+
+66
+00:04:27.055 --> 00:04:28.621
+O que é que ele vai fazer?
+
+67
+00:04:28.621 --> 00:04:33.026
+Ele está chamando o construtor do
+LaDeBaixo só que antes de executar,
+
+68
+00:04:33.026 --> 00:04:37.610
+o construtor do LaDeBaixo,
+ele vai e chama o construtor DoMeio.
+
+69
+00:04:37.610 --> 00:04:43.969
+Antes do construtor DoMeio rodar, ele
+vai e chama o construtor do PaiDeTodos.
+
+70
+00:04:43.969 --> 00:04:50.280
+Ai ele executa e imprime e ai sim,
+depois eu vou ter o,
+
+71
+00:04:50.280 --> 00:04:54.845
+ele quando ele retornar o
+construtor DoMeio imprime,
+
+72
+00:04:54.845 --> 00:05:01.025
+retorna e ai só então o construtor do
+LaDeBaixo vai imprimir e retornar.
+
+73
+00:05:01.025 --> 00:05:05.025
+A gente nota que ele imprime
+primeiro o da superclasse.
+
+74
+00:05:05.025 --> 00:05:05.616
+Está?
+
+75
+00:05:05.616 --> 00:05:11.664
+Seria equivalente por exemplo,
+nesse DoMeio aqui eu chamar o super.
+
+76
+00:05:11.664 --> 00:05:12.432
+Está?
+
+77
+00:05:12.432 --> 00:05:15.890
+É o que ele faz implicitamente.
+
+78
+00:05:15.890 --> 00:05:18.527
+Está?
+Uma coisa para a gente observar.
+
+79
+00:05:18.527 --> 00:05:22.031
+Mas eu quero que o construtor
+DoMeio execute antes.
+
+80
+00:05:22.031 --> 00:05:24.900
+Eu vou colocar o super aqui baixo.
+
+81
+00:05:24.900 --> 00:05:25.618
+Posso?
+
+82
+00:05:25.618 --> 00:05:27.157
+Não, não posso.
+
+83
+00:05:27.157 --> 00:05:28.182
+Está?
+
+84
+00:05:28.182 --> 00:05:30.232
+Ele dá o erro aqui.
+
+85
+00:05:30.232 --> 00:05:33.097
+Ele tem que ser a chamada do construtor,
+
+86
+00:05:33.097 --> 00:05:38.050
+tem que ser a primeira coisa no construtor
+então eu não consigo fazer isso aqui.
+
+87
+00:05:38.050 --> 00:05:41.099
+Está?
+O outro caso que eu queria mostrar aqui
+
+88
+00:05:41.099 --> 00:05:45.576
+para vocês: por exemplo,
+imagina que o PaiDeTodos aqui,
+
+89
+00:05:45.576 --> 00:05:48.980
+ele recebe uma string como parâmetro.
+
+90
+00:05:48.980 --> 00:05:49.571
+Está?
+
+91
+00:05:49.571 --> 00:05:53.610
+Então ele vai imprimir
+aqui mais aquela string.
+
+92
+00:05:53.610 --> 00:05:54.498
+Está?
+
+93
+00:05:54.498 --> 00:05:57.755
+O que é que vai acontecer?
+
+94
+00:05:57.755 --> 00:06:03.725
+Essa classe DoMeio aqui,
+ela vai dar problema no construtor.
+
+95
+00:06:03.725 --> 00:06:04.502
+Porquê?
+
+96
+00:06:04.502 --> 00:06:10.980
+Porque aquele construtor default, que ele
+já coloca o super aqui, ele não existe.
+
+97
+00:06:10.980 --> 00:06:14.311
+Está?
+Ele só cria o construtor vazio quando você
+
+98
+00:06:14.311 --> 00:06:16.506
+não define construtor nenhum.
+
+99
+00:06:16.506 --> 00:06:23.206
+Então o que eu preciso fazer
+aqui é chamar aqui super com
+
+100
+00:06:23.206 --> 00:06:28.848
+parâmetro para o construtor do PaiDeTodos.
+
+101
+00:06:28.848 --> 00:06:30.860
+Aí ele funciona.
+
+102
+00:06:30.860 --> 00:06:31.400
+Está?
+
+103
+00:06:31.400 --> 00:06:32.840
+Então, opa.
+
+104
+00:06:32.840 --> 00:06:34.730
+Ele cliquei errado ali.
+
+105
+00:06:34.730 --> 00:06:39.529
+Então o que
+
+106
+00:06:39.529 --> 00:06:46.368
+a gente precisa fazer é
+estar imprimindo aqui,
+
+107
+00:06:46.368 --> 00:06:51.211
+estar passando o parâmetro ali
+para o construtor do PaiDeTodos.
+
+108
+00:06:51.211 --> 00:06:56.230
+Então eu vou salvar aqui,
+note que ele corrigiu o erro, quando eu
+
+109
+00:06:56.230 --> 00:07:01.850
+rodar aqui o principal ele vai imprimir
+lá o PaiDeTodos com aquele parâmetro.
+
+110
+00:07:01.850 --> 00:07:06.843
+Ele imprimiu ali o parâmetro
+que eu passei para ele.
+
+111
+00:07:06.843 --> 00:07:07.524
+Está?
+
+112
+00:07:07.524 --> 00:07:12.940
+Então espero que com esse pequeno
+exemplo aqui, com essas 3 classes,
+
+113
+00:07:12.940 --> 00:07:17.802
+tenha ficado claro qual é que é
+a ordem que os construtores são
+
+114
+00:07:17.802 --> 00:07:22.350
+chamados e o que eu posso fazer
+o que eu não posso fazer.
+
+115
+00:07:22.350 --> 00:07:27.075
+Então lembra que o construtor vai ser
+sempre a primeira coisa a ser chamada
+
+116
+00:07:27.075 --> 00:07:31.687
+construtor, ele sempre vai chamar
+ou construtor da própria classe ou
+
+117
+00:07:31.687 --> 00:07:33.530
+construtor da superclasse.
+
+118
+00:07:33.530 --> 00:07:34.046
+Está?
+
+119
+00:07:34.046 --> 00:07:39.808
+E se eu não definir, ele vai chamar
+implicitamente o construtor sem parâmetros
+
+120
+00:07:39.808 --> 00:07:44.946
+se eu não colocar nada, mas se a classe
+que eu estou estendendo não tem construtor
+
+121
+00:07:44.946 --> 00:07:50.430
+sem parâmetros, eu sou obrigado a colocar
+isso explicitamente como a gente viu aqui,
+
+122
+00:07:50.430 --> 00:07:55.739
+que deu erro, no momento que o construtor
+PaiDeTodos tinha que receber string.
+
+123
+00:07:55.739 --> 00:07:56.487
+Está certo?
+
+124
+00:07:56.487 --> 00:07:58.600
+Espero que tenha ficado mais claro.
+
+125
+00:07:58.600 --> 00:08:01.498
+É sempre bom ver pouco na prática.
+
+126
+00:08:01.498 --> 00:08:03.750
+Vejo vocês na próxima aula.
+
+127
+00:08:03.750 --> 00:08:09.730
+[MÚSICA]

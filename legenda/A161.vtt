@@ -1,0 +1,252 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.636
+[MÚSICA] E
+
+2
+00:00:04.636 --> 00:00:09.565
+aí pessoal,tudo bem?
+
+3
+00:00:09.565 --> 00:00:10.217
+Nessa aula,
+
+4
+00:00:10.217 --> 00:00:14.740
+veremos como identificar colisões de jeito
+simples e como adicionar efeitos sonoros.
+
+5
+00:00:14.740 --> 00:00:21.160
+Vamos fazer com que sempre que o sprite
+da nave colidir com o pato, o pato some.
+
+6
+00:00:21.160 --> 00:00:26.159
+Tudo o que precisamos fazer na função
+update é verificar se há intercessão
+
+7
+00:00:26.159 --> 00:00:28.750
+do sprite da nave com o sprite do pato.
+
+8
+00:00:28.750 --> 00:00:33.733
+Pra isso, basta usar a função
+intersectsNode do sprite da nave
+
+9
+00:00:33.733 --> 00:00:39.070
+passando como argumento os sprites
+dos patos, target1 e target2.
+
+10
+00:00:39.070 --> 00:00:43.650
+se acontecer a intercessão
+entre os dois sprites,
+
+11
+00:00:43.650 --> 00:00:48.230
+o sprite do pato some atribuindo o
+valor true para a propriedade hidden.
+
+12
+00:00:48.230 --> 00:00:52.754
+Fizemos isso tanto para o target1,
+quanto para o target2.
+
+13
+00:00:52.754 --> 00:00:53.980
+Simples, não?
+
+14
+00:00:53.980 --> 00:00:59.050
+Nos próximos módulos, veremos como
+lidar com colisões mais complexas,
+
+15
+00:00:59.050 --> 00:01:05.220
+usar física de colisões, desconsiderar as
+partes com transparência da imagem, etc.
+
+16
+00:01:05.220 --> 00:01:08.610
+Rode no simulador para ver o resultado.
+
+17
+00:01:08.610 --> 00:01:15.770
+Perceba que essa colisão é simples e
+considera retângulo do tamanho da imagem.
+
+18
+00:01:15.770 --> 00:01:19.202
+A parte transparente do
+sprite não é desconsiderada.
+
+19
+00:01:19.202 --> 00:01:22.120
+Portanto, essa colisão
+não é muito precisa.
+
+20
+00:01:22.120 --> 00:01:28.560
+Agora vamos adicionar efeito sonoro
+quando acontece essa colisão.
+
+21
+00:01:28.560 --> 00:01:34.360
+Arraste o arquivo toy.wav
+na pasta do seu projeto.
+
+22
+00:01:34.360 --> 00:01:39.494
+[SEM_ÁUDIO] E
+
+23
+00:01:39.494 --> 00:01:44.410
+deixe a opção "Copy items
+if needed" selecionada.
+
+24
+00:01:44.410 --> 00:01:48.400
+Crie uma variável
+
+25
+00:01:48.400 --> 00:01:54.029
+chamada toySound da classe SKAction.
+
+26
+00:01:54.029 --> 00:01:59.590
+Essa classe pode ser usada para tocar
+efeitos sonoros e para animações.
+
+27
+00:01:59.590 --> 00:02:03.940
+Veremos como usar essa classe para
+animações nos próximos módulos.
+
+28
+00:02:03.940 --> 00:02:07.678
+Em didMoveToView,
+crie a ação de tocar efeito
+
+29
+00:02:07.678 --> 00:02:12.520
+sonoro com o comando
+SKAction.playSoundFileNamed.
+
+30
+00:02:12.520 --> 00:02:17.204
+E passe como argumento o nome do
+arquivo de som que importamos agora há
+
+31
+00:02:17.204 --> 00:02:19.970
+pouco e false para waitForCompletion.
+
+32
+00:02:19.970 --> 00:02:25.398
+Se waitForCompletion for verdadeiro,
+a duração da ação é a mesma do áudio.
+
+33
+00:02:25.398 --> 00:02:28.930
+Se for falso, a ação é considerada
+completa imediatamente.
+
+34
+00:02:28.930 --> 00:02:33.743
+Você verá como lidar com ações e
+durações e engatilhamento de ações nos
+
+35
+00:02:33.743 --> 00:02:35.140
+próximos módulos.
+
+36
+00:02:35.140 --> 00:02:38.330
+Tendo a ação de efeito sonoro criada,
+
+37
+00:02:38.330 --> 00:02:42.010
+basta rodar essa ação no momento
+que queremos que o som toque.
+
+38
+00:02:42.010 --> 00:02:45.735
+Dentro do if que fizemos
+os patos desaparecerem,
+
+39
+00:02:45.735 --> 00:02:50.873
+insira a linha de código:
+runAction(toySound) para tocar o som.
+
+40
+00:02:50.873 --> 00:02:54.990
+Temos que verificar se o
+sprite está visível, ou seja,
+
+41
+00:02:54.990 --> 00:02:59.410
+"not hidden" para que o som
+seja tocado apenas uma vez,
+
+42
+00:02:59.410 --> 00:03:04.690
+pois a função intersectsNode retorna a
+true mesmo que o sprite esteja escondido.
+
+43
+00:03:04.690 --> 00:03:09.184
+É recomendado esse método de
+rodar a ação de tocar sons apenas
+
+44
+00:03:09.184 --> 00:03:11.660
+para efeitos sonoros pontuais.
+
+45
+00:03:11.660 --> 00:03:16.845
+Se você deseja incluir uma música de
+fundo, você deve adicionar o framework
+
+46
+00:03:16.845 --> 00:03:22.030
+AV Foundation, como visto no curso 3
+deste programa de cursos integrados.
+
+47
+00:03:22.030 --> 00:03:24.970
+Deixaremos o link do curso
+no material de apoio,
+
+48
+00:03:24.970 --> 00:03:27.560
+caso você ainda não tenha feito o curso 3.
+
+49
+00:03:27.560 --> 00:03:31.200
+Rode no simulador para ver o resultado.
+
+50
+00:03:31.200 --> 00:03:39.260
+[SEM_ÁUDIO] [SOM]
+
+51
+00:03:39.260 --> 00:03:47.802
+[SOM] Com isso,
+
+52
+00:03:47.802 --> 00:03:51.160
+terminamos esse módulo.
+
+53
+00:03:51.160 --> 00:03:55.182
+Na próxima aula,
+faremos uma recapitulação.
+
+54
+00:03:55.182 --> 00:03:55.890
+Até lá.

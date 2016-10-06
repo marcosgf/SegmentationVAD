@@ -1,0 +1,595 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.956
+[MÚSICA] Meu
+
+2
+00:00:07.956 --> 00:00:12.848
+nome é Eduardo Guerra e
+você está aqui no curso
+
+3
+00:00:12.848 --> 00:00:16.371
+de programação orientada
+a objetos com Java.
+
+4
+00:00:16.371 --> 00:00:22.490
+Hoje vamos estar falando sobre
+métodos e atributos estáticos, tá?
+
+5
+00:00:22.490 --> 00:00:25.850
+Vamos descobrir o que que é isso.
+
+6
+00:00:25.850 --> 00:00:29.308
+O que que é método ou atributo estático.
+
+7
+00:00:29.308 --> 00:00:33.040
+E vamos aprender a diferenciar
+eles daqueles é,
+
+8
+00:00:33.040 --> 00:00:37.894
+que a gente já aprendeu que são os
+métodos e atributos de instância.
+
+9
+00:00:37.894 --> 00:00:42.857
+E aí vamos entender quando que
+tipo deve ser utilizado e quando
+
+10
+00:00:42.857 --> 00:00:45.742
+que outro tipo deve ser utilizado.
+
+11
+00:00:45.742 --> 00:00:54.205
+Nós temos diferentes tipos de informações
+que podemos guardar num software, tá?
+
+12
+00:00:54.205 --> 00:01:00.008
+Se a gente pensar numa classe,
+tem informações que dizem respeito a todos
+
+13
+00:01:00.008 --> 00:01:05.925
+os objetos de uma classe e tem informações
+que dizem respeito a objeto específico.
+
+14
+00:01:05.925 --> 00:01:10.764
+Então se a gente pensar aqui por exemplo
+na classe gato, né, se a gente for
+
+15
+00:01:10.764 --> 00:01:13.866
+pensar assim o número total de gatos,
+certo?
+
+16
+00:01:13.866 --> 00:01:17.421
+É uma informação que é
+pertinente à classe Gato,
+
+17
+00:01:17.421 --> 00:01:21.387
+mas que não diz respeito
+a gato específico.
+
+18
+00:01:21.387 --> 00:01:25.010
+Se eu tiver falando por
+exemplo da cor do gato,
+
+19
+00:01:25.010 --> 00:01:29.992
+isso aí é uma informação de gato e
+não diz respeito a todos os gatos.
+
+20
+00:01:29.992 --> 00:01:34.667
+Então, a partir desse exemplo, a gente
+pode ver que tem diferentes tipos de
+
+21
+00:01:34.667 --> 00:01:37.881
+informação que você pode querer armazenar.
+
+22
+00:01:37.881 --> 00:01:43.468
+Essas informações que são da classe
+como todo a gente chama de informações
+
+23
+00:01:43.468 --> 00:01:49.197
+estáticas, variáveis estáticas,
+porque não varia de objeto pra objeto.
+
+24
+00:01:49.197 --> 00:01:53.868
+Então, a gente está vendo
+aqui no exemplo de código
+
+25
+00:01:53.868 --> 00:01:57.570
+que eu criei aqui uma variável estática.
+
+26
+00:01:57.570 --> 00:02:02.580
+Pra isso eu coloco o modificador
+static nessa variável.
+
+27
+00:02:02.580 --> 00:02:06.822
+Então o nome da variável é
+totalGatos e você pode ver
+
+28
+00:02:06.822 --> 00:02:10.580
+que no construtor eu
+somo 1 nessa variável.
+
+29
+00:02:10.580 --> 00:02:12.277
+O que que significa?
+
+30
+00:02:12.277 --> 00:02:13.880
+Que cada gato que for
+
+31
+00:02:13.880 --> 00:02:19.765
+criado vai estar incrementando essa
+variável e ela vale pra todos os gatos.
+
+32
+00:02:19.765 --> 00:02:24.408
+Então a partir de qualquer objeto
+que eu tentar acessar essa
+
+33
+00:02:24.408 --> 00:02:29.250
+variável totalGatos,
+ele vai estar acessando a mesma variável.
+
+34
+00:02:29.250 --> 00:02:29.842
+Por quê?
+
+35
+00:02:29.842 --> 00:02:34.217
+Porque ela estática, ela é uma variável,
+uma variável da classe,
+
+36
+00:02:34.217 --> 00:02:36.411
+não é uma variável de objeto.
+
+37
+00:02:36.411 --> 00:02:42.365
+Ela tanto é uma variável da classe
+que eu posso estar acessando
+
+38
+00:02:42.365 --> 00:02:49.479
+a variável sem necessariamente estar,
+ter objeto daquela classe.
+
+39
+00:02:49.479 --> 00:02:53.756
+Então eu posso simplesmente pegar
+por exemplo o nome da classe
+
+40
+00:02:53.756 --> 00:02:57.040
+Gato.totalGatos e obter aquele valor.
+
+41
+00:02:57.040 --> 00:03:02.820
+Eu não preciso de objeto gato pra
+estar acessando aquele valor.
+
+42
+00:03:02.820 --> 00:03:10.327
+Agora a gente tem que tomar muito
+cuidado com esse tipo de variável.
+
+43
+00:03:10.327 --> 00:03:15.310
+Nossa senhora, o que que é isso?
+
+44
+00:03:15.310 --> 00:03:19.223
+Toma muito cuidado quando você for
+usar essa variável.
+
+45
+00:03:19.223 --> 00:03:23.914
+Pra quem veio da programação
+estruturada sabe que tem aí terror,
+
+46
+00:03:23.914 --> 00:03:29.275
+que são as chamadas variáveis globais,
+aquelas variáveis que você coloca
+
+47
+00:03:29.275 --> 00:03:35.180
+no software e você acessa ela
+de vários lugares diferentes.
+
+48
+00:03:35.180 --> 00:03:39.571
+E aí você nunca sabe qual que
+é o valor daquela variável,
+
+49
+00:03:39.571 --> 00:03:45.100
+se alguém modificou, se de repente alguém
+utiliza aquela variável, deixa lixo ali.
+
+50
+00:03:45.100 --> 00:03:47.889
+E aí você vai acessar de outro lugar,
+
+51
+00:03:47.889 --> 00:03:53.077
+dá problema e você não sabe por que que
+aquela variável estava com aquele valor.
+
+52
+00:03:53.077 --> 00:03:57.251
+Então realmente utilização de
+variável global na programação
+
+53
+00:03:57.251 --> 00:04:01.213
+estruturada é assim verdadeiro pesadelo.
+
+54
+00:04:01.213 --> 00:04:05.093
+Talvez alguns devam
+estar pensando aí: opa,
+
+55
+00:04:05.093 --> 00:04:09.930
+descobri jeito de criar uma
+variável global na programação
+
+56
+00:04:09.930 --> 00:04:14.497
+orientada a objetos, porque a variável
+estática é basicamente isso.
+
+57
+00:04:14.497 --> 00:04:19.127
+A partir do nome da classe, né,
+como a gente viu aqui nesse slide, né,
+
+58
+00:04:19.127 --> 00:04:21.400
+por exemplo o Gato.totalGatos.
+
+59
+00:04:21.400 --> 00:04:23.552
+A gente acessa de qualquer lugar.
+
+60
+00:04:23.552 --> 00:04:29.260
+Só que se você começar a utilizar isso pra
+fazer variável global, vai acabar assim ó.
+
+61
+00:04:29.260 --> 00:04:34.480
+O mundo aí chamas, né, com o seu software
+dando problema e você não sabendo.
+
+62
+00:04:34.480 --> 00:04:39.465
+Então a gente tem que tomar muito cuidado
+com as variáveis estáticas e utilizar
+
+63
+00:04:39.465 --> 00:04:44.141
+ela para informações dentro
+do escopo de uma classe
+
+64
+00:04:44.141 --> 00:04:49.089
+pertinentes a essa classe e não
+pra ficar criando a variável
+
+65
+00:04:49.089 --> 00:04:53.249
+global dentro de contexto
+orientado a objetos, tá?
+
+66
+00:04:53.249 --> 00:04:56.667
+Então estou ensinado pra
+vocês as variáveis estáticas,
+
+67
+00:04:56.667 --> 00:04:59.477
+mas muito cuidado na hora de utilizar.
+
+68
+00:04:59.477 --> 00:05:04.800
+Ela tem a sua utilização e
+você não deve ficar utilizando
+
+69
+00:05:04.800 --> 00:05:10.252
+esse tipo de recurso da linguagem
+pra criação de variáveis globais.
+
+70
+00:05:10.252 --> 00:05:13.464
+Os métodos estáticos são muito parecidos
+
+71
+00:05:13.464 --> 00:05:18.211
+com as funções que a gente tinha
+na programação estruturada, tá?
+
+72
+00:05:18.211 --> 00:05:22.077
+Muitas vezes eles são utilizados
+pra métodos auxiliares,
+
+73
+00:05:22.077 --> 00:05:24.426
+como por exemplo às vezes algum cálculo,
+
+74
+00:05:24.426 --> 00:05:29.028
+né, então a gente tem o exemplo, por
+exemplo o cálculo de raiz quadrada, né?
+
+75
+00:05:29.028 --> 00:05:34.761
+Então esses métodos estáticos
+são muito similares às funções.
+
+76
+00:05:34.761 --> 00:05:38.968
+Mais uma vez a gente tem que
+tomar muito cuidado para
+
+77
+00:05:38.968 --> 00:05:43.059
+a gente também não estar utilizando
+uma linguagem orientada a objetos,
+
+78
+00:05:43.059 --> 00:05:45.911
+mas estar fazendo design estruturado.
+
+79
+00:05:45.911 --> 00:05:52.789
+Então assim é, a gente tem que prestar
+atenção na forma que a gente estrutura,
+
+80
+00:05:52.789 --> 00:05:58.367
+que a gente modela software
+orientado a objetos
+
+81
+00:05:58.367 --> 00:06:03.661
+pra gente não criar bando
+de método estático, certo?
+
+82
+00:06:03.661 --> 00:06:06.525
+E fazer o sistema todo dessa forma.
+
+83
+00:06:06.525 --> 00:06:10.875
+A gente vai estar utilizando Java, que é
+uma linguagem orientada a objetos, mas vai
+
+84
+00:06:10.875 --> 00:06:15.054
+estar longe de estar fazendo sistema
+com a modelagem orientada a objetos.
+
+85
+00:06:15.054 --> 00:06:17.332
+Então exemplo pra você ver como que é,
+
+86
+00:06:17.332 --> 00:06:22.606
+seria pensamento estruturado e como
+seria pensamento orientado a objetos,
+
+87
+00:06:22.606 --> 00:06:28.794
+por exemplo enquanto com pensamento
+estruturado eu sempre estaria passando,
+
+88
+00:06:28.794 --> 00:06:32.720
+digamos assim,
+o que eu quero modificar como parâmetro.
+
+89
+00:06:32.720 --> 00:06:36.170
+Então por exemplo,
+se eu quisesse acelerar carro,
+
+90
+00:06:36.170 --> 00:06:42.308
+eu chamaria a função acelerar e estaria
+passando o carro como parâmetro, tá?
+
+91
+00:06:42.308 --> 00:06:47.907
+Enquanto na orientação a objetos o
+acelerar já seria uma ação do carro,
+
+92
+00:06:47.907 --> 00:06:49.969
+seria método do carro.
+
+93
+00:06:49.969 --> 00:06:54.802
+Então já faria muito mais
+sentido carro.acelerar, certo?
+
+94
+00:06:54.802 --> 00:06:57.970
+Então a gente tem que também,
+mais uma vez,
+
+95
+00:06:57.970 --> 00:07:00.770
+eu ensinei pra vocês as
+variáveis estáticas.
+
+96
+00:07:00.770 --> 00:07:03.091
+Tô ensinando os métodos estáticos.
+
+97
+00:07:03.091 --> 00:07:07.965
+Mas também temos que utilizar eles
+realmente pra aquele tipo de execução
+
+98
+00:07:07.965 --> 00:07:09.093
+auxiliar, né?
+
+99
+00:07:09.093 --> 00:07:13.572
+Pra aquela biblioteca de funções
+normalmente que recebe uma coisa
+
+100
+00:07:13.572 --> 00:07:15.133
+e retorna outra coisa.
+
+101
+00:07:15.133 --> 00:07:20.387
+Muito utilizado pra cálculo,
+pra processamento de strings, né?
+
+102
+00:07:20.387 --> 00:07:24.180
+Normalmente pra execuções simples, tá?
+
+103
+00:07:24.180 --> 00:07:30.863
+E procurar não estar utilizando
+esses métodos estáticos quando for
+
+104
+00:07:30.863 --> 00:07:35.544
+mais adequado a utilização da orientação
+
+105
+00:07:35.544 --> 00:07:40.061
+a objetos, né, dos métodos de instância.
+
+106
+00:07:40.061 --> 00:07:45.661
+Então sempre desconfia quando você
+passar objeto como parâmetro pra método,
+
+107
+00:07:45.661 --> 00:07:48.760
+principalmente se esse método for
+estático,
+
+108
+00:07:48.760 --> 00:07:53.812
+se de repente aquele método não
+era para estar naquele objeto.
+
+109
+00:07:53.812 --> 00:07:58.573
+Uma última dica aqui né: se você está
+utilizando métodos estáticos e você
+
+110
+00:07:58.573 --> 00:08:02.275
+não quer ficar repetindo nome da classe,
+né?
+
+111
+00:08:02.275 --> 00:08:06.763
+Então você pode usar o import static,
+certo?
+
+112
+00:08:06.763 --> 00:08:10.360
+Então por exemplo a gente
+tem no Java a classe Math,
+
+113
+00:08:10.360 --> 00:08:14.301
+que tem uma série de métodos
+estáticos de cálculo.
+
+114
+00:08:14.301 --> 00:08:19.144
+Calcular o máximo,
+calcular raiz quadrada, seno, cosseno.
+
+115
+00:08:19.144 --> 00:08:25.210
+Então se você não quer, toda vez que você
+for chamar esse método, utilizar Math.
+
+116
+00:08:25.210 --> 00:08:30.434
+o nome do método, você pode usar o
+import static e aí você não precisa
+
+117
+00:08:30.434 --> 00:08:35.150
+mais referenciar o nome da classe na
+hora de utilizar aqueles métodos.
+
+118
+00:08:35.150 --> 00:08:40.364
+Isso vale tanto pra métodos estáticos,
+quanto pra variáveis estáticas, certo?
+
+119
+00:08:40.364 --> 00:08:45.436
+Então eu espero que com isso vocês tenham
+compreendido melhor o que é método
+
+120
+00:08:45.436 --> 00:08:51.407
+estático, o que que é atributo estático,
+as situações que isso vai ser utilizado.
+
+121
+00:08:51.407 --> 00:08:56.456
+Espero que com os exemplos de códigos
+também acabe ficando mais claro, tá?
+
+122
+00:08:56.456 --> 00:09:01.185
+E acredito que todo mundo agora
+já sabe a diferença entre
+
+123
+00:09:01.185 --> 00:09:06.242
+método e uma variável estática dos
+métodos e as variáveis de instância.
+
+124
+00:09:06.242 --> 00:09:07.470
+Muito obrigado.
+
+125
+00:09:07.470 --> 00:09:14.610
+Até a próxima aula.

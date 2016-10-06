@@ -1,0 +1,264 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.659
+Olá!
+Você será apresentado agora ao
+
+2
+00:00:02.659 --> 00:00:04.900
+"Princípio do Argumento",
+
+3
+00:00:04.900 --> 00:00:09.110
+que fornece a base para a formulação
+do critério de estabilidade de Nyquist.
+
+4
+00:00:09.110 --> 00:00:13.835
+Com ele será possível saber quantos
+polos a função de malha aberta
+
+5
+00:00:13.835 --> 00:00:18.560
+terá no semiplano direito, a partir do
+gráfico de G de j ômega na forma polar.
+
+6
+00:00:18.560 --> 00:00:22.836
+O princípio do Argumento relaciona o
+gráfico de uma função analítica G,
+
+7
+00:00:22.836 --> 00:00:26.775
+quando ela é avaliada ao longo
+de contorno fechado gama,
+
+8
+00:00:26.775 --> 00:00:31.950
+com o número de raízes, zeros ou polos,
+de G no interior do contorno.
+
+9
+00:00:31.950 --> 00:00:35.060
+Vamos tentar entender melhor com desenho.
+
+10
+00:00:35.060 --> 00:00:41.370
+Nele marcamos os polos de G de s com
+X e os zeros como bolinha no plano.
+
+11
+00:00:41.370 --> 00:00:46.078
+É importante que o contorno gama
+não passe por nenhuma raiz.
+
+12
+00:00:46.078 --> 00:00:50.680
+Nesse primeiro caso,
+temos: G de s igual a K vezes s
+
+13
+00:00:50.680 --> 00:00:55.600
+menos z1 sobre s menos
+p1 vezes s menos p2,
+
+14
+00:00:55.600 --> 00:00:59.227
+pois há 0 e dois polos
+complexos conjugados.
+
+15
+00:00:59.227 --> 00:01:03.390
+O contorno, por enquanto,
+não envolve nenhum deles.
+
+16
+00:01:03.390 --> 00:01:09.060
+O que acontece quando avaliamos G
+de s para os valores de s gama?
+
+17
+00:01:09.060 --> 00:01:14.134
+Isso pode ser facilmente visto
+lembrando que a fase de G de s é
+
+18
+00:01:14.134 --> 00:01:20.455
+igual a fase de K vezes s menos z1
+sobre s menos p1 vezes s menos p2,
+
+19
+00:01:20.455 --> 00:01:25.420
+que é igual a fase de K mais
+fase de s menos z1 menos
+
+20
+00:01:25.420 --> 00:01:29.870
+fase de s menos p1 menos
+fase de s menos p2
+
+21
+00:01:29.870 --> 00:01:34.480
+que é igual a fase de K mais
+alfa menos beta menos gama.
+
+22
+00:01:34.480 --> 00:01:38.635
+Como K é real, se for
+positivo, sua fase é 0.
+
+23
+00:01:38.635 --> 00:01:42.790
+Caso seja negativo,
+sua fase é menos 180 graus.
+
+24
+00:01:42.790 --> 00:01:46.760
+Já as contribuições individuais alfa,
+
+25
+00:01:46.760 --> 00:01:52.840
+beta e gama das raízes z1,
+p1 e p2 respectivamente,
+
+26
+00:01:52.840 --> 00:01:57.195
+são obtidas ligando-as ao
+ponto s que G de s é avaliada,
+
+27
+00:01:57.195 --> 00:02:01.550
+computando o ângulo formado
+pelos vetores com o eixo real.
+
+28
+00:02:01.550 --> 00:02:06.125
+A fase de G de s varia
+conforme percorremos gama.
+
+29
+00:02:06.125 --> 00:02:10.700
+Mas, como gama é fechado,
+ela volta ao seu valor inicial
+
+30
+00:02:10.700 --> 00:02:15.120
+sem nunca variar mais de 360 graus.
+
+31
+00:02:15.120 --> 00:02:21.094
+Agora vamos supor que z1 esteja
+dentro do contorno gama,
+
+32
+00:02:21.094 --> 00:02:23.766
+ou seja, no interior do contorno.
+
+33
+00:02:23.766 --> 00:02:26.000
+Você pode ver isso na figura.
+
+34
+00:02:26.000 --> 00:02:31.261
+Nesse caso o que teremos é que as
+fases beta e gama associadas a p1
+
+35
+00:02:31.261 --> 00:02:37.230
+e p2 continuarão voltando aos seus valores
+iniciais sem variar mais do que 360 graus.
+
+36
+00:02:37.230 --> 00:02:41.850
+Já a fase alfa associada a z1
+voltará ao mesmo valor que tinha,
+
+37
+00:02:41.850 --> 00:02:46.470
+mas terá percorrido 360 graus,
+isto é, uma volta completa.
+
+38
+00:02:46.470 --> 00:02:51.399
+Então, como a fase de z1 entra
+com sinal positivo por estar
+
+39
+00:02:51.399 --> 00:02:56.195
+no numerador, o gráfico de G de s
+dará uma volta completa torno da
+
+40
+00:02:56.195 --> 00:03:01.020
+origem no mesmo sentido
+que se percorrer gama.
+
+41
+00:03:01.020 --> 00:03:05.350
+Para os polos a contribuição da fase
+é negativa por estar no denominador.
+
+42
+00:03:05.350 --> 00:03:08.228
+Assim, ao percorrer o contorno gama,
+
+43
+00:03:08.228 --> 00:03:14.260
+cada polo no interior de gama será
+responsável por menos 360 graus de fase.
+
+44
+00:03:14.260 --> 00:03:18.759
+Isso significa que,
+se houver apenas 1 polo no
+
+45
+00:03:18.759 --> 00:03:23.413
+interior de gama e nenhum 0,
+a curva de G de s avaliada
+
+46
+00:03:23.413 --> 00:03:27.990
+gama dará 1 volta no sentido
+oposto que se percorrer gama.
+
+47
+00:03:27.990 --> 00:03:31.536
+Por fim,
+se tivermos múltiplos zeros e polos,
+
+48
+00:03:31.536 --> 00:03:37.395
+o saldo do número de voltas será o
+número de zeros menos o número de polos,
+
+49
+00:03:37.395 --> 00:03:42.579
+N igual a Z menos P,
+que N representa o número de voltas
+
+50
+00:03:42.579 --> 00:03:48.089
+de G de s torno da origem no mesmo
+sentido que se percorrer gama,
+
+51
+00:03:48.089 --> 00:03:52.640
+Z é o número de zeros e P é o número
+de polos, ambos no interior de gama.
+
+52
+00:03:52.640 --> 00:03:57.500
+Nos próximos vídeos você
+aprenderá a usar contorno especial
+
+53
+00:03:57.500 --> 00:04:02.202
+para avaliar G de s de forma a usar
+o número de voltas para encontrar o
+
+54
+00:04:02.202 --> 00:04:06.020
+número de polos malha
+fechada no semiplano direito.

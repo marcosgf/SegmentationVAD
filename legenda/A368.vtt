@@ -1,0 +1,300 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.200
+Após esse vídeo,
+
+2
+00:00:01.200 --> 00:00:05.773
+você será capaz de explicar como
+a posição do polo malha fechada de
+
+3
+00:00:05.773 --> 00:00:10.090
+sistema de primeira ordem com e sem zero
+varia à medida que variamos o ganho k.
+
+4
+00:00:10.090 --> 00:00:14.494
+Vamos trabalhar inicialmente com
+a seguinte função de transferência
+
+5
+00:00:14.494 --> 00:00:17.528
+malha aberta: G de s é
+igual a 1 sobre s mais 1.
+
+6
+00:00:17.528 --> 00:00:22.307
+Malha fechada, temos considerando
+realimentação negativa unitária e controle
+
+7
+00:00:22.307 --> 00:00:27.883
+proporcional com ganho k, T de s é
+igual a k numerador sobre denominador
+
+8
+00:00:27.883 --> 00:00:32.940
+mais k numerador, que nesse caso é
+igual a k sobre s mais 1 mais k.
+
+9
+00:00:32.940 --> 00:00:37.903
+O denominador da função de transferência
+malha fechada que chamamos de P de s
+
+10
+00:00:37.903 --> 00:00:43.197
+ou delta de s é s mais 1 mais k,
+e o polo da função de transferência
+
+11
+00:00:43.197 --> 00:00:47.993
+malha fechada é a raiz da equação
+característica s mais 1 mais k igual a 0.
+
+12
+00:00:47.993 --> 00:00:53.131
+Vamos chamar o polo malha fechada de
+quadradinho, isto é, quadradinho mais
+
+13
+00:00:53.131 --> 00:00:57.990
+1 mais k é igual a 0 e temos
+quadradinho é igual a menos 1 menos k.
+
+14
+00:00:57.990 --> 00:01:00.837
+Para k muito pequeno, k próximo de 0,
+
+15
+00:01:00.837 --> 00:01:05.612
+o polo malha fechada está menos 1,
+que é o polo malha aberta.
+
+16
+00:01:05.612 --> 00:01:10.102
+E para k muito grande,
+o polo malha fechada está menos k, isto é,
+
+17
+00:01:10.102 --> 00:01:15.340
+a posição do polo malha fechada tende a
+menos infinito quando k tende a infinito.
+
+18
+00:01:15.340 --> 00:01:18.959
+Podemos usar uma função
+de transferência com polo
+
+19
+00:01:18.959 --> 00:01:21.856
+menos a: G de s é igual
+a 1 sobre s mais a.
+
+20
+00:01:21.856 --> 00:01:27.950
+Malha fechada temos k sobre s mais
+a mais k, polinômio característico
+
+21
+00:01:27.950 --> 00:01:33.190
+P de s é igual a s mais a mais k,
+determinando o polo malha fechada
+
+22
+00:01:33.190 --> 00:01:37.790
+quadradinho mais a mais k é igual a 0 e
+quadradinho é igual a menos a menos k.
+
+23
+00:01:37.790 --> 00:01:43.286
+Para k próximo de 0, o polo malha
+fechada é o polo malha aberta menos
+
+24
+00:01:43.286 --> 00:01:48.070
+a e para k tendendo a infinito, o polo
+malha fechada também tende a infinito.
+
+25
+00:01:48.070 --> 00:01:53.080
+Vamos fazer a mesma análise para uma outra
+função de transferência malha aberta: G
+
+26
+00:01:53.080 --> 00:01:58.520
+de s é igual a s mais 2 sobre s mais 1,
+zero menos 2 e polo menos 1.
+
+27
+00:01:58.520 --> 00:02:01.904
+A função de transferência
+malha fechada é T de s é igual
+
+28
+00:02:01.904 --> 00:02:06.494
+a k numerador sobre denominador
+mais k numerador que, nesse caso,
+
+29
+00:02:06.494 --> 00:02:11.200
+é igual a k s mais 2 sobre s
+mais 1 mais k vezes s mais 2.
+
+30
+00:02:11.200 --> 00:02:16.797
+A equação característica é s
+mais ks mais 1 mais 2k igual a 0
+
+31
+00:02:16.797 --> 00:02:21.980
+e o polo malha fechada é menos
+1 menos 2k sobre 1 mais k.
+
+32
+00:02:21.980 --> 00:02:28.141
+Para k próximo de 0, o polo malha fechada
+está menos 1 e para k muito grande,
+
+33
+00:02:28.141 --> 00:02:34.779
+podemos desprezar o menos 1 no numerador e
+1 no denominador e o polo tende a menos 2,
+
+34
+00:02:34.779 --> 00:02:40.060
+ou seja, para k próximo de 0 o polo
+malha fechada está no polo malha aberta
+
+35
+00:02:40.060 --> 00:02:44.910
+e conforme k aumenta, o polo malha
+fechada se aproxima do zero malha aberta.
+
+36
+00:02:44.910 --> 00:02:49.461
+Vamos fazer a mesma coisa para uma
+função de transferência literal,
+
+37
+00:02:49.461 --> 00:02:52.140
+com polo menos a e zero menos b.
+
+38
+00:02:52.140 --> 00:02:59.214
+Função de transferência malha fechada k
+s mais b sobre s mais a mais k s mais b,
+
+39
+00:02:59.214 --> 00:03:03.870
+equação característica s mais
+ks mais a mais kb é igual a 0.
+
+40
+00:03:03.870 --> 00:03:08.940
+E o polo malha fechada será
+menos a menos kb sobre 1 mais k,
+
+41
+00:03:08.940 --> 00:03:15.229
+k próximo de 0, polo malha fechada menos a
+que é o polo malha aberta; k muito grande,
+
+42
+00:03:15.229 --> 00:03:19.320
+polo malha fechada menos b,
+que é o zero malha aberta.
+
+43
+00:03:19.320 --> 00:03:23.730
+Observe que não falamos nada sobre
+a posição relativa do polo e do zero e
+
+44
+00:03:23.730 --> 00:03:27.190
+nem dissemos que eles estão
+no semiplano da esquerda.
+
+45
+00:03:27.190 --> 00:03:31.790
+Então não importa onde esteja o polo
+e onde esteja o zero malha aberta.
+
+46
+00:03:31.790 --> 00:03:37.140
+Com realimentação unitária negativa, o
+polo malha fechada estará próximo do polo
+
+47
+00:03:37.140 --> 00:03:42.210
+malha aberta para ganhos pequenos e tende
+ao 0 malha aberta para ganhos elevados.
+
+48
+00:03:42.210 --> 00:03:44.882
+Podemos visualizar isto no Plano s.
+
+49
+00:03:44.882 --> 00:03:49.378
+Nesta ilustração, tanto o polo
+quanto o zero estão no semiplano da
+
+50
+00:03:49.378 --> 00:03:53.001
+esquerda e o polo está mais
+afastado da origem que o zero.
+
+51
+00:03:53.001 --> 00:03:58.640
+Para k pequeno, o polo malha fechada,
+simbolizado por quadradinho vermelho,
+
+52
+00:03:58.640 --> 00:04:04.080
+está próximo ao polo malha aberta menos a,
+simbolizado por x azul.
+
+53
+00:04:04.080 --> 00:04:06.810
+À medida que o ganho k é aumentado,
+
+54
+00:04:06.810 --> 00:04:10.961
+o polo malha fechada vai
+ficando mais distante do polo
+
+55
+00:04:10.961 --> 00:04:15.770
+malha aberta e mais próximo do zero malha
+aberta, simbolizado por uma bolinha azul.
+
+56
+00:04:15.770 --> 00:04:17.863
+E para k suficientemente grande,
+
+57
+00:04:17.863 --> 00:04:21.550
+o polo malha fechada está
+próximo do zero malha aberta.
+
+58
+00:04:21.550 --> 00:04:27.044
+Agora você já é capaz de explicar como
+a posição do polo malha fechada de
+
+59
+00:04:27.044 --> 00:04:31.150
+sistema de primeira ordem com e sem zero
+varia à medida que variamos o ganho k.
+
+60
+00:04:31.150 --> 00:04:36.080
+No próximo vídeo, você verá como a posição
+dos polos malha fechada de sistema
+
+61
+00:04:36.080 --> 00:04:41.010
+de segunda ordem sem zero varia
+à medida que variamos o ganho k.

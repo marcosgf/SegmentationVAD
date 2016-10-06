@@ -1,0 +1,461 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.499
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.499 --> 00:00:11.085
+bem vindo ao curso sobre TDD.
+
+3
+00:00:11.085 --> 00:00:14.137
+Eu sou Clovis Fernandes e hoje iremos dar
+
+4
+00:00:14.137 --> 00:00:18.470
+continuidade ao nosso exemplo
+com múltiplos mau cheiros.
+
+5
+00:00:18.470 --> 00:00:22.990
+E exemplifica o ciclo de refatoração.
+
+6
+00:00:22.990 --> 00:00:27.701
+É, nós iremos até o mau cheiro 2 dos 5 mau
+
+7
+00:00:27.701 --> 00:00:31.910
+cheiros que nós identificaremos,
+está certo?
+
+8
+00:00:31.910 --> 00:00:36.808
+Essa vídeo aula é muito grande,
+nós vamos quebrar duas partes.
+
+9
+00:00:36.808 --> 00:00:41.764
+Então, começamos aqui o nosso grande
+espetáculo sobre o ciclo de refatoração.
+
+10
+00:00:41.764 --> 00:00:46.418
+O que a gente sabe quando o código entra
+na fase de refatoração ele tem que estar,
+
+11
+00:00:46.418 --> 00:00:48.073
+ele tem que passar nos testes.
+
+12
+00:00:48.073 --> 00:00:50.690
+Então, no nosso exemplo,
+nós estamos usando,
+
+13
+00:00:50.690 --> 00:00:53.379
+eu apresento aí a bateria de testes.
+
+14
+00:00:53.379 --> 00:00:57.820
+A bateria de testes segue o
+exemplo do tipo when then, não é?
+
+15
+00:00:57.820 --> 00:01:01.460
+Que a gente já tinha falado anteriormente,
+está certo?
+
+16
+00:01:01.460 --> 00:01:06.660
+Cada desses testes garante 1
+caso de teste correspondente
+
+17
+00:01:06.660 --> 00:01:11.147
+que vai fazer com que a minha
+funcionalidade calculate discount,
+
+18
+00:01:11.147 --> 00:01:14.198
+faça exatamente o que eu quero,
+está certo?
+
+19
+00:01:14.198 --> 00:01:19.113
+Eu tenho aí cada uma dessas
+condições do when then exemplifica e
+
+20
+00:01:19.113 --> 00:01:23.140
+restringe claramente o que que
+eu quero fazer, está certo?
+
+21
+00:01:23.140 --> 00:01:28.133
+Mas, no final, o que isso importa
+é que toda vez que eu fizer
+
+22
+00:01:28.133 --> 00:01:31.230
+uma refatoração de mau cheiro, está certo,
+
+23
+00:01:31.230 --> 00:01:35.850
+eu vou testar usando essa mesma
+bateria de testes, está certo?
+
+24
+00:01:35.850 --> 00:01:38.415
+E ela vai ficar valendo do começo ao fim.
+
+25
+00:01:38.415 --> 00:01:42.829
+Ou seja, a bateria não muda por
+causa da refatoração, está certo?
+
+26
+00:01:42.829 --> 00:01:48.585
+Num primeiro passo, que eu já tenho agora
+o código testado para começar a refatorar,
+
+27
+00:01:48.585 --> 00:01:54.751
+eu vou farejar, não é,
+o código busca de mau cheiros.
+
+28
+00:01:54.751 --> 00:02:00.840
+Eu vou tentar olhar, não é, quais os maus
+cheiros que ele apresenta, está certo?
+
+29
+00:02:00.840 --> 00:02:05.722
+Então aqui no nosso exemplo,
+eu posso mostrar pra vocês que nós temos
+
+30
+00:02:05.722 --> 00:02:10.665
+os nomes inapropriados, está certo,
+quando eu falo age eu não sei
+
+31
+00:02:10.665 --> 00:02:14.954
+o que quer dizer só isso dentro
+do contexto, na verdade,
+
+32
+00:02:14.954 --> 00:02:19.770
+eu fico sabendo mais informação por causa
+do comentário que está ali do lado,
+
+33
+00:02:19.770 --> 00:02:22.886
+dizendo uma idade acima do limite,
+não é, está certo?
+
+34
+00:02:22.886 --> 00:02:26.588
+Que estaria correspondendo a sênior não é,
+idoso, não é?
+
+35
+00:02:26.588 --> 00:02:30.400
+Então, eu estou dizendo aí que é not age,
+então não é idoso.
+
+36
+00:02:30.400 --> 00:02:34.406
+O nome não é muito apropriado do jeito
+que está, o outro, mas ainda, não é,
+
+37
+00:02:34.406 --> 00:02:36.300
+está só simplesmente o sub, não é.
+
+38
+00:02:36.300 --> 00:02:36.982
+Sub, não é?
+
+39
+00:02:36.982 --> 00:02:41.137
+Sub, eu preciso saber que isso tem a ver
+com alguma coisa que já foi subsidiada,
+
+40
+00:02:41.137 --> 00:02:42.200
+não é, está certo?
+
+41
+00:02:42.200 --> 00:02:46.768
+E o terceiro é pior ainda, porque ele é
+o not F time, não é, está certo, eu fico
+
+42
+00:02:46.768 --> 00:02:51.205
+sabendo que ele quer dizer not full time
+por causa do comentário que diz que não é
+
+43
+00:02:51.205 --> 00:02:55.940
+tempo parcial, então ele é tempo integral,
+não é, ele é full time, está certo?
+
+44
+00:02:55.940 --> 00:02:58.609
+Então, os nomes estão
+bastante inapropriados.
+
+45
+00:02:58.609 --> 00:03:02.771
+O segundo que atrapalha bastante aí
+são as Expressões Booleanas negativas,
+
+46
+00:03:02.771 --> 00:03:03.863
+não é, está certo?
+
+47
+00:03:03.863 --> 00:03:08.940
+Eu tenho o not age, eu tenho not sub,
+eu tenho not F time, está certo?
+
+48
+00:03:08.940 --> 00:03:13.569
+Quer dizer, isso já foi provado,
+não é, que o ser humano ele não
+
+49
+00:03:13.569 --> 00:03:17.370
+consegue trabalhar direito com negativas,
+não é, está certo?
+
+50
+00:03:17.370 --> 00:03:22.040
+É, então, isso nós temos que mudar depois.
+
+51
+00:03:22.040 --> 00:03:25.645
+E o terceiro é que está cheio de
+comentários, não é, está certo.
+
+52
+00:03:25.645 --> 00:03:29.457
+O item 3 aí, não é, o mau cheiro
+3 é o conjunto de comentários.
+
+53
+00:03:29.457 --> 00:03:34.120
+Está muito cheio de comentários
+e a tendência, nesse exemplo,
+
+54
+00:03:34.120 --> 00:03:37.050
+é que todos os comentários saiam.
+
+55
+00:03:37.050 --> 00:03:41.239
+Não quer dizer que os comentários
+sejam ruins, no geral,
+
+56
+00:03:41.239 --> 00:03:44.835
+é que você só vai colocar os
+comentários que sejam necessários.
+
+57
+00:03:44.835 --> 00:03:48.310
+Normalmente são os comentários
+que respondem o quê e porquê.
+
+58
+00:03:48.310 --> 00:03:52.380
+É, o código deve ser de uma
+determinada forma, está certo?
+
+59
+00:03:52.380 --> 00:03:58.485
+E mesmo esses, de acordo com alguma forma
+de refatoração, eles também desaparecem.
+
+60
+00:03:58.485 --> 00:04:01.561
+Então, código sempre vai
+ter muito pouco comentário.
+
+61
+00:04:01.561 --> 00:04:04.590
+No resto ele é mau cheiro muito evidente,
+está certo.
+
+62
+00:04:04.590 --> 00:04:10.064
+Continuando olhando aqui,
+eu tenho código com a variável
+
+63
+00:04:10.064 --> 00:04:16.088
+temporária discount, ela aparece
+recebendo uma atribuição 4 lugares,
+
+64
+00:04:16.088 --> 00:04:19.822
+não é, está certo e depois
+num return aparece de novo.
+
+65
+00:04:19.822 --> 00:04:22.950
+Então isso aí claramente
+é código duplicado.
+
+66
+00:04:22.950 --> 00:04:26.173
+E, por fim, nós temos if aninhado.
+
+67
+00:04:26.173 --> 00:04:32.222
+Normalmente os ifs orientação a objetos
+poucos ifs acabam ficando no meu código,
+
+68
+00:04:32.222 --> 00:04:36.470
+normalmente a gente remove a maioria
+deles através de polimorfismo,
+
+69
+00:04:36.470 --> 00:04:41.165
+através de algum padrão de projeto ou
+usando a técnica que nós vamos mostrar
+
+70
+00:04:41.165 --> 00:04:43.860
+na próxima parte dessa aula, está certo?
+
+71
+00:04:43.860 --> 00:04:48.371
+Uma coisa que também é evidente que a
+técnica que eu vou aplicar ela trabalhe e
+
+72
+00:04:48.371 --> 00:04:51.770
+remove esse código duplicado
+de uma vez só, está certo?
+
+73
+00:04:51.770 --> 00:04:56.324
+Ou seja, quando você aprende a usar
+a técnica para remover o if aninhado,
+
+74
+00:04:56.324 --> 00:05:01.480
+você já aprende a retirar esse código do
+jeito que está aí, esse código duplicado.
+
+75
+00:05:01.480 --> 00:05:05.716
+Nós estamos separando aqui para
+ser uma maneira didática e
+
+76
+00:05:05.716 --> 00:05:10.930
+exemplificar o código duplicado que a
+gente pode então remover, é nesse sentido.
+
+77
+00:05:10.930 --> 00:05:15.980
+Com isso nós temos, então, uma lista
+de maus cheiros, não é, está certo,
+
+78
+00:05:15.980 --> 00:05:20.630
+essa lista de maus cheiros
+tem nome inapropriados,
+
+79
+00:05:20.630 --> 00:05:24.740
+tem ifs com expressões
+booleanas negativas,
+
+80
+00:05:24.740 --> 00:05:29.540
+eu tenho comentários, está certo,
+eu tenho código duplicado.
+
+81
+00:05:29.540 --> 00:05:33.290
+Esse código duplicado é decorrência,
+principalmente,
+
+82
+00:05:33.290 --> 00:05:38.638
+por causa daquela técnica que estava
+lá que eu mostro ponto de saída apenas,
+
+83
+00:05:38.638 --> 00:05:43.542
+ou seja, eu me fixei que eu tenho que
+ter ponto de saída e para isso eu sou
+
+84
+00:05:43.542 --> 00:05:48.474
+obrigado a duplicar, a multiplicar
+a variável que vai receber esse valor
+
+85
+00:05:48.474 --> 00:05:51.595
+de saída para devolvê-la no final,
+está certo?
+
+86
+00:05:51.595 --> 00:05:54.080
+E, por fim, o último os ifs aninhados.
+
+87
+00:05:54.080 --> 00:06:00.575
+Com isso nós chegamos ao final dessa
+parte, da metade desta aula, está certo?
+
+88
+00:06:00.575 --> 00:06:03.815
+Que nós conseguimos,
+ao examinar a lista de,
+
+89
+00:06:03.815 --> 00:06:08.130
+ao examinar o código que eu
+estou querendo refatorar,
+
+90
+00:06:08.130 --> 00:06:11.760
+nós conseguimos identificar esses
+5 maus cheiros, está certo?
+
+91
+00:06:11.760 --> 00:06:16.263
+Então, com isso nós seremos capazes de,
+para cada dos mau
+
+92
+00:06:16.263 --> 00:06:21.035
+cheiros nas outras partes futuras,
+eu vou conseguir então
+
+93
+00:06:21.035 --> 00:06:25.180
+identificar as técnicas de refatoração
+que são apropriadas para cada dos tipos.
+
+94
+00:06:25.180 --> 00:06:28.713
+Por isso que foi importante
+ter chegado nesta lista.
+
+95
+00:06:28.713 --> 00:06:29.505
+Obrigado.
+
+96
+00:06:29.505 --> 00:06:33.830
+[MÚSICA]

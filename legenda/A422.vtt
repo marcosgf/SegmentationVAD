@@ -1,0 +1,590 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.548
+[MÚSICA] Olá!
+
+2
+00:00:07.548 --> 00:00:12.940
+Bem vindo ao curso sobre TDD,
+eu sou Clovis Fernandes
+
+3
+00:00:12.940 --> 00:00:19.459
+e hoje iremos exemplificar o
+ciclo da refatoração através de
+
+4
+00:00:19.459 --> 00:00:24.790
+exemplo que apresenta 5
+tipos de mau cheiros.
+
+5
+00:00:24.790 --> 00:00:29.797
+É uma maneira de vocês verificarem como
+
+6
+00:00:29.797 --> 00:00:35.130
+o ciclo funciona com mais
+de que tipo de mau cheiro.
+
+7
+00:00:35.130 --> 00:00:40.175
+Normalmente nos exemplos que se encontra
+por aí, geral é o mau cheiro que,
+
+8
+00:00:40.175 --> 00:00:44.011
+apenas que vai ser
+tratado e uma técnica de
+
+9
+00:00:44.011 --> 00:00:47.467
+refatoração apropriada para
+tratar esse mau cheiro.
+
+10
+00:00:47.467 --> 00:00:51.813
+Aqui nós vamos então mostrar exemplo
+que é simples, com poucos comandos,
+
+11
+00:00:51.813 --> 00:00:54.220
+mas que vai ter 5 tipos de mau cheiros.
+
+12
+00:00:54.220 --> 00:00:59.071
+Uma coisa que precisa ficar bem clara
+para vocês é que nós vamos dividir essa
+
+13
+00:00:59.071 --> 00:01:03.700
+apresentação 3 partes,
+essa primeira parte é sobre preparação;
+
+14
+00:01:03.700 --> 00:01:08.430
+a segunda parte nós vamos tratar até
+o segundo mau cheiro; e a terceira
+
+15
+00:01:08.430 --> 00:01:13.530
+parte nós vamos tratar do mau
+cheiro 3 ao o quinto mau cheiro.
+
+16
+00:01:13.530 --> 00:01:18.452
+Existe material escrito que acompanha essa
+
+17
+00:01:18.452 --> 00:01:22.310
+sequência de aulas, está certo?
+
+18
+00:01:22.310 --> 00:01:27.250
+Que vai explicar mais detalhes
+relação ao que eu apresento aqui.
+
+19
+00:01:27.250 --> 00:01:30.976
+Voltamos então ao nosso espetáculo,
+está certo?
+
+20
+00:01:30.976 --> 00:01:32.890
+Vamos começar com a aula,
+
+21
+00:01:32.890 --> 00:01:36.753
+que hoje eu quero ter uma
+interação muito grande com vocês.
+
+22
+00:01:36.753 --> 00:01:40.813
+Eu vou estar sempre fazendo uma pergunta,
+porque nessa primeira parte que é de
+
+23
+00:01:40.813 --> 00:01:44.611
+preparação é para entender esse
+código que nós vamos trabalhar,
+
+24
+00:01:44.611 --> 00:01:48.776
+que nós vamos refatorar e entender
+os problemas que ele têm,
+
+25
+00:01:48.776 --> 00:01:53.290
+problemas de falta de clareza,
+dificuldade de compreensão.
+
+26
+00:01:53.290 --> 00:01:57.450
+Cada vai ter o seu nível de dificuldade,
+está certo?
+
+27
+00:01:57.450 --> 00:02:03.830
+É por isso que cada pessoa vai sentir
+de uma forma essa experiência.
+
+28
+00:02:03.830 --> 00:02:08.940
+O que nós vamos aqui fazer é,
+sobre o meu comando, está certo?
+
+29
+00:02:08.940 --> 00:02:13.645
+Eu vou pedir para vocês pararem
+o vídeo e responderem a uma
+
+30
+00:02:13.645 --> 00:02:17.505
+ou duas perguntas sobre o
+código que vocês estão olhando.
+
+31
+00:02:17.505 --> 00:02:19.398
+O código vai ser sempre o mesmo,
+
+32
+00:02:19.398 --> 00:02:25.087
+mas ele vai ter algumas coisas que vão
+melhorando ao longo do tempo, está certo?
+
+33
+00:02:25.087 --> 00:02:29.374
+Que podem ajudar a entender melhor
+o que o código está expressando,
+
+34
+00:02:29.374 --> 00:02:31.930
+que é isso no final que a gente quer,
+não é?
+
+35
+00:02:31.930 --> 00:02:38.569
+Expressar a intenção daquele código da
+melhor maneira possível, está certo?
+
+36
+00:02:38.569 --> 00:02:42.060
+Então, eis aí o código, está certo?
+
+37
+00:02:42.060 --> 00:02:47.740
+A pergunta é: qual é o desconto, se o
+cliente já foi subsidiado, está certo?
+
+38
+00:02:47.740 --> 00:02:52.862
+Então nós temos aí a classe Cliente
+com algumas, com construtor,
+
+39
+00:02:52.862 --> 00:02:58.124
+que algumas variáveis de instância
+que vão ser passados os valores
+
+40
+00:02:58.124 --> 00:03:03.290
+através do construtor e tem método,
+está certo?
+
+41
+00:03:03.290 --> 00:03:05.489
+Que é o calculateDiscount,
+
+42
+00:03:05.489 --> 00:03:10.192
+e eu estou perguntando para
+vocês pararem o vídeo agora,
+
+43
+00:03:10.192 --> 00:03:17.020
+e me dizer relação aos 5 valores que estão
+ali, especial os 4 primeiros está certo?
+
+44
+00:03:17.020 --> 00:03:22.360
+Qual é o valor do desconto,
+olhando o código do calculateDiscount?
+
+45
+00:03:22.360 --> 00:03:27.492
+Parando agora agora, espero que
+vocês fiquem torno de 30 segundos
+
+46
+00:03:27.492 --> 00:03:35.289
+para examinar o código e me dar uma
+resposta cada uma das perguntas de agora
+
+47
+00:03:35.289 --> 00:03:39.500
+seguinte.
+
+48
+00:03:39.500 --> 00:03:43.790
+Estou aqui de volta.
+
+49
+00:03:43.790 --> 00:03:48.080
+Como não tem o código,
+fica difícil responder, está certo?
+
+50
+00:03:48.080 --> 00:03:49.529
+Não tem o código.
+
+51
+00:03:49.529 --> 00:03:52.720
+Pô professor, que pergunta difícil.
+
+52
+00:03:52.720 --> 00:03:57.360
+Mas essa pergunta pode ser tornar
+difícil mesmo que tenhamos o código,
+
+53
+00:03:57.360 --> 00:04:00.650
+é isso que eu quero mostrar para vocês.
+
+54
+00:04:00.650 --> 00:04:07.360
+Então vamos examinar agora o
+código desse método, está certo?
+
+55
+00:04:07.360 --> 00:04:10.623
+E a pergunta é a mesma,
+está aqui o código.
+
+56
+00:04:10.623 --> 00:04:15.731
+Qual que é o desconto se o cliente já
+é subsidiado, quer dizer, qual é o
+
+57
+00:04:15.731 --> 00:04:21.630
+valor do desconto que vai voltar, entre a,
+b, c e d, está certo, qual é o valor?
+
+58
+00:04:21.630 --> 00:04:25.960
+Vocês então têm 30 segundos,
+valendo, parar o video.
+
+59
+00:04:25.960 --> 00:04:33.486
+[SEM ÁUDIO] Estamos de volta.
+
+60
+00:04:33.486 --> 00:04:34.947
+Foi fácil não é?
+
+61
+00:04:34.947 --> 00:04:40.472
+Provavelmente muitos de vocês
+tiveram dificuldades, por que?
+
+62
+00:04:40.472 --> 00:04:44.238
+O código, não é código claro, está certo?
+
+63
+00:04:44.238 --> 00:04:52.453
+Então vamos ajudar vocês colocando
+alguma informação adicional, está certo?
+
+64
+00:04:52.453 --> 00:04:54.528
+O que é que eu vou fazer agora?
+
+65
+00:04:54.528 --> 00:04:57.848
+Eu vou colocar, acabei de colocar slide,
+
+66
+00:04:57.848 --> 00:05:02.115
+que eu estou colocando conjunto
+de comentários, está certo?
+
+67
+00:05:02.115 --> 00:05:07.420
+Colocando conjunto de comentários para
+ajudar vocês responderem, está certo?
+
+68
+00:05:07.420 --> 00:05:12.197
+Então, vocês têm agora 30 segundos
+para responder qual que é o
+
+69
+00:05:12.197 --> 00:05:15.382
+desconto se o cliente já é subsidiado.
+
+70
+00:05:15.382 --> 00:05:23.125
+Parando agora o video, 30 segundos.
+
+71
+00:05:23.125 --> 00:05:28.930
+E aí como é que foi agora
+tendo os comentários?
+
+72
+00:05:28.930 --> 00:05:32.513
+Obviamente para muitas pessoas,
+
+73
+00:05:32.513 --> 00:05:38.370
+mesmo os comentários estando
+aí com o objetivo de ajudar,
+
+74
+00:05:38.370 --> 00:05:41.351
+na verdade esse aí,
+não está ajudando nada.
+
+75
+00:05:41.351 --> 00:05:43.820
+Por que é que não está ajudando nada?
+
+76
+00:05:43.820 --> 00:05:48.000
+Porque o comentário você
+pode colocar errado.
+
+77
+00:05:48.000 --> 00:05:53.590
+O próprio programador pode não entender
+e foi o que eu fiz aí, eu me enganei.
+
+78
+00:05:53.590 --> 00:05:57.102
+Ops!
+Tinha algo errado, está invertido lá,
+
+79
+00:05:57.102 --> 00:05:58.460
+os comentários.
+
+80
+00:05:58.460 --> 00:06:03.920
+Se aconteceu isso, dificilmente
+vocês iam chegar na resposta certa.
+
+81
+00:06:03.920 --> 00:06:07.920
+Então, nós não podemos
+confiar nos comentários.
+
+82
+00:06:07.920 --> 00:06:12.090
+Na verdade os comentários no nosso caso,
+
+83
+00:06:12.090 --> 00:06:17.794
+nós só vamos colocar comentários
+que respondam perguntas do tipo:
+
+84
+00:06:17.794 --> 00:06:23.857
+o que ou por que e ainda sim muitos que
+respondem perguntas o que e por que,
+
+85
+00:06:23.857 --> 00:06:29.127
+vão ser eliminados por causa das técnicas
+de refatoração que nós vamos usar,
+
+86
+00:06:29.127 --> 00:06:29.960
+está certo?
+
+87
+00:06:29.960 --> 00:06:33.586
+Então agora, vocês estão vendo aí de novo,
+
+88
+00:06:33.586 --> 00:06:37.795
+a pergunta é a mesma, qual é o
+desconto se o cliente já é subsidiado,
+
+89
+00:06:37.795 --> 00:06:40.750
+agora os comentários estão todos certos,
+está certo?
+
+90
+00:06:40.750 --> 00:06:44.930
+Então parando o video mais 30 segundos.
+
+91
+00:06:44.930 --> 00:06:48.978
+Continua não
+
+92
+00:06:48.978 --> 00:06:54.836
+sendo muito fácil, não é, está certo?
+
+93
+00:06:54.836 --> 00:06:57.102
+Então o que é que eu vou fazer?
+
+94
+00:06:57.102 --> 00:07:02.103
+Vou fazer colocar comentário
+a mais if then, está certo?
+
+95
+00:07:02.103 --> 00:07:08.135
+Eu vou fazer isso, vou colocar comentário
+a mais no if then, esta certo?
+
+96
+00:07:08.135 --> 00:07:12.929
+Coloquei lá comentário no if not sub,
+está certo?
+
+97
+00:07:12.929 --> 00:07:17.191
+E vamos lá, valendo de novo,
+qual é o desconto,
+
+98
+00:07:17.191 --> 00:07:22.080
+se o cliente já foi subsidiado,
+30 segundos, parando o vídeo agora.
+
+99
+00:07:22.080 --> 00:07:28.945
+Continua não
+
+100
+00:07:28.945 --> 00:07:32.751
+sendo muito fácil, esse código é curto,
+
+101
+00:07:32.751 --> 00:07:38.386
+então talvez você encontre o else mas
+facilmente, mas se o código fosse maior
+
+102
+00:07:38.386 --> 00:07:43.200
+e o else estivesse mais longe já ficaria,
+começaria ficar difícil, está certo?
+
+103
+00:07:43.200 --> 00:07:48.172
+Outra coisa que dificulta isso também é
+porque nós estamos trabalhando com uma
+
+104
+00:07:48.172 --> 00:07:52.040
+variável booleana negativa,
+eu estou negando.
+
+105
+00:07:52.040 --> 00:07:58.070
+O cérebro humano não funciona bem com
+negativas ele se perde pouco, está certo?
+
+106
+00:07:58.070 --> 00:08:02.938
+Vocês vejam que ali nós temos
+3 variáveis com negativos e
+
+107
+00:08:02.938 --> 00:08:07.650
+tem uma que está muito complicada,
+porque ela é negativo do negativo,
+
+108
+00:08:07.650 --> 00:08:12.158
+é o not, notFTime,
+
+109
+00:08:12.158 --> 00:08:16.310
+ali F para full time, está certo?
+
+110
+00:08:16.310 --> 00:08:20.165
+Se eu estou trabalhando com
+part time no comentário,
+
+111
+00:08:20.165 --> 00:08:22.570
+deve ser full time, está certo?
+
+112
+00:08:22.570 --> 00:08:25.990
+Então, o que eu queria
+mostrar aí para vocês,
+
+113
+00:08:25.990 --> 00:08:30.310
+é que se o código não está claro,
+
+114
+00:08:30.310 --> 00:08:36.505
+se eu não expressei a minha
+intenção nos nomes das variáveis,
+
+115
+00:08:36.505 --> 00:08:41.541
+poderia ser até no nome do próprio
+método ou da classe, está certo?
+
+116
+00:08:41.541 --> 00:08:44.910
+Fica muito difícil compreender as coisas.
+
+117
+00:08:44.910 --> 00:08:49.860
+Nós vamos mostrar algumas refatorações
+que vão começar tratando dessa parte,
+
+118
+00:08:49.860 --> 00:08:54.718
+dessa expressão da intenção, está certo?
+
+119
+00:08:54.718 --> 00:09:00.437
+E outras que vão complementar e no
+final eu quero ter código mais claro,
+
+120
+00:09:00.437 --> 00:09:05.367
+que de bate-pronto você olha
+e sabe responder qualquer uma
+
+121
+00:09:05.367 --> 00:09:09.420
+das possível perguntas,
+eu só fiz tipo de pergunta,
+
+122
+00:09:09.420 --> 00:09:13.090
+e ali eu tinha 4
+possibilidades de perguntas.
+
+123
+00:09:13.090 --> 00:09:18.837
+Mas o código tem que estão tão claro
+que quanto eu fizer a pergunta,
+
+124
+00:09:18.837 --> 00:09:24.494
+ela é rapidamente respondida, questão de
+1 segundo meio segundo provavelmente,
+
+125
+00:09:24.494 --> 00:09:27.050
+se nós chegarmos código de qualidade.
+
+126
+00:09:27.050 --> 00:09:34.300
+Obrigado, até a próxima aula.

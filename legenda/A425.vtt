@@ -1,0 +1,1192 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.610
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.610 --> 00:00:11.380
+bem vindo ao curso sobre TDD.
+
+3
+00:00:11.380 --> 00:00:15.810
+Eu sou o Clóvis Fernandes e hoje
+iremos falar sobre Casos de Testes
+
+4
+00:00:15.810 --> 00:00:18.190
+a Partir de Responsabilidades.
+
+5
+00:00:18.190 --> 00:00:22.780
+O problema prático que nós temos
+normalmente é: como definir os
+
+6
+00:00:22.780 --> 00:00:25.160
+casos de teste de uma aplicação?
+
+7
+00:00:25.160 --> 00:00:30.088
+Esse é problema bastante
+interessante e difícil de ser feito.
+
+8
+00:00:30.088 --> 00:00:34.339
+Nos exemplos de livros,
+sites de hands on de
+
+9
+00:00:34.339 --> 00:00:39.980
+geralmente os casos de
+testes aparecem magicamente.
+
+10
+00:00:39.980 --> 00:00:45.434
+Veja a parte dos enunciados de dois
+exemplos de katas da internet.
+
+11
+00:00:45.434 --> 00:00:47.025
+O que são katas?
+
+12
+00:00:47.025 --> 00:00:49.071
+Katas vem do karatê.
+
+13
+00:00:49.071 --> 00:00:54.294
+São formas planejadas
+que você faz cada faixa
+
+14
+00:00:54.294 --> 00:00:59.570
+que você você atua no karatê.
+
+15
+00:00:59.570 --> 00:01:04.911
+São formas para defesa e ataque
+que você faz e isso é usado
+
+16
+00:01:04.911 --> 00:01:09.830
+também no contexto dos dojos, code dojos,
+
+17
+00:01:09.830 --> 00:01:14.326
+que são os dojos,
+que são as salas onde se luta o karatê.
+
+18
+00:01:14.326 --> 00:01:19.267
+Os code dojos são as salas onde
+as pessoas treinam como fazer o
+
+19
+00:01:19.267 --> 00:01:22.430
+desenvolvimento de software no TDD.
+
+20
+00:01:22.430 --> 00:01:29.690
+E nesse exemplo que nós estamos vendo aqui
+a gente está falando sobre fatores primos.
+
+21
+00:01:29.690 --> 00:01:37.340
+Então, você tem que fatorar número
+inteiro positivo seus fatores primos.
+
+22
+00:01:37.340 --> 00:01:43.783
+E logo baixo aparece uma tabela já com
+esses dados mágicos, não é, está certo?
+
+23
+00:01:43.783 --> 00:01:51.034
+Esses dados mágicos que alguém já definiu
+para você quais são os casos testes,
+
+24
+00:01:51.034 --> 00:01:55.085
+cada linha dessa tabela
+corresponde a casos teste, está?
+
+25
+00:01:55.085 --> 00:01:58.054
+Isso já foi, alguém já fez isso para você.
+
+26
+00:01:58.054 --> 00:01:59.880
+Como é que isso foi feito?
+
+27
+00:01:59.880 --> 00:02:01.988
+É isso que nós vamos ver.
+
+28
+00:02:01.988 --> 00:02:06.302
+Outro exemplo aqui,
+esse kata calculadora de string.
+
+29
+00:02:06.302 --> 00:02:13.611
+Você adiciona os números que aparecem numa
+string, está certo, separados por virgula.
+
+30
+00:02:13.611 --> 00:02:20.746
+Então se você tiver o número, por exemplo
+como a gente está vendo logo aí baixo,
+
+31
+00:02:20.746 --> 00:02:26.050
+número 1, no string 1,
+o valor vai ser 1, está certo?
+
+32
+00:02:26.050 --> 00:02:28.760
+Então alguém já definiu isso.
+
+33
+00:02:28.760 --> 00:02:35.585
+Normalmente caso de teste é composto
+de uma entrada de resultado esperado
+
+34
+00:02:35.585 --> 00:02:42.478
+e depois o resultado real quando você roda
+o seu programa naquele teste, está certo?
+
+35
+00:02:42.478 --> 00:02:48.530
+Então com essas três coisas eu
+defino o meu caso de teste.
+
+36
+00:02:48.530 --> 00:02:53.634
+Então aí eu tenho para
+string vazio a soma vai
+
+37
+00:02:53.634 --> 00:02:59.880
+ser 0 e o meu resultado final tem
+que dar 0 também e assim por diante.
+
+38
+00:02:59.880 --> 00:03:03.897
+Eu estou mostrando alí,
+inclusive por exemplo para o
+
+39
+00:03:03.897 --> 00:03:08.365
+string [1,2,3] cujo resultado dever ser 6.
+
+40
+00:03:08.365 --> 00:03:11.273
+Então quando eu rodar tem que dar 6,
+
+41
+00:03:11.273 --> 00:03:14.900
+o resultado real tem que bater
+com o resultado esperado.
+
+42
+00:03:14.900 --> 00:03:16.938
+Então isso aí são os casos testes.
+
+43
+00:03:16.938 --> 00:03:21.861
+Alguém fez pra mim, se vocês procurarem
+esse kata calculadora de string eles pedem
+
+44
+00:03:21.861 --> 00:03:26.370
+inclusive para vocês não
+usarem dados inválidos.
+
+45
+00:03:26.370 --> 00:03:30.120
+Quer dizer,
+eu estou usando só dados válidos.
+
+46
+00:03:30.120 --> 00:03:32.534
+Isso aí a gente chama de caminho feliz,
+
+47
+00:03:32.534 --> 00:03:36.200
+então a gente está vendo aqui
+o caminho feliz, está certo?
+
+48
+00:03:36.200 --> 00:03:38.192
+O que é esse caminho feliz?
+
+49
+00:03:38.192 --> 00:03:41.829
+É o caminho,
+que a gente chama de teste positivo,
+
+50
+00:03:41.829 --> 00:03:44.715
+eu só estou usando os dados corretos.
+
+51
+00:03:44.715 --> 00:03:49.371
+A partir do momento que a pessoa
+já se treinou nesse kata,
+
+52
+00:03:49.371 --> 00:03:54.472
+aí ele pode começar a trabalhar
+com dados incorretos e ver o
+
+53
+00:03:54.472 --> 00:04:00.272
+fluxo alternativo não é,
+conjunto de dados alternativos.
+
+54
+00:04:00.272 --> 00:04:03.373
+Mas vocês percebem que isso
+aí são dados mágicos não é,
+
+55
+00:04:03.373 --> 00:04:05.140
+aparecem e as pessoas vão fazer.
+
+56
+00:04:05.140 --> 00:04:07.710
+Como que a gente descobre isso não é,
+está certo?
+
+57
+00:04:07.710 --> 00:04:11.800
+O que que há de comum
+nesses dois exemplos?
+
+58
+00:04:11.800 --> 00:04:15.782
+Geralmente os exemplos
+trabalham apenas ou poucos
+
+59
+00:04:15.782 --> 00:04:20.562
+requisitos porque eles são didáticos,
+eles não podem levar muito tempo,
+
+60
+00:04:20.562 --> 00:04:24.170
+normalmente levam uma hora mais ou menos,
+30 minutos,
+
+61
+00:04:24.170 --> 00:04:29.560
+então você não pode
+usar muitos requisitos.
+
+62
+00:04:29.560 --> 00:04:31.730
+Então geral é requisito,
+
+63
+00:04:31.730 --> 00:04:36.578
+esse do calculadora ele mistura
+depois lá mais para frente, uns 2,
+
+64
+00:04:36.578 --> 00:04:43.710
+3 requisitos adicionais complementando
+esses que eu acabei de colocar aqui agora.
+
+65
+00:04:43.710 --> 00:04:48.420
+Vamos relembrar os requisitos
+então de cada exemplo.
+
+66
+00:04:48.420 --> 00:04:53.653
+Então nós temos aí para fatores primos,
+o kata de fatores primos,
+
+67
+00:04:53.653 --> 00:04:58.261
+fatore número inteiro
+positivo seus fatores primos.
+
+68
+00:04:58.261 --> 00:05:00.602
+O kata calculadora de string,
+
+69
+00:05:00.602 --> 00:05:06.560
+adicione os números que aparece
+no string separados por vírgula,
+
+70
+00:05:06.560 --> 00:05:12.685
+esses são os 2 requisitos
+para cada dos katas.
+
+71
+00:05:12.685 --> 00:05:18.074
+Se você olhar apenas para os requisitos
+não dá pra fazer os testes diretamente.
+
+72
+00:05:18.074 --> 00:05:21.802
+Como é que eu vou definir os
+casos de teste que trabalham com
+
+73
+00:05:21.802 --> 00:05:24.290
+dados mais precisos não é, está certo?
+
+74
+00:05:24.290 --> 00:05:27.385
+Então é preciso criar os casos de testes,
+
+75
+00:05:27.385 --> 00:05:33.410
+que são os dados que eu vou colocar no
+meu testes a partir dos requisitos.
+
+76
+00:05:33.410 --> 00:05:37.630
+Então o que a gente chama de casos de
+teste vão corresponder aos nossos testes
+
+77
+00:05:37.630 --> 00:05:39.542
+que eu vou usar no TDD.
+
+78
+00:05:39.542 --> 00:05:44.521
+Não há mágica, eu preciso obter
+uma lista de requisitos e obter
+
+79
+00:05:44.521 --> 00:05:48.530
+uma lista de casos de teste
+para cada requisito levantado.
+
+80
+00:05:48.530 --> 00:05:53.750
+Nós já vimos no que a gente falou, que
+nós precisamos fazer projeto suficiente.
+
+81
+00:05:53.750 --> 00:05:57.779
+Esse projeto suficiente,
+o EDUF que a gente está chamando,
+
+82
+00:05:57.779 --> 00:06:03.704
+que não é nem o nome usual da literatura,
+mas esse projeto suficiente é onde eu vou
+
+83
+00:06:03.704 --> 00:06:09.785
+definir quais são os requisitos mínimos
+para começar a trabalhar, os requisitos,
+
+84
+00:06:09.785 --> 00:06:15.708
+algumas classes, uma arquitetura inicial,
+está certo, para poder então dar início.
+
+85
+00:06:15.708 --> 00:06:21.328
+Não há mágica, eu tenho que definir esses
+requisitos e a partir desses requisitos,
+
+86
+00:06:21.328 --> 00:06:26.930
+a lista de casos de usos para cada deles,
+onde eu vou definir os dados
+
+87
+00:06:26.930 --> 00:06:32.310
+de testes realmente para
+poder prosseguir no TDD.
+
+88
+00:06:32.310 --> 00:06:36.420
+Examinando os dois
+requisitos com mais cuidado,
+
+89
+00:06:36.420 --> 00:06:40.404
+o fatore número inteiro
+positivo seus fatores primos,
+
+90
+00:06:40.404 --> 00:06:46.045
+adicione os números que aparecem
+na string separados por vírgula.
+
+91
+00:06:46.045 --> 00:06:50.210
+A gente percebe que de
+fato eles são o quê?
+
+92
+00:06:50.210 --> 00:06:53.699
+Uma coisa que a gente já estava
+acostumado, o que que é?
+
+93
+00:06:53.699 --> 00:06:55.120
+Responsabilidades.
+
+94
+00:06:55.120 --> 00:06:58.096
+Eles já são responsabilidades.
+
+95
+00:06:58.096 --> 00:07:03.891
+Essas responsabilidades elas é o que
+nós já estávamos acostumados a fazer,
+
+96
+00:07:03.891 --> 00:07:08.264
+modelagem CRC não é, está certo e
+trabalhar com responsabilidades.
+
+97
+00:07:08.264 --> 00:07:12.485
+Então carimbamos isso aí e identificamos
+que isso são responsabilidades e
+
+98
+00:07:12.485 --> 00:07:13.960
+é isso que nós vamos usar.
+
+99
+00:07:13.960 --> 00:07:16.774
+Responsabilidades, está certo?
+
+100
+00:07:16.774 --> 00:07:19.690
+Nós vamos usar responsabilidades.
+
+101
+00:07:19.690 --> 00:07:23.827
+Com isso, é o que nós vamos fazer,
+
+102
+00:07:23.827 --> 00:07:30.386
+nós vamos exemplificar a obtenção
+de casos de testes a partir dos
+
+103
+00:07:30.386 --> 00:07:37.096
+requisitos obtidos através da modelagem
+CRC, na forma de responsabilidades.
+
+104
+00:07:37.096 --> 00:07:39.210
+É isso que nós iremos fazer.
+
+105
+00:07:39.210 --> 00:07:41.684
+Repetindo, não há mágica.
+
+106
+00:07:41.684 --> 00:07:47.218
+Para cada responsabilidade
+identificada basta obter então
+
+107
+00:07:47.218 --> 00:07:52.840
+a sua lista de casos teste para
+o caminho feliz inicialmente.
+
+108
+00:07:52.840 --> 00:07:58.250
+A gente chama de positive test,
+teste positivo ou seja,
+
+109
+00:07:58.250 --> 00:08:03.048
+eu não vou olhar para
+problemas nas entradas que eu
+
+110
+00:08:03.048 --> 00:08:07.800
+estiver fazendo para esses
+casos testes iniciais.
+
+111
+00:08:07.800 --> 00:08:12.320
+E depois eu vou fazer, continuo
+a lista fazendo agora uma lista para o
+
+112
+00:08:12.320 --> 00:08:16.783
+caminho alternativo, o que a gente
+chama de negative test, está certo?
+
+113
+00:08:16.783 --> 00:08:20.020
+Ou seja agora sim eu vou começar
+a olhar para dados inválidos.
+
+114
+00:08:20.020 --> 00:08:23.875
+Ao olhar para esses dados
+inválidos eu certamente
+
+115
+00:08:23.875 --> 00:08:28.290
+vou conseguir definir os
+casos testes para mim.
+
+116
+00:08:28.290 --> 00:08:33.080
+Nesta aula iremos usar
+exemplo da literatura,
+
+117
+00:08:33.080 --> 00:08:38.288
+na próxima a gente vai trabalhar
+uma responsabilidade levantada
+
+118
+00:08:38.288 --> 00:08:44.517
+para a classe biblioteca do SAB,
+o sistema de automação de biblioteca.
+
+119
+00:08:44.517 --> 00:08:47.660
+É isso que nós vamos fazer posteriormente.
+
+120
+00:08:47.660 --> 00:08:54.009
+A responsabilidade da literatura que
+eu vou estar usando é simplesmente
+
+121
+00:08:54.009 --> 00:08:59.062
+contar ocorrências de string com apenas
+
+122
+00:08:59.062 --> 00:09:04.220
+caracter uma sentença,
+que também é string.
+
+123
+00:09:04.220 --> 00:09:08.216
+Ou seja, por exemplo nesse jornal que
+você estão vendo logo abaixo aqui,
+
+124
+00:09:08.216 --> 00:09:12.788
+eu podia estar querendo procurar
+string formado apenas pela
+
+125
+00:09:12.788 --> 00:09:17.288
+letra D maiúscula,
+está certo e eu queria ver a ocorrência.
+
+126
+00:09:17.288 --> 00:09:19.680
+Quanta vezes isso aparece no texto?
+
+127
+00:09:19.680 --> 00:09:24.630
+Eu estaria usando por exemplo método
+
+128
+00:09:24.630 --> 00:09:30.924
+amountOfChar cuja parâmetro
+seria string string,
+
+129
+00:09:30.924 --> 00:09:35.690
+string para sentença e string para
+o carácter que eu quero usar,
+
+130
+00:09:35.690 --> 00:09:38.390
+está certo e é isso que eu vou fazer.
+
+131
+00:09:38.390 --> 00:09:41.072
+Qual é o caminho feliz, está certo?
+
+132
+00:09:41.072 --> 00:09:46.567
+O caminho feliz é inicialmente
+considerar que as entradas sentença e o
+
+133
+00:09:46.567 --> 00:09:53.740
+string correspondente que eu vou
+procurar nessa sentença são válidos.
+
+134
+00:09:53.740 --> 00:09:57.510
+Essa é primeira característica
+do caminho feliz.
+
+135
+00:09:57.510 --> 00:10:02.340
+Então eu vou estar chamando de ct1,
+ct2, ct3,
+
+136
+00:10:02.340 --> 00:10:06.561
+uma sigla numerada
+
+137
+00:10:06.561 --> 00:10:11.525
+para os casos testes,
+c de casos e t de teste.
+
+138
+00:10:11.525 --> 00:10:16.230
+Então ct1, ct2 e assim por diante,
+nos vários exemplos
+
+139
+00:10:16.230 --> 00:10:20.790
+que eu dou outras aulas
+também vai aparecer assim.
+
+140
+00:10:20.790 --> 00:10:25.499
+Então, no ct1 eu tenho string com 1
+
+141
+00:10:25.499 --> 00:10:30.988
+caractere apenas e uma sentença simples
+é o que eu vou estar procurando.
+
+142
+00:10:30.988 --> 00:10:35.135
+Então, eu tenho uma sentença no meu
+exemplo de dado de entrada ali,
+
+143
+00:10:35.135 --> 00:10:40.377
+no caso do teste tudo o que está
+entre colchetes representa o meu
+
+144
+00:10:40.377 --> 00:10:45.700
+caso teste, da qual eu ali
+vou gerar o meu código JUnit.
+
+145
+00:10:45.700 --> 00:10:50.505
+Então eu tenho uma sentença com 2 e,
+então é uma sentença que tem,
+
+146
+00:10:50.505 --> 00:10:54.180
+é string qualquer genérico,
+não é, mas é uma sentença só,
+
+147
+00:10:54.180 --> 00:10:58.940
+com 2 e e aí eu vou procurar esse
+string formado pela letra e.
+
+148
+00:10:58.940 --> 00:11:00.635
+Obviamente se eu tenho 2,
+
+149
+00:11:00.635 --> 00:11:06.063
+o meu resultado vai ser 2 esperado e
+eu espero que o resultado real seja 2.
+
+150
+00:11:06.063 --> 00:11:11.124
+Ou seja quando eu for
+usar isso no TDD, eu vou testar fazer
+
+151
+00:11:11.124 --> 00:11:16.035
+falhar inicialmente e
+depois eu vou escrever
+
+152
+00:11:16.035 --> 00:11:20.593
+código que ele reconhece e
+encontre esses 2 caracteres e
+
+153
+00:11:20.593 --> 00:11:25.616
+dentro desse texto que eu sei que tem 2 e,
+está certo?
+
+154
+00:11:25.616 --> 00:11:30.640
+O ct2 já é string com
+outro caractere qualquer,
+
+155
+00:11:30.640 --> 00:11:36.280
+que no caso aqui vai ser o s e uma
+sentença mais complexa, maior não é,
+
+156
+00:11:36.280 --> 00:11:40.807
+maior tamanho, complexa aqui nesse
+sentido de maior, está certo?
+
+157
+00:11:40.807 --> 00:11:45.501
+Eu estou querendo aqui,
+ver se ao fazer isso vai ter alguma
+
+158
+00:11:45.501 --> 00:11:50.650
+alteração no meu código de produção,
+está certo?
+
+159
+00:11:50.650 --> 00:11:57.213
+Eu vou verificar o string
+s e espero encontrar 5,
+
+160
+00:11:57.213 --> 00:12:01.596
+porque na minha sentença
+existem 5 letras s então,
+
+161
+00:12:01.596 --> 00:12:05.576
+eu espero encontrar 5 e o resultado
+real também deverá ser 5.
+
+162
+00:12:05.576 --> 00:12:09.437
+Se não for,
+o resultado real não bater com o esperado,
+
+163
+00:12:09.437 --> 00:12:13.915
+a gente diz que houve erro, finaliza erro.
+
+164
+00:12:13.915 --> 00:12:19.471
+O ct3 é string com outra letra,
+está certo?
+
+165
+00:12:19.471 --> 00:12:23.103
+Que eu estou usando agora 3 sentenças,
+eu estou aumentando o meu texto.
+
+166
+00:12:23.103 --> 00:12:26.755
+O texto pode ter qualquer tamanho,
+então eu estou usando nessas 3 aí eu fui
+
+167
+00:12:26.755 --> 00:12:31.953
+aumentando, uma sentença simples,
+uma sentença maior e depois 3 sentenças,
+
+168
+00:12:31.953 --> 00:12:35.300
+que pode ser simples ou
+mais complexas está certo?
+
+169
+00:12:35.300 --> 00:12:39.032
+O string que eu quero, o string é o,
+
+170
+00:12:39.032 --> 00:12:43.864
+vai estar composto pelo
+caractere n eu tenho 3
+
+171
+00:12:43.864 --> 00:12:48.850
+ocorrências de n e eu vou então,
+verificar se o,
+
+172
+00:12:48.850 --> 00:12:53.180
+se o meu esperado é 3
+encontrar ali e o real é 3.
+
+173
+00:12:53.180 --> 00:12:57.034
+Então vocês percebam que o que
+está entre colchete já vai
+
+174
+00:12:57.034 --> 00:13:01.200
+corresponder ao caso de teste meu.
+
+175
+00:13:01.200 --> 00:13:05.867
+Então, fica agora muito mais
+fácil para eu construir o código
+
+176
+00:13:05.867 --> 00:13:09.511
+JUnit correspondente, está certo?
+
+177
+00:13:09.511 --> 00:13:15.690
+Nós mostramos leitura que nós definimos
+
+178
+00:13:15.690 --> 00:13:20.190
+padrão que a gente chama de aaa,
+
+179
+00:13:20.190 --> 00:13:23.900
+que é o arrange, o act e o assert.
+
+180
+00:13:23.900 --> 00:13:28.768
+A gente começa a definir esses
+casos testes lá no JUnit
+
+181
+00:13:28.768 --> 00:13:33.615
+através do assert e é exatamente
+para ver se bate com esses dados
+
+182
+00:13:33.615 --> 00:13:36.930
+quando eles são válidos ou inválidos.
+
+183
+00:13:36.930 --> 00:13:42.130
+Agora nós vamos ver o caminho alternativo,
+
+184
+00:13:42.130 --> 00:13:47.117
+o que a gente chama de teste negativo,
+Negative Testing, ou seja,
+
+185
+00:13:47.117 --> 00:13:51.285
+nós vamos começar a trabalhar
+com dados inválidos,
+
+186
+00:13:51.285 --> 00:13:56.131
+então o ct4, até ao ct3,
+tanto a sentença quanto a string,
+
+187
+00:13:56.131 --> 00:13:59.810
+formado de caractere só
+nesse exemplo não é,
+
+188
+00:13:59.810 --> 00:14:04.485
+esse catálise depois ele passa a ter
+
+189
+00:14:04.485 --> 00:14:09.160
+mais caracteres no string
+para as buscas de ocorrência.
+
+190
+00:14:09.160 --> 00:14:15.749
+Até o ct3 nós tínhamos
+sentença e caractere válidos,
+
+191
+00:14:15.749 --> 00:14:19.900
+agora a gente vai começar
+a introduzir coisas inválidas,
+
+192
+00:14:19.900 --> 00:14:24.720
+então o string a procurar agora,
+vez de ter 1 caractere como eu defini,
+
+193
+00:14:24.720 --> 00:14:30.392
+vai ter 2 como exemplo,
+a sentença continua válida, está certo?
+
+194
+00:14:30.392 --> 00:14:35.053
+Então vocês percebam que a minha sentença,
+o meu caso teste
+
+195
+00:14:35.053 --> 00:14:39.965
+agora é composto de uma sentença
+válida e de string inválido,
+
+196
+00:14:39.965 --> 00:14:44.440
+ele tem 2 caracteres vez de ter
+1 como eu havia determinado.
+
+197
+00:14:44.440 --> 00:14:48.168
+Obviamente, eu espero que ele
+seja lançado uma excepção e
+
+198
+00:14:48.168 --> 00:14:52.727
+o resultado final tem que ser uma
+excepção, porque se não for dá erro,
+
+199
+00:14:52.727 --> 00:14:57.107
+significa que eu fiz algum código
+que não conseguiu capturar esse,
+
+200
+00:14:57.107 --> 00:15:04.038
+essa entrada errônea para
+o string a se procurar.
+
+201
+00:15:04.038 --> 00:15:10.108
+Já no ct5 vez de 2 caracteres
+eu estou colocando 3 caracteres,
+
+202
+00:15:10.108 --> 00:15:14.454
+estou procurando 3 caracteres
+e a sentença continua válida,
+
+203
+00:15:14.454 --> 00:15:19.182
+então eu simplesmente só ampliei o número
+de caracteres, eu podia ter número maior
+
+204
+00:15:19.182 --> 00:15:23.110
+de caracteres para verificar, eu posso
+fazer isso para ver se o meu algoritmo,
+
+205
+00:15:23.110 --> 00:15:29.026
+no código de produção,
+tem alguma variação, está certo?
+
+206
+00:15:29.026 --> 00:15:32.028
+Então a gente pode fazer
+esses experimentos testando.
+
+207
+00:15:32.028 --> 00:15:36.576
+Eu podia colocar aqui por exemplo,
+com 15, 20 caracteres, não é, está certo?
+
+208
+00:15:36.576 --> 00:15:41.832
+E ele deve detetar normalmente como deteta
+se tem 2 caracteres que é mais do que 1,
+
+209
+00:15:41.832 --> 00:15:47.650
+então eu não preciso ficar expandindo,
+alguns casos é bom fazer isso.
+
+210
+00:15:47.650 --> 00:15:51.605
+Já no ct6, o string a procurar é nulo,
+
+211
+00:15:51.605 --> 00:15:57.789
+a sentença é válida, ou seja, eu estou
+mandando procurar numa sentença válida,
+
+212
+00:15:57.789 --> 00:16:01.635
+string nulo ou seja,
+o sistema tem que apontar que não
+
+213
+00:16:01.635 --> 00:16:06.509
+dá para fazer essa busca de ocorrência
+e ele vai voltar com alguma excepção.
+
+214
+00:16:06.509 --> 00:16:10.469
+Vejam que eu estou pondo excepções,
+mas cada excepção vai ser uma excepção
+
+215
+00:16:10.469 --> 00:16:13.340
+específica para o tipo de
+problema que eu estou tendo.
+
+216
+00:16:13.340 --> 00:16:18.514
+Cada dessas linhas que mostram o meu
+
+217
+00:16:18.514 --> 00:16:24.127
+caso teste vai dar margem, provavelmente,
+a excepções diferentes, está certo?
+
+218
+00:16:24.127 --> 00:16:28.313
+Então o string é nulo,
+eu vou voltar a uma excepção,
+
+219
+00:16:28.313 --> 00:16:32.708
+eu espero que seja uma excepção
+apontando que "olha o string é nulo",
+
+220
+00:16:32.708 --> 00:16:36.198
+excepção o string é nulo não
+dá para fazer essa busca.
+
+221
+00:16:36.198 --> 00:16:42.723
+E obviamente quando eu gerar código real
+e rodar isso ele vai ter que detetar,
+
+222
+00:16:42.723 --> 00:16:47.295
+se não detetar, erro,
+aí eu tenho que debugar e arrumar para
+
+223
+00:16:47.295 --> 00:16:51.980
+fazer ele voltar ao mesmo tipo de
+excepção que eu estou esperando.
+
+224
+00:16:51.980 --> 00:16:55.490
+Já o ct7 o string a procurar é vazio,
+ou seja,
+
+225
+00:16:55.490 --> 00:17:00.976
+agora como é que eu vou procurar
+numa sentença válida string vazio?
+
+226
+00:17:00.976 --> 00:17:02.095
+Está certo?
+
+227
+00:17:02.095 --> 00:17:05.670
+Então, vou lançar uma excepção também.
+
+228
+00:17:05.670 --> 00:17:11.169
+Para complementar agora,
+a sentença na qual
+
+229
+00:17:11.169 --> 00:17:18.180
+eu faço a busca ela é nula inicialmente,
+no ct8, ela é nula.
+
+230
+00:17:18.180 --> 00:17:23.395
+O string não importa o que ele seja, ele
+pode até ser nulo, ele pode ser até vazio,
+
+231
+00:17:23.395 --> 00:17:28.470
+não importa, a sentença já é nula,
+lança uma excepção.
+
+232
+00:17:28.470 --> 00:17:33.665
+Quem é que eu vou indicar que a sentença
+da qual eu vou fazer uma procura do
+
+233
+00:17:33.665 --> 00:17:39.310
+string de 1 caractere
+e vai voltar excepção.
+
+234
+00:17:39.310 --> 00:17:45.691
+Já no ct9,
+a sentença ela é vazia está certo,
+
+235
+00:17:45.691 --> 00:17:49.660
+também não me importa o que é que o
+string é, se o string é string válido,
+
+236
+00:17:49.660 --> 00:17:54.330
+se o string é vazio, se o string é nulo,
+não, porque a sentença já é vazia.
+
+237
+00:17:54.330 --> 00:17:56.730
+Então eu boto uma excepção para isso.
+
+238
+00:17:56.730 --> 00:18:00.180
+Provavelmente a excepção
+vai ser diferente da outra,
+
+239
+00:18:00.180 --> 00:18:05.270
+uma ou outra excepção por causa do,
+da sentença ser
+
+240
+00:18:05.270 --> 00:18:10.737
+nula e outra excepção
+porque a sentença é vazia.
+
+241
+00:18:10.737 --> 00:18:15.023
+Com isso, vocês viram que os casos
+
+242
+00:18:15.023 --> 00:18:20.104
+testes eles podem ser
+definidos a partir de
+
+243
+00:18:20.104 --> 00:18:25.091
+responsabilidades e é isso que nós
+vamos mostrar na próxima aula,
+
+244
+00:18:25.091 --> 00:18:29.744
+na próxima aula nós vamos usar o exemplo
+do SABE, o sistema de automação de
+
+245
+00:18:29.744 --> 00:18:34.226
+biblioteca, que fica uma coisa assim
+pouco mais próxima de vocês, está certo?
+
+246
+00:18:34.226 --> 00:18:39.692
+Porque vocês já viram anteriormente e têm
+material de leitura com todo o código do
+
+247
+00:18:39.692 --> 00:18:44.895
+SABE feito não é, está certo,
+inclusivé com os testes correspondentes,
+
+248
+00:18:44.895 --> 00:18:49.226
+lá os testes são de integração
+não são testes usados para o TDD,
+
+249
+00:18:49.226 --> 00:18:55.460
+são já testes de integração mas dá para
+verificar como é que eles são feitos.
+
+250
+00:18:55.460 --> 00:19:01.960
+Obrigado [MÚSICA]

@@ -1,0 +1,820 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.930
+Após esse vídeo, você será capaz de
+explicar a aproximação da resposta de
+
+2
+00:00:04.930 --> 00:00:09.042
+sistemas com zeros pela
+resposta de sistemas sem zeros.
+
+3
+00:00:09.042 --> 00:00:13.026
+Dessa vez vamos direto para
+o sistema de segunda ordem
+
+4
+00:00:13.026 --> 00:00:16.491
+subamortecido que é o que
+realmente nos interessa.
+
+5
+00:00:16.491 --> 00:00:20.959
+Mas as conclusões às quais chegaremos
+são válidas também para sistemas
+
+6
+00:00:20.959 --> 00:00:24.260
+superamortecidos e
+sistemas de outras ordens.
+
+7
+00:00:24.260 --> 00:00:29.469
+Nossa função de transferência padrão
+de segunda ordem é G de s igual a ômega
+
+8
+00:00:29.469 --> 00:00:34.930
+n ao quadrado sobre s ao quadrado mais 2
+ksi ômega n s mais ômega n ao quadrado.
+
+9
+00:00:34.930 --> 00:00:39.560
+Vamos acrescentar zero a essa
+função de transferência e
+
+10
+00:00:39.560 --> 00:00:44.190
+ao mesmo tempo acrescentamos ganho
+para manter o valor final inalterado.
+
+11
+00:00:44.190 --> 00:00:49.354
+Temos assim: G1 de s é igual
+a 1 sobre a ômega n ao quadrado
+
+12
+00:00:49.354 --> 00:00:55.590
+vezes s mais a sobre s ao quadrado mais 2
+ksi ômega n s mais ômega n ao quadrado.
+
+13
+00:00:55.590 --> 00:00:58.880
+Multiplicando a função de
+transferência por 1 sobre s,
+
+14
+00:00:58.880 --> 00:01:02.250
+obtemos a Transformada de
+Laplace da resposta ao degrau.
+
+15
+00:01:02.250 --> 00:01:10.310
+Podemos separar Y de s dois fatores: com
+s no numerador e sem s no numerador.
+
+16
+00:01:10.310 --> 00:01:14.789
+Vamos colocar s sobre
+a evidência no primeiro termo e
+
+17
+00:01:14.789 --> 00:01:19.100
+cancelar o a no numerador e no
+denominador no segundo termo.
+
+18
+00:01:19.100 --> 00:01:24.665
+Temos então: Y 1 de s é igual a s sobre
+
+19
+00:01:24.665 --> 00:01:29.768
+a vezes 1 sobre s vezes ômega n ao
+quadrado sobre s ao quadrado mais
+
+20
+00:01:29.768 --> 00:01:34.557
+2 ksi ômega n s mais ômega n ao quadrado
+mais 1 sobre s vezes ômega n ao
+
+21
+00:01:34.557 --> 00:01:39.920
+quadrado sobre s ao quadrado mais 2 ksi
+ômega n s mais ômega n ao quadrado.
+
+22
+00:01:39.920 --> 00:01:46.362
+Note que temos dois termos ambos
+com Y de s e podemos escrever
+
+23
+00:01:46.362 --> 00:01:52.070
+Y de s como: Y de s é igual a s
+sobre a Y de s mais Y de s.
+
+24
+00:01:52.070 --> 00:01:56.360
+E lembrando que a Transformada de
+Laplace é linear e lembrando também da
+
+25
+00:01:56.360 --> 00:02:01.136
+propriedade da transformada da derivada,
+podemos escrever Y
+
+26
+00:02:01.136 --> 00:02:05.812
+de t é igual a 1 sobre a Y
+ponto de t mais Y de t,
+
+27
+00:02:05.812 --> 00:02:11.460
+onde Y de t é a resposta ao degrau do
+sistema de segunda ordem sem zeros.
+
+28
+00:02:11.460 --> 00:02:16.189
+Ou seja, a resposta ao degrau do
+sistema de segunda ordem com o zero é
+
+29
+00:02:16.189 --> 00:02:20.650
+a resposta do sistema de segunda
+ordem sem o zero mais a sua derivada
+
+30
+00:02:20.650 --> 00:02:23.050
+dividido por menos o valor do zero.
+
+31
+00:02:23.050 --> 00:02:27.547
+Isso deixa a resposta mais
+rápida e aumenta o overshoot,
+
+32
+00:02:27.547 --> 00:02:32.142
+e é fácil observar que quanto maior
+o valor de a menor a contribuição
+
+33
+00:02:32.142 --> 00:02:34.870
+da derivada na saída do sistema com zero.
+
+34
+00:02:34.870 --> 00:02:41.100
+Execute o MatLab,
+New Simulink Model Contrulita,
+
+35
+00:02:41.100 --> 00:02:46.100
+edite a função de
+transferência para 1 e 1 1 1.
+
+36
+00:02:46.100 --> 00:02:52.503
+Apague o Zero-Pole e faça uma cópia da
+função de transferência para o lugar dele,
+
+37
+00:02:52.503 --> 00:02:58.750
+altere o numerador de uma das funções de
+transferência para 1 1 e rode a simulação.
+
+38
+00:02:58.750 --> 00:03:05.570
+Altere agora para 0.1 vezes 1
+10 e rode a simulação de novo.
+
+39
+00:03:05.570 --> 00:03:12.059
+Do mesmo modo que o polo, se o zero
+estiver suficientemente afastado,
+
+40
+00:03:12.059 --> 00:03:15.430
+isto é, se ele estiver bem à
+esquerda no semiplano da esquerda,
+
+41
+00:03:15.430 --> 00:03:19.860
+digamos 5 vezes mais afastado da origem
+do que os polos de segunda ordem,
+
+42
+00:03:19.860 --> 00:03:24.095
+podemos desprezar o seu efeito e
+considerar que a resposta do sistema com
+
+43
+00:03:24.095 --> 00:03:27.900
+o zero pode ser aproximada pela
+resposta do sistema sem zeros.
+
+44
+00:03:27.900 --> 00:03:32.809
+Altere o numerador agora
+para menos 0.5 vezes
+
+45
+00:03:32.809 --> 00:03:36.550
+1 menos 2 e rode a simulação de novo.
+
+46
+00:03:36.550 --> 00:03:40.105
+Notou algo de interessante no gráfico?
+
+47
+00:03:40.105 --> 00:03:44.920
+A saída vai primeiro para a direção oposta
+antes de tender para o valor final.
+
+48
+00:03:44.920 --> 00:03:49.455
+Esse fenômeno é chamado de
+undershoot e aparece quando temos
+
+49
+00:03:49.455 --> 00:03:51.690
+zero no semiplano da direita.
+
+50
+00:03:51.690 --> 00:03:55.544
+Nesse caso a derivada
+da resposta ao degrau
+
+51
+00:03:55.544 --> 00:04:00.260
+está sendo subtraída e não somada
+e por isso temos o undershoot.
+
+52
+00:04:00.260 --> 00:04:04.544
+Mas se o zero estiver bem
+afastado no semiplano da direita,
+
+53
+00:04:04.544 --> 00:04:09.268
+ele não será perceptível e também podemos
+aproximar a resposta do sistema com o zero
+
+54
+00:04:09.268 --> 00:04:12.986
+no semiplano da direita pela
+resposta de sistema sem zeros.
+
+55
+00:04:12.986 --> 00:04:17.446
+Caso a nossa função de transferência
+tenha terceiro polo zero,
+
+56
+00:04:17.446 --> 00:04:22.190
+o elemento mais próximo da origem
+influencia mais na resposta ao degrau.
+
+57
+00:04:22.190 --> 00:04:27.492
+E se o polo e zero adicionais
+estiverem próximos entre si, podemos
+
+58
+00:04:27.492 --> 00:04:31.900
+desprezar o efeito de ambos mesmo que eles
+não estejam muito afastados da origem.
+
+59
+00:04:31.900 --> 00:04:36.845
+Lembre-se: polo deixa o sistema
+mais lento e mais amortecido,
+
+60
+00:04:36.845 --> 00:04:41.790
+enquanto que zero deixa o sistema
+mais rápido e aumenta o overshoot.
+
+61
+00:04:41.790 --> 00:04:47.850
+E se o polo estiver no semiplano da
+direita, teremos sistema instável.
+
+62
+00:04:47.850 --> 00:04:50.793
+Se o zero estiver no semiplano da direita,
+
+63
+00:04:50.793 --> 00:04:54.240
+podemos ter undershoot
+na resposta ao degrau.
+
+64
+00:04:54.240 --> 00:04:59.860
+Vamos ver o efeito de par de polo e zero
+na resposta de sistema de segunda ordem.
+
+65
+00:04:59.860 --> 00:05:06.305
+Vamos simular o sistema: G 1 de s é igual
+a b sobre a vezes ômega n ao quadrado
+
+66
+00:05:06.305 --> 00:05:12.750
+s mais a sobre s mais b s ao quadrado mais
+2 ksi ômega n s mais ômega n ao quadrado.
+
+67
+00:05:12.750 --> 00:05:17.180
+E vou aproveitar para mostrar duas
+coisas interessantes no Simulink.
+
+68
+00:05:17.180 --> 00:05:22.090
+Primeiro, você talvez tenha percebido
+que a simulação não está muito boa,
+
+69
+00:05:22.090 --> 00:05:24.170
+a saída tem mudanças abruptas.
+
+70
+00:05:24.170 --> 00:05:28.400
+O Simulink faz alguns ajustes
+automáticos da simulação,
+
+71
+00:05:28.400 --> 00:05:31.430
+mas eles nem sempre funcionam muito bem.
+
+72
+00:05:31.430 --> 00:05:35.780
+isso porque o Simulink tenta achar
+uma solução de compromisso entre
+
+73
+00:05:35.780 --> 00:05:40.130
+a qualidade da simulação e o tempo que
+a simulação demora para ser executada.
+
+74
+00:05:40.130 --> 00:05:45.093
+No momento estamos mais interessados
+na qualidade do que na velocidade,
+
+75
+00:05:45.093 --> 00:05:46.940
+então vamos melhorá-la.
+
+76
+00:05:46.940 --> 00:05:52.233
+Primeiro dê zoom na resposta que acabamos
+de obter, clique na lupa no meno do
+
+77
+00:05:52.233 --> 00:05:58.350
+Scope e clique e arraste retângulo torno
+do undershoot ou do overshoot, tanto faz.
+
+78
+00:05:58.350 --> 00:06:02.748
+Pode fazer isso mais de uma vez se for
+necessário.
+
+79
+00:06:02.748 --> 00:06:06.389
+Você vai notar que o gráfico
+da saída não é muito suave,
+
+80
+00:06:06.389 --> 00:06:08.630
+ele tem várias mudanças abruptas.
+
+81
+00:06:08.630 --> 00:06:13.080
+Feche o Scope e volte
+para a janela do modelo.
+
+82
+00:06:13.080 --> 00:06:17.530
+No menu Simulation escolha:
+Model Configuration Parameters.
+
+83
+00:06:17.530 --> 00:06:22.232
+Se você quiser simular o modelo
+por mais ou menos tempo,
+
+84
+00:06:22.232 --> 00:06:25.840
+você pode alterar o 10 do
+stop time para outro valor.
+
+85
+00:06:25.840 --> 00:06:27.947
+Por enquanto, 10 está bom.
+
+86
+00:06:27.947 --> 00:06:31.999
+Clique em: Additional Options
+para ver mais parâmetros.
+
+87
+00:06:31.999 --> 00:06:35.395
+Só vamos mudar deles, o Max step size.
+
+88
+00:06:35.395 --> 00:06:40.120
+No lugar de auto,
+de automático, digite 0.01,
+
+89
+00:06:40.120 --> 00:06:45.750
+clique Ok, rode de novo a simulação
+e veja as saídas no Scope.
+
+90
+00:06:45.750 --> 00:06:48.940
+Você verá que as curvas
+estão bem mais suaves.
+
+91
+00:06:48.940 --> 00:06:53.960
+Para ver as mudanças bruscas,
+você terá que dar zoom muitas vezes.
+
+92
+00:06:53.960 --> 00:06:56.579
+Para voltar ao nível de zoom normal,
+
+93
+00:06:56.579 --> 00:07:00.890
+clique com o botão direito e
+escolha Reset to original view.
+
+94
+00:07:00.890 --> 00:07:01.694
+Muito bem!
+
+95
+00:07:01.694 --> 00:07:06.465
+Agora, sempre que a simulação não
+parecer muito boa, você já sabe
+
+96
+00:07:06.465 --> 00:07:11.469
+que pode diminuir o Max step size para
+ter uma simulação de melhor qualidade.
+
+97
+00:07:11.469 --> 00:07:16.011
+Mas tome cuidado, a não ser que você tenha
+muito poder de processamento, diminuir
+
+98
+00:07:16.011 --> 00:07:21.550
+demais esse valor pode fazer a simulação
+demorar muito para ser completada.
+
+99
+00:07:21.550 --> 00:07:24.733
+E a segunda coisa interessante?
+
+100
+00:07:24.733 --> 00:07:30.200
+Vou mostrar que você pode usar variáveis
+e funções dentro dos blocos do Simulink.
+
+101
+00:07:30.200 --> 00:07:35.680
+Para facilitar a nossa vida vamos já dar
+valores numéricos para ksi e ômega n.
+
+102
+00:07:35.680 --> 00:07:40.910
+Mas se você preferir, pode usar
+ômega n e ksi como variáveis também.
+
+103
+00:07:40.910 --> 00:07:42.487
+Tente isso depois.
+
+104
+00:07:42.487 --> 00:07:47.813
+A função de transferência a ser
+simulada vai ser então G 1 de s é igual
+
+105
+00:07:47.813 --> 00:07:53.550
+a b sobre a vezes s mais a sobre s mais
+b vezes s ao quadrado mais s mais 1.
+
+106
+00:07:53.550 --> 00:07:56.885
+Vamos começar com a igual
+a 3 e b igual a 5.
+
+107
+00:07:56.885 --> 00:08:05.070
+Na linha de comando do Matlab, digite
+a igual a 3 enter, b igual a 5 enter.
+
+108
+00:08:05.070 --> 00:08:11.160
+Podemos continuar usando o mesmo modelo
+Simulink ou você pode criar novo modelo.
+
+109
+00:08:11.160 --> 00:08:13.493
+Eu vou usar o mesmo modelo.
+
+110
+00:08:13.493 --> 00:08:18.382
+Já temos G de s e precisamos
+modificar G 1 de s e vamos fazer isso
+
+111
+00:08:18.382 --> 00:08:23.350
+usando as variáveis a e b que acabamos de
+definir na linha de comando do Matlab.
+
+112
+00:08:23.350 --> 00:08:28.998
+O numerador da função de
+transferência será b sobre a vezes
+
+113
+00:08:28.998 --> 00:08:35.010
+1 a e para o denominador, vamos usar
+uma função do Matlab, a função conv.
+
+114
+00:08:35.010 --> 00:08:38.182
+A função conv, abreviatura de convolução,
+
+115
+00:08:38.182 --> 00:08:42.017
+calcula o produto de dois polinômios,
+polinômios.
+
+116
+00:08:42.017 --> 00:08:46.870
+No nosso caso os polinômios s mais
+b e s ao quadrado mais s mais 1.
+
+117
+00:08:46.870 --> 00:08:51.415
+Mais uma dica: se você quiser
+saber mais sobre uma função ou não
+
+118
+00:08:51.415 --> 00:08:54.348
+lembrar como uma função funciona,
+
+119
+00:08:54.348 --> 00:08:59.653
+basta digitar help nome da função
+na linha de comando e teclar enter.
+
+120
+00:08:59.653 --> 00:09:06.090
+Vamos fazer isso com a função conv:
+Digite help espaço conv enter.
+
+121
+00:09:06.090 --> 00:09:09.730
+Se quiser ter mais
+informações sobre a função,
+
+122
+00:09:09.730 --> 00:09:13.280
+basta clicar no link reference page for
+conv.
+
+123
+00:09:13.280 --> 00:09:14.725
+Na maioria das vezes,
+
+124
+00:09:14.725 --> 00:09:19.214
+você vai ver exemplos diretamente
+no help ou na página de referência.
+
+125
+00:09:19.214 --> 00:09:21.280
+Vamos ver como o conv funciona.
+
+126
+00:09:21.280 --> 00:09:26.455
+Digite conv abre parênteses abre
+colchetes 1 espaço b fecha colchetes
+
+127
+00:09:26.455 --> 00:09:32.225
+vírgula abre colchetes 1 espaço 1 espaço
+1 fecha colchetes fecha parênteses enter.
+
+128
+00:09:32.225 --> 00:09:35.541
+A função conv multiplica
+o polinômio s mais b,
+
+129
+00:09:35.541 --> 00:09:40.472
+que nesse caso é s mais 5 pelo
+polinômio s ao quadrado mais s mais 1.
+
+130
+00:09:40.472 --> 00:09:45.304
+E o resultado é s ao cubo mais
+6 s ao quadrado mais 6s mais 5,
+
+131
+00:09:45.304 --> 00:09:48.830
+ou seja, coeficientes 1, 6, 6, 5.
+
+132
+00:09:48.830 --> 00:09:51.634
+E esse é o denominador de G1 de s.
+
+133
+00:09:51.634 --> 00:09:58.060
+Poderíamos escrever 1 6 6 5 no bloco
+Simulink, mas vamos usar o conv.
+
+134
+00:09:58.060 --> 00:10:01.588
+Mais uma dica de Matlab:
+teclando seta para cima,
+
+135
+00:10:01.588 --> 00:10:05.620
+os últimos comandos usados
+aparecem na linha de comando.
+
+136
+00:10:05.620 --> 00:10:12.070
+Eu vou copiar o conv 1b 1 1 1
+e colar no bloco do Simulink.
+
+137
+00:10:12.070 --> 00:10:17.624
+Nesse caso, não adianta aumentar o bloco
+para ver o numerador e o denominador,
+
+138
+00:10:17.624 --> 00:10:20.800
+o Simulink não mostra o
+resultado das funções.
+
+139
+00:10:20.800 --> 00:10:25.045
+Se fossem só variáveis sem o uso de
+funções incluindo a multiplicação,
+
+140
+00:10:25.045 --> 00:10:29.290
+ele mostraria o numerador e o
+denominador da nossa função.
+
+141
+00:10:29.290 --> 00:10:34.401
+Mas tudo bem, se você digitou tudo certo
+a função de transferência está correta.
+
+142
+00:10:34.401 --> 00:10:38.471
+Se quiser conferir, pode copiar o
+numerador e o denominador e criar
+
+143
+00:10:38.471 --> 00:10:42.790
+uma função de transferência com a função
+T f na linha de comando do MatLab.
+
+144
+00:10:42.790 --> 00:10:47.010
+Agora rode a simulação e vamos
+dar uma olhada na saída.
+
+145
+00:10:47.010 --> 00:10:52.689
+A primeira entrada do Scope é
+mostrada amarelo e a segunda
+
+146
+00:10:52.689 --> 00:10:57.715
+azul e vemos que a resposta ao degrau do
+sistema de terceira ordem com o zero,
+
+147
+00:10:57.715 --> 00:11:02.300
+é mais rápida e menos amortecida do que
+a do sistema de segunda ordem puro,
+
+148
+00:11:02.300 --> 00:11:06.270
+isso porque o zero está mais
+próximo da origem que o polo.
+
+149
+00:11:06.270 --> 00:11:11.193
+Vamos inverter as posições do polo e
+do zero e ver o que acontece e podemos
+
+150
+00:11:11.193 --> 00:11:15.896
+fazer isso facilmente apenas
+digitando: a igual a 5 enter,
+
+151
+00:11:15.896 --> 00:11:21.968
+b igual a 3 enter, na linha de comando do
+MatlLab e rodando a simulação de novo.
+
+152
+00:11:21.968 --> 00:11:25.330
+O Simulink vai usar os
+novos valores de a e b.
+
+153
+00:11:25.330 --> 00:11:29.365
+E agora vemos uma resposta
+mais lenta e mais amortecida,
+
+154
+00:11:29.365 --> 00:11:33.400
+uma vez que a influência do terceiro
+polo é maior que a influência do zero.
+
+155
+00:11:33.400 --> 00:11:34.612
+Mais uma dica?
+
+156
+00:11:34.612 --> 00:11:39.850
+Cansado de ficar clicando no Scope
+depois de rodar uma simulação?
+
+157
+00:11:39.850 --> 00:11:42.265
+Os seus problemas acabaram!
+
+158
+00:11:42.265 --> 00:11:47.970
+Na janela do Scope, clique no menu
+File e Open at start of simulation.
+
+159
+00:11:47.970 --> 00:11:52.419
+E de agora diante, sempre que você
+rodar a simulação a janela do Scope
+
+160
+00:11:52.419 --> 00:11:57.510
+aparecerá primeiro plano,
+altere os valores de a e b e divirta-se.
+
+161
+00:11:57.510 --> 00:12:02.271
+Agora você já é capaz de explicar
+a aproximação da resposta de sistemas
+
+162
+00:12:02.271 --> 00:12:05.510
+com zeros pela resposta
+de sistemas sem zeros.
+
+163
+00:12:05.510 --> 00:12:10.283
+Você também já sabe que o efeito de polo
+adicional é deixar a resposta do sistema
+
+164
+00:12:10.283 --> 00:12:14.369
+mais lenta e mais amortecida e que
+o efeito de zero adicional é deixar
+
+165
+00:12:14.369 --> 00:12:18.989
+a resposta mais rápida e menos
+amortecida e sabe também que o efeito de
+
+166
+00:12:18.989 --> 00:12:22.150
+pode ser minimizado pela
+presença do outro e que,
+
+167
+00:12:22.150 --> 00:12:25.970
+quem estiver mais próximo da origem,
+tem efeito maior na resposta.
+
+168
+00:12:25.970 --> 00:12:30.943
+No próximo vídeo, faremos uma breve
+revisão do controle proporcional e da
+
+169
+00:12:30.943 --> 00:12:33.980
+obtenção da função de
+transferência malha fechada.

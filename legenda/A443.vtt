@@ -1,0 +1,614 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.980
+[MÚSICA]
+
+2
+00:00:06.980 --> 00:00:10.520
+[MÚSICA] Olá a todos!
+
+3
+00:00:10.520 --> 00:00:14.630
+Esse é o hands on de refatoração.
+
+4
+00:00:14.630 --> 00:00:16.458
+Tá?
+Nesse hands on, né,
+
+5
+00:00:16.458 --> 00:00:21.619
+a gente não vai ver uma refatoraçãozinha
+focada, né, a gente vai pegar
+
+6
+00:00:21.619 --> 00:00:27.591
+exemplo maior e mostrar como que funciona
+a refatoração ao longo de vários passos,
+
+7
+00:00:27.591 --> 00:00:33.250
+né, como que a gente vai trabalhando
+essas mudanças dentro do nosso código.
+
+8
+00:00:33.250 --> 00:00:36.997
+Tá?
+Então, nessa primeira parte do vídeo eu
+
+9
+00:00:36.997 --> 00:00:42.267
+vou mostrar pra vocês pouquinho
+do que que a gente vai mexer, tá?
+
+10
+00:00:42.267 --> 00:00:46.414
+Esse exemplo que eu peguei aqui pra
+refatorar pra vocês é o exemplo do
+
+11
+00:00:46.414 --> 00:00:50.855
+primeiro capítulo do livro do
+Martin Fowler de refatoração.
+
+12
+00:00:50.855 --> 00:00:53.940
+Tá?
+É exemplo de uma videolocadora.
+
+13
+00:00:53.940 --> 00:00:54.974
+Tá?
+Então,
+
+14
+00:00:54.974 --> 00:01:00.332
+a gente tem aqui uma classe "Customer",
+tá, ele tem aqui o nome,
+
+15
+00:01:00.332 --> 00:01:06.592
+tem aqui as locações dele,
+tá e ele tem esse método aqui,
+
+16
+00:01:06.592 --> 00:01:10.470
+"statement", né, vocês podem ver
+aqui que não é método pequeno.
+
+17
+00:01:10.470 --> 00:01:11.000
+Tá?
+
+18
+00:01:11.000 --> 00:01:14.088
+Não é método bonito, tá?
+
+19
+00:01:14.088 --> 00:01:19.235
+É método bem feio,
+mas eu tenho certeza que você já viu
+
+20
+00:01:19.235 --> 00:01:24.820
+piores aí códigos que você já mexeu,
+códigos que você trabalhou.
+
+21
+00:01:24.820 --> 00:01:28.318
+Tá?
+Então, a ideia desse código é que ele gera
+
+22
+00:01:28.318 --> 00:01:32.820
+uma string, né,
+que tá vendo aqui é esse "result" aqui,
+
+23
+00:01:32.820 --> 00:01:38.746
+onde ele vai falando: "Olha, eu tenho aqui
+a ficha de locações do Fulano de Tal",
+
+24
+00:01:38.746 --> 00:01:43.732
+né, e aí ele vai adicionando quais
+os filmes tem nessa ficha, né,
+
+25
+00:01:43.732 --> 00:01:48.682
+então, ó, note que ele vai adicionando
+
+26
+00:01:48.682 --> 00:01:53.864
+aqui os filmes e aí no final
+ele diz aqui quanto que é,
+
+27
+00:01:53.864 --> 00:02:00.220
+quanto que já gastou, né,
+e quantos pontos de frequência,
+
+28
+00:02:00.220 --> 00:02:04.990
+né, é aquele, aquele,
+
+29
+00:02:04.990 --> 00:02:10.530
+aquele cliente, ali, da locadora possui.
+
+30
+00:02:10.530 --> 00:02:14.127
+Tá?
+Então a gente vai entender pouquinho
+
+31
+00:02:14.127 --> 00:02:18.907
+a lógica disso daqui, né e a gente,
+a ideia é o seguinte, né,
+
+32
+00:02:18.907 --> 00:02:23.988
+o chefe chegou e falou assim: "Olha,
+eu quero esse método 'statement',
+
+33
+00:02:23.988 --> 00:02:26.976
+só que eu quero ele como...
+
+34
+00:02:26.976 --> 00:02:31.460
+Eu quero que ele dê o retorno HTML".
+
+35
+00:02:31.460 --> 00:02:34.215
+Tá?
+E aí você fala assim: "OK, e agora?
+
+36
+00:02:34.215 --> 00:02:38.245
+Como é que eu vou fazer?" Porque
+eu não consigo reaproveitar
+
+37
+00:02:38.245 --> 00:02:40.585
+absolutamente nada desse código.
+
+38
+00:02:40.585 --> 00:02:46.085
+Se a gente olhar aqui ele faz o cálculo,
+né, ele tem a lógica aqui dos dias,
+
+39
+00:02:46.085 --> 00:02:50.947
+de quanto custa cada locação e
+quantos pontos de frequência ele
+
+40
+00:02:50.947 --> 00:02:54.817
+ganha cada caso e a somatória disso e tal.
+
+41
+00:02:54.817 --> 00:03:01.062
+E nada disso ele vai
+conseguir aproveitar nesse...
+
+42
+00:03:01.062 --> 00:03:07.604
+pra poder fazer essa parte
+aí de imprimir isso HTML.
+
+43
+00:03:07.604 --> 00:03:11.190
+Tá?
+Então a ideia é que a gente refatore esse
+
+44
+00:03:11.190 --> 00:03:15.865
+código aqui, né e no final a gente
+analise aí como é que fica, né,
+
+45
+00:03:15.865 --> 00:03:19.288
+se ele realmente vai
+conseguir fazer isso ou não.
+
+46
+00:03:19.288 --> 00:03:21.294
+Tá?
+Então vamos dar uma olhada aqui,
+
+47
+00:03:21.294 --> 00:03:23.435
+a gente tem aqui a classe "Customer",
+
+48
+00:03:23.435 --> 00:03:28.020
+né, ele tem aqui vetor aqui
+onde ele tem as locações.
+
+49
+00:03:28.020 --> 00:03:33.877
+Temos essa classe "Rental", que é uma
+classe, basicamente, de dados, né, ele
+
+50
+00:03:33.877 --> 00:03:40.477
+tem uma instância do filme e a quantidade
+de dias que aquele filme foi alugado.
+
+51
+00:03:40.477 --> 00:03:44.605
+E temos a classe "Movie", né,
+
+52
+00:03:44.605 --> 00:03:49.735
+que ele tem aqui o título e o
+que ele chama de "priceCode".
+
+53
+00:03:49.735 --> 00:03:54.050
+Esse "priceCode" ele é basicamente
+o tipo da locação, né?
+
+54
+00:03:54.050 --> 00:03:58.102
+Então se ele for, sei lá, o que aqui
+no Brasil a gente chama de catálogo,
+
+55
+00:03:58.102 --> 00:04:03.100
+né, seria esse "REGULAR",
+é uma categoria, né, o "NEW_RELEASE",
+
+56
+00:04:03.100 --> 00:04:08.992
+que é o lançamento, né, seria uma outra
+categoria, e a gente ainda tem aqui o
+
+57
+00:04:08.992 --> 00:04:14.055
+filme infantil,
+que seria ainda uma terceira categoria.
+
+58
+00:04:14.055 --> 00:04:19.146
+Pra gente entender pouquinho dessa lógica
+que está dentro desse método "statement",
+
+59
+00:04:19.146 --> 00:04:25.200
+a gente vai recorrer aqui aos testes
+que eu criei pra essa classe, tá?
+
+60
+00:04:25.200 --> 00:04:31.790
+´ Então, eu vou rodar aqui pra mostrar pra
+vocês que os testes estão funcionando.
+
+61
+00:04:31.790 --> 00:04:38.125
+Então, rodei aqui, os oito testes
+tão funcionando e eu vou partir,
+
+62
+00:04:38.125 --> 00:04:42.500
+né, de cada aqui pra ir
+falando pouquinho pra vocês.
+
+63
+00:04:42.500 --> 00:04:47.115
+Tá?
+Então, eu tenho aqui o meu "Customer"
+
+64
+00:04:47.115 --> 00:04:52.575
+John, né, eu crio aqui,
+né, no método "setUp",
+
+65
+00:04:52.575 --> 00:04:58.014
+no caso aqui como esse exemplo aqui
+é pouco antigo ele tá usando ainda
+
+66
+00:04:58.014 --> 00:05:03.450
+o JUnit 3, né, onde tem que estender
+"TestCase" mas não preocupe com isso,
+
+67
+00:05:03.450 --> 00:05:06.318
+que a gente não vai mexer
+muito nos testes, tá?
+
+68
+00:05:06.318 --> 00:05:08.824
+Então a gente tem aqui "assertContains",
+
+69
+00:05:08.824 --> 00:05:12.299
+e você fala assim: "Eu nunca ouvir
+falar nesse 'assertContains'!".
+
+70
+00:05:12.299 --> 00:05:16.026
+Também nem pode,
+porque tá na própria classe, né.
+
+71
+00:05:16.026 --> 00:05:20.947
+Então ele vai,
+nesse "assertContains", ele verifica,
+
+72
+00:05:20.947 --> 00:05:26.090
+né, se aquele resultado,
+
+73
+00:05:26.090 --> 00:05:29.410
+né, se ele tem o conteúdo.
+
+74
+00:05:29.410 --> 00:05:29.924
+Tá?
+
+75
+00:05:29.924 --> 00:05:36.579
+Então ele procura se existe aquele
+conteúdo dentro da string, né?
+
+76
+00:05:36.579 --> 00:05:42.470
+Como aqui retorna uma "stringona", né, é
+o jeito que a gente tem de verificar, tá?
+
+77
+00:05:42.470 --> 00:05:44.965
+Então, não falei que o código era bom!
+
+78
+00:05:44.965 --> 00:05:47.610
+Mas a gente tem que se
+virar pra testar ele.
+
+79
+00:05:47.610 --> 00:05:50.611
+Então, a gente tem aqui:
+o "Indiana Jones",
+
+80
+00:05:50.611 --> 00:05:54.207
+o cara alugou por dia, então ele custou 2.
+
+81
+00:05:54.207 --> 00:05:57.970
+Daí ele ganhou 1 ponto de frequência.
+
+82
+00:05:57.970 --> 00:06:04.178
+O "Indiana Jones" alugado por 3 dias,
+ele custa 3,50.
+
+83
+00:06:04.178 --> 00:06:06.994
+Que que significa isso, né?
+
+84
+00:06:06.994 --> 00:06:08.915
+A partir de 2...
+
+85
+00:06:08.915 --> 00:06:09.697
+O catálogo,
+
+86
+00:06:09.697 --> 00:06:14.671
+ele pode ficar 2 dias com catálogo e
+a cada dia adicional ele paga mais 1,50.
+
+87
+00:06:14.671 --> 00:06:16.913
+Por isso que aqui é 3,50.
+
+88
+00:06:16.913 --> 00:06:22.791
+Tá, eu vou usar aqui o teste pra
+explicar as regras de negócio pra vocês.
+
+89
+00:06:22.791 --> 00:06:26.961
+Você pode ver que aqui, né,
+ele tem essa mesma lógica, né,
+
+90
+00:06:26.961 --> 00:06:31.810
+só que eu acho que aqui no teste é
+muito mais fácil de a gente visualizar.
+
+91
+00:06:31.810 --> 00:06:34.435
+Bom, vamos aqui pro infantil, né.
+
+92
+00:06:34.435 --> 00:06:40.210
+Então, "Procurando Nemo", né,
+alugou 1 dia, custou 1,50.
+
+93
+00:06:40.210 --> 00:06:46.443
+"Procurando Nemo", alugou 5 dias, 4,50.
+
+94
+00:06:46.443 --> 00:06:48.920
+Que que é isso?
+
+95
+00:06:48.920 --> 00:06:56.637
+É 1,50 até 3 dias e depois mais
+1,50 pra cada dia adicional.
+
+96
+00:06:56.637 --> 00:07:01.596
+Tá?
+E aí, da mesma forma que o catálogo,
+
+97
+00:07:01.596 --> 00:07:04.157
+né, que ganha 1 ponto de frequência,
+
+98
+00:07:04.157 --> 00:07:09.849
+ele também vai ganhar 1 ponto de
+frequência aqui toda vez que ele alugar
+
+99
+00:07:09.849 --> 00:07:14.638
+filme infantil independente
+da quantidade de dias.
+
+100
+00:07:14.638 --> 00:07:18.690
+Tá?
+E aí o cara alugou aqui "Vingadores 2",
+
+101
+00:07:18.690 --> 00:07:26.093
+por 1 dia, custou 3 e ele alugou
+"Vingadores 2" por 3 dias,
+
+102
+00:07:26.093 --> 00:07:30.277
+custou 9, né, então, o lançamento, né,
+
+103
+00:07:30.277 --> 00:07:35.393
+ele custa 3 por dia que
+a pessoa fica com o filme.
+
+104
+00:07:35.393 --> 00:07:40.400
+E aí, só que quando ele fica
+mais de 1 dia com o lançamento,
+
+105
+00:07:40.400 --> 00:07:42.951
+ele ganha 1 ponto de frequência a mais.
+
+106
+00:07:42.951 --> 00:07:46.993
+Então, no caso aqui, ó,
+quando ele ficou 1 dia com "Vingadores",
+
+107
+00:07:46.993 --> 00:07:51.901
+ele ganhou 1 ponto de frequência e quando
+ele ficou 3 dias com "Vingadores",
+
+108
+00:07:51.901 --> 00:07:54.350
+ele ganhou 2 pontos de frequência.
+
+109
+00:07:54.350 --> 00:07:59.352
+A gente tem aqui teste,
+que ele chama aqui de "manyRents", né,
+
+110
+00:07:59.352 --> 00:08:05.096
+que ele bota ali vários filmes,
+com quantidades variadas de dias,
+
+111
+00:08:05.096 --> 00:08:07.799
+né, eu fiz aqui as contas aqui,
+
+112
+00:08:07.799 --> 00:08:12.091
+isso aqui daria 8 pontos de frequência,
+total de 25, né?
+
+113
+00:08:12.091 --> 00:08:17.740
+Então isso aqui é importante também ainda
+pra gente não ter testes só com tipo, né?
+
+114
+00:08:17.740 --> 00:08:22.596
+A gente tem aqui teste que
+combina pouquinho de tudo aí
+
+115
+00:08:22.596 --> 00:08:27.380
+pra ver se algum caso
+isso aqui é quebrado.
+
+116
+00:08:27.380 --> 00:08:29.675
+Tá?
+A gente simplificou aqui o teste, né,
+
+117
+00:08:29.675 --> 00:08:33.590
+até aproveitando pra falar pouquinho
+pra vocês que a gente pode criar
+
+118
+00:08:33.590 --> 00:08:37.064
+métodos auxiliares dentro
+das classes de teste.
+
+119
+00:08:37.064 --> 00:08:41.948
+No caso aqui, ó, eu criei esse
+"rentMovie", né, que eu passo o título,
+
+120
+00:08:41.948 --> 00:08:46.980
+o tipo e a quantidade de dias, ele vem,
+cria uma nova classe do tipo "Movie",
+
+121
+00:08:46.980 --> 00:08:52.769
+que a gente viu aqui que tem o título
+e o "priceCode" e cria "Rental"
+
+122
+00:08:52.769 --> 00:08:57.611
+que tem o "Movie" e a quantidade de dias,
+que a gente viu
+
+123
+00:08:57.611 --> 00:09:02.650
+também aqui a classe, e depois ele
+chama no cliente ali o "addRental".
+
+124
+00:09:02.650 --> 00:09:03.324
+Certo?
+
+125
+00:09:03.324 --> 00:09:08.043
+Então, com isso a gente viu
+mais ou menos como que funciona
+
+126
+00:09:08.043 --> 00:09:12.900
+esse código aqui e,
+agora que estamos mais familiares com ele,
+
+127
+00:09:12.900 --> 00:09:17.778
+no próximo vídeo a gente começa,
+efetivamente, a refatorá-lo.
+
+128
+00:09:17.778 --> 00:09:19.844
+Não perca, espero por você!
+
+129
+00:09:19.844 --> 00:09:21.090
+Muito obrigado.
+
+130
+00:09:21.090 --> 00:09:26.380
+[MÚSICA]

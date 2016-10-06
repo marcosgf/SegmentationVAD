@@ -1,0 +1,545 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.623
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.623 --> 00:00:12.009
+Olá a todos, eu sou Eduardo Guerra.
+
+3
+00:00:12.009 --> 00:00:14.640
+Estamos mais hands on.
+
+4
+00:00:14.640 --> 00:00:20.102
+Desse vez a gente vai falar aqui
+sobre o encapsulamento de arrays né,
+
+5
+00:00:20.102 --> 00:00:23.957
+a gente vai ver aí como que é,
+às vezes, a gente retornar
+
+6
+00:00:23.957 --> 00:00:28.050
+array que está dentro do nosso objeto
+também pode está bastante errado.
+
+7
+00:00:28.050 --> 00:00:28.698
+Tá!
+
+8
+00:00:28.698 --> 00:00:33.588
+Então, eu vou pegar aqui o
+mesmo exemplo que a gente
+
+9
+00:00:33.588 --> 00:00:36.160
+tinha visto anteriormente da classe pilha.
+
+10
+00:00:36.160 --> 00:00:41.910
+Né, que eu tenho aqui array
+de objetos e eu criei
+
+11
+00:00:41.910 --> 00:00:46.746
+aqui get e set para esse array, tá.
+
+12
+00:00:46.746 --> 00:00:50.811
+Imagina que eu não quero deixar
+alguém configurar o array.
+
+13
+00:00:50.811 --> 00:00:52.920
+Então, eu posso apagar até esse set.
+
+14
+00:00:52.920 --> 00:00:56.560
+Eu simplesmente vou deixar que
+alguém pegue essa informação.
+
+15
+00:00:56.560 --> 00:00:59.138
+Tá!
+Mas a gente vai ver que mesmo só deixando
+
+16
+00:00:59.138 --> 00:01:01.100
+pegar, isso pode ser perigoso.
+
+17
+00:01:01.100 --> 00:01:01.618
+Tá!
+
+18
+00:01:01.618 --> 00:01:07.986
+Então, vamos rodar novamente aqui só para
+a gente entender, eu tenho aqui a pilha.
+
+19
+00:01:07.986 --> 00:01:09.920
+Eu estou empilhando Eduardo, Maria e José.
+
+20
+00:01:09.920 --> 00:01:12.561
+Estou vendo o topo e o tamanho.
+
+21
+00:01:12.561 --> 00:01:13.272
+Certo?
+
+22
+00:01:13.272 --> 00:01:16.082
+Depois eu vou desempilhar, tá?
+
+23
+00:01:16.082 --> 00:01:19.340
+Vou até tirar aqui esses uppercases aqui.
+
+24
+00:01:19.340 --> 00:01:24.710
+[TECLANDO] Certo?
+
+25
+00:01:24.710 --> 00:01:29.420
+É, e imprimir aqui o tamanho.
+
+26
+00:01:29.420 --> 00:01:32.670
+Né, então vamos rodar,
+ver como é que a pilha funciona.
+
+27
+00:01:32.670 --> 00:01:33.238
+Certo?
+
+28
+00:01:33.238 --> 00:01:36.726
+Então, eu tenho aqui,
+o José e 3, tá certo?
+
+29
+00:01:36.726 --> 00:01:39.820
+Né!
+Quem está no topo da pilha e o tamanho 3.
+
+30
+00:01:39.820 --> 00:01:42.060
+Aqui, ele desempilhou o José,
+
+31
+00:01:42.060 --> 00:01:45.653
+ficou a Maria que era a seguinte
+e o tamanho da pilha foi 2.
+
+32
+00:01:45.653 --> 00:01:48.550
+A princípio, o comportamento está correto.
+
+33
+00:01:48.550 --> 00:01:49.160
+Tá?
+
+34
+00:01:49.160 --> 00:01:55.692
+Bom, eu vou pegar uma informação aqui, né?
+
+35
+00:01:55.692 --> 00:02:01.946
+Que seria o array de elementos.
+
+36
+00:02:01.946 --> 00:02:05.296
+Então, eu vou vir aqui e fazer p.
+
+37
+00:02:05.296 --> 00:02:07.460
+getElementos().
+
+38
+00:02:07.460 --> 00:02:12.090
+Bom, a princípio eu não estou
+mexendo mais na classe pilha, né.
+
+39
+00:02:12.090 --> 00:02:16.890
+Eu poderia vir aqui,
+pegar esse array de elementos, né.
+
+40
+00:02:16.890 --> 00:02:22.358
+E vou pegar, por exemplo,
+aqui a posição 2 desse array e vou setar
+
+41
+00:02:22.358 --> 00:02:27.040
+outro cara ali.
+
+42
+00:02:27.040 --> 00:02:28.314
+Certo?
+
+43
+00:02:28.314 --> 00:02:35.698
+A princípio, né, eu estou setando
+informações, mas não na classe pilha.
+
+44
+00:02:35.698 --> 00:02:37.960
+O que é que será que acontece aqui?
+
+45
+00:02:37.960 --> 00:02:38.677
+Vamos ver.
+
+46
+00:02:38.677 --> 00:02:40.110
+Eu vou rodar aqui.
+
+47
+00:02:40.110 --> 00:02:43.780
+Na hora que eu desempilhar ele
+vai desempilhar o outro, né.
+
+48
+00:02:43.780 --> 00:02:44.372
+Certo?
+
+49
+00:02:44.372 --> 00:02:48.798
+Se eu colocar, por exemplo,
+aqui na posição 1, né,
+
+50
+00:02:48.798 --> 00:02:54.463
+ele vai rodar vai desempilhar o José,
+mas na posição
+
+51
+00:02:54.463 --> 00:02:59.730
+ali da Maria ele colocou outro, né,
+e vai ficar como o topo aqui da pilha.
+
+52
+00:02:59.730 --> 00:03:03.097
+Né?
+A gente vê que quando ele retorna aquele
+
+53
+00:03:03.097 --> 00:03:07.406
+array, qualquer modificação
+nesse array vai ter uma
+
+54
+00:03:07.406 --> 00:03:11.943
+influência dentro da minha classe pilha.
+
+55
+00:03:11.943 --> 00:03:16.783
+Então, às vezes, a gente fala assim,
+encapsulamento a gente tem que
+
+56
+00:03:16.783 --> 00:03:20.680
+ter cuidado com aquilo a gente vai
+permitir que o cara modifique.
+
+57
+00:03:20.680 --> 00:03:23.416
+Né?
+Só que muitas vezes se a gente retornar,
+
+58
+00:03:23.416 --> 00:03:27.160
+por exemplo, array,
+ele consegue modificar esse array.
+
+59
+00:03:27.160 --> 00:03:27.993
+Tá certo?
+
+60
+00:03:27.993 --> 00:03:31.789
+E isso vai ter impacto
+dentro da nossa classe.
+
+61
+00:03:31.789 --> 00:03:34.110
+O que é que a gente pode fazer?
+
+62
+00:03:34.110 --> 00:03:36.491
+Tá?
+Nesse hands on eu vou mostrar aqui,
+
+63
+00:03:36.491 --> 00:03:41.106
+por exemplo, que a gente pode até permitir
+que ele recupere todo o array mas
+
+64
+00:03:41.106 --> 00:03:43.970
+a gente precisa fazer
+uma cópia desse array.
+
+65
+00:03:43.970 --> 00:03:44.845
+Certo?
+
+66
+00:03:44.845 --> 00:03:50.150
+Então, tem uma classe chamada arrays,
+certo?
+
+67
+00:03:50.150 --> 00:03:53.300
+Que ele tem aqui...
+
+68
+00:03:53.300 --> 00:03:58.700
+ele tem método chamado copyOf.
+
+69
+00:03:58.700 --> 00:03:59.660
+Certo?
+
+70
+00:03:59.660 --> 00:04:04.190
+Então, eu passo o meu array original.
+
+71
+00:04:04.190 --> 00:04:05.122
+Certo?
+
+72
+00:04:05.122 --> 00:04:10.320
+É, que no caso aqui vai ser os elementos,
+né.
+
+73
+00:04:10.320 --> 00:04:15.003
+Tá.
+Então, elementos e o novo tamanho que pode
+
+74
+00:04:15.003 --> 00:04:19.770
+ser o próprio topo ali,
+né, que tem o tamanho, né.
+
+75
+00:04:19.770 --> 00:04:24.180
+Vou até chamar aqui de tamanho.
+
+76
+00:04:24.180 --> 00:04:27.515
+Vou chamar aqui o método tamanho.
+
+77
+00:04:27.515 --> 00:04:28.320
+Certo?
+
+78
+00:04:28.320 --> 00:04:33.964
+Então, eu vou criar aqui array de objetos,
+né.
+
+79
+00:04:33.964 --> 00:04:37.680
+Vou chamar de paraRetorno
+
+80
+00:04:37.680 --> 00:04:42.562
+e ao invés de eu retornar
+diretamente o meu array
+
+81
+00:04:42.562 --> 00:04:46.814
+de elementos eu vou retornar esse
+array que está sendo uma cópia.
+
+82
+00:04:46.814 --> 00:04:51.013
+Note que nesse caso eu ainda estou
+ajustando o tamanho dele só para aquilo
+
+83
+00:04:51.013 --> 00:04:53.430
+que realmente tem dentro da pilha, né.
+
+84
+00:04:53.430 --> 00:04:55.467
+Certo?
+
+85
+00:04:55.467 --> 00:04:59.279
+Então, é,
+
+86
+00:04:59.279 --> 00:05:04.597
+eu vou imprimir aqui o [TECLANDO]
+
+87
+00:05:04.597 --> 00:05:09.290
+esse array elementos aqui só para a gente
+
+88
+00:05:09.290 --> 00:05:13.980
+ver o que é que ele está retornando, né.
+
+89
+00:05:13.980 --> 00:05:16.900
+E aí eu continuo setando ali o outro.
+
+90
+00:05:16.900 --> 00:05:19.830
+Né.
+Vamos ver o que acontece agora?
+
+91
+00:05:19.830 --> 00:05:25.775
+Bom, ele imprimiu aqui negócio esquisito,
+
+92
+00:05:25.775 --> 00:05:32.213
+deixa eu ver se eu der
+twist aqui se ele melhora.
+
+93
+00:05:32.213 --> 00:05:35.920
+Também não.
+
+94
+00:05:35.920 --> 00:05:38.701
+É!
+Bom, vamos imprimir aqui,
+
+95
+00:05:38.701 --> 00:05:43.030
+vamos ver pelo menos o
+tamanho aqui do array, né.
+
+96
+00:05:43.030 --> 00:05:44.759
+Certo?
+
+97
+00:05:44.759 --> 00:05:49.631
+Então, o tamanho do
+
+98
+00:05:49.631 --> 00:05:54.295
+array é 3 e mesmo que eu configure
+o outro eu estou configurando
+
+99
+00:05:54.295 --> 00:05:58.875
+esse outro numa cópia do
+meu array de elementos.
+
+100
+00:05:58.875 --> 00:05:59.400
+Tá.
+
+101
+00:05:59.400 --> 00:06:04.540
+Observa, por exemplo,
+que se eu vier aqui, né,
+
+102
+00:06:04.540 --> 00:06:10.461
+no final e colocar, né a pilha.
+
+103
+00:06:10.461 --> 00:06:18.520
+getElementos, é...
+
+104
+00:06:18.520 --> 00:06:20.558
+e ver o tamanho, né.
+
+105
+00:06:20.558 --> 00:06:26.262
+Ele vai ter que imprimir 2 porque
+é o tamanho da pilha atual, né.
+
+106
+00:06:26.262 --> 00:06:26.846
+Certo.
+
+107
+00:06:26.846 --> 00:06:29.520
+Então, ele retorna só os elementos.
+
+108
+00:06:29.520 --> 00:06:35.283
+Aquele elemento a mais ali o José,
+que ainda está no array aqui, certo.
+
+109
+00:06:35.283 --> 00:06:38.980
+Ele ainda está nesse array porque quando
+eu desempilho eu só diminuo o topo.
+
+110
+00:06:38.980 --> 00:06:41.974
+Ele não está sendo retornando
+junto com o array.
+
+111
+00:06:41.974 --> 00:06:47.701
+E aí, essa cópia que eu recebo eu posso
+modificar ela a vontade que isso não
+
+112
+00:06:47.701 --> 00:06:54.310
+vai estar influenciando
+dentro ali do meu array.
+
+113
+00:06:54.310 --> 00:06:54.968
+Tá certo?
+
+114
+00:06:54.968 --> 00:06:59.798
+Então, espero que com isso a gente tenha
+visto mais detalhe dessa questão do
+
+115
+00:06:59.798 --> 00:07:04.721
+encapsulamento, que é não só tomar cuidado
+com as informações que você permite
+
+116
+00:07:04.721 --> 00:07:09.666
+que a pessoa modifique, mas também,
+tomar cuidado com o que você retorna para
+
+117
+00:07:09.666 --> 00:07:14.425
+não ser uma coisa que possa ser
+modificada e quebrar, a princípio,
+
+118
+00:07:14.425 --> 00:07:16.850
+o funcionamento da sua classe.
+
+119
+00:07:16.850 --> 00:07:17.846
+Tá certo?
+
+120
+00:07:17.846 --> 00:07:19.508
+Muito obrigado.
+
+121
+00:07:19.508 --> 00:07:21.730
+Até o próximo hands on.
+
+122
+00:07:21.730 --> 00:07:26.610
+[MÚSICA]

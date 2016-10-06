@@ -1,0 +1,518 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.545
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.545 --> 00:00:12.605
+Esse é o curso de orientação
+a objetos com Java,
+
+3
+00:00:12.605 --> 00:00:17.680
+meu nome é Eduardo Guerra e o assunto
+da aula de hoje é tratamento de erro.
+
+4
+00:00:17.680 --> 00:00:22.325
+Eu vou mostrar para vocês como
+não fazer o tratamento de erro.
+
+5
+00:00:22.325 --> 00:00:26.970
+Essa aula é para mostrar
+algumas das abordagens comuns,
+
+6
+00:00:26.970 --> 00:00:31.150
+que se utilizam às vezes, principalmente,
+linguagens estruturadas e mostrar quais
+
+7
+00:00:31.150 --> 00:00:35.868
+são os problemas delas para que você
+entenda os benefícios de usar as exceções,
+
+8
+00:00:35.868 --> 00:00:40.983
+que é o que a gente utiliza numa linguagem
+orientada a objeto principalmente aí Java.
+
+9
+00:00:40.983 --> 00:00:41.720
+Está certo?
+
+10
+00:00:41.720 --> 00:00:42.750
+Então vamos lá.
+
+11
+00:00:42.750 --> 00:00:47.610
+O problema sobre o qual a gente vai falar
+aqui hoje é como é que a gente avisa paro
+
+12
+00:00:47.610 --> 00:00:52.513
+o método que invocou outro método,
+onde aconteceu erro.
+
+13
+00:00:52.513 --> 00:00:58.338
+Ou seja, eu tenho método A, eles chamam
+o método B e acontece erro no método B.
+
+14
+00:00:58.338 --> 00:01:01.990
+Como eu digo para esse método
+A que esse erro aconteceu,
+
+15
+00:01:01.990 --> 00:01:06.970
+para que ele saiba que
+alguma coisa deu errado?
+
+16
+00:01:06.970 --> 00:01:11.950
+Então, vamos pegar esse exemplo aqui,
+desse método aqui, porção.
+
+17
+00:01:11.950 --> 00:01:20.613
+Note que ele verifica aí se ele recebe
+ali parâmetro que chama porcento.
+
+18
+00:01:20.613 --> 00:01:26.206
+E aí ele verifica se ele está entre
+0 e 100 e aí caso não esteja,
+
+19
+00:01:26.206 --> 00:01:27.781
+ele retorna ao -1.
+
+20
+00:01:27.781 --> 00:01:31.520
+Ou seja, ele está dando erro,
+ele vai estar usando esse -1,
+
+21
+00:01:31.520 --> 00:01:37.470
+como uma forma de indicar para
+quem chamou, falou assim: " olha,
+
+22
+00:01:37.470 --> 00:01:41.110
+se você me chamar e der -1, então quer
+dizer que alguma coisa deu errado".
+
+23
+00:01:41.110 --> 00:01:46.000
+Alguma coisa estava errada,
+se não ele faz ali o cálculo normalmente.
+
+24
+00:01:46.000 --> 00:01:48.134
+É uma má ideia.
+
+25
+00:01:48.134 --> 00:01:53.021
+Vamos entender o porquê
+fazer isso não é bom.
+
+26
+00:01:53.021 --> 00:01:57.490
+A primeira coisa, é que às vezes
+fica muito confuso para quem
+
+27
+00:01:57.490 --> 00:02:01.260
+está chamando este método e
+recebendo este resultado.
+
+28
+00:02:01.260 --> 00:02:05.990
+Imagine o cara passou
+ali 5.000 passou a 120.
+
+29
+00:02:05.990 --> 00:02:10.710
+Eu quero 120% de 5.000,
+e ele não sabe, que aquele método,
+
+30
+00:02:10.710 --> 00:02:14.761
+por exemplo,
+restringe os valores da porcentagem,
+
+31
+00:02:14.761 --> 00:02:19.390
+dizendo assim "por que
+eu estou recebendo -1?
+
+32
+00:02:19.390 --> 00:02:20.790
+O que significa -1?
+
+33
+00:02:20.790 --> 00:02:22.338
+Será que estourou?".
+
+34
+00:02:22.338 --> 00:02:25.670
+Ele não sabe exatamente o
+que é que está acontecendo.
+
+35
+00:02:25.670 --> 00:02:31.321
+Então essa estratégia de
+retornar valor específico
+
+36
+00:02:31.321 --> 00:02:38.158
+pode ser ruim justamente por as pessoas
+não entenderem o que está acontecendo.
+
+37
+00:02:38.158 --> 00:02:44.960
+Outro problema é que nesse caso o -1,
+ele pode ser valor válido.
+
+38
+00:02:44.960 --> 00:02:53.150
+Por exemplo, se eu chamar o método com
+-100 e pedir 1% o resultado correto é -1.
+
+39
+00:02:53.150 --> 00:02:58.090
+Se eu verificar: vê aí se o retorno for
+-1 e se for -1 quer dizer que deu erro.
+
+40
+00:02:58.090 --> 00:03:02.794
+Não, mas espera aí, têm determinadas
+chamadas, têm combinações de
+
+41
+00:03:02.794 --> 00:03:07.690
+parâmetro que o -1 é valor válido.
+
+42
+00:03:07.690 --> 00:03:11.876
+Tá, então isso também é uma
+coisa que pode ser complicada.
+
+43
+00:03:11.876 --> 00:03:15.743
+Por exemplo, se você falar assim: "
+eu vou retornar, se o retorno for
+
+44
+00:03:15.743 --> 00:03:18.090
+uma string,
+eu vou retornar uma string erro".
+
+45
+00:03:18.090 --> 00:03:21.250
+Mas de repente,
+você está pedindo pedaço da string,
+
+46
+00:03:21.250 --> 00:03:25.372
+pode ser que a string que o cara passou,
+o pedaço que você quer é erro.
+
+47
+00:03:25.372 --> 00:03:31.045
+E aí, como você vai saber se foi erro
+ou se foi retorno que foi aquele valor.
+
+48
+00:03:31.045 --> 00:03:34.745
+Então nem sempre a gente consegue valor.
+
+49
+00:03:34.745 --> 00:03:37.225
+Imagina por exemplo se o retorno for
+
+50
+00:03:37.225 --> 00:03:42.439
+uma data ou uma classe do seu próprio
+software, como por exemplo pessoa.
+
+51
+00:03:42.439 --> 00:03:47.272
+Como é que você vai, que data é que você
+vai retornar como uma data inválida?
+
+52
+00:03:47.272 --> 00:03:52.030
+Que pessoa você vai retornar como uma
+pessoa que significa que deu erro?
+
+53
+00:03:52.030 --> 00:03:56.990
+Não pode pegar aquele seu amigo que
+faz tudo errado e querer retornar ele,
+
+54
+00:03:56.990 --> 00:03:57.870
+não é por aí.
+
+55
+00:03:57.870 --> 00:03:58.738
+Tá certo?
+
+56
+00:03:58.738 --> 00:04:02.890
+Então, a gente vê que é
+complicado fazer isso daí.
+
+57
+00:04:02.890 --> 00:04:03.673
+Certo?
+
+58
+00:04:03.673 --> 00:04:08.023
+Outro problema é que às vezes
+vários erros diferentes podem
+
+59
+00:04:08.023 --> 00:04:11.173
+acontecer e você quer
+saber qual erro que foi.
+
+60
+00:04:11.173 --> 00:04:13.885
+Então por exemplo,
+você quer abrir arquivo,
+
+61
+00:04:13.885 --> 00:04:17.870
+você está fazendo processamento
+que exija a abertura de arquivo,
+
+62
+00:04:17.870 --> 00:04:22.032
+esse arquivo ele pode estar,
+por exemplo, bloqueado,
+
+63
+00:04:22.032 --> 00:04:27.130
+porque tem outra pessoa trabalhando com
+ele ou outro programa está com ele aberto,
+
+64
+00:04:27.130 --> 00:04:31.000
+esse arquivo pode não existir, pode ser
+acesso negado por questões de segurança,
+
+65
+00:04:31.000 --> 00:04:35.133
+por questões de permissão de acesso e às
+vezes quando você está fazendo software,
+
+66
+00:04:35.133 --> 00:04:36.910
+você não quer saber só se deu erro.
+
+67
+00:04:36.910 --> 00:04:43.932
+Você quer saber porque é que esse erro
+está acontecendo, até mesmo pra você poder
+
+68
+00:04:43.932 --> 00:04:48.631
+falar para quem está utilizando o seu
+software: "olha, esse arquivo não existe".
+
+69
+00:04:48.631 --> 00:04:51.935
+De repente, se ele não existe,
+você pode oferecer criar,
+
+70
+00:04:51.935 --> 00:04:53.407
+de repente se ele está bloqueado,
+
+71
+00:04:53.407 --> 00:04:56.720
+você pode falar para ele tentar fechar
+outros programas e tentar novamente.
+
+72
+00:04:56.720 --> 00:04:58.518
+Então, depende do erro.
+
+73
+00:04:58.518 --> 00:05:02.370
+Não é só " deu erro!",
+mas qual erro aconteceu.
+
+74
+00:05:02.370 --> 00:05:05.773
+Às vezes saber qual erro
+é igualmente importante.
+
+75
+00:05:05.773 --> 00:05:10.918
+E nem pense, uma coisa que eu já vi
+também, de você pegar uma variável global,
+
+76
+00:05:10.918 --> 00:05:15.133
+no caso do orientada a objeto pegar
+aí uma variável estática e falar: "
+
+77
+00:05:15.133 --> 00:05:18.462
+quando der erro eu vou guardar
+nesta variável que deu erro".
+
+78
+00:05:18.462 --> 00:05:22.809
+Aí eu posso colocar a descrição,
+posso botar o que eu quiser.
+
+79
+00:05:22.809 --> 00:05:24.890
+Isso é uma péssima ideia.
+
+80
+00:05:24.890 --> 00:05:29.458
+A primeira coisa, vai ser aí o mesmo
+problema das variáveis globais.
+
+81
+00:05:29.458 --> 00:05:33.875
+Alguém pode fazer algum procedimento,
+não limpar aquela variável,
+
+82
+00:05:33.875 --> 00:05:38.834
+ou seja, você vai depender de outro
+método que colocou erro ali e
+
+83
+00:05:38.834 --> 00:05:43.370
+ir lá e tirar aquele erro,
+depois que processar e etc.
+
+84
+00:05:43.370 --> 00:05:48.303
+Para não ficar lixo, para que de repente
+você vá lá e executa alguma coisa com
+
+85
+00:05:48.303 --> 00:05:50.940
+sucesso, você vai lá e está erro ali.
+
+86
+00:05:50.940 --> 00:05:52.870
+Tá, não dá legal.
+
+87
+00:05:52.870 --> 00:05:58.631
+Ou por exemplo, se você tem, está
+trabalhando com programação concorrente,
+
+88
+00:05:58.631 --> 00:06:03.065
+por exemplo, você tem uma aplicação
+web que tem vários processos,
+
+89
+00:06:03.065 --> 00:06:08.781
+várias requisições acessando a mesma
+classe e uma delas guarda o erro,
+
+90
+00:06:08.781 --> 00:06:12.610
+todos que forem lá vão
+encontrar o mesmo erro lá.
+
+91
+00:06:12.610 --> 00:06:17.400
+Então, tomar muito cuidado com
+essa abordagem de ficar guardando
+
+92
+00:06:17.400 --> 00:06:22.393
+erros variáveis que a pessoa
+tem que ir lá e acessar.
+
+93
+00:06:22.393 --> 00:06:27.469
+Sendo que é muito fácil também, ela
+simplesmente ir lá e ignorar aquele erro.
+
+94
+00:06:27.469 --> 00:06:32.443
+Ou seja, você depende que a pessoa
+vá e faça uma verificação,
+
+95
+00:06:32.443 --> 00:06:36.790
+se tem alguma coisa naquela variável para
+você saber se teve erro ou não, ou seja,
+
+96
+00:06:36.790 --> 00:06:42.060
+global é o mundo chamas,
+não tente isso daí.
+
+97
+00:06:42.060 --> 00:06:47.077
+Bom, o Java e várias outras linguagens usa
+
+98
+00:06:47.077 --> 00:06:51.273
+mecanismo de exceções para
+fazer o tratamento de erro.
+
+99
+00:06:51.273 --> 00:06:54.650
+Só que eu vou deixar para explicar
+isso para vocês na próxima aula.
+
+100
+00:06:54.650 --> 00:06:57.481
+Tá?
+Hoje a gente viu aqui o tratamento de
+
+101
+00:06:57.481 --> 00:07:02.844
+erro, entendeu porque determinadas
+abordagens não funcionam bem,
+
+102
+00:07:02.844 --> 00:07:07.778
+que tem cenários que elas
+não funcionam mesmo, certo?
+
+103
+00:07:07.778 --> 00:07:13.215
+E isso aí vai servir como motivação
+quando você for ver as exceções,
+
+104
+00:07:13.215 --> 00:07:17.840
+você já vai entender porque é que o jeito,
+o jeitão que a gente dava ali na
+
+105
+00:07:17.840 --> 00:07:23.108
+programação estruturada,
+porque é que ele não dá muito certo.
+
+106
+00:07:23.108 --> 00:07:23.943
+Certo?
+
+107
+00:07:23.943 --> 00:07:25.740
+Muito obrigado!
+
+108
+00:07:25.740 --> 00:07:30.400
+[MÚSICA]

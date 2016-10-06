@@ -1,0 +1,284 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.025
+[MÚSICA] E aí,
+
+2
+00:00:06.025 --> 00:00:09.633
+pessoal, tudo bem?
+
+3
+00:00:09.633 --> 00:00:13.550
+Nessa aula vamos ver como
+adicionar jogabilidade com toques.
+
+4
+00:00:13.550 --> 00:00:17.140
+Vamos começar vendo como
+reconhecer o toque em nó.
+
+5
+00:00:17.140 --> 00:00:22.220
+Adicione na sua cena alguns
+alvos e nomeie cada deles.
+
+6
+00:00:22.220 --> 00:00:30.220
+[SEM_ÁUDIO]
+
+7
+00:00:30.220 --> 00:00:38.220
+[SEM_ÁUDIO]
+
+8
+00:00:38.220 --> 00:00:46.220
+[SEM_ÁUDIO]
+
+9
+00:00:46.220 --> 00:00:53.756
+[SEM_ÁUDIO] Crie
+
+10
+00:00:53.756 --> 00:01:00.110
+uma variável para cada
+dos alvos que você criou.
+
+11
+00:01:00.110 --> 00:01:02.845
+A maneira mais simples de verificar se
+
+12
+00:01:02.845 --> 00:01:06.550
+dos alvos foi tocado é dentro
+da função touchesBegan.
+
+13
+00:01:06.550 --> 00:01:10.938
+Adicionamos loop que vai
+verificar cada toque na
+
+14
+00:01:10.938 --> 00:01:15.910
+tela calculando a posição de cada
+toque e verificando se para cada alvo,
+
+15
+00:01:15.910 --> 00:01:23.080
+contém o ponto de algum dos toques
+através da função containsPoint.
+
+16
+00:01:23.080 --> 00:01:28.077
+Se o alvo contém a posição de dos toques,
+reconhecemos o toque neste nó e
+
+17
+00:01:28.077 --> 00:01:32.220
+neste exemplo escondemos o alvo
+fazendo a propriedade hidden ser true,
+
+18
+00:01:32.220 --> 00:01:37.470
+e se tocar no alvo 3,
+os outros 2 voltam a aparecer.
+
+19
+00:01:37.470 --> 00:01:41.910
+Rode no simulador para ver o resultado.
+
+20
+00:01:41.910 --> 00:01:45.740
+Como estamos verificando
+todos os toques na tela,
+
+21
+00:01:45.740 --> 00:01:49.580
+se tocarmos simultaneamente nos 2 alvos,
+ambos somem.
+
+22
+00:01:49.580 --> 00:01:54.680
+Para simular 2 toques,
+deixe a tecla Alt Option apertada,
+
+23
+00:01:54.680 --> 00:01:58.270
+e para mudar a posição,
+deixe a tecla Shift apertada.
+
+24
+00:01:58.270 --> 00:02:05.360
+Agora vamos fazer uma das naves
+seguir a posição do toque na tela.
+
+25
+00:02:05.360 --> 00:02:08.780
+Neste caso queremos limitar
+para apenas toque na tela.
+
+26
+00:02:08.780 --> 00:02:14.510
+Vamos considerar apenas o primeiro toque,
+através de touches.first,
+
+27
+00:02:14.510 --> 00:02:19.650
+calcular a posição deste toque e
+atualizar a posição da nave 1.
+
+28
+00:02:19.650 --> 00:02:24.670
+Vamos fazer isso para a função
+touchesBegan e touchesMoved,
+
+29
+00:02:24.670 --> 00:02:27.920
+que é chamada toda vez que
+toque se mover na tela.
+
+30
+00:02:27.920 --> 00:02:32.150
+Vamos rodar no simulador.
+
+31
+00:02:32.150 --> 00:02:36.970
+Ao tocar na tela, o sprite acompanha
+a posição do dedo do jogador.
+
+32
+00:02:36.970 --> 00:02:46.184
+[SEM_ÁUDIO] Por último,
+
+33
+00:02:46.184 --> 00:02:52.330
+vamos ver como lidar com
+reconhecimento de gestos.
+
+34
+00:02:52.330 --> 00:02:58.630
+Criamos aqui 2 funções que têm como
+parâmetro reconhecedor de gesto de swipe,
+
+35
+00:02:58.630 --> 00:03:03.150
+que é aquele deslize rápido com
+dedo na tela em alguma direção,
+
+36
+00:03:03.150 --> 00:03:07.060
+da classe UISwipeGestureRecognizer.
+
+37
+00:03:07.060 --> 00:03:12.510
+Criamos uma função quando o swipe é
+para a esquerda e para a direita.
+
+38
+00:03:12.510 --> 00:03:18.280
+Na primeira função, adicionamos valor
+no eixo X na posição do sprite.
+
+39
+00:03:18.280 --> 00:03:21.700
+Esse valor é o tamanho em
+pixels da largura do sprite.
+
+40
+00:03:21.700 --> 00:03:25.608
+E fizemos a mesma coisa na outra função,
+porém,
+
+41
+00:03:25.608 --> 00:03:30.850
+subtraímos esse valor em vez de adicionar,
+para que o sprite se mova para a esquerda.
+
+42
+00:03:30.850 --> 00:03:37.090
+Agora precisamos criar os reconhecedores
+de gesto e adicioná-los na nossa cena.
+
+43
+00:03:37.090 --> 00:03:41.638
+Na função didMoveToView criamos
+
+44
+00:03:41.638 --> 00:03:45.160
+duas constantes da classe
+UISwipeGestureRecognizer,
+
+45
+00:03:45.160 --> 00:03:50.150
+que recebem como argumento self,
+que é referência à própria cena,
+
+46
+00:03:50.150 --> 00:03:55.200
+e o selector com o nome da função que será
+executada quando o gesto for reconhecido.
+
+47
+00:03:55.200 --> 00:04:01.310
+Em swipeRight configuramos a direção
+para ser reconhecida como .Right,
+
+48
+00:04:01.310 --> 00:04:05.810
+e em SwipeLeft,
+para ser reconhecida como .Left.
+
+49
+00:04:05.810 --> 00:04:10.154
+Então adicionamos esses
+gesturesRecognizers na view da cena com
+
+50
+00:04:10.154 --> 00:04:14.913
+a função view.addGestureRecognizer
+e passando como
+
+51
+00:04:14.913 --> 00:04:17.500
+argumento swipeRight e swipeLeft.
+
+52
+00:04:17.500 --> 00:04:24.500
+Além dessas direções você também pode
+usar .Up e .Down para reconhecer swipes.
+
+53
+00:04:24.500 --> 00:04:27.660
+Rode no simulador para ver o resultado.
+
+54
+00:04:27.660 --> 00:04:32.032
+Clique e arraste para a esquerda
+ou direita rapidamente
+
+55
+00:04:32.032 --> 00:04:34.830
+para simular o movimento de swipe.
+
+56
+00:04:34.830 --> 00:04:38.604
+Dê uma olhada no material de
+apoio para conhecer outros tipos
+
+57
+00:04:38.604 --> 00:04:43.028
+de gestureRecognizers que você pode
+usar no seu jogo e experimente
+
+58
+00:04:43.028 --> 00:04:45.656
+usá-los nesse projeto teste.
+
+59
+00:04:45.656 --> 00:04:51.447
+Na próxima aula veremos como adicionar
+jogabilidade com acelerômetro do aparelho.
+
+60
+00:04:51.447 --> 00:04:51.990
+Até lá!

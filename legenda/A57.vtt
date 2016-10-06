@@ -1,0 +1,852 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.325
+[MÚSICA] Dando continuidade
+
+2
+00:00:07.325 --> 00:00:13.500
+ao módulo "Inferindo Propriedades e
+Características de uma População".
+
+3
+00:00:13.500 --> 00:00:18.500
+Eu gostaria de aprofundar
+pouco mais na lição
+
+4
+00:00:18.500 --> 00:00:24.215
+de análise de regressão,
+o que eu gostaria de fazer com você agora
+
+5
+00:00:24.215 --> 00:00:29.680
+é uma aplicação prática dos conceitos
+que nós vimos na videoaula anterior.
+
+6
+00:00:29.680 --> 00:00:34.518
+Então imagine problema prático em que
+
+7
+00:00:34.518 --> 00:00:39.547
+anunciante, contrata uma agência de trade
+
+8
+00:00:39.547 --> 00:00:45.070
+marketing e tem interesse em realizar
+alguma ações no ponto de venda.
+
+9
+00:00:45.070 --> 00:00:51.751
+Muito bem,
+eu como profissional de marketing,
+
+10
+00:00:51.751 --> 00:00:57.769
+eu tenho que garantir que essas ações
+deem resultado e o que posso de repente,
+
+11
+00:00:57.769 --> 00:01:05.005
+ao invés de engajar essa ação diretamente
+em 1000 pontos de vendas que,
+
+12
+00:01:05.005 --> 00:01:10.008
+eu posso ter no meu portefólio
+de varejos de pontos de venda,
+
+13
+00:01:10.008 --> 00:01:15.705
+eu posso selecionar alguns
+poucos pontos de venda,
+
+14
+00:01:15.705 --> 00:01:21.630
+inserir o display nesses pontos
+de venda e acompanhar vendas.
+
+15
+00:01:21.630 --> 00:01:27.920
+Muito bem, eu posso inclusive,
+fazer algumas variações nos displays,
+
+16
+00:01:27.920 --> 00:01:34.550
+displays que contêm mais produtos,
+displays que contêm menos produtos.
+
+17
+00:01:34.550 --> 00:01:40.665
+Poderia também fazer de outras formas,
+pensando em cores do display,
+
+18
+00:01:40.665 --> 00:01:44.320
+localização, coisas dessa
+natureza que são bem práticas,
+
+19
+00:01:44.320 --> 00:01:49.735
+possíveis de se mensurar e de
+avaliar o impacto no resultado.
+
+20
+00:01:49.735 --> 00:01:54.576
+E aqui em resultado, nós vamos medir
+o quanto de produto que foi vendido
+
+21
+00:01:54.576 --> 00:01:59.950
+naquela naquele ponto de venda,
+naquela janela de tempo,
+
+22
+00:01:59.950 --> 00:02:05.690
+dada as diferenças de displays
+que foram utilizados.
+
+23
+00:02:05.690 --> 00:02:11.122
+Nós vamos medir também,
+algumas outras variáveis para que a gente
+
+24
+00:02:11.122 --> 00:02:16.116
+possa ter uma análise
+pouquinho mais profunda,
+
+25
+00:02:16.116 --> 00:02:20.400
+a respeito dos efeitos que levam,
+
+26
+00:02:20.400 --> 00:02:25.360
+ou fatores possíveis, que afetam vendas.
+
+27
+00:02:25.360 --> 00:02:31.748
+Muito bem, então fomos a campo,
+coletamos as vendas junto com o varejista,
+
+28
+00:02:31.748 --> 00:02:35.610
+fomos lá e acompanhamos lá a quantidade
+de produtos que foram vendidos,
+
+29
+00:02:35.610 --> 00:02:40.410
+garantimos uma boa medida de
+
+30
+00:02:40.410 --> 00:02:45.410
+quantidade de produtos que foram expostos
+
+31
+00:02:45.410 --> 00:02:49.600
+e registramos isso ao
+longo de algumas semanas.
+
+32
+00:02:49.600 --> 00:02:54.726
+Voltamos para o escritório
+e trabalhamos esses dados.
+
+33
+00:02:54.726 --> 00:02:59.271
+Então nós temos basicamente,
+como nós vimos na videoaula de análise de
+
+34
+00:02:59.271 --> 00:03:06.190
+regressão, uma variável y que é
+vendas e uma variável x que nada
+
+35
+00:03:06.190 --> 00:03:10.880
+mais é do que a quantidade de produtos
+que eu consegui colocar naquele display.
+
+36
+00:03:10.880 --> 00:03:16.310
+Muito bem, o que faço então,
+
+37
+00:03:16.310 --> 00:03:20.536
+eu uso essas duas variáveis
+para estimar a minha equação,
+
+38
+00:03:20.536 --> 00:03:27.840
+conhecida como equação de regressão,
+como nós vimos na videoaula passada,
+
+39
+00:03:27.840 --> 00:03:32.830
+nós vamos estimar os parâmetros a e b.
+
+40
+00:03:32.830 --> 00:03:35.246
+O a que é a constante e o b,
+
+41
+00:03:35.246 --> 00:03:40.862
+que nada mais é do que o coeficiente
+atrelado a esse display,
+
+42
+00:03:40.862 --> 00:03:45.504
+ou seja,
+essa minha variável que explica vendas.
+
+43
+00:03:45.504 --> 00:03:50.160
+A primeira análise que
+a gente consegue fazer,
+
+44
+00:03:50.160 --> 00:03:55.060
+é o diagrama de dispersão,
+nós vimos na videoaula
+
+45
+00:03:55.060 --> 00:03:59.283
+de correlação,
+a importância do diagrama de dispersão,
+
+46
+00:03:59.283 --> 00:04:03.669
+que já nos dá uma ideia de
+associação entre as variáveis.
+
+47
+00:04:03.669 --> 00:04:09.043
+Então o diagrama de dispersão,
+ele mostra os
+
+48
+00:04:09.043 --> 00:04:14.530
+pontos as observações
+que eu coletei no campo.
+
+49
+00:04:14.530 --> 00:04:22.050
+Em Minas Gerais, eu poderia dizer que
+existe efeito de display em vendas.
+
+50
+00:04:22.050 --> 00:04:27.243
+Agora como é que eu consigo, eu poderia
+simplesmente calcular o coeficiente de
+
+51
+00:04:27.243 --> 00:04:32.610
+correlação, agora como é que eu
+consigo informar sobre causalidade?
+
+52
+00:04:32.610 --> 00:04:37.070
+Que é justamente o poder
+da análise de regressão.
+
+53
+00:04:37.070 --> 00:04:41.621
+O que eu faço,
+eu vou a pacote estatístico,
+
+54
+00:04:41.621 --> 00:04:46.149
+eu posso usar tanto o
+Stata quanto inclusive o
+
+55
+00:04:46.149 --> 00:04:50.422
+Microsoft Excel, para rodar essa análise.
+
+56
+00:04:50.422 --> 00:04:55.243
+E o que eu vou fazer,
+eu vou informar que vendas é o meu y,
+
+57
+00:04:55.243 --> 00:05:00.186
+a minha variável de respostas
+e display a minha variável de,
+
+58
+00:05:00.186 --> 00:05:06.149
+explicativa, que é
+aquela que afeta vendas.
+
+59
+00:05:06.149 --> 00:05:10.855
+Muito bem, tem alguns indicadores
+
+60
+00:05:10.855 --> 00:05:15.640
+antes de a gente olhar o coeficiente e o
+p valor, que são importantes de a gente,
+
+61
+00:05:15.640 --> 00:05:21.214
+são importantes de a gente observar.
+
+62
+00:05:21.214 --> 00:05:24.583
+Deles é o R quadrado.
+
+63
+00:05:24.583 --> 00:05:30.320
+O R quadrado como a gente viu na
+videoaula anterior, ele informa
+
+64
+00:05:30.320 --> 00:05:34.670
+o poder de explicação daquela variável
+que está sendo utilizada no modelo.
+
+65
+00:05:34.670 --> 00:05:38.990
+O R quadrado ajustado,
+
+66
+00:05:38.990 --> 00:05:44.220
+ele nos informa o quanto que
+
+67
+00:05:44.220 --> 00:05:49.740
+aquele conjunto de variáveis explicam
+aquela variável de resposta,
+
+68
+00:05:49.740 --> 00:05:53.930
+ponderando para o número de variáveis
+que estão sendo utilizadas no modelo.
+
+69
+00:05:53.930 --> 00:05:59.810
+Nesse primeiro modelo, nós estamos rodando
+simplesmente a ação de display em vendas,
+
+70
+00:05:59.810 --> 00:06:02.590
+então existe apenas uma variável.
+
+71
+00:06:02.590 --> 00:06:08.180
+O R quadrado ajustado, acaba sendo
+muito parecido com o R quadrado.
+
+72
+00:06:08.180 --> 00:06:14.658
+O R quadrado elevado me
+ajuda a inferir que,
+
+73
+00:06:14.658 --> 00:06:19.157
+o conjunto de variáveis explicativas,
+
+74
+00:06:19.157 --> 00:06:22.533
+elas afetam a variável dependente,
+
+75
+00:06:22.533 --> 00:06:26.100
+são as mais importantes de
+estarem consideradas no modelo.
+
+76
+00:06:26.100 --> 00:06:31.235
+Para a gente ter uma noção,
+o que está de fora do R quadrado,
+
+77
+00:06:31.235 --> 00:06:35.475
+ou seja, aquilo que a gente não
+conseguiu atingir o 1 é dado ao erro,
+
+78
+00:06:35.475 --> 00:06:39.430
+algum efeito que eu não
+fui capaz de observar.
+
+79
+00:06:39.430 --> 00:06:43.600
+Muito bem, uma vez analisado o R quadrado,
+
+80
+00:06:43.600 --> 00:06:51.113
+é importante verificar o teste de
+probabilidade desse R quadrado,
+
+81
+00:06:51.113 --> 00:06:56.934
+se ele é ou não significativo,
+que é justamente a probabilidade
+
+82
+00:06:56.934 --> 00:07:01.780
+de F que me informa sobre esse
+coeficiente do R quadrado.
+
+83
+00:07:01.780 --> 00:07:05.431
+E ele no nosso caso aqui,
+ele é significativo.
+
+84
+00:07:05.431 --> 00:07:09.757
+Muito bem,
+uma vez que eu olhei a equação como toda,
+
+85
+00:07:09.757 --> 00:07:12.700
+eu vou e analiso a variável display.
+
+86
+00:07:12.700 --> 00:07:17.110
+E na tabela ela me informa o coeficiente,
+
+87
+00:07:17.110 --> 00:07:25.340
+do efeito do display em vendas e
+a parte mais importante é o p valor.
+
+88
+00:07:25.340 --> 00:07:31.910
+Recordadando, a videoaula
+de teste de hipóteses,
+
+89
+00:07:31.910 --> 00:07:38.410
+esse é o p valor que,
+ajuda a gente a rejeitar a hipótese nula.
+
+90
+00:07:38.410 --> 00:07:46.588
+No caso aqui, nós temos p valor
+menor do que 1% isso me informa que,
+
+91
+00:07:46.588 --> 00:07:50.790
+display afeta significativamente vendas.
+
+92
+00:07:50.790 --> 00:07:57.330
+Isso é bastante importante,
+porque se a variável estimada ela não for
+
+93
+00:07:57.330 --> 00:08:02.066
+significativa, a gente não
+pode tirar qualquer tipo de
+
+94
+00:08:02.066 --> 00:08:07.400
+conclusão sobre o efeito dessa
+variável na variável explicativa.
+
+95
+00:08:07.400 --> 00:08:08.260
+No caso aqui,
+
+96
+00:08:08.260 --> 00:08:14.365
+então display afeta significativamente
+vendas e o coeficiente dele é positivo.
+
+97
+00:08:14.365 --> 00:08:19.864
+Então quanto maior o número de
+produtos que eu coloco nesse display,
+
+98
+00:08:19.864 --> 00:08:21.500
+maior a minha venda.
+
+99
+00:08:21.500 --> 00:08:26.782
+Aqui eu estaria utilizando o
+
+100
+00:08:26.782 --> 00:08:31.920
+teste bicaudal.
+
+101
+00:08:31.920 --> 00:08:36.100
+Na verdade, a gente considera que display,
+ele pode inclusive,
+
+102
+00:08:36.100 --> 00:08:40.385
+ser prejudicial para as vendas,
+não só positivo.
+
+103
+00:08:40.385 --> 00:08:45.588
+Muito bem,
+para a gente poder endereçar vendas
+
+104
+00:08:45.588 --> 00:08:50.478
+de maneira adequada e análise
+de regressão múltipla,
+
+105
+00:08:50.478 --> 00:08:55.880
+nos permite incluir mais de
+uma variável explicativa,
+
+106
+00:08:55.880 --> 00:09:00.040
+toda a vez que o consumidor,
+
+107
+00:09:00.040 --> 00:09:05.690
+naquele ponto de venda,
+passou pelo caixa e levou o produto,
+
+108
+00:09:05.690 --> 00:09:13.380
+nós pedimos para ele responder numa
+escala de atitude de correlação à marca.
+
+109
+00:09:13.380 --> 00:09:17.231
+Essa escala variando de 1 a 7,
+
+110
+00:09:17.231 --> 00:09:21.090
+foi também incluída no modelo.
+
+111
+00:09:21.090 --> 00:09:26.072
+E aí, o que a gente faz na
+
+112
+00:09:26.072 --> 00:09:30.910
+verdade colocar o y que é venda,
+junto com o display que é
+
+113
+00:09:30.910 --> 00:09:35.750
+uma das variáveis explicativas, ou seja,
+o x e a atitude com correlação à marca.
+
+114
+00:09:35.750 --> 00:09:40.620
+Eu rodo novamente a regressão,
+
+115
+00:09:40.620 --> 00:09:48.842
+estimo e vejo que o R quadrado saiu
+de .10 e foi para .17 mostrando,
+
+116
+00:09:48.842 --> 00:09:54.760
+o poder de explicação dessas duas
+variáveis que eu incluí no modelo.
+
+117
+00:09:54.760 --> 00:10:00.460
+O teste de F para esse R quadrado
+também é significativo e o R ajustado
+
+118
+00:10:00.460 --> 00:10:06.197
+mostra para mim, inclusive, que atitude
+é uma variável muito importante
+
+119
+00:10:06.197 --> 00:10:11.330
+em se considerar quando nós estamos
+estudando o comportamento de vendas.
+
+120
+00:10:11.330 --> 00:10:15.459
+então mostra que aumentou o R quadrado
+pelo fato de termos colocados essa
+
+121
+00:10:15.459 --> 00:10:18.720
+variável importante que é
+a atitude com relação à marca.
+
+122
+00:10:18.720 --> 00:10:23.840
+Assim como o display, a atitude também tem
+
+123
+00:10:23.840 --> 00:10:28.960
+coeficiente positivo e pelo p
+valor eu consigo também informar
+
+124
+00:10:28.960 --> 00:10:35.312
+que a atitude afeta
+significativamente vendas.
+
+125
+00:10:35.312 --> 00:10:42.570
+Para tornar a análise ainda mais completa,
+
+126
+00:10:42.570 --> 00:10:47.823
+quando os consumidores passaram
+pelo caixa nós pedimos para
+
+127
+00:10:47.823 --> 00:10:52.805
+eles também informar a renda
+que eles possuem e utilizamos
+
+128
+00:10:52.805 --> 00:10:57.370
+renda na análise do
+comportamento de venda.
+
+129
+00:10:57.370 --> 00:11:00.557
+Aí dessa vez nós temos y que é vendas,
+
+130
+00:11:00.557 --> 00:11:06.013
+nós temos x1 que é display,
+x2 que é atitude e x3 que é renda,
+
+131
+00:11:06.013 --> 00:11:11.300
+uma outra variável contínua
+que a gente incluiu no modelo.
+
+132
+00:11:11.300 --> 00:11:17.052
+Avaliando o r quadrado nós aumentamos
+
+133
+00:11:17.052 --> 00:11:23.660
+o r quadrado para 0,18 e o r
+quadrado ajustado para 0,17.
+
+134
+00:11:23.660 --> 00:11:28.762
+Esse r quadrado é significativo, assim
+como o teste de F informa para a gente.
+
+135
+00:11:28.762 --> 00:11:34.089
+O curioso e interessante é que, no caso
+de vendas desse produto dessa marca
+
+136
+00:11:34.089 --> 00:11:40.780
+específica, renda não é efeito que
+contribui tanto para a venda do produto.
+
+137
+00:11:40.780 --> 00:11:45.905
+De alguma forma, aparentemente existe
+
+138
+00:11:45.905 --> 00:11:51.213
+uma inelasticidade desse produto,
+inerente aí das
+
+139
+00:11:51.213 --> 00:11:56.800
+características da marca,
+do tipo de produto e etc.
+
+140
+00:11:56.800 --> 00:12:00.046
+O que nós podemos informar,
+com relação à renda,
+
+141
+00:12:00.046 --> 00:12:03.380
+é que renda não afeta
+significativamente vendas.
+
+142
+00:12:03.380 --> 00:12:09.040
+Renda é positivo, o coeficiente é
+positivo mas não é significativo.
+
+143
+00:12:09.040 --> 00:12:14.179
+E aí para finalizar e
+tornar a nossa análise
+
+144
+00:12:14.179 --> 00:12:21.642
+ainda mais profunda com relação às vendas
+dos produtos e o efeito do display,
+
+145
+00:12:21.642 --> 00:12:27.382
+ou seja da ação que eu coloquei no
+mercado, eu também acompanhei o quanto
+
+146
+00:12:27.382 --> 00:12:32.923
+que outros concorrentes fizeram
+de ações nessa mesma época.
+
+147
+00:12:32.923 --> 00:12:37.454
+Então eu fui lá e medi o meu
+concorrente direto quantos
+
+148
+00:12:37.454 --> 00:12:42.220
+produtos receberam algum tipo de promoção.
+
+149
+00:12:42.220 --> 00:12:46.835
+Uma vez que eu incluo no
+modelo a promoção dos
+
+150
+00:12:46.835 --> 00:12:51.931
+concorrentes eu vou lá
+e analiso o r quadrado.
+
+151
+00:12:51.931 --> 00:12:58.929
+O r quadrado ele saltou de 0,10,
+quando eu apenas utilizava display no,
+
+152
+00:12:58.929 --> 00:13:04.089
+na análise, para 0,19,
+mostra ganho de poder de explicação desse
+
+153
+00:13:04.089 --> 00:13:09.044
+conjunto de variáveis e ele tem
+r quadrado significativo também,
+
+154
+00:13:09.044 --> 00:13:14.694
+pelo teste de F e uma vez que
+eu vou e analiso o coeficiente
+
+155
+00:13:14.694 --> 00:13:21.875
+de promoção dos concorrentes ele é
+negativo, como há de se esperar, não é?
+
+156
+00:13:21.875 --> 00:13:28.120
+Então a promoção dos concorrentes afeta
+negativamente a venda dos meus produtos.
+
+157
+00:13:28.120 --> 00:13:35.151
+Porém esse coeficiente ele
+não foi significativo.
+
+158
+00:13:35.151 --> 00:13:41.252
+Quando a gente olha o teste
+de hipótese da hipótese nula,
+
+159
+00:13:41.252 --> 00:13:45.594
+o p valor ele é 0,14 significa ele é 14%,
+
+160
+00:13:45.594 --> 00:13:51.310
+ele está acima de nível mínimo de
+rigor de significância que seria 10%.
+
+161
+00:13:51.310 --> 00:13:55.934
+14% mais alto que 10%, isso permite eu
+
+162
+00:13:55.934 --> 00:14:01.080
+inferir que promoção por mais
+que ela afete negativamente,
+
+163
+00:14:01.080 --> 00:14:07.130
+ela não é significativa no,
+nas vendas do meu produto.
+
+164
+00:14:07.130 --> 00:14:12.436
+Aí eu convido você a olhar
+esse resultados com
+
+165
+00:14:12.436 --> 00:14:19.310
+pouco mais de cuidado e endereçar
+algumas ações possíveis.
+
+166
+00:14:19.310 --> 00:14:25.477
+Aqui certamente nós podemos voltar
+para o nosso departamento financeiro,
+
+167
+00:14:25.477 --> 00:14:30.277
+ou para reportar internamente dentro
+da empresa, de que a ação de promoção,
+
+168
+00:14:30.277 --> 00:14:35.236
+ou seja essa ação de trade marketing
+que eu coloquei em prática,
+
+169
+00:14:35.236 --> 00:14:39.731
+ela surtiu efeito nessa amostra de
+
+170
+00:14:39.731 --> 00:14:44.979
+pontos de venda e ela
+poderia ser ampliada para
+
+171
+00:14:44.979 --> 00:14:50.506
+número de pontos de venda
+que são utilizados pela,
+
+172
+00:14:50.506 --> 00:14:53.940
+por essa marca,
+esse produto, essa empresa.
+
+173
+00:14:53.940 --> 00:15:00.176
+Uma vez que display,
+o número de frentes que existe nesse
+
+174
+00:15:00.176 --> 00:15:05.830
+display afeta positiva e
+significativa as vendas dos produtos.
+
+175
+00:15:05.830 --> 00:15:10.647
+Eu convido você a olhar
+
+176
+00:15:10.647 --> 00:15:15.380
+a videoaula em que mostramos
+como essas análises
+
+177
+00:15:15.380 --> 00:15:20.605
+são feitas utilizando tanto
+o Microsoft Excel quanto
+
+178
+00:15:20.605 --> 00:15:27.565
+pacote estatístico, o STATA.
+
+179
+00:15:27.565 --> 00:15:35.040
+[SEM ÁUDIO]

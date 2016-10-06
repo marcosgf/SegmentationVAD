@@ -1,0 +1,259 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.664
+Oi!
+
+2
+00:00:00.664 --> 00:00:07.157
+Neste vídeo você aprenderá a computar
+o efeito de se acrescentar polo
+
+3
+00:00:07.157 --> 00:00:12.340
+na função de transferência, por meio da
+alteração do diagrama de Bode do sistema.
+
+4
+00:00:12.340 --> 00:00:17.360
+Antes de mais nada,
+vamos relembrar que isso significa que
+
+5
+00:00:17.360 --> 00:00:22.655
+G de s igual a Gn de s sobre s menos p1.
+
+6
+00:00:22.655 --> 00:00:27.580
+Que G de s é a função de transferência
+da resultante com 1 polo,
+
+7
+00:00:27.580 --> 00:00:33.310
+Gn de s é a função original
+sem o polo e o polo é p1.
+
+8
+00:00:33.310 --> 00:00:38.030
+Vamos analisar o caso de polo estável,
+
+9
+00:00:38.030 --> 00:00:42.020
+pois não gostaríamos de adicionar
+polo instável ao sistema.
+
+10
+00:00:42.020 --> 00:00:48.680
+Assim p1 menor do que 0, isto é,
+o polo está no semiplano esquerdo.
+
+11
+00:00:48.680 --> 00:00:54.228
+O módulo dB será: módulo
+de G de j ômega dB igual
+
+12
+00:00:54.228 --> 00:01:01.850
+ao módulo de Gn de G de j ômega dB
+menos o módulo de j ômega menos p1 dB.
+
+13
+00:01:01.850 --> 00:01:07.274
+Isto é, o módulo da função de
+transferência resultante será o módulo
+
+14
+00:01:07.274 --> 00:01:12.740
+da função de transferência sem o polo
+menos o módulo da porção devida ao polo.
+
+15
+00:01:12.740 --> 00:01:17.060
+Esse segundo termo é muito simples.
+
+16
+00:01:17.060 --> 00:01:21.070
+Se você pensar termo das assíntotas
+e da frequência de quebra,
+
+17
+00:01:21.070 --> 00:01:26.726
+terá: módulo de j ômega
+menos p1 dB igual a 20
+
+18
+00:01:26.726 --> 00:01:31.839
+log do módulo de p1 para ômega
+menor ou igual a módulo de
+
+19
+00:01:31.839 --> 00:01:38.090
+p1 e 20 log de ômega sobre o módulo de p1
+para ômega maior do que o módulo de p1.
+
+20
+00:01:38.090 --> 00:01:43.470
+Agora, calculando a fase,
+a fase de G de j ômega
+
+21
+00:01:43.470 --> 00:01:49.108
+é igual à fase de Gn de j ômega
+menos a fase de j ômega menos p1.
+
+22
+00:01:49.108 --> 00:01:52.950
+Novamente, pensando termo das assíntotas,
+
+23
+00:01:52.950 --> 00:01:58.700
+a fase de j ômega menos p1 será igual a 0,
+para ômega menor ou igual ao módulo de p1,
+
+24
+00:01:58.700 --> 00:02:02.300
+e menos 90 graus para ômega
+maior do que módulo de p1.
+
+25
+00:02:02.300 --> 00:02:07.476
+Se seguirmos o nosso procedimento de
+unir essas assíntotas por uma reta,
+
+26
+00:02:07.476 --> 00:02:13.615
+começando meia década antes do módulo
+de p1 e terminando meia década depois,
+
+27
+00:02:13.615 --> 00:02:17.465
+teremos a fase de j ômega
+menos p1 igual a 0,
+
+28
+00:02:17.465 --> 00:02:21.580
+para ômega menor ou igual
+ao módulo de p1 sobre 5,
+
+29
+00:02:21.580 --> 00:02:27.730
+e menos 90 graus vezes o log de
+ômega vezes 5 sobre o módulo de p1,
+
+30
+00:02:27.730 --> 00:02:32.739
+tudo isso dividido pelo log de 25,
+para ômega maior do que
+
+31
+00:02:32.739 --> 00:02:37.690
+módulo de p1 sobre 5 e menor ou
+igual a 5 vezes o módulo de p1.
+
+32
+00:02:37.690 --> 00:02:40.601
+Finalmente a fase será igual a menos
+
+33
+00:02:40.601 --> 00:02:44.650
+90 graus para ômega maior do
+que 5 vezes o módulo de p1.
+
+34
+00:02:44.650 --> 00:02:51.359
+Esboçando essas assíntotas de módulo e
+fase, teremos a seguinte figura: Agora
+
+35
+00:02:51.359 --> 00:02:56.600
+você pode ver claramente os efeitos de
+se acrescentar polo no diagrama de Bode.
+
+36
+00:02:56.600 --> 00:03:01.740
+Primeiro, o ganho dB será diminuído
+de 20 log de módulo de p1
+
+37
+00:03:01.740 --> 00:03:07.040
+baixas frequências e decrescerá com 20
+dB por década acima do módulo de p1.
+
+38
+00:03:07.040 --> 00:03:13.090
+A fase será reduzida a partir de
+cerca de módulo de p1 sobre 5,
+
+39
+00:03:13.090 --> 00:03:18.151
+atingindo menos 45 graus ômega igual
+ao módulo de p1 e chegando à assíntota
+
+40
+00:03:18.151 --> 00:03:23.370
+constante de menos 90 graus a partir de
+cerca de ômega igual a 5 módulo de p1.
+
+41
+00:03:23.370 --> 00:03:30.370
+Você pode perceber que o efeito da adição
+do polo é o oposto da adição do 0.
+
+42
+00:03:30.370 --> 00:03:34.702
+Assim, se adicionar os dois
+nas mesmas frequências,
+
+43
+00:03:34.702 --> 00:03:38.560
+isto é, d1 igual a p1,
+os efeitos se cancelarão.
+
+44
+00:03:38.560 --> 00:03:43.683
+Isso pode ser notado obviamente se
+olharmos para a função de transferência
+
+45
+00:03:43.683 --> 00:03:48.860
+resultante: G de s igual
+a Gn de s vezes s menos z1
+
+46
+00:03:48.860 --> 00:03:54.363
+sobre s menos p1,
+que será igual a Gn de s se z1 igual a p1.
+
+47
+00:03:54.363 --> 00:03:57.470
+Então, não há vantagem fazer isso.
+
+48
+00:03:57.470 --> 00:04:01.790
+É mais interessante se o polo e o
+0 estiverem posições diferentes,
+
+49
+00:04:01.790 --> 00:04:05.080
+pois você poderá alterar
+a resposta frequência do sistema.
+
+50
+00:04:05.080 --> 00:04:10.930
+Diferentemente do caso do 0,
+se colocarmos apenas polo ou 0 e polo,
+
+51
+00:04:10.930 --> 00:04:15.280
+a função de transferência do elemento
+é própria, podendo ser realizada.
+
+52
+00:04:15.280 --> 00:04:19.368
+Nos próximos vídeos, você vai aprender
+a usar esse fato para alterar
+
+53
+00:04:19.368 --> 00:04:25.730
+convenientemente a função de transferência
+de modo a atender requisitos de projeto.

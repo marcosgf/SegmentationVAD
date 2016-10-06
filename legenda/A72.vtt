@@ -1,0 +1,437 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.710
+[MÚSICA]
+
+2
+00:00:05.710 --> 00:00:11.510
+[MÚSICA] Olá!
+
+3
+00:00:11.510 --> 00:00:16.754
+Para completar a nossa vídeo-aula
+
+4
+00:00:16.754 --> 00:00:23.135
+sobre uso do Stata em análise de
+cluster está faltando mostrar para você
+
+5
+00:00:23.135 --> 00:00:29.480
+como é que a gente usa o método K-Means
+e como a gente padroniza variáveis.
+
+6
+00:00:29.480 --> 00:00:34.959
+Para isso vamos abrir de novo o Stata
+e carregar a mesma base de dados
+
+7
+00:00:34.959 --> 00:00:40.533
+do exercicio anterior, que é aquela
+base de dados de creme dentais.
+
+8
+00:00:40.533 --> 00:00:45.659
+Eu tô indo agora pouco mais rápido,
+uma vez que você já viu a solução
+
+9
+00:00:45.659 --> 00:00:50.239
+desse exercicio de uma
+maneira bastante detalhada.
+
+10
+00:00:50.239 --> 00:00:57.120
+Você se lembra que a gente
+aqui fez o nosso comando,
+
+11
+00:00:57.120 --> 00:01:02.505
+que a gente pode digitar aqui agora,
+
+12
+00:01:02.505 --> 00:01:07.890
+o comando de fazer clusters
+através do método de Ward.
+
+13
+00:01:07.890 --> 00:01:12.400
+A gente pode escrever aqui "cluster
+
+14
+00:01:12.400 --> 00:01:19.140
+wardslinkage (espaço)
+
+15
+00:01:19.140 --> 00:01:24.130
+V*"- para pegar todas as variáveis- ",
+
+16
+00:01:24.130 --> 00:01:29.510
+measure
+
+17
+00:01:29.510 --> 00:01:34.700
+[L2
+
+18
+00:01:34.700 --> 00:01:41.460
+squared]".
+
+19
+00:01:41.460 --> 00:01:46.922
+Quando a gente dá esse comando,
+
+20
+00:01:46.922 --> 00:01:52.028
+a gente já viu o comando anteriormente,
+na nossa base de dados é criada as
+
+21
+00:01:52.028 --> 00:01:56.813
+colunas com as
+
+22
+00:01:56.813 --> 00:02:01.260
+distâncias euclidianas
+medidas pelo método de Ward.
+
+23
+00:02:01.260 --> 00:02:06.450
+A partir daí a gente tem que
+dar aquele comando que vai nos
+
+24
+00:02:06.450 --> 00:02:11.772
+permitir gerar as 3 colunas e para
+isso eu vou deslocar o nosso cursor
+
+25
+00:02:11.772 --> 00:02:17.020
+de novo e clicar no comando
+de "Postclustering" que
+
+26
+00:02:17.020 --> 00:02:22.246
+é de "summary variables" que vai permitir
+
+27
+00:02:22.246 --> 00:02:26.653
+que eu volte a colocar as minhas,
+
+28
+00:02:26.653 --> 00:02:31.791
+eu vou colocar agora o nome de "cluster_3"
+
+29
+00:02:31.791 --> 00:02:35.610
+e dizer pro Stata que eu quero 3 grupos.
+
+30
+00:02:35.610 --> 00:02:42.090
+Note que da minha base de dados eu tenho
+agora os grupos definidos de 1 a 3.
+
+31
+00:02:42.090 --> 00:02:49.530
+Como é que a gente pode fazer esses
+mesmos 3 grupos usando o método K-Means?
+
+32
+00:02:49.530 --> 00:02:54.800
+Eu vou de novo aqui colocar
+o meu cursor mais para baixo
+
+33
+00:02:54.800 --> 00:02:59.807
+e clicar em "estatísticas",
+"análises multi variada",
+
+34
+00:02:59.807 --> 00:03:03.620
+"cluster", "cluster data" e agora
+eu venho aqui em "K-Means".
+
+35
+00:03:03.620 --> 00:03:09.409
+O método K-Means permite que
+eu coloque aqui as variáveis,
+
+36
+00:03:09.409 --> 00:03:15.479
+de novo "V*" e aqui é que eu tenho
+que definir o número de grupos.
+
+37
+00:03:15.479 --> 00:03:20.281
+É grupo, o número de grupos é definido
+na priori, como a gente já explicou na
+
+38
+00:03:20.281 --> 00:03:26.021
+vídeo-aula, a gente pode escolher 2,
+3, 4, quantos grupos a gente quiser.
+
+39
+00:03:26.021 --> 00:03:30.566
+Eu vou definir como sendo 2 grupos,
+uma vez que, perdão,
+
+40
+00:03:30.566 --> 00:03:35.037
+3 grupos, uma vez que eu quero
+realmente comparar com a solução obtida
+
+41
+00:03:35.037 --> 00:03:38.920
+através da clusterização
+pelo método de Ward.
+
+42
+00:03:38.920 --> 00:03:43.888
+Agora eu vou colocar aqui já a distância
+euclidiana ao quadrado e eu posso dar o
+
+43
+00:03:43.888 --> 00:03:47.552
+nome para essa clusterização
+de "cluster_ k3",
+
+44
+00:03:47.552 --> 00:03:53.580
+k para lembrar que é do K-Means e
+3 para lembrar que são 3 grupos.
+
+45
+00:03:53.580 --> 00:03:58.424
+De novo,
+eu vou agora na minha base de dados e
+
+46
+00:03:58.424 --> 00:04:02.945
+eu gostaria de pedir para você
+comparar esta solução com esta.
+
+47
+00:04:02.945 --> 00:04:09.764
+Olha só, o que era grupo 1 virou grupo3,
+o que era grupo 2 virou grupo 1,
+
+48
+00:04:09.764 --> 00:04:15.420
+o que era grupo 1 virou grupo 3,
+o que era grupo 3 virou grupo 2,
+
+49
+00:04:15.420 --> 00:04:21.330
+mas existe sim uma grande correspondência,
+tirando o nome do grupo.
+
+50
+00:04:21.330 --> 00:04:26.877
+Isso eu posso fazer agora
+uma tabela comparativa
+
+51
+00:04:26.877 --> 00:04:32.090
+com as variáveis "V*" agrupadas
+
+52
+00:04:32.090 --> 00:04:38.985
+tanto pela clusterização como
+3 grupos e aquela mesma tabela
+
+53
+00:04:38.985 --> 00:04:44.547
+que vocês já viram,
+como eu posso fazer também a mesma tabela,
+
+54
+00:04:44.547 --> 00:04:48.860
+mas agora fazendo com a variável
+
+55
+00:04:48.860 --> 00:04:54.196
+agrupamento com o método de K-Means,
+
+56
+00:04:54.196 --> 00:04:59.277
+e vocês estão vendo aqui que,
+comparando a solução de
+
+57
+00:04:59.277 --> 00:05:04.650
+cima com a de baixo,
+elas são rigorosamente iguais,
+
+58
+00:05:04.650 --> 00:05:09.019
+a única diferença é que
+o grupo 1 virou grupo 3,
+
+59
+00:05:09.019 --> 00:05:14.492
+o grupo 2 virou grupo 1 e o
+grupo 3 virou o grupo número 2.
+
+60
+00:05:14.492 --> 00:05:18.028
+As conclusões de marketing são as mesmas e
+
+61
+00:05:18.028 --> 00:05:22.387
+agora você tem os mesmos clusters
+também feito pelo método K-Means.
+
+62
+00:05:22.387 --> 00:05:26.120
+Você se lembra naquele exercício
+que nos fizemos em Excel,
+
+63
+00:05:26.120 --> 00:05:30.338
+que quando a idade era medida em anos,
+a idade era medida em meses,
+
+64
+00:05:30.338 --> 00:05:34.603
+havia uma grande distorção no
+cálculo da distância euclidiana.
+
+65
+00:05:34.603 --> 00:05:38.777
+Nós precisamos sempre ter as variáveis
+medidas nas mesmas dimensões,
+
+66
+00:05:38.777 --> 00:05:42.530
+nas mesmas unidades, se não a análise
+de cluster fica distorcida.
+
+67
+00:05:42.530 --> 00:05:45.732
+O que fazer então quando
+você tem uma base de dados
+
+68
+00:05:45.732 --> 00:05:50.301
+onde se tem uma variável que é renda
+medida de milhares de reais por ano,
+
+69
+00:05:50.301 --> 00:05:54.521
+ou uma outra variável que é a idade, uma
+variável que pode ser o número de filhos?
+
+70
+00:05:54.521 --> 00:05:57.080
+Você tem que primeiro
+padronizar as variaveis.
+
+71
+00:05:57.080 --> 00:05:59.889
+Nesta base de dados eu não
+precisaria padronizar porque
+
+72
+00:05:59.889 --> 00:06:03.592
+as minhas variáveis estão todas na
+mesma escala, que é a escala Linkert,
+
+73
+00:06:03.592 --> 00:06:08.228
+mas mesmo assim eu quero mostrar para
+você o comando pra quando você precisar.
+
+74
+00:06:08.228 --> 00:06:12.954
+Você tem que vir aqui em "data",
+"create or change variables" e nesta
+
+75
+00:06:12.954 --> 00:06:18.470
+posição você clica 'create
+new variables extended'.
+
+76
+00:06:18.470 --> 00:06:24.560
+Você quer criar na verdade, vamos chamar a
+variável V1 e vamos colocar na frente dela
+
+77
+00:06:24.560 --> 00:06:31.038
+a letra Z para identificar que é o
+nosso Z score ou variável padronizada.
+
+78
+00:06:31.038 --> 00:06:36.135
+A variável padronizada aparece
+aqui neste comando 'standard
+
+79
+00:06:36.135 --> 00:06:41.287
+deviation' e neste lugar aqui de
+"expression" você clica e você
+
+80
+00:06:41.287 --> 00:06:48.083
+diz que o que você quer é que pegue a
+variável V1, clica na variável V1 e dá OK.
+
+81
+00:06:48.083 --> 00:06:53.552
+Nesse momento, o meu banco de
+dados vai criar uma variável
+
+82
+00:06:53.552 --> 00:07:00.180
+chamada zV1 que é a V1 padronizada com
+média igual a 0, desvio padrão igual a 1.
+
+83
+00:07:00.180 --> 00:07:05.131
+Dá OK, imediatamente o meu banco
+de dados agora tem uma nova
+
+84
+00:07:05.131 --> 00:07:08.970
+variável que é a variável zV1.
+
+85
+00:07:08.970 --> 00:07:13.938
+Se você duvida, você pode até colocar "sum
+
+86
+00:07:13.938 --> 00:07:18.367
+z V1" para ver se a média dá
+0 e o desvio padrão dá 1.
+
+87
+00:07:18.367 --> 00:07:23.424
+Média praticamente 0,
+como você está vendo elevado a -08,
+
+88
+00:07:23.424 --> 00:07:27.125
+é número muito próximo de
+0 e o desvio padrão é 1.
+
+89
+00:07:27.125 --> 00:07:28.981
+Portanto, toda a vez que você for
+
+90
+00:07:28.981 --> 00:07:33.670
+usar banco de dados que as variáveis
+tiverem medidas em unidades diferentes,
+
+91
+00:07:33.670 --> 00:07:39.070
+padronize, padronize antes, que assim
+a sua análise de cluster vai ser sucesso.
+
+92
+00:07:39.070 --> 00:07:47.070
+Até breve!

@@ -1,0 +1,670 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.329
+[MÚSICA] Olá a todos!
+
+2
+00:00:08.329 --> 00:00:13.620
+Continuando aqui o nosso
+hands on de refatoração.
+
+3
+00:00:13.620 --> 00:00:18.954
+Agora, depois que nós extraímos esses
+
+4
+00:00:18.954 --> 00:00:23.819
+dois métodos aqui dessa classe,
+desse método maior statement não é?
+
+5
+00:00:23.819 --> 00:00:27.179
+Que ele já até cabe na tela,
+não está 100% não,
+
+6
+00:00:27.179 --> 00:00:32.350
+mas vamos deixar ele pouquinho aí,
+e vamos focar nesses outros dois aqui,
+
+7
+00:00:32.350 --> 00:00:35.910
+que é o método getFrequentRenterPoints
+e o getAmount.
+
+8
+00:00:35.910 --> 00:00:41.723
+O grande problema deles é que claramente
+eles não pertencem a essa classe não é?
+
+9
+00:00:41.723 --> 00:00:45.472
+Você por exemplo como
+cliente de uma locadora,
+
+10
+00:00:45.472 --> 00:00:50.456
+não é a sua responsabilidade saber
+quantos pontos de, quanto que é o
+
+11
+00:00:50.456 --> 00:00:55.720
+ponto de frequência de uma locação ou
+saber quanto custa uma locação está?
+
+12
+00:00:55.720 --> 00:00:58.370
+Você tem que saber quantas
+locações você tem.
+
+13
+00:00:58.370 --> 00:01:01.996
+Mas você não tem que saber quanto
+que a locação custa não é?
+
+14
+00:01:01.996 --> 00:01:06.466
+Isso aí você pode até precisar para
+calcular de repente quanto você já gastou,
+
+15
+00:01:06.466 --> 00:01:09.340
+mas você vai usar uma
+colaboração com a outra classe,
+
+16
+00:01:09.340 --> 00:01:12.825
+você não vai ter esse método
+dentro da classe Customer.
+
+17
+00:01:12.825 --> 00:01:17.557
+Então o que a gente vai ter
+aqui é mover esses métodos,
+
+18
+00:01:17.557 --> 00:01:19.974
+está, para as outras classes.
+
+19
+00:01:19.974 --> 00:01:21.972
+Como que a gente vai fazer isso?
+
+20
+00:01:21.972 --> 00:01:26.050
+A gente vai vir aqui no Eclipse
+e vai usar a refatoração "Move".
+
+21
+00:01:26.050 --> 00:01:27.052
+Está?
+
+22
+00:01:27.052 --> 00:01:35.571
+Observe que ele já sugere que você
+mova para a classe Rental, está?
+
+23
+00:01:35.571 --> 00:01:36.238
+Por quê?
+
+24
+00:01:36.238 --> 00:01:39.035
+Porque ela é o parâmetro aqui, está?
+
+25
+00:01:39.035 --> 00:01:42.266
+Então ele, o nome do método, não é,
+
+26
+00:01:42.266 --> 00:01:47.985
+getFrequentRenterPoints, eu vou dar ok,
+está?
+
+27
+00:01:47.985 --> 00:01:55.370
+Ele deu uma reclamada porque o método era
+privado, mas eu vou mandar ele continuar.
+
+28
+00:01:55.370 --> 00:01:59.868
+Então ele vai tirar aquele método daqui,
+
+29
+00:01:59.868 --> 00:02:03.606
+vai passar aqui para a classe Rental,
+está?
+
+30
+00:02:03.606 --> 00:02:08.346
+A gente pode vir aqui, eu vou até
+corrigir aqui a visibilidade dele,
+
+31
+00:02:08.346 --> 00:02:10.933
+deixando como público, não é?
+
+32
+00:02:10.933 --> 00:02:13.800
+Porque o Customer vai precisar.
+
+33
+00:02:13.800 --> 00:02:14.632
+Está?
+
+34
+00:02:14.632 --> 00:02:22.118
+E a gente percebe aqui que,
+ao invés de ele dar esse each aqui não é?
+
+35
+00:02:22.118 --> 00:02:28.460
+Passr ele como parâmetro,
+agora é each.getFrequentRenterPoints.
+
+36
+00:02:28.460 --> 00:02:31.452
+Ele está pegando da locação.
+
+37
+00:02:31.452 --> 00:02:34.070
+Faz mais sentido.
+
+38
+00:02:34.070 --> 00:02:36.602
+Bom e vamos fazer a mesma coisa não é?
+
+39
+00:02:36.602 --> 00:02:40.811
+A gente pode até olhar aqui ó,
+como é que está aqui o getAmount.
+
+40
+00:02:40.811 --> 00:02:42.275
+Então getAmount each.
+
+41
+00:02:42.275 --> 00:02:45.210
+Vamos ver como é que vai
+ficar depois aqui não é?
+
+42
+00:02:45.210 --> 00:02:52.331
+Então vamos, a gente vem aqui de novo,
+dá Move nesse método e vamos dar Ok.
+
+43
+00:02:52.331 --> 00:02:58.672
+Ele vai reclamar a mesma coisa lá
+relacionada à visibilidade, está?
+
+44
+00:02:58.672 --> 00:03:04.800
+E agora a gente tem
+aqui ó: each.getAmount.
+
+45
+00:03:04.800 --> 00:03:10.614
+Então ele cria aqui esse thisAmount não é?
+
+46
+00:03:10.614 --> 00:03:19.261
+Colocando esse each.getAmount e aqui
+é each.getFrequentRenterPoints.
+
+47
+00:03:19.261 --> 00:03:21.680
+Bom, mas vamos lá para o Rental.
+
+48
+00:03:21.680 --> 00:03:26.670
+Vamos colocar aqui como public está?
+
+49
+00:03:26.670 --> 00:03:31.159
+Bom, na minha opinião,
+quem deveria saber quantos pontos de
+
+50
+00:03:31.159 --> 00:03:35.645
+frequência vale não ê, não é a locação.
+
+51
+00:03:35.645 --> 00:03:39.794
+A locação até deveria saber isso,
+
+52
+00:03:39.794 --> 00:03:45.580
+mas ela depende muito mais do
+filme do que da locação não é?
+
+53
+00:03:45.580 --> 00:03:51.460
+Então quem sabe, a locação a informação
+principal dela é quantidade de dias.
+
+54
+00:03:51.460 --> 00:03:55.640
+Mas o filme,
+ele tem uma certa colaboração,
+
+55
+00:03:55.640 --> 00:03:59.820
+principalmente na questão do código
+dele não é, o tipo do filme.
+
+56
+00:03:59.820 --> 00:04:08.042
+Então eu também vou transferir isso
+daqui para a minha classe Movie está?
+
+57
+00:04:08.042 --> 00:04:12.831
+Obviamente aqui a quantidade
+de dias estão aqui.
+
+58
+00:04:12.831 --> 00:04:17.806
+Então eu vou manter esse método
+getFrequentRenterPoints aqui e eu
+
+59
+00:04:17.806 --> 00:04:22.797
+vou ter outro método, lá na minha classe
+Movie, para quem eu vou falar assim
+
+60
+00:04:22.797 --> 00:04:27.882
+ó: Me dá o
+getFrequentRenterPoints para essa
+
+61
+00:04:27.882 --> 00:04:33.491
+quantidade de dias ou me dá o amount
+para essa quantidade de dias.
+
+62
+00:04:33.491 --> 00:04:36.730
+Então eu vou ter o
+método nas duas classes,
+
+63
+00:04:36.730 --> 00:04:41.090
+só que eu vou passar como
+parâmetro a quantidade de dias.
+
+64
+00:04:41.090 --> 00:04:47.261
+Então eu vou clicar aqui de novo,
+eu vou vir Refactor Move, está?
+
+65
+00:04:47.261 --> 00:04:54.203
+Então ele está passando,
+ele está oferecendo não é, a classe Movie,
+
+66
+00:04:54.203 --> 00:04:59.287
+eu vou marcar aqui ó: Keep original
+method as delegated to moved method.
+
+67
+00:04:59.287 --> 00:05:00.936
+O quê que significa isso?
+
+68
+00:05:00.936 --> 00:05:04.227
+Significa que,
+apesar de eu estar movendo o método,
+
+69
+00:05:04.227 --> 00:05:10.054
+eu vou manter ele na minha classe e
+ele vai chamar o outro método está?
+
+70
+00:05:10.054 --> 00:05:12.910
+Então eu vou dar ok aqui.
+
+71
+00:05:12.910 --> 00:05:17.334
+A gente vai ver que o Eclipse não vai
+fazer exatamente da forma que a gente
+
+72
+00:05:17.334 --> 00:05:20.530
+gostaria, mas ele já
+adianta bastante trabalho.
+
+73
+00:05:20.530 --> 00:05:23.480
+Então eu fiz dessa vez
+o getAmount primeiro,
+
+74
+00:05:23.480 --> 00:05:28.150
+então eu vou lá na classe Movie para
+ver como é que está o getAmount dele.
+
+75
+00:05:28.150 --> 00:05:31.430
+Ele está passando o próprio Rental.
+
+76
+00:05:31.430 --> 00:05:34.210
+Eu não quero que ele passe o Rental,
+
+77
+00:05:34.210 --> 00:05:38.020
+eu quero que ele passe
+a quantidade de dias não é?
+
+78
+00:05:38.020 --> 00:05:43.500
+Então vai ser aqui ó,
+eu vou passar o daysRented como parâmetro.
+
+79
+00:05:43.500 --> 00:05:48.060
+Obviamente isso vai dar
+problema aqui no Movie.
+
+80
+00:05:48.060 --> 00:05:51.166
+Note que ele estava fazendo
+rental.getMovie não é?
+
+81
+00:05:51.166 --> 00:05:52.620
+Eu não quero nada disso.
+
+82
+00:05:52.620 --> 00:05:57.802
+Então aqui eu vou ter aqui inteiro
+
+83
+00:05:57.802 --> 00:06:02.755
+que é o daysRented e aqui ó,
+
+84
+00:06:02.755 --> 00:06:06.418
+eu vou eliminar tudo isso daqui, eu não
+preciso ir lá no Rental para pegar o
+
+85
+00:06:06.418 --> 00:06:11.480
+Movie, eu posso simplesmente
+dar o getPriceCode não é?
+
+86
+00:06:11.480 --> 00:06:16.486
+E nesse rental.getDaysRented
+é simplesmente o parâmetro
+
+87
+00:06:16.486 --> 00:06:21.820
+daysRented que eu estou passando ali,
+então vamos lá.
+
+88
+00:06:21.820 --> 00:06:26.372
+Note, esse é exemplo de que eu posso ter
+
+89
+00:06:26.372 --> 00:06:30.152
+métodos que são,
+tem até o mesmo nome não é?
+
+90
+00:06:30.152 --> 00:06:34.560
+Podem ter parâmetros diferentes,
+como é o caso aqui.
+
+91
+00:06:34.560 --> 00:06:40.914
+E é, é, e colabora com o outro não é?
+
+92
+00:06:40.914 --> 00:06:43.760
+Eles têm significados diferentes não é?
+
+93
+00:06:43.760 --> 00:06:48.035
+Quando eu viro e falo assim: olha,
+eu quero a quantidade,
+
+94
+00:06:48.035 --> 00:06:53.010
+eu quero saber quanto custou essa locação,
+é uma coisa,
+
+95
+00:06:53.010 --> 00:06:58.721
+ou eu quero saber quanto, quanto custa
+esse filme para a quantidade x de dias.
+
+96
+00:06:58.721 --> 00:07:01.759
+Note que,
+apesar do nome do método ser o mesmo,
+
+97
+00:07:01.759 --> 00:07:04.680
+o significado dele cada
+classe é diferente.
+
+98
+00:07:04.680 --> 00:07:11.136
+Então implementei aqui
+o meu getAmount não é?
+
+99
+00:07:11.136 --> 00:07:17.780
+Note que ele não depende mais do,
+do, da classe Rental.
+
+100
+00:07:17.780 --> 00:07:19.427
+Eu vou salvar aqui não é?
+
+101
+00:07:19.427 --> 00:07:24.060
+Está tudo compilando, eu vou rodar
+os testes para ver se está tudo ok.
+
+102
+00:07:24.060 --> 00:07:27.120
+Vamos torcer, tudo certo.
+
+103
+00:07:27.120 --> 00:07:31.979
+Vamos voltar lá na classe Rental
+e vamos fazer a mesma coisa
+
+104
+00:07:31.979 --> 00:07:34.960
+para o getFrequentRenterPoints.
+
+105
+00:07:34.960 --> 00:07:40.439
+Então vamos dar Refactor Move está?
+
+106
+00:07:40.439 --> 00:07:45.200
+A gente marca ali para ele
+manter o método original.
+
+107
+00:07:45.200 --> 00:07:51.704
+[SEM ÁUDIO] Ó lá, ele vai delegar.
+
+108
+00:07:51.704 --> 00:07:57.942
+Aqui também eu não quero que ele
+passe toda a classe Rental não é?
+
+109
+00:07:57.942 --> 00:08:02.352
+Até mesmo para,
+para o Movie não ter que pegar lá,
+
+110
+00:08:02.352 --> 00:08:05.300
+rental getMovie getPriceCode não é?
+
+111
+00:08:05.300 --> 00:08:08.650
+Ele precisa só da quantidade de dias aqui.
+
+112
+00:08:08.650 --> 00:08:13.321
+Então da mesma forma ele vai
+passar aqui o daysRented também
+
+113
+00:08:13.321 --> 00:08:16.030
+para o getFrequentRenterPoints.
+
+114
+00:08:16.030 --> 00:08:20.130
+Então vamos salvar aqui,
+
+115
+00:08:20.130 --> 00:08:24.134
+precisamos arrumar aqui.
+
+116
+00:08:24.134 --> 00:08:27.394
+Então int daysRented.
+
+117
+00:08:27.394 --> 00:08:32.680
+Aqui ó, eu posso tirar isso tudo aqui ó,
+
+118
+00:08:32.680 --> 00:08:39.034
+e deixar só o getPriceCode não é?
+
+119
+00:08:39.034 --> 00:08:44.401
+E aqui vai ficar só o
+daysRented maior que 1 está?
+
+120
+00:08:44.401 --> 00:08:47.466
+Eu posso até agora, ficou pequenininho,
+
+121
+00:08:47.466 --> 00:08:52.709
+eu posso até já botar na mesma linha,
+tirar esse parêntese aquinão é?
+
+122
+00:08:52.709 --> 00:08:57.708
+Deixar só, qualquer coisa eu poderia
+deixar só o NEW_RELEASE sem precisar fazer
+
+123
+00:08:57.708 --> 00:08:58.958
+referência a Movie.
+
+124
+00:08:58.958 --> 00:09:04.960
+Eu vou deixar ali, porque não está,
+mal não está fazendo está?
+
+125
+00:09:04.960 --> 00:09:10.390
+Então a gente vê que o código realmente
+acaba ficando mais simples não é?
+
+126
+00:09:10.390 --> 00:09:12.728
+Então eu vou salvar aqui.
+
+127
+00:09:12.728 --> 00:09:18.694
+Opa, o meu rental aqui ainda
+não está não agora, agora sim.
+
+128
+00:09:18.694 --> 00:09:23.705
+Eu vou rodar os testes e vamos ver aqui ó.
+
+129
+00:09:23.705 --> 00:09:24.860
+Rodou?
+
+130
+00:09:24.860 --> 00:09:27.404
+Ó foi tão rápido, que eu nem vi.
+
+131
+00:09:27.404 --> 00:09:29.666
+Isso, está tudo verdinho.
+
+132
+00:09:29.666 --> 00:09:35.146
+Então eu peguei aqueles
+métodos que não pertenciam
+
+133
+00:09:35.146 --> 00:09:40.700
+à classe Customer,
+passei para a classe Rental não é?
+
+134
+00:09:40.700 --> 00:09:46.597
+Aí eu mantive eles aqui sem
+nenhum parâmetro e criei
+
+135
+00:09:46.597 --> 00:09:51.552
+método auxiliar, digamos assim:
+complementar na classe Movie.
+
+136
+00:09:51.552 --> 00:09:54.273
+Só que agora eu passo
+a quantidade de dias.
+
+137
+00:09:54.273 --> 00:09:56.780
+Então quem sabe o seu preço é o filme,
+
+138
+00:09:56.780 --> 00:10:01.200
+só que ele sabe o seu preço baseado na
+quantidade de dias que eu passar para ele.
+
+139
+00:10:01.200 --> 00:10:01.789
+Certo?
+
+140
+00:10:01.789 --> 00:10:06.220
+Então avançamos pouco mais
+na nossa refatoração Switch
+
+141
+00:10:06.220 --> 00:10:10.392
+case é negócio que me dá coceira não é?
+
+142
+00:10:10.392 --> 00:10:13.106
+Vamos trabalhar com isso
+no nosso próximo vídeo.
+
+143
+00:10:13.106 --> 00:10:17.678
+Então continue assistindo
+a sequência aí de refatoração.
+
+144
+00:10:17.678 --> 00:10:19.160
+Até a próxima!
+
+145
+00:10:19.160 --> 00:10:24.920
+[MÚSICA]

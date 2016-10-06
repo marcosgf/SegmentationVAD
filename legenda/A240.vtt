@@ -1,0 +1,284 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:17.356
+[MÚSICA] E aí, pessoal, tudo bem?
+
+3
+00:00:17.356 --> 00:00:23.210
+Nessa aula iremos conhecer pouco sobre
+variáveis e constantes na linguagem Swift.
+
+4
+00:00:23.210 --> 00:00:27.500
+O Xcode disponibiliza uma
+ferramenta chamada Playground,
+
+5
+00:00:27.500 --> 00:00:32.950
+onde podemos escrever linhas de código em
+Swift e ver o resultado em tempo real,
+
+6
+00:00:32.950 --> 00:00:36.080
+sem precisar compilar ou criar aplicativo.
+
+7
+00:00:36.080 --> 00:00:40.770
+Essa ferramenta é ótima para fazer testes
+rápidos e para aprender a linguagem.
+
+8
+00:00:40.770 --> 00:00:44.900
+Abra o Xcode.
+
+9
+00:00:44.900 --> 00:00:49.950
+Clique em File, New,
+
+10
+00:00:49.950 --> 00:00:54.925
+Playground, escolha nome para o arquivo,
+selecione a plataforma iOS,
+
+11
+00:00:54.925 --> 00:00:58.980
+clique em Next e escolha
+a pasta onde deseja gravar.
+
+12
+00:00:58.980 --> 00:01:03.480
+O arquivo já vem com 3 linhas de código.
+
+13
+00:01:03.480 --> 00:01:07.980
+A 1ª é uma linha comentada que não
+tem efeito na execução do código.
+
+14
+00:01:07.980 --> 00:01:13.011
+A 2ª linha importa a biblioteca UIKit,
+que provê a infraestrutura
+
+15
+00:01:13.011 --> 00:01:17.130
+para eventos e gerenciamentos dos
+elementos de interface do aplicativo.
+
+16
+00:01:17.130 --> 00:01:21.416
+A 3ª linha cria uma variável
+chamada str que recebe uma string
+
+17
+00:01:21.416 --> 00:01:24.230
+representada por texto entre aspas.
+
+18
+00:01:24.230 --> 00:01:28.200
+Ao lado direito o Playground mostra
+em tempo real o valor da variável.
+
+19
+00:01:28.200 --> 00:01:29.769
+Note que na linguagem Swift,
+
+20
+00:01:29.769 --> 00:01:33.050
+não é necessário adicionar ponto
+e vírgula no final da linha.
+
+21
+00:01:33.050 --> 00:01:36.179
+Mas aceita caso você queira colocar.
+
+22
+00:01:36.179 --> 00:01:40.016
+O Swift infere o tipo da variável,
+por exemplo,
+
+23
+00:01:40.016 --> 00:01:44.590
+nessa linha o Swift já entende que
+a variável str é do tipo string,
+
+24
+00:01:44.590 --> 00:01:48.130
+mas você também tem a opção de
+explicitar o tipo caso queira.
+
+25
+00:01:48.130 --> 00:01:51.330
+Vamos criar uma variável
+com valor numérico inteiro.
+
+26
+00:01:51.330 --> 00:01:56.225
+Assim como nas outras linguagens,
+o 1º caractere de nome de uma variável não
+
+27
+00:01:56.225 --> 00:01:59.905
+pode ser número e pelas boas
+práticas de programação,
+
+28
+00:01:59.905 --> 00:02:04.818
+é recomendável que a 1ª letra do nome
+da variável seja sempre em minúscula e
+
+29
+00:02:04.818 --> 00:02:07.824
+a 1ª letra das palavras
+seguintes seja maiúscula.
+
+30
+00:02:07.824 --> 00:02:12.385
+Também é recomendável sempre dar nomes
+em inglês, mas para efeitos didáticos,
+
+31
+00:02:12.385 --> 00:02:16.140
+nessas primeiras aulas usaremos
+nomes e comentários em português.
+
+32
+00:02:16.140 --> 00:02:19.700
+Nessa linha, o Swift infere
+que a varável é do tipo Int,
+
+33
+00:02:19.700 --> 00:02:23.720
+uma vez inferido o tipo da variável,
+não é mais possível trocá-lo.
+
+34
+00:02:23.720 --> 00:02:27.940
+Se você tentar atribuir uma string
+nessa variável Int, por exemplo,
+
+35
+00:02:27.940 --> 00:02:33.560
+é mostrada uma mensagem de erro.
+
+36
+00:02:33.560 --> 00:02:39.180
+Você pode explicitar o
+tipo Int dessa forma.
+
+37
+00:02:39.180 --> 00:02:43.127
+Para mostrar o poder dessa
+ferramenta de Playground,
+
+38
+00:02:43.127 --> 00:02:47.090
+vamos fazer uma soma entre
+esses 2 valores inteiros.
+
+39
+00:02:47.090 --> 00:02:51.130
+Note que do lado direito é mostrado
+o valor da variável em tempo real,
+
+40
+00:02:51.130 --> 00:02:53.860
+sem a necessidade de
+imprimi-lo no Console.
+
+41
+00:02:53.860 --> 00:02:57.910
+Podemos criar também variáveis
+com valores numéricos decimais.
+
+42
+00:02:57.910 --> 00:03:02.320
+Double é o tipo usado para
+representar números decimais.
+
+43
+00:03:02.320 --> 00:03:06.960
+Operações numéricas podem ser feitas
+apenas entre varáveis do mesmo tipo,
+
+44
+00:03:06.960 --> 00:03:11.910
+não é possível, por exemplo, fazer cálculo
+entre uma variável Int e uma Double.
+
+45
+00:03:11.910 --> 00:03:15.538
+Para fazer esse cálculo e obter
+resultado decimal você deve criar
+
+46
+00:03:15.538 --> 00:03:17.760
+Double com o valor do inteiro dessa forma.
+
+47
+00:03:17.760 --> 00:03:22.250
+Outro tipo muito utilizado
+é o tipo Booleano
+
+48
+00:03:22.250 --> 00:03:26.730
+para representar varáveis de 2 estados,
+verdadeiro ou falso.
+
+49
+00:03:26.730 --> 00:03:32.070
+Existem muitos outros tipo e variações
+de tipos na linguagem Swift,
+
+50
+00:03:32.070 --> 00:03:37.960
+mas esses 4 serão os mais utilizados:
+String, Int, Double e Bool.
+
+51
+00:03:37.960 --> 00:03:41.870
+Vamos ver agora o conceito de
+constante que o Swift nos oferece.
+
+52
+00:03:41.870 --> 00:03:46.030
+Para criar uma constante,
+ao invés de usar var, digite let.
+
+53
+00:03:46.030 --> 00:03:50.010
+Como o nome já diz, o valor da
+constante não pode ser alterado.
+
+54
+00:03:50.010 --> 00:03:54.150
+Se você tentar atribuir outro valor,
+uma mensagem de erro é mostrada.
+
+55
+00:03:54.150 --> 00:03:58.890
+As constantes servem para deixar
+o código mais seguro e limpo.
+
+56
+00:03:58.890 --> 00:04:01.876
+Então utilize sempre constantes
+ao invés de variáveis,
+
+57
+00:04:01.876 --> 00:04:05.370
+quando você tiver valor que não
+se altera no decorrer do código.
+
+58
+00:04:05.370 --> 00:04:10.304
+Na próxima aula veremos comandos
+básicos da linguagem Swift.
+
+59
+00:04:10.304 --> 00:04:10.960
+Até lá.

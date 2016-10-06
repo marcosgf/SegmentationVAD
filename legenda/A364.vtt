@@ -1,0 +1,616 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.772
+Após esse vídeo, você será capaz
+de explicar a aproximação da
+
+2
+00:00:04.772 --> 00:00:09.290
+resposta de sistemas de segunda ordem pela
+resposta de sistemas de primeira ordem.
+
+3
+00:00:09.290 --> 00:00:14.405
+Vamos analisar a resposta ao degrau do
+sistema representado pela seguinte função
+
+4
+00:00:14.405 --> 00:00:19.520
+de transferência: G de s igual
+a 10 sobre s mais 1 s mais 10.
+
+5
+00:00:19.520 --> 00:00:24.374
+Vamos criar uma simulação no Simulink para
+ver que a resposta ao degrau desta função
+
+6
+00:00:24.374 --> 00:00:29.387
+de transferência de segunda ordem pode
+ser aproximada pela resposta ao degrau da
+
+7
+00:00:29.387 --> 00:00:34.300
+função de transferência de primeira
+ordem G1 de s igual a 1 sobre s mais 1.
+
+8
+00:00:34.300 --> 00:00:40.031
+Rode o Matlab e na aba Home
+clique New e Simulink Model,
+
+9
+00:00:40.031 --> 00:00:45.449
+escolha Blank Model,
+clique no menu View e Library Browser.
+
+10
+00:00:45.449 --> 00:00:49.002
+Continuous, arraste bloco Zero-Pole.
+
+11
+00:00:49.002 --> 00:00:53.460
+Sources bloco Step e Syncs bloco Scope.
+
+12
+00:00:53.460 --> 00:00:57.930
+Digite 2 Number of input ports do Scope,
+
+13
+00:00:57.930 --> 00:01:02.566
+copie e cole o bloco Zero-Pole,
+control c control v,
+
+14
+00:01:02.566 --> 00:01:06.740
+ou arraste outro bloco de
+Continuous como fez com o primeiro.
+
+15
+00:01:06.740 --> 00:01:09.750
+Eu acho que copiar e colar é mais rápido.
+
+16
+00:01:09.750 --> 00:01:15.020
+Clique e arraste da saída do
+Step até a entrada do primeiro
+
+17
+00:01:15.020 --> 00:01:20.290
+zero-pole e de novo da saída do zero-pole
+até a primeira entrada do Scope.
+
+18
+00:01:20.290 --> 00:01:25.114
+Agora pequeno truque: para
+criar uma ramificação da
+
+19
+00:01:25.114 --> 00:01:30.018
+saída do degrau, você precisa clicar
+com o botão direito sobre a linha que
+
+20
+00:01:30.018 --> 00:01:34.758
+liga o degrau ao primeiro zero-pole e
+arrastar, e não com o botão esquerdo.
+
+21
+00:01:34.758 --> 00:01:37.095
+Se você clicar com o botão esquerdo,
+
+22
+00:01:37.095 --> 00:01:41.160
+você só vai mover a ligação entre
+o Step e o primeiro zero-pole.
+
+23
+00:01:41.160 --> 00:01:47.200
+Então clique com o botão direito e arraste
+até a entrada do segundo zero-pole.
+
+24
+00:01:47.200 --> 00:01:51.630
+Clique e arraste com o botão
+direito ou esquerdo, tanto faz,
+
+25
+00:01:51.630 --> 00:01:56.060
+da saída do segundo zero-pole
+até a segunda entrada do Scope.
+
+26
+00:01:56.060 --> 00:02:01.043
+Agora dê duplo clique no primeiro
+zero-pole e vamos editar a função
+
+27
+00:02:01.043 --> 00:02:03.160
+de transferência fatorada.
+
+28
+00:02:03.160 --> 00:02:08.092
+O bloco zero-pole funciona exatamente
+com a função zpk que usamos na
+
+29
+00:02:08.092 --> 00:02:10.140
+linha de comando do Matlab.
+
+30
+00:02:10.140 --> 00:02:14.016
+Precisamos entrar com os zeros
+da função de transferência,
+
+31
+00:02:14.016 --> 00:02:15.690
+com os polos e com o ganho.
+
+32
+00:02:15.690 --> 00:02:19.301
+Nesse caso a função de
+transferência não tem zeros,
+
+33
+00:02:19.301 --> 00:02:22.510
+então apague o 1 e deixe
+apenas os colchetes.
+
+34
+00:02:22.510 --> 00:02:28.301
+E temos dois polos: menos 10 e
+menos 1 ou menos 1 e menos 10,
+
+35
+00:02:28.301 --> 00:02:31.543
+a ordem não importa, e o ganho é 10.
+
+36
+00:02:31.543 --> 00:02:38.130
+Clique Ok e a função de transferência
+fatorada aparecerá no bloco zero-pole.
+
+37
+00:02:38.130 --> 00:02:42.649
+Edite também o segundo
+zero-pole: duplo clique,
+
+38
+00:02:42.649 --> 00:02:47.250
+sem zeros, polo apenas menos
+1 e o ganho já é unitário.
+
+39
+00:02:47.250 --> 00:02:48.859
+Clique Ok.
+
+40
+00:02:48.859 --> 00:02:52.085
+Antes de rodar a simulação,
+
+41
+00:02:52.085 --> 00:02:56.920
+vamos salvar o nosso modelo:
+File Save ou Save as.
+
+42
+00:02:56.920 --> 00:02:59.847
+Eu vou chamar o meu modelo de jackman,
+hum!
+
+43
+00:02:59.847 --> 00:03:01.440
+Ou melhor controlita.
+
+44
+00:03:01.440 --> 00:03:05.620
+Clique Salvar,
+se você quiser pode salvar outra pasta.
+
+45
+00:03:05.620 --> 00:03:08.232
+Agora que já salvamos o nosso modelo,
+
+46
+00:03:08.232 --> 00:03:12.000
+podemos executar a simulação
+sem mais preocupações.
+
+47
+00:03:12.000 --> 00:03:16.820
+Clique no ícone de play,
+o triângulo preto dentro de círculo verde.
+
+48
+00:03:16.820 --> 00:03:19.970
+Duplo clique no Scope para ver as saídas.
+
+49
+00:03:19.970 --> 00:03:23.120
+Pode maximizar a janela para ver melhor.
+
+50
+00:03:23.120 --> 00:03:27.666
+As respostas não são idênticas,
+mas são bem parecidas.
+
+51
+00:03:27.666 --> 00:03:29.972
+Pense que, sistema real,
+
+52
+00:03:29.972 --> 00:03:34.120
+ambas as saídas não seriam tão
+bonitinhas e perfeitas assim.
+
+53
+00:03:34.120 --> 00:03:38.394
+Sistemas reais têm perturbações
+e o modelo não seria perfeito
+
+54
+00:03:38.394 --> 00:03:42.100
+e provavelmente teríamos
+pouco de ruído na saída.
+
+55
+00:03:42.100 --> 00:03:44.220
+Então, para efeitos práticos,
+
+56
+00:03:44.220 --> 00:03:48.671
+podemos considerar que a saída desse
+sistema de segunda ordem pode ser
+
+57
+00:03:48.671 --> 00:03:54.018
+aproximada pela saída desse sistema de
+primeira ordem para uma entrada degrau.
+
+58
+00:03:54.018 --> 00:03:57.341
+Vamos explorar pouco: que
+tal mudarmos o polo de
+
+59
+00:03:57.341 --> 00:04:01.660
+menos 10 para menos 100 e o ganho
+de 10 para 100 no primeiro sistema?
+
+60
+00:04:01.660 --> 00:04:07.430
+Duplo clique no primeiro zero-pole, mude
+o polo para menos 100 e o ganho para 100,
+
+61
+00:04:07.430 --> 00:04:10.860
+clique Ok e simule os sistemas novamente.
+
+62
+00:04:10.860 --> 00:04:16.290
+Duplo clique no Scope e note agora que as
+duas respostas ficaram muito próximas.
+
+63
+00:04:16.290 --> 00:04:22.341
+Vamos mudar agora o polo de menos 100
+para menos 2 e o ganho de 100 para 2.
+
+64
+00:04:22.341 --> 00:04:27.240
+Você sabe por que estamos alterando
+também o ganho e não apenas o polo?
+
+65
+00:04:27.240 --> 00:04:31.845
+Para manter o valor regime
+igual ao valor da entrada.
+
+66
+00:04:31.845 --> 00:04:36.450
+Se alterássemos o polo, mas não o ganho,
+o valor final da saída não seria mais 1.
+
+67
+00:04:36.450 --> 00:04:39.806
+Duplo clique no zero-pole,
+
+68
+00:04:39.806 --> 00:04:44.780
+troque o menos 100 por menos 2,
+o 100 por 2 e clique Ok.
+
+69
+00:04:44.780 --> 00:04:48.528
+Rode a simulação novamente
+e duplo clique no Scope.
+
+70
+00:04:48.528 --> 00:04:52.200
+Agora as saídas não estão
+mais tão parecidas não é?
+
+71
+00:04:52.200 --> 00:04:55.740
+Então o que está acontecendo?
+
+72
+00:04:55.740 --> 00:04:59.308
+Vamos voltar às funções
+de transferência e vamos
+
+73
+00:04:59.308 --> 00:05:03.930
+deixar o segundo polo literal
+1 menos a e o ganho será a.
+
+74
+00:05:03.930 --> 00:05:08.812
+A Transformada de Laplace
+da saída é G de s U de s
+
+75
+00:05:08.812 --> 00:05:11.876
+e nesse caso U de s é igual a 1 sobre s,
+
+76
+00:05:11.876 --> 00:05:17.016
+a transformada do degrau unitário,
+então temos Y de s é igual a a sobre
+
+77
+00:05:17.016 --> 00:05:22.420
+s s mais 1 s mais a e Y1 de s
+igual a 1 sobre s s mais 1.
+
+78
+00:05:22.420 --> 00:05:29.223
+Expandindo frações parciais: Y de
+s é igual a A sobre s mais B sobre
+
+79
+00:05:29.223 --> 00:05:35.720
+s mais 1 mais C sobre s mais a e o Y1 de
+s será A1 sobre s mais B1 sobre s mais 1,
+
+80
+00:05:35.720 --> 00:05:40.681
+onde o A é igual a 1,
+o B é menos a sobre a menos 1,
+
+81
+00:05:40.681 --> 00:05:46.130
+o C é 1 sobre a menos 1,
+o A1 é igual a 1 e o B1 é igual a menos 1.
+
+82
+00:05:46.130 --> 00:05:51.372
+Temos então Y de s igual a 1 sobre s menos
+
+83
+00:05:51.372 --> 00:05:56.598
+a sobre a menos 1 vezes 1 sobre s
+mais 1 mais 1 sobre a menos 1 vezes
+
+84
+00:05:56.598 --> 00:06:03.040
+1 sobre s mais a e Y1 de s é igual
+a 1 sobre s menos 1 sobre s mais 1.
+
+85
+00:06:03.040 --> 00:06:08.345
+E portanto o Y de t será 1 menos
+
+86
+00:06:08.345 --> 00:06:12.910
+a sobre a menos vezes e a menos
+t mais 1 sobre a menos 1 vezes e
+
+87
+00:06:12.910 --> 00:06:17.780
+a menos at e y1 será 1 menos e a menos t.
+
+88
+00:06:17.780 --> 00:06:23.121
+Se a for muito maior que 1, podemos
+fazer as seguintes aproximações: a sobre
+
+89
+00:06:23.121 --> 00:06:28.425
+1 menos a vai ser aproximadamente
+igual a a sobre menos a,
+
+90
+00:06:28.425 --> 00:06:34.030
+que é menos e, e 1 sobre a menos 1
+vai ser aproximadamente 1 sobre a.
+
+91
+00:06:34.030 --> 00:06:38.895
+E podemos aproximar o y de t
+
+92
+00:06:38.895 --> 00:06:43.760
+por: 1 menos e a menos t
+mais 1 sobre a e a menos at.
+
+93
+00:06:43.760 --> 00:06:46.165
+Note que, quanto maior a,
+
+94
+00:06:46.165 --> 00:06:51.510
+menor a contribuição do último
+termo na composição de y de t.
+
+95
+00:06:51.510 --> 00:06:56.870
+Além disso, quanto maior a mais
+rápido esse último termo irá para 0.
+
+96
+00:06:56.870 --> 00:06:58.520
+Por exemplo, se a for
+
+97
+00:06:58.520 --> 00:07:04.130
+10 ele tenderá a 0 10 vezes mais
+rápido que a exponencial de menos t.
+
+98
+00:07:04.130 --> 00:07:09.114
+Mas se a não for muito maior que 1,
+essas aproximações não
+
+99
+00:07:09.114 --> 00:07:13.600
+são tão válidas e o último termo
+não tende muito mais rápido a 0.
+
+100
+00:07:13.600 --> 00:07:17.770
+É o que aconteceu quando
+alteramos o polo para menos 2.
+
+101
+00:07:17.770 --> 00:07:21.910
+Vamos alterar pouco a nossa
+simulação para visualizar essa
+
+102
+00:07:21.910 --> 00:07:23.910
+aproximação de outra forma.
+
+103
+00:07:23.910 --> 00:07:27.314
+Vamos escrever nossa função de
+transferência de segunda ordem
+
+104
+00:07:27.314 --> 00:07:30.920
+como produto de duas funções de
+transferência de primeira ordem.
+
+105
+00:07:30.920 --> 00:07:36.480
+G de s é igual a 1 sobre s mais
+1 vezes 10 sobre s mais 10.
+
+106
+00:07:36.480 --> 00:07:42.316
+Altere a primeira função de transferência
+ou zero-pole para 10 sobre s mais 10,
+
+107
+00:07:42.316 --> 00:07:46.370
+isto é,
+deixe apenas polo menos 10 e o ganho 10.
+
+108
+00:07:46.370 --> 00:07:49.580
+Copie e cole o segundo zero-pole,
+
+109
+00:07:49.580 --> 00:07:55.332
+altere a posição do Scope de modo que
+a ligação entre a saída do primeiro
+
+110
+00:07:55.332 --> 00:07:59.990
+zero-pole e a entrada do Scope fique
+reta e com espaço suficiente para bloco.
+
+111
+00:07:59.990 --> 00:08:05.506
+Arraste o novo bloco que você acabou
+de criar para cima dessa ligação, mova
+
+112
+00:08:05.506 --> 00:08:11.790
+o bloco e você verá que ele foi inserido
+entre o primeiro zero-pole e o Scope.
+
+113
+00:08:11.790 --> 00:08:17.770
+Se preferir você pode apagar essa ligação
+e fazer as novas ligações manualmente,
+
+114
+00:08:17.770 --> 00:08:23.190
+rode a simulação e você verá as
+mesmas saídas da primeira simulação.
+
+115
+00:08:23.190 --> 00:08:26.469
+Agora copie e cole o Scope.
+
+116
+00:08:26.469 --> 00:08:31.470
+Uma das entradas será o degrau e a outra
+será a saída do primeiro zero-pole.
+
+117
+00:08:31.470 --> 00:08:34.870
+Lembre de clicar e arrastar
+com o botão direito.
+
+118
+00:08:34.870 --> 00:08:39.390
+Rode a simulação e veja o segundo Scope,
+duplo clique nele.
+
+119
+00:08:39.390 --> 00:08:44.310
+Quando aproximamos G de s
+igual a 1 sobre s mais 1
+
+120
+00:08:44.310 --> 00:08:49.607
+vezes 10 sobre s mais 10 por G
+de s é igual a 1 sobre s mais 1,
+
+121
+00:08:49.607 --> 00:08:54.637
+estamos aproximando a resposta
+ao degrau de 10 sobre s mais 10,
+
+122
+00:08:54.637 --> 00:08:59.871
+que é 1 menos e a menos 10t por outro
+degrau, o que é bastante válido,
+
+123
+00:08:59.871 --> 00:09:04.220
+desde que esse polo seja bem mais
+rápido que o polo que mantemos.
+
+124
+00:09:04.220 --> 00:09:08.890
+Altere o polo e o ganho do primeiro
+zero-pole e veja o que acontece.
+
+125
+00:09:08.890 --> 00:09:13.819
+Agora você já é capaz de explicar
+a aproximação da resposta
+
+126
+00:09:13.819 --> 00:09:17.750
+de sistemas de segunda ordem pela
+resposta de sistemas de primeira ordem.
+
+127
+00:09:17.750 --> 00:09:20.690
+No próximo vídeo,
+você verá que alguns casos,
+
+128
+00:09:20.690 --> 00:09:25.658
+a resposta ao degrau de sistema de
+terceira ordem pode ser aproximada pela
+
+129
+00:09:25.658 --> 00:09:29.660
+resposta ao degrau de
+sistema de segunda ordem.

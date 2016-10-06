@@ -1,0 +1,756 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.245
+Após esse vídeo,
+você será capaz de calcular o ganho,
+
+2
+00:00:03.245 --> 00:00:07.946
+para que os polos malha fechada estejam
+nas posições desejadas e completará o
+
+3
+00:00:07.946 --> 00:00:10.460
+projeto do controlador de avanço de fase.
+
+4
+00:00:10.460 --> 00:00:14.933
+Vamos usar as posições de polos e zeros
+para o controlador já definidas para
+
+5
+00:00:14.933 --> 00:00:20.374
+função de transferência: G de s é igual
+a 200 sobre s, s mais 10, s mais 20.
+
+6
+00:00:20.374 --> 00:00:24.433
+O polo desejado malha fechada é menos 5,
+mais 7 j.
+
+7
+00:00:24.433 --> 00:00:29.158
+Dos controladores já projetados
+é: C1 de s é igual a k1,
+
+8
+00:00:29.158 --> 00:00:34.180
+s mais 5 sobre s mais 8,3
+e o outro é C2 de s é
+
+9
+00:00:34.180 --> 00:00:39.355
+igual a k2 s mais 3,4 sobre s mais 6,6.
+
+10
+00:00:39.355 --> 00:00:43.850
+Desse modo,
+temos o L1 de s vai ser igual a k1,
+
+11
+00:00:43.850 --> 00:00:49.064
+s mais 5 sobre s mais 8,3 vezes 200,
+s, s mais 10,
+
+12
+00:00:49.064 --> 00:00:54.104
+s mais 20 e o L2 de s vai ser k2,
+s mais 3,4 sobre
+
+13
+00:00:54.104 --> 00:00:58.563
+s mais 6,6 vezes 200 sobre s,
+s mais 10, s mais 20.
+
+14
+00:00:58.563 --> 00:01:03.666
+Primeiro, vamos verificar se os polos
+desejados realmente fazem parte do LGR,
+
+15
+00:01:03.666 --> 00:01:08.110
+calculando a fase de L1 de quadradinho
+d e a fase de L2 de quadradinho d.
+
+16
+00:01:08.110 --> 00:01:12.614
+A fase de L1 de quadradinho d é
+a fase de quadradinho d mais 5,
+
+17
+00:01:12.614 --> 00:01:17.065
+menos a fase de quadradinho d mais 8,3,
+menos a fase de quadradinho d,
+
+18
+00:01:17.065 --> 00:01:21.300
+menos a fase de quadradinho d mais 10,
+menos a fase de quadradinho d mais 20.
+
+19
+00:01:21.300 --> 00:01:26.271
+E a fase de L2 de quadradinho d é igual
+à fase de quadradinho d mais 3,4,
+
+20
+00:01:26.271 --> 00:01:30.924
+menos a fase de quadradinho d mais 6,6,
+menos a fase de quadradinho d,
+
+21
+00:01:30.924 --> 00:01:35.520
+menos a fase de quadradinho d mais 10,
+menos a fase de quadradinho d mais 20.
+
+22
+00:01:35.520 --> 00:01:40.543
+Calculando as fases de cada dos termos,
+temos fase de L1 de quadradinho d é
+
+23
+00:01:40.543 --> 00:01:46.055
+igual a 90 graus, menos 64,8 graus,
+menos 125,5 graus,
+
+24
+00:01:46.055 --> 00:01:51.290
+menos 54,5 graus,
+menos 25 e a fase de L2 de quadradinho
+
+25
+00:01:51.290 --> 00:01:56.229
+d é igual a menos 102,9 graus,
+menos 77,1 graus,
+
+26
+00:01:56.229 --> 00:02:01.396
+menos 125,5 graus,
+menos 54,5 graus, menos 25.
+
+27
+00:02:01.396 --> 00:02:06.634
+Fazendo a soma, a fase de L1 de
+quadradinho d vai dar menos 179,8
+
+28
+00:02:06.634 --> 00:02:11.824
+graus e a fase de L2 de quadradinho
+d vai dar menos 179,2 graus.
+
+29
+00:02:11.824 --> 00:02:16.648
+Não é, exatamente, menos 180 graus,
+mas está bem próximo disso.
+
+30
+00:02:16.648 --> 00:02:20.853
+Essa diferença se deve a pequenas
+aproximações nos valores de ângulos,
+
+31
+00:02:20.853 --> 00:02:24.970
+tangentes e posições de polos e
+zeros no cálculo do controlador.
+
+32
+00:02:24.970 --> 00:02:28.822
+Mas, para que ponto seja polo
+do sistema malha fechada,
+
+33
+00:02:28.822 --> 00:02:34.320
+não basta que a fase de G, nesse caso,
+L desse ponto seja menos 180 graus.
+
+34
+00:02:34.320 --> 00:02:39.560
+Se isso acontecer, o ponto é polo
+potencial, mas para que ele,
+
+35
+00:02:39.560 --> 00:02:43.850
+realmente, seja polo malha fechada,
+a condição de ganho deve ser respeitada.
+
+36
+00:02:43.850 --> 00:02:48.300
+Lembre que os polos malha fechada
+dependem do ganho K do controlador.
+
+37
+00:02:48.300 --> 00:02:52.430
+No caso do controlador proporcional
+temos o módulo de G de
+
+38
+00:02:52.430 --> 00:02:56.140
+quadradinho K é igual ao
+módulo de menos 1 sobre K.
+
+39
+00:02:56.140 --> 00:02:59.585
+E agora, com controlador C de s igual a K,
+
+40
+00:02:59.585 --> 00:03:03.995
+s mais a sobre s mais b,
+temos: o módulo de C de quadradinho k,
+
+41
+00:03:03.995 --> 00:03:07.890
+G de quadradinho k vai ser igual
+ao módulo de menos 1 sobre k.
+
+42
+00:03:07.890 --> 00:03:10.950
+Como o módulo do produto
+é o produto dos módulos,
+
+43
+00:03:10.950 --> 00:03:14.960
+podemos escrever: módulo de C
+de quadradinho k vezes o módulo
+
+44
+00:03:14.960 --> 00:03:18.889
+de G de quadradinho k é igual
+ao módulo de menos 1 sobre k.
+
+45
+00:03:18.889 --> 00:03:23.620
+Ou ainda, k é igual a 1 sobre
+módulo de C de quadradinho k,
+
+46
+00:03:23.620 --> 00:03:27.019
+vezes o módulo de G de quadradinho k.
+
+47
+00:03:27.019 --> 00:03:33.069
+Escrevendo G de s como: G de s
+é igual a A vezes s menos z1,
+
+48
+00:03:33.069 --> 00:03:39.981
+s menos z2 até s menos zn sobre s
+menos p1, s menos p2 até s menos pn,
+
+49
+00:03:39.981 --> 00:03:45.935
+podemos escrever o ganho k como: k
+igual a módulo de quadradinho k,
+
+50
+00:03:45.935 --> 00:03:49.803
+mais b,
+vezes o módulo de quadradinho k menos p1,
+
+51
+00:03:49.803 --> 00:03:54.785
+quadradinho k menos p2 até quadradinho
+k menos pn sobre módulo de
+
+52
+00:03:54.785 --> 00:04:00.314
+quadradinho k mais a, vezes o módulo
+de a vezes quadradinho k menos z1,
+
+53
+00:04:00.314 --> 00:04:03.720
+quadradinho k menos z2 até
+quadradinho k menos zn.
+
+54
+00:04:03.720 --> 00:04:09.530
+Ou ainda, o k vai ser igual a 1 sobre A,
+vezes o módulo de quadradinho k mais b,
+
+55
+00:04:09.530 --> 00:04:14.084
+módulo de quadradinho k menos p1, módulo
+de quadradinho k menos p2 até módulo de
+
+56
+00:04:14.084 --> 00:04:18.253
+quadradinho k menos pn dividido por
+módulo de quadradinho k mais a,
+
+57
+00:04:18.253 --> 00:04:23.020
+módulo de quadradinho k menos z1,
+até módulo de quadradinho k menos zn.
+
+58
+00:04:23.020 --> 00:04:28.800
+Vamos dar uma olhada no módulo de
+quadradinho k menos p1 no Plano-s.
+
+59
+00:04:28.800 --> 00:04:35.850
+Temos aqui, o quadradinho k com sua parte
+real e sua parte imaginária e o polo p1.
+
+60
+00:04:35.850 --> 00:04:41.380
+E o módulo de quadradinho menos p1
+vai ser igual ao módulo da parte
+
+61
+00:04:41.380 --> 00:04:46.910
+real de quadradinho k menos p1, mais a
+parte imaginária de quadradinho k vezes j,
+
+62
+00:04:46.910 --> 00:04:51.643
+que é igual à raiz quadrada da parte real
+de quadradinho k menos p1 ao quadrado,
+
+63
+00:04:51.643 --> 00:04:54.910
+mais a parte imaginária de
+quadradinho k ao quadrado.
+
+64
+00:04:54.910 --> 00:04:59.075
+Note ainda, que esse é o valor da
+hipotenusa do triângulo retângulo formado
+
+65
+00:04:59.075 --> 00:05:04.049
+por quadradinho k, p1 e a parte
+real de quadradinho k, ou seja,
+
+66
+00:05:04.049 --> 00:05:07.500
+é a distância entre quadradinho k e p1.
+
+67
+00:05:07.500 --> 00:05:09.565
+Não está muito convencido disso?
+
+68
+00:05:09.565 --> 00:05:13.482
+Vamos fazer exemplo numérico:
+o quadradinho k será menos 3,
+
+69
+00:05:13.482 --> 00:05:19.729
+mais 4 j e p1 será menos 6 e temos: módulo
+de quadradinho k menos p1 é igual à raiz
+
+70
+00:05:19.729 --> 00:05:24.950
+quadrada de menos 3, mais 6 ao quadrado,
+mais 4 ao quadrado que é igual a 5.
+
+71
+00:05:24.950 --> 00:05:29.545
+O módulo da parte real de quadradinho k
+
+72
+00:05:29.545 --> 00:05:34.140
+menos p1 é igual ao módulo de p1
+menos a parte real de quadradinho k.
+
+73
+00:05:34.140 --> 00:05:40.200
+Note que os catetos do triângulo retângulo
+são: a parte imaginária de quadradinho k,
+
+74
+00:05:40.200 --> 00:05:44.345
+e a diferença entre o polo e
+a parte real de quadradinho k.
+
+75
+00:05:44.345 --> 00:05:48.490
+E não importa se o polo for maior ou
+menor que a parte real de quadradinho k.
+
+76
+00:05:48.490 --> 00:05:49.486
+Muito bem.
+
+77
+00:05:49.486 --> 00:05:54.465
+Agora, podemos escrever k como:
+k igual a 1 sobre A vezes o
+
+78
+00:05:54.465 --> 00:05:57.872
+produto das distâncias de
+quadradinho k até aos polos,
+
+79
+00:05:57.872 --> 00:06:01.860
+dividido pelo produto das distâncias
+de quadradinho k até aos zeros.
+
+80
+00:06:01.860 --> 00:06:07.005
+Só não esqueça de incluir polos e zeros
+de nosso controlador nessa conta.
+
+81
+00:06:07.005 --> 00:06:09.406
+E como isso vale para
+todo o quadradinho k,
+
+82
+00:06:09.406 --> 00:06:12.150
+vale também para o nosso
+quadradinho desejado.
+
+83
+00:06:12.150 --> 00:06:17.048
+O k vai ser 1 sobre A vezes o produto
+das distâncias de quadradinho d
+
+84
+00:06:17.048 --> 00:06:21.810
+até aos polos dividido pelo produto das
+distâncias de quadradinho d até aos zeros.
+
+85
+00:06:21.810 --> 00:06:24.862
+Voltando, então, aos nossos exemplos.
+
+86
+00:06:24.862 --> 00:06:30.059
+O k1 vai ser 1 sobre 200,
+vezes o módulo de quadradinho d mais 8,3,
+
+87
+00:06:30.059 --> 00:06:34.861
+vezes o módulo de quadradinho d vezes o
+módulo de quadradinho d mais 10 vezes
+
+88
+00:06:34.861 --> 00:06:39.210
+o módulo de quadradinho d mais 20 sobre
+o módulo de quadradinho d mais 5.
+
+89
+00:06:39.210 --> 00:06:44.120
+E o k2 será 1 sobre 200,
+módulo de quadradinho d mais 6,6,
+
+90
+00:06:44.120 --> 00:06:47.306
+módulo de quadradinho d,
+módulo de quadradinho d mais 10,
+
+91
+00:06:47.306 --> 00:06:53.080
+módulo de quadradinho d mais 20 dividido
+por módulo de quadradinho d mais 3,4.
+
+92
+00:06:53.080 --> 00:06:57.931
+Note que a distância de quadradinho d
+até ao polo na origem é o próprio módulo
+
+93
+00:06:57.931 --> 00:06:59.170
+de quadradinho d.
+
+94
+00:06:59.170 --> 00:07:03.212
+Calculando os módulos ou as
+distâncias individualmente,
+
+95
+00:07:03.212 --> 00:07:08.890
+nós temos: o k1 vai ser igual
+a 1 sobre 200, 7,74 vezes 8,6
+
+96
+00:07:08.890 --> 00:07:13.897
+vezes 8,6 vezes 16,55 dividido por 7 e o
+
+97
+00:07:13.897 --> 00:07:19.576
+k2 vai ser: 1 sobre 200
+vezes 7,18 vezes 8,6
+
+98
+00:07:19.576 --> 00:07:25.021
+vezes 8,6 vezes 16,55 dividido por 7,18.
+
+99
+00:07:25.021 --> 00:07:31.524
+Note que, no segundo caso, como usamos
+a bissetriz de triângulo isósceles,
+
+100
+00:07:31.524 --> 00:07:35.373
+a distância de quadradinho d até ao polo
+do controlador é igual à distância de
+
+101
+00:07:35.373 --> 00:07:40.378
+quadradinho d até ao zero do controlador,
+que esses dois fatores serão cancelados,
+
+102
+00:07:40.378 --> 00:07:43.760
+ou seja,
+nem era preciso calcular esses valores.
+
+103
+00:07:43.760 --> 00:07:48.610
+Você pode calcular esses módulos
+usando a função abs do MATLAB.
+
+104
+00:07:48.610 --> 00:07:53.460
+Basta usar, por exemplo,
+abs de quadradinho d mais 8.5,
+
+105
+00:07:53.460 --> 00:07:58.162
+desde que você já tenha definido
+quadradinho d corretamente.
+
+106
+00:07:58.162 --> 00:08:04.650
+E fazendo as multiplicações,
+obtemos k1 igual a 6,77 e k2 igual a 6,12.
+
+107
+00:08:04.650 --> 00:08:09.230
+Temos então: C1 de s igual a 6,77,
+
+108
+00:08:09.230 --> 00:08:14.090
+s mais 5 sobre s mais 8,3
+e o C2 de s igual a 6,12
+
+109
+00:08:14.090 --> 00:08:18.545
+s mais 3,4 sobre s mais 6,6.
+
+110
+00:08:18.545 --> 00:08:23.000
+E esse controlador com a forma C de s
+é igual a k, s mais a, sobre s mais b,
+
+111
+00:08:23.000 --> 00:08:28.543
+com 0 menor do que a, menor do que b,
+ou seja, com polo e zero negativos e
+
+112
+00:08:28.543 --> 00:08:33.930
+o zero mais próximo da origem que o polo é
+chamado de Controlador de Avanço de Fase,
+
+113
+00:08:33.930 --> 00:08:38.360
+por contribuir com uma fase positiva
+para s igual a quadradinho desejado.
+
+114
+00:08:38.360 --> 00:08:42.870
+No nosso exemplo,
+a contribuição fase é de 25 graus.
+
+115
+00:08:42.870 --> 00:08:50.064
+Continuando nosso desenvolvimento,
+nós temos L1 de s igual a 6,77,
+
+116
+00:08:50.064 --> 00:08:55.060
+s mais 5 sobre s mais 8,3 vezes 200,
+s, s mais 10, s mais 20.
+
+117
+00:08:55.060 --> 00:09:01.107
+E L2 de s é igual a 6,12,
+s mais 3,4 sobre s mais 6,6,
+
+118
+00:09:01.107 --> 00:09:05.027
+vezes 200, s, s mais 10, s mais 20.
+
+119
+00:09:05.027 --> 00:09:10.438
+Portanto, o T1 de s vai
+ser: 1354 s mais 5 sobre s,
+
+120
+00:09:10.438 --> 00:09:17.520
+s mais 8,3, s mais 10,
+s mais 20 mais 1354, s mais 5.
+
+121
+00:09:17.520 --> 00:09:21.446
+E o T2 de s vai ser: 1224,
+
+122
+00:09:21.446 --> 00:09:26.822
+s mais 3,4 sobre s, s mais 6,6, s mais 10,
+
+123
+00:09:26.822 --> 00:09:31.110
+s mais 20, mais 1224 vezes s mais 3,4.
+
+124
+00:09:31.110 --> 00:09:35.539
+Fazendo os cálculos,
+obtemos T1 de s é igual
+
+125
+00:09:35.539 --> 00:09:40.295
+a 1354 s mais 5 sobre s mais 24,6,
+
+126
+00:09:40.295 --> 00:09:45.620
+s mais 3,7,
+s quadrado mais 10 s, mais 74,3.
+
+127
+00:09:45.620 --> 00:09:53.060
+E o T2 de s vai ser: 1224,
+s mais 3,4 sobre s mais 24,2,
+
+128
+00:09:53.060 --> 00:09:58.761
+s mais 2,3,
+s ao quadrado mais 10,1 s mais 74,8.
+
+129
+00:09:58.761 --> 00:10:03.575
+E os polos complexos conjugados
+são: para T1 menos 5,
+
+130
+00:10:03.575 --> 00:10:11.130
+mais ou menos 7,02 j e para T2 menos 5,05,
+mais ou menos, 7,02 j.
+
+131
+00:10:11.130 --> 00:10:15.846
+As pequenas diferenças se
+devem às nossas aproximações.
+
+132
+00:10:15.846 --> 00:10:18.312
+Se o ganho usado cada dos
+casos fosse diferente,
+
+133
+00:10:18.312 --> 00:10:22.236
+a função de transferência malha fechada
+seria diferente e os polos complexos
+
+134
+00:10:22.236 --> 00:10:27.500
+conjugados malha fechada estariam outras
+posições, mais ainda sobre o LGR.
+
+135
+00:10:27.500 --> 00:10:31.547
+Eu aconselho que você obtenha as
+funções malha fechada manualmente e,
+
+136
+00:10:31.547 --> 00:10:35.154
+depois, utilize o MATLAB ou uma
+calculadora para obter as raízes do
+
+137
+00:10:35.154 --> 00:10:36.563
+polinômio do denominador.
+
+138
+00:10:36.563 --> 00:10:40.600
+Para obter as funções de transferência
+malha fechada e calcular os polos malha
+
+139
+00:10:40.600 --> 00:10:45.546
+fechada usando o MATLAB, você pode usar as
+seguintes instruções: G igual a zpk, nada,
+
+140
+00:10:45.546 --> 00:10:48.650
+0 menos 10, menos 20, 200.
+
+141
+00:10:48.650 --> 00:10:53.500
+C1 é igual igual a zpk,
+menos 5, menos 8,3, 6.77.
+
+142
+00:10:53.500 --> 00:10:58.220
+E o C2 igual a zpk,
+menos 3.4, menos 6.6, 6.12.
+
+143
+00:10:58.220 --> 00:11:01.780
+T1 igual a feedback C1 vezes G,1.
+
+144
+00:11:01.780 --> 00:11:06.125
+T2 igual a feedback, C2 vezes G 2,1 e aí,
+
+145
+00:11:06.125 --> 00:11:10.001
+você usa a função damp
+T1 e a função damp T2.
+
+146
+00:11:10.001 --> 00:11:13.610
+A função damp mostra os
+polos malha fechada,
+
+147
+00:11:13.610 --> 00:11:17.062
+o fator de amortecimento
+associado a cada polo,
+
+148
+00:11:17.062 --> 00:11:22.297
+1 no caso de polos reais e a frequência
+natural ou a constante de tempo.
+
+149
+00:11:22.297 --> 00:11:26.396
+Veja o que acontece com os polos malha
+fechada se você alterar o valor do ganho
+
+150
+00:11:26.396 --> 00:11:27.280
+do controlador.
+
+151
+00:11:27.280 --> 00:11:31.062
+Agora, você já é capaz de calcular
+o ganho para que os polos
+
+152
+00:11:31.062 --> 00:11:35.347
+malha fechada estejam nas posições
+desejadas, ou seja, você é capaz de
+
+153
+00:11:35.347 --> 00:11:39.782
+projetar o controlador de avanço de fase
+para atender a requisitos de desempenho
+
+154
+00:11:39.782 --> 00:11:43.685
+que não poderiam ser atendidos com
+simples controlador proporcional.
+
+155
+00:11:43.685 --> 00:11:48.286
+No próximo vídeo, você conhecerá o
+controlador PD e entenderá porque ele deve
+
+156
+00:11:48.286 --> 00:11:49.690
+ser usado com cuidado.

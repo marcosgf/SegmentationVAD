@@ -1,0 +1,880 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.327
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.327 --> 00:00:10.620
+bem vindo ao curso sobre TDD!
+
+3
+00:00:10.620 --> 00:00:17.921
+Eu sou o Clovis Fernandes e hoje iremos
+falar sobre refatoração: Quando refatorar?
+
+4
+00:00:17.921 --> 00:00:22.025
+Usualmente a resposta seria sempre no TDD.
+
+5
+00:00:22.025 --> 00:00:26.930
+Vamos mostrar que condições
+isso realmente ocorre.
+
+6
+00:00:26.930 --> 00:00:29.118
+Então, quando refatorar?
+
+7
+00:00:29.118 --> 00:00:32.500
+Normalmente, quando eu recebo código,
+
+8
+00:00:32.500 --> 00:00:36.249
+eu quero incorporar código legado,
+código que já está pronto,
+
+9
+00:00:36.249 --> 00:00:41.346
+feito por outras pessoas, no meu sistema
+é sempre bom refatorar, está certo?
+
+10
+00:00:41.346 --> 00:00:44.630
+Você vai encontrar
+sempre muitos problemas.
+
+11
+00:00:44.630 --> 00:00:48.910
+Você vai encontrar
+problemas principalmente
+
+12
+00:00:48.910 --> 00:00:51.502
+relacionados com o acoplamento, não é?
+
+13
+00:00:51.502 --> 00:00:54.690
+Dependências muito grandes,
+acoplamento alto,
+
+14
+00:00:54.690 --> 00:00:59.616
+e também problemas de coesão, não é?
+
+15
+00:00:59.616 --> 00:01:03.470
+Baixa coesão quando o certo
+seria ter alta coesão.
+
+16
+00:01:03.470 --> 00:01:08.990
+E outros problemas que
+a gente normalmente verifica
+
+17
+00:01:08.990 --> 00:01:15.349
+quando está fazendo a refatoração e
+iremos estudar ao longo deste curso.
+
+18
+00:01:15.349 --> 00:01:21.634
+Eu lembro que uma vez fizemos
+trabalho com código legado deu,
+
+19
+00:01:21.634 --> 00:01:26.973
+dá muito trabalho fazer refatoração
+num código grande, está certo?
+
+20
+00:01:26.973 --> 00:01:31.769
+Por isso que é importante, quando eu
+estou desenvolvendo o meu software,
+
+21
+00:01:31.769 --> 00:01:35.862
+produzir software com qualidade para que,
+se alguém precisar usar,
+
+22
+00:01:35.862 --> 00:01:38.040
+não sofrer tanto quanto nós sofremos.
+
+23
+00:01:38.040 --> 00:01:42.554
+Nós tivemos muito trabalho,
+despendemos muito
+
+24
+00:01:42.554 --> 00:01:47.437
+tempo para entender o software,
+só para entender o software,
+
+25
+00:01:47.437 --> 00:01:52.290
+e depois para modificar por causa dos
+problemas que esse software tinha.
+
+26
+00:01:52.290 --> 00:01:57.220
+Então código legado é uma coisa
+que sempre vai precisar refatorar.
+
+27
+00:01:57.220 --> 00:02:00.649
+De qualquer forma,
+durante o desenvolvimento,
+
+28
+00:02:00.649 --> 00:02:06.343
+quer seja usando projeto TDD ou não,
+mas principalmente o TDD obviamente,
+
+29
+00:02:06.343 --> 00:02:11.478
+porque o TDD, no ciclo do TDD você
+tem uma fase que é a de refatoração
+
+30
+00:02:11.478 --> 00:02:16.569
+e nós vamos detalhar algumas
+coisas dentro dessa fase ainda.
+
+31
+00:02:16.569 --> 00:02:22.141
+E após o desenvolvimento,
+quer dizer mesmo dentro do ciclo do TDD.
+
+32
+00:02:22.141 --> 00:02:27.819
+Então tem o ciclo do TDD que
+a gente já mostrou aulas passadas.
+
+33
+00:02:27.819 --> 00:02:32.928
+Naquele momento que eu
+concluo todos os testes,
+
+34
+00:02:32.928 --> 00:02:37.666
+os casos de testes de uma dada
+responsabilidade, eu ia lá, marcava essa
+
+35
+00:02:37.666 --> 00:02:43.320
+responsabilidade como done e depois ia
+verificar se tinha mais responsabilidades.
+
+36
+00:02:43.320 --> 00:02:47.940
+Nesse ponto, quando eu completo
+
+37
+00:02:47.940 --> 00:02:52.205
+todos os casos testes de uma
+responsabilidade, não é?
+
+38
+00:02:52.205 --> 00:02:53.203
+Está certo?
+
+39
+00:02:53.203 --> 00:02:58.308
+Esse poderia ser ponto potencial
+de refatorar quando eu,
+
+40
+00:02:58.308 --> 00:03:02.368
+antes de eu introduzir novo requisito,
+
+41
+00:03:02.368 --> 00:03:06.422
+uma nova responsabilidade no nosso caso.
+
+42
+00:03:06.422 --> 00:03:12.989
+Então se o código não está, eu não estava
+cuidando de refatorar de forma assídua,
+
+43
+00:03:12.989 --> 00:03:17.890
+então nessa hora com certeza
+eu devo dar uma limpeza,
+
+44
+00:03:17.890 --> 00:03:24.176
+tornar aquele código mais fácil de
+compreender e provavelmente deixá-lo
+
+45
+00:03:24.176 --> 00:03:29.024
+adequado para alguma mudança, se aquela
+responsabilidade nova assim o exigir.
+
+46
+00:03:29.024 --> 00:03:34.010
+O que não se deve fazer nesse caso,
+quando eu estiver usando o
+
+47
+00:03:34.010 --> 00:03:38.800
+chapéu da refatoração, o chapéu azul,
+
+48
+00:03:38.800 --> 00:03:43.587
+é não adicionar nenhuma característica
+ou responsabilidade nova,
+
+49
+00:03:43.587 --> 00:03:48.192
+isso não faz parte da refatoração,
+está certo?
+
+50
+00:03:48.192 --> 00:03:53.028
+Isso faz parte do, da, das outras fases do
+
+51
+00:03:53.028 --> 00:03:58.030
+ciclo do TDD,
+do chapéu vermelho e do chapéu verde.
+
+52
+00:03:58.030 --> 00:04:02.061
+Também não se adiciona teste, está certo?
+
+53
+00:04:02.061 --> 00:04:07.960
+Se eu tiver que perceber que
+algum teste precisa ser feito, eu
+
+54
+00:04:07.960 --> 00:04:14.873
+vou introduzir naquela lista de casos de
+testes para ser feito depois, está certo?
+
+55
+00:04:14.873 --> 00:04:16.980
+Não durante a refatoração.
+
+56
+00:04:16.980 --> 00:04:21.048
+Eu posso até, ao fazer a refatoração,
+entender pouquinho melhor e descobrir que
+
+57
+00:04:21.048 --> 00:04:25.083
+está faltando alguma coisa para testar,
+mas aí eu coloco lá naquela lista, se for
+
+58
+00:04:25.083 --> 00:04:30.530
+referente aquela responsabilidade, se for
+referente a uma responsabilidade anterior,
+
+59
+00:04:30.530 --> 00:04:35.950
+eu, quando terminar os casos
+testes desta responsabilidade,
+
+60
+00:04:35.950 --> 00:04:40.743
+eu retomo aquela responsabilidade
+anterior para fazer o
+
+61
+00:04:40.743 --> 00:04:45.420
+tratamento daquele caso teste
+que eu acabei de descobrir.
+
+62
+00:04:45.420 --> 00:04:50.480
+Então basicamente o que é que
+diferenciam as atividades
+
+63
+00:04:50.480 --> 00:04:55.470
+das fases do chapéu verde,
+
+64
+00:04:55.470 --> 00:05:00.170
+das atividades da fase do chapéu azul,
+da refatoração?
+
+65
+00:05:00.170 --> 00:05:04.837
+As duas têm algo igual que elas
+transformam o código anterior de alguma
+
+66
+00:05:04.837 --> 00:05:06.161
+forma, está certo?
+
+67
+00:05:06.161 --> 00:05:07.751
+Mas o que é que diferencia?
+
+68
+00:05:07.751 --> 00:05:10.460
+Vamos ver isso nessa
+próxima transparência.
+
+69
+00:05:10.460 --> 00:05:14.850
+No caso do chapéu verde, na hora que eu,
+
+70
+00:05:14.850 --> 00:05:20.420
+que eu tenho que tornar
+caso de teste que falhou,
+
+71
+00:05:20.420 --> 00:05:23.390
+que eu fiz de propósito
+falhar na fase anterior,
+
+72
+00:05:23.390 --> 00:05:28.448
+eu tenho que fazer ela funcionar
+e para isso eu vou transformar,
+
+73
+00:05:28.448 --> 00:05:32.768
+eu vou adicionar código de produção,
+está certo?
+
+74
+00:05:32.768 --> 00:05:38.230
+Para fazer esse teste funcionar,
+é isso que eu vou fazer, está certo?
+
+75
+00:05:38.230 --> 00:05:43.367
+Mas o resultado disso
+é que eu estou mudando
+
+76
+00:05:43.367 --> 00:05:48.206
+a bateria de testes, eu estou
+agora com novo teste bem sucedido.
+
+77
+00:05:48.206 --> 00:05:56.405
+Eventualmente algum teste da bateria do
+passado pode vir a não funcionar mais,
+
+78
+00:05:56.405 --> 00:06:01.936
+eu ter que remover, ou seja,
+eu posso ter que remover esse teste.
+
+79
+00:06:01.936 --> 00:06:06.896
+Por exemplo, quando a gente falou
+sobre aquele sisteminha de contador
+
+80
+00:06:06.896 --> 00:06:10.885
+de strings de caractere dentro de string.
+
+81
+00:06:10.885 --> 00:06:14.037
+Quando a gente queria
+fazer para 2 strings,
+
+82
+00:06:14.037 --> 00:06:19.051
+não dava para fazer porque o que eu
+tinha planejado era sempre caracter.
+
+83
+00:06:19.051 --> 00:06:22.880
+Suponha que agora eu tenha
+uma nova responsabilidade,
+
+84
+00:06:22.880 --> 00:06:27.620
+que é agora que eu possa fazer
+a contagem de 2 caracteres seguidos.
+
+85
+00:06:27.620 --> 00:06:31.805
+Então quando da anterior,
+o código de teste apontava erro,
+
+86
+00:06:31.805 --> 00:06:37.403
+quando eu usava essa rotina para
+procurar 2, agora faz parte,
+
+87
+00:06:37.403 --> 00:06:41.911
+eu não, eu tenho que retirar aqueles
+casos de testes que apontavam erro,
+
+88
+00:06:41.911 --> 00:06:46.261
+porque isso não faz mais sentido porque a
+nova responsabilidade que está funcionando
+
+89
+00:06:46.261 --> 00:06:50.994
+agora, aceita fazer a ocorrência,
+procura de a ocorrência de caracteres,
+
+90
+00:06:50.994 --> 00:06:53.340
+de 1 caracter e de 2 caracteres,
+está certo?
+
+91
+00:06:53.340 --> 00:06:55.962
+Então eu tenho que mudar.
+
+92
+00:06:55.962 --> 00:07:01.970
+Já no caso da refatoração,
+eu transformo o código de produção,
+
+93
+00:07:01.970 --> 00:07:06.070
+mas a diferença da fase anterior,
+
+94
+00:07:06.070 --> 00:07:12.741
+quando eu uso o chapéu verde, é que eu
+vou manter o comportamento observado,
+
+95
+00:07:12.741 --> 00:07:17.240
+prévio do software, ou seja,
+a bateria de testes continua a mesma
+
+96
+00:07:17.240 --> 00:07:21.591
+antes de eu fazer a refatoração
+e depois da refatoração.
+
+97
+00:07:21.591 --> 00:07:26.489
+Na verdade ela é o meu salvo-conduto,
+ela vai me ajudar a garantir que
+
+98
+00:07:26.489 --> 00:07:30.826
+eu faça as transformações,
+as refatorações, mudando,
+
+99
+00:07:30.826 --> 00:07:36.060
+reestruturando o meu código de
+produção para ele ficar código melhor,
+
+100
+00:07:36.060 --> 00:07:41.870
+de maneira segura porque se eu testar,
+eu sempre tenho que testar,
+
+101
+00:07:41.870 --> 00:07:46.425
+eu vou fazendo passo a passo as
+refatorações e vou testando, se num dado
+
+102
+00:07:46.425 --> 00:07:52.860
+momento a bateria falhar, de testes
+falhar significa que eu dei passo falso,
+
+103
+00:07:52.860 --> 00:07:58.460
+a primeira atitude que é retornar ao
+código que estava funcionando, está certo?
+
+104
+00:07:58.460 --> 00:08:03.135
+E aí eu vou estudar se, o que é que
+foi que eu posso melhorar na minha
+
+105
+00:08:03.135 --> 00:08:09.056
+refatoração, para que o próximo passo seja
+também bem sucedido e assim por diante,
+
+106
+00:08:09.056 --> 00:08:12.897
+fazendo para todas as refatorações
+que eu estiver fazendo.
+
+107
+00:08:12.897 --> 00:08:17.369
+A outra pergunta que surge é: como é
+que eu sei que eu tenho que refatorar,
+
+108
+00:08:17.369 --> 00:08:18.180
+está certo?
+
+109
+00:08:18.180 --> 00:08:22.938
+Como a gente diz, muitas vezes
+
+110
+00:08:22.938 --> 00:08:27.063
+eu passo nesse ciclo do
+TDD e não refatoro nada.
+
+111
+00:08:27.063 --> 00:08:30.980
+Na verdade eu não sou obrigado
+a refatorar, está certo?
+
+112
+00:08:30.980 --> 00:08:34.262
+Mas eu tenho que seguir algumas
+diretrizes, está certo?
+
+113
+00:08:34.262 --> 00:08:39.007
+Uma delas é aquela que eu falei de quando
+eu adiciono uma nova responsabilidade,
+
+114
+00:08:39.007 --> 00:08:43.004
+ou seja, eu testei a responsabilidade
+anterior completamente,
+
+115
+00:08:43.004 --> 00:08:47.420
+então antes de iniciar a seguinte
+eu faço uma refatoração.
+
+116
+00:08:47.420 --> 00:08:51.044
+Se eu achar que realmente o
+código já está bem estruturado,
+
+117
+00:08:51.044 --> 00:08:55.318
+eu posso também não fazer,
+não há uma obrigação nesse sentido.
+
+118
+00:08:55.318 --> 00:09:01.368
+É mais no sentido uma diretriz que
+você deve observar, está certo?
+
+119
+00:09:01.368 --> 00:09:06.175
+O outro caso que eu,
+que seria também provável de que eu tenho,
+
+120
+00:09:06.175 --> 00:09:11.402
+que eu vou ficar sabendo que eu
+tenho que refatorar, é quando alguém
+
+121
+00:09:11.402 --> 00:09:18.152
+da equipe descobre algum bug e
+ao eliminar, remover esse bug,
+
+122
+00:09:18.152 --> 00:09:23.820
+esse erro que estava no programa,
+está certo?
+
+123
+00:09:23.820 --> 00:09:26.609
+É de bom tom fazer a refatoração,
+
+124
+00:09:26.609 --> 00:09:30.418
+porque a técnica de programar
+continua sendo a mesma do TDD.
+
+125
+00:09:30.418 --> 00:09:35.228
+Eu vou, eu vou por código ali que vai
+fazer funcionar e, ao fazer isso,
+
+126
+00:09:35.228 --> 00:09:40.773
+pode ser que eu não siga todas
+as boas práticas de programação.
+
+127
+00:09:40.773 --> 00:09:44.016
+Nessa hora eu passo novamente,
+
+128
+00:09:44.016 --> 00:09:48.906
+se por acaso era bug simples
+e não produziu nada de
+
+129
+00:09:48.906 --> 00:09:53.790
+muito estranho no código,
+o código continua ainda bem estruturado,
+
+130
+00:09:53.790 --> 00:09:57.880
+eu, eu não vou precisar
+fazer essa refatoração.
+
+131
+00:09:57.880 --> 00:10:05.136
+Outra coisa que a gente segue é o que
+o Fowler no livro de refatoração dele,
+
+132
+00:10:05.136 --> 00:10:10.260
+que ele junto com outros
+escreveu para a linguagem Ruby,
+
+133
+00:10:10.260 --> 00:10:15.021
+mas que o que ele fala serve para
+qualquer linguagem na verdade,
+
+134
+00:10:15.021 --> 00:10:21.913
+2009 que ele falou isso, é o que ele
+chama de a Regra de Três, está certo?
+
+135
+00:10:21.913 --> 00:10:27.077
+A Regra de Três ela se aplica na hora que
+eu estou com o chapéu verde, está certo?
+
+136
+00:10:27.077 --> 00:10:31.990
+Por isso que vocês estão vendo ali que eu
+estou usando, mostrando chapeuzinho verde.
+
+137
+00:10:31.990 --> 00:10:35.911
+A primeira vez que eu escrevo código,
+eu vou lá e faço,
+
+138
+00:10:35.911 --> 00:10:40.366
+para satisfazer teste que estava falhando,
+está certo?
+
+139
+00:10:40.366 --> 00:10:41.744
+Isso é a regra.
+
+140
+00:10:41.744 --> 00:10:47.750
+A segunda vez que aparece algo similar
+a esse anterior, no passo seguinte
+
+141
+00:10:47.750 --> 00:10:52.310
+ou algum passo mais para a frente,
+não importa, mas é similar, está certo?
+
+142
+00:10:52.310 --> 00:10:54.979
+Talvez eu fique meio,
+o que é que vai acontecer?
+
+143
+00:10:54.979 --> 00:10:59.160
+Provavelmente vai haver uma duplicação
+de código, eu vou ser redundante.
+
+144
+00:10:59.160 --> 00:11:04.112
+Então eu posso até fazer uma careta, ficar
+meio chateado por que eu estou deixando
+
+145
+00:11:04.112 --> 00:11:09.020
+a duplicação, mas faço assim mesmo,
+duplico o código assim mesmo.
+
+146
+00:11:09.020 --> 00:11:13.620
+A terceira vez que
+aparece algo semelhante,
+
+147
+00:11:13.620 --> 00:11:16.809
+que vai triplicar o código, não é?
+
+148
+00:11:16.809 --> 00:11:17.895
+Está certo?
+
+149
+00:11:17.895 --> 00:11:23.413
+Nessa hora agora eu já não fico tão
+chateado, porque eu simplesmente
+
+150
+00:11:23.413 --> 00:11:28.370
+triplico e sei que, quando eu mudar
+o chapéu do verde para o azul,
+
+151
+00:11:28.370 --> 00:11:33.122
+a primeira coisa que eu vou
+fazer é refatorar, está certo?
+
+152
+00:11:33.122 --> 00:11:37.269
+Ou seja, a regra de três está me,
+está me dizendo isso.
+
+153
+00:11:37.269 --> 00:11:41.728
+Ele deu o nome de regra, porque seria
+uma coisa que você deve seguir sempre.
+
+154
+00:11:41.728 --> 00:11:45.260
+Mas toda regra tem exceção,
+então essa também tem exceção, não é?
+
+155
+00:11:45.260 --> 00:11:50.261
+O, é o caso de que, pode ser que
+quando eu estou seguindo os meus casos
+
+156
+00:11:50.261 --> 00:11:55.790
+testes eu estou escolhendo alguns que
+eu já sei que vai haver duplicação,
+
+157
+00:11:55.790 --> 00:12:01.260
+então eu já sei como é que aquilo
+vai ser feito, então eu já posso ir,
+
+158
+00:12:01.260 --> 00:12:06.558
+logo após ele, fazendo a refatoração
+e já deixo pronto para os próximos.
+
+159
+00:12:06.558 --> 00:12:11.922
+Também isso pode acontecer,
+vai depender da sua experiência
+
+160
+00:12:11.922 --> 00:12:16.745
+fazer esse tratamento e observar
+isso com bastante cuidado e
+
+161
+00:12:16.745 --> 00:12:20.635
+ver que é possível fazer sem problemas,
+está certo?
+
+162
+00:12:20.635 --> 00:12:26.108
+Se não, vá no seguro,
+segue direitinho a Regra de Três e depois
+
+163
+00:12:26.108 --> 00:12:30.830
+refatora de uma vez, está certo?
+
+164
+00:12:30.830 --> 00:12:33.923
+Então quando refatorar então?
+
+165
+00:12:33.923 --> 00:12:38.830
+Obviamente nós mostramos que
+eu posso refatorar logo,
+
+166
+00:12:38.830 --> 00:12:42.275
+eu posso não refatorar na verdade,
+está certo?
+
+167
+00:12:42.275 --> 00:12:43.941
+Eu não sou obrigado a refatorar.
+
+168
+00:12:43.941 --> 00:12:46.450
+O ideal é sempre fazer
+refatorações constantes,
+
+169
+00:12:46.450 --> 00:12:49.748
+mas dado momento ou outro
+eu posso não refatorar.
+
+170
+00:12:49.748 --> 00:12:55.980
+Mas quando eu vou introduzir
+uma nova responsabilidade,
+
+171
+00:12:55.980 --> 00:13:00.790
+uma nova funcionalidade, com certeza
+esse é bom ponto para eu refatorar.
+
+172
+00:13:00.790 --> 00:13:04.984
+Quando eu vou fazer uma revisão de,
+
+173
+00:13:04.984 --> 00:13:08.632
+para eliminar bug, também, está certo?
+
+174
+00:13:08.632 --> 00:13:10.650
+E usando a Regra de Três.
+
+175
+00:13:10.650 --> 00:13:13.839
+Ou seja, basicamente sempre.
+
+176
+00:13:13.839 --> 00:13:18.220
+Esse, sempre que possível,
+porque aí eu faço pequenas refatorações.
+
+177
+00:13:18.220 --> 00:13:22.768
+Eu vou fazendo isso,
+vez de fazer grandes refatorações.
+
+178
+00:13:22.768 --> 00:13:28.490
+Grandes refatorações dão trabalho,
+pequenas refatorações dão menos trabalho.
+
+179
+00:13:28.490 --> 00:13:33.230
+Fazendo com cuidado,
+porque eu vou estar sempre lastreado pela
+
+180
+00:13:33.230 --> 00:13:37.543
+pela bateria de testes,
+eu não vou ter grandes problemas.
+
+181
+00:13:37.543 --> 00:13:41.168
+Com isso pessoal, quando refatorar?
+
+182
+00:13:41.168 --> 00:13:46.340
+Ficou respondido, sempre dentro do TDD.
+
+183
+00:13:46.340 --> 00:13:47.990
+Obrigado!
+
+184
+00:13:47.990 --> 00:13:53.460
+[MÚSICA]

@@ -1,0 +1,577 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.649
+[MÚSICA] Olá!
+
+2
+00:00:02.649 --> 00:00:05.830
+Bem vindos de volta.
+
+3
+00:00:05.830 --> 00:00:09.695
+Nesse vídeo a gente vai aprender como
+a gente pode compensar algumas das
+
+4
+00:00:09.695 --> 00:00:13.380
+distorções introduzidas pelo
+conversor digital para analógico.
+
+5
+00:00:13.380 --> 00:00:17.791
+A gente viu que ele introduz altas
+frequências que são indesejadas e ele
+
+6
+00:00:17.791 --> 00:00:20.982
+introduz uma distorção entre
+as frequências de interesse.
+
+7
+00:00:20.982 --> 00:00:24.750
+Muito do que a gente vai falar hoje eu
+tirei desses 2 sites aqui que estão em
+
+8
+00:00:24.750 --> 00:00:27.155
+inglês mas que têm uma
+visão muito prática,
+
+9
+00:00:27.155 --> 00:00:30.930
+inclusive de como projetar muitos dos
+filtros que a gente vai discutir aqui.
+
+10
+00:00:30.930 --> 00:00:33.480
+Ele vai bem mais a fundo do
+que a gente está falando aqui.
+
+11
+00:00:33.480 --> 00:00:37.977
+Mas basicamente, só para lembrar,
+o que acontece com o sinal
+
+12
+00:00:37.977 --> 00:00:41.886
+reconstruído depois que ele passa
+pelo conversor digital para analógico
+
+13
+00:00:41.886 --> 00:00:45.470
+é o seguinte: eu gostaria que aqui ele
+tivesse determinado comportamento,
+
+14
+00:00:45.470 --> 00:00:47.890
+no nosso exemplinho a gente
+está usando uma linha reta,
+
+15
+00:00:47.890 --> 00:00:51.710
+mas na realidade ele cai mais
+rápido do que a gente gostaria.
+
+16
+00:00:51.710 --> 00:00:54.718
+Ele também introduz
+altas frequências aqui,
+
+17
+00:00:54.718 --> 00:00:59.937
+aquelas frequências que se misturam por
+aliasing e acabam aparecendo na saída.
+
+18
+00:00:59.937 --> 00:01:03.590
+Então a gente gostaria de
+eliminar essas duas distorções.
+
+19
+00:01:03.590 --> 00:01:07.900
+Eu vou falar primeiro da
+distorção das altas frequências.
+
+20
+00:01:07.900 --> 00:01:12.576
+Essa distorção é inevitável,
+o DAC não sabe como
+
+21
+00:01:12.576 --> 00:01:17.306
+lidar com essas frequências,
+eh, indistinguíveis não é,
+
+22
+00:01:17.306 --> 00:01:21.920
+que se misturam por aliasing, ele coloca
+mais ou menos todo o mundo na saída com
+
+23
+00:01:21.920 --> 00:01:26.367
+algumas frequências que vão diminuindo,
+com algumas amplitudes que vão diminuindo,
+
+24
+00:01:26.367 --> 00:01:30.461
+mas essa distorção é inevitável e a gente,
+enquanto a gente trabalhar com sinal
+
+25
+00:01:30.461 --> 00:01:33.240
+digital para analógico,
+a gente não tem o que fazer.
+
+26
+00:01:33.240 --> 00:01:37.840
+A gente só pode combater essa
+distorção no mundo analógico.
+
+27
+00:01:37.840 --> 00:01:43.081
+Então esse problema das altas frequências
+a gente pode resolver passando o
+
+28
+00:01:43.081 --> 00:01:48.220
+sinal reconstruído por filtro passa baixas
+que vai eliminar essas altas frequências.
+
+29
+00:01:48.220 --> 00:01:51.552
+Então o que é que eu gostaria que
+esse filtro passa baixas fizesse?
+
+30
+00:01:51.552 --> 00:01:56.365
+Eu gostaria que ele passasse sem distorção
+as frequências até à frequência máxima
+
+31
+00:01:56.365 --> 00:02:00.962
+que é a nossa frequência de interesse
+e rejeitasse as frequências que estão
+
+32
+00:02:00.962 --> 00:02:03.050
+aparecendo por alta frequência.
+
+33
+00:02:03.050 --> 00:02:08.672
+Lembra que,
+se eu tenho fm aqui esse camaradinha
+
+34
+00:02:08.672 --> 00:02:12.901
+aqui vai ser o fs menos fm, essa é
+a primeira repetição que a gente tem,
+
+35
+00:02:12.901 --> 00:02:16.400
+a gente já viu isso quando a gente estava
+especificando os filtros anti aliasing.
+
+36
+00:02:16.400 --> 00:02:23.248
+Então o que eu tenho que ter é que ele tem
+que rejeitar a partir de fs menos fm e
+
+37
+00:02:23.248 --> 00:02:29.250
+deixar passar de 0 até fm e aqui fica
+a faixa de transição do seu filtro.
+
+38
+00:02:29.250 --> 00:02:35.130
+Isso já melhora bocado aquelas distorções
+de alta frequência que aparecem.
+
+39
+00:02:35.130 --> 00:02:40.305
+E é interessante que, por exemplo, o nosso
+olho faz isso, pega esse exemplo aqui
+
+40
+00:02:40.305 --> 00:02:45.247
+do zoom, que se você olhar bem de
+pertinho você vai monte de quadradinhos.
+
+41
+00:02:45.247 --> 00:02:49.853
+E afasta, afastando esses
+quadradinhos vão ficar cada vez
+
+42
+00:02:49.853 --> 00:02:53.520
+menos perceptíveis e o que é
+que está acontecendo aqui?
+
+43
+00:02:53.520 --> 00:02:57.260
+O que está acontecendo é que o
+nosso olho não vê ponto certinho,
+
+44
+00:02:57.260 --> 00:03:01.680
+o que chega no nosso olho na realidade
+é uma região de luz que está num
+
+45
+00:03:01.680 --> 00:03:06.100
+determinado ângulo, bem pequenininho,
+mas quanto mais a gente se afasta,
+
+46
+00:03:06.100 --> 00:03:10.030
+quer dizer, se eu olhar bem de pertinho
+aqui esse ângulo pega pouca coisa,
+
+47
+00:03:10.030 --> 00:03:13.119
+se eu estiver longe esse
+ângulo pega muita coisa.
+
+48
+00:03:13.119 --> 00:03:17.393
+Então o que chega numa célula do meu olho
+é uma média de tudo o que está dentro
+
+49
+00:03:17.393 --> 00:03:18.280
+desse ângulo.
+
+50
+00:03:18.280 --> 00:03:23.522
+Uma média é filtro passa baixas, e é por
+isso que quanto mais a gente se afasta o
+
+51
+00:03:23.522 --> 00:03:28.894
+que atinge uma célula do nosso olho
+acaba sendo uma região cada vez maior,
+
+52
+00:03:28.894 --> 00:03:34.630
+a gente nota a média dessa região
+e isso é filtro passa baixas.
+
+53
+00:03:34.630 --> 00:03:39.513
+A gente tem então que essa questão
+de filtragem passa baixas que
+
+54
+00:03:39.513 --> 00:03:43.271
+a gente coloca depois do conversor
+digital para analógico já ajuda
+
+55
+00:03:43.271 --> 00:03:45.540
+bastante a gente com algumas frequências.
+
+56
+00:03:45.540 --> 00:03:49.772
+Muitos conversores digital para analógico
+têm algum filtro mas muitas vezes
+
+57
+00:03:49.772 --> 00:03:52.320
+é necessário a gente
+colocar filtro a mais.
+
+58
+00:03:52.320 --> 00:03:57.850
+A segunda distorção agora,
+a distorção dentro da faixa de interesse.
+
+59
+00:03:57.850 --> 00:04:03.587
+A gente pode tentar agora
+compensar essa distorção,
+
+60
+00:04:03.587 --> 00:04:08.590
+lembra que o nosso sinal Xr
+de f ele era o sinal desejado
+
+61
+00:04:08.590 --> 00:04:12.770
+vezes a transformada do pulso aqui,
+que ia descendo para 1.
+
+62
+00:04:12.770 --> 00:04:16.112
+Então em vez,
+o que eu posso fazer é tentar pegar
+
+63
+00:04:16.112 --> 00:04:19.735
+filtro que vai fazer uma
+compensação dessa distorção.
+
+64
+00:04:19.735 --> 00:04:23.955
+Se aqui nessa frequência o meu
+conversor digital para analógico deu
+
+65
+00:04:23.955 --> 00:04:28.418
+ganho de meio nessa frequência,
+eu posso fazer esse meu filtro dar
+
+66
+00:04:28.418 --> 00:04:32.670
+ganho de 2 para que meio vezes
+2 seja igual a 1 e eu compense.
+
+67
+00:04:32.670 --> 00:04:37.814
+Se nessa frequência o meu conversor
+digital para analógico deu ganho de quarto
+
+68
+00:04:37.814 --> 00:04:42.967
+nessa frequência, multiplicou a minha
+frequência por 0,25, eu posso projetar
+
+69
+00:04:42.967 --> 00:04:48.707
+filtro que dê ganho de 4 aqui de
+forma que quarto do conversor digital
+
+70
+00:04:48.707 --> 00:04:54.470
+para analógico vezes 4 do meu filtro
+com compensação compense e vire 1.
+
+71
+00:04:54.470 --> 00:04:59.470
+Então eu posso fazer esse filtro dar ganho
+que inverta todos os ganhos introduzidos
+
+72
+00:04:59.470 --> 00:05:04.453
+pelo meu conversor digital para analógico
+e o meu filtro também vai eliminar,
+
+73
+00:05:04.453 --> 00:05:09.344
+aqui vai ter a sua faixa de rejeição,
+eliminando as altas frequências.
+
+74
+00:05:09.344 --> 00:05:13.840
+Agora projetar esse filtro aqui,
+na prática, não é muito simples.
+
+75
+00:05:13.840 --> 00:05:18.620
+E existe uma terceira solução,
+que talvez seja a mais elegante de todas,
+
+76
+00:05:18.620 --> 00:05:23.319
+que envolve o filtro passa baixas
+para eliminar as altas frequências,
+
+77
+00:05:23.319 --> 00:05:25.590
+que lembra que isso é inevitável,
+
+78
+00:05:25.590 --> 00:05:30.250
+eu sempre aqui vou ter as minhas réplicas
+no espectro, em, réplica em 2 Pi,
+
+79
+00:05:30.250 --> 00:05:34.520
+réplica em 2 Pi menos a frequência,
+eu sempre botei essas distorções.
+
+80
+00:05:34.520 --> 00:05:39.269
+Então, qualquer sinal que eu coloque aqui,
+ele vai ter as suas réplicas que vão
+
+81
+00:05:39.269 --> 00:05:42.225
+aparecer como componentes de
+alta frequências do outro lado,
+
+82
+00:05:42.225 --> 00:05:44.083
+não tenho como evitar, está?
+
+83
+00:05:44.083 --> 00:05:50.051
+Mas a distorção dentro da faixa de
+interesse, eu tenho sim como evitar,
+
+84
+00:05:50.051 --> 00:05:54.770
+eu posso dar esses ganhos no mundo
+digital e não no mundo analógico.
+
+85
+00:05:54.770 --> 00:05:59.150
+E projetar filtro que dê esses ganhos
+no mundo digital é muito mais fácil.
+
+86
+00:05:59.150 --> 00:06:01.248
+Então o que é que eu quero do meu filtro?
+
+87
+00:06:01.248 --> 00:06:04.120
+Como é que eu posso fazer
+essa minha solução digital?
+
+88
+00:06:04.120 --> 00:06:08.884
+Eu posso pegar o meu sinal
+digital e antes de jogar
+
+89
+00:06:08.884 --> 00:06:13.750
+ele para o conversor de digital para
+analógico, eu posso passar ele por filtro
+
+90
+00:06:13.750 --> 00:06:18.990
+H de ômega e o papel de esse filtro H de
+ômega é justamente compensar as distorções
+
+91
+00:06:18.990 --> 00:06:22.944
+em frequências introduzidas pelo meu
+conversor de digital para analógico.
+
+92
+00:06:22.944 --> 00:06:27.122
+Então, eu vou ter uma coisa muito parecida
+com o que eu tinha naquele meu filtro de
+
+93
+00:06:27.122 --> 00:06:27.924
+compensação.
+
+94
+00:06:27.924 --> 00:06:30.765
+Eu sei que o meu conversor
+digital para analógico vai dar,
+
+95
+00:06:30.765 --> 00:06:35.290
+por exemplo, ganho de meio na frequência
+Pi sobre 2 então, eu projeto esse meu
+
+96
+00:06:35.290 --> 00:06:40.182
+filtro H para dar ganho de 2 na
+frequência Pi sobre 2 para compensar.
+
+97
+00:06:40.182 --> 00:06:44.708
+Eu sei que o meu conversor digital
+para analógico vai dar ganho de 0,8 na
+
+98
+00:06:44.708 --> 00:06:49.978
+frequência Pi sobre 4, por exemplo,
+então eu projeto esse meu H de ômega para
+
+99
+00:06:49.978 --> 00:06:54.930
+dar ganho de 1 sobre 0,8 na frequência
+Pi sobre 4, de forma a que o quê?
+
+100
+00:06:54.930 --> 00:06:57.171
+De forma a que eu tenho
+uma frequência aqui,
+
+101
+00:06:57.171 --> 00:07:02.197
+ela vai passar por ganho de 0,8 aqui,
+vai passar,
+
+102
+00:07:02.197 --> 00:07:06.805
+vai, desculpa, vai passar por ganho de 1
+sobre 0,8 aqui, vai passar por ganho de
+
+103
+00:07:06.805 --> 00:07:11.390
+0,8 aqui e aquela frequência que aparecia
+aqui, apareceu aqui com a mesma amplitude.
+
+104
+00:07:11.390 --> 00:07:16.845
+Então, eu não causo essa distorção,
+então você tem essa técnica
+
+105
+00:07:16.845 --> 00:07:21.926
+de poder projetar filtro digitalmente
+
+106
+00:07:21.926 --> 00:07:26.370
+para compensar as distorções
+do seu conversor de áudio.
+
+107
+00:07:26.370 --> 00:07:28.240
+Como esses filtros são projetados?
+
+108
+00:07:28.240 --> 00:07:32.703
+Isso já é tema de outro curso, aquela
+página discute pouco, isso já é uma coisa
+
+109
+00:07:32.703 --> 00:07:36.582
+pouco mais fora do escopo que a gente
+está querendo discutir aqui e eu encorajo
+
+110
+00:07:36.582 --> 00:07:40.760
+vocês, se vocês quererem ir mais a fundo,
+a tentar entrar nessas páginas.
+
+111
+00:07:40.760 --> 00:07:43.943
+É isso,
+no próximo video a gente vai ver como,
+
+112
+00:07:43.943 --> 00:07:48.782
+da mesma forma que aumentar a taxa
+de amostragem para sistemas para,
+
+113
+00:07:48.782 --> 00:07:54.209
+para o conversor analógico digital
+facilita alguns filtros, a gente vai ver
+
+114
+00:07:54.209 --> 00:07:59.045
+como aumentando a taxa de amostragem no
+caso da reconstrução do conversor digital
+
+115
+00:07:59.045 --> 00:08:04.187
+para analógico, a gente também consegue
+melhorar algumas das distorções.
+
+116
+00:08:04.187 --> 00:08:06.234
+Espero ver vocês lá.
+
+117
+00:08:06.234 --> 00:08:07.372
+Obrigado.
+
+118
+00:08:07.372 --> 00:08:08.520
+[MÚSICA]

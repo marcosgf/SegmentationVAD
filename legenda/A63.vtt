@@ -1,0 +1,335 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.710
+[MÚSICA] Olá!
+
+2
+00:00:06.710 --> 00:00:13.310
+Dando sequência à segmentação baseada
+
+3
+00:00:13.310 --> 00:00:17.282
+em comportamento do consumidor, vamos
+falar agora sobre análise de agrupamentos.
+
+4
+00:00:17.282 --> 00:00:20.610
+Análise de agrupamentos é
+sinônimo de Cluster Analisis,
+
+5
+00:00:20.610 --> 00:00:23.430
+que é exatamente como se
+fala em inglês e aqui no
+
+6
+00:00:23.430 --> 00:00:27.454
+Brasil é muito também usado Análise de
+Cluster e até Análise de Conglomerados.
+
+7
+00:00:27.454 --> 00:00:29.858
+A palavra cluster é praticamente sinônimo,
+
+8
+00:00:29.858 --> 00:00:34.198
+a única diferença é que em vez de falar
+segmentação, a gente usa a palavra cluster
+
+9
+00:00:34.198 --> 00:00:37.326
+porque ela induz a pensar que
+é uma técnica quantitativa.
+
+10
+00:00:37.326 --> 00:00:41.700
+Nós vamos realmente fazer uma análise
+de segmentação baseada em números.
+
+11
+00:00:41.700 --> 00:00:46.478
+É uma técnica que permite então
+identificar grupos nos dados, também
+
+12
+00:00:46.478 --> 00:00:51.425
+permite que você faça conta, que você faça
+uns cálculos matemáticos para separar esse
+
+13
+00:00:51.425 --> 00:00:55.355
+grupo e não há teste de hipótese,
+portanto não é uma técnica estatística.
+
+14
+00:00:55.355 --> 00:01:00.021
+E é uma técnica muito usada para que
+você chegue a conclusão de quais pessoas
+
+15
+00:01:00.021 --> 00:01:04.390
+podem ser agrupadas de uma forma
+objetiva e usando cálculos.
+
+16
+00:01:04.390 --> 00:01:07.140
+Vamos começar com exemplo?
+
+17
+00:01:07.140 --> 00:01:12.344
+Imagine o seguinte: Nós temos 5 pessoas,
+que aqui a gente está designando como A,
+
+18
+00:01:12.344 --> 00:01:15.863
+B, C, D e E, que tem comportamentos
+de compra distintos.
+
+19
+00:01:15.863 --> 00:01:20.443
+Quando eles vão comprar comida,
+alguns gastam mais do
+
+20
+00:01:20.443 --> 00:01:24.312
+que eles gastam em roupas e outros,
+quando vão comprar roupas,
+
+21
+00:01:24.312 --> 00:01:28.672
+gastam mais do que comida,
+como uma média de gastos diários do grupo.
+
+22
+00:01:28.672 --> 00:01:32.910
+Como que a gente poderia separar
+essas 5 pessoas com base no
+
+23
+00:01:32.910 --> 00:01:34.960
+comportamento de compras?
+
+24
+00:01:34.960 --> 00:01:35.989
+Alguma ideia?
+
+25
+00:01:35.989 --> 00:01:39.153
+Eu tenho certeza que
+você deve estar pensando.
+
+26
+00:01:39.153 --> 00:01:44.110
+Como nós temos aqui duas variáveis a gente
+poderia fazer gráfico, gráfico chamado
+
+27
+00:01:44.110 --> 00:01:47.950
+Gráfico de Expressão e parecido com o
+gráfico que vocês viram em Correlação.
+
+28
+00:01:47.950 --> 00:01:50.880
+Esse gráfico daria isso aqui.
+
+29
+00:01:50.880 --> 00:01:55.670
+Uma variável é comida,
+a outra é gastos em roupas.
+
+30
+00:01:55.670 --> 00:02:01.130
+Colocando os pontos no gráfico,
+vocês estão vendo que o ponto
+
+31
+00:02:01.130 --> 00:02:06.330
+A e D ficaram mais próximos
+do grupo que está o C, B e E.
+
+32
+00:02:06.330 --> 00:02:11.148
+Será pessoal, que a gente pode dizer
+que temos dois grupos, nós não fizemos
+
+33
+00:02:11.148 --> 00:02:16.231
+nenhuma conta, a gente só fez
+a colocação dos pontos num gráfico.
+
+34
+00:02:16.231 --> 00:02:18.966
+É isso mesmo, é isso que nós vamos fazer,
+
+35
+00:02:18.966 --> 00:02:23.833
+nós vamos aprender a calcular distâncias
+e vamos ver se essas pessoas, 5,
+
+36
+00:02:23.833 --> 00:02:28.248
+podem ser divididas em dois
+grupos com alguma lógica ou não.
+
+37
+00:02:28.248 --> 00:02:32.620
+Mas antes de fazer as contas,
+vamos fazer alguns exemplos.
+
+38
+00:02:32.620 --> 00:02:36.560
+Imagine que eu tenho uma situação de
+cluster assim: Com duas variáveis,
+
+39
+00:02:36.560 --> 00:02:41.080
+4 grupos e esses grupos bem diferentes.
+
+40
+00:02:41.080 --> 00:02:41.990
+Ótimo.
+
+41
+00:02:41.990 --> 00:02:45.696
+A gente vai ficar feliz, vamos dizer
+que podemos fazer a segmentação,
+
+42
+00:02:45.696 --> 00:02:49.530
+temos 4 grupos e os grupos
+parecem que estão bem diferentes.
+
+43
+00:02:49.530 --> 00:02:52.870
+Mas olha só,
+o mundo real tem situações como essa.
+
+44
+00:02:52.870 --> 00:02:56.720
+Aqui você ta vendo que não é
+tão simples fazer agrupamentos.
+
+45
+00:02:56.720 --> 00:03:01.610
+Os grupos estão entrelaçados e para
+isso que a gente precisa de uma técnica,
+
+46
+00:03:01.610 --> 00:03:06.500
+uma técnica precisa, uma técnica que nos
+permita saber o que nós estamos fazendo.
+
+47
+00:03:06.500 --> 00:03:08.541
+Vamos dar mais exemplo.
+
+48
+00:03:08.541 --> 00:03:10.050
+Imagine carpetes.
+
+49
+00:03:10.050 --> 00:03:14.154
+A gente poderia falar aqui
+carpetes tem duas propriedades,
+
+50
+00:03:14.154 --> 00:03:16.884
+ou duas características,
+ou dois atributos.
+
+51
+00:03:16.884 --> 00:03:19.385
+1 se ele é ou não resistente à água, e 2,
+
+52
+00:03:19.385 --> 00:03:24.220
+se ele é ou não resistente ao uso
+frequente e contínuo, ou seja,
+
+53
+00:03:24.220 --> 00:03:28.014
+tem carpetes que são feitos para grandes
+públicos e outros que são feitos para,
+
+54
+00:03:28.014 --> 00:03:31.580
+por exemplo, usar dentro da sua casa,
+onde tem fluxo menor de pessoas.
+
+55
+00:03:31.580 --> 00:03:35.251
+Tem carpetes que são feitos para usar
+dentro de casa e outros são feitos para
+
+56
+00:03:35.251 --> 00:03:35.950
+usar indoor.
+
+57
+00:03:35.950 --> 00:03:39.811
+E aí você está vendo 4 grupos bem
+distintos conforme essas características.
+
+58
+00:03:39.811 --> 00:03:45.058
+Nós podemos dizer que são 4 segmentos,
+podemos inclusive identificar os pontos A,
+
+59
+00:03:45.058 --> 00:03:50.395
+B, C e D como sendo uma espécie de média,
+ou também chamado de centroide de cada
+
+60
+00:03:50.395 --> 00:03:55.110
+dos grupos, e aí a gente pode calcular
+a distância entre esses centroides.
+
+61
+00:03:55.110 --> 00:03:59.782
+Cada uma dessas bolinhas
+pequenas são respondentes ou são
+
+62
+00:03:59.782 --> 00:04:04.940
+públicos alvos que a gente gostaria
+de usar numa segmentação, e,
+
+63
+00:04:04.940 --> 00:04:10.278
+por último, se você quiser, a gente pode
+até dar nome para esses públicos alvos.
+
+64
+00:04:10.278 --> 00:04:13.874
+Pode ser que grupo A seja grupo,
+por exemplo, formado por escolas,
+
+65
+00:04:13.874 --> 00:04:17.505
+porque "indoor", dentro,
+não precisa ficar ao ar livre,
+
+66
+00:04:17.505 --> 00:04:20.780
+mas tem grande fluxo de
+pessoas e assim por diante.
+
+67
+00:04:20.780 --> 00:04:25.177
+Nós podemos dizer, por exemplo,
+só para dar outro exemplo, que academias e
+
+68
+00:04:25.177 --> 00:04:31.120
+fitness, eles tem que ter resistência
+a prova d'água simultaneamente.
+
+69
+00:04:31.120 --> 00:04:34.630
+Com isso nós terminamos a nossa aula.
+
+70
+00:04:34.630 --> 00:04:43.680
+[SEM_ÁUDIO] [SEM_ÁUDIO]

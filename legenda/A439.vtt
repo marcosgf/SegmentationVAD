@@ -1,0 +1,440 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.478
+[MÚSICA] Olá,
+
+2
+00:00:07.478 --> 00:00:10.333
+bem-vindo ao curso sobre TDD.
+
+3
+00:00:10.333 --> 00:00:14.903
+Eu sou Clóvis Fernandes e
+hoje iremos falar sobre
+
+4
+00:00:14.903 --> 00:00:19.830
+exemplo de refatoração
+tratando o mau cheiro de if
+
+5
+00:00:19.830 --> 00:00:24.980
+com expressão booleana complicada
+e também as partes then e else.
+
+6
+00:00:24.980 --> 00:00:27.028
+Qual que é o problema aqui?
+
+7
+00:00:27.028 --> 00:00:30.836
+Você tem uma condicional,
+comando condicional,
+
+8
+00:00:30.836 --> 00:00:34.709
+no caso é if-then-else,
+esse é o mau cheiro que nós temos,
+
+9
+00:00:34.709 --> 00:00:40.365
+é que ele é complicado
+e difícil de entender.
+
+10
+00:00:40.365 --> 00:00:45.315
+Embora não seja tão exageradamente
+difícil de entender, ele exemplifica o
+
+11
+00:00:45.315 --> 00:00:49.530
+problema de ter expressões
+booleanas complicadas, está certo?
+
+12
+00:00:49.530 --> 00:00:54.610
+Então vamos dar uma olhada aí
+nesse if-then-else, está certo?
+
+13
+00:00:54.610 --> 00:00:59.275
+Vocês percebem que a gente
+está tratando alguma
+
+14
+00:00:59.275 --> 00:01:03.230
+coisa que tem a ver com o início
+do verão e o fim do verão.
+
+15
+00:01:03.230 --> 00:01:09.486
+Então, eu tenho lá objeto data,
+está certo?
+
+16
+00:01:09.486 --> 00:01:15.401
+Ponto before, do início do verão e data
+after o verão, o que isso quer dizer?
+
+17
+00:01:15.401 --> 00:01:20.394
+Eu tenho que analisar e ver que isso está
+querendo dizer que não é dentro do verão,
+
+18
+00:01:20.394 --> 00:01:21.230
+está certo?
+
+19
+00:01:21.230 --> 00:01:23.628
+Não é uma data dentro do verão,
+
+20
+00:01:23.628 --> 00:01:28.836
+então é uma data que poderíamos
+classificar hemisfério que você
+
+21
+00:01:28.836 --> 00:01:34.340
+tenha predominantemente inverno e verão
+como se fosse inverno, está certo?
+
+22
+00:01:34.340 --> 00:01:40.019
+E aí você tem uma atribuição da
+variável custo de uma expressão,
+
+23
+00:01:40.019 --> 00:01:45.390
+também está, tem uma segunda, no else
+também é uma outra expressão, está certo?
+
+24
+00:01:45.390 --> 00:01:49.768
+Então isso aqui na verdade
+está simbolizando uma
+
+25
+00:01:49.768 --> 00:01:52.918
+condicional complicada, está certo?
+
+26
+00:01:52.918 --> 00:01:57.361
+Ela tem uma certa complicação
+e a gente vai tratar disso.
+
+27
+00:01:57.361 --> 00:02:01.800
+Vamos dar uma olhada aí o que
+é que ele tem de dificuldade.
+
+28
+00:02:01.800 --> 00:02:05.652
+Normalmente essas 3 coisas
+que estão sendo apontadas aí,
+
+29
+00:02:05.652 --> 00:02:08.590
+elas não expressam a intenção, está certo?
+
+30
+00:02:08.590 --> 00:02:13.690
+Ou seja, quando eu leio aquela expressão
+booleana lá, está certo, eu tenho que
+
+31
+00:02:13.690 --> 00:02:19.721
+fazer esforço de interpretação para
+entender o que ele quer dizer, está certo?
+
+32
+00:02:19.721 --> 00:02:24.131
+Ele não está expressando diretamente,
+assim como essas expressões,
+
+33
+00:02:24.131 --> 00:02:26.551
+eu faço atribuições à variável custo,
+
+34
+00:02:26.551 --> 00:02:30.766
+também elas não expressam a intenção
+do que eu estou querendo com isso,
+
+35
+00:02:30.766 --> 00:02:36.008
+eu tenho que gastar certo tempo
+para entender esse tipo de coisa.
+
+36
+00:02:36.008 --> 00:02:41.536
+O que nós vamos fazer nessa Decompose
+Conditional, quer dizer, eu vou decompor
+
+37
+00:02:41.536 --> 00:02:46.090
+a condicional e nesse primeiro vídeo
+aqui nós vamos mostrar a primeira parte.
+
+38
+00:02:46.090 --> 00:02:51.085
+A primeira parte então é extrair essa
+condicional, essa booleana do if, essa
+
+39
+00:02:51.085 --> 00:02:57.440
+expressão booleana que é complicada, vamos
+extrair como se fosse método, está certo?
+
+40
+00:02:57.440 --> 00:02:59.214
+E antes é isso que a gente vai fazer,
+
+41
+00:02:59.214 --> 00:03:02.720
+eu estou apontando exatamente aí o
+que é que eu vou tirar, está certo?
+
+42
+00:03:02.720 --> 00:03:07.247
+Uma coisa que nós não podemos nunca
+esquecer: toda vez que nós formos fazer
+
+43
+00:03:07.247 --> 00:03:12.064
+Extract Method, extrair método de
+trecho de código, nós temos que
+
+44
+00:03:12.064 --> 00:03:15.420
+olhar as variáveis temporárias que
+aparecem lá dentro, está certo?
+
+45
+00:03:15.420 --> 00:03:18.056
+Então neste caso eu tenho a variável data,
+
+46
+00:03:18.056 --> 00:03:21.070
+por que que eu sei que ela
+é variável temporária?
+
+47
+00:03:21.070 --> 00:03:26.275
+Porque ela não vem
+acompanhada do underline,
+
+48
+00:03:26.275 --> 00:03:31.159
+do sublinhado, está certo,
+como estão nas duas expressões aí embaixo,
+
+49
+00:03:31.159 --> 00:03:35.732
+tem três variáveis de instância
+que estão aparecendo, custo,
+
+50
+00:03:35.732 --> 00:03:40.560
+quantidade e data são variáveis
+temporárias, está certo?
+
+51
+00:03:40.560 --> 00:03:44.014
+E elas não foram alteradas ali dentro,
+então o que significa isso?
+
+52
+00:03:44.014 --> 00:03:49.670
+Variável temporária no trecho de código
+que eu vou extrair que não é alterada,
+
+53
+00:03:49.670 --> 00:03:54.920
+significa que eu vou passar como parâmetro
+nesse novo método que eu estou criando,
+
+54
+00:03:54.920 --> 00:04:00.050
+se ela tivesse sido alterada,
+aí ela viria return, está certo?
+
+55
+00:04:00.050 --> 00:04:03.354
+Então como é que ficou agora,
+eu tinha o antes, o agora e o depois,
+
+56
+00:04:03.354 --> 00:04:04.250
+o que é que eu fiz?
+
+57
+00:04:04.250 --> 00:04:10.905
+Eu tirei a expressão, que lá cima,
+a booleana queria dizer que não é verão,
+
+58
+00:04:10.905 --> 00:04:15.645
+é inverno, está certo, e aí eu escolhi
+colocar não é verão, está certo?
+
+59
+00:04:15.645 --> 00:04:19.620
+Eu poderia ter colocado é inverno,
+se é inverno, está certo?
+
+60
+00:04:19.620 --> 00:04:23.131
+Mas acontece que os nomes das variáveis,
+
+61
+00:04:23.131 --> 00:04:27.390
+que são constantes,
+Inicio Verão e Fim Verão estão
+
+62
+00:04:27.390 --> 00:04:32.320
+claramente levando a eu tratar as
+coisas como verão, está certo?
+
+63
+00:04:32.320 --> 00:04:37.147
+Então por isso que eu extraí
+o nome do método como
+
+64
+00:04:37.147 --> 00:04:42.032
+isNotVerao e passei o data, como eu já
+havia dito, já que data é uma variável
+
+65
+00:04:42.032 --> 00:04:45.710
+temporária que não foi modificada,
+eu passei como parâmetro.
+
+66
+00:04:45.710 --> 00:04:50.861
+E obviamente o if ficou bem
+
+67
+00:04:50.861 --> 00:04:55.765
+mais expressivo nesse momento, está certo,
+
+68
+00:04:55.765 --> 00:05:00.565
+eu entendo qual é a lógica
+desse if claramente,
+
+69
+00:05:00.565 --> 00:05:05.562
+eu não preciso demorar mais do que 1
+segundo para entender qual é a lógica
+
+70
+00:05:05.562 --> 00:05:08.880
+na hora que eu vou testar
+essa booleana aí, está certo?
+
+71
+00:05:08.880 --> 00:05:15.404
+O resultado então ficou dessa forma,
+eu tenho aí o novo trecho refatorado até
+
+72
+00:05:15.404 --> 00:05:22.222
+agora com o Extracted Method que eu
+tirei o método isNotVerao, está certo?
+
+73
+00:05:22.222 --> 00:05:25.010
+E eu apresento as duas coisas aí.
+
+74
+00:05:25.010 --> 00:05:30.782
+Falta ainda tratar aquela questão da
+expressão que não expressa a intenção ou
+
+75
+00:05:30.782 --> 00:05:36.027
+finalidade, foi o que nós
+havíamos mostrado anteriormente,
+
+76
+00:05:36.027 --> 00:05:41.000
+que existem duas expressões aí que não
+expressam essa finalidade, ou seja,
+
+77
+00:05:41.000 --> 00:05:45.110
+dá certo trabalho para eu entender o que
+é que elas querem dizer, está certo?
+
+78
+00:05:45.110 --> 00:05:52.600
+Então a ideia é trabalhar nisso,
+normalmente a gente faz extract expressão,
+
+79
+00:05:52.600 --> 00:05:57.250
+extrai a expressão e coloca novo método,
+está certo?
+
+80
+00:05:57.250 --> 00:06:00.071
+Essa refatoração,
+essa técnica, ela não existe,
+
+81
+00:06:00.071 --> 00:06:05.972
+na verdade ela é parte de uma outra
+técnica, que é o Replace Temp
+
+82
+00:06:05.972 --> 00:06:10.740
+with Query, query é muito
+parecido com getter, está certo?
+
+83
+00:06:10.740 --> 00:06:16.380
+Então a primeira parte é o que a gente
+vai extrair essa expressão na forma
+
+84
+00:06:16.380 --> 00:06:22.070
+de método e depois substituir a expressão
+pela chamada do método, está certo?
+
+85
+00:06:22.070 --> 00:06:26.080
+Mas isso é o que nós
+iremos ver na parte 2.
+
+86
+00:06:26.080 --> 00:06:31.349
+Então nesta parte inicial o que
+é que nós mostramos foi o início
+
+87
+00:06:31.349 --> 00:06:36.460
+dessa Decompose Conditional,
+que trata só da expressão booleana.
+
+88
+00:06:36.460 --> 00:06:41.957
+Nós chegamos uma expressão booleana não
+muito agradável, porque ela é negativa,
+
+89
+00:06:41.957 --> 00:06:46.345
+isNotVerao data, que nós depois no
+final vamos dar acerto e trabalhar,
+
+90
+00:06:46.345 --> 00:06:49.240
+tornar essa expressão
+booleana positiva também.
+
+91
+00:06:49.240 --> 00:06:55.290
+Obrigado.

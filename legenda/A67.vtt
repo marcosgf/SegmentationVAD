@@ -1,0 +1,659 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.641
+[MÚSICA] Neste
+
+2
+00:00:06.641 --> 00:00:13.856
+módulo "Segmentação" baseado em
+comportamento do consumidor,
+
+3
+00:00:13.856 --> 00:00:18.000
+o nosso foco agora é falar de
+procedimento de análise de agrupamentos.
+
+4
+00:00:18.000 --> 00:00:22.526
+São vários os procedimentos
+de agrupamentos ou
+
+5
+00:00:22.526 --> 00:00:27.260
+procedimentos de clusters ou procedimentos
+aglomeração, são todos sinônimos.
+
+6
+00:00:27.260 --> 00:00:30.326
+E eles se dividem em 2 grandes blocos,
+hierárquicos e não hierárquicos,
+
+7
+00:00:30.326 --> 00:00:32.032
+vamos falar primeiro dos hierárquicos.
+
+8
+00:00:32.032 --> 00:00:35.224
+Os hierárquicos é uma hierarquia,
+eu tenho uma base de respondentes,
+
+9
+00:00:35.224 --> 00:00:37.972
+eu tenho lá uma amostra com 100, 200, 500,
+
+10
+00:00:37.972 --> 00:00:42.277
+1 milhão de respondentes e eu quero
+agrupá-los e fazer grupos homogêneos.
+
+11
+00:00:42.277 --> 00:00:45.415
+Como?
+Através de processo hierárquico eu vou
+
+12
+00:00:45.415 --> 00:00:50.955
+começar a dar base e vou tentar encaixar
+cada daqueles 1 milhão em pequenos grupos.
+
+13
+00:00:50.955 --> 00:00:55.786
+Começo com 1 milhão de grupos,
+depois eu vou juntar 2, depois mais 1,
+
+14
+00:00:55.786 --> 00:00:56.895
+depois mais 1.
+
+15
+00:00:56.895 --> 00:00:59.692
+É processo hierárquico que
+ele vem de baixo para cima.
+
+16
+00:00:59.692 --> 00:01:03.522
+Esse processo hierárquico pode ser
+aglomerativo e nós vamos ver que tem
+
+17
+00:01:03.522 --> 00:01:07.435
+que mede a distância entre os
+grupos pelos pontos mais próximos,
+
+18
+00:01:07.435 --> 00:01:12.284
+que mede pelos pontos mais distantes e
+que mede pela média das distâncias e tem
+
+19
+00:01:12.284 --> 00:01:13.700
+procedimento de Ward.
+
+20
+00:01:13.700 --> 00:01:18.420
+Depois, nós temos procedimento que é não
+hierárquico que é muito usado para grandes
+
+21
+00:01:18.420 --> 00:01:21.747
+bases de dados onde você define
+à priori o seu número de grupos.
+
+22
+00:01:21.747 --> 00:01:24.527
+Nós vamos ver em detalhes
+todos esses procedimentos.
+
+23
+00:01:24.527 --> 00:01:28.938
+Os mais usados em marketing são esses:
+O Average Linkage o Ward e o K-means.
+
+24
+00:01:28.938 --> 00:01:32.883
+Esses nomes são em inglês,
+porque são muito usados também no Brasil e
+
+25
+00:01:32.883 --> 00:01:35.730
+por isso a gente gostaria que
+você soubesse a tradução,
+
+26
+00:01:35.730 --> 00:01:38.538
+média das distâncias e K-means é k-médias,
+
+27
+00:01:38.538 --> 00:01:43.300
+no método de Ward a gente chama de método
+de Ward porque é o nome do criador dele.
+
+28
+00:01:43.300 --> 00:01:44.347
+Como funciona?
+
+29
+00:01:44.347 --> 00:01:48.011
+Funciona mais ou menos assim,
+no método Single Linkage,
+
+30
+00:01:48.011 --> 00:01:52.521
+você tem vizinho mais próximo e você
+mede a distância entre os pontos mais
+
+31
+00:01:52.521 --> 00:01:56.369
+próximos de cada grupo e atribui
+isso à distância entre os grupos.
+
+32
+00:01:56.369 --> 00:01:59.702
+No método Complete Linkage é o
+ponto mais distante e o método
+
+33
+00:01:59.702 --> 00:02:02.739
+que a gente mais recomenda
+é o método Average Linkage,
+
+34
+00:02:02.739 --> 00:02:05.661
+onde existe uma média de
+distâncias entre os grupos.
+
+35
+00:02:05.661 --> 00:02:09.927
+Vamos ver como funcionam esses métodos
+de encadeamento através de exemplo.
+
+36
+00:02:09.927 --> 00:02:13.361
+Nós vamos fazer o método
+de vizinho mais próximo.
+
+37
+00:02:13.361 --> 00:02:17.885
+Imagine que eu tenha 5 grupos
+numerados de 1 a 5 e tem uma
+
+38
+00:02:17.885 --> 00:02:22.225
+tabela que marca as distâncias
+Euclidianas entre eles.
+
+39
+00:02:22.225 --> 00:02:25.461
+As distâncias Euclidianas são
+essas que você está vendo,
+
+40
+00:02:25.461 --> 00:02:28.640
+como por exemplo a distância
+entre o 4 e o 1, 1,81.
+
+41
+00:02:28.640 --> 00:02:32.801
+Eu poderia criar gráfico
+e esse gráfico me ajudar
+
+42
+00:02:32.801 --> 00:02:37.500
+a visualizar como os respondentes,
+os 5, estão separados entre si.
+
+43
+00:02:37.500 --> 00:02:39.880
+Para isso o que é que eu teria que fazer?
+
+44
+00:02:39.880 --> 00:02:46.056
+Eu coloco que o 1 e o 2 estão separados
+por 1,49, como está na matriz,
+
+45
+00:02:46.056 --> 00:02:52.050
+o gráfico também mostra que entre o 3
+e o 4 nós temos uma distância de 1,48.
+
+46
+00:02:52.050 --> 00:02:59.043
+Entre o grupo formado pelo 1 e
+2 e o novo grupo formado pelo
+
+47
+00:02:59.043 --> 00:03:03.957
+3 e 4 eu vou procurar agora a distância
+mais próxima do respondente mais próximo.
+
+48
+00:03:03.957 --> 00:03:08.775
+Eu encontro que essa distância é
+1,81 que é entre o 1 e o 4 então eu
+
+49
+00:03:08.775 --> 00:03:10.633
+coloco lá no meu gráfico.
+
+50
+00:03:10.633 --> 00:03:15.694
+Esse gráfico é construído de uma maneira
+hierárquica, eu saio da base com
+
+51
+00:03:15.694 --> 00:03:22.240
+5 grupos e vou chegando na ponta com cada
+vez menos grupos até ter somente 2 grupos.
+
+52
+00:03:22.240 --> 00:03:27.154
+Dessa forma, eu tenho uma
+visualização pelo tamanho das barras,
+
+53
+00:03:27.154 --> 00:03:31.427
+do quão espalhados estão os
+agrupamentos e isso vai me
+
+54
+00:03:31.427 --> 00:03:34.890
+permitir definir o meu número de grupos.
+
+55
+00:03:34.890 --> 00:03:38.133
+O método hierárquico ele
+permite construir esse
+
+56
+00:03:38.133 --> 00:03:40.742
+gráfico que tem o nome de dendrograma.
+
+57
+00:03:40.742 --> 00:03:44.151
+Dendro vem da palavra grega folhas,
+árvores,
+
+58
+00:03:44.151 --> 00:03:48.429
+galhos por isso que é gráfico
+que parece uma árvore,
+
+59
+00:03:48.429 --> 00:03:53.582
+ele vai formando uma árvore que permite
+que eu veja as ramificações dos grupos.
+
+60
+00:03:53.582 --> 00:03:57.726
+Com base nesse dendrograma eu sou capaz
+de definir o meu número de grupos.
+
+61
+00:03:57.726 --> 00:04:02.408
+Vamos agora explicar pouco como funciona o
+procedimento hierárquico através do método
+
+62
+00:04:02.408 --> 00:04:02.910
+de Ward.
+
+63
+00:04:02.910 --> 00:04:06.087
+Esse é pouco diferente,
+ele não pega nem o vizinho mais próximo,
+
+64
+00:04:06.087 --> 00:04:08.819
+nem o vizinho mais distante,
+nem a média das distâncias.
+
+65
+00:04:08.819 --> 00:04:12.923
+O que ele faz, ele faz o seguinte: para
+cada grupo ele calcula como se fosse uma
+
+66
+00:04:12.923 --> 00:04:17.783
+média, centróide, ele calcula através
+de método que é minimizando a soma dos
+
+67
+00:04:17.783 --> 00:04:21.708
+quadrados das distãncias desse
+próprio ponto com os respondentes.
+
+68
+00:04:21.708 --> 00:04:26.340
+Esse método ele tem uma vantagem que ele
+provoca uma auto homogeneidade interna.
+
+69
+00:04:26.340 --> 00:04:29.448
+Esse método tem uma
+fórmula que assusta pouco,
+
+70
+00:04:29.448 --> 00:04:34.340
+mas essa fórmula entende-se como a fórmula
+que minimiza a soma das distâncias
+
+71
+00:04:34.340 --> 00:04:38.318
+dos quadrados dos desvios entre
+o centroide e cada respondente.
+
+72
+00:04:38.318 --> 00:04:42.235
+Este método, você tem aqui os clusters,
+os indivíduos e as distâncias,
+
+73
+00:04:42.235 --> 00:04:45.640
+esse método é muito bom, muito robusto,
+nós vamos também praticar.
+
+74
+00:04:45.640 --> 00:04:51.425
+E agora vamos pegar o nosso
+querido exemplo de gastos diários.
+
+75
+00:04:51.425 --> 00:04:53.821
+Este é o dendrograma de gastos diários.
+
+76
+00:04:53.821 --> 00:04:57.433
+Você se lembram daquelas 5 observações,
+a, d, b, e, c?
+
+77
+00:04:57.433 --> 00:05:01.905
+Aqui vocês estão vendo as distâncias
+Euclidianas entre o a e b que é muito
+
+78
+00:05:01.905 --> 00:05:06.857
+pequena, entre o b e e também é pequena,
+o grupo formado por b e e em relação ao c
+
+79
+00:05:06.857 --> 00:05:13.145
+também é pequena e depois tem uma enorme
+distância entre esses 2 blocos entre si.
+
+80
+00:05:13.145 --> 00:05:16.191
+Essa enorme distância permite,
+com tranquilidade,
+
+81
+00:05:16.191 --> 00:05:20.045
+dizer que a melhor separação para
+esses 5 respondentes é 2 grupos.
+
+82
+00:05:20.045 --> 00:05:20.741
+Porquê?
+
+83
+00:05:20.741 --> 00:05:22.830
+Você cortando em 2 grupos,
+
+84
+00:05:22.830 --> 00:05:28.122
+você passa uma reta no dendrograma e
+você vê quantas pernas tem, são duas.
+
+85
+00:05:28.122 --> 00:05:32.716
+Essas duas pernas indicam que você fazendo
+uma escolha de 2 grupos você está fazendo
+
+86
+00:05:32.716 --> 00:05:37.202
+uma ótima escolha porque a distância entre
+os 2 grupos é muito grande e se você
+
+87
+00:05:37.202 --> 00:05:41.930
+quisesse partir para 3 grupos você ia
+ter grupos muito parecidos, ou seja,
+
+88
+00:05:41.930 --> 00:05:47.180
+o respondente c é muito parecido com a e
+e e 3 grupos não seriam uma boa solução.
+
+89
+00:05:47.180 --> 00:05:49.547
+Método hierárquico permite
+fazer dendrograma,
+
+90
+00:05:49.547 --> 00:05:52.430
+dendrograma permite você decidir
+quanto grupos você quer.
+
+91
+00:05:52.430 --> 00:05:57.012
+E assim nós temos aqui os 2 grupos
+que agora nós podemos dizer de forma
+
+92
+00:05:57.012 --> 00:06:01.088
+matemática e precisa e podemos
+calcular as suas médias.
+
+93
+00:06:01.088 --> 00:06:06.356
+Nós podemos dizer que o gasto
+médio do grupo 1 em comida é 1,5,
+
+94
+00:06:06.356 --> 00:06:10.515
+o gasto médio do grupo 2 em comida é 8,5,
+
+95
+00:06:10.515 --> 00:06:16.834
+o gasto médio em roupas do grupo 1 é 4,5,
+o gasto médio de roupas em grupo 2 é 2.
+
+96
+00:06:16.834 --> 00:06:20.275
+Nós agora estamos em condições
+de fazer uma plano de marketing,
+
+97
+00:06:20.275 --> 00:06:25.260
+nós sabemos que temos 2 grupos,
+gasta mais em comida do que o outro, 8,5,
+
+98
+00:06:25.260 --> 00:06:28.873
+o outro gasta mais em
+roupas que o primeiro, 4,5.
+
+99
+00:06:28.873 --> 00:06:33.017
+Temos agora resolvido belo problema
+de marketing e podemos fazer
+
+100
+00:06:33.017 --> 00:06:36.735
+plano de marketing para atacar
+o segmento de gastadores em
+
+101
+00:06:36.735 --> 00:06:41.186
+comida de uma maneira distinta do
+segmento de gastadores em roupas.
+
+102
+00:06:41.186 --> 00:06:44.857
+Vamos falar pouco do método k-means
+que é uma técnica não hierárquica,
+
+103
+00:06:44.857 --> 00:06:48.720
+é uma técnica muito mais simples, na
+verdade ele não parte de baixo para cima,
+
+104
+00:06:48.720 --> 00:06:52.648
+ele não faz todos os parzinhos, ele só
+vai fazer diretamente a alocação dos
+
+105
+00:06:52.648 --> 00:06:58.340
+respondentes no número de grupos que você
+definiu que é exatamente esse chamado k.
+
+106
+00:06:58.340 --> 00:07:01.150
+Se você pedir para o software
+ele vai fazer 3 grupos,
+
+107
+00:07:01.150 --> 00:07:05.348
+ele divide diretamente em 3 grupos, ele
+não faz toda a árvore de baixo para cima.
+
+108
+00:07:05.348 --> 00:07:09.442
+Portanto ele não pode permitir fazer
+dendrograma e ele não te ajuda a definir o
+
+109
+00:07:09.442 --> 00:07:10.338
+número grupos.
+
+110
+00:07:10.338 --> 00:07:12.322
+De onde vem então o número de grupos?
+
+111
+00:07:12.322 --> 00:07:15.010
+Vem ou de uma teoria,
+ou de limite que você tem,
+
+112
+00:07:15.010 --> 00:07:19.018
+a empresa não pode trabalhar mais do
+que com 4 grupos e assim por diante.
+
+113
+00:07:19.018 --> 00:07:23.605
+Ou até mesmo, se você puder, faz primeiro
+o hierárquico e depois faz o k-means.
+
+114
+00:07:23.605 --> 00:07:28.142
+O k-means é muito usado na prática porque
+você pode fazer procedimento computacional
+
+115
+00:07:28.142 --> 00:07:32.577
+mais rápido e ele é muito bom para quando
+você tem base de dados acima de 100,
+
+116
+00:07:32.577 --> 00:07:36.142
+200, 300, 1 milhão de respondentes.
+
+117
+00:07:36.142 --> 00:07:40.387
+Se você tiver base de dados grandes
+você vai ter que usar o k-means.
+
+118
+00:07:40.387 --> 00:07:44.340
+Nós vamos depois praticar tanto o método
+de Ward, quanto o método de k-means,
+
+119
+00:07:44.340 --> 00:07:46.230
+quanto o método de Complete Linkage.
+
+120
+00:07:46.230 --> 00:07:50.407
+Para encerrar essa videoaula eu queria
+falar com vocês que nós vamos também ter
+
+121
+00:07:50.407 --> 00:07:54.012
+que saber quais variáveis que nós
+temos no nosso banco de dados.
+
+122
+00:07:54.012 --> 00:07:58.670
+Muitas vezes a gente tem banco de dados
+misto onde tem variáveis demográficas,
+
+123
+00:07:58.670 --> 00:08:04.136
+variáveis até psicográficas e também
+as variáveis comportamentais.
+
+124
+00:08:04.136 --> 00:08:08.647
+Quando você tem todas essas variáveis nós
+vamos aprender que nós vamos usar para
+
+125
+00:08:08.647 --> 00:08:11.980
+a segmentação a variável que
+informa o que o consumidor deseja,
+
+126
+00:08:11.980 --> 00:08:15.969
+são muito mais as variáveis
+de comportamento de compra.
+
+127
+00:08:15.969 --> 00:08:20.388
+A partir daí nós vamos depois usar
+as variáveis que a gente chama de
+
+128
+00:08:20.388 --> 00:08:24.333
+variáveis discriminantes,
+que são as variáveis ligadas com as
+
+129
+00:08:24.333 --> 00:08:28.554
+características demográficas,
+para saber quem é o consumidor.
+
+130
+00:08:28.554 --> 00:08:33.895
+Ou seja, na clusterização a gente define
+os grupos pelos comportamentos de compra,
+
+131
+00:08:33.895 --> 00:08:38.625
+depois analisa pelas variáveis
+demográficas para saber quem está por trás
+
+132
+00:08:38.625 --> 00:08:43.870
+de cada grupo, quem é o meu cliente,
+se é formado por pessoas a, b,
+
+133
+00:08:43.870 --> 00:08:49.270
+c, d ou se tem predominância do sexo,
+idade e assim por diante.
+
+134
+00:08:49.270 --> 00:08:54.133
+Nós já estamos preparados agora e vamos
+agora passar para a nossa aplicação
+
+135
+00:08:54.133 --> 00:08:54.835
+prática.
+
+136
+00:08:54.835 --> 00:09:00.400
+[SEM ÁUDIO]

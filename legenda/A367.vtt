@@ -1,0 +1,354 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.600
+[MÚSICA] [MÚSICA]
+
+2
+00:00:09.600 --> 00:00:17.120
+[MÚSICA]
+
+3
+00:00:17.120 --> 00:00:26.185
+[MÚSICA] Nesse vídeo,
+
+4
+00:00:26.185 --> 00:00:31.065
+vamos fazer uma breve revisão
+do Controle Proporcional e da
+
+5
+00:00:31.065 --> 00:00:34.180
+obtenção da Função de
+Transferência malha fechada.
+
+6
+00:00:34.180 --> 00:00:38.581
+No Controle Proporcional,
+temos uma entrada do sistema que é
+
+7
+00:00:38.581 --> 00:00:43.701
+proporcional ao erro, que por sua
+vez é definido como sendo o sinal de
+
+8
+00:00:43.701 --> 00:00:48.692
+referência menos a saída ou o que
+se deseja menos o que se tem.
+
+9
+00:00:48.692 --> 00:00:54.531
+Esse sinal de erro é multiplicado
+por ganho, o ganho proporcional,
+
+10
+00:00:54.531 --> 00:00:58.960
+e é usado como sinal de entrada
+do sistema, como no diagrama.
+
+11
+00:00:58.960 --> 00:01:04.673
+Dado que temos G de s, que é a função de
+transferência do sistema malha aberta,
+
+12
+00:01:04.673 --> 00:01:06.920
+isso é: G de s é Y de s sobre U de s.
+
+13
+00:01:06.920 --> 00:01:12.420
+Estamos interessados na Função de
+Transferência do sistema malha fechada,
+
+14
+00:01:12.420 --> 00:01:16.810
+isso é: T de s igual
+a Y de s sobre R de s.
+
+15
+00:01:16.810 --> 00:01:21.941
+Podemos escrever: E de s
+igual a R de s menos Y
+
+16
+00:01:21.941 --> 00:01:29.250
+de s e Y de s é igual a G de s U de s,
+que é igual a G de s k vezes E de s.
+
+17
+00:01:29.250 --> 00:01:33.179
+Substituindo E de s na segunda equação,
+
+18
+00:01:33.179 --> 00:01:39.660
+temos: Y de s igual a G de s vezes
+k vezes R de s menos Y de s.
+
+19
+00:01:39.660 --> 00:01:44.579
+Fazemos a multiplicação do
+lado direito e temos: Y de s é
+
+20
+00:01:44.579 --> 00:01:49.200
+igual a k G de s R de s
+menos k G de s Y de s.
+
+21
+00:01:49.200 --> 00:01:54.704
+Deixamos os termos com Y de s do
+mesmo lado da igualdade e temos:
+
+22
+00:01:54.704 --> 00:02:00.130
+Y de s mais k G de s vezes Y de
+s é igual a k G de s R de s.
+
+23
+00:02:00.130 --> 00:02:05.060
+Colocamos Y evidência e podemos escrever:
+
+24
+00:02:05.060 --> 00:02:09.990
+Y sobre R é igual a k G de
+s sobre 1 mais k G de s.
+
+25
+00:02:09.990 --> 00:02:15.475
+Então nossa Função de Transferência malha
+fechada para realimentação negativa
+
+26
+00:02:15.475 --> 00:02:22.065
+unitária e controle proporcional é: T de
+s igual a k G de s sobre 1 mais k G de s,
+
+27
+00:02:22.065 --> 00:02:27.410
+onde K é o ganho proporcional e G é
+a função de transferência malha aberta.
+
+28
+00:02:27.410 --> 00:02:31.714
+Se explicitarmos o numerador e o
+denominador da Função de Transferência
+
+29
+00:02:31.714 --> 00:02:35.815
+malha aberta como: G de s é igual
+a numerador de G de s sobre
+
+30
+00:02:35.815 --> 00:02:40.743
+denominador de G de s, podemos escrever
+a Função de Transferência malha
+
+31
+00:02:40.743 --> 00:02:45.554
+fechada como: T de s é igual a k
+numerador de G sobre denominador
+
+32
+00:02:45.554 --> 00:02:50.220
+de G sobre 1 mais k numerador
+de G sobre denominador de G.
+
+33
+00:02:50.220 --> 00:02:55.084
+Multiplicando e dividindo pelo
+denominador de G, temos: T de s é igual
+
+34
+00:02:55.084 --> 00:03:00.120
+a k numerador de G sobre denominador
+de G mais k numerador de G.
+
+35
+00:03:00.120 --> 00:03:04.652
+Note que se a realimentação
+fosse positiva, isso é,
+
+36
+00:03:04.652 --> 00:03:09.951
+se E de s fosse R de s mais Y de s,
+ao invés de R de s menos Y de s, a Função
+
+37
+00:03:09.951 --> 00:03:16.960
+de Transferência malha fechada seria: T de
+s igual a k G de s sobre 1 menos k G de s.
+
+38
+00:03:16.960 --> 00:03:21.825
+Note também que com realimentação
+negativa não unitária, isso é,
+
+39
+00:03:21.825 --> 00:03:26.690
+com E de s igual a R de s
+menos H de s vezes Y de s,
+
+40
+00:03:26.690 --> 00:03:32.760
+teríamos: T de s igual a k G de
+s sobre 1 mais k G de s H de s.
+
+41
+00:03:32.760 --> 00:03:37.674
+Vamos simular sistema malha
+fechada e seu equivalente T de s,
+
+42
+00:03:37.674 --> 00:03:40.410
+e já deixar novo template pronto.
+
+43
+00:03:40.410 --> 00:03:48.802
+Execute o MATLAB e defina o ganho
+k igual a 4, k igual a 4, enter.
+
+44
+00:03:48.802 --> 00:03:56.160
+Agora crie novo modelo Simulink,
+New, Simulink Model, controlita.
+
+45
+00:03:56.160 --> 00:04:03.120
+No Zero Pole coloque os polos
+0 e menos 2 e o ganho 1.
+
+46
+00:04:03.120 --> 00:04:09.980
+Na Transfer Function coloque
+numerador k e denominador 1 2 k.
+
+47
+00:04:09.980 --> 00:04:15.022
+Agora vamos precisar de
+mais alguns blocos, View,
+
+48
+00:04:15.022 --> 00:04:20.618
+Library browser,
+Math Operations pegue ganho e
+
+49
+00:04:20.618 --> 00:04:25.900
+somador, Gain e Sum,
+duplo clique no somador.
+
+50
+00:04:25.900 --> 00:04:29.980
+Na List of signs,
+troque o ultimo mais por menos.
+
+51
+00:04:29.980 --> 00:04:34.065
+Arrume a parte de cima do diagrama
+para que ele seja sistema
+
+52
+00:04:34.065 --> 00:04:38.940
+malha fechada com a orientação negativa
+unitária e ganho proporcional k.
+
+53
+00:04:38.940 --> 00:04:45.800
+Lembre-se: botão direito para criar uma
+ramificação uma conexão já existente.
+
+54
+00:04:45.800 --> 00:04:49.450
+Agora é só rodar a simulação.
+
+55
+00:04:49.450 --> 00:04:54.982
+No scope você verá só sinal,
+porque os dois sinais estão sobrepostos,
+
+56
+00:04:54.982 --> 00:04:58.490
+já que estão simulando
+exatamente a mesma resposta.
+
+57
+00:04:58.490 --> 00:05:03.923
+Já configure o scope para aparecer
+sempre que você rodar a simulação,
+
+58
+00:05:03.923 --> 00:05:08.160
+File, escolha Open at Start of Simulation.
+
+59
+00:05:08.160 --> 00:05:13.898
+Já configure também o Max step
+size da simulação: Simulation,
+
+60
+00:05:13.898 --> 00:05:17.750
+Model Configuration Parameters,
+Additional options,
+
+61
+00:05:17.750 --> 00:05:23.880
+Max step size 0.01 e
+rode de novo para testar.
+
+62
+00:05:23.880 --> 00:05:29.780
+Agora salve seu modelo,
+vou salvar o meu como controlitamf.
+
+63
+00:05:29.780 --> 00:05:32.344
+E agora exporte template.
+
+64
+00:05:32.344 --> 00:05:35.318
+Da próxima vez você já pode criar
+
+65
+00:05:35.318 --> 00:05:38.944
+novo modelo baseado no
+template de malha fechada,
+
+66
+00:05:38.944 --> 00:05:44.360
+que já tem somador e ganho e cujo scope já
+abre automaticamente ao rodar a simulação.
+
+67
+00:05:44.360 --> 00:05:49.313
+Acabamos de fazer uma breve
+revisão do Controle Proporcional
+
+68
+00:05:49.313 --> 00:05:54.445
+e da obtenção da Função de Transferência
+malha fechada e você acabou de preparar
+
+69
+00:05:54.445 --> 00:05:58.809
+template pouco melhor para seus
+futuros modelos de simulação Simulink.
+
+70
+00:05:58.809 --> 00:06:03.581
+Se quiser, altere o ganho k na linha
+de comando e verifique as alterações na
+
+71
+00:06:03.581 --> 00:06:05.490
+resposta dos dois sistemas.
+
+72
+00:06:05.490 --> 00:06:10.368
+No próximo vídeo, você verá como a posição
+do polo malha fechada de sistema
+
+73
+00:06:10.368 --> 00:06:14.910
+primeira ordem com e sem 0 varia
+à medida que variamos o ganho k.

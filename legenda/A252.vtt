@@ -1,0 +1,282 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:16.955
+[MÚSICA] E aí pessoal, tudo bem?
+
+3
+00:00:16.955 --> 00:00:21.880
+Nessa aula veremos como criar labels,
+imagens e botões.
+
+4
+00:00:21.880 --> 00:00:24.664
+Vamos começar criando uma label.
+
+5
+00:00:24.664 --> 00:00:28.410
+Procure pela label na
+biblioteca de objetos,
+
+6
+00:00:28.410 --> 00:00:32.480
+clique e arraste.
+
+7
+00:00:32.480 --> 00:00:36.550
+Você pode editar o texto
+clicando 2 vezes na label.
+
+8
+00:00:36.550 --> 00:00:42.320
+Redimensione a área da label
+para o tamanho que desejar.
+
+9
+00:00:42.320 --> 00:00:46.860
+Também tem a opção de mudar o texto
+nas configurações de atributos.
+
+10
+00:00:46.860 --> 00:00:50.800
+Pode escolher a cor do texto,
+
+11
+00:00:50.800 --> 00:00:56.735
+[SEM_AÚDIO] mudar a fonte,
+
+12
+00:00:56.735 --> 00:01:03.320
+clicando em Custom [SEM_AÚDIO]
+
+13
+00:01:03.320 --> 00:01:07.640
+e alterar o tamanho da fonte.
+
+14
+00:01:07.640 --> 00:01:16.049
+Temos também a opção de alinhamento do
+texto à esquerda, ao centro e à direita.
+
+15
+00:01:16.049 --> 00:01:20.090
+Pode também definir o
+número máximo de linhas.
+
+16
+00:01:20.090 --> 00:01:23.780
+O valor 0 significa que não
+há número máximo de linhas.
+
+17
+00:01:23.780 --> 00:01:28.408
+Na opção Line Breaks você define
+o que acontece quando o texto é
+
+18
+00:01:28.408 --> 00:01:30.370
+maior que a área da label.
+
+19
+00:01:30.370 --> 00:01:34.260
+Truncate Tail esconde o final do texto,
+
+20
+00:01:34.260 --> 00:01:41.120
+Truncate Middle esconde o meio e
+Truncate Head esconde o começo.
+
+21
+00:01:41.120 --> 00:01:45.080
+A opção
+
+22
+00:01:45.080 --> 00:01:50.198
+Clip corta o texto sem colocar
+
+23
+00:01:50.198 --> 00:01:55.204
+os 3 pontos e a opção Word Wrap
+quebra a linha por palavras.
+
+24
+00:01:55.204 --> 00:01:56.496
+Para isso acontecer,
+
+25
+00:01:56.496 --> 00:02:00.240
+devemos aumentar o número máximo
+de linhas ou colocar o valar 0.
+
+26
+00:02:00.240 --> 00:02:02.841
+Vamos agora criar uma imagem.
+
+27
+00:02:02.841 --> 00:02:09.700
+Procure pelo objeto Image View,
+clique e arraste.
+
+28
+00:02:09.700 --> 00:02:14.882
+[SEM_AÚDIO] O
+
+29
+00:02:14.882 --> 00:02:19.910
+atributo Image está vazio, pois não
+importamos nenhuma imagem no projeto.
+
+30
+00:02:19.910 --> 00:02:25.670
+Temos que importar arquivo de
+imagem para a pasta Image.XCassets,
+
+31
+00:02:25.670 --> 00:02:32.410
+Faça o download de alguma imagem PNG ou
+JPG ou escolha uma existente no seu Mac.
+
+32
+00:02:32.410 --> 00:02:38.826
+Clique nesse arquivo,
+arraste e solte nessa área.
+
+33
+00:02:38.826 --> 00:02:45.080
+O XCode permite que você adicione versões
+dessa imagem em resoluções maiores para
+
+34
+00:02:45.080 --> 00:02:50.720
+aparelhos de alta resolução, como iPads
+com tela de retina e o iPhone 6 plus.
+
+35
+00:02:50.720 --> 00:02:55.760
+Volte para o Storyboard e selecione
+a imagem que acabamos de importar.
+
+36
+00:02:55.760 --> 00:03:02.502
+[SEM_AÚDIO] Por
+
+37
+00:03:02.502 --> 00:03:08.570
+padrão a imagem se deforma para
+ocupar a área toda da Image View.
+
+38
+00:03:08.570 --> 00:03:12.830
+Você pode mudar o modo de
+apresentação dessa imagem.
+
+39
+00:03:12.830 --> 00:03:16.012
+A opção Aspect Fit ajusta
+a imagem no maior tamanho
+
+40
+00:03:16.012 --> 00:03:18.600
+possível mantendo as suas proporções.
+
+41
+00:03:18.600 --> 00:03:23.908
+[SEM_AÚDIO] A opção
+
+42
+00:03:23.908 --> 00:03:28.060
+Aspect Fill ocupa sempre
+a área toda da Image View,
+
+43
+00:03:28.060 --> 00:03:32.413
+mantendo a proporção da
+imagem mas cortando pedaço.
+
+44
+00:03:32.413 --> 00:03:34.640
+Há diversas outras opções.
+
+45
+00:03:34.640 --> 00:03:39.300
+Vamos deixar como Aspect Fit.
+
+46
+00:03:39.300 --> 00:03:43.960
+Por último, vamos adicionar botão.
+
+47
+00:03:43.960 --> 00:03:52.930
+[SEM_AÚDIO] Redimensione a área do botão.
+
+48
+00:03:52.930 --> 00:03:57.829
+Assim como a label, você pode digitar
+o texto do botão nas configurações
+
+49
+00:03:57.829 --> 00:04:02.040
+de atributos ou clicando 2 vezes no texto.
+
+50
+00:04:02.040 --> 00:04:07.050
+Também tem a opção de
+mudar a fonte do texto,
+
+51
+00:04:07.050 --> 00:04:12.800
+a cor, pode escolher uma
+imagem de fundo para o botão,
+
+52
+00:04:12.800 --> 00:04:16.625
+tem a opção de alinhar o texto à esquerda,
+
+53
+00:04:16.625 --> 00:04:20.804
+centro ou direita, cima,
+
+54
+00:04:20.804 --> 00:04:26.281
+meio ou baixo e pode
+
+55
+00:04:26.281 --> 00:04:31.700
+modificar a cor de fundo.
+
+56
+00:04:31.700 --> 00:04:36.712
+[SEM_AÚDIO] Vamos
+
+57
+00:04:36.712 --> 00:04:41.697
+mudar também a cor do texto, aumentar
+
+58
+00:04:41.697 --> 00:04:46.692
+pouco a fonte e mudar
+
+59
+00:04:46.692 --> 00:04:51.230
+o texto.
+
+60
+00:04:51.230 --> 00:04:55.407
+Na próxima
+
+61
+00:04:55.407 --> 00:05:00.184
+aula veremos como interligar esses objetos
+
+62
+00:05:00.184 --> 00:05:04.606
+com o código e como alterar os
+atributos através do código.
+
+63
+00:05:04.606 --> 00:05:05.230
+Até lá!

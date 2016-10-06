@@ -1,0 +1,731 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.297
+[MÚSICA] [MÚSICA] Olá a todos.
+
+2
+00:00:09.297 --> 00:00:11.978
+O meu nome é Eduardo Guerra.
+
+3
+00:00:11.978 --> 00:00:16.615
+Esse é o curso de Desenvolvimento
+de Software Guiado por Testes.
+
+4
+00:00:16.615 --> 00:00:21.508
+Na aula de hoje, vamos falar sobre o
+teste de classes com dependência, está?
+
+5
+00:00:21.508 --> 00:00:26.361
+Então, a gente vai entender pouquinho
+porque é que a gente precisa de considerar
+
+6
+00:00:26.361 --> 00:00:30.900
+as dependências e como é que a gente faz
+quando a gente quer testar uma classe
+
+7
+00:00:30.900 --> 00:00:34.240
+isolada, ou seja, sem as dependências.
+
+8
+00:00:34.240 --> 00:00:37.560
+Está?
+Então, vamos falar pouquinho sobre isso.
+
+9
+00:00:37.560 --> 00:00:38.173
+Está?
+
+10
+00:00:38.173 --> 00:00:43.691
+E entender pouquinho qual,
+como é esse problema e o que a gente
+
+11
+00:00:43.691 --> 00:00:48.810
+pode fazer para testar uma classe isolada,
+mesmo que ela tenha dependências.
+
+12
+00:00:48.810 --> 00:00:53.914
+Até agora, os testes que a gente fez,
+os testes que
+
+13
+00:00:53.914 --> 00:00:58.916
+a gente viu funcionam mais ou menos,
+desse jeito aqui, está?
+
+14
+00:00:58.916 --> 00:01:03.320
+Eh, A gente tem o teste e ele
+interage diretamente com a classe.
+
+15
+00:01:03.320 --> 00:01:03.882
+Está?
+
+16
+00:01:03.882 --> 00:01:05.756
+Então, que acontece?
+
+17
+00:01:05.756 --> 00:01:10.640
+Se a gente está desenvolvendo
+esse teste usando o TDD, está?
+
+18
+00:01:10.640 --> 00:01:17.960
+O foco vai ser como que o cliente da
+classe interage com a interface dela,
+
+19
+00:01:17.960 --> 00:01:22.047
+ou seja, como que, eh,
+que métodos vai invocar?
+
+20
+00:01:22.047 --> 00:01:25.520
+Como é que vai criar
+objeto daquela classe?
+
+21
+00:01:25.520 --> 00:01:27.408
+Que parâmetros vai passar?
+
+22
+00:01:27.408 --> 00:01:32.391
+Qual a sequência de métodos que ele
+precisa chamar para chegar num determinado
+
+23
+00:01:32.391 --> 00:01:33.157
+resultado?
+
+24
+00:01:33.157 --> 00:01:36.620
+Então assim,
+a princípio eu estou testando eh, eh.
+
+25
+00:01:36.620 --> 00:01:43.495
+A única coisa que o meu teste enxerga é
+aquela interface ali da classe, está?
+
+26
+00:01:43.495 --> 00:01:47.184
+Mas e se a gente for
+desenvolver, por exemplo,
+
+27
+00:01:47.184 --> 00:01:50.054
+uma classe que interage com outra, está?
+
+28
+00:01:50.054 --> 00:01:54.221
+Imagina que, por exemplo,
+a minha classe ela faz algumas coisas,
+
+29
+00:01:54.221 --> 00:01:58.809
+só que ela tem uma colaboração com
+uma outra classe, de que ela invoca
+
+30
+00:01:58.809 --> 00:02:03.820
+alguns métodos para complementar
+aquela funcionalidade que ela faz.
+
+31
+00:02:03.820 --> 00:02:09.644
+Então, se a gente fizer o teste
+da mesma forma que a gente faz,
+
+32
+00:02:09.644 --> 00:02:16.485
+não é, que é o teste interagindo
+diretamente aqui com a classe, não é?
+
+33
+00:02:16.485 --> 00:02:18.320
+Só com ela, está?
+
+34
+00:02:18.320 --> 00:02:21.880
+A gente pode dizer que esse teste,
+ele não seria mais teste de unidade.
+
+35
+00:02:21.880 --> 00:02:23.555
+Ele seria teste de integração.
+
+36
+00:02:23.555 --> 00:02:24.360
+Porquê?
+
+37
+00:02:24.360 --> 00:02:28.790
+Porque ele está incluindo
+as duas classes no teste.
+
+38
+00:02:28.790 --> 00:02:30.551
+Está?
+Tanto a classe que,
+
+39
+00:02:30.551 --> 00:02:35.695
+no caso eu estaria desenvolvendo com o
+TDD, que é essa classe branquinha aqui,
+
+40
+00:02:35.695 --> 00:02:40.074
+quanto essa outra classezinha laranja,
+que eu chamei de outra classe.
+
+41
+00:02:40.074 --> 00:02:43.674
+Porque é que a gente pode não querer isso,
+está?
+
+42
+00:02:43.674 --> 00:02:48.865
+Por exemplo, essa classe que eu,
+
+43
+00:02:48.865 --> 00:02:55.595
+do qual eu dependo, ela pode por exemplo,
+demorar muito para executar, está?
+
+44
+00:02:55.595 --> 00:03:00.249
+Isso pode ser problema,
+porque esse cara, ele pode, por exemplo,
+
+45
+00:03:00.249 --> 00:03:05.194
+se ele acessa banco de dados, às vezes ele
+faz uma consulta que pode ser demorada.
+
+46
+00:03:05.194 --> 00:03:07.870
+Se eu estou rodando a minha
+suíte de testes inteira,
+
+47
+00:03:07.870 --> 00:03:13.012
+isso aí pode virar gargalo nos builds,
+por exemplo, da minha aplicação, está?
+
+48
+00:03:13.012 --> 00:03:16.027
+Às vezes até mesmo para você
+testar uma coisa rápida,
+
+49
+00:03:16.027 --> 00:03:21.252
+você tem que ficar esperando, às vezes
+você pode acabar com classe que tenha uma
+
+50
+00:03:21.252 --> 00:03:26.439
+quantidade grande de testes e aí,
+isso daí acabar dificultando,
+
+51
+00:03:26.439 --> 00:03:31.382
+não é, o andamento ali da,
+da sessão de desenvolvimento, está?
+
+52
+00:03:31.382 --> 00:03:35.424
+Essa dependência,
+ela pode depender de uma infraestrutura,
+
+53
+00:03:35.424 --> 00:03:38.086
+como arquivo ou servidor está no ar.
+
+54
+00:03:38.086 --> 00:03:42.884
+Por exemplo, imagina que essa dependência
+é uma classe que manda uma mensagem
+
+55
+00:03:42.884 --> 00:03:44.734
+para outro sistema, está?
+
+56
+00:03:44.734 --> 00:03:48.438
+Então, ela pode depender de
+uma série de coisas, não é,
+
+57
+00:03:48.438 --> 00:03:53.417
+que às vezes não são relacionadas si
+com o, o que você está desenvolvendo.
+
+58
+00:03:53.417 --> 00:03:58.558
+Por exemplo, imagina que essa dependência
+esteja uma classe que envia e-mail.
+
+59
+00:03:58.558 --> 00:04:02.346
+Isso aqui é exemplo que já
+aconteceu comigo, eh, eh, eh.
+
+60
+00:04:02.346 --> 00:04:04.356
+num projeto real.
+
+61
+00:04:04.356 --> 00:04:08.898
+E aí, eu tenho uma classe que eu preciso,
+eh, eh.
+
+62
+00:04:08.898 --> 00:04:12.270
+Eu tenho uma funcionalidade que,
+num determinado,
+
+63
+00:04:12.270 --> 00:04:17.129
+que determinadas situações,
+envia e-mail para alguém, está?
+
+64
+00:04:17.129 --> 00:04:19.788
+Então, eu não estou
+testando o envio do e-mail.
+
+65
+00:04:19.788 --> 00:04:23.208
+Eu quero ver se aquele e-mail
+é enviado naquelas situações.
+
+66
+00:04:23.208 --> 00:04:27.030
+Então, eu quero ver se aquela
+outra classe está sendo invocada.
+
+67
+00:04:27.030 --> 00:04:32.859
+Agora imagina para fazer o teste
+envolvendo aí o, o e-mail, não é.
+
+68
+00:04:32.859 --> 00:04:35.771
+Eu teria que ter, subir servidor,
+
+69
+00:04:35.771 --> 00:04:39.655
+teria que ir lá no servidor para
+ver se aquele e-mail foi enviado.
+
+70
+00:04:39.655 --> 00:04:42.141
+Isso iria dificultar muito o meu teste,
+não é.
+
+71
+00:04:42.141 --> 00:04:47.086
+Nesse caso aí, de depender de alguma
+coisa, da infraestrutura ali,
+
+72
+00:04:47.086 --> 00:04:50.259
+do ambiente onde a aplicação vai ter,
+está?
+
+73
+00:04:50.259 --> 00:04:54.444
+Esse tipo de dependência da
+classe é específicamente,
+
+74
+00:04:54.444 --> 00:04:57.541
+torna o teste muito mais difícil, está?
+
+75
+00:04:57.541 --> 00:05:01.488
+Outro caso, eu posso até não depender
+de ninguém, mas eu posso ter uma lógica
+
+76
+00:05:01.488 --> 00:05:05.796
+extremamente complicada, como por exemplo,
+sei lá: cálculos, não é,
+
+77
+00:05:05.796 --> 00:05:11.160
+e às vezes para pensar caso de teste que
+se encaixe exatamente naqueles cálculos e,
+
+78
+00:05:11.160 --> 00:05:14.228
+de repente,
+joga aquele erro daquele caso, não é.
+
+79
+00:05:14.228 --> 00:05:17.487
+Isso aí também pode tornar o
+teste muito mais complicado,
+
+80
+00:05:17.487 --> 00:05:21.430
+sendo que a complexidade não está na
+classe que eu estou desenvolvendo,
+
+81
+00:05:21.430 --> 00:05:23.294
+mas na dependência dela, não é.
+
+82
+00:05:23.294 --> 00:05:26.359
+Ou seja,
+porque ela acessa alguma coisa complicada,
+
+83
+00:05:26.359 --> 00:05:32.385
+ou porque ela demora ou porque ela
+tem uma lógica aí complicada, está?
+
+84
+00:05:32.385 --> 00:05:37.270
+Então, nesse caso o que é a gente
+pode fazer com a nossa sessão de TDD?
+
+85
+00:05:37.270 --> 00:05:37.787
+Está?
+
+86
+00:05:37.787 --> 00:05:41.233
+Normalmente, a sessão de TDD,
+ela trabalha,
+
+87
+00:05:41.233 --> 00:05:45.661
+normalmente não porque, pelo menos,
+pelo que a gente viu até agora,
+
+88
+00:05:45.661 --> 00:05:49.403
+a sessão de TDD trabalha nesse
+escudinho aqui, ali de cima não é.
+
+89
+00:05:49.403 --> 00:05:53.545
+Na interação do teste com a classe,
+ou seja, quando você está definindo os
+
+90
+00:05:53.545 --> 00:05:58.809
+testes, você está definindo qual é
+que é a interface dessa classe, está?
+
+91
+00:05:58.809 --> 00:06:03.986
+Só que o TDD, você pode usar ele
+também para você definir a interface
+
+92
+00:06:03.986 --> 00:06:09.110
+da dependência, ou seja, que MEC
+seria esse escudinho aqui de baixo,
+
+93
+00:06:09.110 --> 00:06:13.233
+ou seja, que métodos que a minha classe,
+a classe que eu estou
+
+94
+00:06:13.233 --> 00:06:18.314
+desenvolvendo precisa da dependência
+dela para fazer a sua funcionalidade.
+
+95
+00:06:18.314 --> 00:06:21.524
+Por exemplo,
+eu preciso que ela envie e-mail,
+
+96
+00:06:21.524 --> 00:06:25.881
+eu preciso que ela me retorne tal
+informação do banco de dados.
+
+97
+00:06:25.881 --> 00:06:28.757
+Eu preciso que ela faça tal cálculo, está?
+
+98
+00:06:28.757 --> 00:06:34.013
+Então, a gente pode também fazer o,
+o teste utilizando aí,
+
+99
+00:06:34.013 --> 00:06:36.810
+a gente pode fazer o TDD,
+
+100
+00:06:36.810 --> 00:06:41.553
+não só para definir essa interface
+principal da nossa classe,
+
+101
+00:06:41.553 --> 00:06:46.193
+mas também para definir o que é que
+essa classe precisa da dependência dela.
+
+102
+00:06:46.193 --> 00:06:51.020
+É como se eu pegasse lá as colaborações
+que a gente aprendeu lá no CRC não é?
+
+103
+00:06:51.020 --> 00:06:55.695
+E falasse assim: Olha agora eu
+estou colocando detalhes dessa,
+
+104
+00:06:55.695 --> 00:06:59.342
+dessa eh, eh, dessa colaboração, está?
+
+105
+00:06:59.342 --> 00:07:03.551
+Exatamente com o método com
+a assinatura desse método, está?
+
+106
+00:07:03.551 --> 00:07:06.610
+E para fazer esso tipo de teste,
+o que é que a gente faz?
+
+107
+00:07:06.610 --> 00:07:11.420
+A gente pega a dependência e
+
+108
+00:07:11.420 --> 00:07:15.426
+substitui ela por Mock Object, está?
+
+109
+00:07:15.426 --> 00:07:21.328
+Então, eh, o Mock Object ele vai ser ali,
+digamos assim, objeto falso que
+
+110
+00:07:21.328 --> 00:07:27.587
+o meu teste pode controlar e eu vou ali e
+coloco ele no lugar da dependência, está?
+
+111
+00:07:27.587 --> 00:07:30.712
+Então, o é que seria aí o Mock Object,
+não é?
+
+112
+00:07:30.712 --> 00:07:35.006
+Para dar aí uma definição,
+para a gente fechar aqui essa aula.
+
+113
+00:07:35.006 --> 00:07:38.207
+O Mock Object,
+ele é objeto simulado, está?
+
+114
+00:07:38.207 --> 00:07:43.216
+Que ele vai copiar o comportamento daquela
+dependência de uma forma controlada.
+
+115
+00:07:43.216 --> 00:07:46.413
+Então, eu posso chegar para
+o Mock e falar assim: Mock,
+
+116
+00:07:46.413 --> 00:07:48.863
+e agora você vai retornar o resultado tal.
+
+117
+00:07:48.863 --> 00:07:50.980
+Mock, agora você vai jogar erro.
+
+118
+00:07:50.980 --> 00:07:55.601
+Mock, qual foi os parâmetros que a classe
+que eu estou criando enviou aí para você?
+
+119
+00:07:55.601 --> 00:07:59.495
+Que eu quero ver se ela está invocando
+esse método de uma forma correta.
+
+120
+00:07:59.495 --> 00:08:01.728
+Mock, quantas vezes ela
+chamou esse método?
+
+121
+00:08:01.728 --> 00:08:04.490
+Porque, nesse caso de teste,
+não pode chamar nenhuma,
+
+122
+00:08:04.490 --> 00:08:07.878
+mas naquele outro tem de
+chamar pelo menos 3, está?
+
+123
+00:08:07.878 --> 00:08:09.458
+Então, o Mock Object é,
+
+124
+00:08:09.458 --> 00:08:15.101
+é aquele objeto simulado que a gente
+bota no lugar daquela dependência, está.
+
+125
+00:08:15.101 --> 00:08:19.551
+Eu gosto de fazer essa analogia
+com esses bonequinhos aqui, não é,
+
+126
+00:08:19.551 --> 00:08:21.303
+que chamam o Crash Dummy não é,
+
+127
+00:08:21.303 --> 00:08:25.225
+que é aqueles bonequinhos que a gente
+coloca dentro do carro, não é?
+
+128
+00:08:25.225 --> 00:08:25.759
+Porquê?
+
+129
+00:08:25.759 --> 00:08:28.028
+Porque se a gente for parar para pensar,
+
+130
+00:08:28.028 --> 00:08:32.450
+não é viável você ir lá e botar uma pessoa
+de verdade dentro do carro para você dar
+
+131
+00:08:32.450 --> 00:08:37.110
+uma cacetada com o carro na parede e ver
+o que acontece com aquela pessoa, está?
+
+132
+00:08:37.110 --> 00:08:40.472
+Então, por causa disso,
+a gente coloca esses dummies,
+
+133
+00:08:40.472 --> 00:08:45.158
+não é, a gente coloca esses bonecos que
+eles inclusive vão ter uma forma muito
+
+134
+00:08:45.158 --> 00:08:50.149
+melhor do que a pessoa até para
+medir a força do impacto, não é,
+
+135
+00:08:50.149 --> 00:08:55.298
+os locais ali onde teve uma maior eh,
+maior esforço e tal.
+
+136
+00:08:55.298 --> 00:08:56.770
+Então, eh, eh,
+
+137
+00:08:56.770 --> 00:09:02.239
+é a mesma coisa do que a nossa dependência
+que é difícil de testar, não é?
+
+138
+00:09:02.239 --> 00:09:05.741
+É cálculo, ela demora,
+ela depende de infraestrutura,
+
+139
+00:09:05.741 --> 00:09:08.873
+ela tem uma lógica própria ali
+que vai complicar o meu teste.
+
+140
+00:09:08.873 --> 00:09:10.147
+Então, bota o Mock ali.
+
+141
+00:09:10.147 --> 00:09:11.847
+É como se fosse esse bonequinho,
+
+142
+00:09:11.847 --> 00:09:17.810
+ele vai te ajudar a verificar como é
+essa interação entre as classes e você
+
+143
+00:09:17.810 --> 00:09:22.419
+vai conseguir controlar ele para simular
+os cenários que você precisa, está?
+
+144
+00:09:22.419 --> 00:09:27.633
+Então, nessa aula,
+o objetivo foi falar pouco mais
+
+145
+00:09:27.633 --> 00:09:32.512
+sobre o teste dessas classes
+com dependência, está?
+
+146
+00:09:32.512 --> 00:09:36.605
+Eu queria apresentar para vocês
+o que são os Mock Object,
+
+147
+00:09:36.605 --> 00:09:40.881
+mas fique tranquilo que nas
+próximas aulas vamos entrar
+
+148
+00:09:40.881 --> 00:09:44.885
+mais detalhes sobre os Mock Objects,
+como criar eles?
+
+149
+00:09:44.885 --> 00:09:46.343
+Como eles funcionam?
+
+150
+00:09:46.343 --> 00:09:48.720
+Como colocar eles dentro da classe?
+
+151
+00:09:48.720 --> 00:09:49.570
+Está certo?
+
+152
+00:09:49.570 --> 00:09:51.541
+Muito obrigado por assistir.
+
+153
+00:09:51.541 --> 00:09:53.359
+Vejo vocês na próxima aula.
+
+154
+00:09:53.359 --> 00:09:58.680
+[MÚSICA] [MÚSICA]

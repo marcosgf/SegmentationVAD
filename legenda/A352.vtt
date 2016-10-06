@@ -1,0 +1,369 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.718
+Olá!
+
+2
+00:00:00.718 --> 00:00:05.320
+Agora que você já sabe projetar PD,
+
+3
+00:00:05.320 --> 00:00:09.590
+você verá exemplo de projeto
+e a partir do resultado,
+
+4
+00:00:09.590 --> 00:00:13.860
+aprenderá por que muitas vezes o
+compensador de avanço de fase,
+
+5
+00:00:13.860 --> 00:00:17.970
+apesar de ter procedimento de
+projeto pouco mais trabalhoso,
+
+6
+00:00:17.970 --> 00:00:21.995
+deve ser usado no lugar do PD.
+
+7
+00:00:21.995 --> 00:00:27.932
+Vamos realizar projeto de controlador
+para o seguinte sistema: G de s igual
+
+8
+00:00:27.932 --> 00:00:34.530
+a 0,005 sobre s vezes s mais 0,05,
+
+9
+00:00:34.530 --> 00:00:39.703
+cujos requisitos de resposta
+transitória são Mp menor
+
+10
+00:00:39.703 --> 00:00:45.078
+ou igual a 0,3 e tr menor
+ou igual a 18 segundos.
+
+11
+00:00:45.078 --> 00:00:49.430
+Para o nosso projeto vamos usar
+os valores máximos de sobressinal
+
+12
+00:00:49.430 --> 00:00:51.420
+e tempo de subida dos requisitos.
+
+13
+00:00:51.420 --> 00:00:55.840
+Mp igual a 0,3 e tr igual a 18 segundos.
+
+14
+00:00:55.840 --> 00:01:00.845
+Isso resultará fator de
+amortecimento e frequência
+
+15
+00:01:00.845 --> 00:01:05.447
+de cruzamento do 0 dB
+dados por csi igual a 0,35
+
+16
+00:01:05.447 --> 00:01:09.780
+e ômega c igual a 0,11
+radianos por segundo.
+
+17
+00:01:09.780 --> 00:01:15.980
+Para acomodar efeitos de aproximações,
+somamos 5 graus na margem de fase.
+
+18
+00:01:15.980 --> 00:01:20.980
+PM igual a 100 vezes csi mais 5 que
+é igual a 35 graus mais 5 graus,
+
+19
+00:01:20.980 --> 00:01:22.917
+resultando 40 graus.
+
+20
+00:01:22.917 --> 00:01:28.230
+O diagrama de Bode para o sistema sem
+controlador pode ser visto na figura,
+
+21
+00:01:28.230 --> 00:01:33.972
+de onde vemos que o ganho ômega c é
+de cerca de menos 9,2 dB e a fase
+
+22
+00:01:33.972 --> 00:01:40.280
+de aproximadamente menos 157 graus,
+resultando uma margem de fase de 23 graus.
+
+23
+00:01:40.280 --> 00:01:45.064
+Assim módulo de G de j
+ômega c será igual a 10
+
+24
+00:01:45.064 --> 00:01:50.366
+elevado a menos 9,2 sobre 20 que
+é igual a 0,35 e fi será igual
+
+25
+00:01:50.366 --> 00:01:55.717
+a margem de fase menos a fase de
+G de j ômega c menos 180 graus,
+
+26
+00:01:55.717 --> 00:02:02.810
+que é igual a 40 graus mais 157 graus
+menos 180 graus, que dá 17 graus.
+
+27
+00:02:02.810 --> 00:02:07.652
+De onde podemos calcular
+Kp é igual a cosseno de fi
+
+28
+00:02:07.652 --> 00:02:12.419
+sobre o módulo de G de j ômega c,
+que é igual a cosseno
+
+29
+00:02:12.419 --> 00:02:17.316
+de 17 graus sobre 0,35 que é igual a 2,7.
+
+30
+00:02:17.316 --> 00:02:24.010
+Kd é igual a seno de fi sobre ômega
+c vezes módulo de G de j ômega c,
+
+31
+00:02:24.010 --> 00:02:29.720
+que é igual a seno de 17
+graus sobre 0,11 vezes 0,35,
+
+32
+00:02:29.720 --> 00:02:32.849
+que dá 7,6.
+
+33
+00:02:32.849 --> 00:02:37.874
+Agora impondo que o polo p1 tenha
+frequência de quebra 100 vezes maior que
+
+34
+00:02:37.874 --> 00:02:43.900
+ômega c, p1 igual a 100 ômega c que é
+igual a 100 vezes 0,11 que é igual a 110.
+
+35
+00:02:43.900 --> 00:02:46.598
+O projeto já está pronto!
+
+36
+00:02:46.598 --> 00:02:51.590
+O controlador é C linha de
+s igual a Kp vezes 1 mais
+
+37
+00:02:51.590 --> 00:02:56.130
+Kd sobre Kp s dividido
+por s sobre p1 mais 1,
+
+38
+00:02:56.130 --> 00:03:00.970
+que será igual a Kp mais Kd
+s sobre s sobre p1 mais 1,
+
+39
+00:03:00.970 --> 00:03:07.500
+que dá 2,7 mais 7,6 s
+sobre s sobre 110 mais 1.
+
+40
+00:03:07.500 --> 00:03:09.583
+Realmente muito simples.
+
+41
+00:03:09.583 --> 00:03:14.570
+Vamos verificar o comportamento
+malha fechada simulação.
+
+42
+00:03:14.570 --> 00:03:19.890
+Vemos que o sobressinal é de exatos 30%
+e o tempo de subida fica 15 segundos,
+
+43
+00:03:19.890 --> 00:03:22.020
+mais rápido do que o necessário.
+
+44
+00:03:22.020 --> 00:03:27.130
+Na verdade vamos fazer melhor do que isso.
+
+45
+00:03:27.130 --> 00:03:31.564
+Já havíamos projetado compensador
+de avanço para esse mesmo sistema,
+
+46
+00:03:31.564 --> 00:03:35.487
+sujeito aos mesmos requisitos
+nas aulas de avanço de fase.
+
+47
+00:03:35.487 --> 00:03:41.188
+O controlador resultante
+fora: C de s igual a 2,1
+
+48
+00:03:41.188 --> 00:03:45.810
+vezes 12 s mais 1 sobre 6,5 s mais 1.
+
+49
+00:03:45.810 --> 00:03:51.416
+Então vamos colocar as respostas ao
+degrau no mesmo gráfico para comparar.
+
+50
+00:03:51.416 --> 00:03:55.810
+Preto, a resposta com o PD e vermelho,
+com o avanço.
+
+51
+00:03:55.810 --> 00:03:59.700
+Vemos que o desempenho
+realmente é muito parecido.
+
+52
+00:03:59.700 --> 00:04:04.320
+Porém, e se olharmos para o
+valor do sinal de controle?
+
+53
+00:04:04.320 --> 00:04:07.680
+Nessas figuras você pode
+vê-los gráficos separados.
+
+54
+00:04:07.680 --> 00:04:12.521
+Tivemos que colocar 2 gráficos distintos,
+porque os valores são tão discrepantes que
+
+55
+00:04:12.521 --> 00:04:15.080
+uma mesma escala não
+seria adequada para os 2.
+
+56
+00:04:15.080 --> 00:04:20.299
+Você pode ver que sinal de controle
+para o avanço de fase vermelho,
+
+57
+00:04:20.299 --> 00:04:23.730
+é muito menor do que aquele
+resultante com PD preto.
+
+58
+00:04:23.730 --> 00:04:28.675
+Isto é, o sinal com o avanço tem o
+desempenho similar ao obtido com o PD,
+
+59
+00:04:28.675 --> 00:04:31.270
+mas seus valores são muitos diferentes.
+
+60
+00:04:31.270 --> 00:04:34.045
+Essa diferença se deve
+ao fato de que o PD tem
+
+61
+00:04:34.045 --> 00:04:36.690
+termo que é a derivada
+do sinal de entrada.
+
+62
+00:04:36.690 --> 00:04:41.950
+Para uma entrada degrau, você já viu que
+idealmente a derivada seria o impulso,
+
+63
+00:04:41.950 --> 00:04:45.310
+com amplitude infinita e
+duração infinitesimal.
+
+64
+00:04:45.310 --> 00:04:48.929
+Mesmo com polo 100 ômega c
+suavizando essa derivada,
+
+65
+00:04:48.929 --> 00:04:52.910
+o valor ainda é cerca de 20 vezes
+maior do que o obtido com o avanço.
+
+66
+00:04:52.910 --> 00:04:58.111
+De uma aplicação prática, sinais com
+amplitude muito elevada e duração curta
+
+67
+00:04:58.111 --> 00:05:04.082
+dificilmente podem ser aplicados,
+o que pode tornar o controlador inútil.
+
+68
+00:05:04.082 --> 00:05:07.146
+Eis cuidado que se deve
+tomar ao projetar PD,
+
+69
+00:05:07.146 --> 00:05:10.080
+a referência não pode ter
+mudança abrupta de amplitude.
+
+70
+00:05:10.080 --> 00:05:13.733
+Como muitos sistemas na prática
+têm esse tipo de referência,
+
+71
+00:05:13.733 --> 00:05:16.410
+você deve ser parcimonioso
+no emprego do PD.
+
+72
+00:05:16.410 --> 00:05:19.780
+Muitas vezes o trabalho
+pouco maior para se projetar
+
+73
+00:05:19.780 --> 00:05:22.670
+compensador de avanço é
+realmente necessário.
+
+74
+00:05:22.670 --> 00:05:25.399
+Agora você sabe por que o emprego do PD,
+
+75
+00:05:25.399 --> 00:05:30.210
+apesar de ser mais simples de projetar,
+deve ser feito com cautela.
+
+76
+00:05:30.210 --> 00:05:33.052
+No próximo vídeo você aprenderá a projetar
+
+77
+00:05:33.052 --> 00:05:36.430
+controlador para zerar
+totalmente o erro regime.

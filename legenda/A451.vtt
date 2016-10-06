@@ -1,0 +1,387 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.991
+[MÚSICA] Esse
+
+2
+00:00:07.991 --> 00:00:11.776
+é o curso de Orientação
+a Objetos com Java.
+
+3
+00:00:11.776 --> 00:00:18.167
+Meu nome é Eduardo Guerra e hoje vamos
+falar sobre como criar classes Java.
+
+4
+00:00:18.167 --> 00:00:23.051
+Eu sei que você estava aí assistindo
+às aulas de classes louco para
+
+5
+00:00:23.051 --> 00:00:27.083
+botar o mão no código,
+então vamos falar de código hoje.
+
+6
+00:00:27.083 --> 00:00:32.356
+Vamos ver como implementar na prática
+esses conceitos aí de classes,
+
+7
+00:00:32.356 --> 00:00:36.932
+aprender a criar e instanciar classes,
+colocar atributo,
+
+8
+00:00:36.932 --> 00:00:41.457
+método, eu sei que você está doido
+para ver como fazer isso aí Java.
+
+9
+00:00:41.457 --> 00:00:44.560
+Eu vou chamar aqui o meu amigo Duck,
+certo?
+
+10
+00:00:44.560 --> 00:00:49.765
+Que vai falar para vocês aqui que
+Java quase tudo é uma classe.
+
+11
+00:00:49.765 --> 00:00:55.299
+Basicamente quase tudo o que você for
+criar Java é classe e a gente faz
+
+12
+00:00:55.299 --> 00:01:01.842
+isso usando essa diretriz aqui Public e
+Class e o nome da classe que a gente quer.
+
+13
+00:01:01.842 --> 00:01:05.937
+Bom, como a gente pode ter, por exemplo,
+
+14
+00:01:05.937 --> 00:01:12.634
+sistema que tenha muitas classes e
+muitas vezes, às vezes, por exemplo,
+
+15
+00:01:12.634 --> 00:01:18.237
+você tem conceitos que às vezes podem
+ser interpretados de forma diferente,
+
+16
+00:01:18.237 --> 00:01:23.615
+então eu posso ter, por exemplo,
+sistema, carrinho, uma classe Carrinho,
+
+17
+00:01:23.615 --> 00:01:28.303
+que é o carrinho de compras, mas eu posso
+ter uma loja que vende carrinhos de
+
+18
+00:01:28.303 --> 00:01:32.498
+brinquedo, e então é importante
+a gente de uma certa forma ter uma,
+
+19
+00:01:32.498 --> 00:01:36.672
+como se fosse diretório para
+a gente estar colocando as classes.
+
+20
+00:01:36.672 --> 00:01:39.869
+A gente faz isso através dos packages,
+os pacotes.
+
+21
+00:01:39.869 --> 00:01:44.483
+Então a gente faz isso
+colocando logo no começo aqui,
+
+22
+00:01:44.483 --> 00:01:49.309
+essa, dizendo package e o nome do
+pacote que a gente está colocando.
+
+23
+00:01:49.309 --> 00:01:56.240
+Então no caso aí a gente está colocando
+a classe Carro no pacote org.veículos.
+
+24
+00:01:56.240 --> 00:02:02.378
+E aí é aquela coisa, de toda a vez que
+a gente precisar usar uma classe, certo?
+
+25
+00:02:02.378 --> 00:02:06.819
+A gente tem que importar ou
+a classe ou o pacote que ela está.
+
+26
+00:02:06.819 --> 00:02:11.614
+Então por exemplo, se eu quero usar
+a classe Math, para poder usar as
+
+27
+00:02:11.614 --> 00:02:16.524
+operações aí matemáticas,
+eu posso usar aí o Import java lang Math.
+
+28
+00:02:16.524 --> 00:02:21.522
+Então no caso aqui, por exemplo,
+da minha, da classe que eu dei o exemplo,
+
+29
+00:02:21.522 --> 00:02:26.280
+a classe Carro, eu poderia,
+se eu quisesse usar essa classe fora dali,
+
+30
+00:02:26.280 --> 00:02:30.778
+eu poderia dar Import org.veículos.* ou
+
+31
+00:02:30.778 --> 00:02:36.040
+org.veículos.carro para
+importar somente aquela classe.
+
+32
+00:02:36.040 --> 00:02:36.766
+Certo?
+
+33
+00:02:36.766 --> 00:02:40.914
+Bom, a informação que
+a classe precisa de ter,
+
+34
+00:02:40.914 --> 00:02:45.466
+ela é armazenada ali atributos,
+então eu faço da
+
+35
+00:02:45.466 --> 00:02:50.725
+seguinte forma: Você que já provavelmente
+tem experiência alguma outra linguagem,
+
+36
+00:02:50.725 --> 00:02:54.654
+é como se eu estivesse declarando
+variáveis dentro da minha classe.
+
+37
+00:02:54.654 --> 00:02:57.468
+Então estou dizendo que a classe Carro,
+
+38
+00:02:57.468 --> 00:03:02.467
+ela tem a informação potência e
+ela tem a informação velocidade.
+
+39
+00:03:02.467 --> 00:03:07.309
+Olhando com mais detalhe aqui para
+o atributo, todo o atributo ele
+
+40
+00:03:07.309 --> 00:03:12.252
+precisa ter tipo,
+então no caso aqui ele é inteiro, certo?
+
+41
+00:03:12.252 --> 00:03:16.464
+E ele pode ser do tipo
+primitivo ou de uma classe.
+
+42
+00:03:16.464 --> 00:03:20.375
+Pegando aqui os outros exemplos,
+a potência ali é inteiro,
+
+43
+00:03:20.375 --> 00:03:24.583
+a velocidade seria ali
+do tipo Float.flutuante.
+
+44
+00:03:24.583 --> 00:03:27.350
+E se a gente quiser criar carro?
+
+45
+00:03:27.350 --> 00:03:31.090
+Então para criar carro
+a gente usa o operador New.
+
+46
+00:03:31.090 --> 00:03:35.570
+Então eu estou criando ali o meu fusca,
+então eu dou o carro fusca,
+
+47
+00:03:35.570 --> 00:03:39.791
+estou declarando a variável fusca
+como do tipo carro e estou,
+
+48
+00:03:39.791 --> 00:03:45.047
+o New diz assim, olha estou criando
+uma nova instância da classe Carro.
+
+49
+00:03:45.047 --> 00:03:50.471
+Para acessar os atributos então desse
+carro eu posso usar a fusca.potencia
+
+50
+00:03:50.471 --> 00:03:56.590
+para acessar essa variável potência e
+posso usar por exemplo, eu posso tanto
+
+51
+00:03:56.590 --> 00:04:01.968
+notificar essa variável quanto
+recuperar ela, então o fusca.potencia,
+
+52
+00:04:01.968 --> 00:04:06.330
+por exemplo, igual a 2, como a gente está
+vendo no exemplo aqui do lado, certo?
+
+53
+00:04:06.330 --> 00:04:11.529
+Ele está colocando 2
+nessa variável potência,
+
+54
+00:04:11.529 --> 00:04:16.510
+aí quando eu faço v=fusca.velocidade,
+ele está recuperando essa informação.
+
+55
+00:04:16.510 --> 00:04:20.290
+A classe ela também pode ter comportamento
+e como a gente viu na aula anterior,
+
+56
+00:04:20.290 --> 00:04:23.957
+esse comportamento a gente
+define a partir de métodos.
+
+57
+00:04:23.957 --> 00:04:28.551
+Então por exemplo, eu tenho aí o meu
+método acelerar que vai estar somando
+
+58
+00:04:28.551 --> 00:04:33.227
+a potência da velocidade e eu tenho o meu
+método frear que vai estar diminuindo
+
+59
+00:04:33.227 --> 00:04:37.588
+a velocidade sempre por 2,
+no caso aí, multiplicando por 0.5.
+
+60
+00:04:37.588 --> 00:04:41.660
+Então vamos ver pouquinho de
+detalhe sobre os métodos.
+
+61
+00:04:41.660 --> 00:04:46.691
+O método ele tem retorno,
+no caso aí o Void ele é
+
+62
+00:04:46.691 --> 00:04:50.639
+retorno que na verdade estou
+dizendo que não retorna nada,
+
+63
+00:04:50.639 --> 00:04:56.514
+o método ele pode ter parâmetros ou não,
+no caso Acelerar não tem, certo?
+
+64
+00:04:56.514 --> 00:05:02.679
+E normalmente o método numa classe que
+tem estado, ele vai fazer alguma coisa
+
+65
+00:05:02.679 --> 00:05:07.960
+relação ao estado da classe, ou retornar
+uma informação ou modificar aquele estado.
+
+66
+00:05:07.960 --> 00:05:15.045
+E para chamar o método é bem
+parecido aí com atributo, certo?
+
+67
+00:05:15.045 --> 00:05:19.229
+Só que a gente coloca os parêntesis
+e aí passa os parâmetros se tiver.
+
+68
+00:05:19.229 --> 00:05:24.573
+Se não tiver a gente simplesmente bota
+parâmetros, então, fusca.acelerar,
+
+69
+00:05:24.573 --> 00:05:29.992
+fusca.frear, seria a forma de estar
+invocando aqueles métodos, está certo?
+
+70
+00:05:29.992 --> 00:05:33.991
+Então nessa aula aqui,
+olha quanta coisa aí a gente aprendeu.
+
+71
+00:05:33.991 --> 00:05:38.932
+A gente aprendeu aí Java estar
+criando classe, declarando atributo,
+
+72
+00:05:38.932 --> 00:05:42.824
+adicionando métodos e como
+instanciar os objetos,
+
+73
+00:05:42.824 --> 00:05:47.986
+sabendo aí também como usar os
+atributos e invocar aí os métodos.
+
+74
+00:05:47.986 --> 00:05:52.819
+Então espero que com isso aí a gente
+tenha dado geral aí na criação
+
+75
+00:05:52.819 --> 00:05:57.509
+de classes Java e agora você já sabe
+como criar e instanciar classes,
+
+76
+00:05:57.509 --> 00:06:00.960
+colocando atributos e
+métodos aí na linguagem Java.
+
+77
+00:06:00.960 --> 00:06:03.898
+Muito obrigado por assistir à aula.
+
+78
+00:06:03.898 --> 00:06:05.135
+Até à próxima!
+
+79
+00:06:05.135 --> 00:06:09.310
+[MÚSICA]

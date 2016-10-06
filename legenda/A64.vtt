@@ -1,0 +1,422 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.710
+[MÚSICA]
+
+2
+00:00:05.710 --> 00:00:11.250
+Olá!
+
+3
+00:00:11.250 --> 00:00:16.790
+Dando sequência a segmentação baseada
+em comportamento do consumidor,
+
+4
+00:00:16.790 --> 00:00:22.250
+nós vamos falar agora de como
+fazer análise de agrupamentos.
+
+5
+00:00:22.250 --> 00:00:25.882
+Análise de agrupamentos,
+também chamada de cluster análise,
+
+6
+00:00:25.882 --> 00:00:27.710
+ela é constituída de 6 passos.
+
+7
+00:00:27.710 --> 00:00:32.271
+No início você tem que definir problema
+e também tem que ter uma base de dados.
+
+8
+00:00:32.271 --> 00:00:37.551
+A partir disso você vai começar a calcular
+as distâncias entre os respondentes,
+
+9
+00:00:37.551 --> 00:00:40.400
+observações da sua base de dados.
+
+10
+00:00:40.400 --> 00:00:44.845
+Depois nós vamos ter que fazer
+procedimento de aglomeração,
+
+11
+00:00:44.845 --> 00:00:49.290
+como juntar, e nós vamos ver que
+existem vários procedimentos.
+
+12
+00:00:49.290 --> 00:00:52.944
+A partir daí nós já
+podemos decidir quantos
+
+13
+00:00:52.944 --> 00:00:56.320
+clusters queremos e, consequentemente,
+
+14
+00:00:56.320 --> 00:01:01.200
+interpretar o perfil de cada cluster
+e ver se os resultados são válidos.
+
+15
+00:01:01.200 --> 00:01:08.254
+A formação de segmentos necessita
+de uma medida de distância,
+
+16
+00:01:08.254 --> 00:01:12.850
+nós temos que saber como medir
+a distância entre as observações.
+
+17
+00:01:12.850 --> 00:01:20.002
+Sejam elas indivíduos, famílias,
+sejam elas tomadores de decisão,
+
+18
+00:01:20.002 --> 00:01:25.153
+empresas, análise de cluster
+serve para muitas pesquisas,
+
+19
+00:01:25.153 --> 00:01:29.340
+muitas formas de pesquisas e nós vamos ver
+com o foco em marketing então na maior
+
+20
+00:01:29.340 --> 00:01:32.899
+parte das vezes nós vamos ter os
+respondentes que são consumidores.
+
+21
+00:01:32.899 --> 00:01:37.131
+Mas ela pode ser usada também
+para empresas e assim por diante.
+
+22
+00:01:37.131 --> 00:01:40.810
+E aí nós queremos método pra indicar,
+para escrever,
+
+23
+00:01:40.810 --> 00:01:44.993
+designar cada observação em que
+grupo que deve estar colocada.
+
+24
+00:01:44.993 --> 00:01:49.074
+Retomando o nosso exemplo de
+comportamento de gastos diários,
+
+25
+00:01:49.074 --> 00:01:52.134
+nós precisamos medir
+a distância entre 2 pontos.
+
+26
+00:01:52.134 --> 00:01:54.920
+Vamos tomar aqui,
+por exemplo, o ponto A e B.
+
+27
+00:01:54.920 --> 00:01:59.025
+Como é que a gente poderia
+medir a distância entre eles?
+
+28
+00:01:59.025 --> 00:02:03.902
+Você deve estar se lembrando
+do famoso teorema de Pitágoras
+
+29
+00:02:03.902 --> 00:02:09.130
+onde a gente pode fazer
+triângulo e identificar que essa
+
+30
+00:02:09.130 --> 00:02:14.014
+distância nada mais é do que a hipotenusa
+de triângulo retângulo onde a soma do
+
+31
+00:02:14.014 --> 00:02:18.680
+quadrado dos catetos é igual
+ao quadrado da hipotenusa.
+
+32
+00:02:18.680 --> 00:02:22.441
+Esse tipo de cálculo é
+o que nós vamos usar.
+
+33
+00:02:22.441 --> 00:02:26.802
+É cálculo que foi descoberto
+há muitos anos atrás,
+
+34
+00:02:26.802 --> 00:02:32.191
+quinhentos e oitenta anos antes
+de Cristo nasceu Pitágoras
+
+35
+00:02:32.191 --> 00:02:36.850
+e ele fez esse cálculo geométrico para
+medir a distância entre 2 pontos.
+
+36
+00:02:36.850 --> 00:02:43.432
+Nós sabemos também que
+duzentos anos depois veio
+
+37
+00:02:43.432 --> 00:02:49.097
+grande matemático do Egito,
+chamado Euclides,
+
+38
+00:02:49.097 --> 00:02:55.043
+e o Euclides nada mais fez do que
+generalizar a fórmula de Pitágoras,
+
+39
+00:02:55.043 --> 00:02:59.230
+ou seja, o Euclides criou o que
+a gente chama de geometria euclidiana
+
+40
+00:02:59.230 --> 00:03:03.179
+generalizando não mais pra 2 variáveis,
+mas pra N variáveis.
+
+41
+00:03:03.179 --> 00:03:08.205
+Então, se tiver 4, 5, 6,
+é claro que não dá mais pra fazer gráfico
+
+42
+00:03:08.205 --> 00:03:12.885
+mas você pode tranquilamente
+usar a mesma expressão.
+
+43
+00:03:12.885 --> 00:03:18.512
+Vamos aplicar então a fórmula pra
+calcular a distância entre os pontos?
+
+44
+00:03:18.512 --> 00:03:20.460
+Vamos voltar no nosso exemplo.
+
+45
+00:03:20.460 --> 00:03:25.000
+Você tem aqui X1 e X2, o ponto A,
+qual é a distância entre o A e o B?
+
+46
+00:03:25.000 --> 00:03:29.486
+Se eu fizer a distância entre o
+A e B usando apenas a variável X1,
+
+47
+00:03:29.486 --> 00:03:31.709
+eu faço 2 menos 8 dá menos 6.
+
+48
+00:03:31.709 --> 00:03:36.480
+Se eu usar apenas a variável X2,
+eu tenho 4 menos 2 igual a 2.
+
+49
+00:03:36.480 --> 00:03:40.446
+E aí a gente pode fazer uma fórmula que
+é extrair a raiz quadrada da soma dos
+
+50
+00:03:40.446 --> 00:03:43.450
+quadrados, que é exatamente
+o teorema de Pitágoras.
+
+51
+00:03:43.450 --> 00:03:52.148
+[SEM_ÁUDIO] Com isso
+
+52
+00:03:52.148 --> 00:03:57.365
+a gente pode construir uma tabela
+que vocês estão vendo agora,
+
+53
+00:03:57.365 --> 00:04:01.926
+que é a tabela das distâncias
+de todos os pontos só usando as
+
+54
+00:04:01.926 --> 00:04:06.498
+variáveis de maneira isolada e em
+seguida de uma maneira combinada,
+
+55
+00:04:06.498 --> 00:04:09.110
+extraindo a raiz quadrada
+da soma dos quadrados.
+
+56
+00:04:09.110 --> 00:04:15.272
+[SEM_ÁUDIO] Vamos
+
+57
+00:04:15.272 --> 00:04:19.510
+fazer mais exercício?
+
+58
+00:04:19.510 --> 00:04:25.407
+Nós temos aqui 3 indivíduos com
+rendas diferentes, idades diferentes,
+
+59
+00:04:25.407 --> 00:04:29.580
+e eu peço que você calcule então
+a distância euclidiana entre o A e o B,
+
+60
+00:04:29.580 --> 00:04:37.580
+e o B e o C.
+
+61
+00:04:37.580 --> 00:04:45.580
+[SEM_ÁUDIO]
+
+62
+00:04:45.580 --> 00:04:53.580
+[SEM_ÁUDIO]
+
+63
+00:04:53.580 --> 00:05:01.580
+[SEM_ÁUDIO]
+
+64
+00:05:01.580 --> 00:05:09.580
+[SEM_ÁUDIO]
+
+65
+00:05:09.580 --> 00:05:15.917
+Neste exemplo que nós acabamos de ver,
+
+66
+00:05:15.917 --> 00:05:23.281
+ficou claro que quando nós transformamos
+a unidade da medida de idade de anos para
+
+67
+00:05:23.281 --> 00:05:27.780
+meses, os resultados são completamente
+diferentes, fica tudo destorcido.
+
+68
+00:05:27.780 --> 00:05:32.690
+Cluster análise tem essa coisa que
+você precisa prestar muita atenção:
+
+69
+00:05:32.690 --> 00:05:34.588
+As unidades das variáveis.
+
+70
+00:05:34.588 --> 00:05:38.939
+Estão na mesma base, têm a mesma escala,
+são de igual dimensão?
+
+71
+00:05:38.939 --> 00:05:43.107
+Se forem, tudo bem, você parte pra análise
+de cluster com as variáveis originais,
+
+72
+00:05:43.107 --> 00:05:45.377
+senão tem que fazer uma
+transformação das variáveis.
+
+73
+00:05:45.377 --> 00:05:48.500
+É uma transformação muito simples que
+consiste em padronizar as variáveis
+
+74
+00:05:48.500 --> 00:05:50.550
+e nós vamos ver como
+se faz isso no Softer.
+
+75
+00:05:50.550 --> 00:05:53.948
+Padronizar a variável nada mais é
+do que você pegar aquela variável,
+
+76
+00:05:53.948 --> 00:05:56.310
+subtrair a média e dividir
+pelo desvio padrão.
+
+77
+00:05:56.310 --> 00:06:01.815
+Com isso a variável passa a ter uma média
+igual a 0 e desvio padrão igual à 1,
+
+78
+00:06:01.815 --> 00:06:06.332
+e aí você pode partir tranquilamente
+para a análise de cluster.
+
+79
+00:06:06.332 --> 00:06:11.986
+Aqui está a fórmula de Euclides,
+é uma fórmula bastante simples,
+
+80
+00:06:11.986 --> 00:06:16.119
+basta você fazer
+a diferença entre pra cada
+
+81
+00:06:16.119 --> 00:06:21.410
+respondente a nota que ele
+deu pra cada variável,
+
+82
+00:06:21.410 --> 00:06:26.262
+para par você vai fazer a distância
+entre o A e o B, você pega a variável 1,
+
+83
+00:06:26.262 --> 00:06:30.790
+o que ele respondeu correspondente ao
+A e o B, subtrai e eleva o quadrado,
+
+84
+00:06:30.790 --> 00:06:34.256
+subtrai e eleva o quadrado,
+soma e depois tira a raiz quadrada.
+
+85
+00:06:34.256 --> 00:06:38.207
+Essa é a fórmula de Euclides pra
+calcular a distância euclidiana.
+
+86
+00:06:38.207 --> 00:06:43.415
+Agora você está pronto para a próxima
+etapa onde nós vamos aprender
+
+87
+00:06:43.415 --> 00:06:50.750
+a fazer os procedimentos de cluster.
+
+88
+00:06:50.750 --> 00:06:57.520
+[SEM_ÁUDIO]

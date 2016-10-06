@@ -1,0 +1,523 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.057
+[MÚSICA] Vamos
+
+2
+00:00:08.057 --> 00:00:12.442
+dando início ao curso
+Orientação a Objetos com Java.
+
+3
+00:00:12.442 --> 00:00:18.701
+Eu sou o Clovis Fernandes e hoje iremos
+falar sobre lógica das responsabilidades,
+
+4
+00:00:18.701 --> 00:00:23.570
+vamos tentar definir a lógica das
+responsabilidades na aula de hoje.
+
+5
+00:00:23.570 --> 00:00:25.692
+Anteriormente definimos responsabilidade,
+
+6
+00:00:25.692 --> 00:00:30.086
+conceito muito importante que vai ser
+usado ao longo do curso e iremos hoje
+
+7
+00:00:30.086 --> 00:00:34.356
+falar como desenvolver a lógica
+das responsabilidades.
+
+8
+00:00:34.356 --> 00:00:39.085
+Queremos definir e identificar a lógica
+das responsabilidades de uma dada classe.
+
+9
+00:00:39.085 --> 00:00:42.144
+Suponha, por exemplo,
+a classe Conta Corrente.
+
+10
+00:00:42.144 --> 00:00:45.976
+Quais que são as responsabilidades
+da classe Conta Corrente?
+
+11
+00:00:45.976 --> 00:00:49.760
+Se olharmos apenas para as
+responsabilidades do tipo Sabe,
+
+12
+00:00:49.760 --> 00:00:55.469
+eu posso saber o número da conta,
+posso saber o valor do saldo da conta,
+
+13
+00:00:55.469 --> 00:00:58.447
+então são duas
+responsabilidades por exemplo.
+
+14
+00:00:58.447 --> 00:01:00.970
+Com relação às
+responsabilidades do tipo Faz,
+
+15
+00:01:00.970 --> 00:01:04.540
+eu vou apresentar 3 exemplos
+de responsabilidades.
+
+16
+00:01:04.540 --> 00:01:08.557
+A primeira é Credita o valor do saldo,
+a segunda é Debita
+
+17
+00:01:08.557 --> 00:01:13.210
+valor do saldo e a terceira é
+possível retirar determinado valor.
+
+18
+00:01:13.210 --> 00:01:18.291
+Como são responsabilidades elas vão dar
+origem a métodos, elas são equivalentes
+
+19
+00:01:18.291 --> 00:01:23.203
+a métodos, responsabilidades do tipo Faz,
+podem dar origem a 1 ou mais métodos.
+
+20
+00:01:23.203 --> 00:01:27.087
+Quando eu estou olhando as
+responsabilidades como métodos eu preciso
+
+21
+00:01:27.087 --> 00:01:31.909
+saber que ações que elas realizam,
+ou seja, no fundo eu preciso definir o
+
+22
+00:01:31.909 --> 00:01:37.640
+algoritmo que está por trás dessa
+responsabilidade, desse futuro método.
+
+23
+00:01:37.640 --> 00:01:42.940
+Uma maneira de definir isso é ver
+as ações que podem ser feitas.
+
+24
+00:01:42.940 --> 00:01:46.998
+Por isso a definição do nome da
+responsabilidade é importante.
+
+25
+00:01:46.998 --> 00:01:51.720
+Você faz uma definição muito boa do nome
+da responsabilidade é meio caminho para
+
+26
+00:01:51.720 --> 00:01:54.100
+definir a lógica da responsabilidade.
+
+27
+00:01:54.100 --> 00:01:58.601
+Por exemplo, qual é a lógica da
+responsabilidade Sabe o número da conta?
+
+28
+00:01:58.601 --> 00:02:03.557
+Responsabilidade do tipo Sabe elas sempre
+correspondem diretamente a alguma variável
+
+29
+00:02:03.557 --> 00:02:07.467
+de instância, alguma estrutura de dado,
+algum atributo então, neste caso,
+
+30
+00:02:07.467 --> 00:02:10.879
+vai estar associado ao
+atributo número da conta.
+
+31
+00:02:10.879 --> 00:02:16.045
+A lógica então desta responsabilidade é
+a seguinte: Com base no número da conta
+
+32
+00:02:16.045 --> 00:02:21.058
+o objeto verifica qual é que é o valor que
+está neste atributo e devolve esse valor.
+
+33
+00:02:21.058 --> 00:02:25.032
+Então é uma lógica muito simples,
+simplesmente eu olho o atributo que está
+
+34
+00:02:25.032 --> 00:02:29.411
+associado à responsabilidade do
+tipo Sabe e ele devolve esse valor.
+
+35
+00:02:29.411 --> 00:02:31.455
+Isso é uma maneira de fazer.
+
+36
+00:02:31.455 --> 00:02:35.242
+A outra maneira é você ter uma
+lógica de inserir o valor.
+
+37
+00:02:35.242 --> 00:02:40.439
+Mais para a frente nós vamos ver que isso
+vai estar associado a 2 tipos de métodos,
+
+38
+00:02:40.439 --> 00:02:44.239
+que a gente chama de métodos assessores,
+os getters e setters.
+
+39
+00:02:44.239 --> 00:02:48.371
+Agora vamos dar uma olhada na lógica
+da responsabilidade É possível
+
+40
+00:02:48.371 --> 00:02:50.260
+retirar determinado valor?
+
+41
+00:02:50.260 --> 00:02:54.045
+Normalmente isso é uma
+responsabilidade do tipo Faz e
+
+42
+00:02:54.045 --> 00:02:58.260
+responsabilidade do tipo Faz
+corresponde a uma pergunta,
+
+43
+00:02:58.260 --> 00:03:02.518
+vai corresponder a método booleano,
+ele vai votar verdadeiro ou falso.
+
+44
+00:03:02.518 --> 00:03:07.431
+Neste caso, como é método booleano,
+a lógica é bem simples e o saldo atual for
+
+45
+00:03:07.431 --> 00:03:11.373
+maior do que o valor,
+então eu respondo sim ou verdadeiro,
+
+46
+00:03:11.373 --> 00:03:15.003
+caso contrário, se é não,
+eu respondo não ou falso.
+
+47
+00:03:15.003 --> 00:03:18.825
+Vamos dar uma olhada agora na
+responsabilidade Debita valor do
+
+48
+00:03:18.825 --> 00:03:19.612
+saldo atual.
+
+49
+00:03:19.612 --> 00:03:24.772
+Normalmente, uma responsabilidade do tipo
+Faz, ela vai estar associada a algum
+
+50
+00:03:24.772 --> 00:03:29.780
+atributo já definido anteriormente
+pelas responsabilidades do tipo Sabe.
+
+51
+00:03:29.780 --> 00:03:33.562
+Se não tiver, nós teremos que
+fazer a definição desse atributo.
+
+52
+00:03:33.562 --> 00:03:38.162
+No caso agora, o atributo já foi definido
+anteriormente por uma responsabilidade do
+
+53
+00:03:38.162 --> 00:03:39.800
+tipo Sabe, que é o Saldo atual.
+
+54
+00:03:39.800 --> 00:03:44.160
+Então com base no saldo atual que
+eu vou debitar, eu pego esse saldo,
+
+55
+00:03:44.160 --> 00:03:48.758
+o valor desse saldo,
+debito o valor que eu estou querendo tirar
+
+56
+00:03:48.758 --> 00:03:53.666
+da conta e devolvo esse valor como
+novo valor da variável Saldo da conta.
+
+57
+00:03:53.666 --> 00:03:58.264
+Vamos imaginar agora uma outra conta, por
+exemplo, a conta Banco, já que estávamos
+
+58
+00:03:58.264 --> 00:04:02.209
+falando de Conta Corrente,
+vamos falar agora de uma classe Banco.
+
+59
+00:04:02.209 --> 00:04:06.191
+Quais seriam as as responsabilidades
+do tipo Sabe para Banco.
+
+60
+00:04:06.191 --> 00:04:12.258
+Na classe Banco as responsabilidades do
+tipo Sabe podem ser duas, por exemplo,
+
+61
+00:04:12.258 --> 00:04:17.689
+você sabe as contas que estão ativas,
+você sabe as contas que estão inativas.
+
+62
+00:04:17.689 --> 00:04:22.388
+O atributo associado ao Sabe
+às contas ativas vai ser uma
+
+63
+00:04:22.388 --> 00:04:25.620
+lista das contas correntes ativas,
+
+64
+00:04:25.620 --> 00:04:30.796
+o atributo associado à responsabilidade
+Sabe as contas inativas,
+
+65
+00:04:30.796 --> 00:04:34.467
+vai ser uma lista de
+contas correntes inativas.
+
+66
+00:04:34.467 --> 00:04:39.454
+Agora quais são as responsabilidades
+do tipo Faz para a classe Banco?
+
+67
+00:04:39.454 --> 00:04:44.779
+De entre as possibilidades vou citar
+apenas 3: Registra uma conta nova,
+
+68
+00:04:44.779 --> 00:04:49.576
+Apresenta os números das
+contas ativas e Obtém o saldo
+
+69
+00:04:49.576 --> 00:04:52.869
+atual do Banco, saldo total do Banco.
+
+70
+00:04:52.869 --> 00:04:57.808
+Neste caso eu vou apresentar
+responsabilidade Registra uma conta nova.
+
+71
+00:04:57.808 --> 00:05:01.880
+Qual é que é a lógica da responsabilidade
+Registra uma conta nova?
+
+72
+00:05:01.880 --> 00:05:06.853
+São 2 passos: Primeiro eu crio
+uma conta corrente nova; segundo
+
+73
+00:05:06.853 --> 00:05:11.178
+essa conta que eu criei eu insiro
+na lista de contas ativas.
+
+74
+00:05:11.178 --> 00:05:16.182
+Vocês estão vendo que a lógica da
+responsabilidade apresenta os números
+
+75
+00:05:16.182 --> 00:05:21.058
+das contas ativas, já é pouco mais
+complexa relação às anteriores.
+
+76
+00:05:21.058 --> 00:05:25.436
+A lógica da responsabilidade Apresenta
+os números das contas ativas agora
+
+77
+00:05:25.436 --> 00:05:28.885
+é mais complexa
+comparativamente às anteriores.
+
+78
+00:05:28.885 --> 00:05:32.555
+O objeto Banco, como nós tínhamos visto,
+
+79
+00:05:32.555 --> 00:05:37.650
+ele tem atributo que é a lista de
+contas correntes ativas do Banco.
+
+80
+00:05:37.650 --> 00:05:42.524
+Então com base nessa contas corrente vão
+ser objetos da classe Contas Correntes,
+
+81
+00:05:42.524 --> 00:05:46.244
+então eu tenho uma lista de objetos
+da classe Contas Correntes.
+
+82
+00:05:46.244 --> 00:05:50.240
+Aí eu crio uma lista vazia de número
+de conta, agora é apenas números,
+
+83
+00:05:50.240 --> 00:05:54.489
+para cada objeto da minha
+lista de contas ativas,
+
+84
+00:05:54.489 --> 00:05:59.251
+que são objetos da Conta Corrente ativa,
+eu vou examinar,
+
+85
+00:05:59.251 --> 00:06:04.754
+me comunicar com esse objeto e pedir para
+essa responsabilidade, já que cada objeto
+
+86
+00:06:04.754 --> 00:06:09.430
+conta corrente Sabe o número da conta,
+que ela me forneça o número da conta.
+
+87
+00:06:09.430 --> 00:06:12.598
+Eu peço para ela aquela
+questão do antropomorfismo,
+
+88
+00:06:12.598 --> 00:06:15.289
+então eu peço para fornecer
+o número para mim.
+
+89
+00:06:15.289 --> 00:06:19.757
+Aí, seguida, eu incluo esse número
+na lista dos números de contas,
+
+90
+00:06:19.757 --> 00:06:24.266
+que inicialmente estava vazio e
+agora passaria a ter pelo menos
+
+91
+00:06:24.266 --> 00:06:28.825
+1 número de conta, que foi fornecido
+pelo objeto conta corrente,
+
+92
+00:06:28.825 --> 00:06:33.720
+aí eu passo para a próxima conta,
+se houver, e ela vai-me informar também
+
+93
+00:06:33.720 --> 00:06:37.527
+através da responsabilidade Sabe o número
+da conta, qual é o número da conta.
+
+94
+00:06:37.527 --> 00:06:42.023
+E assim eu vou montando e no final eu
+tenho a lista completa de todos os
+
+95
+00:06:42.023 --> 00:06:47.173
+números, e no final eu apresento os
+números da lista de números de contas,
+
+96
+00:06:47.173 --> 00:06:49.104
+eu devolvo esses números.
+
+97
+00:06:49.104 --> 00:06:52.230
+Qual é que é a lógica da responsabilidade?
+
+98
+00:06:52.230 --> 00:06:54.419
+Obtém o saldo total do banco.
+
+99
+00:06:54.419 --> 00:06:59.590
+Vai ser muito semelhante ao anterior
+porque eu vou examinar o atributo
+
+100
+00:06:59.590 --> 00:07:05.714
+lista de objetos conta corrente e vou
+pedir para que eles me devolvam o saldo de
+
+101
+00:07:05.714 --> 00:07:10.588
+cada deles, e eu vou acumulando esse saldo
+e no final eu tenho o total do saldo.
+
+102
+00:07:10.588 --> 00:07:13.167
+Nós iremos ver isso na
+próxima aula por isso que
+
+103
+00:07:13.167 --> 00:07:15.775
+eu não estou me aprofundando nessa lógica.
+
+104
+00:07:15.775 --> 00:07:20.568
+Por fim, o objetivo da aula era definir
+a lógica das responsabilidades,
+
+105
+00:07:20.568 --> 00:07:22.590
+tanto do tipo Sabe quanto Faz.
+
+106
+00:07:22.590 --> 00:07:25.005
+E foi o que nós fizemos aqui.
+
+107
+00:07:25.005 --> 00:07:26.725
+Até à próxima aula!
+
+108
+00:07:26.725 --> 00:07:30.860
+[MÚSICA]

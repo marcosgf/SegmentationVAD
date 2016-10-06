@@ -1,0 +1,700 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.475
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.475 --> 00:00:11.015
+bem vindo ao curso sobre TDD.
+
+3
+00:00:11.015 --> 00:00:16.110
+Eu sou o Clovis Fernandes e hoje iremos
+apresentar exemplo de refatoração,
+
+4
+00:00:16.110 --> 00:00:21.000
+com base no mau cheiro que a gente
+chama de Inveja de Característica.
+
+5
+00:00:21.000 --> 00:00:27.010
+Para isso nós iremos aplicar o
+Extract Method e outras boas práticas,
+
+6
+00:00:27.010 --> 00:00:30.480
+para resolver esse problema de mau cheiro.
+
+7
+00:00:30.480 --> 00:00:37.020
+O Inveja de Característica que,
+no catálogo do Fowler, não é?
+
+8
+00:00:37.020 --> 00:00:39.370
+Recebe o nome de Feature Envy, não é?
+
+9
+00:00:39.370 --> 00:00:42.527
+A tradução literal que eu fiz,
+não é, está certo?
+
+10
+00:00:42.527 --> 00:00:43.710
+Para o português.
+
+11
+00:00:43.710 --> 00:00:48.498
+Ele se caracteriza por método que faz
+
+12
+00:00:48.498 --> 00:00:53.220
+mais uso de,
+de características e de dados e métodos de
+
+13
+00:00:53.220 --> 00:00:56.935
+outra classe do que da própria classe,
+está certo?
+
+14
+00:00:56.935 --> 00:00:58.884
+Por isso que ele chama de inveja,
+
+15
+00:00:58.884 --> 00:01:03.997
+porque ele está usando de outra vez de
+usar a da própria classe, está certo?
+
+16
+00:01:03.997 --> 00:01:06.270
+Isso é o que vai caracterizar.
+
+17
+00:01:06.270 --> 00:01:11.070
+E como a gente mostrou, isso é mau cheiro
+
+18
+00:01:11.070 --> 00:01:16.256
+não muito agradável que
+causa alguns problemas.
+
+19
+00:01:16.256 --> 00:01:21.673
+Os remédios para esse mau cheiro
+são técnicas de refatoração,
+
+20
+00:01:21.673 --> 00:01:27.132
+que também estão lá catalogadas
+no livro do Fowler, não é?
+
+21
+00:01:27.132 --> 00:01:31.160
+que é o Mover Método e o Extract Method.
+
+22
+00:01:31.160 --> 00:01:34.770
+No nosso exemplo aqui a gente
+vai usar uma mistura dos 2,
+
+23
+00:01:34.770 --> 00:01:39.140
+porque nós vamos na verdade
+mover uma cópia do método.
+
+24
+00:01:39.140 --> 00:01:40.168
+Eu movo o método,
+
+25
+00:01:40.168 --> 00:01:44.696
+quando eu não preciso mais que aquele
+método fique no lugar que estava, não é?
+
+26
+00:01:44.696 --> 00:01:45.460
+está certo?
+
+27
+00:01:45.460 --> 00:01:50.967
+Mas no caso eu vou mover uma cópia.
+
+28
+00:01:50.967 --> 00:01:55.500
+Eu quero que aquele método anterior
+continue no próprio lugar, está certo?
+
+29
+00:01:55.500 --> 00:01:58.256
+O exemplo que eu vou usar aqui,
+
+30
+00:01:58.256 --> 00:02:03.228
+eu adaptei desse site que
+vocês estão vendo aqui,
+
+31
+00:02:03.228 --> 00:02:08.387
+sobre o, do Joshua Kerievsky,
+que é grande guru
+
+32
+00:02:08.387 --> 00:02:13.792
+também nessa área de de refatoração,
+está certo?
+
+33
+00:02:13.792 --> 00:02:19.121
+Então é exemplo que você tem é 2 classes,
+não é?
+
+34
+00:02:19.121 --> 00:02:20.369
+está certo?
+
+35
+00:02:20.369 --> 00:02:27.236
+Eu tenho a classe Customer e eu
+tenho a classe Phone, está certo?
+
+36
+00:02:27.236 --> 00:02:33.064
+Eu começo então no meu processo, no meu
+ciclo de refatoração, não é, está certo?
+
+37
+00:02:33.064 --> 00:02:35.842
+A farejar esse código, não é, está certo?
+
+38
+00:02:35.842 --> 00:02:40.773
+Vocês percebam então que
+eu consigo visualizar que
+
+39
+00:02:40.773 --> 00:02:45.631
+Phone existem, é, os dados do telefone,
+
+40
+00:02:45.631 --> 00:02:52.865
+eles estão expostos através de métodos
+getters públicos, não é, está certo?
+
+41
+00:02:52.865 --> 00:02:58.612
+e o mau cheiro se encontra ali na
+classe Customer, não é, está certo?
+
+42
+00:02:58.612 --> 00:03:04.587
+Porque é onde ele, na classe Customer, o
+acesso aos dados expostos é muito grande.
+
+43
+00:03:04.587 --> 00:03:09.202
+Eu uso totalmente aquilo,
+eu vou usar os dados
+
+44
+00:03:09.202 --> 00:03:13.484
+do Phone indevidamente, está certo?
+
+45
+00:03:13.484 --> 00:03:19.405
+Então esse é o mau cheiro que nós
+chamamos de inveja de característica, o
+
+46
+00:03:19.405 --> 00:03:25.590
+Feature Envy, que o Fowler assim denominou
+e a gente pode caracterizar assim também.
+
+47
+00:03:25.590 --> 00:03:29.540
+Nós já encontramos ele lá no exemplo do
+
+48
+00:03:29.540 --> 00:03:34.110
+do Tell Don't Ask também,
+algo parecido com isso.
+
+49
+00:03:34.110 --> 00:03:39.368
+Nós iremos, dando prosseguimento ao ciclo,
+nós identificamos neste,
+
+50
+00:03:39.368 --> 00:03:44.509
+nesse exemplo apenas e tão
+somente mau cheiro e vamos
+
+51
+00:03:44.509 --> 00:03:50.201
+aplicar conjunto de técnicas de
+refatoração proposto pelo Fowler.
+
+52
+00:03:50.201 --> 00:03:55.507
+Vamos fundamentar isso também usando
+esses princípios que estão apontados aí,
+
+53
+00:03:55.507 --> 00:04:02.330
+o Tell Don't Ask, Redirecionamento e
+a a Expressão da Intenção principalmente
+
+54
+00:04:02.330 --> 00:04:07.418
+para caracterizar melhor, dar suporte
+melhor no que a gente está fazendo.
+
+55
+00:04:07.418 --> 00:04:10.590
+Esse último por exemplo é para
+dar o nome ao método que eu vou
+
+56
+00:04:10.590 --> 00:04:15.130
+extrair e mover de classe, está certo?
+
+57
+00:04:15.130 --> 00:04:20.010
+O o primeiro, a primeira coisa
+que a gente vai fazer então é,
+
+58
+00:04:20.010 --> 00:04:23.950
+onde estava o mau cheiro
+que é onde eu faço
+
+59
+00:04:23.950 --> 00:04:27.871
+acesso usando os getters de Phone, não é?
+
+60
+00:04:27.871 --> 00:04:32.692
+na classe Customer,
+então eu tenho ali o método
+
+61
+00:04:32.692 --> 00:04:37.614
+getMobilePhoneNumber, e para isso eu vou e
+
+62
+00:04:37.614 --> 00:04:43.010
+obtenho getters, usando os getters
+do Phone, não é, está certo?
+
+63
+00:04:43.010 --> 00:04:47.845
+Eu vou obtendo esses valores,
+então o que é que eu vou fazer?
+
+64
+00:04:47.845 --> 00:04:50.820
+Esse conjunto que está marcado aí
+como amarelo, não é, está certo?
+
+65
+00:04:50.820 --> 00:04:54.804
+Fundo amarelo eu vou extrair o método, mas
+não vou por ele lugar nenhum, está certo?
+
+66
+00:04:54.804 --> 00:04:55.941
+Eu sou estou extraindo.
+
+67
+00:04:55.941 --> 00:04:57.420
+Aí o que é que eu faço seguida?
+
+68
+00:04:57.420 --> 00:05:04.495
+Eu vou mover esse método que eu acabei de
+extrair para a classe Phone, está certo?
+
+69
+00:05:04.495 --> 00:05:10.530
+É como se é eu tivesse tirado uma
+cópia do método anterior, está certo?
+
+70
+00:05:10.530 --> 00:05:14.910
+E movesse para a classe Phone.
+
+71
+00:05:14.910 --> 00:05:19.890
+E eu vou fazer redirecionamento, ou seja,
+onde tinha aquele código todo que
+
+72
+00:05:19.890 --> 00:05:23.810
+que era invejoso da classe Phone,
+não é, está certo?
+
+73
+00:05:23.810 --> 00:05:27.837
+Eu vou usar o redirecionamento,
+está certo?
+
+74
+00:05:27.837 --> 00:05:33.580
+Então vocês vejam que é tipo de delegação,
+que eu chamo de redirecionamento,
+
+75
+00:05:33.580 --> 00:05:38.820
+porque o nome do método de Customer,
+o getMobilePhoneNumber,
+
+76
+00:05:38.820 --> 00:05:43.879
+é igual ao nome que eu coloquei
+no método lá de Phone,
+
+77
+00:05:43.879 --> 00:05:47.470
+que também é o getMobilePhoneNumber,
+está certo?
+
+78
+00:05:47.470 --> 00:05:49.560
+O que é que eu estou fazendo com isso?
+
+79
+00:05:49.560 --> 00:05:52.810
+É algo parecido com o que eu
+vou mostrar agora para vocês.
+
+80
+00:05:52.810 --> 00:05:59.380
+Vocês lembram quando eu falei do uso do
+antropomorfismo orientação a objetos?
+
+81
+00:05:59.380 --> 00:06:02.581
+É isso que nós estamos fazendo aqui.
+
+82
+00:06:02.581 --> 00:06:07.019
+É como se,
+ao ter usado o Tell Don't Ask, não é?
+
+83
+00:06:07.019 --> 00:06:14.088
+E fazer com que a classe Phone tenha
+o getMobilePhoneNumber, está certo?
+
+84
+00:06:14.088 --> 00:06:19.219
+É, ao redirecionar aqui é como eu,
+cliente, não é, está certo?
+
+85
+00:06:19.219 --> 00:06:24.980
+Eu sou Customer, eu pergunte ao
+meu telefone: qual é o seu número?
+
+86
+00:06:24.980 --> 00:06:27.784
+E ele vai me responder qual
+é o número dele, está certo?
+
+87
+00:06:27.784 --> 00:06:32.025
+Então nós estamos fazendo como se
+estivéssemos transformando isso aqui num
+
+88
+00:06:32.025 --> 00:06:35.370
+num num ser vivo, não é?
+
+89
+00:06:35.370 --> 00:06:36.140
+está certo?
+
+90
+00:06:36.140 --> 00:06:38.730
+E é isso que a gente na
+verdade está fazendo.
+
+91
+00:06:38.730 --> 00:06:44.083
+Ao fazer isso, usar esse antropomorfismo,
+a gente deixa o código mais orientado
+
+92
+00:06:44.083 --> 00:06:49.234
+a objetos, mais claro termos de
+intenção do que eu quero fazer.
+
+93
+00:06:49.234 --> 00:06:52.286
+Por isso que eu mantive o mesmo nome,
+porque a intenção, é,
+
+94
+00:06:52.286 --> 00:06:55.980
+lembra que eu falei da expressão
+da intenção, não é, está certo?
+
+95
+00:06:55.980 --> 00:07:00.405
+Aqui eu estou caracterizando
+através do redirecionamento,
+
+96
+00:07:00.405 --> 00:07:06.618
+que eu quero a mesma coisa, eu quero obter
+o número do do do telefone, está certo?
+
+97
+00:07:06.618 --> 00:07:11.177
+Então eu só redireciono e aqui que
+é importante esse tipo de coisa.
+
+98
+00:07:11.177 --> 00:07:17.802
+Bom, feito isso,
+então vocês percebam que eu já tenho agora
+
+99
+00:07:17.802 --> 00:07:23.700
+código do getPhone MobilePhoneNumber na
+
+100
+00:07:23.700 --> 00:07:28.846
+classe Phone e tenho o redirecionamento
+na classe Customer, está certo?
+
+101
+00:07:28.846 --> 00:07:30.529
+Num método de mesmo nome.
+
+102
+00:07:30.529 --> 00:07:34.380
+Então agora eu vou fazer
+o teste da bateria.
+
+103
+00:07:34.380 --> 00:07:37.530
+Até agora eu não estava,
+eu não tinha condições de fazer o teste,
+
+104
+00:07:37.530 --> 00:07:40.480
+ou seja, aquilo que estava
+passando agora tem que passar,
+
+105
+00:07:40.480 --> 00:07:42.472
+continuar valendo aqui, está certo?
+
+106
+00:07:42.472 --> 00:07:44.782
+A bateria tem que estar, ser bem sucedida,
+
+107
+00:07:44.782 --> 00:07:49.083
+porque eu simplesmente fiz movimento,
+está certo?
+
+108
+00:07:49.083 --> 00:07:53.940
+Eu movi uma cópia,
+do meu getMobilePhoneNumber,
+
+109
+00:07:53.940 --> 00:07:55.951
+para o Phone, está certo?
+
+110
+00:07:55.951 --> 00:08:01.210
+Então agora eu posso testar e aquela
+bateria vai funcionar novamente,
+
+111
+00:08:01.210 --> 00:08:02.307
+está certo?
+
+112
+00:08:02.307 --> 00:08:07.194
+Agora eu dou continuidade à
+minha refatoração, ou seja,
+
+113
+00:08:07.194 --> 00:08:12.280
+porque é que eu pude usar
+anteriormente aqueles
+
+114
+00:08:12.280 --> 00:08:16.807
+dados que eu estava invejando,
+que eu estava querendo, está certo?
+
+115
+00:08:16.807 --> 00:08:19.677
+Porque eles estavam expostos, está certo?
+
+116
+00:08:19.677 --> 00:08:21.466
+Eles estavam expostos.
+
+117
+00:08:21.466 --> 00:08:23.260
+Agora o que é que eu faço?
+
+118
+00:08:23.260 --> 00:08:27.428
+É deixar, fazer com que esses dados
+expostos não fiquem mais expostos.
+
+119
+00:08:27.428 --> 00:08:31.448
+Então onde eles estavam como público,
+está certo?
+
+120
+00:08:31.448 --> 00:08:33.900
+Eu vou torná-los protected.
+
+121
+00:08:33.900 --> 00:08:38.860
+É, se eu tiver certeza que a classe
+Phone não vai precisar ter subclasses,
+
+122
+00:08:38.860 --> 00:08:44.476
+eu poderia até colocá-la como final,
+aí eu poderia deixar aí como private.
+
+123
+00:08:44.476 --> 00:08:49.083
+De qualquer forma o protected
+vai funcionar e só vai tornar
+
+124
+00:08:49.083 --> 00:08:54.830
+acessível esses getters objetos
+de subclasses de Phone.
+
+125
+00:08:54.830 --> 00:08:58.637
+Feito isso,
+eu volto a testar a bateria anterior,
+
+126
+00:08:58.637 --> 00:09:01.549
+tem que dar bem sucedida novamente.
+
+127
+00:09:01.549 --> 00:09:04.580
+Qualquer desses testes, quando não não,
+
+128
+00:09:04.580 --> 00:09:08.440
+eu fiz alguma algum algum erro,
+não, está certo?
+
+129
+00:09:08.440 --> 00:09:13.025
+E a bateria não dá certo,
+eu volto no código anterior,
+
+130
+00:09:13.025 --> 00:09:16.102
+vejo o que foi que eu errei, está certo?
+
+131
+00:09:16.102 --> 00:09:17.716
+E aplico a bateria de novo.
+
+132
+00:09:17.716 --> 00:09:21.797
+Vocês percebam lá que no ciclo de
+refatoração eu fico fazendo isso lá,
+
+133
+00:09:21.797 --> 00:09:24.811
+quando eu aplico as técnicas,
+a técnica de refatoração,
+
+134
+00:09:24.811 --> 00:09:29.093
+porque ele pode ter vários passos
+e cada passo eu testo novamente.
+
+135
+00:09:29.093 --> 00:09:33.813
+Com isso, não é,
+ao final eu tenho aí agora código da
+
+136
+00:09:33.813 --> 00:09:39.233
+classe Customer e da
+classe Phone refatorado,
+
+137
+00:09:39.233 --> 00:09:46.620
+completamente refatorado, ou seja,
+sem a inveja de característica.
+
+138
+00:09:46.620 --> 00:09:50.848
+Ou seja, agora esse código chegou no
+meu ciclo final e eu estou saindo com
+
+139
+00:09:50.848 --> 00:09:55.321
+código refatorado e testado, ou seja,
+eu garanto que o comportamento
+
+140
+00:09:55.321 --> 00:09:59.316
+que estava antes da refatoração
+continua valendo agora.
+
+141
+00:09:59.316 --> 00:10:04.120
+Com isso nós mostramos para
+vocês exemplo de refatoração,
+
+142
+00:10:04.120 --> 00:10:07.830
+seguindo aquele ciclo de refatoração,
+está certo?
+
+143
+00:10:07.830 --> 00:10:12.480
+E vocês vejam que a gente
+faz isso de forma segura,
+
+144
+00:10:12.480 --> 00:10:17.197
+nós garantimos que ao final
+o código correspondente à
+
+145
+00:10:17.197 --> 00:10:22.380
+refatoração desse mau cheiro,
+que é o inveja de característica,
+
+146
+00:10:22.380 --> 00:10:27.137
+no final o comportamento que
+estava antes continua valendo,
+
+147
+00:10:27.137 --> 00:10:31.273
+mesmo depois da refatoração.
+
+148
+00:10:31.273 --> 00:10:33.355
+Obrigado!
+
+149
+00:10:33.355 --> 00:10:35.440
+[MÚSICA]

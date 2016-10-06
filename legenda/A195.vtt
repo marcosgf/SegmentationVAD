@@ -1,0 +1,278 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.830
+[MÚSICA] Fala, pessoal.
+
+2
+00:00:07.830 --> 00:00:10.340
+Tudo bem?
+
+3
+00:00:10.340 --> 00:00:15.469
+Espero que você esteja preparado para
+finalmente ver o seu aplicativo prestore.
+
+4
+00:00:15.469 --> 00:00:17.260
+Vamos começar então a aula.
+
+5
+00:00:17.260 --> 00:00:21.200
+Abra o seu Xcode e abra o
+aplicativo que você vai publicar.
+
+6
+00:00:21.200 --> 00:00:25.835
+O primeiro passo, antes de mais nada,
+é checar se o bundle ID
+
+7
+00:00:25.835 --> 00:00:30.470
+de seu App bate com o bundle ID que
+você colocou no iTunes connect.
+
+8
+00:00:30.470 --> 00:00:35.380
+Para conferir o bundle ID no Xcode, basta
+que você clique no ícone de seu projeto.
+
+9
+00:00:35.380 --> 00:00:40.620
+O bundle ID é a primeira informação
+da aba de informações gerais.
+
+10
+00:00:40.620 --> 00:00:43.821
+Também precisamos colocar
+ícone em nosso aplicativo,
+
+11
+00:00:43.821 --> 00:00:47.030
+senão o Xcode code não aceitará
+publicar o nosso projeto.
+
+12
+00:00:47.030 --> 00:00:47.770
+Para isso,
+
+13
+00:00:47.770 --> 00:00:52.660
+clique em assets e selecione as imagens
+que serão os ícones do seu aplicativo.
+
+14
+00:00:52.660 --> 00:00:58.430
+Para continuar,
+
+15
+00:00:58.430 --> 00:01:04.200
+clique no ícone do simulador que você está
+usando e selecionando Generic IOS Device.
+
+16
+00:01:04.200 --> 00:01:09.000
+Agora, clique em Product
+e depois em Archive.
+
+17
+00:01:09.000 --> 00:01:15.450
+Na nova janela que se abrirá,
+
+18
+00:01:15.450 --> 00:01:19.719
+clique no botão azul Upload to AppStore.
+
+19
+00:01:19.719 --> 00:01:23.562
+Se você ainda não selecionou
+nenhuma equipe para seu app,
+
+20
+00:01:23.562 --> 00:01:28.470
+uma nova janela se abrirá e você deverá
+escolher a sua conta de desenvolvedor que
+
+21
+00:01:28.470 --> 00:01:32.020
+está atrelada ao programa de
+desenvolvimento da Apple.
+
+22
+00:01:32.020 --> 00:01:36.319
+Caso você não tenha pago os
+99 dólares pelo programa,
+
+23
+00:01:36.319 --> 00:01:39.340
+não é possível publicar aplicativos.
+
+24
+00:01:39.340 --> 00:01:43.660
+Uma nova tela se abrirá com algumas
+informações de seu aplicativo.
+
+25
+00:01:43.660 --> 00:01:47.680
+Estas mesmas informações estão
+disponíveis no iTunes connect.
+
+26
+00:01:47.680 --> 00:01:50.131
+Para prosseguir, clique em Upload.
+
+27
+00:01:50.131 --> 00:01:54.954
+O Xcode code vai processar seu aplicativo
+e procurar por erros que impossibilitem
+
+28
+00:01:54.954 --> 00:01:55.960
+sua publicação.
+
+29
+00:01:55.960 --> 00:01:59.932
+Caso esteja tudo correto,
+
+30
+00:01:59.932 --> 00:02:03.910
+é só finalizar o processo.
+
+31
+00:02:03.910 --> 00:02:10.695
+Se você voltar imediatamente
+para o iTunes connect,
+
+32
+00:02:10.695 --> 00:02:14.920
+talvez seu aplicativo ainda não esteja
+pronto para ser enviado para revisão.
+
+33
+00:02:14.920 --> 00:02:23.518
+[SEM_ÁUDIO] Na
+
+34
+00:02:23.518 --> 00:02:30.359
+sessão de compilação
+clique no sinal de mais.
+
+35
+00:02:30.359 --> 00:02:32.928
+Caso o seu app ainda
+não esteja disponível,
+
+36
+00:02:32.928 --> 00:02:34.880
+você verá o status Processando.
+
+37
+00:02:34.880 --> 00:02:37.647
+Aguarde mais alguns minutos
+para que seu status mude.
+
+38
+00:02:37.647 --> 00:02:40.486
+Esse processo costuma demorar
+por volta de uma hora.
+
+39
+00:02:40.486 --> 00:02:43.560
+Enquanto isso,
+você poderá descansar mais pouco.
+
+40
+00:02:43.560 --> 00:02:46.791
+Agora que já esperamos tempo suficiente,
+
+41
+00:02:46.791 --> 00:02:50.902
+clique em Selecione uma compilação
+antes de enviar seu app.
+
+42
+00:02:50.902 --> 00:02:55.420
+Como enviamos apenas uma primeira versão,
+temos apenas uma opção de escolha.
+
+43
+00:02:55.420 --> 00:02:59.062
+Clique nesta opção disponível
+e depois em Concluído.
+
+44
+00:02:59.062 --> 00:03:03.389
+Por fim, clique em Salvar e
+depois em Enviar para revisão.
+
+45
+00:03:03.389 --> 00:03:08.010
+Uma nova tela será mostrada em
+que você deverá responder mais
+
+46
+00:03:08.010 --> 00:03:10.218
+algumas perguntinhas para a Apple.
+
+47
+00:03:10.218 --> 00:03:14.640
+Leia com atenção e responda de acordo
+com os objetivos de seu aplicativo.
+
+48
+00:03:14.640 --> 00:03:20.190
+Quando tudo pronto, clique em Enviar.
+
+49
+00:03:20.190 --> 00:03:21.910
+Pronto, é isso!
+
+50
+00:03:21.910 --> 00:03:25.698
+Agora, seu aplicativo vai
+para revisão da Apple.
+
+51
+00:03:25.698 --> 00:03:30.331
+Caso eles não encontrem nenhum problema
+grave ou algo em desacordo com as regras
+
+52
+00:03:30.331 --> 00:03:35.220
+da Apple, seu aplicativo será publicado
+automaticamente ou manualmente,
+
+53
+00:03:35.220 --> 00:03:37.488
+dependendo de sua escolha anteriormente.
+
+54
+00:03:37.488 --> 00:03:39.018
+Fique de olho em seu e-mail,
+
+55
+00:03:39.018 --> 00:03:42.710
+pois a Apple costuma nos avisar sobre
+o progresso de nosso aplicativo.
+
+56
+00:03:42.710 --> 00:03:44.862
+Espero que você tenha gostado desta aula.
+
+57
+00:03:44.862 --> 00:03:47.980
+Agora que você já sabe como
+publicar seu próprio aplicativo,
+
+58
+00:03:47.980 --> 00:03:51.964
+tenho certeza que você terá
+muito sucesso com suas ideias.
+
+59
+00:03:51.964 --> 00:03:53.796
+Nos vemos na próxima aula.
+
+60
+00:03:53.796 --> 00:03:54.360
+Até lá!

@@ -1,0 +1,282 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.635
+[MÚSICA] E
+
+2
+00:00:04.635 --> 00:00:09.540
+aí pessoal, tudo bem?
+
+3
+00:00:09.540 --> 00:00:14.170
+Nessa aula vamos ver os primeiros passos
+no desenvolvimento com o Sprite Kit.
+
+4
+00:00:14.170 --> 00:00:18.910
+Na hora de criar o projeto de iOS,
+escolha o template para game.
+
+5
+00:00:18.910 --> 00:00:25.450
+Escolha nome para o seu projeto.
+
+6
+00:00:25.450 --> 00:00:30.870
+Linguagem: Swift.
+
+7
+00:00:30.870 --> 00:00:35.790
+Game Technology: SpriteKit
+e Devices: Universal.
+
+8
+00:00:35.790 --> 00:00:41.195
+[SEM_ÁUDIO] Vamos
+
+9
+00:00:41.195 --> 00:00:45.100
+dar uma olhada no Story Board.
+
+10
+00:00:45.100 --> 00:00:48.996
+Você pode perceber que só vem
+criado uma única View Controler,
+
+11
+00:00:48.996 --> 00:00:51.140
+que se chama Game View Controler.
+
+12
+00:00:51.140 --> 00:00:56.180
+É nessa área preta onde vai acontecer
+toda a renderização do jogo.
+
+13
+00:00:56.180 --> 00:00:59.230
+Nós não vamos nem precisar
+mexer aqui no StoryBoard.
+
+14
+00:00:59.230 --> 00:01:02.754
+Ela já vem associada com
+a classe Game View Controler,
+
+15
+00:01:02.754 --> 00:01:06.590
+que está definida no script
+GameViewController.swift.
+
+16
+00:01:06.590 --> 00:01:11.535
+Vamos ver o que esse código faz.
+
+17
+00:01:11.535 --> 00:01:14.871
+Assim que a View Game Controller
+é carregada, é criado
+
+18
+00:01:14.871 --> 00:01:19.700
+objeto do tipo GameScene, que recebe como
+argumento o nome do arquivo da cena.
+
+19
+00:01:19.700 --> 00:01:25.290
+No caso, também se chama GameScene, que
+já vem criado por padrão neste template.
+
+20
+00:01:25.290 --> 00:01:30.204
+Essa GameScene contém uma View da
+classe SKView e é por ela que você
+
+21
+00:01:30.204 --> 00:01:35.392
+define se quer mostrar em tempo real o
+FPS, que é indicador do número de quadros
+
+22
+00:01:35.392 --> 00:01:41.150
+por segundo, o número de objetos,
+chamados de GameNodes criados na cena,
+
+23
+00:01:41.150 --> 00:01:45.986
+e uma utilização que ignora a ordem
+de renderização de GameNodes irmãos.
+
+24
+00:01:45.986 --> 00:01:48.640
+Vamos falar sobre eles na próxima aula.
+
+25
+00:01:48.640 --> 00:01:53.465
+Pode definir o modo da escala da cena,
+ou seja,
+
+26
+00:01:53.465 --> 00:01:57.568
+a cena é escalada de forma a preencher
+a tela toda mantendo a proporção mas,
+
+27
+00:01:57.568 --> 00:02:02.280
+como consequência, as laterais podem ficar
+cortadas dependendo da tela do aparelho.
+
+28
+00:02:02.280 --> 00:02:07.650
+Então a função presentScene é chamada
+para iniciar a renderização da cena.
+
+29
+00:02:07.650 --> 00:02:14.169
+Outras funções já definidas nesse
+script são shouldAutoRotate,
+
+30
+00:02:14.169 --> 00:02:18.620
+para definir se o jogo deve auto
+rotacionar quando a tela é virada,
+
+31
+00:02:18.620 --> 00:02:23.855
+SupportedInterfaceOrientations, para
+definir quais orientações são permitidas,
+
+32
+00:02:23.855 --> 00:02:29.090
+por padrão a única orientação não
+permitida é a do iPhone de ponta a cabeça,
+
+33
+00:02:29.090 --> 00:02:33.707
+didRecieveMemoryWarning, para avisar
+quando a memória do aparelho está
+
+34
+00:02:33.707 --> 00:02:37.195
+prestes a ficar cheia,
+e prefersStatusBarHidden,
+
+35
+00:02:37.195 --> 00:02:41.390
+para definir se a barra de status
+deve ficar escondida ou não.
+
+36
+00:02:41.390 --> 00:02:48.570
+Quando clicarmos no GameScene.sks,
+editor de cena é aberto no Xcode.
+
+37
+00:02:48.570 --> 00:02:55.800
+Você pode fazer zoom in,
+
+38
+00:02:55.800 --> 00:03:00.510
+zoom out e mover a cena.
+
+39
+00:03:00.510 --> 00:03:05.156
+Perceba que a biblioteca de objetos
+é diferente da que conhecemos para
+
+40
+00:03:05.156 --> 00:03:06.110
+StoryBoard.
+
+41
+00:03:06.110 --> 00:03:10.580
+Vamos dar uma olhada no código dessa cena.
+
+42
+00:03:10.580 --> 00:03:14.655
+GameScene.swift.
+
+43
+00:03:14.655 --> 00:03:18.730
+A função didMoveToView é chamada
+assim que essa cena aparece.
+
+44
+00:03:18.730 --> 00:03:23.356
+Nesse template, uma Label é criada
+quando a cena aparece e é criado
+
+45
+00:03:23.356 --> 00:03:27.230
+Sprite de uma nave que fica
+girando no lugar onde você tocar.
+
+46
+00:03:27.230 --> 00:03:30.600
+Essa ação foi definida
+na função touchesBegan.
+
+47
+00:03:30.600 --> 00:03:37.050
+Vamos ver com mais detalhes como criar
+labels e Sprites nas próximas aulas.
+
+48
+00:03:37.050 --> 00:03:40.290
+Por fim, há uma função chamada Update,
+
+49
+00:03:40.290 --> 00:03:45.164
+que é chamada em Loop toda vez antes
+de cada frame ser renderizado.
+
+50
+00:03:45.164 --> 00:03:48.157
+É nessa função que pode
+pode fazer os cálculos,
+
+51
+00:03:48.157 --> 00:03:51.580
+atualizar a posição de Sprites
+e cuidar a lógica do seu jogo.
+
+52
+00:03:51.580 --> 00:03:57.020
+Vamos rodar esse projeto exemplo
+no simulador para vê-lo em ação.
+
+53
+00:03:57.020 --> 00:04:03.420
+[SEM_ÁUDIO] Podemos
+
+54
+00:04:03.420 --> 00:04:07.260
+ver aqui o Label criado.
+
+55
+00:04:07.260 --> 00:04:11.180
+O indicador de FPS, o número de GameNodes,
+
+56
+00:04:11.180 --> 00:04:15.470
+e quando você toca na tela,
+Sprite é criado.
+
+57
+00:04:15.470 --> 00:04:20.497
+Perceba que no simulador
+o FPS é baixo mas se
+
+58
+00:04:20.497 --> 00:04:26.230
+você rodar este aplicativo no seu iPhone
+ou iPad, o FPS ficará próximo de 60.
+
+59
+00:04:26.230 --> 00:04:32.319
+Na próxima aula veremos
+pouco mais sobre GameScene.
+
+60
+00:04:32.319 --> 00:04:33.230
+Até lá!

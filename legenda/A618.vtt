@@ -1,0 +1,68 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:03.450
+Every athlete knows that
+you get good by practicing.
+
+2
+00:00:03.450 --> 00:00:08.160
+By repeating the same moves until you get
+really good or until you reach your goal.
+
+3
+00:00:08.160 --> 00:00:09.490
+When I was in high school,
+
+4
+00:00:09.490 --> 00:00:13.190
+I wouldn't leave practice until
+I made ten freethrows in a row.
+
+5
+00:00:13.190 --> 00:00:15.710
+Similarly, when you get
+to a computer program and
+
+6
+00:00:15.710 --> 00:00:19.950
+repeat a command, you can give it
+an exact number of times to repeat.
+
+7
+00:00:19.950 --> 00:00:21.530
+Or you can define a goal and
+
+8
+00:00:21.530 --> 00:00:23.900
+tell it to repeat the command
+until it reaches some goal.
+
+9
+00:00:26.530 --> 00:00:29.570
+In the next example,
+the repeat block is changed.
+
+10
+00:00:29.570 --> 00:00:32.590
+Instead of specifying how many
+times you want it to repeat,
+
+11
+00:00:32.590 --> 00:00:37.020
+you can use the repeat until block to
+tell the angry bird to do the same thing.
+
+12
+00:00:37.020 --> 00:00:40.430
+Until it gets the pig or
+until it crashes into the wall.
+
+13
+00:00:40.430 --> 00:00:43.320
+And again, we can put multiple
+blocks inside the loop and
+
+14
+00:00:43.320 --> 00:00:44.670
+repeat a series of actions.

@@ -1,0 +1,704 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.536
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:08.536 --> 00:00:10.272
+meu nome é Eduardo Guerra.
+
+3
+00:00:10.272 --> 00:00:15.068
+Esse é o Curso de Desenvolvimento
+de Software Guiado por Testes.
+
+4
+00:00:15.068 --> 00:00:21.008
+Hoje vamos falar sobre a situação de
+quando a dependência ainda não existe não
+
+5
+00:00:21.008 --> 00:00:26.354
+é, que é pouquinho sobre o design
+do software utilizando o TDD, está?
+
+6
+00:00:26.354 --> 00:00:31.138
+Então, a gente vai aprender a fazer,
+vamos falar pouquinho aqui,
+
+7
+00:00:31.138 --> 00:00:35.308
+depois a gente vai ver hands on
+para ver pouquinho mais na prática,
+
+8
+00:00:35.308 --> 00:00:38.423
+sobre como você vai fazer o
+TDD numa classe que tem uma
+
+9
+00:00:38.423 --> 00:00:42.949
+dependência e principalmente quando
+essa dependência não existe ainda.
+
+10
+00:00:42.949 --> 00:00:47.089
+Ou seja, eu quero desenvolver uma classe
+que ela depende de outra que não existe
+
+11
+00:00:47.089 --> 00:00:50.670
+ainda, como é que eu faço para
+desenvolver essa classe, certo?
+
+12
+00:00:50.670 --> 00:00:55.409
+Então vamos lá, o caso que
+a gente vai pegar é esse aqui que
+
+13
+00:00:55.409 --> 00:01:00.048
+eu estou representando na figura: a gente
+vai ter que fazer o teste com a classe,
+
+14
+00:01:00.048 --> 00:01:03.333
+a gente já viu como é que faz o
+teste antes da classe existir,
+
+15
+00:01:03.333 --> 00:01:08.159
+só a gente vai desenvolver a classe
+agora antes da dependência dela existir.
+
+16
+00:01:08.159 --> 00:01:09.879
+Então para fazer isso,
+
+17
+00:01:09.879 --> 00:01:15.755
+para ficar uma coisa mais concreta para
+vocês a gente vai pegar exemplo, está?
+
+18
+00:01:15.755 --> 00:01:19.783
+Então imagina que a gente vai
+estar criando uma classe não é,
+
+19
+00:01:19.783 --> 00:01:22.378
+que seria serviço de login, está?
+
+20
+00:01:22.378 --> 00:01:27.184
+E esse serviço de login, não é,
+que tem essa lógica de " eu
+
+21
+00:01:27.184 --> 00:01:31.810
+tenho usuário mas sem eu quero saber quero
+autenticar ele no meu sistema", está?
+
+22
+00:01:31.810 --> 00:01:37.420
+Então essa classe ela precisa
+interagir aí com uma base de dados,
+
+23
+00:01:37.420 --> 00:01:41.796
+não é, que é responsável por fazer
+consultas no banco de dados.
+
+24
+00:01:41.796 --> 00:01:46.295
+Então eu tenho a minha classe que é
+o serviço de login que ela teria essa
+
+25
+00:01:46.295 --> 00:01:49.959
+dependência que é essa classe
+que acessa o banco de dados.
+
+26
+00:01:49.959 --> 00:01:54.461
+A questão é que essa classe que acessa o
+banco de dados ainda não existe no meu
+
+27
+00:01:54.461 --> 00:01:55.739
+sistema, está?
+
+28
+00:01:55.739 --> 00:02:01.742
+Então, ou seja eu tenho que dar jeito de
+fazer o teste sem ela existir ainda, está?
+
+29
+00:02:01.742 --> 00:02:04.101
+Então o que é que a gente vai fazer?
+
+30
+00:02:04.101 --> 00:02:10.333
+A gente vai estar fazendo o TDD não é,
+envolvendo somente aquela classe,
+
+31
+00:02:10.333 --> 00:02:15.541
+não é, somente a classe do serviço de
+login e aí a gente já viu que para
+
+32
+00:02:15.541 --> 00:02:20.597
+fazer isso a gente vai estar
+substituindo o mock aqui por ou mock,
+
+33
+00:02:20.597 --> 00:02:25.308
+a gente vai estar substituindo
+DAO por mock, certo?
+
+34
+00:02:25.308 --> 00:02:32.323
+Então vamos começar a pensar,
+com TDD a gente pensa a partir do teste,
+
+35
+00:02:32.323 --> 00:02:37.660
+então a primeira coisa que a gente
+faria seria "olha eu preciso instanciar
+
+36
+00:02:37.660 --> 00:02:42.496
+a minha classe serviço login,
+não é, então está ali cima.
+
+37
+00:02:42.496 --> 00:02:48.571
+Na segunda linha eu crio o meu mock object
+que eu vou colocar no lugar do DAO,
+
+38
+00:02:48.571 --> 00:02:52.653
+lembrando que aqui eu estou escrevendo
+o teste, nada disso existe ainda,
+
+39
+00:02:52.653 --> 00:02:54.200
+nem a classe nem o mock, está?
+
+40
+00:02:54.200 --> 00:02:59.940
+E aí eu vou e seto esse DAO, não é,
+
+41
+00:02:59.940 --> 00:03:05.734
+eu seto o mock colocando ele no lugar do
+DAO na classe que eu estou desenvolvendo.
+
+42
+00:03:05.734 --> 00:03:11.037
+Então esse é o primeiro passo, é a minha
+forma como a partir do teste falar
+
+43
+00:03:11.037 --> 00:03:16.016
+"olha eu estou criando essa classe, eu
+estou criando aqui mock de uma dependência
+
+44
+00:03:16.016 --> 00:03:20.631
+que vai ser uma dependência dessa classe
+e estou colocando esse mock dentro dela,
+
+45
+00:03:20.631 --> 00:03:25.754
+lembrando que eu poderia por exemplo estar
+colocando a partir de construtor não é,
+
+46
+00:03:25.754 --> 00:03:32.021
+a gente viu as outras formas aí de
+injeção de dependência nas outras aulas.
+
+47
+00:03:32.021 --> 00:03:34.680
+Então o primeiro passo seria esse.
+
+48
+00:03:34.680 --> 00:03:41.359
+O segundo passo é saber qual que
+seria o resultado esperado do teste.
+
+49
+00:03:41.359 --> 00:03:44.050
+No caso aqui, para simplificar,
+
+50
+00:03:44.050 --> 00:03:49.989
+observe que eu coloquei ali assertTrue,
+eu chamando o método login guerra e senha.
+
+51
+00:03:49.989 --> 00:03:53.719
+Vocês acharam que eu ia botar
+a minha senha de verdade ali, não é?
+
+52
+00:03:53.719 --> 00:03:56.928
+Lógico que eu não vou colocar,
+não é, vai ser só senha.
+
+53
+00:03:56.928 --> 00:04:02.611
+Então no caso ali eu espero que
+ele retorne verdadeiro está?
+
+54
+00:04:02.611 --> 00:04:05.136
+Então esse caso de teste, não é,
+
+55
+00:04:05.136 --> 00:04:10.032
+até o nome do método a gente pode
+ver que é loginComSucesso, não é,
+
+56
+00:04:10.032 --> 00:04:14.068
+eu estou falando "olha eu tenho aqui o
+meu serviço de login, eu tenho o mock,
+
+57
+00:04:14.068 --> 00:04:18.225
+coloquei o mock dentro dele, quando
+eu chamar o método login ele tem que,
+
+58
+00:04:18.225 --> 00:04:22.840
+com guerra e senha,
+ele tem que retornar verdadeiro, está?
+
+59
+00:04:22.840 --> 00:04:27.245
+Então, para isso eu
+preciso dizer por exemplo,
+
+60
+00:04:27.245 --> 00:04:32.702
+que eu espero que o meu DAO,
+ou seja o mock que está no lugar do DAO,
+
+61
+00:04:32.702 --> 00:04:38.312
+não é, eu espero que ele receba
+uma chamada com guerra, não é?
+
+62
+00:04:38.312 --> 00:04:43.585
+Então o usuário que eu espero que
+ele receba como parâmetro é guerra.
+
+63
+00:04:43.585 --> 00:04:50.975
+E eu também vou dizer que eu quero que
+ele retorne a senha "senha", está?
+
+64
+00:04:50.975 --> 00:04:55.587
+Então o que é que eu estou falando ali?
+
+65
+00:04:55.587 --> 00:05:00.266
+Olha eu tenho mock no lugar do DAO,
+eu quero que ele,
+
+66
+00:05:00.266 --> 00:05:05.411
+uma chamada de método dele, ele vai
+perguntar "olha qual que é a senha desse
+
+67
+00:05:05.411 --> 00:05:10.559
+usuário e esse usuário que ele vai passar
+tem que ser guerra, e esse método, não é,
+
+68
+00:05:10.559 --> 00:05:16.236
+do DAO que vai estar retornando a senha,
+o valor senha, está?
+
+69
+00:05:16.236 --> 00:05:20.938
+Então nessas duas chamadas eu
+estou configurando como eu
+
+70
+00:05:20.938 --> 00:05:23.250
+quero que o meu mock funcione.
+
+71
+00:05:23.250 --> 00:05:24.663
+está?
+
+72
+00:05:24.663 --> 00:05:29.610
+E aí, por fim, eu vou ali
+
+73
+00:05:29.610 --> 00:05:34.065
+e coloco depois do assert
+o mock.verificarChamadas.
+
+74
+00:05:34.065 --> 00:05:36.450
+O que é que esse cara vai fazer?
+
+75
+00:05:36.450 --> 00:05:41.079
+Ele vai estar verificando
+se a chamada recebida pelo
+
+76
+00:05:41.079 --> 00:05:44.354
+mock foi aquela que eu esperava está?
+
+77
+00:05:44.354 --> 00:05:49.605
+Como eu já disse anteriormente,
+você criar o mock faz parte do teste,
+
+78
+00:05:49.605 --> 00:05:54.041
+então, eu vou para o meu mock, antes de
+começar a criar a classe que eu estou
+
+79
+00:05:54.041 --> 00:05:57.628
+querendo desenvolver eu vou
+lá e vou criar o meu mock.
+
+80
+00:05:57.628 --> 00:06:02.979
+Vocês vão ver no hands on que o,
+a partir ali dos atalhos do Eclipse também
+
+81
+00:06:02.979 --> 00:06:08.671
+facilita bastante eu já ir fazendo esses
+métodos brotar ali na minha classe,
+
+82
+00:06:08.671 --> 00:06:11.621
+na classe que está representando o mock,
+está?
+
+83
+00:06:11.621 --> 00:06:15.661
+Então vamos ver como que seria
+o mock aí para poder criar
+
+84
+00:06:15.661 --> 00:06:19.500
+esse teste que eu estou querendo.
+
+85
+00:06:19.500 --> 00:06:23.763
+Então a primeira coisa do mock é que ele
+
+86
+00:06:23.763 --> 00:06:28.804
+precisa implementar a interface
+e ele precisa obviamente,
+
+87
+00:06:28.804 --> 00:06:32.860
+se ele está implementando a interface
+ter todos os métodos que ela define.
+
+88
+00:06:32.860 --> 00:06:38.770
+No caso ali, a minha interface do DAO
+seria o usuarioDAO e no caso seria,
+
+89
+00:06:38.770 --> 00:06:43.545
+o método que eu preciso,
+seria o método getSenha onde eu
+
+90
+00:06:43.545 --> 00:06:48.660
+passo o usuário e ele me retorna
+a senha desse usuário, está?
+
+91
+00:06:48.660 --> 00:06:53.479
+Uma pequena observação aqui, essa não
+é a forma mais segura de você fazer
+
+92
+00:06:53.479 --> 00:06:56.663
+uma autenticação,
+retornando a senha, certo?
+
+93
+00:06:56.663 --> 00:07:01.875
+A gente usa aí hash e tudo mais, tem monte
+de coisas, está, é realmente só exemplo,
+
+94
+00:07:01.875 --> 00:07:06.077
+não vá fazer dessa forma
+o login do seu sistema.
+
+95
+00:07:06.077 --> 00:07:13.319
+Seguida eu vou adicionar no meu mock todos
+aqueles métodos que eu defini no teste,
+
+96
+00:07:13.319 --> 00:07:17.240
+então esses métodos eles
+são métodos do mock.
+
+97
+00:07:17.240 --> 00:07:22.059
+Note que o método da classe, eu deixei ali
+@Override, não é, para a gente ver que é o
+
+98
+00:07:22.059 --> 00:07:25.622
+método da interface e os outros
+métodos não tem nada, são nada,
+
+99
+00:07:25.622 --> 00:07:27.472
+são métodos específicos do mock,
+
+100
+00:07:27.472 --> 00:07:31.707
+são métodos que eu preciso que o mock
+tenha para poder fazer o meu teste.
+
+101
+00:07:31.707 --> 00:07:36.481
+Então é o usuarioEsperado,
+retornaSenha e verificaChamadas.
+
+102
+00:07:36.481 --> 00:07:41.245
+E agora o que eu preciso fazer é
+implementar a lógica do mock de
+
+103
+00:07:41.245 --> 00:07:45.380
+acordo com o que eu quero que
+ele verifique para mim, está?
+
+104
+00:07:45.380 --> 00:07:46.538
+Então vamos lá.
+
+105
+00:07:46.538 --> 00:07:50.740
+Eu tenho aqui o meu usuarioEsperado,
+não é,
+
+106
+00:07:50.740 --> 00:07:55.886
+que eu configuro e note que eu
+guardo lá cima, então lá cima eu
+
+107
+00:07:55.886 --> 00:08:01.454
+tenho variáveis para guardar o usuário,
+a senha e o usuário esperado.
+
+108
+00:08:01.454 --> 00:08:06.351
+No caso esse usuário é o
+usuário que eu estou recebendo
+
+109
+00:08:06.351 --> 00:08:09.472
+efetivamente no método getSenha.
+
+110
+00:08:09.472 --> 00:08:10.100
+está?
+
+111
+00:08:10.100 --> 00:08:15.552
+Eu tirei o @Override ali só para ficar
+mais curtinho aqui para a gente ver, está?
+
+112
+00:08:15.552 --> 00:08:17.220
+Então o que é que eu faço?
+
+113
+00:08:17.220 --> 00:08:21.518
+No método usuarioEsperado eu
+simplesmente eu vou guardar isso daí.
+
+114
+00:08:21.518 --> 00:08:26.168
+No método retornaSenha eu também vou
+guardar a senha que eu quero que ele
+
+115
+00:08:26.168 --> 00:08:26.917
+retorne.
+
+116
+00:08:26.917 --> 00:08:29.992
+No método getSenha o que
+é que ele vai fazer?
+
+117
+00:08:29.992 --> 00:08:34.491
+Ele vai guardar o usuário que ele receber,
+no caso nessa variável
+
+118
+00:08:34.491 --> 00:08:39.170
+de instância usuário e vai retornar
+a senha que ele tem configurada,
+
+119
+00:08:39.170 --> 00:08:41.882
+que eu configurei pelo
+método retornaSenha.
+
+120
+00:08:41.882 --> 00:08:46.901
+E aí no método verificarChamadas
+ele vai verificar se o usuário
+
+121
+00:08:46.901 --> 00:08:52.510
+que ele recebeu é igual ao
+usuário que ele esperava receber.
+
+122
+00:08:52.510 --> 00:08:58.623
+E aí a gente consegue com
+isso ter teste que executa,
+
+123
+00:08:58.623 --> 00:09:05.450
+ter teste que falha e aí o teste falhando
+é tudo o que a gente precisa do TDD
+
+124
+00:09:05.450 --> 00:09:10.620
+para seguir frente ao desenvolvimento
+e continuar desenvolvendo a classe.
+
+125
+00:09:10.620 --> 00:09:14.605
+Quem quiser aí praticar
+pode pegar esse exemplo aí,
+
+126
+00:09:14.605 --> 00:09:19.990
+fazer o usuário logando com sucesso,
+o usuário falhando, não é?
+
+127
+00:09:19.990 --> 00:09:24.757
+Por exemplo como simular aí
+erro no banco de dados, não é,
+
+128
+00:09:24.757 --> 00:09:28.637
+que não tem a ver com o
+retorno que é dado, certo?
+
+129
+00:09:28.637 --> 00:09:32.770
+Então tudo isso daí você
+continuaria ali o TDD,
+
+130
+00:09:32.770 --> 00:09:37.853
+depois que você fizesse o primeiro
+teste passar, iria acrescentando novos
+
+131
+00:09:37.853 --> 00:09:43.050
+testes todos eles usando ali o mock
+para continuar o desenvolvimento.
+
+132
+00:09:43.050 --> 00:09:48.278
+Bom então é isso, nessa aula a gente
+viu pouquinho como que a gente procede,
+
+133
+00:09:48.278 --> 00:09:50.488
+como é que a gente cria o teste, não é?
+
+134
+00:09:50.488 --> 00:09:55.096
+A gente falou muito sobre o mock object
+nas aulas anteriores mas não falamos
+
+135
+00:09:55.096 --> 00:09:59.904
+muito como o uso dele dentro do TDD,
+como que a gente vai definindo
+
+136
+00:09:59.904 --> 00:10:04.492
+e criando o mock sem nem a dependência
+existir, sem nem a classe existir.
+
+137
+00:10:04.492 --> 00:10:07.729
+Então nessa aula a gente viu
+pouquinho desses passos,
+
+138
+00:10:07.729 --> 00:10:12.396
+como que a gente vai pensando "espera aí,
+para dar esse resultado que eu quero eu
+
+139
+00:10:12.396 --> 00:10:17.476
+preciso que a classe retorne tal coisa" ou
+eu preciso que a chamada, depois eu tenho
+
+140
+00:10:17.476 --> 00:10:22.240
+que verificar se ela receber tal
+parâmetro na chamada dela, não é?
+
+141
+00:10:22.240 --> 00:10:26.441
+Então a gente foi vendo
+como proceder dentro desse
+
+142
+00:10:26.441 --> 00:10:31.308
+raciocínio aí enquanto a gente está
+fazendo o TDD de uma classe que tem uma
+
+143
+00:10:31.308 --> 00:10:35.941
+dependência e a gente está utilizando
+o mock object para definir também
+
+144
+00:10:35.941 --> 00:10:40.470
+quais são os métodos que essa
+dependência vai ter, certo?
+
+145
+00:10:40.470 --> 00:10:47.815
+Muito obrigado por assistir
+e até à próxima aula.
+
+146
+00:10:47.815 --> 00:10:50.550
+[MÚSICA]

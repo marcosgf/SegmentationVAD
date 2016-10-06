@@ -1,0 +1,214 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.870
+[MÚSICA] E aí,
+
+3
+00:00:13.870 --> 00:00:17.760
+pessoal, tudo bem?
+
+4
+00:00:17.760 --> 00:00:22.350
+Nessa aula vamos aprender como lidar
+com vetores e matrizes no SWIFT.
+
+5
+00:00:22.350 --> 00:00:26.519
+O SWIFT facilita bastante a criação
+e manipulação de vetores.
+
+6
+00:00:26.519 --> 00:00:29.343
+Para criar vetor de strings, por exemplo,
+
+7
+00:00:29.343 --> 00:00:33.220
+basta colocar entre colchetes as
+strings separadas por vírgulas.
+
+8
+00:00:33.220 --> 00:00:37.040
+Aqui foi criado vetor com três
+elementos do tipo string.
+
+9
+00:00:37.040 --> 00:00:41.690
+O SWIFT já infere que essa
+constante é vetor de strings.
+
+10
+00:00:41.690 --> 00:00:47.080
+Podemos explicitar o tipo de vetor dessa
+forma: colocando o tipo entre colchetes.
+
+11
+00:00:47.080 --> 00:00:52.160
+Se tentarmos criar vetor vazio, o SWIFT
+não consegue inferir o tipo desse vetor.
+
+12
+00:00:52.160 --> 00:00:54.467
+Então devemos explicitar o tipo.
+
+13
+00:00:54.467 --> 00:00:57.420
+Estamos criando vetor de decimais aqui.
+
+14
+00:00:57.420 --> 00:01:02.421
+Para acessar
+
+15
+00:01:02.421 --> 00:01:06.490
+o elemento do vetor, basta digitar
+o valor da posição entre colchetes.
+
+16
+00:01:06.490 --> 00:01:09.774
+Se tentarmos acessar
+elemento de vetor vazio,
+
+17
+00:01:09.774 --> 00:01:14.367
+ou uma posição de elemento que não existe,
+acontece erro grave.
+
+18
+00:01:14.367 --> 00:01:17.770
+Se esse código estivesse
+rodando em aplicativo,
+
+19
+00:01:17.770 --> 00:01:21.450
+o aplicativo seria fechado repentinamente,
+o que chamamos de crash.
+
+20
+00:01:21.450 --> 00:01:27.930
+Por isso, sempre verifique o tamanho
+do vetor através do comando count.
+
+21
+00:01:27.930 --> 00:01:35.290
+Para adicionar novo elemento no vetor,
+utilize o comando append.
+
+22
+00:01:35.290 --> 00:01:41.230
+Note que apareceu erro, pois declaramos
+esses vetores como constantes.
+
+23
+00:01:41.230 --> 00:01:45.290
+Para poder modificá-los,
+vamos transformá-los em variáveis.
+
+24
+00:01:45.290 --> 00:01:54.928
+[SEM_ÁUDIO] Para atualizar o valor de
+
+25
+00:01:54.928 --> 00:02:00.680
+elemento existente, basta atribuir
+valor ao elemento da posição desejada.
+
+26
+00:02:00.680 --> 00:02:06.849
+Podemos remover elementos através do
+comando removeAtIndex removeAtIndex,
+
+27
+00:02:06.849 --> 00:02:10.940
+passando como argumento a posição
+do elemento que queremos remover.
+
+28
+00:02:10.940 --> 00:02:15.850
+Estamos removendo aqui o primeiro
+elemento, que está na posição 0 do vetor.
+
+29
+00:02:15.850 --> 00:02:19.640
+Vamos ver como utilizar laços em vetores.
+
+30
+00:02:19.640 --> 00:02:24.307
+Podemos fazer da forma clássica,
+criando contador que vai de 0 até o
+
+31
+00:02:24.307 --> 00:02:27.830
+valor da última posição do
+vetor e acessar cada elemento.
+
+32
+00:02:27.830 --> 00:02:31.372
+Ou podemos usar o for in.
+
+33
+00:02:31.372 --> 00:02:35.514
+Este laço atribui o valor da
+string de cada elemento do
+
+34
+00:02:35.514 --> 00:02:37.630
+arrayDeStrings à variável str.
+
+35
+00:02:37.630 --> 00:02:43.415
+[SEM_ÁUDIO] Por fim,
+
+36
+00:02:43.415 --> 00:02:47.350
+vamos ver como criar matrizes no SWIFT.
+
+37
+00:02:47.350 --> 00:02:51.330
+Uma matriz nada mais é
+do que vetor de vetores.
+
+38
+00:02:51.330 --> 00:02:55.914
+Então, basta criar vetor através
+de colchetes e fazer com que cada
+
+39
+00:02:55.914 --> 00:02:58.060
+elemento seja também vetor.
+
+40
+00:02:58.060 --> 00:03:00.493
+Para adicionar uma linha na matriz,
+
+41
+00:03:00.493 --> 00:03:05.210
+basta utilizar o comando append e
+adicionar elemento que é vetor.
+
+42
+00:03:05.210 --> 00:03:09.583
+Para acessar elemento da matriz,
+digite a posição da
+
+43
+00:03:09.583 --> 00:03:13.680
+linha no primeiro colchete e a posição
+da coluna no segundo colchete.
+
+44
+00:03:13.680 --> 00:03:18.290
+Na próxima aula vamos conhecer o conceito
+de optionals introduzido pelo SWIFT.
+
+45
+00:03:18.290 --> 00:03:22.091
+de optionals introduzido pelo SWIFT.
+
+46
+00:03:22.091 --> 00:03:22.900
+Até lá.

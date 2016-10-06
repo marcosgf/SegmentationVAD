@@ -1,0 +1,1022 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.193
+[MÚSICA] Olá!
+
+2
+00:00:08.193 --> 00:00:13.690
+Bem vindo ao curso de
+Orientação a Objetos com Java.
+
+3
+00:00:13.690 --> 00:00:15.759
+Eu sou Clovis Fernandes.
+
+4
+00:00:15.759 --> 00:00:21.116
+O objetivo da aula de hoje é falar
+sobre herança e com dois aspectos:
+
+5
+00:00:21.116 --> 00:00:27.074
+especialização, que olha da classe
+para a subclasse e generalização,
+
+6
+00:00:27.074 --> 00:00:30.972
+que a gente olha da classe
+para a superclasse.
+
+7
+00:00:30.972 --> 00:00:33.700
+Então, é isso que nós vamos fazer hoje.
+
+8
+00:00:33.700 --> 00:00:39.250
+Anteriormente, nós vimos os conceitos
+de generalização e especialização
+
+9
+00:00:39.250 --> 00:00:44.440
+com relação à herança no contexto
+de diagramas de classes com UML.
+
+10
+00:00:44.440 --> 00:00:49.194
+Agora nós iremos expandir esses conceitos,
+mostrar com mais detalhes,
+
+11
+00:00:49.194 --> 00:00:53.310
+caracterizá-los e explicá-los
+com mais detalhes para que vocês
+
+12
+00:00:53.310 --> 00:00:57.400
+possam aplicar quando estiverem
+fazendo os seus programa Java.
+
+13
+00:00:57.400 --> 00:01:02.126
+A ideia aqui é olhar a herança com
+esses dois olhares: olhares da
+
+14
+00:01:02.126 --> 00:01:05.477
+especialização e olhares da generalização,
+
+15
+00:01:05.477 --> 00:01:10.820
+mostrando o quanto isso será bom para
+estruturar melhor o nosso programa.
+
+16
+00:01:10.820 --> 00:01:14.812
+Anteriormente, quando mostramos
+o diagrama de classe,
+
+17
+00:01:14.812 --> 00:01:19.765
+nós mostramos que o triângulo
+vazado é que indica essa relação de
+
+18
+00:01:19.765 --> 00:01:23.862
+uma classe com a outra termos de herança
+
+19
+00:01:23.862 --> 00:01:28.723
+que a subclasse herda da superclasse.
+
+20
+00:01:28.723 --> 00:01:33.430
+A superclasse vai transmitir
+comportamento para a subclasse.
+
+21
+00:01:33.430 --> 00:01:38.090
+A gente usa setas para baixo quando eu
+estou com esse olhar de especialização e
+
+22
+00:01:38.090 --> 00:01:43.250
+a seta para cima quando nós estamos
+com esse olhar da generalização.
+
+23
+00:01:43.250 --> 00:01:46.992
+Nós havíamos mostrado então, também,
+
+24
+00:01:46.992 --> 00:01:52.609
+falado muito rapidamente
+sobre o princípio é-um,
+
+25
+00:01:52.609 --> 00:01:56.352
+que vai olhar da subclasse
+para a superclasse.
+
+26
+00:01:56.352 --> 00:02:01.812
+Então, quando você diz que uma classe
+é a superclasse, nesse sentido nós
+
+27
+00:02:01.812 --> 00:02:07.780
+vamos examinar todos os dois conceitos
+de especialização e generalização.
+
+28
+00:02:07.780 --> 00:02:13.545
+De fato, o conceito é-um,
+ele é muito importante,
+
+29
+00:02:13.545 --> 00:02:17.482
+porque é ele que vai definir,
+com mais precisão,
+
+30
+00:02:17.482 --> 00:02:22.550
+se eu vou especializar corretamente
+ou eu vou generalizar corretamente.
+
+31
+00:02:22.550 --> 00:02:27.920
+Eu sempre vou verificar
+se faz sentido eu dizer
+
+32
+00:02:27.920 --> 00:02:33.338
+tal classe é uma superclasse,
+ou tal classe eu posso,
+
+33
+00:02:33.338 --> 00:02:37.735
+então, especializar duas subclasses.
+
+34
+00:02:37.735 --> 00:02:41.927
+Eu tenho que examinar se o conceito
+é-um vai funcionar ou não.
+
+35
+00:02:41.927 --> 00:02:47.524
+Se não funcionar, não estamos num bom
+caminho de definir essa hierarquia
+
+36
+00:02:47.524 --> 00:02:52.755
+de herança de classes e superclasses,
+classes e subclasses.
+
+37
+00:02:52.755 --> 00:02:57.140
+Vamos começar a examinar,
+para exemplificar, a classe carro.
+
+38
+00:02:57.140 --> 00:03:02.459
+A classe carro, ela tem responsabilidades
+do tipo "sabe" que são a potência
+
+39
+00:03:02.459 --> 00:03:08.000
+do motor e a velocidade,
+e tem responsabilidades do tipo "faz"
+
+40
+00:03:08.000 --> 00:03:12.970
+e no nosso exemplo nós estamos
+mostrando o acelerar e o frear.
+
+41
+00:03:12.970 --> 00:03:14.138
+O quê que acontece?
+
+42
+00:03:14.138 --> 00:03:17.380
+Normalmente, as
+responsabilidades do tipo "faz",
+
+43
+00:03:17.380 --> 00:03:22.530
+elas vão fazer uso internamente na
+lógica dessas responsabilidades
+
+44
+00:03:22.530 --> 00:03:28.326
+das responsabilidades do tipo "sabe",
+então, por exemplo,
+
+45
+00:03:28.326 --> 00:03:33.716
+ao acelerar,
+eu vou levar conta a potência do motor
+
+46
+00:03:33.716 --> 00:03:38.829
+e vou atingir velocidades à
+medida que eu vou acelerando.
+
+47
+00:03:38.829 --> 00:03:42.407
+Ao frear,
+eu vou estar diminuindo a velocidade.
+
+48
+00:03:42.407 --> 00:03:46.510
+Então, como existe essa relação,
+nós vamos dar uma atenção,
+
+49
+00:03:46.510 --> 00:03:50.910
+quando tratarmos de herança,
+principalmente ao comportamento.
+
+50
+00:03:50.910 --> 00:03:52.891
+É o que mais nos interessa.
+
+51
+00:03:52.891 --> 00:03:55.310
+Trabalhar com o comportamento.
+
+52
+00:03:55.310 --> 00:03:58.838
+Ou seja, vamos sempre olhar,
+
+53
+00:03:58.838 --> 00:04:03.880
+caso de estarmos trabalhando com herança,
+com esse olhar do comportamento apenas.
+
+54
+00:04:03.880 --> 00:04:11.780
+É isso que vai nos ajudar a definir
+hierarquias de classes melhores,
+
+55
+00:04:11.780 --> 00:04:16.666
+que eu possa estar usando
+depois todo o potencial
+
+56
+00:04:16.666 --> 00:04:21.320
+de polimorfismo e de reuso e de extensão,
+
+57
+00:04:21.320 --> 00:04:25.510
+que essa hierarquia bem estruturada
+poderá nos proporcionar.
+
+58
+00:04:25.510 --> 00:04:28.551
+Com relação à especialização,
+vamos começar, então,
+
+59
+00:04:28.551 --> 00:04:31.220
+primeiramente falando
+sobre a especialização.
+
+60
+00:04:31.220 --> 00:04:35.550
+A seta para baixo, ou seja, eu estou
+olhando da classe para a subclasse.
+
+61
+00:04:35.550 --> 00:04:37.050
+O quê que acontece?
+
+62
+00:04:37.050 --> 00:04:39.880
+Vamos voltar aos nossos cartões CRC.
+
+63
+00:04:39.880 --> 00:04:45.420
+Eu olho a descrição de cartão e essa
+descrição do cartão, por exemplo,
+
+64
+00:04:45.420 --> 00:04:51.415
+ela é pouco mais geral e eu tenho
+na minha aplicação alguma classe
+
+65
+00:04:51.415 --> 00:04:57.410
+que se relaciona com essa descrição,
+mas ela é pouco mais específica.
+
+66
+00:04:57.410 --> 00:05:02.880
+Então, eu vejo que o relacionamento deles
+é de herança e que eu tenho uma subclasse
+
+67
+00:05:02.880 --> 00:05:10.490
+que especializa, ela é uma coisa que
+está restringindo a superclasse.
+
+68
+00:05:10.490 --> 00:05:14.240
+Então, a gente chama
+isso de especialização.
+
+69
+00:05:14.240 --> 00:05:19.155
+No nosso exemplo aí da classe A,
+nós temos uma classe A com
+
+70
+00:05:19.155 --> 00:05:24.356
+três métodos: método A1,
+método A2 e método
+
+71
+00:05:24.356 --> 00:05:29.570
+A3 e uma subclasse B com
+método B1 e método B2.
+
+72
+00:05:29.570 --> 00:05:35.119
+Vamos expandir a subclasse
+B exemplificando que nós,
+
+73
+00:05:35.119 --> 00:05:40.247
+de fato, dado que os métodos A1,
+A2 e A3 são públicos,
+
+74
+00:05:40.247 --> 00:05:44.750
+eu posso herdar esses
+métodos na subclasse B.
+
+75
+00:05:44.750 --> 00:05:47.188
+O quê que acontece nesse exemplo?
+
+76
+00:05:47.188 --> 00:05:52.296
+O método A1 e o método A2,
+eles podem ser herdados, vão ser herdados.
+
+77
+00:05:52.296 --> 00:05:53.694
+O quê que acontece?
+
+78
+00:05:53.694 --> 00:05:57.643
+O método A3,
+numa suposição que estamos fazendo aqui,
+
+79
+00:05:57.643 --> 00:05:59.841
+ele é sobreposto pelo método B2.
+
+80
+00:05:59.841 --> 00:06:04.610
+Embora os nomes aqui estejam diferentes
+mas, na verdade, é só para exemplificar
+
+81
+00:06:04.610 --> 00:06:09.015
+que é método de B e método de A,
+mas que eles têm, no fundo, o mesmo nome.
+
+82
+00:06:09.015 --> 00:06:11.080
+Então, ocorreu uma sobreposição.
+
+83
+00:06:11.080 --> 00:06:16.403
+Se eu quiser usar na classe B o método A3,
+
+84
+00:06:16.403 --> 00:06:21.520
+aí eu sou obrigado a colocar super.
+
+85
+00:06:21.520 --> 00:06:27.032
+método A3, que isso indica que
+eu posso usar na subclasse
+
+86
+00:06:27.032 --> 00:06:32.014
+B esse método que foi sobreposto,
+senão eu vou ter que usar o método
+
+87
+00:06:32.014 --> 00:06:36.794
+correspondente da classe B, que é o
+que a gente está exemplificando ali.
+
+88
+00:06:36.794 --> 00:06:41.310
+Com relação à herança com esse olhar
+da especialização, de cima para baixo,
+
+89
+00:06:41.310 --> 00:06:44.907
+nós temos duas maneiras que nós
+podemos encarar esse olhar,
+
+90
+00:06:44.907 --> 00:06:50.678
+do que a gente chama de expansão, uma
+classe como, por exemplo, a classe animal,
+
+91
+00:06:50.678 --> 00:06:54.990
+que você tem, nesse nosso exemplo,
+2 responsabilidades,
+
+92
+00:06:54.990 --> 00:07:01.079
+a sua subclasse mamífero, que tem
+mais uma responsabilidade adicional,
+
+93
+00:07:01.079 --> 00:07:06.988
+então, ela herda as duas responsabilidades
+da classe animal e tem uma classe a mais.
+
+94
+00:07:06.988 --> 00:07:10.830
+Então, há uma expansão,
+eu passo a ter nesse exemplo,
+
+95
+00:07:10.830 --> 00:07:15.225
+é como se eu tivesse 2
+responsabilidades na
+
+96
+00:07:15.225 --> 00:07:20.220
+classe animal e 3 responsabilidades
+na classe mamífero.
+
+97
+00:07:20.220 --> 00:07:23.350
+E depois, eu tenho as classes cão e gato,
+
+98
+00:07:23.350 --> 00:07:26.837
+cada uma com as suas
+responsabilidades específicas.
+
+99
+00:07:26.837 --> 00:07:32.148
+Elas herdam de animal, de mamífero e
+têm a sua responsabilidade específica,
+
+100
+00:07:32.148 --> 00:07:35.515
+então, ela passa a ter
+4 responsabilidades.
+
+101
+00:07:35.515 --> 00:07:39.305
+O gato, a mesma coisa,
+ela passa a ter 4 responsabilidades.
+
+102
+00:07:39.305 --> 00:07:42.750
+Então, é essa expansão que
+a gente está querendo dizer,
+
+103
+00:07:42.750 --> 00:07:46.925
+é que o número de responsabilidades
+à medida que eu vou especializando
+
+104
+00:07:46.925 --> 00:07:51.993
+superclasses para subclasses, o número
+das responsabilidades vão aumentando.
+
+105
+00:07:51.993 --> 00:07:53.750
+Qual a consequência disso?
+
+106
+00:07:53.750 --> 00:07:58.250
+Tem a ver com a outra maneira de
+a gente olhar, que é com relação à
+
+107
+00:07:58.250 --> 00:08:03.384
+abrangência dos objetos para cada classe,
+ou seja,
+
+108
+00:08:03.384 --> 00:08:09.648
+essa classe está no topo animal, ela tem
+uma abrangência maior, ela é mais geral.
+
+109
+00:08:09.648 --> 00:08:12.711
+Eu posso abrigar sobre
+ela objetos de todo tipo,
+
+110
+00:08:12.711 --> 00:08:17.850
+mamíferos de todo tipo e não só mamíferos,
+outros tipos de animais, né,
+
+111
+00:08:17.850 --> 00:08:22.983
+répteis, aves e insetos,
+outros tipos de animais eu posso abrigar.
+
+112
+00:08:22.983 --> 00:08:27.822
+Já quando eu uso como mamífero,
+ela é mais restrita do que animal e depois
+
+113
+00:08:27.822 --> 00:08:32.719
+quando eu trabalho com as subclasses,
+eu estou exemplificando de cão e gato,
+
+114
+00:08:32.719 --> 00:08:37.347
+elas são mais restritas ainda
+relação a animal porque eu tenho
+
+115
+00:08:37.347 --> 00:08:42.385
+outros tipos de animais carnívoros
+e outros tipos de mamíferos, né.
+
+116
+00:08:42.385 --> 00:08:47.761
+Eu tenho outros tipos de mamíferos,
+eu tenho zebra,
+
+117
+00:08:47.761 --> 00:08:54.034
+eu tenho outros tipos de animais
+que não são só cão e gato,
+
+118
+00:08:54.034 --> 00:08:58.488
+zebra, elefante e assim por diante,
+então outros tipos.
+
+119
+00:08:58.488 --> 00:09:00.132
+Então, ele é mais restrito.
+
+120
+00:09:00.132 --> 00:09:03.200
+A gente diz de uma maneira geral
+que ele é mais especializado.
+
+121
+00:09:03.200 --> 00:09:08.672
+Então, nós temos no topo da hierarquia
+o significado é mais geral,
+
+122
+00:09:08.672 --> 00:09:13.411
+mais abstrato e na base da hierarquia
+
+123
+00:09:13.411 --> 00:09:18.570
+ele é mais concreto,
+ele é mais especializado, mais restrito.
+
+124
+00:09:18.570 --> 00:09:22.400
+Agora vamos olhar o relacionamento é-um.
+
+125
+00:09:22.400 --> 00:09:27.440
+Relacionamento é-um,
+ele é usado para você realmente
+
+126
+00:09:27.440 --> 00:09:32.315
+confirmar se uma dada
+subclasse realmente faz
+
+127
+00:09:32.315 --> 00:09:36.060
+sentido ser colocada como uma
+subclasse de uma outra classe.
+
+128
+00:09:36.060 --> 00:09:41.763
+No caso aqui nós temos, por exemplo,
+pela numeração 1, que gato é mamífero.
+
+129
+00:09:41.763 --> 00:09:43.650
+Faz sentido isso?
+
+130
+00:09:43.650 --> 00:09:45.743
+Faz!
+Gato é mamífero.
+
+131
+00:09:45.743 --> 00:09:51.080
+No número 2 mamífero,
+eu estou dizendo que mamífero é animal.
+
+132
+00:09:51.080 --> 00:09:52.472
+Faz sentido isso?
+
+133
+00:09:52.472 --> 00:09:53.429
+Também faz.
+
+134
+00:09:53.429 --> 00:09:57.186
+Então, essa hierarquia está,
+vamos dizer assim,
+
+135
+00:09:57.186 --> 00:10:00.490
+sendo confirmada pelo relacionamento é-um.
+
+136
+00:10:00.490 --> 00:10:08.120
+vale também para o cachorro, cachorro é
+mamífero e mamífero é animal, obviamente.
+
+137
+00:10:08.120 --> 00:10:10.185
+O que que tem relação a isso?
+
+138
+00:10:10.185 --> 00:10:12.333
+É o aspecto da transitividade.
+
+139
+00:10:12.333 --> 00:10:17.490
+Como nós estamos vendo pelo número 3,
+se gato é mamífero,
+
+140
+00:10:17.490 --> 00:10:24.820
+mamífero é animal, então, gato,
+faz sentido gato ser animal?
+
+141
+00:10:24.820 --> 00:10:27.979
+Faz, então essa transitividade funciona.
+
+142
+00:10:27.979 --> 00:10:32.731
+Isso vai ser importante porque,
+se eu faço uma boa hierarquia,
+
+143
+00:10:32.731 --> 00:10:37.640
+nós vamos ter uso muito mais
+adequado do polimorfismo,
+
+144
+00:10:37.640 --> 00:10:40.981
+que estamos tratando outras aulas.
+
+145
+00:10:40.981 --> 00:10:46.153
+Vocês percebam aqui,
+que agora eu estou com olhar,
+
+146
+00:10:46.153 --> 00:10:51.330
+da classe para a superclasse, por isso
+que a gente está usando a seta para cima.
+
+147
+00:10:51.330 --> 00:10:55.929
+Agora vamos falar do outro olhar, até
+agora estávamos falando da especialização,
+
+148
+00:10:55.929 --> 00:11:00.309
+de cima para baixo, depois começamos
+a falar do relacionamento,
+
+149
+00:11:00.309 --> 00:11:04.494
+que vai confirmar,
+se faz sentido essa hierarquia de herança,
+
+150
+00:11:04.494 --> 00:11:08.921
+que era o relacionamento é-um,
+que é de baixo para cima, está certo?
+
+151
+00:11:08.921 --> 00:11:12.200
+Agora vamos falar sobre a generalização.
+
+152
+00:11:12.200 --> 00:11:16.540
+A especialização,
+nós vamos criando subclasses,
+
+153
+00:11:16.540 --> 00:11:20.670
+a generalização,
+nós vamos criando superclasses.
+
+154
+00:11:20.670 --> 00:11:24.860
+Então, ela é o oposto da especialização,
+
+155
+00:11:24.860 --> 00:11:29.330
+a seta é para cima nessa caso, nós estamos
+olhando da classe para a superclasse.
+
+156
+00:11:29.330 --> 00:11:32.124
+Como é que nós vamos fazer
+então a generalização?
+
+157
+00:11:32.124 --> 00:11:35.994
+Não é de qualquer jeito,
+nós vamos voltar aquilo que nós falamos,
+
+158
+00:11:35.994 --> 00:11:38.790
+nós vamos sempre olhar
+para o comportamento.
+
+159
+00:11:38.790 --> 00:11:42.456
+Então eu vou criar uma classe que faça
+
+160
+00:11:42.456 --> 00:11:46.945
+sentido com relação as
+descrições das subclasses.
+
+161
+00:11:46.945 --> 00:11:51.889
+Eu vou olhar sempre com base no
+comportamento e o comportamento eu olho
+
+162
+00:11:51.889 --> 00:11:56.400
+de duas maneiras: vendo a descrição da
+classe e as suas responsabilidades.
+
+163
+00:11:56.400 --> 00:12:00.998
+Ao criar a superclasse,
+as classes existentes se tornam
+
+164
+00:12:00.998 --> 00:12:06.120
+subclasses dessa superclasse,
+além disso, as responsabilidades
+
+165
+00:12:06.120 --> 00:12:10.980
+que são comuns às classes,
+elas são transferidas para a superclasse.
+
+166
+00:12:10.980 --> 00:12:15.090
+Então a gente transfere para a
+superclasse, essas classes que são comuns.
+
+167
+00:12:15.090 --> 00:12:17.359
+Esse processo de generalização,
+
+168
+00:12:17.359 --> 00:12:23.166
+nós vamos exemplificar com duas classes:
+a Item de Venda e a Item de Compra.
+
+169
+00:12:23.166 --> 00:12:27.845
+Percebam que existem duas
+responsabilidades que são comuns nas duas
+
+170
+00:12:27.845 --> 00:12:33.078
+classes, as duas responsabilidades comuns
+são: Atualizar Estoque e Totalizar.
+
+171
+00:12:33.078 --> 00:12:38.740
+Nós devemos olhar mais para saber se
+podemos fazer a generalização ou não.
+
+172
+00:12:38.740 --> 00:12:44.394
+Então, primeira coisa nós já fizemos,
+identificamos as responsabilidades comuns,
+
+173
+00:12:44.394 --> 00:12:47.116
+isso é suficiente para
+fazer a generalização?
+
+174
+00:12:47.116 --> 00:12:49.640
+Não, nós temos que olhar mais duas coisas.
+
+175
+00:12:49.640 --> 00:12:57.250
+Uma, se as descrições são análogas e outra
+se o relacionamento é-um vai funcionar.
+
+176
+00:12:57.250 --> 00:13:00.387
+Por que, que a gente tem que olhar
+se as descrições são análogas?
+
+177
+00:13:00.387 --> 00:13:05.670
+Eu posso ter classes que o nome
+fantasia da responsabilidade é o mesmo,
+
+178
+00:13:05.670 --> 00:13:10.820
+mas as classes não tem nada a ver uma com
+a outra, então eu não posso generalizar,
+
+179
+00:13:10.820 --> 00:13:15.039
+eu não posso criar uma superclasse
+com duas coisas diferentes,
+
+180
+00:13:15.039 --> 00:13:18.330
+eu tenho que respeitar as descrições,
+os tipos,
+
+181
+00:13:18.330 --> 00:13:22.167
+e o comportamento vai ser
+levado conta relação à isso.
+
+182
+00:13:22.167 --> 00:13:27.100
+No nosso caso aí no exemplo,
+nós temos Item de Venda e Item de Compra,
+
+183
+00:13:27.100 --> 00:13:32.160
+na descrição de cada uma delas
+se refere a mercadorias,
+
+184
+00:13:32.160 --> 00:13:34.814
+uma é mercadorias que estão à venda,
+
+185
+00:13:34.814 --> 00:13:39.709
+mercadorias que são compradas,
+então elas têm muito comum a isso.
+
+186
+00:13:39.709 --> 00:13:41.314
+O que é que eu vou fazer?
+
+187
+00:13:41.314 --> 00:13:45.917
+Vou criar uma superclasse chamada
+Mercadoria e é isso que eu vou
+
+188
+00:13:45.917 --> 00:13:47.559
+mostrar para vocês.
+
+189
+00:13:47.559 --> 00:13:52.289
+A superclasse Mercadoria está aí,
+o que que eu faço seguida?
+
+190
+00:13:52.289 --> 00:13:56.843
+Transfiro os métodos,
+as responsabilidades ou métodos que eram
+
+191
+00:13:56.843 --> 00:14:01.092
+comuns da subclasse,
+para a superclasse, foi o que eu fiz,
+
+192
+00:14:01.092 --> 00:14:05.528
+e confirmo através da verificação
+do relacionamento é-um.
+
+193
+00:14:05.528 --> 00:14:08.909
+Faz sentido Item de
+Venda é uma mercadoria?
+
+194
+00:14:08.909 --> 00:14:10.575
+Opa!
+Faz sentido.
+
+195
+00:14:10.575 --> 00:14:15.811
+Item de Compra, faz sentido,
+Item de Compra é uma mercadoria?
+
+196
+00:14:15.811 --> 00:14:17.535
+Também faz sentido!
+
+197
+00:14:17.535 --> 00:14:22.540
+Então com isso, essa hierarquia
+que nós criamos, que nós criamos,
+
+198
+00:14:22.540 --> 00:14:27.730
+que nós generalizamos uma classe
+com base nas duas classes,
+
+199
+00:14:27.730 --> 00:14:30.780
+está ok, foi bem feito.
+
+200
+00:14:30.780 --> 00:14:36.770
+Resumindo, se eu quero generalizar,
+ou com cartões CRC ou com classes Java,
+
+201
+00:14:36.770 --> 00:14:41.621
+essas três condições têm que
+ser respeitadas: eu tenho
+
+202
+00:14:41.621 --> 00:14:46.270
+que ter responsabilidades comuns,
+mas só isso não é suficiente,
+
+203
+00:14:46.270 --> 00:14:49.876
+as descrições têm que ser análogas,
+
+204
+00:14:49.876 --> 00:14:54.897
+das classes e o relacionamento
+é-um tem que ser respeitado.
+
+205
+00:14:54.897 --> 00:15:00.755
+Então essas três condições é que devem ser
+satisfeitas para que eu possa garantir
+
+206
+00:15:00.755 --> 00:15:06.344
+que eu estou fazendo uma hierarquia de
+classes, de herança saudável, adequada.
+
+207
+00:15:06.344 --> 00:15:11.960
+Na aula de hoje nós completamos,
+mostramos para vocês que herança
+
+208
+00:15:11.960 --> 00:15:17.242
+pode ser vista de duas maneiras,
+com esses dois olhares: a especialização,
+
+209
+00:15:17.242 --> 00:15:21.472
+é de cima para baixo, da classe para
+a subclasse e de baixo para cima,
+
+210
+00:15:21.472 --> 00:15:25.760
+que é a generalização,
+nós olhamos da classe para a superclasse.
+
+211
+00:15:25.760 --> 00:15:27.768
+E o que amarra tudo isso?
+
+212
+00:15:27.768 --> 00:15:29.975
+É o relacionamento é-um.
+
+213
+00:15:29.975 --> 00:15:33.297
+Obrigado.
+
+214
+00:15:33.297 --> 00:15:36.620
+[MÚSICA]

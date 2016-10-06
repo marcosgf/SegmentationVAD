@@ -1,0 +1,244 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.681
+Olá, neste vídeo você verá
+que há uma relação entre
+
+2
+00:00:04.681 --> 00:00:08.901
+a margem de fase do sistema malha
+aberta e o sobressinal malha fechada.
+
+3
+00:00:08.901 --> 00:00:14.060
+Particular, você verá que para
+sistema de segunda ordem do tipo 1,
+
+4
+00:00:14.060 --> 00:00:18.390
+o fator de amortecimento ξ está
+relacionado à margem de fase PM.
+
+5
+00:00:18.390 --> 00:00:23.641
+A função de transferência
+desse sistema será dada por
+
+6
+00:00:23.641 --> 00:00:29.840
+G(s)= ωn² / s(s+2ξωn)
+
+7
+00:00:29.840 --> 00:00:34.120
+com ξ entre 0 e 1.
+
+8
+00:00:34.120 --> 00:00:38.400
+Você já viu o diagrama de Bode para esse
+tipo de sistema no vídeo 7 dessa semana.
+
+9
+00:00:38.400 --> 00:00:45.350
+Ao lado, ele pode ser revisto para
+valores de ωn = 1 rad/s e ξ = 0,5.
+
+10
+00:00:45.350 --> 00:00:49.545
+Nesses diagramas,
+
+11
+00:00:49.545 --> 00:00:53.740
+você pode ver que ωc = 0,8 rad/s.
+
+12
+00:00:53.740 --> 00:00:56.960
+E a margem de fase é de cerca de 50º.
+
+13
+00:00:56.960 --> 00:01:01.930
+Vamos olhar a resposta para o sistema
+malha fechada com realimentação unitária,
+
+14
+00:01:01.930 --> 00:01:04.240
+conforme o diagrama de blocos ao lado.
+
+15
+00:01:04.240 --> 00:01:09.344
+Para uma entrada degrau unitário,
+o que vemos é que o sobressinal é de cerca
+
+16
+00:01:09.344 --> 00:01:14.510
+de 16%, isso condiz com o
+fator de amortecimento de 0,5.
+
+17
+00:01:14.510 --> 00:01:18.045
+Lembre-se que Mp, que é o sobressinal,
+
+18
+00:01:18.045 --> 00:01:23.436
+é igual a e elevado a -π ξ / √1- ξ² que,
+
+19
+00:01:23.436 --> 00:01:27.280
+no nosso caso,
+vai dar aproximadamente 0,16.
+
+20
+00:01:27.280 --> 00:01:32.590
+Agora o que acontece para G2(s) = 3G(s)?
+
+21
+00:01:32.590 --> 00:01:36.435
+O diagrama de Bode da
+amplitude é deslocado de
+
+22
+00:01:36.435 --> 00:01:39.874
+20log(3) que é igual a 9,5 dB para cima.
+
+23
+00:01:39.874 --> 00:01:45.954
+Assim, a nova frequência de cruzamento do
+0, será aquela que antes cruzava -9,5dB.
+
+24
+00:01:45.954 --> 00:01:50.630
+Nesse caso, a nova margem de fase
+será de aproximadamente 30°,
+
+25
+00:01:50.630 --> 00:01:52.483
+como no diagrama ao lado.
+
+26
+00:01:52.483 --> 00:01:57.380
+Verificando o que acontece com
+a resposta no tempo malha fechada,
+
+27
+00:01:57.380 --> 00:02:02.300
+nota-se que, na figura ao lado,
+o sobressinal aumenta para cerca de 38%.
+
+28
+00:02:02.300 --> 00:02:06.670
+Isso está condizente com o
+fator de amortecimento de 0,3.
+
+29
+00:02:06.670 --> 00:02:13.410
+Mp=-0,3π / √0,91,
+que dá aproximadamente 0,37.
+
+30
+00:02:13.410 --> 00:02:17.430
+Parece que podemos enxergar uma
+relação entre a margem de fase
+
+31
+00:02:17.430 --> 00:02:21.090
+malha aberta e o fator de
+amortecimento malha fechada.
+
+32
+00:02:21.090 --> 00:02:26.080
+Essa relação exata pode ser
+matematicamente determinada como
+
+33
+00:02:26.080 --> 00:02:31.070
+PM=arctan (2ξ /
+
+34
+00:02:31.070 --> 00:02:39.300
+√(√(1+4ξ²- 2ξ²)) que a margem
+de fase é dada graus.
+
+35
+00:02:39.300 --> 00:02:44.245
+Desenhando gráfico da margem de fase
+versus o valor do fator de amortecimento,
+
+36
+00:02:44.245 --> 00:02:45.610
+temos o gráfico ao lado.
+
+37
+00:02:45.610 --> 00:02:50.370
+Você pode ver nessa figura,
+que a fórmula utilizada pode ser bem
+
+38
+00:02:50.370 --> 00:02:55.130
+aproximada por uma reta até o
+fator de amortecimento de 0,65,
+
+39
+00:02:55.130 --> 00:02:59.685
+quando o erro é de 5º na margem de fase.
+
+40
+00:02:59.685 --> 00:03:00.933
+Assim, usando uma reta,
+
+41
+00:03:00.933 --> 00:03:04.240
+tem-se uma aporoximação bem simples
+para a margem de fase graus.
+
+42
+00:03:04.240 --> 00:03:11.580
+PM ≈ 100ξ Isso condiz com os dois
+resultados vistos nesse vídeo.
+
+43
+00:03:11.580 --> 00:03:16.165
+Quando a margem de fase foi de 50º,
+o fator de amortecimento foi de
+
+44
+00:03:16.165 --> 00:03:21.197
+50/100 = 0,5,
+resultando sobressinal de 16%.
+
+45
+00:03:21.197 --> 00:03:23.912
+Ao reduzir a margem de fase para 30º,
+
+46
+00:03:23.912 --> 00:03:29.870
+o fator de amortecimento resultante
+foi de cerca de 30/100 = 0,3,
+
+47
+00:03:29.870 --> 00:03:34.600
+o que, por sua vez,
+implicou sobressinal de cerca de 37%.
+
+48
+00:03:34.600 --> 00:03:39.642
+Agora, você já sabe relacionar
+a margem de fase de malha
+
+49
+00:03:39.642 --> 00:03:44.370
+aberta com o sobressinal malha fechada
+para sistema de segunda ordem do tipo 1,
+
+50
+00:03:44.370 --> 00:03:45.990
+com realimentação unitária.
+
+51
+00:03:45.990 --> 00:03:50.535
+No próximo vídeo, você vai aprender
+a usar essa relação para projetar
+
+52
+00:03:50.535 --> 00:03:55.080
+ganho proporcional a fim de
+atender requisito de sobressinal.

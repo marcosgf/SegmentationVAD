@@ -1,0 +1,97 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.026
+[MÚSICA] [SEM
+
+2
+00:00:08.026 --> 00:00:11.803
+ÁUDIO] Olá,
+
+3
+00:00:11.803 --> 00:00:16.830
+agora que nós já sabemos o que
+é uma análise de clusters,
+
+4
+00:00:16.830 --> 00:00:22.977
+como medir a distância Euclidiana entre
+2 pontos, como fazer os agrupamentos,
+
+5
+00:00:22.977 --> 00:00:28.632
+os métodos, nós estamos em condições de
+começar a fazer uma aplicação prática.
+
+6
+00:00:28.632 --> 00:00:33.400
+Mas para que essa aplicação prática seja
+mais rica e que você entenda melhor,
+
+7
+00:00:33.400 --> 00:00:39.190
+eu gostaria de pedir que assistisse
+2 comerciais de 30 segundos,
+
+8
+00:00:39.190 --> 00:00:45.489
+de uma empresa que fez propaganda
+na televisão de pasta de dentes.
+
+9
+00:00:45.489 --> 00:00:51.018
+Você vai ver que essa empresa usou,
+embora seja a mesma categoria
+
+10
+00:00:51.018 --> 00:00:56.093
+pasta de dentes,
+atributos diferentes e até mesmo a marca.
+
+11
+00:00:56.093 --> 00:01:01.440
+Assista aos 2 comerciais e
+procure responder 3 perguntas:
+
+12
+00:01:01.440 --> 00:01:06.560
+Em se tratando de produtos em uma mesma
+categoria, o que leva uma empresa
+
+13
+00:01:06.560 --> 00:01:11.680
+a utilizar atributos, características
+e até mesmo marcas diferentes?
+
+14
+00:01:11.680 --> 00:01:16.637
+Segundo, como você
+imagina que esta empresa
+
+15
+00:01:16.637 --> 00:01:21.129
+chegou à conclusão que devia usar essas
+coisas nesses comerciais, como é que ela
+
+16
+00:01:21.129 --> 00:01:26.702
+chegou à conclusão que ela deveria
+fazer estes posicionamentos diferentes?
+
+17
+00:01:26.702 --> 00:01:31.443
+E terceira, que tipo de implicações
+estas diferenças têm nas decisões de
+
+18
+00:01:31.443 --> 00:01:33.040
+marketing dessa empresa?
+
+19
+00:01:33.040 --> 00:01:41.100
+Assista aos 2 comerciais e depois nós
+vamos partir para uma aplicação prática.
+
+20
+00:01:41.100 --> 00:01:46.050
+[SEM ÁUDIO]

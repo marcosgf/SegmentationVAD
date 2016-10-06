@@ -1,0 +1,378 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.630
+[MÚSICA] E
+
+2
+00:00:04.630 --> 00:00:09.440
+aí pessoal, tudo bem?
+
+3
+00:00:09.440 --> 00:00:12.329
+Para adicionar o Game Center
+no seu jogo ou aplicativo,
+
+4
+00:00:12.329 --> 00:00:17.181
+você já deve ter se associado ao programa
+de desenvolvedores Apple que custa 99
+
+5
+00:00:17.181 --> 00:00:21.260
+dólares por ano e te permite
+publicar aplicativos na App Store.
+
+6
+00:00:21.260 --> 00:00:24.622
+Se quiser saber pouco mais
+sobre como se tornar membro,
+
+7
+00:00:24.622 --> 00:00:27.960
+assista ao módulo S do curso 3 desse
+programa de cursos integrados,
+
+8
+00:00:27.960 --> 00:00:29.759
+o link está no material de apoio.
+
+9
+00:00:29.759 --> 00:00:34.452
+Para conseguirmos utilizar o Game Center
+em nosso aplicativo nós devemos configurar
+
+10
+00:00:34.452 --> 00:00:38.270
+as informações de leaderboards e
+achievements no iTunes Connect.
+
+11
+00:00:38.270 --> 00:00:42.180
+A primeira coisa que devemos
+fazer é criar app ID novo.
+
+12
+00:00:42.180 --> 00:00:49.340
+Acesse o site developer.apple.com
+e clique em Member Center.
+
+13
+00:00:49.340 --> 00:00:54.270
+Faça login na sua conta de desenvolvedor.
+
+14
+00:00:54.270 --> 00:00:59.210
+Clique em Certificates,
+Identifiers & Profiles.
+
+15
+00:00:59.210 --> 00:01:05.270
+Vamos criar identificador para novo
+aplicativo, clique em Identifiers.
+
+16
+00:01:05.270 --> 00:01:09.810
+Clique em App IDs e no botão mais.
+
+17
+00:01:09.810 --> 00:01:15.876
+[SEM ÁUDIO] Escolha
+
+18
+00:01:15.876 --> 00:01:20.290
+nome de projeto,
+vamos colocar aqui Teste Game Center.
+
+19
+00:01:20.290 --> 00:01:27.470
+Crie a sua própria Bundle Id,
+ela deve ser única.
+
+20
+00:01:27.470 --> 00:01:32.680
+Clique em Continue,
+
+21
+00:01:32.680 --> 00:01:40.100
+Submit e Done.
+
+22
+00:01:40.100 --> 00:01:43.330
+Vamos agora voltar para o Member Center.
+
+23
+00:01:43.330 --> 00:01:48.800
+Clique em iTunes Connect.
+
+24
+00:01:48.800 --> 00:01:52.430
+Faça o login novamente na
+sua conta de desenvolvedor.
+
+25
+00:01:52.430 --> 00:02:00.310
+Clique em Meus Apps e vamos
+criar novo aplicativo de iOS.
+
+26
+00:02:00.310 --> 00:02:07.020
+Escolha nome para o projeto,
+
+27
+00:02:07.020 --> 00:02:12.470
+o idioma principal,
+
+28
+00:02:12.470 --> 00:02:16.490
+o ID do pacote que acabamos de criar,
+
+29
+00:02:16.490 --> 00:02:21.000
+o número de versão e identificador único.
+
+30
+00:02:21.000 --> 00:02:26.198
+Com o aplicativo criado clique em
+
+31
+00:02:26.198 --> 00:02:31.990
+Game Center, ative para jogo individual,
+
+32
+00:02:31.990 --> 00:02:37.581
+aqui você pode adicionar quantas
+leaderboards e achievements desejar
+
+33
+00:02:37.581 --> 00:02:42.170
+e configurar cada uma delas de acordo
+com o sistema de pontuação do seu jogo.
+
+34
+00:02:42.170 --> 00:02:45.383
+Para esse exemplo vamos
+criar uma leaderboard de
+
+35
+00:02:45.383 --> 00:02:47.820
+maior pontuação e duas conquistas.
+
+36
+00:02:47.820 --> 00:02:52.250
+Para adicionar uma leaderboard
+clique em classificação individual
+
+37
+00:02:52.250 --> 00:02:57.469
+[SEM SOM] e dê nome
+
+38
+00:02:57.469 --> 00:03:03.209
+para a sua classificação,
+vamos chamar de pontos.
+
+39
+00:03:03.209 --> 00:03:10.450
+Escolha ID de classificação,
+este ID também deve ser único,
+
+40
+00:03:10.450 --> 00:03:16.390
+o tipo de formato de pontuação,
+vamos escolher o tipo inteiro.
+
+41
+00:03:16.390 --> 00:03:19.265
+Escolha a melhor pontuação,
+
+42
+00:03:19.265 --> 00:03:24.210
+ordem decrescente e
+intervalo de 0 a 10000.
+
+43
+00:03:24.210 --> 00:03:31.430
+Adicione idioma,
+
+44
+00:03:31.430 --> 00:03:38.640
+escolha Português e vamos dar
+nome para a nossa leaderboard.
+
+45
+00:03:38.640 --> 00:03:43.636
+Vamos escolher o formato
+por divisão de pontos e o
+
+46
+00:03:43.636 --> 00:03:47.940
+sufixo vamos colocar como pontos.
+
+47
+00:03:47.940 --> 00:03:50.022
+A imagem é opcional.
+
+48
+00:03:50.022 --> 00:03:53.270
+Clique em Save e Save novamente.
+
+49
+00:03:53.270 --> 00:03:56.800
+Vamos agora criar conquistas.
+
+50
+00:03:56.800 --> 00:04:00.670
+Clique em Adicionar conquista,
+
+51
+00:04:00.670 --> 00:04:05.643
+dê nome de referência para
+
+52
+00:04:05.643 --> 00:04:11.945
+a conquista e ID para a sua conquista.
+
+53
+00:04:11.945 --> 00:04:15.571
+Podemos escolher quantos pontos o jogador
+vai ganhar quando ele conseguir essa
+
+54
+00:04:15.571 --> 00:04:18.195
+conquista, coloque 10.
+
+55
+00:04:18.195 --> 00:04:22.250
+Oculta colocaremos como não.
+
+56
+00:04:22.250 --> 00:04:25.106
+e Alcançável mais de uma vez não.
+
+57
+00:04:25.106 --> 00:04:27.350
+Vamos adicionar idioma.
+
+58
+00:04:27.350 --> 00:04:29.806
+Escolha o idioma desejado.
+
+59
+00:04:29.806 --> 00:04:34.159
+Título para a sua conquista, [SEM
+
+60
+00:04:34.159 --> 00:04:39.967
+ÁUDIO] uma descrição do recebimento dessa
+
+61
+00:04:39.967 --> 00:04:45.080
+conquista e uma descrição depois
+do recebimento da conquista.
+
+62
+00:04:45.080 --> 00:04:48.790
+Neste caso a imagem é obrigatória.
+
+63
+00:04:48.790 --> 00:04:51.810
+Vamos escolher uma
+imagem para a conquista.
+
+64
+00:04:51.810 --> 00:04:56.910
+A imagem deve ter 512x512 pixeis.
+
+65
+00:04:56.910 --> 00:05:00.080
+Clique em Save e Save novamente.
+
+66
+00:05:00.080 --> 00:05:09.066
+[SEM ÁUDIO] Adicione
+
+67
+00:05:09.066 --> 00:05:14.678
+uma nova conquista Escolha
+
+68
+00:05:14.678 --> 00:05:18.910
+nome de referência, o ID da conquista,
+
+69
+00:05:18.910 --> 00:05:25.530
+novamente os pontos,
+
+70
+00:05:25.530 --> 00:05:30.920
+oculta não e adicione idioma.
+
+71
+00:05:30.920 --> 00:05:37.610
+Escolha o título,
+a descrição antes do recebimento,
+
+72
+00:05:37.610 --> 00:05:42.473
+a descrição depois do recebimento
+e escolha uma imagem.
+
+73
+00:05:42.473 --> 00:05:45.780
+Vamos escolher aqui a mesma imagem.
+
+74
+00:05:45.780 --> 00:05:51.760
+Clique em Save e Save novamente.
+
+75
+00:05:51.760 --> 00:05:56.158
+Com isso acabamos de criar uma
+leaderboard chamada pontos
+
+76
+00:05:56.158 --> 00:06:00.779
+e duas conquistas: a conquista
+1 e a conquista 10 pontos.
+
+77
+00:06:00.779 --> 00:06:02.020
+Clique em Done.
+
+78
+00:06:02.020 --> 00:06:08.665
+[SEM ÁUDIO] Clique novamente em
+
+79
+00:06:08.665 --> 00:06:16.140
+cima do aplicativo que acabamos de
+criar e vamos ativar o Games Center.
+
+80
+00:06:16.140 --> 00:06:22.805
+Adicione a leaderboard que criamos e
+
+81
+00:06:22.805 --> 00:06:28.120
+adicione as conquistas que
+também acabamos de criar.
+
+82
+00:06:28.120 --> 00:06:32.694
+Clique em Salvar e dessa forma acabamos
+de configurar as informações de
+
+83
+00:06:32.694 --> 00:06:35.830
+leaderboard e conquistas
+do nosso aplicativo.
+
+84
+00:06:35.830 --> 00:06:40.230
+Na próxima aula veremos como
+utilizar essas informações no XCode.
+
+85
+00:06:40.230 --> 00:06:43.890
+Até lá!

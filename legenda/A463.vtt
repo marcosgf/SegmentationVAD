@@ -1,0 +1,434 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.121
+[MÚSICA] Meu
+
+2
+00:00:08.121 --> 00:00:11.800
+nome é Eduardo Guerra.
+
+3
+00:00:11.800 --> 00:00:16.856
+Estamos aqui no curso de
+Orientação a Objetos com Java.
+
+4
+00:00:16.856 --> 00:00:22.517
+Hoje vamos falar, vamos ver na prática
+como que funcionam as variáveis estáticas,
+
+5
+00:00:22.517 --> 00:00:24.980
+e como que elas são
+diferentes das dinâmicas.
+
+6
+00:00:24.980 --> 00:00:30.070
+Então eu vou criar exemplo aqui que a
+gente vai criar uma variável de cada tipo,
+
+7
+00:00:30.070 --> 00:00:35.160
+vai modificar cada uma delas,
+e vai ver como que elas funcionam aí.
+
+8
+00:00:35.160 --> 00:00:39.880
+Eu vou criar aqui projeto Java,
+vou chamar aqui de
+
+9
+00:00:39.880 --> 00:00:47.954
+EstaticaVsDinamica Dinamica não,
+
+10
+00:00:47.954 --> 00:00:53.990
+"vsInstancia", certo?
+
+11
+00:00:53.990 --> 00:01:00.413
+Então, eu vou fazer o seguinte,
+eu vou criar aqui uma classe, certo?
+
+12
+00:01:00.413 --> 00:01:05.915
+Que ela vai chamar de Somador,
+a classe Somador,
+
+13
+00:01:05.915 --> 00:01:13.850
+ela vai ter duas variáveis: uma variável
+estática e uma variável de instância.
+
+14
+00:01:13.850 --> 00:01:19.510
+Toda vez que eu mandar ela somar,
+ela vai somar 1 nas duas variáveis.
+
+15
+00:01:19.510 --> 00:01:24.268
+Aí já já eu mostro pra vocês o experimento
+que a gente vai fazer pra ver qual
+
+16
+00:01:24.268 --> 00:01:26.298
+o resultado que a gente obtém.
+
+17
+00:01:26.298 --> 00:01:29.898
+Então eu vou chamar aqui de somador,
+certo?
+
+18
+00:01:29.898 --> 00:01:34.280
+Então a minha classe somador,
+
+19
+00:01:34.280 --> 00:01:39.461
+ela vai ter nome, certo?
+
+20
+00:01:39.461 --> 00:01:44.041
+Eu vou chamar aqui de nome, ela vai ter
+
+21
+00:01:44.041 --> 00:01:49.798
+valor instância, certo?
+
+22
+00:01:49.798 --> 00:01:53.479
+Que eu estou criando uma
+variável de instância,
+
+23
+00:01:53.479 --> 00:01:57.980
+e vou criar aqui uma variável
+estática que eu vou chamar de valor
+
+24
+00:01:57.980 --> 00:02:03.070
+estática, certo?
+
+25
+00:02:03.070 --> 00:02:07.687
+Eu vou fazer o seguinte aqui eu vou
+
+26
+00:02:07.687 --> 00:02:12.048
+inicializar as duas variáveis com o zero,
+okay?
+
+27
+00:02:12.048 --> 00:02:19.771
+E aí eu vou ter esse método aqui
+que eu vou chamar de somar, certo?
+
+28
+00:02:19.771 --> 00:02:24.613
+O meu método somar,
+ele vai somar no valor da
+
+29
+00:02:24.613 --> 00:02:28.590
+variáriel de instância, certo?
+
+30
+00:02:28.590 --> 00:02:36.427
+Então, valorInstância++ e vai somar
+no valor alí da variável estática.
+
+31
+00:02:36.427 --> 00:02:40.831
+Note que a única coisa que muda
+de uma pra outra é o fato de uma
+
+32
+00:02:40.831 --> 00:02:43.270
+ser estática e a outra ser dinâmica.
+
+33
+00:02:43.270 --> 00:02:45.487
+Ou ser de instância, certo?
+
+34
+00:02:45.487 --> 00:02:52.273
+E aí eu vou criar também método aqui
+que eu vou chamar de imprimir, certo?
+
+35
+00:02:52.273 --> 00:02:55.130
+Que vai imprimir o somador.
+
+36
+00:02:55.130 --> 00:02:59.000
+Então eu vou fazer aqui o meu "sysout'',
+
+37
+00:02:59.000 --> 00:03:03.990
+então eu vou colocar aqui o somador,
+
+38
+00:03:03.990 --> 00:03:10.078
+o nome dele,
+
+39
+00:03:10.078 --> 00:03:18.250
+tem vou colocar aqui o valor da instância,
+
+40
+00:03:18.250 --> 00:03:23.730
+certo?
+
+41
+00:03:23.730 --> 00:03:28.910
+Pra fazer, pra ficar mais fácil aqui,
+vez de descrever isso tudo eu vou escrever
+
+42
+00:03:28.910 --> 00:03:33.810
+aqui "instância="+valorInstância+"
+
+43
+00:03:33.810 --> 00:03:40.260
+"e estática="+valorEstática+"
+
+44
+00:03:40.260 --> 00:03:45.350
+Ao valor da estática, certo?
+
+45
+00:03:45.350 --> 00:03:50.160
+Então, criei alí o meu somar,
+criei o meu imprimir.
+
+46
+00:03:50.160 --> 00:03:54.931
+Vamos ver agora o que que acontece por
+exemplo se eu criar três instâncias
+
+47
+00:03:54.931 --> 00:03:59.530
+dessa classe somadora e chamar
+o método somar todas elas.
+
+48
+00:03:59.530 --> 00:04:02.795
+Que será que acontece com
+cada uma das variáveis?
+
+49
+00:04:02.795 --> 00:04:07.240
+Depois eu vou mandar imprimir e vou
+ver qual que é o valor de cada uma,
+
+50
+00:04:07.240 --> 00:04:08.312
+está certo?
+
+51
+00:04:08.312 --> 00:04:09.676
+Então vamos lá.
+
+52
+00:04:09.676 --> 00:04:14.539
+Eu vou ver aqui,
+vou criar o meu método principal, certo?
+
+53
+00:04:14.539 --> 00:04:19.416
+Vou criar uma nova classe,
+método não, vou criar uma classe
+
+54
+00:04:19.416 --> 00:04:24.820
+principal que tem o método "main" onde
+eu posso executar isso que eu falei.
+
+55
+00:04:24.820 --> 00:04:32.369
+Então vou criar aqui o somador s1, certo?
+
+56
+00:04:32.369 --> 00:04:39.060
+"New somador" [SEM_ÁUDIO]
+
+57
+00:04:39.060 --> 00:04:44.620
+Vou fazer aqui "s1.nome"
+
+58
+00:04:44.620 --> 00:04:50.340
+"= 'somador1"
+
+59
+00:04:50.340 --> 00:04:54.970
+E vou criar três somadores aqui,
+
+60
+00:04:54.970 --> 00:04:59.315
+certo?
+
+61
+00:04:59.315 --> 00:05:06.740
+Então vou colocar aqui s2 s2,
+
+62
+00:05:06.740 --> 00:05:12.500
+s3 s3,
+está faltando modificar o nome de cada.
+
+63
+00:05:12.500 --> 00:05:17.630
+Então, vou chamar aqui de somador 2,
+e somador 3.
+
+64
+00:05:17.630 --> 00:05:22.470
+Aqui eu vou criar "for"
+pra chamar o método
+
+65
+00:05:22.470 --> 00:05:26.100
+somar três vezes cada dos somadores.
+
+66
+00:05:26.100 --> 00:05:33.007
+Então vou fazer int i=0; i<3; i++ certo?
+
+67
+00:05:33.007 --> 00:05:38.069
+E aí eu vou fazer aí agora o s1.somar o
+
+68
+00:05:38.069 --> 00:05:46.289
+s2.somar e o s3.somar certo?
+
+69
+00:05:46.289 --> 00:05:49.840
+E aí agora eu vou imprimir cada deles.
+
+70
+00:05:49.840 --> 00:05:54.187
+Então vou fazer o s1.imprimir o
+
+71
+00:05:54.187 --> 00:06:01.942
+s2.imprimir e o s3.imprimir Certo?
+
+72
+00:06:01.942 --> 00:06:07.612
+E vamos ver como é que ficou o
+valor aqui de cada variável, certo?
+
+73
+00:06:07.612 --> 00:06:10.970
+Então eu vou dar play aqui, certo?
+
+74
+00:06:10.970 --> 00:06:15.974
+Note que todos eles
+a variável de instância,
+
+75
+00:06:15.974 --> 00:06:23.430
+ela é 3 e a estática é 9,
+note que cada vez que eu somo,
+
+76
+00:06:23.430 --> 00:06:29.390
+eu vou somar a variável de
+instância só pra aquele objeto.
+
+77
+00:06:29.390 --> 00:06:34.255
+Aquele somar, quando eu somo
+na variável de instância está
+
+78
+00:06:34.255 --> 00:06:37.090
+dentro do escopo daquele objeto.
+
+79
+00:06:37.090 --> 00:06:43.490
+Mas quando eu somo na variável estática,
+aí eu estou somando pra todos os objetos,
+
+80
+00:06:43.490 --> 00:06:48.716
+então, todos os objetos
+daquela classe vai acessar
+
+81
+00:06:48.716 --> 00:06:53.050
+a mesma variável de instância enquanto
+a variável, a mesma variável estática,
+
+82
+00:06:53.050 --> 00:06:57.890
+enquanto a variável de instância,
+ela é uma pra cada objeto da classe.
+
+83
+00:06:57.890 --> 00:07:00.605
+Então, só pra gente ver aqui,
+
+84
+00:07:00.605 --> 00:07:05.210
+eu vou pegar,
+vou somar uma vez a mais aqui só no s2.
+
+85
+00:07:05.210 --> 00:07:10.042
+A gente vai ver que vai somente o opa,
+
+86
+00:07:10.042 --> 00:07:13.139
+eu chamei o imprimir aqui chamei errado,
+
+87
+00:07:13.139 --> 00:07:17.714
+eu vou chamar o somar aqui,
+que é o que eu queria colocar.
+
+88
+00:07:17.714 --> 00:07:26.012
+Então você pode ver aqui que a variável
+de instância somente do s2 aumentou 1,
+
+89
+00:07:26.012 --> 00:07:31.220
+mas o valor ali da estática
+que cada enxerga é o mesmo.
+
+90
+00:07:31.220 --> 00:07:32.141
+Está certo?
+
+91
+00:07:32.141 --> 00:07:37.112
+Espero que com esse exemplo tenha
+ficado mais claro o funcionamento das
+
+92
+00:07:37.112 --> 00:07:38.392
+variáveis estáticas.
+
+93
+00:07:38.392 --> 00:07:42.104
+É muito importante pra quem está
+trabalhando com orientação a objeto
+
+94
+00:07:42.104 --> 00:07:47.350
+entender essa diferença de escopo entre
+as variáveis de instâncias e estáticas.
+
+95
+00:07:47.350 --> 00:07:52.470
+Muito obrigado por assistir
+e até a próxima aula.
+
+96
+00:07:52.470 --> 00:07:57.590
+[MÚSICA]

@@ -1,0 +1,292 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.628
+Após esse vídeo você será capaz
+de representar o requisito de
+
+2
+00:00:04.628 --> 00:00:06.360
+overshoot no plano S.
+
+3
+00:00:06.360 --> 00:00:10.738
+Dado uma função de transferência
+de segunda ordem sem zeros podemos
+
+4
+00:00:10.738 --> 00:00:16.396
+parametrizá-la como G(s)
+= a ômega n ao quadrado
+
+5
+00:00:16.396 --> 00:00:21.260
+/ s ao quadrado + 2 xi ômega
+s + ômega n ao quadrado.
+
+6
+00:00:21.260 --> 00:00:26.764
+E o overshoot, sobressinal,
+máxima ultrapassagem,
+
+7
+00:00:26.764 --> 00:00:31.458
+sobrepasso etc pode ser calculado como Mp
+
+8
+00:00:31.458 --> 00:00:36.210
+= e -xi pi/raiz de- xi ao quadrado.
+
+9
+00:00:36.210 --> 00:00:40.976
+Você deve lembrar ou saber
+que as raízes de s ao
+
+10
+00:00:40.976 --> 00:00:46.015
+quadrado + 2 xi ômega n s +
+ômega n ao quadrado = 0 para
+
+11
+00:00:46.015 --> 00:00:50.927
+0 < xi < 1 são- xi ômega n
+
+12
+00:00:50.927 --> 00:00:55.391
+± ômega n raiz quadrada
+de 1- xi ao quadrado j,
+
+13
+00:00:55.391 --> 00:00:59.509
+onde j ao quadrado = -1 Para ilustrar,
+
+14
+00:00:59.509 --> 00:01:07.270
+vamos usar xi 1 = 0,8 e temos raiz
+quadrada 1- xi ao quadrado = 0,6.
+
+15
+00:01:07.270 --> 00:01:12.389
+Portanto, os pólos da função
+de transferência são -0,8
+
+16
+00:01:12.389 --> 00:01:16.730
+ômegan ± 0,6 ômega n j.
+
+17
+00:01:16.730 --> 00:01:20.550
+Note que o módulos dos pólos é ômega n.
+
+18
+00:01:20.550 --> 00:01:23.700
+Vamos visualizar os polos no plano S.
+
+19
+00:01:23.700 --> 00:01:26.560
+A distância até a origem é ômega n.
+
+20
+00:01:26.560 --> 00:01:30.848
+E temos a parte real e a parte imaginária.
+
+21
+00:01:30.848 --> 00:01:35.744
+-0,8 ômega n e 0,6 ômega n.
+
+22
+00:01:35.744 --> 00:01:38.619
+Para não poluir muito a figura,
+
+23
+00:01:38.619 --> 00:01:41.890
+vamos ver apenas o polo com
+parte imaginária positiva.
+
+24
+00:01:41.890 --> 00:01:45.360
+O conjugado é simétrico
+relação ao eixo real.
+
+25
+00:01:45.360 --> 00:01:50.133
+Note que o ângulo formado
+a partir da reta real negativa
+
+26
+00:01:50.133 --> 00:01:54.280
+denotado por beta é o mesmo
+independente de ômega n,
+
+27
+00:01:54.280 --> 00:01:59.500
+já que a proporção entre a parte real
+e a parte imaginária é sempre a mesma.
+
+28
+00:01:59.500 --> 00:02:02.171
+Nesse caso, 8 para 6.
+
+29
+00:02:02.171 --> 00:02:08.930
+E podemos calcular este ângulo beta
+como beta = arco cosseno de xi 1.
+
+30
+00:02:08.930 --> 00:02:15.040
+Ou beta = arco cosseno é a raiz
+quadrada de 1- xi ao quadrado.
+
+31
+00:02:15.040 --> 00:02:21.610
+Ou ainda beta é o arco tangente raiz
+quadrada de 1- xi ao quadrado sobre xi.
+
+32
+00:02:21.610 --> 00:02:27.310
+Alguns autores preferem usar o angulo
+afa formado a partir da vertical,
+
+33
+00:02:27.310 --> 00:02:29.710
+que é o complemento do ângulo beta.
+
+34
+00:02:29.710 --> 00:02:32.190
+Neste curso usaremos o ângulo beta.
+
+35
+00:02:32.190 --> 00:02:36.364
+No lugar dos valores numéricos
+da parte real e imaginária vamos
+
+36
+00:02:36.364 --> 00:02:38.420
+escrevê-las função de xi.
+
+37
+00:02:38.420 --> 00:02:41.814
+Parte real- xi vezes ômega n,
+
+38
+00:02:41.814 --> 00:02:46.780
+e parte imaginária raiz de 1-
+xi ao quadrado vezes ômega n.
+
+39
+00:02:46.780 --> 00:02:51.610
+Se usarmos xi menor,
+o que irá acontecer com o ângulo beta?
+
+40
+00:02:51.610 --> 00:02:54.183
+O módulo da parte real diminuirá,
+
+41
+00:02:54.183 --> 00:02:59.430
+e o módulo da parte imaginária aumentará,
+e o ângulo beta aumentará.
+
+42
+00:02:59.430 --> 00:03:04.053
+Por outro lado se xi for
+maior, a parte real será
+
+43
+00:03:04.053 --> 00:03:08.040
+maior e a parte imaginária menor
+e o ângulo beta será menor.
+
+44
+00:03:08.040 --> 00:03:16.013
+Nos casos extremos com xi = 0 e xi =
+1 temos para xi=0 parte real nula,
+
+45
+00:03:16.013 --> 00:03:20.760
+parte imaginária ômega n
+e beta = 90° para xi =1
+
+46
+00:03:20.760 --> 00:03:25.800
+temos parte real = -ômega n,
+parte imaginária nula
+
+47
+00:03:25.800 --> 00:03:30.720
+e beta = 0 Normalmente temos
+requisito de overshoot máximo,
+
+48
+00:03:30.720 --> 00:03:37.040
+por exemplo para xi = 0,6
+temos overshoot de 9,48%.
+
+49
+00:03:37.040 --> 00:03:41.410
+Se nosso requisito de desempenho for
+ter overshoot de até 10%,
+
+50
+00:03:41.410 --> 00:03:45.780
+podemos usar xi = 0,6
+ou valor mínimo de xi.
+
+51
+00:03:45.780 --> 00:03:49.850
+Lembre-se de que quanto menor xi,
+maior o overshoot.
+
+52
+00:03:49.850 --> 00:03:54.420
+Com xi = 0,6 temos beta = 53,13°.
+
+53
+00:03:54.420 --> 00:03:58.990
+E para termos xi ≥ 0,6,
+
+54
+00:03:58.990 --> 00:04:03.770
+precisamos de beta ≤ 53,13°.
+
+55
+00:04:03.770 --> 00:04:08.310
+Ou seja, o polo complexo com
+parte imaginária positiva
+
+56
+00:04:08.310 --> 00:04:12.183
+deve estar abaixo da reta com ângulo beta.
+
+57
+00:04:12.183 --> 00:04:14.880
+Nesse caso, 53,13°.
+
+58
+00:04:14.880 --> 00:04:19.583
+Para cada valor de overshoot
+então basta calcular xi e beta,
+
+59
+00:04:19.583 --> 00:04:24.476
+e se o polo complexo conjugado estiver
+abaixo da reta com angulo beta,
+
+60
+00:04:24.476 --> 00:04:27.140
+o requisito de overshoot será atendido.
+
+61
+00:04:27.140 --> 00:04:32.470
+Agora você já é capaz de representar
+requisito de overshoot no plano S.
+
+62
+00:04:32.470 --> 00:04:36.985
+No próximo vídeo você verá como
+representar requisito de instante de pico
+
+63
+00:04:36.985 --> 00:04:41.500
+e requisito de tempo de
+acomodação no plano S.

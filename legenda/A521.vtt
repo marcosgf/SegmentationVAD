@@ -1,0 +1,744 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.753
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.753 --> 00:00:14.870
+Chegamos enfim ao final do
+primeiro módulo do nosso curso.
+
+3
+00:00:14.870 --> 00:00:17.125
+O Curso de Orientação a Objetos com Java.
+
+4
+00:00:17.125 --> 00:00:20.821
+Foi longo caminho,
+espero que tenha sido longo aprendizado,
+
+5
+00:00:20.821 --> 00:00:25.805
+e agora chegou a hora de a gente fazer
+aquele exercício que vai digamos
+
+6
+00:00:25.805 --> 00:00:31.100
+assim, juntar tudo aquilo
+que a gente aprendeu,
+
+7
+00:00:31.100 --> 00:00:35.354
+e colocar numa aplicação.
+
+8
+00:00:35.354 --> 00:00:36.880
+O que a gente vai fazer?
+
+9
+00:00:36.880 --> 00:00:39.516
+A gente vai fazer pequeno jogo, ta?
+
+10
+00:00:39.516 --> 00:00:43.266
+É o jogo das palavaras embaralhadas, ta?
+
+11
+00:00:43.266 --> 00:00:50.177
+É jogo simples que você recebe uma
+palavra embaralhada, que as letras foram
+
+12
+00:00:50.177 --> 00:00:54.260
+embaralhadas e você tem que adivinhar
+qual que é a palavra original, ta?
+
+13
+00:00:54.260 --> 00:00:58.250
+Você vai falar assim: " mas isso é muito
+simples, como que eu vou exercitar?"
+
+14
+00:00:58.250 --> 00:01:02.414
+A questão é que a gente vai fazer esse
+jogo de forma que pedaços desse jogo
+
+15
+00:01:02.414 --> 00:01:07.530
+possam ser facilmente trocados
+e que existem várias classes
+
+16
+00:01:07.530 --> 00:01:12.389
+que possam ser utilizadas para
+determinadas tarefas, ta?
+
+17
+00:01:12.389 --> 00:01:15.220
+No caso o que é que a gente vai fazer?
+
+18
+00:01:15.220 --> 00:01:20.005
+Algumas classes,
+as classes que por exemplo, que embaralham
+
+19
+00:01:20.005 --> 00:01:25.420
+palavras e as classes que
+determinam lá o andamento do jogo,
+
+20
+00:01:25.420 --> 00:01:31.649
+a dinâmica do jogo, a gente vai poder
+trocar elas, para dar por exemplo, uma
+
+21
+00:01:31.649 --> 00:01:37.012
+dinâmica de jogo diferente ou embaralhar
+as palavras de uma forma diferente, ta?
+
+22
+00:01:37.012 --> 00:01:42.261
+Permitindo também que eu possa desenvolver
+novas classes desse tipo, certo?
+
+23
+00:01:42.261 --> 00:01:47.012
+E com isso eu consiga, digamos assim
+expandir o meu jogo, criar novas versões
+
+24
+00:01:47.012 --> 00:01:50.089
+com mais funcionalidades
+de uma forma bem fácil, ta?
+
+25
+00:01:50.089 --> 00:01:54.432
+Eu vou ler aqui junto com vocês e vou
+esclarecendo algumas questões para
+
+26
+00:01:54.432 --> 00:01:57.878
+facilitar aí a tarefa de vocês, ta?
+
+27
+00:01:57.878 --> 00:02:02.347
+Então o objetivo do exercício é criar jogo
+onde partes de sua execução possam ser
+
+28
+00:02:02.347 --> 00:02:03.010
+trocadas.
+
+29
+00:02:03.010 --> 00:02:07.545
+O jogo é simples: apresentado ao jogador
+uma palavra com letras embaralhadas e
+
+30
+00:02:07.545 --> 00:02:11.010
+o jogador deve tentar adivinhar
+a palavra correta, certo?
+
+31
+00:02:11.010 --> 00:02:15.167
+O jogo será jogado no próprio console e a
+lista de palavras utilizadas pode ser fixa
+
+32
+00:02:15.167 --> 00:02:17.485
+(pelo menos 20 palavras), tá?
+
+33
+00:02:17.485 --> 00:02:20.463
+E eu gostaria muito que
+vocês tentassem fazer
+
+34
+00:02:20.463 --> 00:02:23.930
+com que essas palavras
+fossem lidas de arquivo.
+
+35
+00:02:23.930 --> 00:02:28.315
+Eu sei que a gente não viu essas
+partes das bibliotecas de Java,
+
+36
+00:02:28.315 --> 00:02:32.013
+mas eu acho que faz parte de
+toda a tarefa de programação,
+
+37
+00:02:32.013 --> 00:02:35.322
+a gente correr atrás de alguma
+coisa que a gente ainda nunca usou,
+
+38
+00:02:35.322 --> 00:02:40.083
+de utilizar alguma biblioteca para ler
+arquivo, acessar outro sistema, não é?
+
+39
+00:02:40.083 --> 00:02:41.171
+Isso faz parte.
+
+40
+00:02:41.171 --> 00:02:45.775
+Então, nesse exercício,
+esse fator novo vai ser vocês
+
+41
+00:02:45.775 --> 00:02:50.807
+estarem lendo de arquivo,
+essas palavras, certo?
+
+42
+00:02:50.807 --> 00:02:52.759
+Vem uma dica aí.
+
+43
+00:02:52.759 --> 00:02:58.791
+Você pode fazer o jogo no próprio console,
+existe aí a classe Scanner,
+
+44
+00:02:58.791 --> 00:03:04.625
+que lê a entrada do usuário e
+ela tem que ser, ela é criada,
+
+45
+00:03:04.625 --> 00:03:10.886
+você pega o System.in, que é a entrada
+do usuário e aí você pode usar nextLine,
+
+46
+00:03:10.886 --> 00:03:15.034
+nextInt, para pegar aí o que é
+que o usuário está digitando, ta?
+
+47
+00:03:15.034 --> 00:03:19.498
+Isso aí é uma dica para vocês
+fazerem o jogo no console, ta?
+
+48
+00:03:19.498 --> 00:03:24.330
+Então, o jogo ele tem os componentes,
+eu já estou
+
+49
+00:03:24.330 --> 00:03:28.698
+facilitando e colocando aí quais os
+componentes o jogo tem que ter, ta?
+
+50
+00:03:28.698 --> 00:03:31.474
+Para já dar uma orientada aí vocês, ta?
+
+51
+00:03:31.474 --> 00:03:36.045
+Ela vai ter a classe principal,
+que é a aquela classe com método main,
+
+52
+00:03:36.045 --> 00:03:40.948
+uma coisa importante é que,
+essa classe principal, é a única que pode
+
+53
+00:03:40.948 --> 00:03:45.904
+ler as entradas do usuário do console,
+nenhuma outra pode fazer isso, ta?
+
+54
+00:03:45.904 --> 00:03:50.384
+Então eu estou determinando muito
+bem essa responsabilidade aqui, ta?
+
+55
+00:03:50.384 --> 00:03:56.242
+O BancoDePalavras, que é uma classe que
+possui o método que vai estar retornando
+
+56
+00:03:56.242 --> 00:04:01.053
+uma palavra que é retornada aleatoriamente
+ali de uma lista de palavras,
+
+57
+00:04:01.053 --> 00:04:03.499
+vinda a partir de arquivo, certo?
+
+58
+00:04:03.499 --> 00:04:08.841
+Eu tenho uma interface, Embaralhador,
+que representa ali as classes responsáveis
+
+59
+00:04:08.841 --> 00:04:13.747
+por embaralhar uma palavra, ou seja,
+ela recebe uma palavra e retorna a palavra
+
+60
+00:04:13.747 --> 00:04:19.072
+embaralhada e eu quero que essa interface
+tenha pelo menos duas implementações, ta?
+
+61
+00:04:19.072 --> 00:04:22.950
+Eu tenho uma fábrica de embaralhadores,
+
+62
+00:04:22.950 --> 00:04:27.524
+que tem método que vai retornar
+aleatoriamente, embaralhador, ta?
+
+63
+00:04:27.524 --> 00:04:29.244
+Então o que é que vai acontecer?
+
+64
+00:04:29.244 --> 00:04:31.803
+Eu vou ter vários embaralhadores, certo?
+
+65
+00:04:31.803 --> 00:04:37.037
+E aí eu vou chegar para a fábrica de
+embaralhadores e vou falar assim: olha,
+
+66
+00:04:37.037 --> 00:04:40.040
+me dá dos seus embaralhadores,
+aí vai te retornar,
+
+67
+00:04:40.040 --> 00:04:44.906
+você não sabe qual que é e você vai chamar
+o método para embaralhar a palavra, ta?
+
+68
+00:04:44.906 --> 00:04:47.935
+Aí que vem uma grande sacada, vamos lá,
+
+69
+00:04:47.935 --> 00:04:51.936
+vai ter uma interface
+chamada MecanicaDoJogo, ta?
+
+70
+00:04:51.936 --> 00:04:55.624
+Essa interface que vai dar
+o andamento para o jogo.
+
+71
+00:04:55.624 --> 00:04:59.370
+Então por exemplo,
+ela que vai dizer se o jogo já acabou,
+
+72
+00:04:59.370 --> 00:05:02.770
+vai dizer se o usuário
+acertou ou não a palavra,
+
+73
+00:05:02.770 --> 00:05:06.969
+se ele pode tentar novamente,
+quantos pontos ele ganha.
+
+74
+00:05:06.969 --> 00:05:11.829
+E eu também quero por exemplo duas
+implementações dessa interface.
+
+75
+00:05:11.829 --> 00:05:16.060
+Só para dar exemplo aqui,
+eu posso ter jogo que o usuário,
+
+76
+00:05:16.060 --> 00:05:20.930
+ele vai tentar acertar,
+
+77
+00:05:20.930 --> 00:05:27.000
+5 palavras embaralhadas,
+e vão ser sempre 5, se ele acertar,
+
+78
+00:05:27.000 --> 00:05:33.200
+ele marca os pontos, se ele errar,
+ele diz que errou e passa para a próxima.
+
+79
+00:05:33.200 --> 00:05:39.003
+Ou eu posso ter por exemplo, jogo que
+sei lá, que o usuário tenha vidas,
+
+80
+00:05:39.003 --> 00:05:43.967
+ou seja, ele pode ir tentando novamente,
+mas ele pode errar no máximo 3
+
+81
+00:05:43.967 --> 00:05:48.544
+vezes e aí ele vai fazendo isso
+quantas palavras forem possíveis.
+
+82
+00:05:48.544 --> 00:05:54.541
+Eu posso ter modo, morte súbita, que
+quando ele errar a primeira palavra acaba,
+
+83
+00:05:54.541 --> 00:05:57.777
+mas o número de palavras
+é quantas ele conseguir.
+
+84
+00:05:57.777 --> 00:06:03.520
+Então eu posso ter várias formas de
+jogo diferentes, com essa mesma, dentro
+
+85
+00:06:03.520 --> 00:06:10.340
+dessa mesma ideia de você dar uma palavra
+embaralhada e a pessoa adivinhar, ta?
+
+86
+00:06:10.340 --> 00:06:15.128
+A própria pontuação pode ser de
+acordo com a dificuldade da palavra,
+
+87
+00:06:15.128 --> 00:06:17.314
+com o número de letras da palavra, ta?
+
+88
+00:06:17.314 --> 00:06:23.146
+Então, tudo isso vai depender
+dessa classe MecanicaDoJogo, ta?
+
+89
+00:06:23.146 --> 00:06:28.104
+Então, aí tem a fabrica da
+mecânica do jogo que vai retornar
+
+90
+00:06:28.104 --> 00:06:31.896
+a mecânica do jogo que você vai
+querer utilizar naquela partida.
+
+91
+00:06:31.896 --> 00:06:35.356
+Pode ser aleatório,
+ou você pode setar individualmente,
+
+92
+00:06:35.356 --> 00:06:40.194
+mas a ideia é que seja fácil de mudar
+a mecânica do jogo, sem você ter que
+
+93
+00:06:40.194 --> 00:06:45.108
+mexer no método principal, simplesmente
+trocando a instância de mecânica,
+
+94
+00:06:45.108 --> 00:06:48.468
+a classe da MecanicaDoJogo
+que está sendo retornada, ta?
+
+95
+00:06:48.468 --> 00:06:52.890
+Então, a classe principal tem que
+recuperar a instância de MecanicaDoJogo de
+
+96
+00:06:52.890 --> 00:06:57.486
+FabricaMecanica, a partir
+dessa classe fábrica de
+
+97
+00:06:57.486 --> 00:07:02.279
+mecânica do jogo e a classe principal
+não pode ter nenhuma referência a uma
+
+98
+00:07:02.279 --> 00:07:05.320
+implementação específica
+da MecanicaDoJogo, ta?
+
+99
+00:07:05.320 --> 00:07:08.370
+Somente a interface dela.
+
+100
+00:07:08.370 --> 00:07:14.432
+Da mesma forma, aqui a MecanicaDoJogo,
+eu falei que é uma interface,
+
+101
+00:07:14.432 --> 00:07:18.070
+mas se você quiser fazer que seja
+uma classe abstrata, deixo isso aí
+
+102
+00:07:18.070 --> 00:07:22.832
+aberto para vocês, de repente vocês querem
+jogar uma lógica maior aí, não sei, ta?
+
+103
+00:07:22.832 --> 00:07:27.721
+Da mesma forma as implementações de
+MecanicaDoJogo devem recuperar os
+
+104
+00:07:27.721 --> 00:07:31.476
+embaralhadores da fabrica de
+embaralhadores também não pode ter nenhuma
+
+105
+00:07:31.476 --> 00:07:35.495
+referência direta a uma implementação
+específica do embaralhador,
+
+106
+00:07:35.495 --> 00:07:37.520
+somente a interface, ta?
+
+107
+00:07:37.520 --> 00:07:42.005
+E as implementações de embaralhador tem
+que ter algoritmos de embaralhamentos de
+
+108
+00:07:42.005 --> 00:07:47.487
+palavras, como sei lá, inverter a string,
+permutar randomicamente algumas letras,
+
+109
+00:07:47.487 --> 00:07:52.313
+trocar letras pares por letras ímpares
+e aí fica a cargo da criatividade de
+
+110
+00:07:52.313 --> 00:07:55.052
+cada inventar aí embaralhador, ta?
+
+111
+00:07:55.052 --> 00:08:00.140
+As implementações da MecanicaDoJogo
+devem retratar o andamento do jogo.
+
+112
+00:08:00.140 --> 00:08:02.046
+Dei aí alguns exemplos,
+
+113
+00:08:02.046 --> 00:08:07.050
+mas exemplos de questões que podem
+mudar nessa mecânica do jogo.
+
+114
+00:08:07.050 --> 00:08:11.457
+Quando é que jogo termina por exemplo,
+após número fixo de palavras; após número
+
+115
+00:08:11.457 --> 00:08:17.002
+de erros e etc, após fazer uma
+determinada quantidade de pontos, ta?
+
+116
+00:08:17.002 --> 00:08:21.978
+Quantas tentativas podem ser feitas por
+palavra, ou seja, qual é que é a próxima
+
+117
+00:08:21.978 --> 00:08:26.260
+palavra a ser tentada; como é que são
+computados os pontos; qual é que é o
+
+118
+00:08:26.260 --> 00:08:32.009
+embaralhador ou seja, se você vai a cada
+palavra pegar embaralhador diferente,
+
+119
+00:08:32.009 --> 00:08:38.936
+ou se você vai usar o mesmo embaralhador
+para todas as palavras daquele jogo, ta?
+
+120
+00:08:38.936 --> 00:08:42.865
+O que é importante é que,
+independente desse funcionamento,
+
+121
+00:08:42.865 --> 00:08:46.216
+a classe principal tem que
+interagir com ela da mesma forma,
+
+122
+00:08:46.216 --> 00:08:49.310
+ou seja, como é que a classe principal
+vai saber se terminou o jogo?
+
+123
+00:08:49.310 --> 00:08:55.269
+Vai estar perguntando
+para a MecanicaDoJogo:!
+
+124
+00:08:55.269 --> 00:08:56.142
+Já terminou?
+
+125
+00:08:56.142 --> 00:08:58.979
+Se ainda não terminou me
+dá a próxima palavra.
+
+126
+00:08:58.979 --> 00:09:00.595
+Alguma coisa desse tipo.
+
+127
+00:09:00.595 --> 00:09:02.726
+E por exemplo, no final do jogo:!
+
+128
+00:09:02.726 --> 00:09:04.724
+Como é que eu vou saber a pontuação?
+
+129
+00:09:04.724 --> 00:09:07.740
+Também você vai perguntar
+lá para a MecanicaDoJogo,
+
+130
+00:09:07.740 --> 00:09:12.610
+qual que é a pontuação que o
+usuário conseguiu fazer, certo?
+
+131
+00:09:12.610 --> 00:09:16.615
+Uma dica aqui,
+
+132
+00:09:16.615 --> 00:09:21.125
+é que você é que vai definir essas
+interfaces, você que tem que pensar e
+
+133
+00:09:21.125 --> 00:09:25.594
+falar assim: quais são os métodos que
+o meu MecanicaDoJogo precisa ter?
+
+134
+00:09:25.594 --> 00:09:30.209
+Eu dei algumas dicas aqui, mas você é
+que vai determinar isso, até os próprios
+
+135
+00:09:30.209 --> 00:09:35.349
+embaralhadores, de repente se você quer
+falar assim: embaralhador ele vai ter ali
+
+136
+00:09:35.349 --> 00:09:39.620
+nível de dificuldade dele que vai ser
+usado, sei lá, para calcular os pontos.
+
+137
+00:09:39.620 --> 00:09:46.277
+Então isso vai ser a cargo de vocês,
+eu não vou vou dizer, eu falei que tem que
+
+138
+00:09:46.277 --> 00:09:49.850
+ter uma interface para os embaralhadores
+e uma para a mecânica do jogo,
+
+139
+00:09:49.850 --> 00:09:53.337
+agora os métodos dessa interface
+é você que vai definir, ta certo?
+
+140
+00:09:53.337 --> 00:09:55.490
+O que é que você tem
+que entregar para mim?
+
+141
+00:09:55.490 --> 00:10:01.130
+O código que você criar de todas essas
+classes do jogo; diagrama de classe com
+
+142
+00:10:01.130 --> 00:10:07.728
+classes que você criou; os testes de pelo
+menos das classes de embaralhamento, ta?
+
+143
+00:10:07.728 --> 00:10:12.440
+Se você quiser criar testes para as
+outras classes, fique à vontade,
+
+144
+00:10:12.440 --> 00:10:17.307
+recomendo, mas talvez precise de algumas
+técnicas que a gente não viu ainda,
+
+145
+00:10:17.307 --> 00:10:20.195
+mas pelo menos as classes
+de embaralhamento,
+
+146
+00:10:20.195 --> 00:10:26.002
+tenho certeza que vocês conseguem criar os
+testes e por fim eu quero que você faça,
+
+147
+00:10:26.002 --> 00:10:31.238
+uma ou mais partidas do jogo
+mostrando ele funcionando e grave
+
+148
+00:10:31.238 --> 00:10:36.283
+video para mim e disponibilize esse video
+de uma forma aberta, passando o link,
+
+149
+00:10:36.283 --> 00:10:41.176
+sei lá, você pode compartilhar o arquivo,
+você pode colocar
+
+150
+00:10:41.176 --> 00:10:46.281
+ele alguma plataforma aberta, como Youtube
+e outras que têm por aí, ta certo?
+
+151
+00:10:46.281 --> 00:10:49.059
+Então é isso,
+espero que vocês tenham entendido.
+
+152
+00:10:49.059 --> 00:10:53.754
+Boa sorte executar a tarefa e aplicar aí
+todos os conhecimentos que você adquiriu
+
+153
+00:10:53.754 --> 00:10:55.670
+nesse primeiro módulo do curso.
+
+154
+00:10:55.670 --> 00:10:59.425
+Até mais!
+
+155
+00:10:59.425 --> 00:11:03.600
+[MÚSICA]

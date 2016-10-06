@@ -1,0 +1,209 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.150
+[MÚSICA] E aí pessoal, tudo bem?
+
+2
+00:00:08.150 --> 00:00:13.083
+Com os conceitos que vimos no
+módulo anterior, vamos fazer
+
+3
+00:00:13.083 --> 00:00:16.930
+jogo simples que o jogador deve desviar
+dos inimigos e pegar as moedas.
+
+4
+00:00:16.930 --> 00:00:20.880
+Cria novo projeto com template de game
+
+5
+00:00:20.880 --> 00:00:25.290
+com as configurações swift,
+spriteKit e universal.
+
+6
+00:00:25.290 --> 00:00:31.995
+[SEM_ÁUDIO] Remova
+
+7
+00:00:31.995 --> 00:00:37.500
+a orientação portrait pois vamos
+fazer jogo em modo paisagem.
+
+8
+00:00:37.500 --> 00:00:44.352
+Faça o download do
+
+9
+00:00:44.352 --> 00:00:49.700
+arquivo zip desse módulo e importe todas
+as imagens para a pasta assets.xcassets.
+
+10
+00:00:49.700 --> 00:00:55.447
+[SEM_ÁUDIO] Selecione
+
+11
+00:00:55.447 --> 00:00:59.470
+todos os arquivos de som
+e importe no seu projeto.
+
+12
+00:00:59.470 --> 00:01:04.130
+Lembre-se de deixar a opção copy
+items if needed selecionada.
+
+13
+00:01:04.130 --> 00:01:11.622
+[SEM_ÁUDIO] Vamos
+
+14
+00:01:11.622 --> 00:01:17.262
+começar fazendo jogo para IPhone,
+então no editor de cena mude o tamanho
+
+15
+00:01:17.262 --> 00:01:24.090
+da cena para 1136x640,
+que é a resolução do IPhone 5S.
+
+16
+00:01:24.090 --> 00:01:28.670
+No próximo módulo veremos como lidar
+com diferentes tamanhos de tela.
+
+17
+00:01:28.670 --> 00:01:34.740
+Adicione sprite color na cena
+e mude o nome para Background.
+
+18
+00:01:34.740 --> 00:01:39.030
+E selecione a imagem blue_desert.
+
+19
+00:01:39.030 --> 00:01:42.560
+Redimensione a imagem para
+ocupar a área toda da tela.
+
+20
+00:01:42.560 --> 00:01:46.204
+Para manter a proporção da imagem
+na hora de mudar o tamanho,
+
+21
+00:01:46.204 --> 00:01:48.280
+mantenha a tecla shift apertada.
+
+22
+00:01:48.280 --> 00:01:56.280
+[SEM_ÁUDIO]
+
+23
+00:01:56.280 --> 00:02:06.001
+[SEM_ÁUDIO] Adicione
+
+24
+00:02:06.001 --> 00:02:10.360
+outro sprite.
+
+25
+00:02:10.360 --> 00:02:16.310
+Renomeie para player.
+
+26
+00:02:16.310 --> 00:02:19.870
+E escolha a imagem alienGreen_swin1.
+
+27
+00:02:19.870 --> 00:02:25.319
+[SEM_ÁUDIO] E
+
+28
+00:02:25.319 --> 00:02:30.570
+redimensione o sprite para uma
+altura próxima ao cacto menor.
+
+29
+00:02:30.570 --> 00:02:38.463
+Agora vamos para o código GameScene.swift.
+
+30
+00:02:38.463 --> 00:02:41.960
+Apague as linhas de código
+que já vieram como exemplo.
+
+31
+00:02:41.960 --> 00:02:49.541
+[SEM_ÁUDIO] Crie
+
+32
+00:02:49.541 --> 00:02:56.280
+uma variável playerNode da classe
+SKSpriteNode da função didMovetoView.
+
+33
+00:02:56.280 --> 00:03:00.032
+Vamos procurar nó chamado player
+que criamos no editor de cena,
+
+34
+00:03:00.032 --> 00:03:05.140
+pela função ChildNodeWithName e não se
+esqueça de explicitar a classe desse nome,
+
+35
+00:03:05.140 --> 00:03:07.591
+como vimos no módulo passado.
+
+36
+00:03:07.591 --> 00:03:11.560
+Agora vamos fazer com que
+o ET siga o toque da tela.
+
+37
+00:03:11.560 --> 00:03:16.146
+Vamos fazer exatamente igual fizemos na
+aula de jogabilidade com toques no módulo
+
+38
+00:03:16.146 --> 00:03:16.750
+passado.
+
+39
+00:03:16.750 --> 00:03:22.250
+Na função touchesBegan, encontre
+a referência do primeiro toque, a posição
+
+40
+00:03:22.250 --> 00:03:27.620
+desse toque pela função locationInNode
+e atualize a posição do playerNode.
+
+41
+00:03:27.620 --> 00:03:31.421
+Faça o mesmo na função touchesMoved.
+
+42
+00:03:31.421 --> 00:03:33.450
+Rode no simulador.
+
+43
+00:03:33.450 --> 00:03:41.450
+[SEM_ÁUDIO]
+
+44
+00:03:41.450 --> 00:03:49.790
+[SEM_ÁUDIO] Com isso já temos
+o começo do nosso jogo.
+
+45
+00:03:49.790 --> 00:03:54.545
+Na próxima aula iremos
+adicionar inimigo no jogo.
+
+46
+00:03:54.545 --> 00:03:55.290
+Até lá.

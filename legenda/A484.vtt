@@ -1,0 +1,387 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.055
+[MÚSICA] Olá!
+
+2
+00:00:08.055 --> 00:00:12.323
+Bem vindo ao curso de
+orientação a objetos com Java.
+
+3
+00:00:12.323 --> 00:00:16.917
+Eu sou o Clovis Fernandes e hoje
+iremos falar de colaboração,
+
+4
+00:00:16.917 --> 00:00:20.551
+responsabilidade pública e
+responsabilidade privada.
+
+5
+00:00:20.551 --> 00:00:25.669
+Na parte 1 iremos falar especificamente
+de responsabilidade pública,
+
+6
+00:00:25.669 --> 00:00:30.652
+iremos tratar disso comparando
+com o conceito de colaboração.
+
+7
+00:00:30.652 --> 00:00:35.535
+Vimos anteriormente os conceitos
+de colaboração, classe cliente,
+
+8
+00:00:35.535 --> 00:00:40.150
+classe servidora inclusive na
+representação diagrama de classes UML.
+
+9
+00:00:40.150 --> 00:00:46.403
+Hoje especificamente iremos caracterizar
+o conceito de responsabilidade pública.
+
+10
+00:00:46.403 --> 00:00:50.702
+Posteriormente na segunda parte
+de responsabilidade privada.
+
+11
+00:00:50.702 --> 00:00:55.045
+Até esse momento estamos considerando
+dois tipos de responsabilidades:
+
+12
+00:00:55.045 --> 00:00:57.740
+responsabilidades públicas e privadas.
+
+13
+00:00:57.740 --> 00:01:00.809
+Mais para a frente nós vamos apresentar
+
+14
+00:01:00.809 --> 00:01:04.380
+também as responsabilidades
+que são protegidas.
+
+15
+00:01:04.380 --> 00:01:09.034
+Lembrando que responsabilidade é
+algo que a classe sabe ou faz,
+
+16
+00:01:09.034 --> 00:01:12.592
+lembrando que colaboração
+constitui o que uma
+
+17
+00:01:12.592 --> 00:01:16.478
+responsabilidade faz
+numa classe colaboradora.
+
+18
+00:01:16.478 --> 00:01:20.389
+O que vem a ser então
+responsabilidade pública?
+
+19
+00:01:20.389 --> 00:01:25.218
+Vai ser uma responsabilidade
+que o acesso a ela vai
+
+20
+00:01:25.218 --> 00:01:29.170
+ser feito por qualquer
+responsabilidade de outras classes.
+
+21
+00:01:29.170 --> 00:01:34.048
+E como é que a gente determina então
+como é que uma responsabilidade é
+
+22
+00:01:34.048 --> 00:01:37.215
+pública ou privada, que é mais difícil?
+
+23
+00:01:37.215 --> 00:01:41.775
+Nós vamos caracterizar que
+a responsabilidade é pública
+
+24
+00:01:41.775 --> 00:01:46.753
+quando ela é colaboração de pelo menos uma
+responsabilidade com uma outra classe,
+
+25
+00:01:46.753 --> 00:01:49.850
+porque essa classe vai
+precisar da colaboração dela,
+
+26
+00:01:49.850 --> 00:01:53.590
+vai precisar da colaboração
+dela ela precisa ser pública,
+
+27
+00:01:53.590 --> 00:01:57.280
+ela precisa ter acesso
+disponível na interface.
+
+28
+00:01:57.280 --> 00:02:02.596
+Então nós vamos marcar no
+diagrama UML com o prefixo "+".
+
+29
+00:02:02.596 --> 00:02:07.950
+Ao fazer isso nós estamos dizendo
+que essa responsabilidade é pública.
+
+30
+00:02:07.950 --> 00:02:12.440
+Java nós vamos usar o termo public,
+público,
+
+31
+00:02:12.440 --> 00:02:17.880
+que vai significar que o método é público.
+
+32
+00:02:17.880 --> 00:02:22.010
+No nosso projeto, então,
+baseado cartões CRC,
+
+33
+00:02:22.010 --> 00:02:27.440
+isso fica muito fácil identificar se as
+responsabilidades são públicas ou não.
+
+34
+00:02:27.440 --> 00:02:31.415
+Primeiramente nós temos que
+identificar se ela é pública.
+
+35
+00:02:31.415 --> 00:02:36.213
+Nós vamos pegar cada responsabilidade
+e vamos verificar se tem alguma
+
+36
+00:02:36.213 --> 00:02:42.720
+responsabilidade outra classe que tem
+essa responsabilidade como colaboração.
+
+37
+00:02:42.720 --> 00:02:46.969
+Se tiver essa responsabilidade
+colaboradora,
+
+38
+00:02:46.969 --> 00:02:49.580
+deve ser apontada como publica.
+
+39
+00:02:49.580 --> 00:02:54.121
+Para exemplificar vamos mostrar
+a responsabilidade Anexa
+
+40
+00:02:54.121 --> 00:02:57.288
+usuário do empréstimo da classe Livro.
+
+41
+00:02:57.288 --> 00:03:02.190
+Ela é uma responsabilidade que nós
+vamos procurar e vamos ver que
+
+42
+00:03:02.190 --> 00:03:06.980
+na classe Biblioteca o Empresta livro faz
+
+43
+00:03:06.980 --> 00:03:11.260
+uso da colaboração da Anexa usuário.
+
+44
+00:03:11.260 --> 00:03:16.070
+Então, apenas por causa disso,
+a responsabilidade Anexa usuário
+
+45
+00:03:16.070 --> 00:03:20.460
+ela é pública,
+vai ser marcada como pública.
+
+46
+00:03:20.460 --> 00:03:26.560
+As duas responsabilidades, o Anexa usuário
+e o Desanexa usuário do empréstimo,
+
+47
+00:03:26.560 --> 00:03:31.223
+da classe Livro, elas vão ser marcadas
+como públicas porque elas têm cada uma
+
+48
+00:03:31.223 --> 00:03:37.040
+delas responsabilidades que
+as usam como colaboração.
+
+49
+00:03:37.040 --> 00:03:41.875
+Fazemos isso para todas as
+responsabilidades de todas as classes.
+
+50
+00:03:41.875 --> 00:03:46.710
+A estrutura de cartão CRC facilita
+muito encontrar isso muito rapidamente.
+
+51
+00:03:46.710 --> 00:03:49.674
+Apresento a seguir como é
+que fica a classe Livro,
+
+52
+00:03:49.674 --> 00:03:54.271
+eu estou chamando aí de Book,
+de forma meio pedante, está certo?
+
+53
+00:03:54.271 --> 00:03:58.190
+Anexa usuário ela é pública,
+está aí vermelho.
+
+54
+00:03:58.190 --> 00:03:59.716
+Pública.
+
+55
+00:03:59.716 --> 00:04:06.720
+Então está aí public anexa usuário,
+e eu passo esse usuário como parâmetro.
+
+56
+00:04:06.720 --> 00:04:12.240
+Então tem parâmetro que é do tipo Usuário,
+da classe Usuário.
+
+57
+00:04:12.240 --> 00:04:19.367
+E a variável de instância da classe
+livro que eu chamo de usuário,
+
+58
+00:04:19.367 --> 00:04:26.084
+vai receber quem é esse usuário que está
+acabando de emprestar o livro, está certo?
+
+59
+00:04:26.084 --> 00:04:29.860
+A desanexa também é pública,
+está aí marcado aí também.
+
+60
+00:04:29.860 --> 00:04:32.217
+A desanexa também é pública.
+
+61
+00:04:32.217 --> 00:04:36.337
+Então ela é mais simples
+ainda que eu simplesmente
+
+62
+00:04:36.337 --> 00:04:41.180
+faço com que a variável de
+instância usuário seja nula.
+
+63
+00:04:41.180 --> 00:04:45.750
+Vocês lembram que quando
+a gente fez aquele hands on de
+
+64
+00:04:45.750 --> 00:04:50.526
+projeto da aplicação de automação do
+sistema de automação de biblioteca?
+
+65
+00:04:50.526 --> 00:04:55.934
+No final nós tínhamos feito
+refinamento que essa variável usuário,
+
+66
+00:04:55.934 --> 00:05:01.389
+o usuário,
+através do Anexa e o Desanexa usuário,
+
+67
+00:05:01.389 --> 00:05:08.020
+ela servia para se saber a disponibilidade
+do livro para empréstimo ou não.
+
+68
+00:05:08.020 --> 00:05:11.881
+Então basta olhar a variável usuário.
+
+69
+00:05:11.881 --> 00:05:16.960
+Se ela está nula, opa,
+o livro está disponível para empréstimo.
+
+70
+00:05:16.960 --> 00:05:22.210
+Se ela não está nula
+significa que lá dentro tem
+
+71
+00:05:22.210 --> 00:05:27.769
+objeto do usuário que foi o
+responsável pelo empréstimo.
+
+72
+00:05:27.769 --> 00:05:32.580
+Faz parte do projeto examinar
+e descobrir se as variáveis,
+
+73
+00:05:32.580 --> 00:05:37.211
+se as responsabilidades
+são públicas ou privadas.
+
+74
+00:05:37.211 --> 00:05:42.481
+Então nesta aula nós examinamos
+e mostramos uma maneira
+
+75
+00:05:42.481 --> 00:05:47.605
+simples de reconhecer se
+a responsabilidade é pública ou não.
+
+76
+00:05:47.605 --> 00:05:52.121
+Basta saber se ela teve uma
+colaboração de alguma outra classe.
+
+77
+00:05:52.121 --> 00:05:55.620
+Se teve ela tem que ser pública
+e vai ser marcada então pública.
+
+78
+00:05:55.620 --> 00:06:03.708
+Até a próxima aula na parte 2 que eu
+vou tratar de responsabilidade privada.
+
+79
+00:06:03.708 --> 00:06:05.140
+Obrigado!
+
+80
+00:06:05.140 --> 00:06:10.150
+[MÚSICA]

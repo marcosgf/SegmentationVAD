@@ -1,0 +1,1156 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.370
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:09.370 --> 00:00:14.410
+meu nome é Eduardo Guerra e essa
+daqui é a caveira Tomei Todas,
+
+3
+00:00:14.410 --> 00:00:18.534
+que vai estar participando dessa aula
+aqui com a gente e esse é o curso
+
+4
+00:00:18.534 --> 00:00:22.150
+de Desenvolvimento de
+Software Guiado por Testes.
+
+5
+00:00:22.150 --> 00:00:26.630
+Hoje vamos estar fazendo uma pergunta aí,
+
+6
+00:00:26.630 --> 00:00:31.694
+que já ecoou os principais teatros,
+talvez não dessa forma,
+
+7
+00:00:31.694 --> 00:00:36.900
+do mundo certo,
+que seria aí: Mockar ou não mockar?
+
+8
+00:00:36.900 --> 00:00:38.501
+Eis a questão!
+
+9
+00:00:38.501 --> 00:00:39.363
+Certo.
+
+10
+00:00:39.363 --> 00:00:44.545
+Então, essa é uma questão
+que muita gente me faz.
+
+11
+00:00:44.545 --> 00:00:46.897
+A gente tem que mockar ou não mockar?
+
+12
+00:00:46.897 --> 00:00:49.749
+Que situações eu devo
+criar o mock no meu texto?
+
+13
+00:00:49.749 --> 00:00:54.536
+São todas as situações que eu
+tenho alí uma dependência que eu
+
+14
+00:00:54.536 --> 00:00:57.010
+tenho que criar o mock?
+
+15
+00:00:57.010 --> 00:01:01.785
+Então, nessa aula a gente vai
+pegar algumas situações e aí vamos
+
+16
+00:01:01.785 --> 00:01:06.908
+fazer a pergunta aqui,
+para a nossa amiga, mockar ou não mockar?
+
+17
+00:01:06.908 --> 00:01:12.100
+E aí vamos ver aí cada situação o
+que é que seria mais adequado fazer
+
+18
+00:01:12.100 --> 00:01:18.172
+para quando você estiver fazendo TDD você
+poder decidir melhor se você deve mockar,
+
+19
+00:01:18.172 --> 00:01:21.580
+e até mesmo como você deve
+mockar aquela dependência.
+
+20
+00:01:21.580 --> 00:01:25.990
+Então vamos ver aí o
+primeiro questionamento,
+
+21
+00:01:25.990 --> 00:01:33.105
+se eu tenho uma dependência que
+lida com recursos externos,
+
+22
+00:01:33.105 --> 00:01:37.960
+que são difíceis de testar e
+que tem uma lógica complexa.
+
+23
+00:01:37.960 --> 00:01:40.544
+O que eu eu devo fazer?
+
+24
+00:01:40.544 --> 00:01:43.130
+Mockar ou não mockar?
+
+25
+00:01:43.130 --> 00:01:45.645
+Então vamos ver: mockar.
+
+26
+00:01:45.645 --> 00:01:52.337
+Então esse caso, é caso perfeito
+para a gente mockar a nossa classe.
+
+27
+00:01:52.337 --> 00:01:54.730
+Então, porquê mockar?
+
+28
+00:01:54.730 --> 00:02:01.124
+Primeiro: esses recursos externos,
+principalmente se for acesso a redes,
+
+29
+00:02:01.124 --> 00:02:05.749
+acesso a arquivos, ou acesso a bancos de
+dados, isso pode deixar o texto muito
+
+30
+00:02:05.749 --> 00:02:09.406
+lento, e depois para você rodar sua
+Suite inteira às vezes com várias
+
+31
+00:02:09.406 --> 00:02:13.970
+classes que estão fazendo esse acesso,
+isso pode tornar o texto bastante lento.
+
+32
+00:02:13.970 --> 00:02:17.947
+Principalmente se você está fazendo isso,
+não na própria classe,
+
+33
+00:02:17.947 --> 00:02:21.149
+mas talvez na classe que depende dela,
+então, esse é
+
+34
+00:02:21.149 --> 00:02:25.415
+dos motivos pelo qual às vezes pode ser
+interessante você estar criando o mock.
+
+35
+00:02:25.415 --> 00:02:26.519
+Outra coisa.
+
+36
+00:02:26.519 --> 00:02:30.948
+Pode ser complicado preparar
+o cenário nesses casos onde,
+
+37
+00:02:30.948 --> 00:02:33.342
+por exemplo, uma lógica é mais complicada.
+
+38
+00:02:33.342 --> 00:02:36.690
+Às vezes ele faz cálculo complicado
+e você só precisa saber,
+
+39
+00:02:36.690 --> 00:02:41.237
+esse cara precisa retornar 10,
+é o que eu preciso aqui para minha classe,
+
+40
+00:02:41.237 --> 00:02:45.995
+mas não, você tem que ir lá e pensar todos
+os parâmetros que você tem que passar para
+
+41
+00:02:45.995 --> 00:02:50.480
+aquela classe que faz aquele cálculo
+ultracomplicado para que ela retorne 10,
+
+42
+00:02:50.480 --> 00:02:54.955
+então com o mock, você simplesmente fala:
+mock retorna 10 aí para o nosso amigo,
+
+43
+00:02:54.955 --> 00:02:57.023
+para ele poder fazer o teste.
+
+44
+00:02:57.023 --> 00:03:00.993
+A mesma coisa, por exemplo,
+para mandar e-mail,
+
+45
+00:03:00.993 --> 00:03:06.320
+para uma classe que depende de outra
+que faz uma leitura de arquivo,
+
+46
+00:03:06.320 --> 00:03:11.297
+o que interessa é o que ela vai retornar
+para você e não a leitura do arquivo si.
+
+47
+00:03:11.297 --> 00:03:15.963
+Então tudo isso acaba dificultando
+essa questão do teste.
+
+48
+00:03:15.963 --> 00:03:21.094
+Outro motivo que a gente tem
+para mockar é que nesse caso,
+
+49
+00:03:21.094 --> 00:03:25.948
+por exemplo, você vai ter que
+interagir com arquivo para
+
+50
+00:03:25.948 --> 00:03:31.020
+poder colocar o arquivo que a dependência
+precisa, ou você vai ter que interagir com
+
+51
+00:03:31.020 --> 00:03:35.294
+servidor de e-mail para verificar
+se a dependência mandou e-mail.
+
+52
+00:03:35.294 --> 00:03:39.567
+Então isso daí acaba acoplando o teste
+com essas APIs de mandar e-mail,
+
+53
+00:03:39.567 --> 00:03:42.553
+de acessar arquivos,
+que é o que está sendo usado lá
+
+54
+00:03:42.553 --> 00:03:46.935
+baixo e que às vezes não tem a ver com
+a classe mesmo que você quer desenvolver.
+
+55
+00:03:46.935 --> 00:03:51.000
+Então isso aí também é motivo
+interessante para você mockar,
+
+56
+00:03:51.000 --> 00:03:54.324
+porque se você não mockar,
+você vai acabar,
+
+57
+00:03:54.324 --> 00:03:59.843
+seu teste vai acabar acoplado com essas
+APIs de fazer essas tarefas periféricas
+
+58
+00:03:59.843 --> 00:04:04.850
+que não são relacionadas à sua classe si,
+mas sim com a dependência delas.
+
+59
+00:04:04.850 --> 00:04:08.720
+Então vamos para a próxima,
+a próxima questão.
+
+60
+00:04:08.720 --> 00:04:13.933
+Essa é uma pegunta que escuto bastante,
+muita gente vêm me questionar,
+
+61
+00:04:13.933 --> 00:04:17.540
+se deve mockar diretamente uma classe,
+
+62
+00:04:17.540 --> 00:04:22.720
+por exemplo uma JDK do Java
+ou de algum framework ou API.
+
+63
+00:04:22.720 --> 00:04:27.509
+Eu tenho que mockar a classe do
+JDBC que acessa o banco de dados?
+
+64
+00:04:27.509 --> 00:04:31.640
+Ou eu tenho que mockar a classe do frame,
+que é aqui que eu estou chamando.
+
+65
+00:04:31.640 --> 00:04:37.360
+Então, toda e todas, mockar ou não mockar?
+
+66
+00:04:37.360 --> 00:04:38.990
+Nesse caso, não mock.
+
+67
+00:04:38.990 --> 00:04:44.205
+Mas eu não digo para não mockar nada,
+eu estou falando não mock esta classe.
+
+68
+00:04:44.205 --> 00:04:49.635
+Ao invés disso, faça o seguinte: você pega
+a classe que você está desenvolvendo,
+
+69
+00:04:49.635 --> 00:04:53.686
+você vai ter alí uma classe intermediária,
+
+70
+00:04:53.686 --> 00:04:57.638
+tá que vai estar encapsulando
+essa API nativa.
+
+71
+00:04:57.638 --> 00:05:04.962
+Então por exemplo, ao invés de você
+estar mockando aquela API nativa,
+
+72
+00:05:04.962 --> 00:05:10.090
+você vai estar mockando essa
+classe que está encapsulando.
+
+73
+00:05:10.090 --> 00:05:13.992
+E aí vamos ver,
+só para dar exemplo mais concreto,
+
+74
+00:05:13.992 --> 00:05:19.945
+imagina que sua classe use diretamente
+uma classe que crie arquivo.
+
+75
+00:05:19.945 --> 00:05:26.373
+Então ao invés de mockar a classe do Java,
+
+76
+00:05:26.373 --> 00:05:32.322
+do JDK, que realmente cria aquele arquivo,
+eu vou criar uma classe que
+
+77
+00:05:32.322 --> 00:05:37.750
+ela sim vai interagir com essa classe
+do JDK, que vai criar esse arquivo.
+
+78
+00:05:37.750 --> 00:05:41.104
+Então eu vou criar uma
+classe intermediária,
+
+79
+00:05:41.104 --> 00:05:45.750
+e aí eu vou criar mock dela,
+e não da classe do framework e etc.
+
+80
+00:05:45.750 --> 00:05:47.516
+Então primeiro uma coisa.
+
+81
+00:05:47.516 --> 00:05:49.819
+Porque não mockar essa API nativa?
+
+82
+00:05:49.819 --> 00:05:52.466
+Primeiro, ela pode ter muitos detalhes.
+
+83
+00:05:52.466 --> 00:05:55.955
+Lembra que é uma classe que não
+foi feita para sua aplicação,
+
+84
+00:05:55.955 --> 00:05:59.555
+ela foi feita para todas as
+aplicações que quiserem usar aquilo.
+
+85
+00:05:59.555 --> 00:06:03.921
+Então talvez aquela classe vai ter
+muitos métodos que você não precisa,
+
+86
+00:06:03.921 --> 00:06:07.520
+que você nem sabe o que faz,
+e nem precisa saber.
+
+87
+00:06:07.520 --> 00:06:12.150
+Aquela classe pode ser complicada,
+pode ser complicada de instanciar,
+
+88
+00:06:12.150 --> 00:06:14.092
+pode não ter boas abstrações,
+
+89
+00:06:14.092 --> 00:06:18.227
+então essa classe pode ter muitos
+detalhes desnecessários para você.
+
+90
+00:06:18.227 --> 00:06:22.451
+Às vezes você precisa que ela faça uma
+coisa mas você tem que chamar 5 métodos
+
+91
+00:06:22.451 --> 00:06:23.120
+para isso.
+
+92
+00:06:23.120 --> 00:06:25.430
+Porque?
+Porque você tem que configurar uma série
+
+93
+00:06:25.430 --> 00:06:25.980
+de coisas.
+
+94
+00:06:25.980 --> 00:06:28.070
+Como é que você vai fazer tudo isso mock?
+
+95
+00:06:28.070 --> 00:06:28.675
+É possível?
+
+96
+00:06:28.675 --> 00:06:32.486
+É, mas vai ser mock muito mais complicado
+do que simplesmente se você tivesse
+
+97
+00:06:32.486 --> 00:06:34.416
+método Faz Isso, aí você fala: método,
+
+98
+00:06:34.416 --> 00:06:38.115
+ele tem que te chamar com isso e
+você retorna aquele outro negócio.
+
+99
+00:06:38.115 --> 00:06:42.614
+Até mesmo os tipos de retorno
+dessas classes, para você simular
+
+100
+00:06:42.614 --> 00:06:47.294
+com mock podem ser bem complicados,
+às vezes envolve até mais de uma classe.
+
+101
+00:06:47.294 --> 00:06:51.745
+Às vezes você tem que chamar uma classe
+que cria outra, que essa sim você vai
+
+102
+00:06:51.745 --> 00:06:55.913
+chamar métodos, aí você tem que criar
+outra para estar passando para ela.
+
+103
+00:06:55.913 --> 00:06:58.440
+Tudo isso podem ser fatores
+que podem complicar
+
+104
+00:06:58.440 --> 00:07:01.711
+você mockar diretamente a API nativa.
+
+105
+00:07:01.711 --> 00:07:05.585
+Então, porque criar
+a classe que encapsula?
+
+106
+00:07:05.585 --> 00:07:09.689
+Primeira coisa, essa classe que
+encapsula ela vai implementar
+
+107
+00:07:09.689 --> 00:07:12.730
+diretamente o método que
+a sua classe precisa.
+
+108
+00:07:12.730 --> 00:07:15.854
+Então se a sua classe
+precisa de enviar e-mail,
+
+109
+00:07:15.854 --> 00:07:18.398
+essa classe vai ter lá: enviar e-mail.
+
+110
+00:07:18.398 --> 00:07:21.545
+Ela não vai ter 7 destinatários,
+7 não sei o que,
+
+111
+00:07:21.545 --> 00:07:23.964
+configura o servidor de não sei do que.
+
+112
+00:07:23.964 --> 00:07:25.650
+Ela não vai ter nada disso.
+
+113
+00:07:25.650 --> 00:07:28.310
+Ela simplesmente vai ter o envia e-mail.
+
+114
+00:07:28.310 --> 00:07:32.918
+Então ela vai ter, ela vai se encaixar
+perfeitamente com as necessidades.
+
+115
+00:07:32.918 --> 00:07:36.310
+Isso aí no teste vai ficar muito,
+mas muito mais claro.
+
+116
+00:07:36.310 --> 00:07:41.402
+E benefício que a gente
+acaba colhendo disso daí,
+
+117
+00:07:41.402 --> 00:07:47.343
+é que a gente desacopla essa classe
+principal dessa API específica.
+
+118
+00:07:47.343 --> 00:07:53.277
+Então vai estar desacoplando
+a classe que eu estou desenvolvendo,
+
+119
+00:07:53.277 --> 00:07:55.770
+por exemplo, dessa API de e-mail.
+
+120
+00:07:55.770 --> 00:08:00.754
+Então se, por exemplo, como eu tenho essa
+classe que encapsula o acesso à essa
+
+121
+00:08:00.754 --> 00:08:05.998
+API de e-mail, se amanhã eu achar
+uma API mais eficiente, ou que se
+
+122
+00:08:05.998 --> 00:08:10.724
+integra melhor com a minha infraestrutura,
+eu não preciso alterar a minha classe
+
+123
+00:08:10.724 --> 00:08:15.722
+principal e simplesmente essa classe, cuja
+função é interagir com a API de e-mail
+
+124
+00:08:15.722 --> 00:08:20.468
+para prover as funcionalidade na
+medida que a minha classe precisa.
+
+125
+00:08:20.468 --> 00:08:25.985
+Então esse desacoplamento também é
+benefício que a gente ganha do mock.
+
+126
+00:08:25.985 --> 00:08:31.804
+De uma certa forma tornar o teste mais
+fácil, tornar o teste mais simples,
+
+127
+00:08:31.804 --> 00:08:36.950
+está facilitando está melhorando
+o design da própria aplicação.
+
+128
+00:08:36.950 --> 00:08:42.775
+Vamos para a próxima, para o próximo
+questionamento, o próximo cenário.
+
+129
+00:08:42.775 --> 00:08:47.907
+Então, às vezes a gente cria classes
+que tem aquelas coisas internas,
+
+130
+00:08:47.907 --> 00:08:53.235
+onde você às vezes cria uma classezinha
+auxiliar, mas é aquela coisa que não
+
+131
+00:08:53.235 --> 00:08:58.408
+aparece para os clientes e nem
+deve aparecer para os clientes.
+
+132
+00:08:58.408 --> 00:09:02.931
+Então nesse caso, mockar ou não mockar?
+
+133
+00:09:02.931 --> 00:09:07.180
+Nesse caso, eu não devo mockar.
+
+134
+00:09:07.180 --> 00:09:12.696
+É uma classe interna, eu vou enxergar
+minha classe só a partir dali.
+
+135
+00:09:12.696 --> 00:09:17.690
+Se ela não se encaixar naquelas
+questões de dificultar muito o teste,
+
+136
+00:09:17.690 --> 00:09:23.231
+de depender de recursos externos, de ter
+uma lógica extremamente complicada, se
+
+137
+00:09:23.231 --> 00:09:28.940
+ela é simplesmente uma solução interna alí
+na minha classe, não é necessário mockar.
+
+138
+00:09:28.940 --> 00:09:34.540
+Então a primeira coisa é que o
+teste vai acabar ficando acoplado
+
+139
+00:09:34.540 --> 00:09:41.020
+nessa solução interna da classe, tornando
+essa solução difícil de ser alterado.
+
+140
+00:09:41.020 --> 00:09:45.996
+Então se depois: Eu criei aqui uma
+classe interna com tal característica.
+
+141
+00:09:45.996 --> 00:09:50.133
+Se depois eu quiser mexer ali, trocar
+aquela classe interna por uma outra ou
+
+142
+00:09:50.133 --> 00:09:54.639
+até mudar o formato como o meu teste,
+se ele estiver mockando aquela classe,
+
+143
+00:09:54.639 --> 00:09:59.500
+isso vai gerar uma complicação muito
+grande, que aí acaba tornando até difícil
+
+144
+00:09:59.500 --> 00:10:03.250
+de estar alterando e refatorando,
+e o objetivo não é esse.
+
+145
+00:10:03.250 --> 00:10:09.859
+[SEM_ÁUDIO] Outra coisa,
+
+146
+00:10:09.859 --> 00:10:14.573
+outro motivo porque não mockar,
+é porque como a minha
+
+147
+00:10:14.573 --> 00:10:19.771
+solução interna vai estar ligada
+ao meu teste, por causa do mock,
+
+148
+00:10:19.771 --> 00:10:24.512
+vai ser muito mais difícil estar
+refatorando e se eu quiser refatorar,
+
+149
+00:10:24.512 --> 00:10:27.865
+eu vou ter que mexer, não só na
+minha classe mas também no teste.
+
+150
+00:10:27.865 --> 00:10:32.217
+E o ideal, como a gente viu ali no chapéu
+do TDD é que no momento que eu estiver
+
+151
+00:10:32.217 --> 00:10:35.379
+refatorando, o meu teste
+esteja bem estável.
+
+152
+00:10:35.379 --> 00:10:41.011
+Então esse fato de você ter a solução
+interna ligada diretamente ao
+
+153
+00:10:41.011 --> 00:10:47.909
+teste isso daí acaba dificultando, então é
+mais motivo pelo qual eu não devo mockar.
+
+154
+00:10:47.909 --> 00:10:52.473
+E outra coisa, aquela solução interna,
+eu vou estar mockando ela,
+
+155
+00:10:52.473 --> 00:10:57.386
+eu vou estar expondo ela na API externa
+da classe às vezes sem necessidade,
+
+156
+00:10:57.386 --> 00:10:59.750
+é uma coisa que poderia ficar presa.
+
+157
+00:10:59.750 --> 00:11:02.692
+Pode ser que você esteja
+pouco na dúvida agora.
+
+158
+00:11:02.692 --> 00:11:07.260
+Poxa mas você falou que se for difícil,
+que eu posso ter uma solução interna,
+
+159
+00:11:07.260 --> 00:11:08.093
+que é difícil.
+
+160
+00:11:08.093 --> 00:11:12.458
+Então é aquela decisão que você tem que
+tomar na hora que você está fazendo TDD,
+
+161
+00:11:12.458 --> 00:11:17.073
+na hora que você está fazendo o seu
+design, de qual é a estabilidade
+
+162
+00:11:17.073 --> 00:11:22.160
+dessa API, o qual ela é importante
+para o sistema como todo,
+
+163
+00:11:22.160 --> 00:11:26.056
+a interface dessa classe ou isso
+aqui é realmente uma coisa interna,
+
+164
+00:11:26.056 --> 00:11:28.473
+que não interessa para o resto do sistema.
+
+165
+00:11:28.473 --> 00:11:34.082
+Essa divisão, essa fronteira entre essas
+duas classes é importante ou não para mim.
+
+166
+00:11:34.082 --> 00:11:37.090
+Então é essa a questão
+mockar ou não mockar?
+
+167
+00:11:37.090 --> 00:11:39.793
+A sua dependência está
+pouco ligada à isso.
+
+168
+00:11:39.793 --> 00:11:42.289
+É uma coisa interna, é uma solução local,
+
+169
+00:11:42.289 --> 00:11:45.952
+isso aqui é importante no contexto
+do meu sistema como todo.
+
+170
+00:11:45.952 --> 00:11:50.150
+Então eu vou mockar para que o cara
+alí tenha uma interface bem definida,
+
+171
+00:11:50.150 --> 00:11:54.272
+essa questão do acoplamento do teste
+com a interface da sua dependência,
+
+172
+00:11:54.272 --> 00:12:00.400
+está diretamente ligada ao fato de ela
+ser uma dependência estável ou não.
+
+173
+00:12:00.400 --> 00:12:04.917
+Nosso último caso aqui, eu devo mockar uma
+
+174
+00:12:04.917 --> 00:12:09.901
+dependência que pode receber uma
+classe com diferentes comportamentos?
+
+175
+00:12:09.901 --> 00:12:13.466
+Às vezes a gente tem uma classe que
+falo assim: essa classe aqui vai ter
+
+176
+00:12:13.466 --> 00:12:14.425
+esse down e acabou.
+
+177
+00:12:14.425 --> 00:12:17.892
+Vai ter essa classe aqui que acessa esse
+arquivo, esse banco de dados e pronto.
+
+178
+00:12:17.892 --> 00:12:19.340
+Às vezes eu posso ter uma classe,
+
+179
+00:12:19.340 --> 00:12:22.766
+que eu falo assim: essa classe ela
+pode ter uma dependência que varia,
+
+180
+00:12:22.766 --> 00:12:27.384
+que eu posso usar o polimorfismo
+para colocar várias classe alí.
+
+181
+00:12:27.384 --> 00:12:32.860
+Nesse caso, esse tipo de dependência,
+mockar ou não mockar?
+
+182
+00:12:32.860 --> 00:12:36.186
+Nesse caso, a resposta é mockar.
+
+183
+00:12:36.186 --> 00:12:41.461
+Simplesmete porque você nem sabe
+qual dependência vai estar alí.
+
+184
+00:12:41.461 --> 00:12:45.863
+Então a primeira coisa é,
+você pode usar o próprio mock para você
+
+185
+00:12:45.863 --> 00:12:48.280
+projetar qual que é
+a API dessa dependência,
+
+186
+00:12:48.280 --> 00:12:52.482
+qual que é a interface dessa dependência,
+que métodos essa dependência tem que ter?
+
+187
+00:12:52.482 --> 00:12:53.948
+Então você fala assim olha,
+
+188
+00:12:53.948 --> 00:12:58.257
+eu tenho aqui a minha classe principal
+e eu quero variar tal comportamento.
+
+189
+00:12:58.257 --> 00:13:02.889
+Aí a partir dos testes você vai definindo
+quais são esses comportamentos que
+
+190
+00:13:02.889 --> 00:13:04.984
+essa dependência precisa ter.
+
+191
+00:13:04.984 --> 00:13:09.447
+Então o mock é até uma forma de
+você fazer o projeto dessa classe.
+
+192
+00:13:09.447 --> 00:13:12.819
+Outro motivo para você
+mockar é que às vezes,
+
+193
+00:13:12.819 --> 00:13:17.326
+se você pegasse uma classe
+específica para o teste ela pode não
+
+194
+00:13:17.326 --> 00:13:21.850
+cobrir todos os comportamentos
+possíveis para aquela dependência.
+
+195
+00:13:21.850 --> 00:13:23.636
+Vou dar exemplo simples.
+
+196
+00:13:23.636 --> 00:13:28.571
+Imagine que eu tenha, eu coloque uma
+classe específica e aquela classe por
+
+197
+00:13:28.571 --> 00:13:31.166
+exemplo nunca jogue uma exceção.
+
+198
+00:13:31.166 --> 00:13:35.796
+Mas pode ser que outras classes que vamos
+supor, se eu tiver uma outra classe
+
+199
+00:13:35.796 --> 00:13:39.860
+que acesse uma rede, ela pode gerar uma
+exceção, por exemplo, se a rede cair.
+
+200
+00:13:39.860 --> 00:13:43.980
+E eu preciso que a minha
+classe esteja funcionando
+
+201
+00:13:43.980 --> 00:13:48.719
+todos os casos e não só naqueles
+casos daquela classe específica.
+
+202
+00:13:48.719 --> 00:13:49.304
+Porquê?
+
+203
+00:13:49.304 --> 00:13:53.472
+Justamente pelo fato de eu poder
+usar polimorfismo e inserir várias
+
+204
+00:13:53.472 --> 00:13:56.859
+classes diferentes no
+lugar daquela dependência.
+
+205
+00:13:56.859 --> 00:14:02.233
+Então, às vezes, o mock você pode simular
+vários comportamentos diferentes,
+
+206
+00:14:02.233 --> 00:14:04.151
+como exceções, tipos de retorno.
+
+207
+00:14:04.151 --> 00:14:08.898
+Por exemplo, imagine uma classe que
+retorna número mas nunca retorna negativo.
+
+208
+00:14:08.898 --> 00:14:11.994
+Pode ser que eu tenha uma
+dependência que vá retornar.
+
+209
+00:14:11.994 --> 00:14:14.700
+Mas e aí,
+como a minha classe vai se comportar?
+
+210
+00:14:14.700 --> 00:14:19.345
+Então o mock ele tem essa característica
+de permitir que você defina bem esses
+
+211
+00:14:19.345 --> 00:14:24.056
+cenários de conseguir
+explorar todos eles no teste.
+
+212
+00:14:24.056 --> 00:14:28.925
+Diferente se você estivesse usando
+uma implementação específica.
+
+213
+00:14:28.925 --> 00:14:33.907
+E por fim, você pode usar o mock até
+para dividir as responsabilidades entre
+
+214
+00:14:33.907 --> 00:14:37.533
+a classe e a dependência,
+ou seja, para você saber, ok,
+
+215
+00:14:37.533 --> 00:14:40.130
+essa classe aqui ela precisa fazer isso,
+
+216
+00:14:40.130 --> 00:14:45.265
+mas essa outra parte aqui quem me
+dá essa resposta é a dependência.
+
+217
+00:14:45.265 --> 00:14:50.400
+Ou essa funcionalidade depende da
+resposta que a dependência me der.
+
+218
+00:14:50.400 --> 00:14:53.475
+Então essa divisão de resposabilidades,
+alí,
+
+219
+00:14:53.475 --> 00:14:57.226
+de uma forma mais fina de
+uma forma mais detalhada,
+
+220
+00:14:57.226 --> 00:15:02.562
+ela também pode ser feita no teste, pode
+ser definida no teste, a partir do mock.
+
+221
+00:15:02.562 --> 00:15:05.470
+Ou seja,
+esse cara vai me dar essa resposta,
+
+222
+00:15:05.470 --> 00:15:08.890
+então isso aqui é responsabilidade
+da minha dependência.
+
+223
+00:15:08.890 --> 00:15:13.248
+Aqui eu tenho que verificar a partir da
+resposta dele tenho esses casos aqui,
+
+224
+00:15:13.248 --> 00:15:16.590
+então isso aqui é
+responsabilidade da minha classe.
+
+225
+00:15:16.590 --> 00:15:21.447
+Então essa divisão mais fina entre
+responsabilidades, você também pode
+
+226
+00:15:21.447 --> 00:15:26.252
+estar usando o mock, é mais motivo
+para você mockar nesse caso aí.
+
+227
+00:15:26.252 --> 00:15:30.114
+Então eu espero que com
+isso a gente tenha falado
+
+228
+00:15:30.114 --> 00:15:33.570
+pouquinho aí sobre mockar ou não mockar.
+
+229
+00:15:33.570 --> 00:15:37.431
+Tivemos a participação da nossa amiga,
+
+230
+00:15:37.431 --> 00:15:42.373
+Tomei Todas,
+que nos ajudou nessa questão teatral,
+
+231
+00:15:42.373 --> 00:15:47.820
+mas eu quero que fique realmente
+esse recado, essa mensagem,
+
+232
+00:15:47.820 --> 00:15:53.238
+que você simplesmente criar, não sair
+criando mock de todos os tipos de classes,
+
+233
+00:15:53.238 --> 00:15:58.219
+ou deixar de criar mock, sair fazendo
+teste encapsulado de todas as classes.
+
+234
+00:15:58.219 --> 00:16:03.350
+Para você realmente pensar nos motivos,
+eu apresentei aqui alguns cenários,
+
+235
+00:16:03.350 --> 00:16:08.515
+que você cria o mock, você não cria o
+mock e às vezes você tem esses cenários
+
+236
+00:16:08.515 --> 00:16:13.532
+misturados e você tem que pesar as
+coisas e realmente, criar ou não o mock,
+
+237
+00:16:13.532 --> 00:16:18.650
+acaba sendo uma decisão de design, acaba
+sendo uma decisão importante quando você
+
+238
+00:16:18.650 --> 00:16:25.168
+está fazendo o seu teste ou quando
+você está projetando o seu sistema.
+
+239
+00:16:25.168 --> 00:16:28.326
+Que com TDD a gente projeta
+o sistema com o teste.
+
+240
+00:16:28.326 --> 00:16:33.062
+Então, muito obrigado por assistir e
+espero que essa questão tenha ficado
+
+241
+00:16:33.062 --> 00:16:36.558
+clara para vocês.
+
+242
+00:16:36.558 --> 00:16:39.390
+[MÚSICA]

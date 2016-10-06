@@ -1,0 +1,124 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.752
+[MÚSICA] E aí,
+
+3
+00:00:13.752 --> 00:00:17.570
+pessoal, tudo bem?
+
+4
+00:00:17.570 --> 00:00:20.846
+Agora que a interface gráfica
+do nosso quiz está pronta,
+
+5
+00:00:20.846 --> 00:00:23.380
+vamos interligar cada objeto com o código.
+
+6
+00:00:23.380 --> 00:00:24.035
+Para isso,
+
+7
+00:00:24.035 --> 00:00:28.370
+clique nesse botão que o símbolo são dois
+círculos para dividir a tela no meio.
+
+8
+00:00:28.370 --> 00:00:33.170
+Vamos começar conectando a label
+de questão do nosso quiz.
+
+9
+00:00:33.170 --> 00:00:37.170
+Clique com o botão direito do mouse,
+
+10
+00:00:37.170 --> 00:00:41.490
+arraste para o código e escolha
+o nome de uma variável.
+
+11
+00:00:41.490 --> 00:00:44.686
+Vamos fazer isso para cada objeto.
+
+12
+00:00:44.686 --> 00:00:52.360
+Vamos fazer para a imagem,
+para o primeiro botão,
+
+13
+00:00:52.360 --> 00:01:01.460
+[SEM_ÁUDIO] para o segundo botão,
+
+14
+00:01:01.460 --> 00:01:06.500
+o terceiro botão,
+
+15
+00:01:06.500 --> 00:01:14.050
+para a view de feedback,
+
+16
+00:01:14.050 --> 00:01:20.580
+para o label feedback,
+
+17
+00:01:20.580 --> 00:01:26.890
+e por fim, para o botão de feedback.
+
+18
+00:01:26.890 --> 00:01:35.330
+[SEM_ÁUDIO] Vamos agora
+criar a ação de cada botão.
+
+19
+00:01:35.330 --> 00:01:39.540
+A ação do botão 1.
+
+20
+00:01:39.540 --> 00:01:44.952
+Na opção Connection, escolha Action e dê
+
+21
+00:01:44.952 --> 00:01:49.050
+nome para a função.
+
+22
+00:01:49.050 --> 00:01:54.350
+A ação do botão 2,
+
+23
+00:01:54.350 --> 00:02:02.703
+[SEM_ÁUDIO] a ação
+
+24
+00:02:02.703 --> 00:02:07.080
+do botão 3,
+
+25
+00:02:07.080 --> 00:02:16.745
+[SEM_ÁUDIO] e por fim,
+
+26
+00:02:16.745 --> 00:02:22.270
+a ação do botão de feedback.
+
+27
+00:02:22.270 --> 00:02:29.593
+[SEM_ÁUDIO] Na próxima aula,
+
+28
+00:02:29.593 --> 00:02:34.771
+nós vamos montar a estrutura
+de dados para o nosso quiz.
+
+29
+00:02:34.771 --> 00:02:35.550
+Até lá.

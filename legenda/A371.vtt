@@ -1,0 +1,414 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.205
+Após esse vídeo você será capaz de
+explicar que característica comum dos
+
+2
+00:00:05.205 --> 00:00:10.410
+polos malha fechada é utilizada para
+determinar o Lugar Geométrico das Raízes.
+
+3
+00:00:10.410 --> 00:00:14.983
+Dada uma função de transferência
+malha aberta G(s) a função de
+
+4
+00:00:14.983 --> 00:00:20.428
+transferência malha fechada para
+"iii" unitária negativa e ganho
+
+5
+00:00:20.428 --> 00:00:25.720
+proporcional K é T(s) = kG(s)
+/ 1 + kG(s) Os polos da função
+
+6
+00:00:25.720 --> 00:00:30.690
+de transferência malha fechada, que são
+as raízes do polinômio denominador,
+
+7
+00:00:30.690 --> 00:00:36.816
+são as raízes da equação 1 + kG(s) =
+0 Para caracterizar bem esses polos,
+
+8
+00:00:36.816 --> 00:00:42.063
+ou as raízes do denominador,
+vamos denotar as raízes por □k,
+
+9
+00:00:42.063 --> 00:00:50.157
+S é a variável complexa e □k são as raízes
+da equação para valor específico de k.
+
+10
+00:00:50.157 --> 00:00:55.420
+Então temos 1 + kG(□k) =
+0 Podemos escrever essa
+
+11
+00:00:55.420 --> 00:01:01.511
+igualdade como kG(□k) =
+-1 Ou ainda como G(□k)
+
+12
+00:01:01.511 --> 00:01:06.580
+= -1 / k G(□k) é número complexo.
+
+13
+00:01:06.580 --> 00:01:11.284
+Na verdade,
+como k é número real G(□k) é número real,
+
+14
+00:01:11.284 --> 00:01:16.633
+mas todo número real é também número
+complexo, e podemos escrever a fase
+
+15
+00:01:16.633 --> 00:01:21.740
+de G(□k) é igual à fase
+de -1/k E o módulo de
+
+16
+00:01:21.740 --> 00:01:28.540
+G(□k) é o módulo de -1/k Considerando
+apenas o caso K maior 0,
+
+17
+00:01:28.540 --> 00:01:35.220
+-1/k é número real negativo
+e a fase de -1 / k é -180°.
+
+18
+00:01:35.220 --> 00:01:40.670
+Ou seja, a fase de G(□k) dever ser -180°.
+
+19
+00:01:40.670 --> 00:01:46.165
+Na verdade,
+a fase de G(□k) também pode ser +180°,
+
+20
+00:01:46.165 --> 00:01:51.044
+-540°, +540° -900°, +900° etc,
+
+21
+00:01:51.044 --> 00:01:55.022
+já que podemos dar várias
+voltas no sentido horário
+
+22
+00:01:55.022 --> 00:01:59.932
+ou anti-horário e continuaremos
+tendo número real negativo.
+
+23
+00:01:59.932 --> 00:02:04.310
+Depois você pode pensar no que
+acontece se k for menor que 0.
+
+24
+00:02:04.310 --> 00:02:09.045
+Então, na verdade temos G(□k) =
+
+25
+00:02:09.045 --> 00:02:13.780
+-180° + l360°, onde l é número inteiro.
+
+26
+00:02:13.780 --> 00:02:18.735
+Muito bem, como essa igualdade angular
+
+27
+00:02:18.735 --> 00:02:23.690
+vale para qualquer k maior que 0,
+podemos até retirar o índice K do □.
+
+28
+00:02:23.690 --> 00:02:28.346
+Então, qualquer que seja o
+valor de ganho k maior que 0,
+
+29
+00:02:28.346 --> 00:02:33.368
+as raízes do denominador da função
+de transferência malha fechada
+
+30
+00:02:33.368 --> 00:02:38.630
+devem respeitar a seguinte equação:
+fase de G(□k)=-180º + l360º,
+
+31
+00:02:38.630 --> 00:02:43.435
+e é essa característica angular que usamos
+
+32
+00:02:43.435 --> 00:02:46.950
+para determinar e esboçar o
+lugar geométrico das raízes.
+
+33
+00:02:46.950 --> 00:02:50.922
+Vamos conferir essa igualdade para
+o lugar geométrico das raízes de
+
+34
+00:02:50.922 --> 00:02:55.904
+sistema de primeira ordem com o 0,
+e para sistema de segunda ordem sem zeros.
+
+35
+00:02:55.904 --> 00:03:01.015
+Já vimos que o lugar geométrico
+das raízes para T(s) = k (s+b) /
+
+36
+00:03:01.015 --> 00:03:06.680
+s+a+k(s+b) é o trecho da reta
+real que vai de -a até -b.
+
+37
+00:03:06.680 --> 00:03:12.740
+Vamos pegar ponto entre -a e
+-b que denotaremos por -c.
+
+38
+00:03:12.740 --> 00:03:17.923
+A função de transferência
+malha aberta é s+b/s+a e
+
+39
+00:03:17.923 --> 00:03:23.393
+G(-c) será -c + b / -c + a e
+
+40
+00:03:23.393 --> 00:03:28.763
+a fase de G(-c) será a fase de -c +
+
+41
+00:03:28.763 --> 00:03:35.480
+b / -c + a Como a fase da divisão é a fase
+do numerador menos a fase do denominador,
+
+42
+00:03:35.480 --> 00:03:41.395
+temos: fase de G(-c) é igual
+a fase de (-c + b) menos a fase de
+
+43
+00:03:41.395 --> 00:03:47.520
+(-c + a) Como -c < -b e -c > -a,
+
+44
+00:03:47.520 --> 00:03:52.731
+temos -c + b <0 e -c + a > 0 E,
+
+45
+00:03:52.731 --> 00:04:00.320
+portanto, a fase de -c + b =
+-180° e a fase de -c+a = 0°.
+
+46
+00:04:00.320 --> 00:04:06.530
+E então a fase de G(-c) =- 180° Ou seja,
+
+47
+00:04:06.530 --> 00:04:11.940
+como era de se esperar,
+a fase de polo malha fechada é -180°.
+
+48
+00:04:11.940 --> 00:04:17.064
+Se -c<-b e -c<-a ou se
+
+49
+00:04:17.064 --> 00:04:22.368
+-c > -b e -c > -a, teremos a fase
+
+50
+00:04:22.368 --> 00:04:27.530
+de G(-c) ≠ -180° +l360°,
+
+51
+00:04:27.530 --> 00:04:33.830
+ou seja, não temos polos malha fechada
+à esquerda de -a e à direita de -b.
+
+52
+00:04:33.830 --> 00:04:38.878
+Já vimos também que para uma função
+de transferência malha aberta G(s) =
+
+53
+00:04:38.878 --> 00:04:43.927
+1 / s (s+a) o lugar geométrico das raízes
+do denominador da função de transferência
+
+54
+00:04:43.927 --> 00:04:49.194
+malha fechada é composto pelo trecho
+da reta real entre 0 e -a, e a reta
+
+55
+00:04:49.194 --> 00:04:55.491
+com parte real -a / 2 e parte imaginária
+variando de -infinito a +infinito.
+
+56
+00:04:55.491 --> 00:04:59.760
+Vamos analizar primeiro
+ponto -c entre 0 e -a,
+
+57
+00:04:59.760 --> 00:05:05.146
+e depois ponto com parte real
+-a/2 e parte imaginária D.
+
+58
+00:05:05.146 --> 00:05:09.650
+A função de transferência
+malha aberta é 1 / s(s + a).
+
+59
+00:05:09.650 --> 00:05:16.643
+A fase de G(s) será a fase de 1 / s(s
++ a) Como a fase do produto é a soma
+
+60
+00:05:16.643 --> 00:05:22.030
+das fases e a fase da divisão é a fase do
+numerador menos a fase do denominador,
+
+61
+00:05:22.030 --> 00:05:29.260
+temos fase de G(s) é igual a fase de 1
+menos a fase de s menos a fase de s + a.
+
+62
+00:05:29.260 --> 00:05:34.513
+A fase de 1 é 0º,
+então temos a fase de de G(s)
+
+63
+00:05:34.513 --> 00:05:39.500
+é igual a menos a fase de s
+menos a fase de s+a Para s = -c
+
+64
+00:05:39.500 --> 00:05:45.170
+temos: menos a fase de -c
+menos a fase de -c + a.
+
+65
+00:05:45.170 --> 00:05:50.368
+Como -c < 0 e -c > -a,
+
+66
+00:05:50.368 --> 00:05:55.220
+temos: -c+a>0 e a fase de G(-c)
+
+67
+00:05:55.220 --> 00:06:00.028
+será igual a 180° para s = -a /
+
+68
+00:06:00.028 --> 00:06:05.145
+2+dj a fase de G(-a2 + dj) será
+
+69
+00:06:05.145 --> 00:06:10.812
+igual a fase de -a / 2+dj
+menos a fase de a / 2+dj.
+
+70
+00:06:10.812 --> 00:06:14.540
+Vamos obter essa fase graficamente.
+
+71
+00:06:14.540 --> 00:06:19.952
+Temos aqui -a / 2+dj e a/2 + dj,
+
+72
+00:06:19.952 --> 00:06:26.470
+note que temos triângulo isósceles,
+esses são os nossos ângulos de interesse.
+
+73
+00:06:26.470 --> 00:06:31.515
+Note que como a figura é triângulo
+isósceles, os ângulos internos são iguais
+
+74
+00:06:31.515 --> 00:06:36.636
+e, portanto,
+a fase de -a / 2 + dj e a fase
+
+75
+00:06:36.636 --> 00:06:42.920
+de a / 2 +dj são âgulos suplementares,
+ou seja, sua soma é 180°.
+
+76
+00:06:42.920 --> 00:06:49.391
+Então temos que a fase de
+G(-a / 2 + dj) é igual
+
+77
+00:06:49.391 --> 00:06:56.600
+a menos a fase de (-a / 2 +dj) mais a fase
+de (a / 2 + dj) que é igual a -180º.
+
+78
+00:06:56.600 --> 00:06:59.254
+O que confirma as nossas expectativas.
+
+79
+00:06:59.254 --> 00:07:03.960
+Agora você já é capaz de explicar
+que características comum dos polos
+
+80
+00:07:03.960 --> 00:07:08.950
+malha fechada é utilizada para determinar
+o lugar geométrico das raízes.
+
+81
+00:07:08.950 --> 00:07:15.220
+A fase de G(□) precisa
+ser igual a -180°+l360°.
+
+82
+00:07:15.220 --> 00:07:21.100
+Então, se a fase de G de determinado
+ponto no plano S for -180°,
+
+83
+00:07:21.100 --> 00:07:27.111
+esse ponto é uma possível raiz de
+1+kG(s)=0, mas esse ponto só será
+
+84
+00:07:27.111 --> 00:07:32.819
+uma raiz de 1+kG(s)=0 para determinado
+valor de k, e não para qualquer k.
+
+85
+00:07:32.819 --> 00:07:37.377
+No próximo vídeo você verá como calcular
+o ganho necessário para que o polo
+
+86
+00:07:37.377 --> 00:07:41.900
+malha fechada esteja ponto especifico
+do lugar geométrico das raízes,
+
+87
+00:07:41.900 --> 00:07:45.350
+o que equivale a projetar o
+ganho de controle proporcional.

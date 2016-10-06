@@ -1,0 +1,906 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.835
+[MÚSICA] [MÚSICA] Após esse vídeo,
+
+2
+00:00:09.835 --> 00:00:13.804
+dada a Função de Transferência de sistema,
+
+3
+00:00:13.804 --> 00:00:18.785
+você será capaz de verificar se
+o sistema é ou não BIBO estável,
+
+4
+00:00:18.785 --> 00:00:22.990
+sem a necessidade de calcular
+ou explicitar os polos.
+
+5
+00:00:22.990 --> 00:00:28.260
+Como vimos, a BIBO estabilidade de
+sistema é determinada pela parte
+
+6
+00:00:28.260 --> 00:00:33.530
+real de seus polos, que são as raízes do
+denominador da Função de Transferência.
+
+7
+00:00:33.530 --> 00:00:39.660
+Para que o sistema seja BIBO estável todos
+os polos devem ter parte real negativa.
+
+8
+00:00:39.660 --> 00:00:45.340
+Uma forma bastante simples de determinar
+se sistema é ou não BIBO estável
+
+9
+00:00:45.340 --> 00:00:50.500
+seria calcular todos os polos e verificar
+se todos têm parte real negativa.
+
+10
+00:00:50.500 --> 00:00:56.380
+Mas não haveria modo mais eficiente
+ou menos trabalhoso de fazer isso?
+
+11
+00:00:56.380 --> 00:01:04.530
+Sim existe e ele é chamado de Método
+ou Critério de Routh-Hurwitz,
+
+12
+00:01:04.530 --> 00:01:10.120
+às vezes abreviado para Método ou
+Critério de Routh ou simplesmente RH.
+
+13
+00:01:10.120 --> 00:01:15.600
+Primeiro vou exemplificar o método
+com denominadores mais simples.
+
+14
+00:01:15.600 --> 00:01:21.450
+de segunda, terceira e até quarta
+ordem e depois generalizarei o método.
+
+15
+00:01:21.450 --> 00:01:26.440
+Se o denominador for de primeira ordem
+o polo já está evidente no denominador
+
+16
+00:01:26.440 --> 00:01:31.430
+e é fácil verificar se ele tem
+parte real negativa ou não.
+
+17
+00:01:31.430 --> 00:01:39.400
+Lembre-se que os fatores são s menos o
+polo então s mais 1 corresponde a polo
+
+18
+00:01:39.400 --> 00:01:44.240
+menos 1 e s menos 1
+corresponde a polo mais 1.
+
+19
+00:01:44.240 --> 00:01:48.973
+Se a Função de Transferência de
+segunda ordem denominador do
+
+20
+00:01:48.973 --> 00:01:53.446
+segundo grau já estiver fatorada
+também só precisa precisamos
+
+21
+00:01:53.446 --> 00:01:57.460
+verificar o sinal dos fatores,
+todos devem ser positivos.
+
+22
+00:01:57.460 --> 00:02:01.595
+Se o denominador da Função de
+Transferência não estiver fatorado,
+
+23
+00:02:01.595 --> 00:02:07.351
+podemos usar a fórmula de Bhaskara para
+calcular os polos, ou podemos verificar
+
+24
+00:02:07.351 --> 00:02:12.850
+se todos os polos têm parte real
+negativa construindo a Tabela de Routh.
+
+25
+00:02:12.850 --> 00:02:18.009
+A Tabela de Routh tem n mais 1 linhas
+onde n é o grau do polinômio do
+
+26
+00:02:18.009 --> 00:02:25.290
+denominador ou a ordem do sistema,
+nesse caso n é igual a 2 e temos 3 linhas.
+
+27
+00:02:25.290 --> 00:02:31.142
+As duas primeiras linhas são preenchidas
+com os coeficientes do polinômio da
+
+28
+00:02:31.142 --> 00:02:36.690
+esquerda para a direita, alternando entre
+as linha e começando com a primeira linha.
+
+29
+00:02:36.690 --> 00:02:41.722
+Nesse caso colocamos o
+coeficiente 1 de s ao quadrado na
+
+30
+00:02:41.722 --> 00:02:47.025
+primeira linha depois o
+coeficiente 3 de s na segunda
+
+31
+00:02:47.025 --> 00:02:52.400
+linha e o coeficiente 2 de s elevado
+a 0 na primeira linha novamente.
+
+32
+00:02:52.400 --> 00:02:57.355
+Quando o grau do polinômio for
+maior continuamos alternando entre as
+
+33
+00:02:57.355 --> 00:03:01.210
+linhas até que todos os
+coeficientes tenham sido usados.
+
+34
+00:03:01.210 --> 00:03:07.598
+Agora para preencher a linha s0
+usamos as duas linhas anteriores.
+
+35
+00:03:07.598 --> 00:03:11.900
+Fazemos uma multiplicação cruzada
+e dividimos pelo primeiro
+
+36
+00:03:11.900 --> 00:03:16.403
+elemento da linha s1 que chamamos,
+carinhosamente, de pivô.
+
+37
+00:03:16.403 --> 00:03:20.790
+Os elementos inexistentes
+são considerados 0.
+
+38
+00:03:20.790 --> 00:03:26.145
+O Critério de Routh-Hurwitz nos
+diz que se todos os elementos da
+
+39
+00:03:26.145 --> 00:03:31.617
+primeira coluna da tabela tiverem o mesmo
+sinal, isto é, se todos forem positivos ou
+
+40
+00:03:31.617 --> 00:03:37.070
+se todos forem negativos, todas as raízes
+do polinômio tem parte real negativa.
+
+41
+00:03:37.070 --> 00:03:44.570
+Nesse caso temos 1, 3 e 2, todos os
+positivos e o polinômio é Hurwitz,
+
+42
+00:03:44.570 --> 00:03:49.231
+isto é, todas as suas raízes têm
+parte real negativa e se ele for
+
+43
+00:03:49.231 --> 00:03:53.470
+o denominador de uma Função de
+Transferência o sistema é BIBO estável.
+
+44
+00:03:53.470 --> 00:03:59.515
+Vamos ver outro exemplo mas desta vez
+eu já vou mostrar a tabela construída.
+
+45
+00:03:59.515 --> 00:04:05.560
+Coeficientes 1, 1 e menos 2,
+elemento da linha s0 igual a menos 2.
+
+46
+00:04:05.560 --> 00:04:10.210
+Nesse caso temos uma troca de
+sinal e o polinômio não é Hurwitz,
+
+47
+00:04:10.210 --> 00:04:12.070
+o sistema não é estável.
+
+48
+00:04:12.070 --> 00:04:17.848
+Vamos ver exemplo literal:
+a construção da tabela é a mesma,
+
+49
+00:04:17.848 --> 00:04:22.785
+coeficientes 1,
+a e b e na primeira coluna temos 1,
+
+50
+00:04:22.785 --> 00:04:27.700
+a e b e para que o polinômio
+seja Hurwitz precisamo ter
+
+51
+00:04:27.700 --> 00:04:30.790
+a maior que 0 e b maior que 0.
+
+52
+00:04:30.790 --> 00:04:35.595
+Mas acho que você já sabia disso,
+se todas as raízes do polinômio tiverem
+
+53
+00:04:35.595 --> 00:04:40.400
+parte real negativa, todos os
+coeficientes precisam ser positivos.
+
+54
+00:04:40.400 --> 00:04:43.340
+Vamos para exemplo de terceira ordem.
+
+55
+00:04:43.340 --> 00:04:48.105
+Você pode usar o Método de
+Cardano Tartaglia para achar as raízes mas
+
+56
+00:04:48.105 --> 00:04:52.500
+vamos ver como a análise fica
+simples usando Routh-Hurwitz.
+
+57
+00:04:52.500 --> 00:04:57.630
+Terceira ordem, 4 linhas,
+de s ao cubo até s a 0,
+
+58
+00:04:57.630 --> 00:05:03.380
+coeficientes 1, 6, 11 e 6,
+
+59
+00:05:03.380 --> 00:05:09.120
+multiplicação cruzada das duas linhas
+anteriores dividido pelo pivô,
+
+60
+00:05:09.120 --> 00:05:15.365
+para calcular o elemento da linha s0
+usamos as duas linhas anteriores, s1
+
+61
+00:05:15.365 --> 00:05:21.610
+e s2 e novamente fazemos a multiplicação
+cruzada e dividimos pelo pivô.
+
+62
+00:05:21.610 --> 00:05:26.300
+Os elementos da primeira coluna são 1, 6,
+
+63
+00:05:26.300 --> 00:05:30.990
+10 e 6,
+todos positivos e o polinômio é Hurwitz.
+
+64
+00:05:30.990 --> 00:05:38.227
+Outro exemplo de terceira ordem: vamos
+mudar apenas o último coeficiente.
+
+65
+00:05:38.227 --> 00:05:42.790
+Duas primeiras linhas da tabela de
+Routh só copiar os coeficientes,
+
+66
+00:05:42.790 --> 00:05:49.153
+multiplicação cruzada das duas linhas
+anteriores dividido pelo pivô e novamente
+
+67
+00:05:49.153 --> 00:05:54.320
+fazemos a multiplicação cruzada
+e dividimos pelo novo pivô.
+
+68
+00:05:54.320 --> 00:06:02.320
+Os elementos da primeira coluna são 1,
+6, -1 e 72.
+
+69
+00:06:02.320 --> 00:06:07.781
+Temos troca de sinal e o polinômio não é
+Hurwitz, ou seja se esse polinômio for o
+
+70
+00:06:07.781 --> 00:06:13.108
+denominador de uma Função de Transferência
+o sistema não é BIBO estável.
+
+71
+00:06:13.108 --> 00:06:18.480
+Podemos fazer exemplo literal
+de terceira ordem também,
+
+72
+00:06:18.480 --> 00:06:23.390
+duas primeiras linhas copiar os
+coeficientes, multiplicação cruzada e
+
+73
+00:06:23.390 --> 00:06:28.140
+dividir pelo pivô, multiplicar
+novamente e dividir pelo novo pivô.
+
+74
+00:06:28.140 --> 00:06:33.840
+E para que o polinômio seja Hurwitz
+precisamos ter a maior que 0,
+
+75
+00:06:33.840 --> 00:06:37.100
+c maior que 0 e a vezes b maior do que c.
+
+76
+00:06:37.100 --> 00:06:41.671
+Só mais exemplo de quarta
+ordem antes de generalizarmos
+
+77
+00:06:41.671 --> 00:06:44.200
+a análise via Routh-Hurwitz.
+
+78
+00:06:44.200 --> 00:06:49.730
+Quarta ordem, 5 linhas,
+de s à quarta até s a 0.
+
+79
+00:06:49.730 --> 00:06:53.608
+Copiamos os coeficientes
+nas duas primeiras linhas,
+
+80
+00:06:53.608 --> 00:06:57.580
+começando pela primeira linha
+e alternando as linhas.
+
+81
+00:06:57.580 --> 00:07:02.060
+Obtemos os elementos da linha s2
+
+82
+00:07:02.060 --> 00:07:06.540
+fazendo a multiplicação
+cruzada e dividindo pelo pivô.
+
+83
+00:07:06.540 --> 00:07:11.354
+Aqui detalhe muito importante:
+
+84
+00:07:11.354 --> 00:07:16.099
+a multiplicação cruzada é
+sempre os elementos da primeira
+
+85
+00:07:16.099 --> 00:07:20.830
+coluna e os elementos da coluna seguinte
+ao elemento que estamos calculando e o
+
+86
+00:07:20.830 --> 00:07:23.870
+pivô é sempre o elemento
+da primeira coluna.
+
+87
+00:07:23.870 --> 00:07:28.751
+O mesmo procedimento para a linha s1,
+multiplicação cruzada entre os
+
+88
+00:07:28.751 --> 00:07:34.020
+elementos da primeira coluna e da coluna
+seguinte das duas linhas anteriores
+
+89
+00:07:34.020 --> 00:07:39.180
+e divisão pelo pivô, que é o elemento
+da primeira coluna da linha anterior.
+
+90
+00:07:39.180 --> 00:07:45.682
+E para a linha s0 os elementos
+da primeira coluna são 1,
+
+91
+00:07:45.682 --> 00:07:49.872
+2, menos 1,
+20 e 5 e o polinômio não é Hurwitz.
+
+92
+00:07:49.872 --> 00:07:55.360
+Além disso podemos afirmar que ele possui
+duas raízes com parte real positiva.
+
+93
+00:07:55.360 --> 00:07:58.188
+Calcule as raízes e confirme isso.
+
+94
+00:07:58.188 --> 00:08:02.900
+Muito bem, os exemplos que vimos
+até agora devem ter te dado
+
+95
+00:08:02.900 --> 00:08:06.186
+uma boa ideia de como
+construir a Tabela de Routh.
+
+96
+00:08:06.186 --> 00:08:11.030
+Vamos agora generalizar essa construção
+usando coeficientes literais.
+
+97
+00:08:11.030 --> 00:08:17.660
+A Tabela de Routh terá n mais uma linhas,
+de s elevado a n a s elevado a 0.
+
+98
+00:08:17.660 --> 00:08:22.625
+Copiamos os coeficientes do
+polinômio nas duas primeiras linhas
+
+99
+00:08:22.625 --> 00:08:27.590
+começando com a linha s elevado
+a n e alternando entre as linhas.
+
+100
+00:08:27.590 --> 00:08:33.030
+Se n for ímpar o coeficiente
+0 fica na segunda linha,
+
+101
+00:08:33.030 --> 00:08:37.217
+se n for par o coeficiente
+0 fica na primeira linha.
+
+102
+00:08:37.217 --> 00:08:39.804
+O raciocínio é exatamente o mesmo
+
+103
+00:08:39.804 --> 00:08:43.510
+para os dois casos mais
+vamos usar o caso de n par.
+
+104
+00:08:43.510 --> 00:08:49.295
+Por comodismo vamos renomear
+os elementos da linha s n a1,
+
+105
+00:08:49.295 --> 00:08:52.978
+a2 a3 e assim por diante até a n sobre 2.
+
+106
+00:08:52.978 --> 00:08:58.304
+Os elementos da linha s n menos
+1 nós renomeamos para b1,
+
+107
+00:08:58.304 --> 00:09:03.340
+b2, b3 e assim por diante
+até b n sobre 2 menos 1.
+
+108
+00:09:03.340 --> 00:09:08.825
+Muito bem,
+o elemento c1 é calculado como b1
+
+109
+00:09:08.825 --> 00:09:14.310
+vezes a2 menos a1 vezes b2 sobre o b1.
+
+110
+00:09:14.310 --> 00:09:19.640
+O elemento c2 é calculado como
+
+111
+00:09:19.640 --> 00:09:24.970
+b1 vezes a3 menos a1 vezes b3 sobre b1.
+
+112
+00:09:24.970 --> 00:09:31.030
+Note que usamos sempre os elementos
+a1 e b1 para calcular os elementos c.
+
+113
+00:09:31.030 --> 00:09:39.230
+O elemento c3 é calculado como b1
+vezes a4 menos a1 vezes b4 sobre b1.
+
+114
+00:09:39.230 --> 00:09:43.578
+Novamente note que sempre
+estamos usando os elementos da
+
+115
+00:09:43.578 --> 00:09:47.610
+primeira coluna e os elementos
+das duas linhas anteriores.
+
+116
+00:09:47.610 --> 00:09:52.408
+E assim por diante até
+que c n sobre 2 menos 2
+
+117
+00:09:52.408 --> 00:09:57.267
+seja igual a b1 vezes a n
+sobre 2 menos 1 menos a1
+
+118
+00:09:57.267 --> 00:10:02.474
+vezes b n sobre 2 menos 1,
+isso tudo sobre b1.
+
+119
+00:10:02.474 --> 00:10:08.121
+E finalmente se a n sobre
+2 menos 1 igual a b1 vezes
+
+120
+00:10:08.121 --> 00:10:13.690
+a n sobre 2 menos a1 vezes 0 sobre b1,
+que é o próprio a n sobre 2.
+
+121
+00:10:13.690 --> 00:10:20.410
+Poderemos até tentar cacular elemento
+c n sobre 2, mas ele seria 0.
+
+122
+00:10:20.410 --> 00:10:22.890
+Se você se sentir mais confortável,
+
+123
+00:10:22.890 --> 00:10:26.401
+pode acabar de preencher
+a tabela de Routh com zeros,
+
+124
+00:10:26.401 --> 00:10:30.890
+para que ela fique uma tabela cheia,
+mas isso realmente não é necessário.
+
+125
+00:10:30.890 --> 00:10:36.331
+Continuando, agora fazemos exatamente
+a mesma coisa para alinhar
+
+126
+00:10:36.331 --> 00:10:41.247
+a c n menos 3, só que ao invés de
+usar as duas primeiras linhas,
+
+127
+00:10:41.247 --> 00:10:47.230
+usamos as linhas s n menos 1 e s n menos
+2, ou seja, as duas linhas anteriores.
+
+128
+00:10:47.230 --> 00:10:52.000
+E o pivô agora é o elemento da
+primeira coluna da linha s n menos 2.
+
+129
+00:10:52.000 --> 00:10:58.131
+O primeiro elemento é a multiplicação
+cruzada entre os elementos da primeira
+
+130
+00:10:58.131 --> 00:11:02.820
+coluna e da segunda coluna das duas
+linhas anteriores, dividido pelo pivô.
+
+131
+00:11:02.820 --> 00:11:07.727
+Segundo elemento da linha: multiplicação
+cruzada da primeira coluna e da
+
+132
+00:11:07.727 --> 00:11:12.170
+coluna seguinte das duas linhas
+anteriores, dividido pelo pivô.
+
+133
+00:11:12.170 --> 00:11:19.750
+Mesma coisa para o elemento d3,
+até o elemento d n sobre 2 menos 2.
+
+134
+00:11:19.750 --> 00:11:24.020
+E o elemento d n sobre 2 menos 1 será 0.
+
+135
+00:11:24.020 --> 00:11:29.322
+Eu prefiro a tabela sem os zeros à
+direita, assim fica fácil observar que,
+
+136
+00:11:29.322 --> 00:11:33.810
+de uma linha par para uma linha ímpar,
+a tabela perde uma coluna.
+
+137
+00:11:33.810 --> 00:11:38.537
+Note, também, que o último elemento
+de uma linha par acaba sendo o último
+
+138
+00:11:38.537 --> 00:11:40.680
+elemento da linha par seguinte.
+
+139
+00:11:40.680 --> 00:11:45.533
+E assim prosseguimos a construção
+da tabela de Routh até
+
+140
+00:11:45.533 --> 00:11:50.437
+chegar à linha s0 e se todos os elementos
+da primeira coluna forem positivos,
+
+141
+00:11:50.437 --> 00:11:54.120
+temos o denominador de uma função
+de transferência BIBO-estável.
+
+142
+00:11:54.120 --> 00:11:59.335
+O critério de Routh-Hurwitz não nos diz
+apenas se todas as raízes do polinômio
+
+143
+00:11:59.335 --> 00:12:04.550
+têm parte real negativa, ele nos diz
+quantas raízes têm parte real positiva.
+
+144
+00:12:04.550 --> 00:12:09.425
+O número de raízes com parte real positiva
+corresponde ao número de trocas de
+
+145
+00:12:09.425 --> 00:12:12.330
+sinal na primeira coluna
+da tabela de Routh.
+
+146
+00:12:12.330 --> 00:12:16.468
+Por isso, se todos os elementos da
+primeira coluna forem positivos,
+
+147
+00:12:16.468 --> 00:12:21.040
+não temos troca de sinal e nem
+polos com parte real positiva.
+
+148
+00:12:21.040 --> 00:12:26.070
+Se apenas o último ou apenas o
+primeiro elemento da primeira coluna
+
+149
+00:12:26.070 --> 00:12:31.100
+tiverem sinal diferente dos demais,
+temos uma raíz com parte real positiva.
+
+150
+00:12:31.100 --> 00:12:36.426
+Se tivermos duas trocas de sinal,
+como no nosso exemplo de quarta ordem,
+
+151
+00:12:36.426 --> 00:12:39.980
+temos duas raízes com parte real
+positiva e assim por diante.
+
+152
+00:12:39.980 --> 00:12:45.804
+Como para ter sistema
+BIBO-estável precisamos ter
+
+153
+00:12:45.804 --> 00:12:51.077
+todas as raízes do denominador da função
+de transferência com parte real negativa,
+
+154
+00:12:51.077 --> 00:12:53.410
+não podemos ter nenhuma troca de sinal.
+
+155
+00:12:53.410 --> 00:12:58.963
+Então, caso você esteja interessado
+apenas verificar a estabilidade e
+
+156
+00:12:58.963 --> 00:13:03.761
+não na quantidades de polos com parte real
+positiva e se deparar com uma troca de
+
+157
+00:13:03.761 --> 00:13:08.718
+sinal na primeira coluna, não precisa
+continuar construindo a tabela.
+
+158
+00:13:08.718 --> 00:13:12.879
+Você já pode concluir que o
+sistema não será BIBO-estável,
+
+159
+00:13:12.879 --> 00:13:16.960
+uma vez que ele terá pelo menos
+polo com parte real positiva.
+
+160
+00:13:16.960 --> 00:13:22.347
+Você deve ter notado que podemos ter
+problemas na construção da tabela,
+
+161
+00:13:22.347 --> 00:13:25.790
+caso algum elemento da
+primeira coluna seja 0,
+
+162
+00:13:25.790 --> 00:13:29.510
+uma vez que não podemos
+efetuar uma divisão por 0.
+
+163
+00:13:29.510 --> 00:13:34.876
+Elemento nulo na primeira coluna da
+tabela de Routh indica que temos raízes
+
+164
+00:13:34.876 --> 00:13:40.287
+sobre o eixo imaginário, raíz na origem
+ou par de raízes complexas conjugadas
+
+165
+00:13:40.287 --> 00:13:45.447
+com parte real nula ou raízes simétricas
+com relação ao eixo imaginário, isto é,
+
+166
+00:13:45.447 --> 00:13:51.089
+raízes com mesma parte imaginária, que
+pode ser nula, e com parte real oposta.
+
+167
+00:13:51.089 --> 00:13:55.620
+Por exemplo: +1 e -1, +5 e -5, +10 e -10.
+
+168
+00:13:55.620 --> 00:13:57.133
+De qualquer forma,
+
+169
+00:13:57.133 --> 00:14:02.240
+elemento nulo na primeira coluna indica
+que o sistema não é BIBO-estável.
+
+170
+00:14:02.240 --> 00:14:07.584
+Então, se ao construirmos a tabela
+de Routh nos depararmos com elemento
+
+171
+00:14:07.584 --> 00:14:12.828
+nulo ou com sinal trocado na primeira
+coluna, podemos concluir imediatamente
+
+172
+00:14:12.828 --> 00:14:17.600
+que o polinômio não é Hurwitz e o
+sistema não vai ser BIBO-estável.
+
+173
+00:14:17.600 --> 00:14:22.129
+No entanto, saiba que há uma
+maneira de contornar o problema do
+
+174
+00:14:22.129 --> 00:14:26.973
+elemento 0 na primeira coluna e finalizar
+a construção da tabela de Routh,
+
+175
+00:14:26.973 --> 00:14:31.962
+descobrindo, assim, quantas raízes têm
+parte real positiva, negativa ou nula.
+
+176
+00:14:31.962 --> 00:14:35.995
+Mas, por enquanto,
+não precisa se preocupar com isso.
+
+177
+00:14:35.995 --> 00:14:40.700
+Para esse curso precisamos ter todos
+os elementos da primeira coluna
+
+178
+00:14:40.700 --> 00:14:42.882
+positivos ou todos negativos.
+
+179
+00:14:42.882 --> 00:14:47.820
+Então, se aparecer elemento 0,
+pode parar a construção da tabela.
+
+180
+00:14:47.820 --> 00:14:52.653
+Se estiver curioso, você vai encontrar
+facilmente o tratamento do 0 na
+
+181
+00:14:52.653 --> 00:14:56.670
+primeira coluna qualquer livro de
+controle de sistemas lineares.
+
+182
+00:14:56.670 --> 00:15:02.070
+Agora crie alguns polinômios e exercite
+a construção da tabela de Routh.
+
+183
+00:15:02.070 --> 00:15:06.926
+Agora, dada a função de
+transferência de sistema,
+
+184
+00:15:06.926 --> 00:15:11.500
+você já é capaz de verificar se o
+sistema é ou não BIBO-estável sem
+
+185
+00:15:11.500 --> 00:15:14.750
+a necessidade de calcular
+ou explicitar os polos.
+
+186
+00:15:14.750 --> 00:15:24.360
+[MÚSICA] [BARULHO]

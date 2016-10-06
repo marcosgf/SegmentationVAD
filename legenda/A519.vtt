@@ -1,0 +1,411 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.504
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.504 --> 00:00:12.396
+Esse é o curso de Orientação
+a Objetos com Java.
+
+3
+00:00:12.396 --> 00:00:14.645
+Meu nome é Eduardo Guerra.
+
+4
+00:00:14.645 --> 00:00:17.441
+Hoje vamos falar sobre
+o teste de exceções.
+
+5
+00:00:17.441 --> 00:00:21.760
+A gente viu aí os testes de unidades,
+tem feito testes nos hands on.
+
+6
+00:00:21.760 --> 00:00:28.718
+E não poderia faltar aqui, nessa parte
+de exceções a gente falar de testes.
+
+7
+00:00:28.718 --> 00:00:33.379
+Antes de falar, começar a mostrar como
+fazer, eu queria dizer que é extremamente
+
+8
+00:00:33.379 --> 00:00:37.363
+importante a gente testar as
+funcionalidades onde, digamos assim,
+
+9
+00:00:37.363 --> 00:00:39.166
+a coisa não corre muito bem.
+
+10
+00:00:39.166 --> 00:00:43.619
+Porque por exemplo se você vai
+abrir arquivo e tem a possibilidade
+
+11
+00:00:43.619 --> 00:00:47.850
+daquele arquivo não existir,
+faz parte da funcionalidade da
+
+12
+00:00:47.850 --> 00:00:52.503
+sua classe saber reagir
+corretamente àquele erro.
+
+13
+00:00:52.503 --> 00:00:56.465
+Mesmo quando a classe lança
+o erro para quem invoca,
+
+14
+00:00:56.465 --> 00:01:00.888
+você tem que saber se aquela classe
+está lançando aquele erro nas
+
+15
+00:01:00.888 --> 00:01:04.430
+situações corretas que
+ele deveria ser lançado.
+
+16
+00:01:04.430 --> 00:01:09.980
+Então, não é só testar digamos
+aí as situações felizes, né?
+
+17
+00:01:09.980 --> 00:01:15.113
+A gente tem que testar também as
+situações onde a execução da classe tem
+
+18
+00:01:15.113 --> 00:01:21.150
+que lidar aí com o caso digamos assim,
+fora do normal, caso excepcional.
+
+19
+00:01:21.150 --> 00:01:22.199
+Bom, com o JUnit,
+
+20
+00:01:22.199 --> 00:01:25.620
+deixa eu dar uma abaixada aqui
+para vocês poderem ver melhor.
+
+21
+00:01:25.620 --> 00:01:31.652
+Com o JUnit a gente tem aí na própria
+anotação que a gente conhece,
+
+22
+00:01:31.652 --> 00:01:36.411
+o "@test" você pode dizer que
+você espera que vai ocorrer uma
+
+23
+00:01:36.411 --> 00:01:39.285
+exceção como resultado daquele teste.
+
+24
+00:01:39.285 --> 00:01:42.993
+Então por exemplo,
+eu posso falar assim: "Olha,
+
+25
+00:01:42.993 --> 00:01:48.359
+nesse teste eu espero que vá acontecer
+'boom exception' " e aí caso ocorra
+
+26
+00:01:48.359 --> 00:01:53.408
+essa 'boom exception' o teste
+é considerado sucesso e se
+
+27
+00:01:53.408 --> 00:01:59.014
+a exceção não acontecer,
+esse teste é falado: "Olha, aconteceu
+
+28
+00:01:59.014 --> 00:02:04.752
+erro porque eu esperava que essa execução
+gerasse a exceção 'boom exception' ".
+
+29
+00:02:04.752 --> 00:02:07.710
+A mesma coisa se acontecer
+uma outra exceção.
+
+30
+00:02:07.710 --> 00:02:14.121
+É importante entender que esse
+tipo de coisa, esse tipo de teste,
+
+31
+00:02:14.121 --> 00:02:19.690
+ele vai passar, ele vai rodar, vai dizer
+que a funcionalidade está correta,
+
+32
+00:02:19.690 --> 00:02:24.030
+se acontecer uma exceção não importa onde.
+
+33
+00:02:24.030 --> 00:02:28.460
+Não importa onde, qualquer lugar
+alí dentro do corpo do método,
+
+34
+00:02:28.460 --> 00:02:34.490
+se essa exceção acontecer então ele
+já considera correta a execução.
+
+35
+00:02:34.490 --> 00:02:40.370
+Caso você fale assim: " mas espera aí,
+tem "tem algumas chamadas aqui
+
+36
+00:02:40.370 --> 00:02:45.388
+que eu faço para preparar o meu cenário de
+teste que não é para esse erro acontecer,
+
+37
+00:02:45.388 --> 00:02:50.950
+se esse erro acontecer alí está errado."
+Nesses casos, onde eu vou falar assim:
+
+38
+00:02:50.950 --> 00:02:55.804
+"Não, eu quero que o erro aconteça mas tem
+que ser nesse ponto específico" aí a gente
+
+39
+00:02:55.804 --> 00:03:01.080
+usa uma construção diferente, eu gosto
+de chamar essa condição de "try fail".
+
+40
+00:03:01.080 --> 00:03:02.695
+O que é que você faz?
+
+41
+00:03:02.695 --> 00:03:07.105
+Você pega aquele ponto onde você
+quer que a exceção aconteça,
+
+42
+00:03:07.105 --> 00:03:11.510
+onde a classe vai estar funcionando
+corretamente se a exceção acontecer,
+
+43
+00:03:11.510 --> 00:03:17.150
+coloca dentro de "try" e coloca o
+"fail" esse "fail" é da própria,
+
+44
+00:03:17.150 --> 00:03:19.966
+é método da própria classe "assert".
+
+45
+00:03:19.966 --> 00:03:21.453
+O que é que significa?
+
+46
+00:03:21.453 --> 00:03:25.180
+Se o código passar por alí
+o teste vai falhar ou seja,
+
+47
+00:03:25.180 --> 00:03:30.670
+se a exceção não acontecer ele não vai
+pular aquele comando e vai falhar.
+
+48
+00:03:30.670 --> 00:03:34.950
+Esse tipo de abordagem
+a gente usa duas situações.
+
+49
+00:03:34.950 --> 00:03:40.748
+Uma quando você precisa que a exceção
+aconteça num ponto especifico do código,
+
+50
+00:03:40.748 --> 00:03:45.999
+e duas quando você não quer simplesmente
+verificar se a exceção acontece,
+
+51
+00:03:45.999 --> 00:03:50.280
+mas você quer verificar
+informações dentro dessa exceção.
+
+52
+00:03:50.280 --> 00:03:56.248
+Por exemplo, você quer ver por exemplo,
+na mensagem de erro tem que estar o ID,
+
+53
+00:03:56.248 --> 00:04:01.107
+sei lá, da pessoa envolvida ou,
+se eu der erro de segurança,
+
+54
+00:04:01.107 --> 00:04:05.914
+tem que constar na mensagem de
+erro o login da pessoa envolvida.
+
+55
+00:04:05.914 --> 00:04:10.677
+Então essa verificação das
+informações da exceção você pode
+
+56
+00:04:10.677 --> 00:04:13.390
+fazer dentro do bloco "catch".
+
+57
+00:04:13.390 --> 00:04:18.310
+Então, mesmo que só tem lugar que pode
+acontecer a exceção mas eu quero verificar
+
+58
+00:04:18.310 --> 00:04:21.908
+mais coisas,
+você usa também essa construção.
+
+59
+00:04:21.908 --> 00:04:25.707
+E é aquela coisa,
+se você não, se por exemplo,
+
+60
+00:04:25.707 --> 00:04:28.590
+o método alí ele joga uma exceção,
+
+61
+00:04:28.590 --> 00:04:34.620
+mas esse cenário de teste não
+é para acontecer uma exceção.
+
+62
+00:04:34.620 --> 00:04:39.650
+" vou botar o 'trycatch' e se no
+'catch' vou dizer que deu erro".
+
+63
+00:04:39.650 --> 00:04:42.275
+Não, você não precisa fazer nada disso.
+
+64
+00:04:42.275 --> 00:04:47.094
+Você simplesmete no método de teste,
+você declara o ''throws'' ou seja,
+
+65
+00:04:47.094 --> 00:04:52.377
+você fala assim: "Olha, esse método pode
+jogar "essa exceção, e se essa exceção
+
+66
+00:04:52.377 --> 00:04:57.531
+acontecer como resultado daquela
+execução" aquele teste vai falhar".
+
+67
+00:04:57.531 --> 00:05:01.210
+Então digamos assim,
+você pode ficar sossegado,
+
+68
+00:05:01.210 --> 00:05:06.085
+fica "sussa" fica tranquilo,
+só declara que a exceção pode
+
+69
+00:05:06.085 --> 00:05:09.784
+acontecer no método,
+e se ela acontecer o teste vai falhar.
+
+70
+00:05:09.784 --> 00:05:14.838
+Você não precisa fazer mais nada se como
+resultado da execução daquele teste,
+
+71
+00:05:14.838 --> 00:05:18.880
+você não está esperando que
+aquela exceção seja lançada.
+
+72
+00:05:18.880 --> 00:05:24.605
+Então, eu vejo às vezes, principalmente
+quem não tem muita familiaridade com
+
+73
+00:05:24.605 --> 00:05:29.988
+testar classes que podem jogar exceção,
+o cara vai bota monte de TryCatch,
+
+74
+00:05:29.988 --> 00:05:34.628
+ele bota que o teste falha se der o Catch,
+não precisa de nada disso.
+
+75
+00:05:34.628 --> 00:05:39.622
+Só declara o Throws alí no método
+de teste e fica sossegado.
+
+76
+00:05:39.622 --> 00:05:40.770
+Está certo?
+
+77
+00:05:40.770 --> 00:05:46.830
+Então nessa aula a gente viu como testar
+funcionalidades que jogam exceção.
+
+78
+00:05:46.830 --> 00:05:50.834
+Como é que a gente faz, quando a gente
+cenários que a gente não espera que
+
+79
+00:05:50.834 --> 00:05:55.213
+a exceção aconteça,
+cenários que a gente espera que a exceção
+
+80
+00:05:55.213 --> 00:06:00.055
+aconteça e cenários que a gente quer que
+a exceção aconteça num ponto especifico,
+
+81
+00:06:00.055 --> 00:06:03.648
+ou que a gente quer verificar
+detalhes sobre essa exceção.
+
+82
+00:06:03.648 --> 00:06:07.809
+Espero que tenha ficado claro
+como fazer esse tipo de teste.
+
+83
+00:06:07.809 --> 00:06:13.124
+Vamos ver mais detalhes sobre isso
+aí no hands on e até à próxima aula.
+
+84
+00:06:13.124 --> 00:06:14.530
+Muito obrigado.
+
+85
+00:06:14.530 --> 00:06:20.600
+[MÚSICA]

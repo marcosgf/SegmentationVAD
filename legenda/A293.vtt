@@ -1,0 +1,607 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.967
+[MÚSICA] Após esse vídeo você
+
+2
+00:00:09.967 --> 00:00:16.110
+será capaz de descrever as propriedades
+de linearidade e invariância no tempo.
+
+3
+00:00:16.110 --> 00:00:20.419
+Você também será capaz de descrever
+a Transformada de Laplace e suas
+
+4
+00:00:20.419 --> 00:00:22.470
+principais características.
+
+5
+00:00:22.470 --> 00:00:26.110
+Antes de falarmos da
+Transformada de Laplace,
+
+6
+00:00:26.110 --> 00:00:30.834
+vamos falar de 2 propriedades que o
+sistema precisa ter para que possamos usar
+
+7
+00:00:30.834 --> 00:00:35.820
+a Transformada de Laplace sua análise
+e depois no projeto do controle.
+
+8
+00:00:35.820 --> 00:00:41.704
+Essas propriedades são a linearidade
+e a invariância no tempo.
+
+9
+00:00:41.704 --> 00:00:46.340
+Sistema será linear se
+para toda entrada que é
+
+10
+00:00:46.340 --> 00:00:50.230
+uma combinação linear de 2 ou
+mais entradas, a saída for
+
+11
+00:00:50.230 --> 00:00:55.840
+a mesma combinação linear das saídas
+referentes a cada entrada individualmente.
+
+12
+00:00:55.840 --> 00:00:58.990
+Vou tentar explicar isso
+de forma mais clara.
+
+13
+00:00:58.990 --> 00:01:01.910
+Primeiro, o que é uma combinação linear?
+
+14
+00:01:01.910 --> 00:01:04.310
+É apenas uma soma ponderada.
+
+15
+00:01:04.310 --> 00:01:10.232
+Vamos ver exemplo: se tivermos por
+exemplo 3 sinais de entrada u1,
+
+16
+00:01:10.232 --> 00:01:16.870
+u2 e u3, uma combinação linear desses
+sinais é nada mais nada menos que uma soma
+
+17
+00:01:16.870 --> 00:01:22.950
+desses 3 sinais multiplicados por fator de
+ponderação cada que deve ser número real.
+
+18
+00:01:22.950 --> 00:01:29.700
+Por exemplo: 1 vezes o u1 mais
+2 vezes u2 mais 2 vezes u3,
+
+19
+00:01:29.700 --> 00:01:36.450
+ou 21 vezes u1 menos 7 vezes
+u2 mais raiz de 3 vezes u3,
+
+20
+00:01:36.450 --> 00:01:44.570
+ou ainda 0 vezes u1 mais 0,4 vezes
+u2 menos raiz de 2 vezes u3.
+
+21
+00:01:44.570 --> 00:01:49.321
+Então uma combinação linear nada mais é do
+
+22
+00:01:49.321 --> 00:01:53.780
+que uma soma ponderada onde os fatores
+de ponderação são números reais.
+
+23
+00:01:53.780 --> 00:01:58.040
+Voltando agora para
+a linearidade de sistema.
+
+24
+00:01:58.040 --> 00:02:06.210
+Se para uma entrada u1 temos uma saída y1
+e para uma entrada u2 temos uma saída y2,
+
+25
+00:02:06.210 --> 00:02:11.045
+então se a entrada é uma
+combinação linear de u1 e u2,
+
+26
+00:02:11.045 --> 00:02:15.880
+a saída deve ser a mesma
+combinação linear de y1 e y2.
+
+27
+00:02:15.880 --> 00:02:20.636
+Se isso acontecer sempre, ou seja,
+para qualquer combinação linear de
+
+28
+00:02:20.636 --> 00:02:24.060
+quaisquer entradas,
+então o sistema é linear.
+
+29
+00:02:24.060 --> 00:02:28.160
+E o que é sistema invariante no tempo?
+
+30
+00:02:28.160 --> 00:02:33.317
+Simples: sistema invariante no
+tempo é sistema no qual uma entrada
+
+31
+00:02:33.317 --> 00:02:40.045
+atrasada no tempo gera a saída
+correspondente atrasada pelo mesmo tempo.
+
+32
+00:02:40.045 --> 00:02:44.043
+Por exemplo,
+se para uma entrada u1 temos uma saída y1,
+
+33
+00:02:44.043 --> 00:02:49.702
+para uma entrada u1 atrasada temos uma
+saída y1 atrasada pelo mesmo tempo.
+
+34
+00:02:49.702 --> 00:02:56.024
+Termos mais leigos, se usarmos a mesma
+entrada hoje, amanhã ou daqui a mês,
+
+35
+00:02:56.024 --> 00:03:01.240
+teremos exatamente a mesma saída
+a partir de hoje, amanhã ou daqui a mês.
+
+36
+00:03:01.240 --> 00:03:09.250
+E nesse curso trabalharemos apenas com
+sistemas lineares e invariantes no tempo,
+
+37
+00:03:09.250 --> 00:03:15.840
+que abreviamos para sistemas LIT
+ou LTI de Linear Time Invariant.
+
+38
+00:03:15.840 --> 00:03:20.500
+E como sabemos que sistema é LIT ou LTI?
+
+39
+00:03:20.500 --> 00:03:23.683
+Isso na verdade é bastante simples,
+
+40
+00:03:23.683 --> 00:03:28.096
+a equação diferencial de sistema
+linear invariante no tempo
+
+41
+00:03:28.096 --> 00:03:32.971
+é uma equação diferencial ordinária
+linear com coeficientes constantes.
+
+42
+00:03:32.971 --> 00:03:36.216
+Hã?
+Equação diferencial ordinária linear com
+
+43
+00:03:36.216 --> 00:03:38.170
+coeficientes constantes?
+
+44
+00:03:38.170 --> 00:03:42.945
+Uma equação diferencial ordinária
+é uma equação onde aparece
+
+45
+00:03:42.945 --> 00:03:47.720
+apenas derivadas com relação a uma
+única variável, no nosso caso o tempo.
+
+46
+00:03:47.720 --> 00:03:48.484
+Linear?
+
+47
+00:03:48.484 --> 00:03:53.550
+A equação diferencial é uma
+combinação linear das derivadas.
+
+48
+00:03:53.550 --> 00:03:55.831
+Coeficientes constantes?
+
+49
+00:03:55.831 --> 00:03:59.784
+Os fatores de ponderação a2, a1, a0, b2.
+
+50
+00:03:59.784 --> 00:04:04.010
+b1, b0 são todos constantes
+ou números reais.
+
+51
+00:04:04.010 --> 00:04:06.835
+E se a equação diferencial
+do sistema não for
+
+52
+00:04:06.835 --> 00:04:11.200
+uma equação diferencial ordinária
+com coeficientes constantes?
+
+53
+00:04:11.200 --> 00:04:16.425
+Podemos fazer uma aproximação para
+obter modelo linear invariante no tempo
+
+54
+00:04:16.425 --> 00:04:21.650
+que ainda represente o sistema ou
+podemos usar técnicas mais avançadas.
+
+55
+00:04:21.650 --> 00:04:26.411
+Mas não precisa se preocupar com
+nenhuma dessas coisas por enquanto,
+
+56
+00:04:26.411 --> 00:04:28.832
+deixemos isso para outros cursos.
+
+57
+00:04:28.832 --> 00:04:33.950
+Nesse curso trabalharemos com equações
+diferenciais ordinárias lineares
+
+58
+00:04:33.950 --> 00:04:38.250
+com coeficientes constantes e você só
+precisa ser capaz de reconhecê-las.
+
+59
+00:04:38.250 --> 00:04:44.073
+Muito bem, agora que você já sabe o
+que é a linearidade e a invariância
+
+60
+00:04:44.073 --> 00:04:48.689
+no tempo e é capaz de reconhecer quando
+sistema é linear e invariante no tempo,
+
+61
+00:04:48.689 --> 00:04:51.519
+podemos falar sobre
+a Transformada de Laplace.
+
+62
+00:04:51.519 --> 00:04:56.395
+Aviso para os matemáticos de
+plantão que gostam de rigor,
+
+63
+00:04:56.395 --> 00:05:01.470
+esse é curso de engenharia e na
+engenharia fazemos várias aproximações.
+
+64
+00:05:01.470 --> 00:05:06.220
+O segredo é saber o quê,
+quando e até onde aproximar as coisas.
+
+65
+00:05:06.220 --> 00:05:08.616
+Lembram do parcimonioso?
+
+66
+00:05:08.616 --> 00:05:12.776
+Então, nossos modelos
+devem ser parcimoniosos,
+
+67
+00:05:12.776 --> 00:05:16.230
+eles não devem ser
+detalhados e exatos demais,
+
+68
+00:05:16.230 --> 00:05:20.583
+porque senão eles ficam complexos
+demais para serem úteis.
+
+69
+00:05:20.583 --> 00:05:25.496
+Mas também eles não podem ser aproximações
+muito distantes da realidade,
+
+70
+00:05:25.496 --> 00:05:28.540
+senão tudo o que fizermos
+não vai adiantar nada.
+
+71
+00:05:28.540 --> 00:05:34.240
+Mas voltando ao que interessa,
+vamos ver agora a Transformada de Laplace,
+
+72
+00:05:34.240 --> 00:05:39.940
+mas vamos nos ater somente às propriedades
+principais e sem grande rigor matemático.
+
+73
+00:05:39.940 --> 00:05:44.514
+Se quiser estudar mais sobre
+Transformada de Laplace você
+
+74
+00:05:44.514 --> 00:05:48.580
+pode ler o capítulo correspondente
+algum livro de controle de sistemas.
+
+75
+00:05:48.580 --> 00:05:55.135
+Esta é a definição da Transformada
+de Laplace unilateral à direita.
+
+76
+00:05:55.135 --> 00:06:00.389
+A Transformada de Laplace de
+sinal f(t) denotada por F(s) é,
+
+77
+00:06:00.389 --> 00:06:05.595
+por definição, igual à integral
+de 0 a infinito de e elevado
+
+78
+00:06:05.595 --> 00:06:11.334
+a menos st vezes f(t) dt,
+onde s é uma variável complexa.
+
+79
+00:06:11.334 --> 00:06:16.192
+A Transformada de Laplace, uma integral
+
+80
+00:06:16.192 --> 00:06:21.238
+de 0 a infinito, que meda,
+
+81
+00:06:21.238 --> 00:06:25.790
+número complexo.
+
+82
+00:06:25.790 --> 00:06:31.049
+[RISADA] Não precisa ter medo ou se
+preocupar com a Transformada de Laplace,
+
+83
+00:06:31.049 --> 00:06:33.490
+nós não vamos usá-la diretamente.
+
+84
+00:06:33.490 --> 00:06:36.748
+Calcular essa integral para
+diversas funções seria
+
+85
+00:06:36.748 --> 00:06:41.576
+desperdício de tempo e
+lembre-se: somos preguiçosos.
+
+86
+00:06:41.576 --> 00:06:44.539
+Se você se sentir mais confortável,
+
+87
+00:06:44.539 --> 00:06:49.250
+pode imaginar que Transformada de Laplace
+empacota uma função ou uma variável.
+
+88
+00:06:49.250 --> 00:06:53.922
+Nós estamos mais interessados nas
+propriedades desse empacotamento do que no
+
+89
+00:06:53.922 --> 00:06:55.770
+processo propriamente dito.
+
+90
+00:06:55.770 --> 00:07:01.431
+Uma das propriedades da Transformada
+de Laplace é que ela é linear, ou seja,
+
+91
+00:07:01.431 --> 00:07:06.890
+a transformada de uma combinação linear
+é a combinação linear das transformadas.
+
+92
+00:07:06.890 --> 00:07:11.766
+Outra propriedade importante é que
+para condições iniciais nulas,
+
+93
+00:07:11.766 --> 00:07:15.250
+isto é, valor igual a 0 para t igual a 0,
+
+94
+00:07:15.250 --> 00:07:21.058
+a transformada de f ponto
+derivada de F(s) é s vezes F(s),
+
+95
+00:07:21.058 --> 00:07:24.510
+onde F(s) é a Transformada
+de Laplace de f.
+
+96
+00:07:24.510 --> 00:07:29.600
+Note que podemos usar a propriedade
+da transformada da derivada
+
+97
+00:07:29.600 --> 00:07:34.690
+para obter a Transformada de Laplace de
+f 2 pontos de derivadas de ordem maior.
+
+98
+00:07:34.690 --> 00:07:39.415
+Vamos chamar f ponto de g
+e usar a propriedade da
+
+99
+00:07:39.415 --> 00:07:44.140
+transformada da derivada para obter
+a Transformada de Laplace de f 2 pontos.
+
+100
+00:07:44.140 --> 00:07:48.770
+Como f ponto é igual a g,
+f 2 pontos é igual a g ponto.
+
+101
+00:07:48.770 --> 00:07:53.400
+Então a transformada de f 2 pontos
+é a transformada de g ponto
+
+102
+00:07:53.400 --> 00:07:56.764
+e usando a propriedade da
+transformada da derivada,
+
+103
+00:07:56.764 --> 00:08:01.490
+temos que a Transformada de
+Laplace de g ponto é s vezes G(s),
+
+104
+00:08:01.490 --> 00:08:07.167
+desde que g(0) seja 0 e g(0) é f ponto de
+
+105
+00:08:07.167 --> 00:08:13.315
+0 e G(s) é a Transformada de Laplace
+de g que por sua vez é f ponto.
+
+106
+00:08:13.315 --> 00:08:19.160
+Então G(s) é s F(s),
+desde que F de 0 seja 0.
+
+107
+00:08:19.160 --> 00:08:24.711
+Substituindo o G(s) que é s F(s) na
+Transformada de Laplace de g ponto,
+
+108
+00:08:24.711 --> 00:08:30.297
+temos transformada de f 2 pontos
+igual a s ao quadrado vezes F(s),
+
+109
+00:08:30.297 --> 00:08:34.150
+onde F(s) é a Transformada
+de Laplace de f.
+
+110
+00:08:34.150 --> 00:08:40.144
+Podemos usar o mesmo raciocínio para obter
+as Transformadas de Laplace de f 3 pontos,
+
+111
+00:08:40.144 --> 00:08:42.510
+f 4 pontos e assim por diante.
+
+112
+00:08:42.510 --> 00:08:46.173
+Se as condições iniciais forem nulas,
+isto é,
+
+113
+00:08:46.173 --> 00:08:51.285
+a função e suas derivadas forem nulas
+para t igual a 0, cada derivada
+
+114
+00:08:51.285 --> 00:08:56.380
+da função se transforma s multiplicando
+a transformada da função original.
+
+115
+00:08:56.380 --> 00:09:01.700
+Caso a variável convirja para valor
+constante à medida que tempo passa,
+
+116
+00:09:01.700 --> 00:09:06.712
+podemos obter este valor usando o Teorema
+do valor final, que diz que o limite
+
+117
+00:09:06.712 --> 00:09:12.530
+de f(t) quando t tende ao infinito é igual
+ao limite s G(s) quando s tende a 0.
+
+118
+00:09:12.530 --> 00:09:17.585
+Você pode apenas aceitar e acreditar
+que essas propriedades são
+
+119
+00:09:17.585 --> 00:09:22.534
+válidas ou pode procurar pela demonstração
+delas algum livro de controle,
+
+120
+00:09:22.534 --> 00:09:26.580
+onde você encontrará outras propriedades
+da Transformada de Laplace.
+
+121
+00:09:26.580 --> 00:09:30.324
+Agora você já deve ser capaz
+de descrever as propriedades
+
+122
+00:09:30.324 --> 00:09:34.898
+de linearidade e invariância no tempo
+e também deve ser capaz de descrever
+
+123
+00:09:34.898 --> 00:09:39.060
+a Transformada de Laplace e de citar
+as suas principais propriedades.
+
+124
+00:09:39.060 --> 00:09:43.655
+No próximo vídeo você verá como usar
+a Transformada de Laplace e suas
+
+125
+00:09:43.655 --> 00:09:48.250
+propriedades para obter o que chamamos
+de Função de Transferência do sistema.
+
+126
+00:09:48.250 --> 00:09:57.770
+[MÚSICA] [SOM]

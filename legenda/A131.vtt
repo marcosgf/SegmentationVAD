@@ -1,0 +1,263 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.180
+[MÚSICA] [MÚSICA]
+
+2
+00:00:09.180 --> 00:00:15.949
+Chegamos ao último módulo do nosso curso.
+
+3
+00:00:15.949 --> 00:00:20.859
+Nesse módulo final veremos algumas
+considerações sobre o pós-lançamento
+
+4
+00:00:20.859 --> 00:00:21.524
+de game.
+
+5
+00:00:21.524 --> 00:00:24.860
+Isso nos leva ao domínio da
+documentação de post-mortem.
+
+6
+00:00:24.860 --> 00:00:29.094
+Post-mortem é o termo utilizado por
+médicos forenses que quer dizer
+
+7
+00:00:29.094 --> 00:00:30.850
+literalmente Após a Morte.
+
+8
+00:00:30.850 --> 00:00:33.894
+No que diz respeito ao mundo
+do desenvolvimento de games,
+
+9
+00:00:33.894 --> 00:00:37.510
+o documento de post-mortem serve
+para analisar jogo concluído.
+
+10
+00:00:37.510 --> 00:00:42.220
+Nesse momento, após a finalização
+e geralmente o lançamento,
+
+11
+00:00:42.220 --> 00:00:46.334
+os desenvolvedores podem tirar tempo para
+refletir sobre o que poderia ter sido
+
+12
+00:00:46.334 --> 00:00:49.150
+feito de maneira diferente
+no seu processo de criação.
+
+13
+00:00:49.150 --> 00:00:51.548
+O que deu certo e o que deu errado?
+
+14
+00:00:51.548 --> 00:00:56.280
+A metodologia de trabalho utilizada
+garantiu a produtividade?
+
+15
+00:00:56.280 --> 00:01:02.180
+O orçamento e o cronograma foram realistas
+ou precisariam de ajustes severos?
+
+16
+00:01:02.180 --> 00:01:03.662
+Esse tipo de coisa.
+
+17
+00:01:03.662 --> 00:01:09.251
+Pode parecer trabalhoso organizar esse
+tipo de informação, principalmente
+
+18
+00:01:09.251 --> 00:01:13.790
+se o projeto não saiu como pretendido
+e nem teve a repercussão esperada.
+
+19
+00:01:13.790 --> 00:01:17.446
+Mas é justamente nesses casos que
+o post-mortem se torna ainda mais
+
+20
+00:01:17.446 --> 00:01:18.220
+importante.
+
+21
+00:01:18.220 --> 00:01:23.121
+Como já foi comentado, nós tendemos
+a valorizar uma ideia de sucesso sem
+
+22
+00:01:23.121 --> 00:01:27.052
+pensar no processo de tentativa e erro
+que define todo tipo de trabalho,
+
+23
+00:01:27.052 --> 00:01:29.000
+especialmente o de ordem criativa.
+
+24
+00:01:29.000 --> 00:01:33.485
+O documento de post-mortem pode
+existir unicamente para o seu controle
+
+25
+00:01:33.485 --> 00:01:35.330
+particular ou de sua equipe.
+
+26
+00:01:35.330 --> 00:01:39.960
+Porém, convém pensar na possibilidade de
+compartilhá-lo com outros desenvolvedores.
+
+27
+00:01:39.960 --> 00:01:44.436
+Muitas desenvolvedoras grandes
+e independentes já fazem isso.
+
+28
+00:01:44.436 --> 00:01:48.971
+E você pode encontrar algumas dessas
+análises no The Big List of Postmortem ou
+
+29
+00:01:48.971 --> 00:01:49.890
+no Gamasutra.
+
+30
+00:01:49.890 --> 00:01:53.980
+[MÚSICA]
+
+31
+00:01:53.980 --> 00:02:01.049
+[MÚSICA] A vantagem de
+
+32
+00:02:01.049 --> 00:02:06.290
+ter acesso a essas reflexões de outros
+game designers e desenvolvedores,
+
+33
+00:02:06.290 --> 00:02:09.450
+bem como a de compartilhar as
+suas próprias experiências,
+
+34
+00:02:09.450 --> 00:02:13.480
+está justamente na troca de conhecimentos,
+que se mostra muito enriquecedora.
+
+35
+00:02:13.480 --> 00:02:18.278
+É ótimo ver estratégias de trabalho que
+deram certo, acompanhar a explicação
+
+36
+00:02:18.278 --> 00:02:21.990
+do processo de trabalho de desenvolvedores
+que tiveram seus projetos bem-sucedidos,
+
+37
+00:02:21.990 --> 00:02:26.454
+mas também é igualmente importante saber
+identificar problemas e pontos críticos de
+
+38
+00:02:26.454 --> 00:02:27.080
+projetos.
+
+39
+00:02:27.080 --> 00:02:31.880
+Geralmente a frustração do desenvolvedor,
+especialmente daquele que é independente,
+
+40
+00:02:31.880 --> 00:02:36.558
+surge da diferença existente entre
+a expectativa criada pelo seu projeto e
+
+41
+00:02:36.558 --> 00:02:39.990
+a dura realidade com
+a qual ele é confrontado.
+
+42
+00:02:39.990 --> 00:02:43.728
+Mesmo quando você é obrigado
+a abandonar projeto pela metade,
+
+43
+00:02:43.728 --> 00:02:46.150
+porque você não teve
+fôlego para concluí-lo,
+
+44
+00:02:46.150 --> 00:02:49.800
+é importante dar tempo para refletir
+com clareza sobre o que deu errado.
+
+45
+00:02:49.800 --> 00:02:54.810
+É complicado pois estamos emocionalmente
+ligados aos nossos projetos e sonhos,
+
+46
+00:02:54.810 --> 00:02:59.733
+mas ser capaz de executar nossos planos,
+estipular metas, cumpri-las,
+
+47
+00:02:59.733 --> 00:03:03.223
+é essencial para a nossa
+evolução pessoal e profissional.
+
+48
+00:03:03.223 --> 00:03:04.560
+Então não tenha medo.
+
+49
+00:03:04.560 --> 00:03:09.321
+Respire fundo, olhe bem para os
+frutos do seu trabalho com olhar
+
+50
+00:03:09.321 --> 00:03:13.040
+crítico e pense no que poderia ter
+sido feito de uma maneira melhor.
+
+51
+00:03:13.040 --> 00:03:17.220
+Veja também como seus colegas trabalham
+e refletem sobre os seus respectivos
+
+52
+00:03:17.220 --> 00:03:17.870
+projetos.
+
+53
+00:03:17.870 --> 00:03:19.058
+Aprenda com eles.
+
+54
+00:03:19.058 --> 00:03:22.930
+No próximo vídeo vamos falar
+sobre o feedback dos jogadores.
+
+55
+00:03:22.930 --> 00:03:30.930
+[MÚSICA]
+
+56
+00:03:30.930 --> 00:03:39.990
+[MÚSICA] [MÚSICA]

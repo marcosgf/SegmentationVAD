@@ -1,0 +1,664 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.630
+[MÚSICA] [MÚSICA] Olá a todos!
+
+2
+00:00:08.630 --> 00:00:10.550
+O meu nome é Eduardo Guerra.
+
+3
+00:00:10.550 --> 00:00:14.950
+Esse é o curso de desenvolvimento
+de software guiado por testes.
+
+4
+00:00:14.950 --> 00:00:19.564
+Nesta aula vamos fazer hands on
+para aprender a usar Mock Objects.
+
+5
+00:00:19.564 --> 00:00:23.225
+Para isso a gente,
+eu já preparei aqui cenário não é?
+
+6
+00:00:23.225 --> 00:00:26.250
+Onde a gente não tem ainda
+nenhuma dependência,
+
+7
+00:00:26.250 --> 00:00:29.290
+mais para a gente já ter
+ponto de partida está?
+
+8
+00:00:29.290 --> 00:00:32.296
+A gente tem aqui uma
+classe chamada Produto,
+
+9
+00:00:32.296 --> 00:00:35.537
+que só tem aqui o nome e
+o valor do produto, está?
+
+10
+00:00:35.537 --> 00:00:39.054
+A gente tem uma classe aqui
+chamada CarrinhoCompras não é?
+
+11
+00:00:39.054 --> 00:00:43.072
+Que ela tem aqui método que permite
+que você adicione produtos, não é?
+
+12
+00:00:43.072 --> 00:00:47.880
+Tem atributo ali para guardar a lista
+de produtos aqui chamada itens
+
+13
+00:00:47.880 --> 00:00:52.809
+e tem método total, que retorna o
+total ali do carrinho de compras está?
+
+14
+00:00:52.809 --> 00:00:58.251
+E por fim, como não poderia deixar de ser,
+temos teste de unidade não é?
+
+15
+00:00:58.251 --> 00:01:01.421
+Que faz o teste aqui desse método total,
+
+16
+00:01:01.421 --> 00:01:05.324
+onde ele adiciona os produtos
+e verifica aqui o total não é?
+
+17
+00:01:05.324 --> 00:01:08.581
+A gente pode rodar isso daqui não é?
+
+18
+00:01:08.581 --> 00:01:14.181
+Esse, esse teste e a gente vê
+aqui que está passando está?
+
+19
+00:01:14.181 --> 00:01:16.280
+O quê que vamos fazer?
+
+20
+00:01:16.280 --> 00:01:22.888
+Eu quero que eu possa adicionar nesse
+carrinho observadores, não é, classes que
+
+21
+00:01:22.888 --> 00:01:28.497
+vão receber notificações quando produtos
+forem adicionados naquele carrinho.
+
+22
+00:01:28.497 --> 00:01:30.721
+Para quê que serve isso, não é?
+
+23
+00:01:30.721 --> 00:01:35.902
+Por exemplo, se eu, eu,
+eu posso querer ter observador
+
+24
+00:01:35.902 --> 00:01:41.663
+do sistema de estoque para para poder
+por exemplo dar baixa produto ou
+
+25
+00:01:41.663 --> 00:01:47.310
+deixar o produto reservado, ou posso ter
+observador de preferências do usuário para
+
+26
+00:01:47.310 --> 00:01:52.263
+quando ele adicionar produto no carrinho,
+eu ver de que tipo que é e querer é, é,
+
+27
+00:01:52.263 --> 00:01:58.048
+adicionar nas preferências dele aquele
+tipo, alguma coisa desse tipo está?
+
+28
+00:01:58.048 --> 00:02:02.300
+Só que a gente não vai entrar no detalhe,
+porque a gente vai fazer o seguinte:
+
+29
+00:02:02.300 --> 00:02:07.556
+a gente vai, na classe Carrinho, é,
+é, criar essa ideia do observador
+
+30
+00:02:07.556 --> 00:02:13.609
+a partir de uma interface e depois
+quem quiser que implemente aí, está?
+
+31
+00:02:13.609 --> 00:02:18.523
+Então a gente vai exercitar aqui
+a parte de Mock Object fazendo esse
+
+32
+00:02:18.523 --> 00:02:19.828
+exemplo aí, ok?
+
+33
+00:02:19.828 --> 00:02:20.980
+Então vamos lá.
+
+34
+00:02:20.980 --> 00:02:23.449
+A primeira coisa que eu quero não é?
+
+35
+00:02:23.449 --> 00:02:30.437
+É poder é, é,
+fazer com que o carrinho ele escute não é?
+
+36
+00:02:31.710 --> 00:02:34.073
+É, produto aqui não é?
+
+37
+00:02:34.073 --> 00:02:39.340
+Eu posso adicionar observador
+que vai adicionar.
+
+38
+00:02:39.340 --> 00:02:40.838
+Uma observação não é?
+
+39
+00:02:40.838 --> 00:02:45.802
+Uma observação sobre observadores é que
+esse é padrão chamado Observer está?
+
+40
+00:02:45.802 --> 00:02:50.259
+Não é o escopo da nossa aula mas fica
+aí para o conhecimento de vocês está?
+
+41
+00:02:50.259 --> 00:02:54.230
+Então como sempre eu vou começar
+fazendo teste aqui não é?
+
+42
+00:02:54.230 --> 00:02:56.498
+Opa, ficou e a mais.
+
+43
+00:02:56.498 --> 00:03:01.160
+É então eu vou lá public void,
+eu vou colocar aqui
+
+44
+00:03:01.160 --> 00:03:07.496
+escutaAdiçãoDeProduto, está?
+
+45
+00:03:07.496 --> 00:03:13.393
+Então eu vou vir aqui,
+vou instanciar aqui o carrinho
+
+46
+00:03:13.393 --> 00:03:18.910
+de compras é c é igual
+
+47
+00:03:18.910 --> 00:03:24.694
+a new, vamos lá, facilita aí.
+
+48
+00:03:24.694 --> 00:03:29.713
+Vem o carrinho de compras
+e eu vou aqui adicionar,
+
+49
+00:03:29.713 --> 00:03:35.396
+eu vou criar aqui o meu mock é,
+como é que eu vou chamar isso aqui?
+
+50
+00:03:35.396 --> 00:03:42.024
+Escuta, observador, eu vou chamar
+de observador carrinho não é?
+
+51
+00:03:42.024 --> 00:03:48.290
+Então mock é, é igual a new
+
+52
+00:03:48.290 --> 00:03:53.560
+MockObservadorCarrinho.
+
+53
+00:03:53.560 --> 00:03:59.580
+E agora eu vou vir aqui
+no meu carrinho não é?
+
+54
+00:03:59.580 --> 00:04:05.456
+E vou adicionar observador,
+
+55
+00:04:05.456 --> 00:04:09.970
+que vai ser o meu mock, está?
+
+56
+00:04:09.970 --> 00:04:12.610
+Então o quê que eu vou fazer?
+
+57
+00:04:12.610 --> 00:04:19.140
+Eu vou adicionar produto, está?
+
+58
+00:04:19.140 --> 00:04:22.949
+E é, o meu mock não é?
+
+59
+00:04:22.949 --> 00:04:26.568
+Ele vai ter que verificar não é?
+
+60
+00:04:26.568 --> 00:04:30.360
+Verifica recebimento, opa!
+
+61
+00:04:30.360 --> 00:04:32.359
+Produto.
+
+62
+00:04:32.359 --> 00:04:38.823
+No caso ali o meu mock eu não
+quero que ele receba, por exemplo,
+
+63
+00:04:38.823 --> 00:04:42.645
+essa minha classe, eu não quero que ele
+receba diretamente a classe Produto,
+
+64
+00:04:42.645 --> 00:04:46.210
+eu quero que ele receba
+só o nome e o preço.
+
+65
+00:04:46.210 --> 00:04:51.639
+Então ele vai verificar o
+recebimento do produto está?
+
+66
+00:04:51.639 --> 00:04:55.093
+Então o quê que eu tenho que fazer agora?
+
+67
+00:04:55.093 --> 00:04:57.607
+Eu tenho que criar o mock está?
+
+68
+00:04:57.607 --> 00:04:59.596
+O mock ele faz parte do teste,
+
+69
+00:04:59.596 --> 00:05:04.170
+então criar o mock faz parte de
+criar o caso de teste, está?
+
+70
+00:05:04.170 --> 00:05:08.590
+Então eu vou vir aqui, está?
+
+71
+00:05:08.590 --> 00:05:13.470
+Eu vou criar a classe
+MockObservadorCarrinho.
+
+72
+00:05:13.470 --> 00:05:22.070
+[SEM ÁUDIO] essa classe ela
+vai ter que implementar não é?
+
+73
+00:05:22.070 --> 00:05:26.660
+Uma interface, que é a que a minha,
+a classe lá vai aceitar.
+
+74
+00:05:26.660 --> 00:05:31.548
+Então eu já vou, eu já vou criar ela aqui
+também, que aí eu vou definir o quê que é
+
+75
+00:05:31.548 --> 00:05:34.559
+o método do mock,
+o quê que é o método da interface, está?
+
+76
+00:05:34.559 --> 00:05:41.430
+Então eu já vou vir aqui e mandar
+criar a interface ObservadorCarrinho.
+
+77
+00:05:41.430 --> 00:05:46.851
+[SEM ÁUDIO] Então
+
+78
+00:05:46.851 --> 00:05:51.906
+eu já vou definir aqui na minha interface
+que ela tem que ter método que é, é,
+
+79
+00:05:51.906 --> 00:05:56.753
+é, vai chamar aqui ó
+produtoAdicionado que é a,
+
+80
+00:05:56.753 --> 00:06:01.945
+que é a notificação que ele vai
+receber que produto foi adicionado, é,
+
+81
+00:06:01.945 --> 00:06:07.228
+e ele vai receber aqui o
+nome do produto e o é,
+
+82
+00:06:07.228 --> 00:06:10.635
+valor daquele produto, está?
+
+83
+00:06:10.635 --> 00:06:14.180
+Então essa aqui é a minha interface.
+
+84
+00:06:14.180 --> 00:06:18.645
+Então o meu mock obviamente,
+como ele implementa aquela interface,
+
+85
+00:06:18.645 --> 00:06:25.280
+ele precisa é, ter esse método, certo?
+
+86
+00:06:25.280 --> 00:06:29.006
+Então vamos salvar aqui é,
+eu ainda tenho o método do mock não é?
+
+87
+00:06:29.006 --> 00:06:31.622
+Eu tenho esse adicionaObservador, está?
+
+88
+00:06:31.622 --> 00:06:34.452
+Eu vou criar o método
+aqui na minha classe,
+
+89
+00:06:34.452 --> 00:06:38.320
+só que ao invés de ele receber
+o MockObservadorCarrinho,
+
+90
+00:06:38.320 --> 00:06:43.292
+ele vai receber só ObservadorCarrinho,
+que é a abstração, não é?
+
+91
+00:06:43.292 --> 00:06:46.170
+Então eu vou chamar aqui de observador.
+
+92
+00:06:46.170 --> 00:06:54.880
+Então salvo, é e eu ainda tenho aqui
+esse verifica o recebimento do produto.
+
+93
+00:06:54.880 --> 00:06:57.493
+está?
+Então eu vou criar esse método aqui
+
+94
+00:06:57.493 --> 00:06:58.090
+no mock.
+
+95
+00:06:58.090 --> 00:07:02.118
+E aí, como eu falei, criar o mock
+faz parte da criação do teste.
+
+96
+00:07:02.118 --> 00:07:06.467
+Então eu vou vir aqui e vou fazer:
+olha o produto que ele adicionar aqui,
+
+97
+00:07:06.467 --> 00:07:09.922
+eu vou ter que verificar
+se ele foi recebido ali.
+
+98
+00:07:09.922 --> 00:07:15.129
+Então eu vou criar aqui é,
+
+99
+00:07:15.129 --> 00:07:18.161
+é, uma string aqui não é?
+
+100
+00:07:18.161 --> 00:07:21.686
+Então eu vou chamar aqui de é,
+
+101
+00:07:21.686 --> 00:07:27.287
+produto, é nome produto recebido,
+
+102
+00:07:27.287 --> 00:07:32.556
+nomeRecebido e eu vou
+criar aqui uma variável
+
+103
+00:07:32.556 --> 00:07:38.950
+inteira que vai ser o valor recebido,
+está?
+
+104
+00:07:38.950 --> 00:07:44.329
+Então quando ele adicionar o produto,
+eu vou armazenar isso aqui, não é?
+
+105
+00:07:44.329 --> 00:07:49.760
+Então o nome recebido ele é igual ao nome,
+
+106
+00:07:49.760 --> 00:07:54.958
+o valor recebido ele
+
+107
+00:07:54.958 --> 00:08:02.539
+é igual ao valor,
+e aqui eu vou verificar não é?
+
+108
+00:08:02.539 --> 00:08:06.795
+Eu posso usar os métodos assert
+do próprio Eclipse não é?
+
+109
+00:08:06.795 --> 00:08:09.672
+Do próprio Eclipse não, do próprio JUnit.
+
+110
+00:08:09.672 --> 00:08:15.380
+Então eu vou usar aqui assert,
+aí é que eu vou usar aqui a classe Assert.
+
+111
+00:08:15.380 --> 00:08:20.320
+Não, eu vou importar ali,
+eu vou fazer o import
+
+112
+00:08:20.320 --> 00:08:25.650
+static aqui igual a gente
+faz lá no JUnit não é?
+
+113
+00:08:25.650 --> 00:08:33.631
+Eu vou importar os métodos ali do assert,
+eu acho que ele está dando errado.
+
+114
+00:08:33.631 --> 00:08:37.623
+Vamos ver o quê que é que ele,
+é junit.assert está?
+
+115
+00:08:37.623 --> 00:08:41.964
+Então vamos, vamos,
+eu vou copiar esse esse
+
+116
+00:08:41.964 --> 00:08:46.651
+aqui para eu poder usar os asserts aqui.
+
+117
+00:08:46.651 --> 00:08:51.547
+Então eu vou usar aqui o
+assertEquals o nome recebido.
+
+118
+00:08:51.547 --> 00:08:54.920
+Então na verdade aqui ó,
+
+119
+00:08:54.920 --> 00:08:59.250
+e aí você verifica aqui,
+que seria aqui o nome esperado, não é?
+
+120
+00:08:59.250 --> 00:09:04.982
+Que é o que eu estou passando lá no
+teste e aqui é o valor esperado.
+
+121
+00:09:04.982 --> 00:09:10.795
+Então é, o nome esperado ele tem que
+
+122
+00:09:10.795 --> 00:09:16.653
+ser o valor esperado ó, o nome esperado,
+
+123
+00:09:16.653 --> 00:09:23.980
+tem que ser o nome recebido e
+
+124
+00:09:23.980 --> 00:09:27.889
+o valor esperado tem que
+ser o valor recebido.
+
+125
+00:09:27.889 --> 00:09:33.246
+Então assertEquals valor esperado
+
+126
+00:09:33.246 --> 00:09:37.623
+é o valor recebido.
+
+127
+00:09:37.623 --> 00:09:41.970
+Então eu vou salvar.
+
+128
+00:09:41.970 --> 00:09:47.458
+Agora o meu teste está compilando,
+eu vou rodar e é,
+
+129
+00:09:47.458 --> 00:09:52.730
+é, ele está falando aqui ó,
+eu estava esperando o tênis
+
+130
+00:09:52.730 --> 00:09:58.808
+mas foi é, é, cadê?
+
+131
+00:09:58.808 --> 00:10:00.439
+Mostra aí.
+
+132
+00:10:00.439 --> 00:10:03.380
+Não está mostrando.
+
+133
+00:10:03.380 --> 00:10:07.455
+Então eu vou expandir aqui
+para a gente ver o que é.
+
+134
+00:10:07.455 --> 00:10:11.888
+E está lá, eu estava esperando
+o tênis mas foi null, está?
+
+135
+00:10:11.888 --> 00:10:15.771
+Ó, veja que essa verificação ele
+está rodando dentro do mock,
+
+136
+00:10:15.771 --> 00:10:18.234
+por isso que faz parte do teste, está?
+
+137
+00:10:18.234 --> 00:10:22.990
+Então ele quando ele chama verifica
+o recebimento do tênis com 100,
+
+138
+00:10:22.990 --> 00:10:28.771
+então ele,
+ele faz essa verificação, certo?
+
+139
+00:10:28.771 --> 00:10:34.320
+Então criamos o nosso teste, criamos o
+nosso mock, definimos a interface não é?
+
+140
+00:10:34.320 --> 00:10:37.729
+Tudo como que vai ser
+a partir do nosso teste.
+
+141
+00:10:37.729 --> 00:10:42.524
+Então eu vou deixar a implementação
+e a continuação do nosso TDD
+
+142
+00:10:42.524 --> 00:10:44.253
+para o próximo vídeo.
+
+143
+00:10:44.253 --> 00:10:50.668
+Muito obrigado por assistir
+e continue na sequência.
+
+144
+00:10:50.668 --> 00:10:52.640
+[MÚSICA]

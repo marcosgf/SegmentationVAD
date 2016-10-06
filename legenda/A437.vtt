@@ -1,0 +1,740 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.521
+[MÚSICA] Olá.
+
+2
+00:00:07.521 --> 00:00:10.608
+Bem-vindo ao curso sobre TDD.
+
+3
+00:00:10.608 --> 00:00:16.320
+Eu sou Clóvis Fernandes e hoje
+iremos mostrar para vocês
+
+4
+00:00:16.320 --> 00:00:23.420
+exemplo de refatoração usando
+o Extract Method do Fowler.
+
+5
+00:00:23.420 --> 00:00:26.337
+A refatoração para extrair
+
+6
+00:00:26.337 --> 00:00:31.340
+método de código exemplo que
+a gente vai mostrar para vocês.
+
+7
+00:00:31.340 --> 00:00:35.270
+Então qual que é o nosso
+problema nesse momento?
+
+8
+00:00:35.270 --> 00:00:41.030
+Você tem fragmento de código
+que pode ser agrupado.
+
+9
+00:00:41.030 --> 00:00:48.006
+Vamos ver o nosso exemplo, ele foi
+tirado direto lá do Fowler, está certo?
+
+10
+00:00:48.006 --> 00:00:50.122
+Eu já tenho printBanner,
+
+11
+00:00:50.122 --> 00:00:54.481
+método printBanner e depois comentário,
+print details,
+
+12
+00:00:54.481 --> 00:00:59.708
+então pode ver que o meu cachorrinho
+já está farejando ali, está certo?
+
+13
+00:00:59.708 --> 00:01:04.838
+Imaginem que ali vai ter alguma coisa
+que precisa ser tratada, está certo?
+
+14
+00:01:04.838 --> 00:01:09.080
+O que precisa ser tratado que está
+bem claro aí, é esse desnível, não é?
+
+15
+00:01:09.080 --> 00:01:14.790
+Então como eu havia dito, supõe-se
+que o printBanner tenha sido código,
+
+16
+00:01:14.790 --> 00:01:20.090
+que já correspondeu a Extracted Method,
+ou não, não importa.
+
+17
+00:01:20.090 --> 00:01:26.615
+O que importa é que existe desnível,
+você tem comando simples,
+
+18
+00:01:26.615 --> 00:01:33.004
+expressando uma expressão,
+que é o printBanner, está certo?
+
+19
+00:01:33.004 --> 00:01:37.638
+Que você [INAUDÍVEL] o que
+expressa a expressão, está certo?
+
+20
+00:01:37.638 --> 00:01:40.280
+O resto está comandos bem simples,
+
+21
+00:01:40.280 --> 00:01:44.615
+então que a gente vai extrair
+código é do system out,
+
+22
+00:01:44.615 --> 00:01:50.340
+do primeiro system out e do
+segundo system out, então,
+
+23
+00:01:50.340 --> 00:01:57.844
+nós vamos tentar fazer essa extração,
+da melhor maneira possível.
+
+24
+00:01:57.844 --> 00:02:01.211
+E como é que essa extração ocorre?
+
+25
+00:02:01.211 --> 00:02:06.344
+A primeira coisa que você
+vai fazer é transformar
+
+26
+00:02:06.344 --> 00:02:10.660
+esse fragmento que você está
+querendo extrair, está certo?
+
+27
+00:02:10.660 --> 00:02:15.520
+Transformá-lo novo método e
+
+28
+00:02:15.520 --> 00:02:21.170
+seguindo aquele princípio do
+expressar a intenção, está certo?
+
+29
+00:02:21.170 --> 00:02:26.378
+A ideia é que você explique,
+apresente nome que
+
+30
+00:02:26.378 --> 00:02:31.710
+explique a finalidade daquele trecho
+de código que está ali, está certo?
+
+31
+00:02:31.710 --> 00:02:36.659
+O comentário que tem ali vai nos
+ajudar a ter uma noção do que
+
+32
+00:02:36.659 --> 00:02:41.972
+aquele trecho de código responde por
+quem fez aquele trecho de código,
+
+33
+00:02:41.972 --> 00:02:46.910
+mas como eu já mostrei
+exemplo de aula anterior,
+
+34
+00:02:46.910 --> 00:02:49.838
+os comentários [INAUDÍVEL]
+não está errado, está certo?
+
+35
+00:02:49.838 --> 00:02:53.725
+Então você que é responsável por entender
+aquele trecho de código e concordar com o
+
+36
+00:02:53.725 --> 00:02:54.700
+comentário ou não.
+
+37
+00:02:54.700 --> 00:02:59.793
+A segunda coisa que a gente
+vai fazer é: onde tinha aquele
+
+38
+00:02:59.793 --> 00:03:07.575
+trecho de código que a gente
+removeu para formar o novo método,
+
+39
+00:03:07.575 --> 00:03:12.744
+nós colocamos uma chamada daquele método,
+está certo?
+
+40
+00:03:12.744 --> 00:03:17.696
+Normalmente nós extraímos esses
+métodos e na maioria das vezes
+
+41
+00:03:17.696 --> 00:03:22.293
+eles ficam como métodos privados,
+está certo?
+
+42
+00:03:22.293 --> 00:03:27.749
+Alguns casos eles podem ter,
+receber modificador
+
+43
+00:03:27.749 --> 00:03:32.990
+diferente de acesso,
+mas igualmente eles vão ser privados.
+
+44
+00:03:32.990 --> 00:03:38.416
+Outra coisa que a gente precisa tomar
+muito cuidado é com as variáveis
+
+45
+00:03:38.416 --> 00:03:44.100
+temporárias nesse trecho de código
+que nós vamos extrair, está certo?
+
+46
+00:03:44.100 --> 00:03:51.220
+Se a variável temporária é definida e
+usada inteiramente lá dentro, está certo?
+
+47
+00:03:51.220 --> 00:03:54.540
+Sem nenhum contato externo,
+não tem problema,
+
+48
+00:03:54.540 --> 00:03:58.280
+como se fosse uma variável
+interna daquele método.
+
+49
+00:03:58.280 --> 00:04:02.998
+Agora, se você determinou que
+ia definir antes e ela não é
+
+50
+00:04:02.998 --> 00:04:07.310
+modificada lá dentro, está certo,
+
+51
+00:04:07.310 --> 00:04:12.345
+você tem que passar essa variável como
+parâmetro, então você tem uma variável
+
+52
+00:04:12.345 --> 00:04:17.380
+que foi declarada antes, que não é
+modificada dentro desse fragmento,
+
+53
+00:04:17.380 --> 00:04:21.210
+você vai passar com parâmetro, se tiver
+mais com parâmetro e assim por diante.
+
+54
+00:04:21.210 --> 00:04:26.530
+A outra coisa é que, se ela for
+modificada lá dentro do fragmento,
+
+55
+00:04:26.530 --> 00:04:31.729
+essa variável temporária,
+se ela for modificada lá dentro,
+
+56
+00:04:31.729 --> 00:04:35.490
+aí ela tem que voltar através de return.
+
+57
+00:04:35.490 --> 00:04:39.078
+Então obviamente se eu tiver
+mais do que uma variável,
+
+58
+00:04:39.078 --> 00:04:44.390
+eu vou ter que usar algum esquema
+de voltar essas variáveis,
+
+59
+00:04:44.390 --> 00:04:49.220
+os valores dessas variáveis
+para serem usados externamente.
+
+60
+00:04:49.220 --> 00:04:53.546
+Como o return só permite o
+retorno de uma variável,
+
+61
+00:04:53.546 --> 00:05:00.163
+o que normalmente se faz é você
+transformar o valor do dado que você,
+
+62
+00:05:00.163 --> 00:05:05.208
+o valor dos dados que você está querendo
+retornar são mais de uma variável,
+
+63
+00:05:05.208 --> 00:05:08.180
+você transforma no que a gente chama ali,
+o object.
+
+64
+00:05:08.180 --> 00:05:14.512
+Quer dizer, você vai fazer objeto que é
+só para transportar esses valores, certo?
+
+65
+00:05:14.512 --> 00:05:18.330
+E quando você devolver esse value object,
+
+66
+00:05:18.330 --> 00:05:23.510
+você vai [INAUDÍVEL] get
+para obter os valores
+
+67
+00:05:23.510 --> 00:05:30.250
+apropriados para cada uma das
+variáveis que modificou internamente.
+
+68
+00:05:30.250 --> 00:05:34.630
+Bom, vamos olhar agora de novo o código,
+
+69
+00:05:34.630 --> 00:05:39.640
+Então vamos examinar, o print details,
+que é o comentário que está ali,
+
+70
+00:05:39.640 --> 00:05:46.460
+Caso [INAUDÍVEL] examina e percebe
+que ele realmente corresponde
+
+71
+00:05:46.460 --> 00:05:52.129
+à qualidade desse tipo de código,
+está certo?
+
+72
+00:05:52.129 --> 00:05:57.630
+Então o nome vai sair daí, o nome do
+meu novo método vai ser print details.
+
+73
+00:05:57.630 --> 00:06:03.490
+Verifico também que
+a variável temporária debito,
+
+74
+00:06:03.490 --> 00:06:08.422
+ela é usada,
+definida antes do trecho que eu
+
+75
+00:06:08.422 --> 00:06:12.920
+vou extrair e ela é usada
+
+76
+00:06:12.920 --> 00:06:18.140
+diretamente sem modificação, ela não é
+modificada dentro do trecho, está certo?
+
+77
+00:06:18.140 --> 00:06:22.864
+Então eu vou passar como o parâmetro,
+então o meu método vai ser print
+
+78
+00:06:22.864 --> 00:06:27.876
+details e eu passo uma variável
+debito do tipo double,
+
+79
+00:06:27.876 --> 00:06:32.817
+underline, ou sublinhado,
+name, fica bem claro aqui,
+
+80
+00:06:32.817 --> 00:06:37.801
+esse trecho de código é pequeno mas se
+fosse trecho maior, você ia notar que
+
+81
+00:06:37.801 --> 00:06:42.686
+pela nossa convenção ele é uma variável de
+instância, [INAUDÍVEL] procurando nada,
+
+82
+00:06:42.686 --> 00:06:46.603
+ver nada tem o sublinhado antes,
+então é uma variável de instância,
+
+83
+00:06:46.603 --> 00:06:51.485
+então não vou confundir com
+variáveis temporárias ou parâmetros
+
+84
+00:06:51.485 --> 00:06:55.840
+do método que eu estou usando, está certo?
+
+85
+00:06:55.840 --> 00:07:00.641
+Então vamos agora observar,
+o trecho que nós vamos extrair então,
+
+86
+00:07:00.641 --> 00:07:04.680
+é essas duas linhas que contêm
+o system out, está certo?
+
+87
+00:07:04.680 --> 00:07:06.168
+Nessas duas linhas.
+
+88
+00:07:06.168 --> 00:07:08.160
+Primeira coisa que eu faço?
+
+89
+00:07:08.160 --> 00:07:12.682
+Fazer uma cópia desse trecho,
+criar o método
+
+90
+00:07:12.682 --> 00:07:17.670
+print details com parâmetro debito,
+está certo?
+
+91
+00:07:17.670 --> 00:07:22.350
+E cria o método, e cria esse método.
+
+92
+00:07:22.350 --> 00:07:25.710
+Nesse trecho que está marcado aí, Extrair,
+
+93
+00:07:25.710 --> 00:07:30.640
+eu vou então por a chamada do
+método novo que eu acabei de criar.
+
+94
+00:07:30.640 --> 00:07:32.497
+Então vejamos como é que fica?
+
+95
+00:07:32.497 --> 00:07:36.420
+Dessa forma, então eu coloquei
+ali o antes e o depois, certo?
+
+96
+00:07:36.420 --> 00:07:38.130
+Tem o antes e o depois.
+
+97
+00:07:38.130 --> 00:07:44.900
+Vocês percebam que eu tenho lá
+printDetails debito, está certo?
+
+98
+00:07:44.900 --> 00:07:48.455
+Então isso ficou bem claro,
+
+99
+00:07:48.455 --> 00:07:52.668
+essa estrutura que foi feita,
+esse mecanismo,
+
+100
+00:07:52.668 --> 00:07:58.822
+esse processo todo para fazer
+o Extract Method, está certo?
+
+101
+00:07:58.822 --> 00:08:07.470
+Para extrair o método novo de
+trecho passível de extração,
+
+102
+00:08:07.470 --> 00:08:12.880
+o maior cuidado são com as
+variáveis temporárias, está certo?
+
+103
+00:08:12.880 --> 00:08:17.941
+E a ideia é que você
+[INAUDÍVEL] o código que
+
+104
+00:08:17.941 --> 00:08:22.904
+está antes ali,
+ele foi testado, está certo?
+
+105
+00:08:22.904 --> 00:08:27.503
+E você já sabe que o teste é bem sucedido.
+
+106
+00:08:27.503 --> 00:08:30.603
+Fiz a refatoração depois?
+
+107
+00:08:30.603 --> 00:08:34.420
+Logo seguida eu testo tudo de novo.
+
+108
+00:08:34.420 --> 00:08:38.883
+O teste tem que dar bem
+sucedido novamente,
+
+109
+00:08:38.883 --> 00:08:45.280
+porque se ocorrer alguma coisa que o teste
+pare, o que é que eu tenho que fazer?
+
+110
+00:08:45.280 --> 00:08:49.916
+Eu tenho que ver onde foi
+que eu errei nessa extração,
+
+111
+00:08:49.916 --> 00:08:53.120
+errei de alguma forma, está certo?
+
+112
+00:08:53.120 --> 00:08:57.769
+Com relação às variáveis, pode ter
+acontecido alguma coisa e vai dar errado,
+
+113
+00:08:57.769 --> 00:08:58.550
+está certo?
+
+114
+00:08:58.550 --> 00:09:03.892
+Bom, eu não mostrei aqui,
+mas o senhor Guerra mais pra frente
+
+115
+00:09:03.892 --> 00:09:09.463
+vai mostrar exemplo de
+Extract Method usando o Eclipse,
+
+116
+00:09:09.463 --> 00:09:14.221
+que você [INAUDÍVEL] vai
+ser dado pelo Eclipse,
+
+117
+00:09:14.221 --> 00:09:20.310
+o Eclipse vai te dizer: olha são essas
+variáveis temporárias que estão aqui,
+
+118
+00:09:20.310 --> 00:09:24.540
+olha essa aqui vai ser
+passada como parâmetro,
+
+119
+00:09:24.540 --> 00:09:26.924
+essa aqui vai ter que retornar,
+está certo?
+
+120
+00:09:26.924 --> 00:09:29.010
+Ele vai indicar tudo para você,
+
+121
+00:09:29.010 --> 00:09:33.782
+você confirma porque ele não tem
+certeza absoluta se todas as
+
+122
+00:09:33.782 --> 00:09:38.800
+situações ele tem certeza sobre
+o que ele vai fazer, mas já é de
+
+123
+00:09:38.800 --> 00:09:44.098
+uma grande ajuda pra que você possa fazer
+Extract Method de uma maneira mais segura,
+
+124
+00:09:44.098 --> 00:09:50.188
+para garantir que quando você testar
+ao final da refatoração, dê tudo certo.
+
+125
+00:09:50.188 --> 00:09:55.520
+Nós já fizemos tudo que tínhamos que
+fazer para exemplificar o Extract Method,
+
+126
+00:09:55.520 --> 00:10:02.417
+nós vamos aproveitar agora para mostrar,
+assim rapidamente,
+
+127
+00:10:02.417 --> 00:10:09.450
+outro tipo de refatoração que o Fowler
+chama de Inline Temp, está certo?
+
+128
+00:10:09.450 --> 00:10:14.240
+Que vocês percebam que a temporária debito
+
+129
+00:10:14.240 --> 00:10:18.657
+recebe valor que ele lá chama de query,
+
+130
+00:10:18.657 --> 00:10:23.280
+mas que no nosso caso é getter,
+está certo?
+
+131
+00:10:23.280 --> 00:10:29.570
+Então esse Inline Temper, onde estiver
+sendo usada essa variável debito,
+
+132
+00:10:29.570 --> 00:10:33.620
+vai ser substituída pelo getDebito,
+está certo?
+
+133
+00:10:33.620 --> 00:10:37.670
+Então ali no caso só tem lugar,
+que é o printDetails debito.
+
+134
+00:10:37.670 --> 00:10:40.501
+Então é isso que o Inline Temp faz.
+
+135
+00:10:40.501 --> 00:10:46.091
+Vai fazer para exemplo de uma
+variável debito que aparece ali,
+
+136
+00:10:46.091 --> 00:10:51.610
+sendo usada, mas se tivesse mais
+outros locais onde ela aparecesse,
+
+137
+00:10:51.610 --> 00:10:55.760
+iria ser substituída pelo getDebito,
+então veja como é que fica.
+
+138
+00:10:55.760 --> 00:11:02.750
+Então perceba que eu mantive a linha
+onde estava anteriormente e risquei,
+
+139
+00:11:02.750 --> 00:11:08.630
+hachurei, mostrando que ela está,
+foi removida, está certo?
+
+140
+00:11:08.630 --> 00:11:13.663
+E onde tinha o print details debito,
+agora tem o print details o getter,
+
+141
+00:11:13.663 --> 00:11:16.850
+getDebito, o método, está certo?
+
+142
+00:11:16.850 --> 00:11:19.597
+getDebito, está ok?
+
+143
+00:11:19.597 --> 00:11:25.495
+Bom, têm pessoas que não
+acham que isso ficou,
+
+144
+00:11:25.495 --> 00:11:29.004
+expressa bem a intenção, está certo?
+
+145
+00:11:29.004 --> 00:11:34.257
+Que a maneira anterior expressa melhor,
+está certo?
+
+146
+00:11:34.257 --> 00:11:39.833
+Então é o tipo de refatoração que você
+decide o que você realmente quer fazer,
+
+147
+00:11:39.833 --> 00:11:44.710
+se quer chegar até esse detalhe maior,
+ou mantém o anterior, está certo?
+
+148
+00:11:44.710 --> 00:11:50.930
+O Inline Temp não é necessariamente uma
+coisa que você sempre tem que fazer,
+
+149
+00:11:50.930 --> 00:11:56.078
+você pode fazer se achar que realmente
+ficou claro o que você estava querendo,
+
+150
+00:11:56.078 --> 00:12:00.321
+a intenção que você estava querendo
+passar, do que o código faz,
+
+151
+00:12:00.321 --> 00:12:02.553
+a finalidade do código.
+
+152
+00:12:02.553 --> 00:12:09.530
+Com isso nós aproveitamos e encerramos o
+exemplo do Extract Method, está certo?
+
+153
+00:12:09.530 --> 00:12:13.859
+E mostramos também
+rapidamente a refatoração
+
+154
+00:12:13.859 --> 00:12:18.714
+chamada Inline Temp.
+
+155
+00:12:18.714 --> 00:12:22.110
+Obrigado.

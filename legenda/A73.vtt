@@ -1,0 +1,339 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.190
+[MÚSICA] Olá!
+
+2
+00:00:07.190 --> 00:00:11.040
+Eu queria nessa
+
+3
+00:00:11.040 --> 00:00:16.415
+videoaula detalhar pouco mais
+como se padroniza uma variável,
+
+4
+00:00:16.415 --> 00:00:20.340
+inclusive como se faz isso inclusive em
+Excel, que é uma coisa muito mais simples
+
+5
+00:00:20.340 --> 00:00:25.223
+e amigável e que você pode praticar na
+sua casa sempre que for necessário.
+
+6
+00:00:25.223 --> 00:00:29.884
+A importância de detalhar a padronização
+de variáveis é porque nós já vimos que ela
+
+7
+00:00:29.884 --> 00:00:33.542
+afeta diretamente quando a gente vai
+fazer uma análise de agrupamento
+
+8
+00:00:33.542 --> 00:00:34.987
+ou análise de clusters.
+
+9
+00:00:34.987 --> 00:00:39.715
+Eu vou pedir então que você abra esse
+arquivo que é aquele arquivo que nós já
+
+10
+00:00:39.715 --> 00:00:42.957
+usamos que tem a renda em
+mil unidades monetárias,
+
+11
+00:00:42.957 --> 00:00:44.873
+idade em anos e idade em meses.
+
+12
+00:00:44.873 --> 00:00:49.824
+Nós já vimos que, se as unidades das
+variáveis são diferentes isso vai afetar
+
+13
+00:00:49.824 --> 00:00:52.770
+a foma como os dados podem ser agrupados,
+
+14
+00:00:52.770 --> 00:00:55.980
+no caso aqui os nossos 3 indivíduos A,
+B e C.
+
+15
+00:00:55.980 --> 00:01:00.675
+A padronização das variáveis
+consiste num processo onde
+
+16
+00:01:00.675 --> 00:01:05.510
+eu vou fazer com que a variável renda
+seja transformada numa nova variável,
+
+17
+00:01:05.510 --> 00:01:08.510
+que eu vou chamar de propósito
+com a letra z_renda,
+
+18
+00:01:08.510 --> 00:01:12.939
+que é a variável renda padronizada,
+ou seja,
+
+19
+00:01:12.939 --> 00:01:17.849
+a variável renda que vai
+ter o chamado z-score.
+
+20
+00:01:17.849 --> 00:01:23.623
+A fórmula do z- score ela é cada
+observação dividida pela média,
+
+21
+00:01:23.623 --> 00:01:28.370
+perdão, subtraída da média e
+dividida pelo desvio padrão.
+
+22
+00:01:28.370 --> 00:01:32.735
+Para tanto a primeira coisa
+que eu vou fazer é calcular
+
+23
+00:01:32.735 --> 00:01:37.579
+a média e o desvio padrão das colunas,
+
+24
+00:01:37.579 --> 00:01:44.322
+ou seja dessas 3 observações e assim por
+diante, dessas 3 e assim por diante.
+
+25
+00:01:44.322 --> 00:01:49.105
+Para calcular média eu preciso pegar uma
+função de Excel, ela já está aqui mas eu
+
+26
+00:01:49.105 --> 00:01:53.073
+quero que você saiba que ela fica sempre
+aqui na área de estatística e se você
+
+27
+00:01:53.073 --> 00:01:58.713
+descer aqui até a letra M,
+você vai encontrar a média simples.
+
+28
+00:01:58.713 --> 00:02:03.862
+A média simples você ilumina
+as 3 observações e dá
+
+29
+00:02:03.862 --> 00:02:07.579
+OK ela está calculada e eu
+vou pedir com duas decimais.
+
+30
+00:02:07.579 --> 00:02:12.100
+O desvio padrão também fica ali
+naquela categoria de estatística,
+
+31
+00:02:12.100 --> 00:02:17.486
+lembrando sempre que o desvio padrão tem
+que o desvio padrão da amostra, e não o
+
+32
+00:02:17.486 --> 00:02:23.484
+desvio padrão da população uma vez que nós
+estamos trabalhando com amostras de dados.
+
+33
+00:02:23.484 --> 00:02:29.360
+Eu vou dar OK e ele pede então para eu
+iluminar e eu digo dessas 3 variáveis,
+
+34
+00:02:29.360 --> 00:02:31.460
+também com 2 decimais.
+
+35
+00:02:31.460 --> 00:02:36.092
+Esse desvio padrão e essa média,
+eu vou copiar aqui e
+
+36
+00:02:36.092 --> 00:02:41.211
+assim você pode notar que as
+médias embora muito parecidas,
+
+37
+00:02:41.211 --> 00:02:47.795
+excepto claro a idade em meses,
+elas são com diferentes desvios padrões.
+
+38
+00:02:47.795 --> 00:02:52.900
+O desvio padrão é a medida de dispersão,
+ou seja, esses
+
+39
+00:02:52.900 --> 00:02:57.870
+dados aqui de renda são mais dispersos
+e por isso que deu desvio padrão maior.
+
+40
+00:02:57.870 --> 00:03:01.086
+Como então é a fórmula
+da variável padronizada?
+
+41
+00:03:01.086 --> 00:03:06.605
+É muito simples,
+basta eu pegar e abrir parêntesis aqui,
+
+42
+00:03:06.605 --> 00:03:10.630
+a observação menos a média,
+
+43
+00:03:10.630 --> 00:03:19.304
+fecha o parêntesis e esta subtração
+dividido pelo desvio padrão.
+
+44
+00:03:19.304 --> 00:03:23.250
+Eu vou obter aqui dado que é 0,21.
+
+45
+00:03:23.250 --> 00:03:28.325
+Esse 0,21 é a variável renda, ou seja
+esses meus 34000 agora padronizados.
+
+46
+00:03:28.325 --> 00:03:33.400
+Eu tenho que fazer a mesma
+coisa para as demais linhas,
+
+47
+00:03:33.400 --> 00:03:38.200
+então eu vou aqui fixar,
+através do uso do cifrão,
+
+48
+00:03:38.200 --> 00:03:46.756
+a célula 5 e vou fixar também a célula 6,
+uma vez que elas não se alteram.
+
+49
+00:03:46.756 --> 00:03:53.590
+Na hora que eu faço a cópia desta célula
+para cá eu tenho uma variável padronizada.
+
+50
+00:03:53.590 --> 00:03:59.090
+A mesma coisa agora eu
+vou fazer com a variável
+
+51
+00:03:59.090 --> 00:04:04.101
+z_idade em anos e também vou
+
+52
+00:04:04.101 --> 00:04:12.310
+fazer com a variável que eu estou
+denominando z_idade em meses.
+
+53
+00:04:12.310 --> 00:04:17.071
+O uso da letra z é para
+remeter ao z-score que é
+
+54
+00:04:17.071 --> 00:04:21.636
+também uma forma de chamar
+a padronização de variáveis.
+
+55
+00:04:21.636 --> 00:04:27.452
+Eu vou copiar agora estas
+células para estas colunas
+
+56
+00:04:27.452 --> 00:04:33.382
+e você vê que rigorosamente
+a padronizada da variável
+
+57
+00:04:33.382 --> 00:04:39.230
+idade em anos é exatamente igual à
+padronizada da variável idade em meses.
+
+58
+00:04:39.230 --> 00:04:44.091
+Estas duas variáveis,
+assim como a anterior,
+
+59
+00:04:44.091 --> 00:04:49.540
+elas vão ter uma média igual
+
+60
+00:04:49.540 --> 00:04:54.283
+a 0,
+vamos pedir aqui para colocar em forma de
+
+61
+00:04:54.283 --> 00:04:58.704
+números e desvio padrão igual
+a 1 que era o nosso objetivo.
+
+62
+00:04:58.704 --> 00:05:06.897
+Agora sim, se você fizer uma clusterização
+com as variáveis renda padronizada,
+
+63
+00:05:06.897 --> 00:05:11.475
+idade em anos padronizada,
+ou em meses porque são
+
+64
+00:05:11.475 --> 00:05:16.734
+absolutamente idênticas,
+você vai chegar aos clusters iguais.
+
+65
+00:05:16.734 --> 00:05:21.812
+Este procedimento de
+padronização leva você a ter
+
+66
+00:05:21.812 --> 00:05:29.906
+resultados mais confiáveis e resultados
+que não estão distorcidos pelas unidades.
+
+67
+00:05:29.906 --> 00:05:34.699
+Eu espero que você tenha entendido
+bem o que é que é a padronização
+
+68
+00:05:34.699 --> 00:05:38.699
+de variáveis e esteja
+pronto para fazer os seus,
+
+69
+00:05:38.699 --> 00:05:45.170
+as suas análises de clusters
+com maior qualidade e precisão.
+
+70
+00:05:45.170 --> 00:05:52.920
+Até breve!

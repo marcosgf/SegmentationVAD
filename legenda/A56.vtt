@@ -1,0 +1,648 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.655
+[MÚSICA] Olá!
+
+2
+00:00:06.655 --> 00:00:11.380
+Dando continuidade ao módulo
+
+3
+00:00:11.380 --> 00:00:16.810
+"Inferindo Propriedades e
+Características de uma População",
+
+4
+00:00:16.810 --> 00:00:21.100
+a lição de hoje será sobre
+análise de regressão.
+
+5
+00:00:21.100 --> 00:00:25.733
+No inicio desse módulo nós
+
+6
+00:00:25.733 --> 00:00:30.542
+aprendemos como realizar teste
+de hipótese e interpretar
+
+7
+00:00:30.542 --> 00:00:34.750
+coeficientes no nível de significância
+desses coeficientes estimados.
+
+8
+00:00:34.750 --> 00:00:39.649
+Na sequência nós aprendemos também como
+
+9
+00:00:39.649 --> 00:00:45.245
+funciona a correlação,
+a associação entre variáveis.
+
+10
+00:00:45.245 --> 00:00:49.540
+Nessa videoaula nós vamos endereçar
+a questão da causalidade.
+
+11
+00:00:49.540 --> 00:00:53.060
+O quanto que uma variável leva a outra,
+
+12
+00:00:53.060 --> 00:00:58.263
+por exemplo o quanto que
+promoção no ponto de
+
+13
+00:00:58.263 --> 00:01:04.040
+venda leva a aumento de vendas verdadeira.
+
+14
+00:01:04.040 --> 00:01:10.547
+Para a gente conseguir aprofundar
+em análise de regressão,
+
+15
+00:01:10.547 --> 00:01:15.294
+eu chamo a atenção para
+essa representação gráfica.
+
+16
+00:01:15.294 --> 00:01:21.660
+Nós temos ali uma ação no ponto de
+vendas no eixo x e vendas no eixo y.
+
+17
+00:01:21.660 --> 00:01:26.270
+Essa ação no ponto de
+vendas pode ser display,
+
+18
+00:01:26.270 --> 00:01:33.118
+pode ser uma ilha ou uma ponta de gôndola
+que por ventura uma determinada marca
+
+19
+00:01:33.118 --> 00:01:39.270
+você venha a comprar e
+vendas é o quanto de produto
+
+20
+00:01:39.270 --> 00:01:44.840
+que foi alvo daquela ação
+foi vendido naquele período.
+
+21
+00:01:44.840 --> 00:01:50.211
+Então pensando nos
+consumidores será que existe
+
+22
+00:01:50.211 --> 00:01:55.345
+alguma relação causal entre
+ação no ponto de venda
+
+23
+00:01:55.345 --> 00:02:00.900
+e vendas e como a gente
+viu na aula de correlação
+
+24
+00:02:00.900 --> 00:02:05.364
+aqui a dispersão dos dados nesse
+
+25
+00:02:05.364 --> 00:02:10.810
+diagrama ele nos indica que
+existe uma relação positiva.
+
+26
+00:02:10.810 --> 00:02:15.417
+Se a gente fosse apenas concentrar em
+
+27
+00:02:15.417 --> 00:02:20.130
+correlação eu diria para vocês que nós
+temos aqui uma correlação positiva.
+
+28
+00:02:20.130 --> 00:02:25.190
+Se a gente quer aprofundar e testar
+a hipótese de que a ação no ponto
+
+29
+00:02:25.190 --> 00:02:32.570
+de venda afeta vendas eu tenho que
+utilizar a análise de regressão.
+
+30
+00:02:32.570 --> 00:02:38.860
+Eu poderia inclusive ter aí uma curva que,
+de tendência,
+
+31
+00:02:38.860 --> 00:02:45.620
+que iria na direção ali do canto inferior
+esquerdo para o canto superior direito,
+
+32
+00:02:45.620 --> 00:02:50.804
+mostrando que a minha ação
+foi deveras de sucesso,
+
+33
+00:02:50.804 --> 00:02:53.400
+ou seja afetou positivamente vendas.
+
+34
+00:02:53.400 --> 00:02:59.616
+Na análise de regressão
+
+35
+00:02:59.616 --> 00:03:04.917
+existem 2 elementos bastante importantes
+de serem considerados logo no início:
+
+36
+00:03:04.917 --> 00:03:09.230
+o primeiro deles é a variável dependente e
+o segundo deles é a variável independente.
+
+37
+00:03:09.230 --> 00:03:15.539
+A variável dependente é aquela que é
+a resposta a algum determinado efeito,
+
+38
+00:03:15.539 --> 00:03:20.202
+é aquela que a gente quer
+explicar o comportamento dela.
+
+39
+00:03:20.202 --> 00:03:25.010
+A variável independente
+é a variável que explica
+
+40
+00:03:25.010 --> 00:03:29.230
+essa variável de resposta,
+
+41
+00:03:29.230 --> 00:03:35.597
+que pode ser qualquer tipo de
+fator ou ação que eu coloque
+
+42
+00:03:35.597 --> 00:03:40.770
+no mercado a fim de afetar
+essa variável de resposta.
+
+43
+00:03:40.770 --> 00:03:45.504
+Então de lado eu tenho a variável
+independente e do outro eu tenho
+
+44
+00:03:45.504 --> 00:03:47.285
+a variável dependente.
+
+45
+00:03:47.285 --> 00:03:52.021
+O quanto que essa variável afeta essa
+outra basicamente é isso que a gente faz
+
+46
+00:03:52.021 --> 00:03:53.800
+com a análise de regressão.
+
+47
+00:03:53.800 --> 00:03:58.890
+Eu tenho y e eu tenho x e o que
+eu quero é cruzar e saber se
+
+48
+00:03:58.890 --> 00:04:04.070
+essa variável x afeta a variável y.
+
+49
+00:04:04.070 --> 00:04:07.216
+Como é que a gente ajusta a reta?
+
+50
+00:04:07.216 --> 00:04:12.076
+A gente viu lá que na dispersão
+dos dados eventualmente
+
+51
+00:04:12.076 --> 00:04:15.860
+a gente é capaz de traçar
+uma curva de tendência.
+
+52
+00:04:15.860 --> 00:04:18.843
+Como é que a gente chega
+nessa curva de tendência?
+
+53
+00:04:18.843 --> 00:04:24.180
+Basicamente nós vamos buscar
+construir uma equação
+
+54
+00:04:24.180 --> 00:04:29.310
+onde y é igual ao a mais b x.
+
+55
+00:04:29.310 --> 00:04:33.690
+Muito bem, eu sei o que é y, eu já sei,
+eu sei o que é y e eu sei o que é x,
+
+56
+00:04:33.690 --> 00:04:36.162
+agora o que seriam a e b?
+
+57
+00:04:36.162 --> 00:04:42.156
+a e b são parâmetros que são
+estimados dada a variação,
+
+58
+00:04:42.156 --> 00:04:48.691
+o comportamento,
+que existe entre essas duas variáveis.
+
+59
+00:04:48.691 --> 00:04:53.244
+Onde a nada mais é do que
+o intercepto onde essa
+
+60
+00:04:53.244 --> 00:04:58.356
+curva de tendência toca o eixo
+y e b é o coeficiente que
+
+61
+00:04:58.356 --> 00:05:03.050
+nos informa a inclinação dessa curva.
+
+62
+00:05:03.050 --> 00:05:08.363
+Então eu vou a campo,
+
+63
+00:05:08.363 --> 00:05:13.645
+coleto os dados de y,
+coleto os dados de x com base
+
+64
+00:05:13.645 --> 00:05:19.664
+nesses dados eu volto para o escritório e
+
+65
+00:05:19.664 --> 00:05:25.160
+eu estimo esses parâmetros a e b.
+
+66
+00:05:25.160 --> 00:05:30.172
+Muito bem, se a gente pegasse exemplo
+
+67
+00:05:30.172 --> 00:05:35.060
+básico de investimento em comunicação,
+
+68
+00:05:35.060 --> 00:05:40.540
+o efeito de investimento em comunicação
+como a nossa variável independente
+
+69
+00:05:40.540 --> 00:05:45.100
+afetando a receita em vendas,
+
+70
+00:05:45.100 --> 00:05:50.512
+uma variável de resposta ou seja
+dependente, eu posso coletar
+
+71
+00:05:50.512 --> 00:05:55.272
+os dados e encontrar uma equação com os
+
+72
+00:05:55.272 --> 00:06:00.678
+seguintes coeficientes:
+nós temos lá parâmetro,
+
+73
+00:06:00.678 --> 00:06:07.250
+ou seja coeficiente estimado que
+é onde a curva toca o intercepto,
+
+74
+00:06:07.250 --> 00:06:13.240
+que nesse caso aqui é 60,05
+
+75
+00:06:13.240 --> 00:06:18.327
+e nós temos também uma
+ideia de inclinação dessa
+
+76
+00:06:18.327 --> 00:06:23.000
+curva com base no coeficiente 1,36.
+
+77
+00:06:23.000 --> 00:06:28.455
+Coeficiente este que é positivo,
+
+78
+00:06:28.455 --> 00:06:33.376
+isso significa que
+a tendência desta curva é uma
+
+79
+00:06:33.376 --> 00:06:38.367
+tendência positiva: comunicação,
+os investimentos que
+
+80
+00:06:38.367 --> 00:06:42.240
+eu faço em comunicação afetam
+a minha receita em vendas.
+
+81
+00:06:42.240 --> 00:06:48.528
+O interessante é que a análise de
+regressão nos permite também inferir
+
+82
+00:06:48.528 --> 00:06:54.660
+sobre o poder de explicação do conjunto
+de variáveis que eu coloco no modelo.
+
+83
+00:06:54.660 --> 00:06:59.368
+Então no caso nós estamos
+considerando apenas investimento em
+
+84
+00:06:59.368 --> 00:07:04.456
+comunicação como variável x,
+eu poderia ter outras variáveis
+
+85
+00:07:04.456 --> 00:07:08.870
+que eu gostaria de testar ao
+mesmo tempo se afetam vendas.
+
+86
+00:07:08.870 --> 00:07:14.009
+A medida conhecida como R quadrado
+
+87
+00:07:14.009 --> 00:07:17.735
+é uma medida que nos informa sobre o poder
+
+88
+00:07:17.735 --> 00:07:22.700
+de explicação daquele conjunto de
+variáveis que eu utilizei no modelo.
+
+89
+00:07:22.700 --> 00:07:26.980
+Significa que quanto mais variáveis,
+
+90
+00:07:26.980 --> 00:07:31.757
+ou seja fatores que afetam vendas,
+forem considerados na
+
+91
+00:07:31.757 --> 00:07:36.473
+minha análise de regressão,
+é esperado que o R quadrado,
+
+92
+00:07:36.473 --> 00:07:43.350
+ou seja o poder de explicação desse
+conjunto de variáveis aumente.
+
+93
+00:07:43.350 --> 00:07:49.250
+De posse da equação e os
+coeficientes estimados
+
+94
+00:07:49.250 --> 00:07:56.130
+eu consigo já de cara fazer
+já algumas inferências.
+
+95
+00:07:56.130 --> 00:08:00.860
+Por exemplo, quanto seria a venda se eu
+
+96
+00:08:00.860 --> 00:08:05.390
+não gastasse tostão com
+ação de comunicação?
+
+97
+00:08:05.390 --> 00:08:10.860
+Dada a amostra, os dados que eu coletei,
+
+98
+00:08:10.860 --> 00:08:17.260
+eu posso afirmar que as vendas
+seriam na casa de 60,05.
+
+99
+00:08:17.260 --> 00:08:22.658
+Ou seja se eu não gastar
+dinheiro com promoção existem
+
+100
+00:08:22.658 --> 00:08:27.710
+outros fatores que estão afetando
+vendas e haveriam vendas, muito bem,
+
+101
+00:08:27.710 --> 00:08:33.207
+que nada mais é do que o nosso
+coeficiente estimado a naquela
+
+102
+00:08:33.207 --> 00:08:37.750
+equação onde y é igual a a mais b x.
+
+103
+00:08:37.750 --> 00:08:43.055
+Muito bem, uma outra inferência que eu
+sou capaz de fazer é que se eu variar
+
+104
+00:08:43.055 --> 00:08:48.202
+uma unidade de investimento em
+comunicação, seja lá qual for
+
+105
+00:08:48.202 --> 00:08:56.275
+essa unidade, eu terei uma variação
+média de receitas de 1,36.
+
+106
+00:08:56.275 --> 00:09:01.650
+1,36 nada mais é,
+como você pode bem observar,
+
+107
+00:09:01.650 --> 00:09:05.718
+o nosso parâmetro estimado b.
+
+108
+00:09:05.718 --> 00:09:10.290
+Então se eu variar uma unidade de
+
+109
+00:09:10.290 --> 00:09:16.580
+comunicação eu consigo
+variar receita em 1,36.
+
+110
+00:09:16.580 --> 00:09:21.881
+Essas são inferências importantes
+
+111
+00:09:21.881 --> 00:09:27.068
+de serem feitas logo no
+início porque já nos
+
+112
+00:09:27.068 --> 00:09:34.730
+dá alguma ideia de como o mercado se
+comporta dada essas duas variáveis,
+
+113
+00:09:34.730 --> 00:09:39.020
+se eu fizer alguma ação de comunicação
+quanto é que eu vou conseguir vender.
+
+114
+00:09:39.020 --> 00:09:44.808
+Muito bem, quanto seria as vendas se
+
+115
+00:09:44.808 --> 00:09:50.520
+o financeiro nos abordasse e
+pedisse para gastar menos?
+
+116
+00:09:50.520 --> 00:09:55.770
+Eu convido vocês a pegar
+essa equação estimada
+
+117
+00:09:55.770 --> 00:10:01.028
+e calcular a venda se o nosso
+
+118
+00:10:01.028 --> 00:10:07.021
+investimento fosse na casa de 600 reais,
+600 mil reais.
+
+119
+00:10:07.021 --> 00:10:12.571
+Muito bem, vocês tiveram
+a oportunidade de fazer a conta de
+
+120
+00:10:12.571 --> 00:10:18.550
+qual seria a receita prevista
+dada a restrição de orçamento.
+
+121
+00:10:18.550 --> 00:10:22.242
+A restrição de orçamento
+foi imposta em 600 reais.
+
+122
+00:10:22.242 --> 00:10:27.653
+O que a gente vai fazer agora é utilizar
+a equação que foi estimada com base
+
+123
+00:10:27.653 --> 00:10:34.824
+na pesquisa que nos informa que o y que é
+a nossa variável de resposta é igual ao a,
+
+124
+00:10:34.824 --> 00:10:38.959
+que é o parâmetro 60,05 mais o b,
+
+125
+00:10:38.959 --> 00:10:43.770
+que é o parâmetro do x, que é 1,36,
+
+126
+00:10:43.770 --> 00:10:48.310
+o que a gente precisa fazer é
+justamente substituir o x por 600.
+
+127
+00:10:48.310 --> 00:10:53.211
+Multiplica por 1,36, soma de 60,05 e aí
+
+128
+00:10:53.211 --> 00:10:58.410
+a gente tem uma receita
+prevista de 876,05.
+
+129
+00:10:58.410 --> 00:11:03.419
+Com base nessa informação a gente pode
+voltar para o financeiro e eventualmente
+
+130
+00:11:03.419 --> 00:11:07.530
+até pleitear orçamento mais
+elevado uma vez que o mercado,
+
+131
+00:11:07.530 --> 00:11:12.762
+a gente realizou a pesquisa, o mercado
+nos permite aí receber uma receita
+
+132
+00:11:12.762 --> 00:11:18.810
+talvez até maior do que aquela prevista
+pelo pessoal da área financeira.
+
+133
+00:11:18.810 --> 00:11:24.457
+Eu convido vocês agora a olhar
+a próxima videoaula onde nós faremos
+
+134
+00:11:24.457 --> 00:11:31.242
+uma aplicação prática dessa análise, onde
+levaremos em consideração não apenas uma
+
+135
+00:11:31.242 --> 00:11:36.357
+variável mas conjunto de variáveis que
+podem explicar, por exemplo vendas.
+
+136
+00:11:36.357 --> 00:11:42.037
+Incluindo por exemplo a,
+o preço ou a promoção que concorrente
+
+137
+00:11:42.037 --> 00:11:49.320
+pode realizar ao mesmo tempo que
+nós estamos fazendo a nossa ação.
+
+138
+00:11:49.320 --> 00:11:56.150
+[SEM ÁUDIO]

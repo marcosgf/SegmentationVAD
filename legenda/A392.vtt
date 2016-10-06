@@ -1,0 +1,387 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.136
+Nesse vídeo, você verá exemplo de
+projeto de controlador PI para
+
+2
+00:00:04.136 --> 00:00:06.390
+sistema de terceira ordem do tipo 0.
+
+3
+00:00:06.390 --> 00:00:10.865
+Dessa vez vamos usar uma função de
+transferência numérica e não literal: 20
+
+4
+00:00:10.865 --> 00:00:14.933
+sobre s mais 1 s mais 2 s mais 10
+e os requisitos de desempenho são
+
+5
+00:00:14.933 --> 00:00:19.824
+overshoot de 16,3% e o erro regime
+nulo para uma entrada degrau.
+
+6
+00:00:19.824 --> 00:00:25.353
+Overshoot de 16,3 nos leva a ksi de 0,5,
+função de transferência
+
+7
+00:00:25.353 --> 00:00:30.720
+malha fechada 20k sobre s ao cubo mais 13
+s ao quadrado mais 32s mais 20 mais 20k.
+
+8
+00:00:30.720 --> 00:00:35.605
+Temos sistema de terceira ordem e queremos
+que o sistema malha fechada tenha
+
+9
+00:00:35.605 --> 00:00:37.888
+par de polos complexos conjugados.
+
+10
+00:00:37.888 --> 00:00:42.995
+Então, a função de transferência desejada
+tem a forma 20k sobre s ao quadrado
+
+11
+00:00:42.995 --> 00:00:47.480
+mais 2 ksi ômega n s mais ômega n
+ao quadrado vezes s menos polo 3.
+
+12
+00:00:47.480 --> 00:00:51.949
+Substituindo o ksi igual a 0,5,
+temos 20k sobre s ao
+
+13
+00:00:51.949 --> 00:00:55.980
+quadrado mais õmega n s mais ômega
+n ao quadrado vezes s menos p3.
+
+14
+00:00:55.980 --> 00:01:01.277
+Realizando a multiplicação, chegamos a s
+ao cubo mais ômega n menos p3 vezes s
+
+15
+00:01:01.277 --> 00:01:06.430
+ao quadrado mais ômega n ao quadrado menos
+p3 ômega n s menos p3 ômega n ao quadrado.
+
+16
+00:01:06.430 --> 00:01:09.498
+E o denominador da função de
+transferência malha fechada,
+
+17
+00:01:09.498 --> 00:01:12.429
+precisa ser igual ao denominador desejado,
+ou seja,
+
+18
+00:01:12.429 --> 00:01:17.060
+s ao cubo mais 13s ao quadrado
+mais 32s mais 20 mais 20k,
+
+19
+00:01:17.060 --> 00:01:21.979
+tem que ser igual a s ao cubo mais ômega
+n menos p3 s ao quadrado mais ômega n ao
+
+20
+00:01:21.979 --> 00:01:25.940
+quadrado menos p3 ômega n vezes
+s menos p3 ômega n ao quadrado.
+
+21
+00:01:25.940 --> 00:01:28.649
+Igualando os coeficientes
+de mesma potência,
+
+22
+00:01:28.649 --> 00:01:33.787
+precisamos ter ômega n menos p3 igual
+a 13, ômega n ao quadrado menos p3 ômega
+
+23
+00:01:33.787 --> 00:01:38.690
+n igual a 32 e menos p3 ômega n
+ao quadrado igual a 20 mais 20k.
+
+24
+00:01:38.690 --> 00:01:42.348
+Isolando p3 na primeira equação,
+temos: p3 igual a ômega n menos 13,
+
+25
+00:01:42.348 --> 00:01:44.847
+substituindo esse resultado
+na segunda equação,
+
+26
+00:01:44.847 --> 00:01:49.563
+temos ômega n ao quadrado menos ômega
+n menos 13 vezes ômega n igual a 32.
+
+27
+00:01:49.563 --> 00:01:55.888
+Fazendo a multiplicação e isolando ômega
+n, obtemos ômega n aproximadamente 2,46.
+
+28
+00:01:55.888 --> 00:02:02.660
+Substituindo ômega n na primeira equação,
+obtemos p3 aproximadamente menos 10,54.
+
+29
+00:02:02.660 --> 00:02:07.790
+E agora, com ômega n e p3, podemos usar
+a última equação para determinar k,
+
+30
+00:02:07.790 --> 00:02:09.920
+que é aproximadamente 2,19.
+
+31
+00:02:09.920 --> 00:02:10.875
+Não acredita?
+
+32
+00:02:10.875 --> 00:02:14.260
+Use esse valor de k e calcule
+os polos malha fechada.
+
+33
+00:02:14.260 --> 00:02:22.530
+Eles são menos 10,54 e menos 1,23 mais
+ou menos 2,13j e o ksi será de 0,5.
+
+34
+00:02:22.530 --> 00:02:26.008
+Note que usar ksi igual a 0,5
+facilitou a nossa vida,
+
+35
+00:02:26.008 --> 00:02:29.265
+pois ômega n ao quadrado foi
+cancelado na segunda equação.
+
+36
+00:02:29.265 --> 00:02:32.460
+Mas poderíamos resolver o problema
+para outros valores de ksi.
+
+37
+00:02:32.460 --> 00:02:36.130
+A única diferença é que a segunda
+equação seria uma equação de 2º grau.
+
+38
+00:02:36.130 --> 00:02:39.023
+E agora precisamos
+projetar o controlador PI.
+
+39
+00:02:39.023 --> 00:02:42.782
+Na verdade, só precisamos definir
+o zero do controlador PI,
+
+40
+00:02:42.782 --> 00:02:45.764
+uma vez que o polo dele está na origem,
+ou seja,
+
+41
+00:02:45.764 --> 00:02:50.330
+temos o controlador com a forma k s
+mais a sobre s, com k igual a 2,19.
+
+42
+00:02:50.330 --> 00:02:55.125
+Podemos posicionar o zero décimo da parte
+real dos polos complexos conjugados e
+
+43
+00:02:55.125 --> 00:02:59.920
+temos C de s é igual a 2,19
+s mais 0,123 sobre s,
+
+44
+00:02:59.920 --> 00:03:05.495
+que podemos escrever também
+como 2,19 mais 0,27 sobre s.
+
+45
+00:03:05.495 --> 00:03:10.004
+Simule a resposta ao degrau do sistema
+só com o controle proporcional e ganho
+
+46
+00:03:10.004 --> 00:03:13.110
+k igual a 2,19 e com o
+controlador PI projetado.
+
+47
+00:03:13.110 --> 00:03:17.894
+Você vai notar, que o valor da saída com o
+controlador PI ficará acima da saída para
+
+48
+00:03:17.894 --> 00:03:19.632
+o controlador proporcional.
+
+49
+00:03:19.632 --> 00:03:21.780
+No entanto, o overshoot será menor.
+
+50
+00:03:21.780 --> 00:03:26.472
+Na verdade nem teremos overshoot,
+uma vez que o pico da resposta ao degrau,
+
+51
+00:03:26.472 --> 00:03:29.588
+será menor que 1 e só
+tenderá a 1 assintoticamente.
+
+52
+00:03:29.588 --> 00:03:33.203
+Isso acontece porque o sistema tem
+agora quarto polo muito lento,
+
+53
+00:03:33.203 --> 00:03:35.150
+devido ao polo adicional na origem.
+
+54
+00:03:35.150 --> 00:03:37.914
+Para deixar esse quarto polo mais rápido,
+
+55
+00:03:37.914 --> 00:03:41.731
+podemos afastar o zero do
+controlador PI da origem.
+
+56
+00:03:41.731 --> 00:03:50.345
+Tente com 2,19 s mais 1,23 sobre s e
+também com 2,19 s mais 0,73 sobre s.
+
+57
+00:03:50.345 --> 00:03:52.490
+Note que com esse último controlador,
+
+58
+00:03:52.490 --> 00:03:56.202
+os polos não estão nas posições
+desejadas e o ksi não é 0,5.
+
+59
+00:03:56.202 --> 00:03:59.160
+No entanto, temos a resposta desejada,
+
+60
+00:03:59.160 --> 00:04:04.200
+16,3% de overshoot e erro nulo regime
+permanente para uma entrada degrau.
+
+61
+00:04:04.200 --> 00:04:08.121
+Isso ocorre porque não temos somente os
+polos complexos conjugados, o sistema
+
+62
+00:04:08.121 --> 00:04:11.830
+malha fechada, tem mais dois polos e
+zero que afetam a resposta ao degrau.
+
+63
+00:04:11.830 --> 00:04:16.480
+Muitas vezes, precisamos simular o sistema
+e fazer pequenos ajustes no controlador.
+
+64
+00:04:16.480 --> 00:04:19.223
+Mas se você sabe o que está acontecendo,
+
+65
+00:04:19.223 --> 00:04:23.099
+você será capaz de fazer esses
+ajustes mais facilmente.
+
+66
+00:04:23.099 --> 00:04:28.071
+E pequeno desafio de Beakman: o
+que aconteceria se você usasse
+
+67
+00:04:28.071 --> 00:04:30.986
+controlador PI com o seguinte sistema?
+
+68
+00:04:30.986 --> 00:04:34.730
+G de s é igual a 20 sobre s
+menos 1 s mais 2 s mais 10?
+
+69
+00:04:34.730 --> 00:04:40.010
+Dica: esboce o Lugar geométrico das Raízes
+desse sistema com o controlador PI.
+
+70
+00:04:40.010 --> 00:04:44.214
+Então, nem sempre podemos usar
+controlador PI e esse também é
+
+71
+00:04:44.214 --> 00:04:47.654
+bom exemplo do porquê
+precisamos saber esboçar o LGR.
+
+72
+00:04:47.654 --> 00:04:52.502
+Não adiantaria muito ficar fazendo
+contas para esse sistema controlador PI,
+
+73
+00:04:52.502 --> 00:04:53.390
+adiantaria?
+
+74
+00:04:53.390 --> 00:04:56.781
+Agora, você já é capaz de
+projetar controlador PI,
+
+75
+00:04:56.781 --> 00:05:01.620
+para sistema de terceira ordem do tipo 0 e
+é capaz de generalizar o procedimento de
+
+76
+00:05:01.620 --> 00:05:05.297
+projeto de controlador de atraso
+de fase e de controlador PI,
+
+77
+00:05:05.297 --> 00:05:08.260
+para sistemas de ordem
+superior sem e com zeros.
+
+78
+00:05:08.260 --> 00:05:11.817
+E com isso, chegamos ao final
+da penúltima semana do curso.
+
+79
+00:05:11.817 --> 00:05:12.945
+No próximo vídeo,
+
+80
+00:05:12.945 --> 00:05:17.630
+faremos resumo do que vimos até agora
+controle de sistemas no Plano-s.

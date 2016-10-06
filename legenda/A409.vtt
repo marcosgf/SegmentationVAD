@@ -1,0 +1,1334 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.487
+[MÚSICA] Olá,
+
+2
+00:00:07.487 --> 00:00:10.175
+bem vindo ao curso sobre TDD!
+
+3
+00:00:10.175 --> 00:00:16.463
+Eu sou o Clovis Fernandes e hoje iremos
+falar como obter código de qualidade.
+
+4
+00:00:16.463 --> 00:00:19.880
+Essa é uma grande
+preocupação que a gente tem.
+
+5
+00:00:19.880 --> 00:00:24.529
+A primeira preocupação é
+que o programa funcione,
+
+6
+00:00:24.529 --> 00:00:29.472
+a segunda é que o código seja manutenível,
+
+7
+00:00:29.472 --> 00:00:35.550
+que possa ser trabalhado por mim mesmo
+no futuro ou por outras pessoas.
+
+8
+00:00:35.550 --> 00:00:41.977
+Eu posso obter essa qualidade diretamente
+aplicando bons princípios de projeto,
+
+9
+00:00:41.977 --> 00:00:46.570
+boas práticas, ou, mesmo que eu não tenha
+
+10
+00:00:46.570 --> 00:00:51.959
+aplicado isso e o meu código
+ficou tanto sem qualidade,
+
+11
+00:00:51.959 --> 00:00:58.085
+eu posso transformar esse código com pouca
+qualidade para código com mais qualidade.
+
+12
+00:00:58.085 --> 00:01:01.764
+E isso é o que a gente vai
+ver nessa aula de hoje.
+
+13
+00:01:01.764 --> 00:01:06.434
+O que é então código de qualidade,
+está certo?
+
+14
+00:01:06.434 --> 00:01:12.098
+Ou melhor: como reconhecer que
+código é de qualidade ou não?
+
+15
+00:01:12.098 --> 00:01:16.778
+Não tem outra maneira, temos que
+examinar o código que nós estamos
+
+16
+00:01:16.778 --> 00:01:19.900
+trabalhando ou usando no
+nosso desenvolvimento.
+
+17
+00:01:19.900 --> 00:01:23.868
+Às vezes também olhamos
+documentos associados,
+
+18
+00:01:23.868 --> 00:01:28.490
+como diagramas de classes,
+
+19
+00:01:28.490 --> 00:01:34.830
+decisões que tomamos para desenvolver de
+uma forma ou de outra e assim por diante.
+
+20
+00:01:34.830 --> 00:01:38.459
+Então o que nós fazemos é isso aí.
+
+21
+00:01:38.459 --> 00:01:45.270
+Nós vamos examinar o nosso código de
+uma maneira mais delicada, está certo?
+
+22
+00:01:45.270 --> 00:01:48.023
+Vamos olhar e ver o que acontece.
+
+23
+00:01:48.023 --> 00:01:52.873
+Mas então, o que é que
+caracteriza código de qualidade,
+
+24
+00:01:52.873 --> 00:01:55.463
+de alta qualidade, está certo?
+
+25
+00:01:55.463 --> 00:01:57.780
+O que é que vai caracterizar?
+
+26
+00:01:57.780 --> 00:02:04.140
+Nós iremos mostrar aqui algumas
+características de software de qualidade.
+
+27
+00:02:04.140 --> 00:02:09.930
+A primeira delas é que ele deve ser
+escrito para os desenvolvedores,
+
+28
+00:02:09.930 --> 00:02:15.515
+quer dizer, você tem,
+existe uma máxima, não é?
+
+29
+00:02:15.515 --> 00:02:20.310
+Que o Martin Fowler que é dos grandes
+gurus da modelagem ágil, não é?
+
+30
+00:02:20.310 --> 00:02:23.760
+Que diz que qualquer pessoa, não é?
+
+31
+00:02:23.760 --> 00:02:24.990
+Está certo?
+
+32
+00:02:24.990 --> 00:02:29.670
+Ele fala, ele é pouco mais duro, qualquer
+pessoa pode escrever código que computador
+
+33
+00:02:29.670 --> 00:02:34.230
+entenda, ou seja,
+você pode escrever programa que os
+
+34
+00:02:34.230 --> 00:02:39.660
+requisitos estão incorporados naquele
+programa e ele funciona, está certo?
+
+35
+00:02:39.660 --> 00:02:43.105
+Mas ele diz que isso não
+é o mais importante.
+
+36
+00:02:43.105 --> 00:02:48.460
+Para ele, o bom programador é
+aquele que escreve para os,
+
+37
+00:02:48.460 --> 00:02:52.780
+código que humanos possam compreender.
+
+38
+00:02:52.780 --> 00:02:56.350
+E podem ficar tranquilos
+que ele considera também
+
+39
+00:02:56.350 --> 00:02:59.240
+desenvolvedores de software humanos.
+
+40
+00:02:59.240 --> 00:02:59.920
+Ou seja,
+
+41
+00:02:59.920 --> 00:03:05.368
+os desenvolvedores de software é que vão
+ser os clientes desse código no futuro.
+
+42
+00:03:05.368 --> 00:03:10.582
+Você mesmo no seu próprio código
+ou no código de outras pessoas.
+
+43
+00:03:10.582 --> 00:03:15.935
+Se o código não tem, não está,
+não foi escrito de uma forma adequada
+
+44
+00:03:15.935 --> 00:03:20.527
+para que eu possa entender, não vai
+adiantar nada, eu tenho muito trabalho.
+
+45
+00:03:20.527 --> 00:03:24.885
+Vez de eu fazer trabalho de 1, 2 horas
+para entender determinado software,
+
+46
+00:03:24.885 --> 00:03:31.623
+eu vou perder, uma semana, mês ou mais
+tentando entender aquele software.
+
+47
+00:03:31.623 --> 00:03:35.898
+Com isso espera-se que o código
+esteja limpo e claro, não é?
+
+48
+00:03:35.898 --> 00:03:38.380
+O que quer dizer o código limpo e claro?
+
+49
+00:03:38.380 --> 00:03:43.497
+Fácil de ler, ou seja,
+isso vai implicar que
+
+50
+00:03:43.497 --> 00:03:48.840
+o programa tenha métodos pequenos,
+
+51
+00:03:48.840 --> 00:03:52.453
+classes com poucos métodos, está certo?
+
+52
+00:03:52.453 --> 00:03:55.430
+Vai ser fácil também de compreender.
+
+53
+00:03:55.430 --> 00:03:59.680
+Para isso além do tamanho,
+os nomes das variáveis,
+
+54
+00:03:59.680 --> 00:04:05.493
+os nomes dos métodos, os nomes das classes
+
+55
+00:04:05.493 --> 00:04:11.357
+devem incorporar a intenção que
+você está pretendendo para eles,
+
+56
+00:04:11.357 --> 00:04:18.680
+porque aí a pessoa lendo o nome já entende
+bem o que você está querendo dizer.
+
+57
+00:04:18.680 --> 00:04:19.244
+Está?
+
+58
+00:04:19.244 --> 00:04:22.555
+Vez de você usar uma coisa
+criptográfica de variável x,
+
+59
+00:04:22.555 --> 00:04:27.113
+você vai dizer que a variável
+é livro e assim por
+
+60
+00:04:27.113 --> 00:04:32.194
+diante e com isso ele vai,
+se ele é claro, ele vai ser limpo e claro
+
+61
+00:04:32.194 --> 00:04:37.260
+se promover mudanças nele não
+é muito difícil, está certo?
+
+62
+00:04:37.260 --> 00:04:42.216
+Quer dizer, isso é o que a gente
+espera com a modelagem ágil, que novos
+
+63
+00:04:42.216 --> 00:04:47.095
+requisitos apareçam e que ao aparecer
+novos requisitos vão haver mudanças no
+
+64
+00:04:47.095 --> 00:04:51.760
+meu programa, nas minhas classes, novas
+classes vão aparecer e assim por diante.
+
+65
+00:04:51.760 --> 00:04:59.295
+Bom, se eu tenho bons princípios de
+projeto, boas práticas, está certo?
+
+66
+00:04:59.295 --> 00:05:02.610
+E aplico isso no
+desenvolvimento do meu software,
+
+67
+00:05:02.610 --> 00:05:08.195
+eu aumento a chance que eu tenha
+código de qualidade, está certo?
+
+68
+00:05:08.195 --> 00:05:13.420
+Código que vai facilitar a vida
+dos próximos desenvolvedores,
+
+69
+00:05:13.420 --> 00:05:19.468
+para fazer com que eles entendam
+melhor o meu programa, está certo?
+
+70
+00:05:19.468 --> 00:05:24.002
+Mas quais são princípios empregados para
+
+71
+00:05:24.002 --> 00:05:28.460
+criar e manter código de alta qualidade?
+
+72
+00:05:28.460 --> 00:05:33.630
+Alguns deles a gente já viu, eu vou
+até repetir daqui a pouco, está certo?
+
+73
+00:05:33.630 --> 00:05:39.130
+Então por exemplo tem o
+KISS: Keep It Simple, Stupid.
+
+74
+00:05:39.130 --> 00:05:45.517
+Isso tem a ver com o fato de eu,
+sempre que eu puder ter uma,
+
+75
+00:05:45.517 --> 00:05:50.720
+isso já está bem claro dentro do TDD, isso
+é princípio já inserido dentro do TDD.
+
+76
+00:05:50.720 --> 00:05:54.939
+Eu quero sempre manter uma
+solução a mais simples possível,
+
+77
+00:05:54.939 --> 00:05:58.592
+eu não fico tentando fazer
+soluções complicadas.
+
+78
+00:05:58.592 --> 00:06:01.448
+São os, são passos pequenos, não é?
+
+79
+00:06:01.448 --> 00:06:04.292
+Os baby steps, e eu vou pondo,
+
+80
+00:06:04.292 --> 00:06:09.585
+deixando soluções simples E o YAGNI,
+não é?
+
+81
+00:06:09.585 --> 00:06:14.747
+Você não precisa disso, tradução
+
+82
+00:06:14.747 --> 00:06:19.159
+pouco rasteira do significado do YAGNI.
+
+83
+00:06:19.159 --> 00:06:20.785
+Você não precisa disso.
+
+84
+00:06:20.785 --> 00:06:22.023
+Qual que é a ideia?
+
+85
+00:06:22.023 --> 00:06:26.878
+Não tem problema de você estar
+sempre antecipando e olhando o
+
+86
+00:06:26.878 --> 00:06:29.010
+que está acontecendo.
+
+87
+00:06:29.010 --> 00:06:33.798
+Isso não tem problema, de eu ter,
+mas na hora que eu vou produzir o código,
+
+88
+00:06:33.798 --> 00:06:36.840
+eu não vou colocar coisas
+antecipando coisas.
+
+89
+00:06:36.840 --> 00:06:39.690
+Geralmente, caso ou outro,
+
+90
+00:06:39.690 --> 00:06:44.217
+se eu consigo vislumbrar pelos requisitos
+que eu ainda tenho para fazer que
+
+91
+00:06:44.217 --> 00:06:47.640
+algum momento eu vou ter alguma coisa,
+não tem problema de colocar, mas eu,
+
+92
+00:06:47.640 --> 00:06:52.650
+fica ao meu critório fazer isso,
+mas eu sempre vou tentar evitar.
+
+93
+00:06:52.650 --> 00:06:57.540
+Eu não vou querer deixar o meu programa o
+mais geral, sendo que naquele momento ele
+
+94
+00:06:57.540 --> 00:07:01.733
+não precisa ser tão geral assim, porque
+vai me dar trabalho extra, vai tornar às
+
+95
+00:07:01.733 --> 00:07:06.568
+vezes o programa não muito claro, vai
+deixar pouco confuso para outras pessoas,
+
+96
+00:07:06.568 --> 00:07:08.710
+porque aquele requisito ainda
+não é necessário, não é?
+
+97
+00:07:08.710 --> 00:07:10.550
+Então para quê que ele
+está sendo implementado?
+
+98
+00:07:10.550 --> 00:07:13.770
+Então isso é o que quer dizer o YAGNI.
+
+99
+00:07:13.770 --> 00:07:18.032
+O DRY, esse é outro conceito
+também bastante importante,
+
+100
+00:07:18.032 --> 00:07:23.236
+que é o Don't Repeat Yourself,
+não se repita, não duplique código,
+
+101
+00:07:23.236 --> 00:07:28.640
+não multiplique coisas que podem ser
+separadas num lugar único, está certo?
+
+102
+00:07:28.640 --> 00:07:31.775
+Então o código duplicado
+é uma verdadeira praga,
+
+103
+00:07:31.775 --> 00:07:35.820
+porque toda vez que você mudar
+alguma coisa, você vai ter o quê?
+
+104
+00:07:35.820 --> 00:07:38.308
+Muitos outros lugares para mudar, está?
+
+105
+00:07:38.308 --> 00:07:43.020
+Você mudou algum lugar, muitos outros
+lugares você tem que mudar está certo?
+
+106
+00:07:43.020 --> 00:07:47.807
+E às vezes eles não estão tão
+facilmente relacionados e aí
+
+107
+00:07:47.807 --> 00:07:52.792
+você acaba deixando sempre alguma
+coisa que não foi acertada.
+
+108
+00:07:52.792 --> 00:07:58.106
+Então é uma praga que a gente deve
+tentar evitar ao máximo, está certo?
+
+109
+00:07:58.106 --> 00:08:03.110
+Deles que a gente já viu é o TDA,
+o Tell, Don't Ask!
+
+110
+00:08:03.110 --> 00:08:05.686
+Está certo?
+
+111
+00:08:05.686 --> 00:08:11.998
+Eu não quero ter os dados expostos de
+
+112
+00:08:11.998 --> 00:08:18.510
+determinado objeto de uma classe
+e aí eu vou lá pego esse dado,
+
+113
+00:08:18.510 --> 00:08:22.906
+essa informação e eu faço,
+dou o tratamento dela aqui.
+
+114
+00:08:22.906 --> 00:08:29.130
+Não, eu simplesmente deixo lá
+e ordeno: faça isso para mim.
+
+115
+00:08:29.130 --> 00:08:30.417
+Está certo?
+
+116
+00:08:30.417 --> 00:08:31.704
+Quer dizer,
+
+117
+00:08:31.704 --> 00:08:36.751
+eu não preciso ficar fazendo coisa
+que outra classe pode fazer para mim.
+
+118
+00:08:36.751 --> 00:08:39.900
+Então eu estou distribuindo
+a inteligência do meu programa.
+
+119
+00:08:39.900 --> 00:08:40.539
+Está certo?
+
+120
+00:08:40.539 --> 00:08:44.317
+Eu estou distribuindo a inteligência
+do meu programa muito melhor para mim,
+
+121
+00:08:44.317 --> 00:08:47.700
+a minha classe, eu não começo a ter
+classes muito sobrecarregadas,
+
+122
+00:08:47.700 --> 00:08:53.029
+assim de forma não natural, pode acontecer
+naturalmente, mas de forma não natural,
+
+123
+00:08:53.029 --> 00:08:58.680
+porque eu estou distribuindo
+a inteligência do meu programa.
+
+124
+00:08:58.680 --> 00:09:03.400
+Se outra classe pode fazer melhor,
+que faça, está certo?
+
+125
+00:09:03.400 --> 00:09:09.300
+O outro princípio é o LoD,
+Law of Demeter, que eu não vou,
+
+126
+00:09:09.300 --> 00:09:13.848
+aí no caso é a exposição de objetos que
+
+127
+00:09:13.848 --> 00:09:18.677
+estão associados aos, aos,
+aos meus amigos, não é?
+
+128
+00:09:18.677 --> 00:09:23.564
+Que eu tenho uma classe que tem acesso que
+depende de outra, eu não quero ter acesso
+
+129
+00:09:23.564 --> 00:09:28.505
+a uma classe que depende dessa outra,
+ou seja, eu não quero usar,
+
+130
+00:09:28.505 --> 00:09:33.808
+trabalhar com o amigo do amigo,
+porque isso começa a criar confusão,
+
+131
+00:09:33.808 --> 00:09:37.166
+começa a criar confusão,
+o meu código já não fica o quê?
+
+132
+00:09:37.166 --> 00:09:38.595
+Claro, ele fica o quê?
+
+133
+00:09:38.595 --> 00:09:41.251
+Confuso e não é isso que nós queremos.
+
+134
+00:09:41.251 --> 00:09:45.111
+Então todos esses princípios
+que eu estou falando até
+
+135
+00:09:45.111 --> 00:09:50.082
+agora eu posso aplicar na hora do projeto,
+
+136
+00:09:50.082 --> 00:09:55.364
+eu posso melhorar meu código
+depois que nós vamos ver.
+
+137
+00:09:55.364 --> 00:09:59.566
+Outro conjunto de princípios,
+chamado SOLID,
+
+138
+00:09:59.566 --> 00:10:03.328
+nós ainda iremos ver
+isso nesse curso ainda.
+
+139
+00:10:03.328 --> 00:10:04.700
+Está certo?
+
+140
+00:10:04.700 --> 00:10:12.010
+Que cada uma dessas letras correspondem
+à primeira letra de cada dos princípios.
+
+141
+00:10:12.010 --> 00:10:18.021
+Então são 5 princípios que nós iremos
+depois detalhar e mostrar como é que nós
+
+142
+00:10:18.021 --> 00:10:23.895
+trabalharemos com o SOLID para melhorar
+o código, ter código de mais qualidade.
+
+143
+00:10:23.895 --> 00:10:24.750
+Está certo?
+
+144
+00:10:24.750 --> 00:10:26.470
+Isso vai ser importante.
+
+145
+00:10:26.470 --> 00:10:31.395
+Agora uma regra de ouro,
+uma regra de ouro é sempre
+
+146
+00:10:31.395 --> 00:10:36.320
+você expressar no seu código a intenção.
+
+147
+00:10:36.320 --> 00:10:41.190
+Isso vai fazer com que ao
+escrever bons nomes de variáveis,
+
+148
+00:10:41.190 --> 00:10:46.235
+bons nomes de métodos que
+reflitam as responsabilidades da
+
+149
+00:10:46.235 --> 00:10:53.341
+qual esses métodos correspondem,
+bons nomes para classes, está certo?
+
+150
+00:10:53.341 --> 00:10:57.791
+Eu vou eliminar a maioria dos comentários,
+está certo?
+
+151
+00:10:57.791 --> 00:11:04.356
+Só comentários que queiram dizer porque
+alguma coisa está sendo feita está certo?
+
+152
+00:11:04.356 --> 00:11:07.350
+É que vai aparecer,
+então vai aparecer muito poucos lugares.
+
+153
+00:11:07.350 --> 00:11:11.570
+E ao mesmo tempo, toda vez que
+eu estiver lendo alguma coisa,
+
+154
+00:11:11.570 --> 00:11:16.916
+vendo o nome eu estou vendo a intenção,
+eu sei o que está querendo ser feito ali.
+
+155
+00:11:16.916 --> 00:11:17.793
+Está certo?
+
+156
+00:11:17.793 --> 00:11:24.655
+Nós vamos usar isso bastante também como
+a gente já mostrou na parte de teste,
+
+157
+00:11:24.655 --> 00:11:29.355
+os nomes dos teste eles
+carregam fortemente
+
+158
+00:11:29.355 --> 00:11:33.590
+a intenção do que eu estou testando alí.
+
+159
+00:11:33.590 --> 00:11:35.011
+Está certo?
+
+160
+00:11:35.011 --> 00:11:40.213
+Mesmo usando o método que
+o professor Guerra mostra,
+
+161
+00:11:40.213 --> 00:11:44.673
+ou as alternativas que eu mostrei
+que são possíveis de dar nomes
+
+162
+00:11:44.673 --> 00:11:47.870
+aos métodos de testes,
+tudo isso fica bem claro.
+
+163
+00:11:47.870 --> 00:11:54.560
+A intenção é muito importante,
+padrões de projetos, Design Patterns.
+
+164
+00:11:54.560 --> 00:11:59.085
+Num curso futuro desse mesmo
+programa de cursos integrados,
+
+165
+00:11:59.085 --> 00:12:03.610
+nós iremos estar falando apenas e
+tão somente de padrões de projeto.
+
+166
+00:12:03.610 --> 00:12:10.052
+Ou seja vai ser muito importante porque
+isso reflete a experiência do passado.
+
+167
+00:12:10.052 --> 00:12:13.194
+São padrões que as pessoas
+foram identificando,
+
+168
+00:12:13.194 --> 00:12:17.725
+de como tornar esse código
+não só mais usável,
+
+169
+00:12:17.725 --> 00:12:24.670
+mas muito mais prático para você
+fazer mudanças, incluir novas coisas.
+
+170
+00:12:24.670 --> 00:12:28.165
+Coisas que a gente vai ver
+também no SOLID também.
+
+171
+00:12:28.165 --> 00:12:33.439
+Outro conjunto de princípios que nós
+iremos falar num próximo curso também,
+
+172
+00:12:33.439 --> 00:12:37.914
+que é muito importante,
+eu estou antecipando o que vocês podem
+
+173
+00:12:37.914 --> 00:12:42.820
+aproveitar para olhar a partir de
+agora que é o GRASP está certo?
+
+174
+00:12:42.820 --> 00:12:44.418
+Do livro do Larman.
+
+175
+00:12:44.418 --> 00:12:45.452
+Está certo?
+
+176
+00:12:45.452 --> 00:12:50.845
+Que é muito importante para
+definir as responsabilidades,
+
+177
+00:12:50.845 --> 00:12:55.117
+que lugar que você vai
+criar objetos e isso
+
+178
+00:12:55.117 --> 00:12:59.732
+pode ajudar a você a identificar,
+
+179
+00:12:59.732 --> 00:13:05.293
+tornar o seu código também muito mais
+enxuto, muito mais limpo e claro.
+
+180
+00:13:05.293 --> 00:13:06.233
+Está certo?
+
+181
+00:13:06.233 --> 00:13:10.878
+Não necessariamente se eu
+aplicar princípios de projetos,
+
+182
+00:13:10.878 --> 00:13:15.790
+bons princípios se eu vou
+obter código de qualidade,
+
+183
+00:13:15.790 --> 00:13:22.901
+mas normalmente você vai
+conseguir ter códigos muito bons.
+
+184
+00:13:22.901 --> 00:13:24.380
+Está certo?
+
+185
+00:13:24.380 --> 00:13:29.288
+Mesmo que siga de uma
+maneira pouco automática.
+
+186
+00:13:29.288 --> 00:13:34.834
+Você mais o ideal é sempre estar,
+sempre raciocinando porque é princípio,
+
+187
+00:13:34.834 --> 00:13:41.220
+ele não é uma regra, não é uma lei, não é
+uma coisa que você sempre tem que aplicar.
+
+188
+00:13:41.220 --> 00:13:43.491
+Você tem que examinar com cuidado,
+
+189
+00:13:43.491 --> 00:13:49.359
+porque pode ser que numa dada situação ele
+não é uma boa aplicação daquele princípio.
+
+190
+00:13:49.359 --> 00:13:50.439
+Está certo?
+
+191
+00:13:50.439 --> 00:13:53.690
+Então a chance de você ter código é bom,
+
+192
+00:13:53.690 --> 00:13:57.200
+desde que você faça sempre isso de
+uma maneira bastante consciente.
+
+193
+00:13:57.200 --> 00:14:03.270
+Agora, se eu não aplico nem de uma maneira
+automática, nem de uma maneira consciente,
+
+194
+00:14:03.270 --> 00:14:08.520
+com certeza a chance de eu ter código
+com qualidade ruim é muito grande.
+
+195
+00:14:08.520 --> 00:14:09.391
+Está certo?
+
+196
+00:14:09.391 --> 00:14:10.500
+É muito grande.
+
+197
+00:14:10.500 --> 00:14:13.512
+Não quer dizer que isso
+tudo esteja perdido.
+
+198
+00:14:13.512 --> 00:14:15.820
+A aula de hoje é para mostrar isso.
+
+199
+00:14:15.820 --> 00:14:18.120
+Mesmo que ocorra isso,
+
+200
+00:14:18.120 --> 00:14:23.807
+tem salvação e o TDD está mostrando uma
+coisa muito importante que eu vou falar.
+
+201
+00:14:23.807 --> 00:14:24.670
+Vai se a última,
+
+202
+00:14:24.670 --> 00:14:28.518
+quase uma das últimas palavras que eu
+vou estar falando na aula de hoje.
+
+203
+00:14:28.518 --> 00:14:32.977
+Que é uma coisa muito importante que vai
+ajudar que você mesmo que esteja com o
+
+204
+00:14:32.977 --> 00:14:35.013
+código ruim você pode melhorar.
+
+205
+00:14:35.013 --> 00:14:35.820
+Está certo?
+
+206
+00:14:35.820 --> 00:14:42.385
+Então você tem os seus princípios
+de projeto que você não aplicou.
+
+207
+00:14:42.385 --> 00:14:47.781
+Então você não aplicou no seu código uma
+grande chance que você obtenha códigos,
+
+208
+00:14:47.781 --> 00:14:49.277
+código sem qualidade.
+
+209
+00:14:49.277 --> 00:14:50.110
+Está certo?
+
+210
+00:14:50.110 --> 00:14:51.881
+Qual é o ideal então?
+
+211
+00:14:51.881 --> 00:14:56.164
+A ideia é sempre você
+aplicar os princípios e obter
+
+212
+00:14:56.164 --> 00:14:59.230
+sempre código de qualidade.
+
+213
+00:14:59.230 --> 00:15:05.280
+Mas tem porém, esse ideal normalmente,
+principalmente no TDD é inatingível.
+
+214
+00:15:05.280 --> 00:15:06.264
+Porquê?
+
+215
+00:15:06.264 --> 00:15:11.860
+Porque com o TDD você é
+incentivado a não se preocupar
+
+216
+00:15:11.860 --> 00:15:16.818
+otimizar o seu código na hora que
+você está lá no verde, no green,
+
+217
+00:15:16.818 --> 00:15:22.233
+dentro do ciclo do TDD na hora de
+definir com mais precisão o seu código
+
+218
+00:15:22.233 --> 00:15:28.691
+que vai fazer o teste funcionar, você não
+é obrigado a fazer nada sofisticado alí.
+
+219
+00:15:28.691 --> 00:15:33.590
+Se sair automaticamente, ótimo,
+beleza, você construiu código bom,
+
+220
+00:15:33.590 --> 00:15:40.062
+mas você não é, então não vamos garantir
+que você vai por código bom alí.
+
+221
+00:15:40.062 --> 00:15:44.113
+E também não tem problema,
+ou seja no final,
+
+222
+00:15:44.113 --> 00:15:47.558
+com o TDD estou falando dentro de ciclo,
+
+223
+00:15:47.558 --> 00:15:52.890
+daqui a pouco a gente vai perceber,
+naquela parte que ainda estou construindo.
+
+224
+00:15:52.890 --> 00:15:53.750
+Está certo?
+
+225
+00:15:53.750 --> 00:15:57.740
+Eu vou construir software
+com certo grau de qualidade.
+
+226
+00:15:57.740 --> 00:15:58.610
+Está certo?
+
+227
+00:15:58.610 --> 00:16:03.880
+Para como é que a gente vai proceder
+então para ter código de qualidade?
+
+228
+00:16:03.880 --> 00:16:09.741
+É isso aqui, normalmente num código
+
+229
+00:16:09.741 --> 00:16:15.616
+que eu faço BDUF Big Design Up Front,
+projeto tudo antes.
+
+230
+00:16:15.616 --> 00:16:19.670
+Eu posso então aplicar bons
+princípios de projeto,
+
+231
+00:16:19.670 --> 00:16:26.260
+de tal forma que eu construa uma
+aplicação com código de qualidade.
+
+232
+00:16:26.260 --> 00:16:27.214
+Está certo?
+
+233
+00:16:27.214 --> 00:16:30.080
+Já quando eu estou construindo no TDD,
+
+234
+00:16:30.080 --> 00:16:33.890
+às vezes vou ter códigos de boa qualidade,
+às vezes não.
+
+235
+00:16:33.890 --> 00:16:35.325
+Está certo?
+
+236
+00:16:35.325 --> 00:16:39.881
+Mas aí é código eu diria
+que pode melhorar.
+
+237
+00:16:39.881 --> 00:16:45.652
+Aí seguindo os princípios de projeto
+eu olho esse código sem qualidade, e
+
+238
+00:16:45.652 --> 00:16:51.579
+seguindo os princípios de projeto eu posso
+transformá-lo num código de qualidade.
+
+239
+00:16:51.579 --> 00:16:55.120
+Qual a vantagem que eu tenho
+agora no TDD de fazer isso?
+
+240
+00:16:55.120 --> 00:17:00.155
+Eu posso verificar isso
+de uma forma muito fácil.
+
+241
+00:17:00.155 --> 00:17:04.435
+Quando eu tenho meu código lá, eu sempre
+tenho uma bateria de teste funcionando.
+
+242
+00:17:04.435 --> 00:17:09.060
+Então o código não tem uma qualidade
+muito boa, mas ele funciona.
+
+243
+00:17:09.060 --> 00:17:14.695
+Ele está respondendo a todos os requisitos
+às responsabilidades daquele software,
+
+244
+00:17:14.695 --> 00:17:15.720
+ele funciona.
+
+245
+00:17:15.720 --> 00:17:18.690
+Quando eu faço, o que eu posso
+fazer então é uma transformação.
+
+246
+00:17:18.690 --> 00:17:21.280
+Seguindo esse princípio
+código de qualidade.
+
+247
+00:17:21.280 --> 00:17:24.482
+Agora sim eu vou fazer com
+código de qualidade, eu não
+
+248
+00:17:24.482 --> 00:17:28.220
+vou fazer tudo de uma vez, vou fazer
+também passo a passo essa transformação.
+
+249
+00:17:28.220 --> 00:17:31.920
+E vou estar sempre checando pelo teste.
+
+250
+00:17:31.920 --> 00:17:36.372
+Poque como eu tenho a bateria de
+testes eu garanto que o meu código,
+
+251
+00:17:36.372 --> 00:17:39.477
+agora transformado,
+agora com mais qualidade,
+
+252
+00:17:39.477 --> 00:17:42.375
+ele funciona tanto quanto
+aquele sem qualidade.
+
+253
+00:17:42.375 --> 00:17:44.455
+Então qual o código que você prefere?
+
+254
+00:17:44.455 --> 00:17:47.550
+O código de qualidade que
+funciona tanto quanto o outro,
+
+255
+00:17:47.550 --> 00:17:49.869
+porque é que eu vou ter
+que querer o outro?
+
+256
+00:17:49.869 --> 00:17:50.597
+Está certo?
+
+257
+00:17:50.597 --> 00:17:53.938
+Essa transformação
+preserva o comportamento,
+
+258
+00:17:53.938 --> 00:17:56.240
+é isso que é importante aqui.
+
+259
+00:17:56.240 --> 00:18:00.995
+Ou seja, essa transformação
+que preserva o comportamento e
+
+260
+00:18:00.995 --> 00:18:05.391
+que eu checo isso através dos,
+das baterias de testes.
+
+261
+00:18:05.391 --> 00:18:06.361
+Está certo?
+
+262
+00:18:06.361 --> 00:18:11.247
+A gente chama de refatoração,
+ou seja, aquela fase do TDD
+
+263
+00:18:11.247 --> 00:18:16.034
+que é o de refatoração,
+é isso que nós acabamos fazendo.
+
+264
+00:18:16.034 --> 00:18:20.480
+Nós estamos sempre nessa luta
+de pegar o código anterior,
+
+265
+00:18:20.480 --> 00:18:23.520
+transformá-lo para código de qualidade.
+
+266
+00:18:23.520 --> 00:18:29.757
+Nós vamos ver depois que isso pode, não
+é só na qualidade de código de dentro de
+
+267
+00:18:29.757 --> 00:18:35.519
+método ou de uma classe,
+mas é no conjunto todo da aplicação.
+
+268
+00:18:35.519 --> 00:18:40.389
+Com isso a gente acabou de
+mostrar para vocês como obter
+
+269
+00:18:40.389 --> 00:18:45.498
+código de qualidade, quer seja não
+usando o TDD ou quando usar o TDD.
+
+270
+00:18:45.498 --> 00:18:49.580
+Nós vamos detalhar agora
+como é que a gente faz isso.
+
+271
+00:18:49.580 --> 00:18:53.444
+Essa refatoração, que é essa transformação
+
+272
+00:18:53.444 --> 00:18:58.010
+que a a gente preserva o
+comportamento da aplicação.
+
+273
+00:18:58.010 --> 00:19:00.265
+Como é que a gente vai fazer isso?
+
+274
+00:19:00.265 --> 00:19:05.771
+Nós vamos mostrar ao longo do curso,
+nessa próxima aula nós vamos mostrar
+
+275
+00:19:05.771 --> 00:19:11.190
+duas pequenas transformações,
+duas refatorações exemplo,
+
+276
+00:19:11.190 --> 00:19:15.811
+vamos situar na verdade o
+que é que é refatoração.
+
+277
+00:19:15.811 --> 00:19:23.535
+E depois ao longo do curso nós vamos estar
+mostrando as técnicas de refatoração,
+
+278
+00:19:23.535 --> 00:19:28.060
+que eu tenho as técnicas que refatoração
+que baseadas nos princípios,
+
+279
+00:19:28.060 --> 00:19:32.550
+nos bons princípios,
+nas boas práticas de projeto,
+
+280
+00:19:32.550 --> 00:19:36.960
+eu vou ter sempre código com qualidade.
+
+281
+00:19:36.960 --> 00:19:41.167
+Momentaneamente ele pode
+ficar sem tanta qualidade,
+
+282
+00:19:41.167 --> 00:19:45.883
+mas ao final ele sempre vai
+ter uma qualidade muito boa.
+
+283
+00:19:45.883 --> 00:19:46.984
+Obrigado.
+
+284
+00:19:46.984 --> 00:19:52.720
+[MÚSICA] [MÚSICA]

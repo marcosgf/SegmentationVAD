@@ -1,0 +1,221 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:13.283
+[MÚSICA] E
+
+3
+00:00:13.283 --> 00:00:18.250
+aí pessoal, tudo bem?
+
+4
+00:00:18.250 --> 00:00:21.440
+Vamos continuar a partir do ponto
+que paramos na aula passada.
+
+5
+00:00:21.440 --> 00:00:26.010
+Vamos agora preencher as informações
+necessárias para mudar de tela.
+
+6
+00:00:26.010 --> 00:00:30.520
+Primeiro a função quando
+pressionamos o botão: end button.
+
+7
+00:00:30.520 --> 00:00:35.210
+Aqui queremos ter certeza que
+tem uma mensagem de boas vindas.
+
+8
+00:00:35.210 --> 00:00:36.506
+Se estiver vazio,
+
+9
+00:00:36.506 --> 00:00:40.844
+pedimos para o usuário escrever
+uma mensagem e não mudamos a tela.
+
+10
+00:00:40.844 --> 00:00:45.670
+Se tiver alguma informação, podemos fazer
+o segue que definimos no storyboard.
+
+11
+00:00:45.670 --> 00:00:53.212
+Em prepare for
+segue recebemos o próximo view controller,
+
+12
+00:00:53.212 --> 00:00:56.710
+o main view controller e passamos
+os dados salvos para ele.
+
+13
+00:00:56.710 --> 00:01:04.390
+Agora falta apenas a parte de salvar iii
+para dados utilizando NSUserDefaults.
+
+14
+00:01:04.390 --> 00:01:10.230
+Precisamos basicamente de duas funções:
+save data e check for saved data.
+
+15
+00:01:10.230 --> 00:01:15.320
+Em save data,
+usando a variável defaults, adicionamos
+
+16
+00:01:15.320 --> 00:01:21.440
+nossas variáveis locais como objetos e
+determinamos o nome para cada deles.
+
+17
+00:01:21.440 --> 00:01:26.704
+Em check for saved data vamos
+verificar se já tem alguma
+
+18
+00:01:26.704 --> 00:01:31.718
+informação salva na variável defaults com
+os nomes que escolhemos quando salvamos.
+
+19
+00:01:31.718 --> 00:01:36.150
+Se existir, recuperamos esses valores
+e retornamos como verdadeiro.
+
+20
+00:01:36.150 --> 00:01:40.190
+Caso contrário, apenas retornamos falso.
+
+21
+00:01:40.190 --> 00:01:45.497
+Apenas adicionando essas funções,
+
+22
+00:01:45.497 --> 00:01:49.790
+não estamos salvando e recuperando dados,
+precisamos também usá-las no nosso código.
+
+23
+00:01:49.790 --> 00:01:52.062
+Primeiro vamos salvar os dados.
+
+24
+00:01:52.062 --> 00:01:55.800
+Para isso vá até à função de
+ação do botão: end button.
+
+25
+00:01:55.800 --> 00:01:59.267
+Antes de fazer o segue chamamos save data.
+
+26
+00:01:59.267 --> 00:02:02.070
+Agora vamos fazer a verificação.
+
+27
+00:02:02.070 --> 00:02:06.589
+Para isso precisamos de uma nova função
+que é chamada logo que o view controller é
+
+28
+00:02:06.589 --> 00:02:07.340
+carregado.
+
+29
+00:02:07.340 --> 00:02:08.598
+A view did appear.
+
+30
+00:02:08.598 --> 00:02:13.640
+Essa é uma função que todo o view
+controller possui, como a view did loader.
+
+31
+00:02:13.640 --> 00:02:17.630
+Mas apenas iremos falar pouco
+mais sobre ela no próximo módulo.
+
+32
+00:02:17.630 --> 00:02:24.040
+Aqui, logo que a tela é apresentada
+usamos a função check for saved data.
+
+33
+00:02:24.040 --> 00:02:28.800
+Se ele retornar verdadeiro,
+já temos os dados e podemos fazer o segue.
+
+34
+00:02:28.800 --> 00:02:34.300
+Se retornar falso, não fazemos o segue
+e continuamos na tela de configuração.
+
+35
+00:02:34.300 --> 00:02:38.024
+Agora podemos executar nosso aplicativo.
+
+36
+00:02:38.024 --> 00:02:39.940
+Dê play e depois stop.
+
+37
+00:02:39.940 --> 00:02:43.280
+Agora execute pelo simulador.
+
+38
+00:02:43.280 --> 00:02:50.370
+Vamos fazer uma configuração
+simples para testar.
+
+39
+00:02:50.370 --> 00:02:57.643
+Texto oi, cor laranja, finalizar.
+
+40
+00:02:57.643 --> 00:03:02.033
+Agora pressione command
+shift h duas vezes,
+
+41
+00:03:02.033 --> 00:03:04.680
+que é o equivalente ao botão home do iOS.
+
+42
+00:03:04.680 --> 00:03:08.208
+Veja que o aplicativo user
+defaults está executando.
+
+43
+00:03:08.208 --> 00:03:10.820
+Clique e arraste para cima para fechar.
+
+44
+00:03:10.820 --> 00:03:15.600
+Agora abra o aplicativo clicando nele.
+
+45
+00:03:15.600 --> 00:03:19.680
+Repare que já começa executando
+na segunda tela pois os dados
+
+46
+00:03:19.680 --> 00:03:21.680
+foram salvos e recuperados.
+
+47
+00:03:21.680 --> 00:03:26.645
+Na próxima aula faremos a recapitulação
+dos tópicos desse módulo.
+
+48
+00:03:26.645 --> 00:03:27.260
+Até lá!

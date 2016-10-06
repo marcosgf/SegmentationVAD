@@ -1,0 +1,575 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.016
+Após esse vídeo, você será capaz de
+modelar o atraso de transporte e
+
+2
+00:00:04.016 --> 00:00:05.955
+de aproximá-lo para uma função racional.
+
+3
+00:00:05.955 --> 00:00:08.320
+Lembra das propriedades da
+transformada de Laplace?
+
+4
+00:00:08.320 --> 00:00:11.164
+Então, uma delas diz que
+a transformada de Laplace de
+
+5
+00:00:11.164 --> 00:00:14.008
+sinal com atraso tau é
+a transformada de Laplace de sinal
+
+6
+00:00:14.008 --> 00:00:16.600
+original multiplicada por
+e elevada a menos s tul.
+
+7
+00:00:16.600 --> 00:00:17.944
+E por que precisamos disso?
+
+8
+00:00:17.944 --> 00:00:21.758
+Porque vários sistemas apresentam o
+que chamamos de atraso de transporte.
+
+9
+00:00:21.758 --> 00:00:24.510
+Exemplo bastante comum é o
+de aquecedor de água a gás.
+
+10
+00:00:24.510 --> 00:00:28.121
+A saída do sistema é a temperatura da
+água na torneira da pia da cozinha,
+
+11
+00:00:28.121 --> 00:00:30.226
+e a entrada é o ajuste
+do aquecedor de gás.
+
+12
+00:00:30.226 --> 00:00:32.170
+Digamos que você está lavando louça,
+
+13
+00:00:32.170 --> 00:00:36.275
+ou que a sua mãe está lavando louça
+e que a água esteja fria demais.
+
+14
+00:00:36.275 --> 00:00:40.170
+Ela pede para você aumentar
+a temperatura da água 5 graus.
+
+15
+00:00:40.170 --> 00:00:43.663
+Você vai até ao aquecedor e ajusta a
+temperatura, mas toda a água que está nos
+
+16
+00:00:43.663 --> 00:00:47.690
+canos, entre o aquecedor e a torneira da
+pia, ainda está na temperatuta anterior.
+
+17
+00:00:47.690 --> 00:00:51.243
+Sua mãe só vai saber que você realmente
+ajustou a temperatura depois que
+
+18
+00:00:51.243 --> 00:00:54.356
+toda a água que estava no cano
+sair pela torneira e água nova
+
+19
+00:00:54.356 --> 00:00:56.530
+na nova temperatura chegar à torneira.
+
+20
+00:00:56.530 --> 00:01:00.930
+Ou seja, a sua mãe teve que esperar a água
+na nova temperatura ser transportada do
+
+21
+00:01:00.930 --> 00:01:02.755
+aquecedor até a torneira da pia.
+
+22
+00:01:02.755 --> 00:01:04.997
+Nem sempre o atraso é
+atraso de transporte.
+
+23
+00:01:04.997 --> 00:01:08.562
+O atraso entre a aplicação de sinal na
+entrada e a medição do seu efeito na
+
+24
+00:01:08.562 --> 00:01:11.940
+saída, pode se dar também,
+por exemplo, reações químicas,
+
+25
+00:01:11.940 --> 00:01:13.914
+que precisam de tempo de ativação.
+
+26
+00:01:13.914 --> 00:01:16.976
+Ou seja, você coloca os reagentes
+que são a entrada, mas a saída,
+
+27
+00:01:16.976 --> 00:01:19.860
+que é o produto da reação,
+só pode ser visto muito tempo depois.
+
+28
+00:01:19.860 --> 00:01:23.999
+Outro atraso bastante comum é o atraso
+de comunicação, que deve ser considerado
+
+29
+00:01:23.999 --> 00:01:27.454
+sistemas controlados à distãncia,
+quando a distância é muito grande,
+
+30
+00:01:27.454 --> 00:01:30.400
+ou quando as constantes de tempo
+do sistema são muito rápidas.
+
+31
+00:01:30.400 --> 00:01:34.790
+E temos também o atraso do processamento
+digital, que será tratado outro curso.
+
+32
+00:01:34.790 --> 00:01:38.570
+Enfim, chamamos todos os tipos de atraso,
+de forma genérica,
+
+33
+00:01:38.570 --> 00:01:42.696
+de atraso de transporte e os
+representamos como sinal de t menos tau,
+
+34
+00:01:42.696 --> 00:01:45.150
+onde tau é o valor do atraso segundos.
+
+35
+00:01:45.150 --> 00:01:48.322
+Assim, caso você não tenha percebido,
+usamos as unidades do
+
+36
+00:01:48.322 --> 00:01:51.250
+sistema internacional de
+medidas durante todo o curso.
+
+37
+00:01:51.250 --> 00:01:53.563
+Talvez devesse ter falado isso antes.
+
+38
+00:01:53.563 --> 00:01:58.309
+Bom, note que para o nosso sinal atrasado,
+x de t menos tau, seu valor quando t
+
+39
+00:01:58.309 --> 00:02:02.340
+igual a tau será o valor do sinal
+original x de t para t igual a 0.
+
+40
+00:02:02.340 --> 00:02:06.985
+Podemos considerar o atraso de sinal
+de entrada no sinal de saída ou ambos.
+
+41
+00:02:06.985 --> 00:02:10.434
+Se estamos interessados no efeito do
+atraso somente sobre o overshoot,
+
+42
+00:02:10.434 --> 00:02:11.630
+isso não faz diferença.
+
+43
+00:02:11.630 --> 00:02:15.057
+Mas se estamos interessados no efeito do
+atraso também nos tempos da resposta ao
+
+44
+00:02:15.057 --> 00:02:18.824
+degrau, é necessário fazer uma
+diferenciação entre o atraso na entrada e
+
+45
+00:02:18.824 --> 00:02:20.450
+o atraso na saída do sistema.
+
+46
+00:02:20.450 --> 00:02:25.462
+Vamos trabalhar inicialmente com os dois
+atrasos e depois somados único atraso.
+
+47
+00:02:25.462 --> 00:02:28.675
+Vamos considerar sistema de
+primeira ordem sem zeros,
+
+48
+00:02:28.675 --> 00:02:30.228
+G de s igual a 1 sobre s mais a.
+
+49
+00:02:30.228 --> 00:02:34.672
+A equação diferencial correspondente
+relacionando a entrada u de t com a saída
+
+50
+00:02:34.672 --> 00:02:38.930
+y de t do sistema é: y ponto de
+t mais a y de t igual a 1 de
+
+51
+00:02:38.930 --> 00:02:43.200
+t onde y ponto de t é a derivada
+de y de t com relação ao tempo.
+
+52
+00:02:43.200 --> 00:02:46.124
+Agora imagine que esse sinal de entrada,
+na verdade,
+
+53
+00:02:46.124 --> 00:02:48.040
+seja sinal de entrada atrasado.
+
+54
+00:02:48.040 --> 00:02:48.817
+Ou seja,
+
+55
+00:02:48.817 --> 00:02:54.838
+o sinal de entrada original era u 1 de t e
+o u de t é igual a u 1 de t menos tau u.
+
+56
+00:02:54.838 --> 00:02:59.676
+E a saída que medimos e que vamos
+efetivamente usar uma realimentação
+
+57
+00:02:59.676 --> 00:03:03.610
+para gerar o sinal de erro é y de t
+que é igual a y de t menos tau y.
+
+58
+00:03:03.610 --> 00:03:06.910
+G de s nos dá a relação
+entre y de s e u de s,
+
+59
+00:03:06.910 --> 00:03:11.194
+mas como o sinal de entrada é 1
+u de s e não u de s e o sinal
+
+60
+00:03:11.194 --> 00:03:16.010
+que realmente vemos e utilizamos
+na saída é y 1 de s e não y de s,
+
+61
+00:03:16.010 --> 00:03:20.410
+precisamos da relação
+entre y 1 de s e 1 de s.
+
+62
+00:03:20.410 --> 00:03:24.810
+Podemos escrever: y de t é
+igual a y 1 de t mais tau y.
+
+63
+00:03:24.810 --> 00:03:29.518
+E substituir tanto u de t quanto y de
+t na equação diferencial do sistema,
+
+64
+00:03:29.518 --> 00:03:34.436
+obtendo: y 1 ponto de t
+mais tau y mais a y 1 de t
+
+65
+00:03:34.436 --> 00:03:38.559
+mais tau y igual a u 1 de t menos tau u.
+
+66
+00:03:38.559 --> 00:03:44.015
+Aplicando a transformada da Laplace,
+obtemos s y 1 de s e elevado
+
+67
+00:03:44.015 --> 00:03:50.242
+a s tau y mais a y 1 de s e elevado a s
+tau y igual a 1 u de s e menos s tau u.
+
+68
+00:03:50.242 --> 00:03:56.283
+Podemos colocar y 1 de s e elevado
+a s tau y evidência e temos: s
+
+69
+00:03:56.283 --> 00:04:02.475
+mais a vezes y 1 de s e elevado a s tau
+y igual a 1 u de s e menos s tau u.
+
+70
+00:04:02.475 --> 00:04:08.740
+E podemos escrever G a de s igual
+a e menos s tau sobre s mais a.
+
+71
+00:04:08.740 --> 00:04:13.037
+Ou ainda,
+G a de s é igual a G de s e menos s tau,
+
+72
+00:04:13.037 --> 00:04:16.920
+onde tau é a soma dos atrasos
+da entrada e da saída.
+
+73
+00:04:16.920 --> 00:04:21.150
+O problema agora, é que não sabemos o
+que fazer com e elevado a menos s tau,
+
+74
+00:04:21.150 --> 00:04:21.910
+ou sabemos?
+
+75
+00:04:21.910 --> 00:04:26.745
+Até agora, trabalhamos com polinômio no
+numerador e polinômio no denominador,
+
+76
+00:04:26.745 --> 00:04:29.700
+mas o que fazer com uma
+exponencial no numerador?
+
+77
+00:04:29.700 --> 00:04:34.412
+Podemos até obter a função de
+transferência malha fechada que será: k G
+
+78
+00:04:34.412 --> 00:04:38.662
+de s e a menos s tau sobre 1
+mais k G de s e a menos s tau.
+
+79
+00:04:38.662 --> 00:04:43.656
+Ou ainda, k numerador de G de s vezes
+e menos s tau, sobre denominador de G
+
+80
+00:04:43.656 --> 00:04:48.365
+de s mais k numerador de G de s e
+a menos s tau, que para nosso exemplo
+
+81
+00:04:48.365 --> 00:04:52.988
+fica: k vezes e menos s tau sobre s
+mais a mais k vezes e menos s tau.
+
+82
+00:04:52.988 --> 00:04:55.504
+Mas como será a dinâmica desse sistema?
+
+83
+00:04:55.504 --> 00:04:58.905
+A dinâmica do sistema malha aberta,
+conseguimos entender,
+
+84
+00:04:58.905 --> 00:05:03.645
+já que o atraso só aparece no numerador,
+mas agora, o atraso está no denominador,
+
+85
+00:05:03.645 --> 00:05:05.650
+onde está o polo desse sistema?
+
+86
+00:05:05.650 --> 00:05:07.750
+E esse sistema só tem polo?
+
+87
+00:05:07.750 --> 00:05:12.318
+Bem, é até possível trabalhar com função
+de transferência com a exponencial de
+
+88
+00:05:12.318 --> 00:05:12.934
+menos s tau.
+
+89
+00:05:12.934 --> 00:05:14.730
+Mas que tal simplificar a nossa vida?
+
+90
+00:05:14.730 --> 00:05:18.500
+Se e elevado a s tau fosse polinômio,
+
+91
+00:05:18.500 --> 00:05:21.678
+nós saberiamos contratar o atraso,
+não saberíamos?
+
+92
+00:05:21.678 --> 00:05:27.630
+Então, seus problemas acabaram,
+eu garanto!
+
+93
+00:05:27.630 --> 00:05:31.051
+E se eu te dissesse que
+existe uma aproximação,
+
+94
+00:05:31.051 --> 00:05:36.310
+que aproxima qualquer função por
+polinômio racional e não é a aproximação
+
+95
+00:05:36.310 --> 00:05:40.442
+de Tabajara e nem a aproximação do seu
+Creysson, é a aproximação de Padé.
+
+96
+00:05:40.442 --> 00:05:45.236
+A aproximação de Padé, ou as aproximações
+de Padé, desenvolvidas pelo matemático
+
+97
+00:05:45.236 --> 00:05:49.746
+francês Henri Padé, aproximam uma função
+qualquer por uma função racional.
+
+98
+00:05:49.746 --> 00:05:53.710
+E podemos escolher a ordem do numerador
+e a ordem do denominador dessa função
+
+99
+00:05:53.710 --> 00:05:54.306
+racional.
+
+100
+00:05:54.306 --> 00:05:58.310
+Para o nosso caso, que é o controle de
+sistemas lineares variantes do tempo,
+
+101
+00:05:58.310 --> 00:06:01.972
+uma aproximação de Padé de primeira
+ordem normalmente é suficiente.
+
+102
+00:06:01.972 --> 00:06:06.320
+A aproximação de Padé de primeira ordem
+da função exponencial e elevado a x
+
+103
+00:06:06.320 --> 00:06:08.873
+é 2 mais x sobre 2 menos x.
+
+104
+00:06:08.873 --> 00:06:13.871
+No nosso caso, no lugar de x
+temos menos s tau, então temos: e
+
+105
+00:06:13.871 --> 00:06:18.760
+elevado a menos s tau, aproximadamente
+2 menos s tau sobre 2 mais s tau.
+
+106
+00:06:18.760 --> 00:06:21.249
+Dividindo cima e baixo por tau,
+
+107
+00:06:21.249 --> 00:06:24.715
+temos 2 sobre tau menos s
+sobre 2 sobre tau mais s.
+
+108
+00:06:24.715 --> 00:06:27.916
+Colocando uma forma com que
+estamos mais acostumados,
+
+109
+00:06:27.916 --> 00:06:31.404
+menos s mais 2 sobre tau sobre
+s mais 2 sobre tau, ou ainda,
+
+110
+00:06:31.404 --> 00:06:34.909
+menos s menos 2 sobre tau
+sobre s mais 2 sobre tau.
+
+111
+00:06:34.909 --> 00:06:39.848
+E agora podemos escrever G a de s como
+G de s vezes menos s mais 2 sobre
+
+112
+00:06:39.848 --> 00:06:42.235
+tau sobre s mais 2 sobre tau.
+
+113
+00:06:42.235 --> 00:06:45.807
+E t de s como k numerador
+menos s mais 2 sobre tau,
+
+114
+00:06:45.807 --> 00:06:50.617
+denominador s mais 2 sobre tau mais
+k numerador menos s mais 2 sobre tau.
+
+115
+00:06:50.617 --> 00:06:55.024
+E agora somos capazes de calcular os
+polos e zeros da função de transferência
+
+116
+00:06:55.024 --> 00:06:58.477
+malha fechada e de estimar as
+características de sua resposta.
+
+117
+00:06:58.477 --> 00:07:02.807
+Agora, você já é capaz de modelar o atraso
+de transporte e de aproximá-lo para uma
+
+118
+00:07:02.807 --> 00:07:03.840
+função racional.
+
+119
+00:07:03.840 --> 00:07:07.329
+No próximo vídeo, você verá como calcular
+a influência do atraso na resposta ao
+
+120
+00:07:07.329 --> 00:07:12.400
+degrau do sistema e exemplo de projeto de
+avanço de fase com atraso de transporte.

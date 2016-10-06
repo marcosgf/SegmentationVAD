@@ -1,0 +1,112 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:16.311
+[MÚSICA] E aí, pessoal, tudo bem?
+
+3
+00:00:16.311 --> 00:00:20.470
+Nessa aula vamos conhecer
+o conceito de optionals.
+
+4
+00:00:20.470 --> 00:00:24.177
+Quando declaramos uma variável,
+por exemplo do tipo int,
+
+5
+00:00:24.177 --> 00:00:27.600
+ela não pode ser nula e não
+ter nenhum valor atribuído.
+
+6
+00:00:27.600 --> 00:00:31.740
+Nós devemos obrigatoriamente inicializar
+essa variável com algum valor
+
+7
+00:00:31.740 --> 00:00:35.144
+e é aí que entra o conceito de optionals.
+
+8
+00:00:35.144 --> 00:00:38.354
+Você pode declarar uma
+variável opcional adicionando
+
+9
+00:00:38.354 --> 00:00:40.160
+ponto de interrogação após o tipo.
+
+10
+00:00:40.160 --> 00:00:45.580
+Agora é possível deixar a variável como
+nula e atribuir valor posteriormente.
+
+11
+00:00:45.580 --> 00:00:49.790
+Existem 2 jeitos de acessar o valor
+de variáveis opcionais no código.
+
+12
+00:00:49.790 --> 00:00:54.554
+Você pode fazer unwrap ou desembrulhar
+uma variável opcional de maneira
+
+13
+00:00:54.554 --> 00:00:56.910
+segura utilizando o comando if let.
+
+14
+00:00:56.910 --> 00:01:01.455
+Dessa forma você faz as operações
+que desejar com a variável opcional
+
+15
+00:01:01.455 --> 00:01:03.580
+somente caso ela não seja nula.
+
+16
+00:01:03.580 --> 00:01:06.593
+E tem a opção de forçar
+o unwrap adicionando
+
+17
+00:01:06.593 --> 00:01:09.380
+ponto de exclamação no nome da variável.
+
+18
+00:01:09.380 --> 00:01:14.145
+Você pode fazer isso apenas se tiver
+certeza que o valor da variável não
+
+19
+00:01:14.145 --> 00:01:14.720
+é nulo.
+
+20
+00:01:14.720 --> 00:01:19.770
+Caso seja, ocorrerá erro grave e seu
+aplicativo será fechado repentinamente.
+
+21
+00:01:19.770 --> 00:01:24.506
+Você tem a opção também de declarar uma
+variável opcional já implicitamente
+
+22
+00:01:24.506 --> 00:01:28.840
+desembrulhada e atribuir o valor
+de outras variáveis opcionais.
+
+23
+00:01:28.840 --> 00:01:34.606
+Na próxima aula veremos como criar
+e utilizar funções em Swift.
+
+24
+00:01:34.606 --> 00:01:35.360
+Até lá.

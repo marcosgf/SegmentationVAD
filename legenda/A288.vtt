@@ -1,0 +1,244 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.934
+[MÚSICA] [MÚSICA]
+
+2
+00:00:09.934 --> 00:00:15.389
+Bem vindo à Introdução
+ao Controle de Sistemas!
+
+3
+00:00:15.389 --> 00:00:16.810
+O que é sistema?
+
+4
+00:00:16.810 --> 00:00:21.947
+Sistema vem da antiga
+palavra grega synistanai e
+
+5
+00:00:21.947 --> 00:00:29.770
+synistanai significa
+"fazer funcionar junto".
+
+6
+00:00:29.770 --> 00:00:34.156
+E é lá na Grécia Antiga
+que a nossa jornada
+
+7
+00:00:34.156 --> 00:00:38.645
+começa: é anoitecer quente de Verão,
+
+8
+00:00:38.645 --> 00:00:44.734
+cerca de 270 antes de Cristo o
+jovem Ktesibius está ajudando o seu
+
+9
+00:00:44.734 --> 00:00:49.980
+pai na barbearia quando tem uma ideia.
+
+10
+00:00:49.980 --> 00:00:51.860
+Jazinga!
+
+11
+00:00:51.860 --> 00:00:55.910
+Ok, não vamos falar da Grécia antiga,
+
+12
+00:00:55.910 --> 00:01:00.042
+mas vamos falar sobre dos inventos
+atribuídos a Ktesibius que,
+
+13
+00:01:00.042 --> 00:01:04.224
+pelos relatos históricos e pela Wikipedia,
+foi matemático,
+
+14
+00:01:04.224 --> 00:01:09.912
+físico e inventor grego que viveu
+Alexandria entre 285 e 222 a.C.
+
+15
+00:01:09.912 --> 00:01:14.842
+Segundo esses relatos Ktesibius
+inventou dos primeiros sistemas de
+
+16
+00:01:14.842 --> 00:01:18.857
+controlo automático de nível de água
+similar aos utilizados atualmente
+
+17
+00:01:18.857 --> 00:01:21.870
+caixas de descarga e caixas
+de água mais simples.
+
+18
+00:01:21.870 --> 00:01:26.147
+O problema de Ktesibius era
+manter nível constante de água
+
+19
+00:01:26.147 --> 00:01:29.120
+reservatório com furo na parte inferior.
+
+20
+00:01:29.120 --> 00:01:34.085
+Este reservatório era usado para
+encher relógio de água Se a altura
+
+21
+00:01:34.085 --> 00:01:38.446
+da água no reservatório for constante,
+a quantidade de água que sai pelo furo é
+
+22
+00:01:38.446 --> 00:01:42.190
+constante e a altura da água no
+relógio é uma boa indicação do tempo.
+
+23
+00:01:42.190 --> 00:01:47.143
+Mas à medida que a água escoa
+para o relógio o nível da água
+
+24
+00:01:47.143 --> 00:01:51.170
+do reservatório vai diminuindo
+e a água precisa ser reposta.
+
+25
+00:01:51.170 --> 00:01:56.069
+É claro que alguém podia ficar o tempo
+todo do lado do reservatório completando
+
+26
+00:01:56.069 --> 00:01:59.360
+o nível à medida que a água
+ia escoando para o relógio.
+
+27
+00:01:59.360 --> 00:02:04.387
+Ou então o reservatório poderia
+receber fluxo constante de
+
+28
+00:02:04.387 --> 00:02:10.200
+água e o excesso de água poderia
+escorrer e ser jogado fora.
+
+29
+00:02:10.200 --> 00:02:15.043
+Mas não seria possível termos dispositivo
+que completasse o nível da água
+
+30
+00:02:15.043 --> 00:02:17.930
+automaticamente e sem desperdício de água?
+
+31
+00:02:17.930 --> 00:02:22.778
+Ktesibius resolveu esse problema usando
+uma boia que fechava ou liberava
+
+32
+00:02:22.778 --> 00:02:25.130
+a entrada de água no reservatório.
+
+33
+00:02:25.130 --> 00:02:29.759
+Vamos dar uma olhada modelo
+simplificado de uma caixa de descarga
+
+34
+00:02:29.759 --> 00:02:32.750
+acoplada e entender
+a solução de Ktesibius.
+
+35
+00:02:32.750 --> 00:02:37.640
+A boia está ligada a uma válvula
+por uma espécie de gangorra,
+
+36
+00:02:37.640 --> 00:02:43.422
+quando a boia desce a válvula sobe e
+quando a válvula desce e a válvula
+
+37
+00:02:43.422 --> 00:02:48.970
+funciona basicamente como uma torneira,
+liberando ou fechando o fluxo de água.
+
+38
+00:02:48.970 --> 00:02:53.100
+Então quando o nível de água está baixo
+
+39
+00:02:53.100 --> 00:02:57.230
+a boia fica baixa e libera
+a entrada de bom fluxo de água.
+
+40
+00:02:57.230 --> 00:03:00.196
+À medida que o nível da
+água vai aumentando,
+
+41
+00:03:00.196 --> 00:03:05.020
+a boia vai subindo, a válvula vai
+descendo fechando o entrada da água.
+
+42
+00:03:05.020 --> 00:03:08.066
+Quando a água chega no nível desejado,
+
+43
+00:03:08.066 --> 00:03:13.546
+a boia fica alta e a válvula desce,
+fechando completamente a entrada de água.
+
+44
+00:03:13.546 --> 00:03:18.354
+Se a quantidade de água diminuir
+evaporando ou quando alguém
+
+45
+00:03:18.354 --> 00:03:23.700
+acionar a descarga, a boia desce
+liberando a entrada de água novamente.
+
+46
+00:03:23.700 --> 00:03:28.423
+E essa é uma versão moderna simplificada
+de dos primeiros sistemas de
+
+47
+00:03:28.423 --> 00:03:32.335
+controlo automático de que
+se tem registo histórico.
+
+48
+00:03:32.335 --> 00:03:37.697
+Neste curso você verá outros exemplos
+de sistema, se familiarizará com
+
+49
+00:03:37.697 --> 00:03:42.370
+os principais termos da área e entenderá
+como o controlo com realimentação funciona
+
+50
+00:03:42.370 --> 00:03:48.340
+e verá como projetar controlador
+proporcional para sistema simples.
+
+51
+00:03:48.340 --> 00:03:56.470
+[MÚSICA] [SOM] [SOM]

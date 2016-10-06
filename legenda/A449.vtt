@@ -1,0 +1,441 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.893
+[MÚSICA] Meu
+
+2
+00:00:07.893 --> 00:00:10.316
+nome é Eduardo Guerra.
+
+3
+00:00:10.316 --> 00:00:15.170
+Esse é o curso de Orientação
+a Objetos com Java.
+
+4
+00:00:15.170 --> 00:00:20.520
+Hoje vamos estar falando para vocês sobre
+a identificação de classes de objetos.
+
+5
+00:00:20.520 --> 00:00:25.426
+O objetivo dessa aula é mostrar a você
+pouquinho sobre como você descobrir
+
+6
+00:00:25.426 --> 00:00:28.350
+quais são as classes,
+quais são os objetos,
+
+7
+00:00:28.350 --> 00:00:32.586
+qual o significado disso tudo dentro
+do sistema orientado a objetos.
+
+8
+00:00:32.586 --> 00:00:37.168
+O que a gente vai tá tentando
+responder aqui é quais são as
+
+9
+00:00:37.168 --> 00:00:39.725
+partes do seu software.
+
+10
+00:00:39.725 --> 00:00:44.014
+O software,
+ele não é blocão assim inteiro,
+
+11
+00:00:44.014 --> 00:00:49.770
+você precisa dividir ele,
+ele tem partes que você precisa combinar.
+
+12
+00:00:49.770 --> 00:00:54.260
+Mais especificamente, a gente vai
+tá falando das peças que a gente
+
+13
+00:00:54.260 --> 00:00:59.260
+vai usar para montar a sua funcionalidade
+num software orientado a objetos.
+
+14
+00:00:59.260 --> 00:01:03.970
+Então imagina o seguinte, que eu tenho
+por exemplo sistema de pet-shop.
+
+15
+00:01:03.970 --> 00:01:10.040
+Eu vou ter aí o cão, vou ter os
+produtos que às vezes podem ser,
+
+16
+00:01:10.040 --> 00:01:15.692
+por exemplo, uma caminha ou uma comida de
+cachorro, de repente pode ser uma tosa,
+
+17
+00:01:15.692 --> 00:01:21.810
+banho e tem os usuários que são
+os donos desses caninos aí.
+
+18
+00:01:21.810 --> 00:01:22.813
+O que é que são isso?
+
+19
+00:01:22.813 --> 00:01:24.890
+O que é que é isso aí
+dentro do meu sistema?
+
+20
+00:01:24.890 --> 00:01:29.568
+São as entidades, são aquelas coisas
+que fazem parte do meu negócio,
+
+21
+00:01:29.568 --> 00:01:31.838
+que fazem parte do meu sistema.
+
+22
+00:01:31.838 --> 00:01:37.439
+Essas entidades, elas colaboram para
+poder criar a funcionalidade do software.
+
+23
+00:01:37.439 --> 00:01:41.645
+Então por exemplo se eu tenho uma
+funcionalidade de comprar eu vou ter
+
+24
+00:01:41.645 --> 00:01:46.720
+cliente de repente adquirindo produto, por
+exemplo uma tosa para dos seus cachorros,
+
+25
+00:01:46.720 --> 00:01:50.200
+daí então eu vou ter tudo aquilo
+ali combinado dentro do software.
+
+26
+00:01:50.200 --> 00:01:56.103
+E essas entidades que colaboram para
+criar essas funcionalidade no sistema,
+
+27
+00:01:56.103 --> 00:01:57.900
+são chamadas classes.
+
+28
+00:01:57.900 --> 00:02:01.971
+As classes, elas são abstrações.
+
+29
+00:02:01.971 --> 00:02:05.100
+Então por exemplo, pensa numa cadeira.
+
+30
+00:02:05.100 --> 00:02:08.540
+É uma ideia que você tem da cadeira.
+
+31
+00:02:08.540 --> 00:02:09.055
+Certo?
+
+32
+00:02:09.055 --> 00:02:10.749
+Daquilo que é uma cadeira.
+
+33
+00:02:10.749 --> 00:02:14.960
+Então uma classe, o correto é a gente
+dizer que ela é uma abstração.
+
+34
+00:02:14.960 --> 00:02:19.362
+E aí se a gente pensar exemplos de
+cadeira, mesmo que a gente tenha aquela,
+
+35
+00:02:19.362 --> 00:02:24.054
+digamos assim, aquela ideia idealizada,
+aquela coisa assim do que é uma cadeira,
+
+36
+00:02:24.054 --> 00:02:30.334
+a gente vai ter ali por exemplo uma
+que é de madeira, uma de plástico,
+
+37
+00:02:30.334 --> 00:02:34.532
+tem essa outra ali que
+tem as rodinhas no pé,
+
+38
+00:02:34.532 --> 00:02:40.370
+então a gente tem vários tipo de cadeira,
+algumas mais parecidas, outras diferentes,
+
+39
+00:02:40.370 --> 00:02:45.982
+mas que todas encaixam nesse conceito que
+a gente tem do que é ser uma cadeira.
+
+40
+00:02:45.982 --> 00:02:50.301
+E cada cadeira, como eu disse,
+tem as suas características,
+
+41
+00:02:50.301 --> 00:02:56.170
+o formato do acento, como que são os pés,
+como que é o encosto,
+
+42
+00:02:56.170 --> 00:03:01.743
+material que ela é feita,
+cada cadeira tem as suas caraterísticas.
+
+43
+00:03:01.743 --> 00:03:05.890
+E aí o objeto é uma
+Instância Concreta da classe.
+
+44
+00:03:05.890 --> 00:03:07.385
+Então, que acontece?
+
+45
+00:03:07.385 --> 00:03:12.020
+Eu tenho a minha ideia de cadeira,
+agora por exemplo essa cadeira que você
+
+46
+00:03:12.020 --> 00:03:17.015
+aí está sentado, ela é uma instância
+dessa classe de cadeira, ela é objeto.
+
+47
+00:03:17.015 --> 00:03:20.323
+Então a gente pode dizer
+que a Classe Cadeira,
+
+48
+00:03:20.323 --> 00:03:25.713
+ela vai criar ou instanciar Objetos
+Cadeira Não é ela que vai lá e cria,
+
+49
+00:03:25.713 --> 00:03:29.520
+mas baseado naquela ideia
+que a gente tem de cadeira,
+
+50
+00:03:29.520 --> 00:03:33.440
+as pessoas constroem efetivamente
+as cadeiras que existem.
+
+51
+00:03:33.440 --> 00:03:38.146
+Então, uma classe, ela vai estar
+criando ou instanciando objetos dela.
+
+52
+00:03:38.146 --> 00:03:44.790
+E uma coisa importante é que
+esses objetos, eles são únicos.
+
+53
+00:03:44.790 --> 00:03:45.409
+Por quê?
+
+54
+00:03:45.409 --> 00:03:49.623
+Eu posso ter, por exemplo,
+duas cadeiras iguais e elas vão estar,
+
+55
+00:03:49.623 --> 00:03:51.790
+por exemplo, posições diferentes.
+
+56
+00:03:51.790 --> 00:03:55.440
+Por exemplo eu posso quebrar
+uma e a outra não vai quebrar.
+
+57
+00:03:55.440 --> 00:03:57.535
+Então, são coisas diferentes.
+
+58
+00:03:57.535 --> 00:04:00.856
+Eu ter, por exemplo,
+duas cadeiras do mesmo tipo,
+
+59
+00:04:00.856 --> 00:04:03.280
+não significa que são o mesmo objeto.
+
+60
+00:04:03.280 --> 00:04:08.370
+Os objetos, eles são únicos.
+
+61
+00:04:08.370 --> 00:04:13.980
+Duas cadeiras iguais, elas são da mesma
+classe, mas são objetos diferentes.
+
+62
+00:04:13.980 --> 00:04:16.781
+Vamos ver se você entendeu
+aí esse conceito?
+
+63
+00:04:16.781 --> 00:04:19.480
+Quero que você dê uma
+olhada aqui e me diga
+
+64
+00:04:19.480 --> 00:04:23.580
+quais desses objetos
+seriam da classe cadeira.
+
+65
+00:04:23.580 --> 00:04:30.425
+Tem aí a cadeira de rodas, eu tenho aqui
+uma cadeira de bebê e e tem banquinho.
+
+66
+00:04:30.425 --> 00:04:34.400
+Responde aí,
+qual desses objetos é da classe cadeira?
+
+67
+00:04:34.400 --> 00:04:38.709
+Bom, tenho certeza que todo mundo aí
+deve ter acertado, mas se a gente for
+
+68
+00:04:38.709 --> 00:04:43.599
+parar para pensar, apesar do banco a gente
+poder sentar e às vezes ele ser até mais
+
+69
+00:04:43.599 --> 00:04:48.032
+parecido com as cadeiras que a gente
+viu antes, ele não se encaixa na ideia
+
+70
+00:04:48.032 --> 00:04:51.470
+que a gente tem de cadeira,
+naquela abstração de cadeira.
+
+71
+00:04:51.470 --> 00:04:54.339
+Por isso que ele não é
+uma instância de cadeira.
+
+72
+00:04:54.339 --> 00:04:59.210
+Agora os outros tipos, elas se encaixam
+então seriam instâncias de cadeira.
+
+73
+00:04:59.210 --> 00:05:01.189
+Mesmo que elas sejam diferentes,
+
+74
+00:05:01.189 --> 00:05:06.790
+uma tem rodinhas a outra tem ali
+a mesinha para o neném comer e etc.
+
+75
+00:05:06.790 --> 00:05:13.820
+Então, resumindo aqui, a classe,
+ela é uma abstração, ela é abstrata.
+
+76
+00:05:13.820 --> 00:05:17.530
+O objeto, ele é concreto.
+
+77
+00:05:17.530 --> 00:05:23.293
+Então se a classe é uma generalização,
+é uma ideia de uma cadeira,
+
+78
+00:05:23.293 --> 00:05:27.360
+o objeto, ele vai ser uma cadeira, essa
+aí que você está sentando por exemplo.
+
+79
+00:05:27.360 --> 00:05:32.542
+E os objetos eles são únicos então eu
+posso ter diferentes tipos de cadeira
+
+80
+00:05:32.542 --> 00:05:38.360
+com diferentes características que vão
+ser diferentes objetos da classe cadeira.
+
+81
+00:05:38.360 --> 00:05:44.580
+E aí a gente tem que uma classe, ela cria
+ou instancia objetos daquela classe.
+
+82
+00:05:44.580 --> 00:05:49.409
+E são esse conceitos aí que a gente vai
+utilizar quando a gente tiver criando
+
+83
+00:05:49.409 --> 00:05:53.880
+classes e instanciando objetos dentro
+de software orientado a objetos.
+
+84
+00:05:53.880 --> 00:05:54.440
+Certo?
+
+85
+00:05:54.440 --> 00:05:59.061
+Então espero que com isso você tenha
+conseguido entender melhor esse
+
+86
+00:05:59.061 --> 00:06:01.972
+conceito de classe,
+esse conceito de objeto,
+
+87
+00:06:01.972 --> 00:06:06.700
+como que eles se relacionam que a gente
+vai precisar disso quando a gente for
+
+88
+00:06:06.700 --> 00:06:10.639
+colocar a mão na massa para
+programar nas próximas aulas.
+
+89
+00:06:10.639 --> 00:06:13.980
+Muito obrigado, nos vemos na próxima aula.
+
+90
+00:06:13.980 --> 00:06:17.500
+[MÚSICA]
+
+91
+00:06:17.500 --> 00:06:25.500
+[MÚSICA]
+
+92
+00:06:25.500 --> 00:06:31.840
+[SEM_ÁUDIO]
+
+93
+00:06:31.840 --> 00:06:38.180
+[SEM_ÁUDIO]

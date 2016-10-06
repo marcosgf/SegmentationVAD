@@ -1,0 +1,679 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.040
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:09.040 --> 00:00:14.569
+meu nome é Eduardo Guerra,
+estamos aqui no primeiro Hands-on de TDD.
+
+3
+00:00:14.569 --> 00:00:19.700
+Hoje eu vou mostrar para vocês exemplo
+simples, vamos desenvolver a pilha,
+
+4
+00:00:19.700 --> 00:00:23.691
+aquela estrutura de dados que
+a gente consegue empilhar,
+
+5
+00:00:23.691 --> 00:00:28.595
+desempilhar e ver o que está no topo que
+acredito que a maioria do pessoal que fez
+
+6
+00:00:28.595 --> 00:00:32.495
+curso de ciência da computação,
+ou está cursando, já deve ter visto,
+
+7
+00:00:32.495 --> 00:00:36.124
+mais ou menos,
+ou trabalhado dentro de uma linguagem.
+
+8
+00:00:36.124 --> 00:00:40.630
+Então a ideia é que a gente desenvolva
+uma pilha utilizando o TDD.
+
+9
+00:00:40.630 --> 00:00:41.472
+Está certo?
+
+10
+00:00:41.472 --> 00:00:46.920
+Então, vamos começar aqui, a primeira
+coisa, eu vou estar criando novo projeto
+
+11
+00:00:46.920 --> 00:00:53.390
+e vou chamar ele de Pilha mesmo.
+
+12
+00:00:53.390 --> 00:00:59.113
+E como a gente viu no TDD,
+
+13
+00:00:59.113 --> 00:01:03.021
+eu não vou já vir e vou
+criar uma classe Pilha.
+
+14
+00:01:03.021 --> 00:01:07.570
+A primeira coisa que eu vou fazer vai
+ser criar o Teste da classe Pilha.
+
+15
+00:01:07.570 --> 00:01:14.940
+Então eu vou vir aqui, Novo,
+JUnit Test Case vou fazer isso aqui,
+
+16
+00:01:14.940 --> 00:01:19.060
+a gente viu que ele já
+adiciona o JUnit para a gente,
+
+17
+00:01:19.060 --> 00:01:23.420
+então vou chamar aqui de TestePilha.
+
+18
+00:01:23.420 --> 00:01:30.470
+Olha lá, ele pergunta se eu quero
+adicionar o JUnit, eu vou dizer que sim.
+
+19
+00:01:30.470 --> 00:01:38.760
+Bom, a primeira coisa que eu vou fazer,
+
+20
+00:01:38.760 --> 00:01:43.310
+eu sempre começo com a situação mais
+simples que eu posso ter daquela classe.
+
+21
+00:01:43.310 --> 00:01:47.290
+No caso da Pilha,
+vai ser a pilha vazia, sem nada.
+
+22
+00:01:47.290 --> 00:01:50.852
+Então eu vou chamar o
+teste aqui de pilhaVazia.
+
+23
+00:01:50.852 --> 00:01:55.817
+Aí você vai falar assim: como você vai
+criar o teste se você nem tem a classe
+
+24
+00:01:55.817 --> 00:01:56.390
+ainda?
+
+25
+00:01:56.390 --> 00:01:57.805
+O que eu eu vou fazer?
+
+26
+00:01:57.805 --> 00:02:00.725
+Eu vou escrever como
+se a classe existisse,
+
+27
+00:02:00.725 --> 00:02:04.439
+como se eu estivesse utilizando ela.
+
+28
+00:02:04.439 --> 00:02:09.242
+Vamos lá, Pilha p é igual a new Pilha,
+aqui eu vou,
+
+29
+00:02:09.242 --> 00:02:15.264
+como eu vou desenvolver a pilha com array,
+eu quero que, por exemplo,
+
+30
+00:02:15.264 --> 00:02:20.420
+eu posso dizer qual que é a capacidade da
+minha pilha, no caso eu vou colocar 10
+
+31
+00:02:20.420 --> 00:02:26.595
+e assim que eu acabar de criar a pilha,
+ela tem que ser vazia.
+
+32
+00:02:26.595 --> 00:02:28.734
+Como que eu vou verificar que ela é vazia?
+
+33
+00:02:28.734 --> 00:02:30.955
+Bom, é isso que eu vou decidir agora, tá?
+
+34
+00:02:30.955 --> 00:02:37.387
+Eu acho que método Está Vazia é bastante
+razoável para ver se ela está vazia.
+
+35
+00:02:37.387 --> 00:02:43.543
+Então eu vou colocar
+assertTrue e vou colocar
+
+36
+00:02:43.543 --> 00:02:48.960
+p ponto Está estaVazia.
+
+37
+00:02:48.960 --> 00:02:53.705
+Bom, eu posso
+
+38
+00:02:53.705 --> 00:02:59.942
+também, de repente,
+tentar colocar alguma outra coisa.
+
+39
+00:02:59.942 --> 00:03:02.501
+Porque se a pilha está vazia, o tamanho,
+
+40
+00:03:02.501 --> 00:03:07.875
+a quantidade de elementos que ela tem é
+zero, então eu vou fazer isso aqui também.
+
+41
+00:03:07.875 --> 00:03:13.873
+Eu vou verificar assertEquals, se é zero,
+
+42
+00:03:13.873 --> 00:03:19.790
+p ponto é, eu vou chamar aqui de tamanho.
+
+43
+00:03:19.790 --> 00:03:24.060
+Bom, como a gente pode ver,
+o código, ele não vai compilar.
+
+44
+00:03:24.060 --> 00:03:24.716
+Por quê?
+
+45
+00:03:24.716 --> 00:03:27.571
+Porque não existe uma classe Pilha, tá?
+
+46
+00:03:27.571 --> 00:03:31.854
+Então, a primeira coisa que eu
+tenho que fazer antes de pensar
+
+47
+00:03:31.854 --> 00:03:36.078
+fazer o teste funcionar,
+é fazer o teste compilar.
+
+48
+00:03:36.078 --> 00:03:41.807
+Então eu vou usar o Eclipse aqui
+para isso, eu vou clicar aqui,
+
+49
+00:03:41.807 --> 00:03:46.345
+ele vai me dizer o que tem errado e ele
+vai me sugerir criar a classe pilha.
+
+50
+00:03:46.345 --> 00:03:49.845
+Eu vou aceitar o que ele
+está me oferecendo, certo,
+
+51
+00:03:49.845 --> 00:03:54.990
+e vou clicar aqui para que ele
+crie a classe pilha para mim.
+
+52
+00:03:54.990 --> 00:03:58.242
+Então ele criou aqui a minha classe pilha.
+
+53
+00:03:58.242 --> 00:04:03.486
+Se eu voltar no Teste, ele fala: Ok,
+você criou a classe pilha,
+
+54
+00:04:03.486 --> 00:04:08.105
+mas você nem tem construtor,
+nem tem método
+
+55
+00:04:08.105 --> 00:04:12.620
+estaVazia e nem o método Tamanho.
+
+56
+00:04:12.620 --> 00:04:14.064
+Então vamos lá.
+
+57
+00:04:14.064 --> 00:04:18.704
+Eu vou deixar essa questão do
+tamanho aqui para ver depois,
+
+58
+00:04:18.704 --> 00:04:22.740
+deixa o construtor vazio por enquanto,
+depois a gente lida com isso.
+
+59
+00:04:22.740 --> 00:04:27.824
+Então, a princípio,
+eu estou criando uma pilha e eu vou,
+
+60
+00:04:27.824 --> 00:04:32.968
+olha lá, ele está me oferecendo
+criar método, eu vou aceitar e ele
+
+61
+00:04:32.968 --> 00:04:38.158
+está me oferecendo também criar
+
+62
+00:04:38.158 --> 00:04:42.860
+o Tamanho e eu vou aceitar.
+
+63
+00:04:42.860 --> 00:04:47.770
+Então eu vou salvar,
+agora o meu Teste está compilando e
+
+64
+00:04:47.770 --> 00:04:52.500
+aí vem a parte que a gente vai
+rodar o Teste e vai ver ele falhar.
+
+65
+00:04:52.500 --> 00:04:56.574
+Então eu vou vir aqui,
+
+66
+00:04:56.574 --> 00:05:05.170
+Run As JUnit Test e vou executar
+e vou ver o teste falhar.
+
+67
+00:05:05.170 --> 00:05:07.754
+Então o que que eu tenho que fazer agora?
+
+68
+00:05:07.754 --> 00:05:12.541
+Eu tenho que fazer o mais simples que
+eu puder, para que o Teste passe.
+
+69
+00:05:12.541 --> 00:05:20.065
+Nesse caso, o mais simples quando
+eu tenho só uma resposta possível,
+
+70
+00:05:20.065 --> 00:05:25.670
+eu vou deixar as coisas
+aqui pouco hard coded.
+
+71
+00:05:25.670 --> 00:05:30.577
+Então eu vou colocar aqui,
+o estaVazia vai retornar True e
+
+72
+00:05:30.577 --> 00:05:35.240
+o tamanho, eu vejo aqui,
+que o meu tamanho,
+
+73
+00:05:35.240 --> 00:05:40.945
+ele tem que retornar inteiro e não objeto.
+
+74
+00:05:40.945 --> 00:05:44.410
+Então, a princípio, ele vai retornar 0.
+
+75
+00:05:44.410 --> 00:05:50.650
+Eu salvo e vou executar o teste aqui,
+verdinho.
+
+76
+00:05:50.650 --> 00:05:55.220
+Beleza, então quer dizer que
+o meu primeiro teste passou.
+
+77
+00:05:55.220 --> 00:06:00.015
+Eu vou agora para o próximo passo,
+
+78
+00:06:00.015 --> 00:06:03.520
+que é tentar empilhar
+alguma coisa na pilha.
+
+79
+00:06:03.520 --> 00:06:10.440
+Então eu vou pegar aqui
+esse comecinho aqui,
+
+80
+00:06:10.440 --> 00:06:15.429
+pegar o teste inteiro,
+
+81
+00:06:15.429 --> 00:06:20.820
+né, vou utilizar as mesmas,
+
+82
+00:06:20.820 --> 00:06:27.242
+os mesmos elementos, né,
+só que eu vou verificar coisas diferentes.
+
+83
+00:06:27.242 --> 00:06:32.630
+Então, eu vou chamar
+aqui de empilhaUmElemento
+
+84
+00:06:32.630 --> 00:06:37.564
+e aí eu vou vir aqui p ponto,
+
+85
+00:06:37.564 --> 00:06:42.524
+empilha, vou colocar
+
+86
+00:06:42.524 --> 00:06:47.980
+aqui, primeiro.
+
+87
+00:06:47.980 --> 00:06:48.513
+Certo?
+
+88
+00:06:48.513 --> 00:06:52.169
+Vamos fazer uma pilha que
+funcione com qualquer objeto.
+
+89
+00:06:52.169 --> 00:06:54.920
+Nos meus testes eu vou utilizar String..
+
+90
+00:06:54.920 --> 00:07:02.090
+Então, aqui, ao invés de ser assertTrue,
+tem que ser assertFalse.
+
+91
+00:07:02.090 --> 00:07:08.390
+E aqui, ao invés de ser 0 tem que ser 1,
+o tamanho da pilha.
+
+92
+00:07:08.390 --> 00:07:13.175
+E aqui, eu tenho que verificar que se eu
+
+93
+00:07:13.175 --> 00:07:18.130
+adicionei o meu,
+
+94
+00:07:18.130 --> 00:07:22.908
+o primeiro ali,
+quando eu perguntar qual que é o
+
+95
+00:07:22.908 --> 00:07:27.945
+topo da pilha,
+ele tem que me dizer que é o primeiro.
+
+96
+00:07:27.945 --> 00:07:31.613
+Então, p ponto topo.
+
+97
+00:07:31.613 --> 00:07:36.550
+Bom, da mesma forma que no teste anterior,
+
+98
+00:07:36.550 --> 00:07:42.312
+eu percebo aqui que não existe
+o método pilha, nem topo.
+
+99
+00:07:42.312 --> 00:07:46.695
+Então antes de rodar o teste,
+eu preciso fazer ele compilar.
+
+100
+00:07:46.695 --> 00:07:51.387
+Então simplesmente vou vir aqui, pedir
+ajuda do Eclipse para me ajudar a criar os
+
+101
+00:07:51.387 --> 00:07:58.444
+métodos, para poder rodar o teste,
+então venho aqui, crio crio o outro,
+
+102
+00:07:58.444 --> 00:08:03.235
+então tenho ali o método pilha e topo,
+
+103
+00:08:03.235 --> 00:08:07.951
+eu vou salvar e agora sim
+eu vou rodar o teste.
+
+104
+00:08:07.951 --> 00:08:12.165
+Ele vai me mostrar que,
+
+105
+00:08:12.165 --> 00:08:18.197
+vamos lá, está rodando, olha lá.
+
+106
+00:08:18.197 --> 00:08:23.090
+O primeiro teste da pilha vazia
+passou e o teste para empilhar
+
+107
+00:08:23.090 --> 00:08:25.530
+elemento ainda não passou.
+
+108
+00:08:25.530 --> 00:08:31.100
+Então vamos ver o que a gente pode fazer
+aqui, para fazer esse teste passar.
+
+109
+00:08:31.100 --> 00:08:35.798
+Bom, de alguma forma eu vou ter que
+
+110
+00:08:35.798 --> 00:08:40.061
+guardar esse elemento que
+eu estou recebendo aqui.
+
+111
+00:08:40.061 --> 00:08:42.167
+Vamos melhorar o nome dele aqui,
+
+112
+00:08:42.167 --> 00:08:45.692
+vamos colocar como Object,
+eu vou chamar de elemento.
+
+113
+00:08:45.692 --> 00:08:50.922
+Então está empilhando elemento e eu vou
+ter que guardar isso aqui de alguma forma,
+
+114
+00:08:50.922 --> 00:08:55.379
+então vamos criar aqui
+uma variável privada,
+
+115
+00:08:55.379 --> 00:08:59.498
+onde eu vou ter o elemento.
+
+116
+00:08:59.498 --> 00:09:06.119
+Então vou vir aqui e vou
+guardar esse elemento.
+
+117
+00:09:06.119 --> 00:09:09.430
+Então, this ponto elemento,
+
+118
+00:09:09.430 --> 00:09:16.000
+vai receber esse elemento aqui.
+
+119
+00:09:16.000 --> 00:09:21.851
+Bom, então eu tenho que
+resolver esses 2 aqui,
+
+120
+00:09:21.851 --> 00:09:28.360
+o topo eu acho que eu vou ter que
+retornar aqui o elemento mesmo.
+
+121
+00:09:28.360 --> 00:09:32.540
+Então eu resolvi aqui o
+empilhar e o elemento.
+
+122
+00:09:32.540 --> 00:09:35.777
+O EstarVazia, o que eu posso fazer?
+
+123
+00:09:35.777 --> 00:09:41.619
+Eu posso verificar se aquele
+elemento é nulo Então, se ele for
+
+124
+00:09:41.619 --> 00:09:47.372
+igual a null, então quer dizer
+que ela está vazia, e se não for
+
+125
+00:09:47.372 --> 00:09:52.820
+igual a null, quer dizer que ela,
+não, o contrário, né.
+
+126
+00:09:52.820 --> 00:09:53.728
+Deixe eu ver.
+
+127
+00:09:53.728 --> 00:09:57.891
+Se está vazia, o elemento é null,
+então isso aqui é verdadeiro.
+
+128
+00:09:57.891 --> 00:10:01.881
+Se não está vazia, o elemento não
+vai ser null e vai ser falso.
+
+129
+00:10:01.881 --> 00:10:02.432
+Exato.
+
+130
+00:10:02.432 --> 00:10:06.209
+Bom eu tenho esse número aqui
+e eu tenho que incrementar.
+
+131
+00:10:06.209 --> 00:10:11.527
+Então eu vou criar também uma
+variável que eu vou chamar
+
+132
+00:10:11.527 --> 00:10:16.178
+de quantidade, onde eu vou estar,
+
+133
+00:10:16.178 --> 00:10:21.613
+quando eu empilhar,
+eu vou estar removendo dessa quantidade.
+
+134
+00:10:21.613 --> 00:10:24.550
+Eu vou estar adicionando na quantidade.
+
+135
+00:10:24.550 --> 00:10:28.452
+Então vou fazer aqui quantidade mais,
+
+136
+00:10:28.452 --> 00:10:33.655
+mais e quando ele pedir aqui o tamanho,
+eu vou retornar minha quantidade.
+
+137
+00:10:33.655 --> 00:10:41.660
+Note que eu não estou preocupado com os
+próximos Testes ou os próximos requisitos.
+
+138
+00:10:41.660 --> 00:10:46.508
+Talvez quem não está acostumado com
+TDD já sairia botando uma lista,
+
+139
+00:10:46.508 --> 00:10:48.498
+array aqui e, para esse teste,
+
+140
+00:10:48.498 --> 00:10:53.310
+realmente não é a solução mais simples
+que eu posso utilizar aqui no momento.
+
+141
+00:10:53.310 --> 00:10:56.406
+Então eu vou salvar,
+vamos lá para o teste,
+
+142
+00:10:56.406 --> 00:11:01.571
+vamos executar ele e ver se ele executa,
+se ele passa aqui tudo.
+
+143
+00:11:01.571 --> 00:11:04.235
+Olha lá, ficou verdinho.
+
+144
+00:11:04.235 --> 00:11:09.210
+Então já tenho os meus 2 primeiros
+testes da pilha funcionando.
+
+145
+00:11:09.210 --> 00:11:12.575
+Ok.
+Então vamos terminar aqui essa sessão e na
+
+146
+00:11:12.575 --> 00:11:19.396
+próxima aula a gente continua o
+desenvolvimento da pilha com o TDD.
+
+147
+00:11:19.396 --> 00:11:23.410
+[MÚSICA]

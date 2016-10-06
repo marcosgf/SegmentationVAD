@@ -1,0 +1,316 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.520
+Olá!
+Neste vídeo você verá que há maneiras
+
+2
+00:00:02.520 --> 00:00:06.821
+diferentes de se representar
+a resposta frequência de sistema.
+
+3
+00:00:06.821 --> 00:00:11.013
+Particular, maneiras gráficas
+são bastante úteis para essa
+
+4
+00:00:11.013 --> 00:00:15.860
+representação e você conhecerá a mais
+importante delas: o Diagrama de Bode.
+
+5
+00:00:15.860 --> 00:00:19.663
+Ao medirmos no laboratório as
+características de resposta
+
+6
+00:00:19.663 --> 00:00:23.330
+frequência do carrinho com
+função de transferência G de s,
+
+7
+00:00:23.330 --> 00:00:28.735
+as grandezas medidas são amplitudes e
+fases das senóides de entrada e saída.
+
+8
+00:00:28.735 --> 00:00:32.440
+Particular, a senóide
+de entrada tem fase 0.
+
+9
+00:00:32.440 --> 00:00:37.580
+A seguir colocamos uma tabela os dados
+medidos correspondentes a cada frequência,
+
+10
+00:00:37.580 --> 00:00:39.533
+O que fazer com esses dados?
+
+11
+00:00:39.533 --> 00:00:42.310
+Como eles se relacionam com G de j ômega?
+
+12
+00:00:42.310 --> 00:00:46.568
+Com os dados de que dispomos é simples
+calcular o módulo e a fase de G de j
+
+13
+00:00:46.568 --> 00:00:47.090
+ômega.
+
+14
+00:00:47.090 --> 00:00:51.160
+Para calcular o módulo basta dividir
+a amplitude do sinal de saída
+
+15
+00:00:51.160 --> 00:00:55.230
+pela amplitude do sinal de entrada
+após normalizar as unidades.
+
+16
+00:00:55.230 --> 00:00:56.627
+Já para calcular a fase,
+
+17
+00:00:56.627 --> 00:01:00.970
+basta verificar que a senóide de saída
+está atrasada relação à de entrada.
+
+18
+00:01:00.970 --> 00:01:05.128
+Para calcular essa fase radianos,
+precisamos apenas fazer uma simples
+
+19
+00:01:05.128 --> 00:01:09.544
+regra de 3: delta t sobre T maiúsculo,
+que é o período,
+
+20
+00:01:09.544 --> 00:01:15.520
+é igual a fase de G de j ômega sobre 2 pi,
+onde o período é 2 pi sobre ômega.
+
+21
+00:01:15.520 --> 00:01:20.630
+Preenchendo a tabela com esses
+dados na 4ª e 5ª colunas,
+
+22
+00:01:20.630 --> 00:01:24.090
+temos o módulo de G de j
+ômega e a fase radianos.
+
+23
+00:01:24.090 --> 00:01:29.160
+Então usar o módulo e a fase de G de j
+ômega parece ser uma ideia interessante,
+
+24
+00:01:29.160 --> 00:01:33.710
+pois conseguimos extrair essas informações
+facilmente das medidas de laboratório.
+
+25
+00:01:33.710 --> 00:01:38.030
+Para o nosso exemplo selecionamos
+apenas 3 frequências.
+
+26
+00:01:38.030 --> 00:01:41.445
+Porém note que elas são bem
+espaçadas: a cada linha da tabela,
+
+27
+00:01:41.445 --> 00:01:43.450
+multiplicamos a frequência por 2.
+
+28
+00:01:43.450 --> 00:01:46.321
+O que teria acontecido, por exemplo,
+
+29
+00:01:46.321 --> 00:01:51.264
+se decidíssemos calcular G de j ômega
+para ômega variando de 1 radiano
+
+30
+00:01:51.264 --> 00:01:54.670
+por segundo até 20 radianos
+por segundo a cada unidade?
+
+31
+00:01:54.670 --> 00:01:56.243
+A tabela ficaria enorme.
+
+32
+00:01:56.243 --> 00:01:59.680
+Nesses casos parece ser
+interessante fazer gráfico.
+
+33
+00:01:59.680 --> 00:02:03.630
+Assim podemos representar
+diversos valores de amplitude e
+
+34
+00:02:03.630 --> 00:02:07.395
+fase para diferentes frequências, sem
+necessidade de uma tabela muito grande.
+
+35
+00:02:07.395 --> 00:02:09.250
+Vamos tentar fazer isso para o carrinho.
+
+36
+00:02:09.250 --> 00:02:15.417
+Para muitos sistemas o
+intervalo de frequências para
+
+37
+00:02:15.417 --> 00:02:19.060
+o qual necessita se levantar a resposta
+frequência pode ser muito grande, sendo
+
+38
+00:02:19.060 --> 00:02:22.840
+que a 1ª frequência e a última podem ser
+diferentes por muitas ordens de grandeza.
+
+39
+00:02:22.840 --> 00:02:27.361
+Nesse caso seria interessante poder
+representar os gráficos de maneira mais
+
+40
+00:02:27.361 --> 00:02:28.060
+compacta.
+
+41
+00:02:28.060 --> 00:02:31.191
+Isso pode ser feito usando
+uma escala logarítmica.
+
+42
+00:02:31.191 --> 00:02:35.586
+Ao escolher a base 10 cada multiplicação
+da frequência por 10 só aumenta o
+
+43
+00:02:35.586 --> 00:02:39.970
+logaritmo 1 unidade, comprimindo o
+eixo das abcissas, permitindo assim
+
+44
+00:02:39.970 --> 00:02:44.640
+representar frequências baixas e altas no
+mesmo gráfico sem ficar super povoado.
+
+45
+00:02:44.640 --> 00:02:48.590
+Façamos isso com os nossos gráficos.
+
+46
+00:02:48.590 --> 00:02:52.630
+Nesse caso parece que fomos bem
+sucedidos representar a tabela enorme
+
+47
+00:02:52.630 --> 00:02:53.977
+2 simpáticas figuras.
+
+48
+00:02:53.977 --> 00:02:55.910
+Mas ainda tem algo a ser melhorado.
+
+49
+00:02:55.910 --> 00:02:57.991
+O valor do módulo varia bastante.
+
+50
+00:02:57.991 --> 00:03:01.810
+Parece que a tendência é diminuir
+com o aumento da frequência.
+
+51
+00:03:01.810 --> 00:03:04.444
+Se formos fazer o gráfico
+para frequências mais altas,
+
+52
+00:03:04.444 --> 00:03:06.920
+também teremos problemas
+com o eixo das ordenadas.
+
+53
+00:03:06.920 --> 00:03:11.880
+Para contornar esses problemas vamos tomar
+o logaritmo na base 10 do valor do ganho.
+
+54
+00:03:11.880 --> 00:03:16.150
+Contudo, vamos colocar fator de escala
+de 20 multiplicando o resultado.
+
+55
+00:03:16.150 --> 00:03:20.875
+O resultado será chamado de ganho
+decibéis representado pelo símbolo:
+
+56
+00:03:20.875 --> 00:03:24.859
+módulo de G de j ômega com
+o índice dB de decibéis.
+
+57
+00:03:24.859 --> 00:03:29.857
+O ganho decibéis é dado
+então pela fórmula 20 log do
+
+58
+00:03:29.857 --> 00:03:34.715
+módulo de G de j ômega, lembrando que
+esse logaritmo é tirado na base 10.
+
+59
+00:03:34.715 --> 00:03:38.663
+Por outro lado, também podemos
+representar o gráfico da fase
+
+60
+00:03:38.663 --> 00:03:42.750
+graus e o conjunto desses 2
+gráficos de amplitude e fase
+
+61
+00:03:42.750 --> 00:03:46.920
+versus o logaritmo da frequência
+é o chamado Diagrama de Bode.
+
+62
+00:03:46.920 --> 00:03:50.980
+Neste vídeo você viu como construir
+o diagrama a partir da resposta
+
+63
+00:03:50.980 --> 00:03:52.450
+frequência do sistema.
+
+64
+00:03:52.450 --> 00:03:56.937
+No próximo vídeo vamos visualizar a
+relação entre a função de transferência e
+
+65
+00:03:56.937 --> 00:04:00.869
+o Diagrama de Bode e aprender a desenhar
+o diagrama a partir do conhecimento da
+
+66
+00:04:00.869 --> 00:04:02.210
+função de transferência.

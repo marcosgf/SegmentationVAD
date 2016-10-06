@@ -1,0 +1,245 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.859
+Após esse vídeo,
+você será capaz de explicar o que é
+
+2
+00:00:02.859 --> 00:00:05.480
+controlador PI e de
+projetar controlador PI.
+
+3
+00:00:05.480 --> 00:00:09.347
+Do mesmo modo que controlador PD pode
+ser considerado caso especial de
+
+4
+00:00:09.347 --> 00:00:11.077
+controlador de avanço de fase,
+
+5
+00:00:11.077 --> 00:00:15.410
+controlador PI pode ser considerado caso
+especial do controlador de atraso de fase.
+
+6
+00:00:15.410 --> 00:00:20.390
+Dado controlador de avanço de fase com a
+fórmula C de s igual a k s mais a sobre s
+
+7
+00:00:20.390 --> 00:00:25.991
+mais b, podemos escrever ele na forma
+k D vezes s mais a, vezes b, s mais b.
+
+8
+00:00:25.991 --> 00:00:30.803
+Se fizermos b muito grande,
+podemos aproximar s mais b por b e
+
+9
+00:00:30.803 --> 00:00:35.400
+temos C de s igual a k D s mais k p,
+que é controlador PD.
+
+10
+00:00:35.400 --> 00:00:41.050
+Dado controlador de atraso de fase com a
+forma C de s igual a k s mais a s mais b,
+
+11
+00:00:41.050 --> 00:00:45.356
+se fizermos b muito pequeno,
+podemos aproximar s mais b por s,
+
+12
+00:00:45.356 --> 00:00:50.980
+e temos: C de s igual a k p mais k
+i sobre s, que é controlador PI.
+
+13
+00:00:50.980 --> 00:00:54.959
+Note que se a entrada do
+controlador PI for E de s,
+
+14
+00:00:54.959 --> 00:00:59.708
+sua saída U de s será k p vezes E de s,
+mais k i sobre s, vezes E de s.
+
+15
+00:00:59.708 --> 00:01:04.580
+E fazendo a transformada inversa,
+obteremos U de t igual a k p vezes o erro,
+
+16
+00:01:04.580 --> 00:01:06.796
+mais k i vezes a integral do E.
+
+17
+00:01:06.796 --> 00:01:11.764
+Então, o controlador PI nada mais
+é do que controlador de atraso
+
+18
+00:01:11.764 --> 00:01:16.285
+de fase com o polo na origem C de
+s é igual a k s mais a sobre s.
+
+19
+00:01:16.285 --> 00:01:18.699
+E qual a vantagem do controlador PI?
+
+20
+00:01:18.699 --> 00:01:23.200
+A grande vantagem do controlador PI é
+aumentar o tipo numérico do sistema.
+
+21
+00:01:23.200 --> 00:01:27.268
+Com o controlador PI, sistema do
+tipo zero passa a ser do tipo 1,
+
+22
+00:01:27.268 --> 00:01:30.680
+sistema do tipo 1 passa a ser
+do tipo 2 e assim por diante.
+
+23
+00:01:30.680 --> 00:01:35.649
+Então, se você quer regime nulo para
+uma entrada degrau, e tem sistema do
+
+24
+00:01:35.649 --> 00:01:40.026
+tipo zero, a única solução possível
+é a utilização de controlador PI.
+
+25
+00:01:40.026 --> 00:01:44.086
+O mesmo acontece se você tem sistema
+do tipo 1 e quer erro nulo para uma
+
+26
+00:01:44.086 --> 00:01:45.180
+entrada rampa.
+
+27
+00:01:45.180 --> 00:01:46.212
+Note, no entanto,
+
+28
+00:01:46.212 --> 00:01:50.425
+que o efeito do controlador PI na posição
+dos polos de sistema, é maior que o efeito
+
+29
+00:01:50.425 --> 00:01:53.700
+de controlador de atraso de fase
+com o zero na mesma posição.
+
+30
+00:01:53.700 --> 00:01:57.590
+Por falar nisso,
+o polo do controlador PI já está definido.
+
+31
+00:01:57.590 --> 00:01:58.352
+É a origem.
+
+32
+00:01:58.352 --> 00:02:00.120
+E o zero do controlador PI?
+
+33
+00:02:00.120 --> 00:02:05.024
+Existem duas opções: você pode usar o zero
+do PI para tentar ajustar a constante de
+
+34
+00:02:05.024 --> 00:02:07.697
+erro do sistema ou pode posicionar o zero
+
+35
+00:02:07.697 --> 00:02:11.800
+décimo da parte real dos polos
+complexos do sistema malha fechada.
+
+36
+00:02:11.800 --> 00:02:16.546
+O erro regime do controlador PI irá tender
+para o seu valor final, mais lentamente do
+
+37
+00:02:16.546 --> 00:02:20.558
+que para controlador de atraso de
+fase com o zero na mesma posição.
+
+38
+00:02:20.558 --> 00:02:25.344
+Isso ocorre porque o polo malha fechada
+chamado pelo PI acaba ficando mais
+
+39
+00:02:25.344 --> 00:02:28.948
+lento que o polo adicionado pelo
+controlador de atraso de fase.
+
+40
+00:02:28.948 --> 00:02:32.100
+Por isso, meu conselho é: só
+use controlador PI se for
+
+41
+00:02:32.100 --> 00:02:34.138
+estritamente necessário, ou seja,
+
+42
+00:02:34.138 --> 00:02:37.795
+se você realmente tiver que zerar
+erro regime permanente de sistema.
+
+43
+00:02:37.795 --> 00:02:41.900
+Caso contrário,
+opte por controlador de atraso de fase.
+
+44
+00:02:41.900 --> 00:02:45.910
+Você pode transformar os controladores
+de atraso de fase que já vimos,
+
+45
+00:02:45.910 --> 00:02:49.920
+controladores PI movendo os polos
+desses controladores para a origem.
+
+46
+00:02:49.920 --> 00:02:54.172
+Experimente refazer as simulações
+alterando dos controladores de atraso de
+
+47
+00:02:54.172 --> 00:02:57.480
+fase, para controlador PI
+mantendo o zero no mesmo lugar.
+
+48
+00:02:57.480 --> 00:03:02.140
+Agora, você já é capaz de explicar o
+que é controlador PI e de projetar
+
+49
+00:03:02.140 --> 00:03:03.280
+controlador PI.
+
+50
+00:03:03.280 --> 00:03:08.216
+No próximo vídeo, você verá exemplo de
+projeto de controlador de atraso de fase
+
+51
+00:03:08.216 --> 00:03:10.870
+para sistema de segunda ordem do Tipo 1.

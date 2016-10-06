@@ -1,0 +1,515 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.710
+[MÚSICA]
+
+2
+00:00:05.710 --> 00:00:12.370
+Olá!
+
+3
+00:00:12.370 --> 00:00:17.237
+Nesta vídeo-aula nós vamos continuar
+a usar o software Stata 13 para
+
+4
+00:00:17.237 --> 00:00:19.030
+fazer Cluster análises.
+
+5
+00:00:19.030 --> 00:00:21.723
+Nosso primeiro exercício foi bem simples,
+
+6
+00:00:21.723 --> 00:00:27.017
+foi daquela base de gastos diários e esse
+segundo vai ser pouco mais sofisticado,
+
+7
+00:00:27.017 --> 00:00:30.400
+que nós vamos usar bases
+de dados de cremes dentais.
+
+8
+00:00:30.400 --> 00:00:34.891
+Primeira coisa então, abrimos o
+nosso software e carregamos a base
+
+9
+00:00:34.891 --> 00:00:39.720
+de dados através do comando
+"Import" e "Excel",
+
+10
+00:00:39.720 --> 00:00:43.989
+fazemos "Browse" e aí vamos
+
+11
+00:00:43.989 --> 00:00:48.980
+diretamente na base de dados
+"Cremes Dentais" e abrimos.
+
+12
+00:00:48.980 --> 00:00:53.666
+Clicamos aqui para que a primeira linha
+
+13
+00:00:53.666 --> 00:00:58.350
+acabe ficando no lugar certo e damos "OK".
+
+14
+00:00:58.350 --> 00:01:04.063
+Só pra ver o que está carregado é fácil,
+da comando "sum" e aí você tem aqui os
+
+15
+00:01:04.063 --> 00:01:09.783
+respondentes, as variáveis são de V1 a V6,
+estão medidas em escala linkage de 1 a 7.
+
+16
+00:01:09.783 --> 00:01:14.880
+Esse comando "sum" como todos os
+comandos do Stata podem ser sempre dados
+
+17
+00:01:14.880 --> 00:01:20.164
+da seguinte maneira: Você pode clicar o
+comando e dar "OK" e ele faz, ou você
+
+18
+00:01:20.164 --> 00:01:25.132
+pode sempre usar o comando que a gente
+chama de "point and click" e aqui você vem
+
+19
+00:01:25.132 --> 00:01:30.722
+em "Summary" e "Summary statistics" e
+ele também acaba fazendo o "summarize",
+
+20
+00:01:30.722 --> 00:01:35.809
+você dá "OK", deixando em branco as
+variáveis e faz para todas as variáveis.
+
+21
+00:01:35.809 --> 00:01:40.600
+Lembre-se sempre que então em Stata você
+pode tanto escrever o comando aqui como
+
+22
+00:01:40.600 --> 00:01:42.557
+fazer o "point and click".
+
+23
+00:01:42.557 --> 00:01:46.942
+Eu deveria agora entrar em
+"Estatísticas" e entrar em "Análise
+
+24
+00:01:46.942 --> 00:01:52.120
+multivariada de dados" "Cluster analysis",
+"Cluster data" e solicitar o método.
+
+25
+00:01:52.120 --> 00:01:57.570
+Vocês estão vendo parcialmente que o nosso
+bloco sai pouco do nosso campo visual,
+
+26
+00:01:57.570 --> 00:02:02.213
+então eu vou usar aqui a técnica
+de colocar o comando digitado.
+
+27
+00:02:02.213 --> 00:02:05.318
+Eu peço que você olhe
+esse comando com atenção.
+
+28
+00:02:05.318 --> 00:02:07.700
+Nós estamos digitando "Cluster",
+
+29
+00:02:07.700 --> 00:02:12.580
+"espaço" "wardslinkage" que é o método que
+nós vamos usar, o método de encadeamento
+
+30
+00:02:12.580 --> 00:02:16.710
+chamado método de Ward,
+conforme nós vimos na nossa vídeo-aula.
+
+31
+00:02:16.710 --> 00:02:21.311
+"V*", nós queremos que estas
+variáveis que começam com 'V',
+
+32
+00:02:21.311 --> 00:02:26.158
+ou seja, de V1 a V6, entrem na minha
+análise de medidas Euclidianas,
+
+33
+00:02:26.158 --> 00:02:30.300
+e eu vou usar como medida
+a "medida Euclidiana ao quadrado".
+
+34
+00:02:30.300 --> 00:02:37.157
+Dá enter, e, de novo, a gente sabe que
+foi feito uma análise de Cluster que
+
+35
+00:02:37.157 --> 00:02:42.441
+não aparece aqui na minha tela principal
+mas está assim no meu banco de dados.
+
+36
+00:02:42.441 --> 00:02:46.140
+Quando eu vou lá eu percebo
+que foram criadas 3 colunas,
+
+37
+00:02:46.140 --> 00:02:50.781
+1 de identificação das 30 observações,
+
+38
+00:02:50.781 --> 00:02:56.238
+a outra que ordena as observações
+de acordo com a distância,
+
+39
+00:02:56.238 --> 00:03:02.066
+isso aqui é chamado de "hgt",
+que seria como se fosse altura em inglês,
+
+40
+00:03:02.066 --> 00:03:06.979
+e aí você tem já a base pronta para
+pedir para o Stata fazer o gráfico que
+
+41
+00:03:06.979 --> 00:03:11.800
+me permite decidir o número de grupos,
+que é o gráfico chamado dendograma.
+
+42
+00:03:11.800 --> 00:03:16.926
+O dendograma, ele aparece em Postcluster
+e eu vou preferir colocar então o cursor
+
+43
+00:03:16.926 --> 00:03:22.120
+pouco mais para baixo, para que você
+veja pelo método de point and click.
+
+44
+00:03:22.120 --> 00:03:28.550
+Eu venho aqui, já fiz o meu Cluster
+e agora clico aqui em "Dendograma".
+
+45
+00:03:28.550 --> 00:03:33.698
+Enquanto ele faz, eu volto com meu
+cursor para que você tenha o campo
+
+46
+00:03:33.698 --> 00:03:38.961
+visual correto e aí ele pergunta
+"você quer o dendograma do "_clus_1",
+
+47
+00:03:38.961 --> 00:03:42.210
+eu só tenho até ao momento esse,
+eu vou dizer que sim,
+
+48
+00:03:42.210 --> 00:03:47.886
+eu posso até colocar aqui os respondentes,
+aqui como
+
+49
+00:03:47.886 --> 00:03:52.485
+o meu "Variable containing leaf labels",
+que o meu "label", e peço dendograma.
+
+50
+00:03:52.485 --> 00:03:58.160
+Dessa vez vou pedir dendograma horizontal
+para que você perceba a diferença.
+
+51
+00:03:58.160 --> 00:03:59.112
+Pronto.
+
+52
+00:03:59.112 --> 00:04:04.230
+Aí está o dendograma,
+desta vez ele é horizontal,
+
+53
+00:04:04.230 --> 00:04:07.380
+aqui a gente não consegue
+ler as observações,
+
+54
+00:04:07.380 --> 00:04:13.110
+mas claramente a gente percebe que
+existem agrupamentos desses respondentes,
+
+55
+00:04:13.110 --> 00:04:18.300
+e o dendograma serve exatamente para
+você definir o número de grupos.
+
+56
+00:04:18.300 --> 00:04:20.930
+Como?
+Através da distância visual.
+
+57
+00:04:20.930 --> 00:04:26.009
+Você ta vendo que, se eu fizer corte aqui,
+eu teria claramente dois
+
+58
+00:04:26.009 --> 00:04:31.565
+grupos bem diferentes, esse grupo
+que está aqui é bem diferente deste,
+
+59
+00:04:31.565 --> 00:04:38.030
+porém se eu fizer corte aqui, eu tenho 3
+grupos também suficientemente distantes.
+
+60
+00:04:38.030 --> 00:04:41.919
+A distância aqui pode ser
+até pouco menor mas 3 grupos
+
+61
+00:04:41.919 --> 00:04:46.370
+talvez fosse a melhor decisão
+do ponto de vista de marketing.
+
+62
+00:04:46.370 --> 00:04:48.884
+De novo, a decisão é do analista.
+
+63
+00:04:48.884 --> 00:04:54.852
+Ele pode escolher aleatóriamente ou até
+mesmo se ele tiver uma teoria ou modelo,
+
+64
+00:04:54.852 --> 00:04:59.769
+ou tiver já uma ideia de quantos
+planos ele quer preparar em termos
+
+65
+00:04:59.769 --> 00:05:01.150
+de segmentação.
+
+66
+00:05:01.150 --> 00:05:05.896
+Vamos escolher então 3 grupos, como se
+a gente tivesse fazendo o corte aqui, e,
+
+67
+00:05:05.896 --> 00:05:11.887
+esses 3 grupos, eu tenho que contar pro
+Stata que eu quero 3 grupos e para isso eu
+
+68
+00:05:11.887 --> 00:05:19.033
+tenho que fazer de novo uma mudança no meu
+cursor para que você acompanhe o comando.
+
+69
+00:05:19.033 --> 00:05:24.843
+Eu venho aqui de novo em estatísticas,
+vou em "análise multivariada",
+
+70
+00:05:24.843 --> 00:05:28.741
+vou em "Cluster", eu estou em
+"Postcluster" e eu peço para ele fazer
+
+71
+00:05:28.741 --> 00:05:33.818
+"summary das variables" e agora
+voltando com o cursor para cá,
+
+72
+00:05:33.818 --> 00:05:39.518
+eu posso dizer que eu quero que ele
+faça "Cluster" que eu vou chamar de 3.
+
+73
+00:05:39.518 --> 00:05:40.240
+Porquê?
+
+74
+00:05:40.240 --> 00:05:44.555
+Porque são 3 grupos e assim eu
+lembro que eu coloquei o número 3,
+
+75
+00:05:44.555 --> 00:05:50.140
+é da minha clusterização, "_cluster_1" eu
+só tenho essa até o momento e dou "OK".
+
+76
+00:05:50.140 --> 00:05:56.015
+De novo, a gente está vendo
+aqui no nosso banco de dados,
+
+77
+00:05:56.015 --> 00:06:02.820
+o que o Stata fez foi designar cada
+daqueles 30 respondentes a grupo de 1 a 3.
+
+78
+00:06:02.820 --> 00:06:10.241
+Se eu quiser agora, eu posso pedir
+uma tabela que me resuma esses dados.
+
+79
+00:06:10.241 --> 00:06:14.703
+Eu vou entrar aqui em "Summaries",
+"Other tables" e vou
+
+80
+00:06:14.703 --> 00:06:19.459
+clicar aqui em "Compact tables
+of summary statistics".
+
+81
+00:06:19.459 --> 00:06:24.960
+No campo "Variáveis" eu tenho
+3 alternativas como sempre.
+
+82
+00:06:24.960 --> 00:06:32.311
+Eu posso clicar aqui nessa flechinha e
+ele manda imediatamente para lá, como
+
+83
+00:06:32.311 --> 00:06:37.579
+posso também clicar aqui e mandar para lá,
+e, como a gente já aprendeu, quando
+
+84
+00:06:37.579 --> 00:06:42.977
+todas as variáveis começam com a mesma
+letra eu posso simplesmente colocar "V*".
+
+85
+00:06:42.977 --> 00:06:47.801
+Eu quero que agora ele faça o grupamento
+de acordo com a minha coluna,
+
+86
+00:06:47.801 --> 00:06:50.970
+ou a minha variável, "cluster_3".
+
+87
+00:06:50.970 --> 00:06:55.650
+Eu vou pedir para ele calcular
+a média e vou pedir para ele calcular
+
+88
+00:06:55.650 --> 00:07:00.213
+também a contagem, que eu quero saber
+quantas pessoas estão em cada grupo.
+
+89
+00:07:00.213 --> 00:07:06.550
+Quando eu dou "OK" ele prepara uma tabela
+
+90
+00:07:06.550 --> 00:07:11.944
+resumindo para as variáveis de V1 a V6,
+qual é a média,
+
+91
+00:07:11.944 --> 00:07:16.877
+ou também chamado centroide nesse caso,
+dos meus 3 grupos.
+
+92
+00:07:16.877 --> 00:07:22.740
+Eu sei então de antemão que o grupo
+1 valoriza muito a variável V1,
+
+93
+00:07:22.740 --> 00:07:25.782
+que vocês devem se lembrar
+do nosso exercício.
+
+94
+00:07:25.782 --> 00:07:30.740
+É a prevenção de cáries, assim como
+valoriza muito a variável V3 e a variável
+
+95
+00:07:30.740 --> 00:07:35.805
+V5, e a gente depois pode dar
+nomes a esses grupos e descobrir
+
+96
+00:07:35.805 --> 00:07:40.870
+que esse grupo 1 é grupo que tem
+grande preocupação com a saúde bucal,
+
+97
+00:07:40.870 --> 00:07:45.374
+como a gente já viu anteriormente,
+o grupo 3 é grupo que tem preocupação com
+
+98
+00:07:45.374 --> 00:07:48.870
+a estética, que são as variáveis
+que deram notas elevadas,
+
+99
+00:07:48.870 --> 00:07:54.250
+e o grupo do meio é grupo que tem
+baixa preocupação com a saúde oral.
+
+100
+00:07:54.250 --> 00:07:59.149
+Posso lançar uma pasta de dentes voltada
+então para a prevenção de cáries e
+
+101
+00:07:59.149 --> 00:08:04.054
+também prevenção de problemas bucais,
+posso lançar uma segunda marca,
+
+102
+00:08:04.054 --> 00:08:07.620
+uma segunda pasta,
+focada no segmento de estética.
+
+103
+00:08:07.620 --> 00:08:12.890
+Isso tudo a partir de uma análise
+de Cluster feita com o método
+
+104
+00:08:12.890 --> 00:08:18.160
+preciso e matemático de cálculo
+das distâncias euclidianas.
+
+105
+00:08:18.160 --> 00:08:23.194
+Com isso nós terminamos a nossa aplicação
+prática e você está em condições
+
+106
+00:08:23.194 --> 00:08:31.330
+de começar a fazer seus
+primeiros exercícios sozinho.

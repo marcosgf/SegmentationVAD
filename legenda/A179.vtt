@@ -1,0 +1,215 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.390
+[MÚSICA]
+
+2
+00:00:04.390 --> 00:00:10.690
+[SEM_ÁUDIO] E aí, pessoal, tudo bem?
+
+3
+00:00:10.690 --> 00:00:11.264
+Nessa aula,
+
+4
+00:00:11.264 --> 00:00:14.360
+veremos como lidar com colisões
+avançadas entre objetos com física.
+
+5
+00:00:14.360 --> 00:00:19.237
+Vamos fazer que, quando a bola colidir com
+outro objeto que tiver o nome "Block",
+
+6
+00:00:19.237 --> 00:00:21.310
+esse objeto seja removido da cena.
+
+7
+00:00:21.310 --> 00:00:25.524
+Primeiro, faça com que
+a classe GameScene seja uma
+
+8
+00:00:25.524 --> 00:00:29.150
+subclasse de SKPhysicsContactDelegate.
+
+9
+00:00:29.150 --> 00:00:32.846
+Você já deve ter visto o conceito
+de delegate no segundo curso desse
+
+10
+00:00:32.846 --> 00:00:34.700
+programa de cursos integrados.
+
+11
+00:00:34.700 --> 00:00:36.291
+Se não está familiarizado,
+
+12
+00:00:36.291 --> 00:00:39.480
+deixaremos o link do segundo
+curso no material de apoio.
+
+13
+00:00:39.480 --> 00:00:44.430
+Na função didMoveToView(),
+configure o delegate
+
+14
+00:00:44.430 --> 00:00:48.932
+que cuida das colisões com física
+como sendo essa própria classe,
+
+15
+00:00:48.932 --> 00:00:53.875
+através da linha
+physicsWorld.contactDelegate = self.
+
+16
+00:00:53.875 --> 00:00:57.166
+Implemente a função didBeginContact(),
+
+17
+00:00:57.166 --> 00:01:01.240
+que tem como parâmetro "contact",
+que é SKPhysicsContact.
+
+18
+00:01:01.240 --> 00:01:05.801
+Essa função é chamada quando dois
+corpos com física colidem e o parâmetro
+
+19
+00:01:05.801 --> 00:01:09.100
+"contact" contém as
+informações dessa colisão.
+
+20
+00:01:09.100 --> 00:01:14.821
+Crie duas constantes:
+node1 recebe bodyA.node!
+
+21
+00:01:14.821 --> 00:01:22.360
+e node2 recebe bodyB.node!, que são as
+referências dos dois nós que se colidiram.
+
+22
+00:01:22.360 --> 00:01:26.709
+Verifique se dos corpos tem o
+nome "Ball" e o outro tem o nome
+
+23
+00:01:26.709 --> 00:01:28.690
+"Block" ou vice-versa.
+
+24
+00:01:28.690 --> 00:01:32.780
+Se for verdadeiro, removemos da
+cena o nó que tem o nome "Block",
+
+25
+00:01:32.780 --> 00:01:37.340
+chamando a referência desse
+nó .removeFromParent().
+
+26
+00:01:37.340 --> 00:01:42.620
+Abra o editor da cena e
+adicione novo ColorSprite.
+
+27
+00:01:42.620 --> 00:01:47.550
+Renomeie para "Block" e mude para
+a textura "alienGreen_square".
+
+28
+00:01:47.550 --> 00:01:56.640
+[SEM_ÁUDIO] Selecione "Bounding
+rectangle" para "Body Type".
+
+29
+00:01:56.640 --> 00:02:03.553
+Para que a função
+didBeginContact() seja chamada,
+
+30
+00:02:03.553 --> 00:02:06.410
+é preciso ter objetos com
+a mesma máscara de contato.
+
+31
+00:02:06.410 --> 00:02:10.520
+Mude "Contact Mask" para 1
+e faça o mesmo para a bola.
+
+32
+00:02:10.520 --> 00:02:16.995
+[SEM_ÁUDIO] Duplique
+
+33
+00:02:16.995 --> 00:02:21.620
+o bloco várias vezes e
+posicione como desejar.
+
+34
+00:02:21.620 --> 00:02:26.737
+[SEM_ÁUDIO] As outras máscaras,
+
+35
+00:02:26.737 --> 00:02:31.891
+"Category Mask", "Collision Mask" e "Field
+Mask", servem para ajuste mais profundo
+
+36
+00:02:31.891 --> 00:02:36.920
+de qual objeto colide com outro e quais
+campos de física influenciam esses corpos.
+
+37
+00:02:36.920 --> 00:02:40.022
+Se quiser se aprofundar
+pouco mais nesses assuntos,
+
+38
+00:02:40.022 --> 00:02:42.400
+veja link que está no material de apoio.
+
+39
+00:02:42.400 --> 00:02:45.481
+Rode no simulador para
+testar essa colisão que
+
+40
+00:02:45.481 --> 00:02:48.170
+implementamos entre a bola e os blocos.
+
+41
+00:02:48.170 --> 00:02:56.170
+[SEM_ÁUDIO]
+
+42
+00:02:56.170 --> 00:03:02.264
+[SEM_ÁUDIO] Usando essa função,
+
+43
+00:03:02.264 --> 00:03:05.810
+você pode destruir objeto
+quando tiro colide com ele,
+
+44
+00:03:05.810 --> 00:03:11.550
+pode adicionar uma força ou mudar a
+velocidade de corpos quando colidem e etc.
+
+45
+00:03:11.550 --> 00:03:18.317
+Na próxima aula, veremos como adicionar
+uma câmera que segue o jogador.
+
+46
+00:03:18.317 --> 00:03:19.090
+Até lá!

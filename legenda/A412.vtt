@@ -1,0 +1,991 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.265
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.265 --> 00:00:10.455
+bem vindo ao curso sobre TDD!
+
+3
+00:00:10.455 --> 00:00:12.480
+Eu sou o Clovis Fernandes.
+
+4
+00:00:12.480 --> 00:00:20.004
+Hoje, iremos dar prosseguimento à forma
+de projeto mais adequado, usando o TDD.
+
+5
+00:00:20.004 --> 00:00:24.877
+Nós estimamos que o
+projeto que nós estamos
+
+6
+00:00:24.877 --> 00:00:29.700
+chamando de Dinâmico, seja mais
+interessante para você desenvolver.
+
+7
+00:00:29.700 --> 00:00:31.882
+E o argumento não é?
+
+8
+00:00:31.882 --> 00:00:39.212
+Que você vai aprender ao final desta aula,
+é que usar uma combinação do EDUF, não é?
+
+9
+00:00:39.212 --> 00:00:42.830
+Que é design, Enough Design Upfront.
+
+10
+00:00:42.830 --> 00:00:48.779
+O design suficiente antecipadamente mais
+a refatoração, que é natural no TDD,
+
+11
+00:00:48.779 --> 00:00:52.940
+isso vai compor o que a gente
+está chamando de design dinâmico.
+
+12
+00:00:52.940 --> 00:00:56.786
+Nós havíamos mostrado, não é?
+
+13
+00:00:56.786 --> 00:00:59.796
+Que deve-se empregar o EDUF, não é?
+
+14
+00:00:59.796 --> 00:01:02.870
+O design suficiente, é, no TDD.
+
+15
+00:01:02.870 --> 00:01:03.974
+Por quê?
+
+16
+00:01:03.974 --> 00:01:07.990
+Com o BDUF, o Big Design Upfront,
+
+17
+00:01:07.990 --> 00:01:13.780
+há uma tendência de você
+deixar o sistema mais rígido,
+
+18
+00:01:13.780 --> 00:01:18.180
+mais inflexível para mudanças,
+e isso não é uma coisa muito boa.
+
+19
+00:01:18.180 --> 00:01:21.890
+Já, o que a gente está
+chamando de projeto dinâmico é
+
+20
+00:01:21.890 --> 00:01:25.126
+processo que vai ser mais flexível, não é?
+
+21
+00:01:25.126 --> 00:01:26.105
+Está certo?
+
+22
+00:01:26.105 --> 00:01:31.233
+E propicia que mudanças ocorram sem causar
+
+23
+00:01:31.233 --> 00:01:35.513
+grandes traumas a quem está desenvolvendo.
+
+24
+00:01:35.513 --> 00:01:41.285
+É, nós havíamos então colocado
+que seria bom ter EDUF,
+
+25
+00:01:41.285 --> 00:01:46.124
+design suficiente antes da modelagem ágil.
+
+26
+00:01:46.124 --> 00:01:48.683
+Por que que eu quero fazer isso?
+
+27
+00:01:48.683 --> 00:01:52.986
+Porque eu quero montar,
+estabelecer, definir com uma certa,
+
+28
+00:01:52.986 --> 00:01:56.813
+vamos dizer assim,
+uma forma de garantir que eu estou vendo
+
+29
+00:01:56.813 --> 00:02:00.608
+pouquinho além do que eu vou
+desenvolver lá na modelagem ágil.
+
+30
+00:02:00.608 --> 00:02:04.440
+Questões como o contexto,
+eu quero saber quem são os usuários,
+
+31
+00:02:04.440 --> 00:02:08.049
+dependendo dos usuários,
+os tipos de usuários, pode influenciar.
+
+32
+00:02:08.049 --> 00:02:12.528
+Eu quero saber quais os outros sistemas
+que estão envolvidos, se eu estou fazendo
+
+33
+00:02:12.528 --> 00:02:19.161
+sistema que usa sistemas distribuídos,
+coisas nuvem e assim por
+
+34
+00:02:19.161 --> 00:02:24.010
+diante e isso vai impactar a arquitetura
+do meu sistema, não é, está certo?
+
+35
+00:02:24.010 --> 00:02:26.562
+Então eu vou definir essa arquitetura,
+
+36
+00:02:26.562 --> 00:02:30.155
+como é que esses subsistemas
+estão combinando entre si.
+
+37
+00:02:30.155 --> 00:02:35.970
+E isso vai obviamente,
+decorrência, mostrar a,
+
+38
+00:02:35.970 --> 00:02:40.970
+definir alguma estrutura
+inicial de classes,
+
+39
+00:02:40.970 --> 00:02:44.190
+está certo,
+e a questão tembém da base de dados.
+
+40
+00:02:44.190 --> 00:02:49.930
+Tudo isso, todo esse, esse,
+esse conjunto de projeto
+
+41
+00:02:49.930 --> 00:02:55.197
+suficiente vai ser a entrada para
+a minha modelagem ágil, não é?
+
+42
+00:02:55.197 --> 00:02:56.030
+Está certo?
+
+43
+00:02:56.030 --> 00:03:01.232
+E a minha modelagem ágil que nós estamos
+prevendo usar aqui é principalmente
+
+44
+00:03:01.232 --> 00:03:06.140
+é o TDD, o desenvolvimento de
+software guiado por testes.
+
+45
+00:03:06.140 --> 00:03:08.460
+Agora abrindo, não é?
+
+46
+00:03:08.460 --> 00:03:14.422
+Pouco mais o que está dentro, vocês
+vejam que eu tenho ali os requisitos.
+
+47
+00:03:14.422 --> 00:03:17.420
+Eu vou usar alguma coisa
+daquele conjunto suficiente.
+
+48
+00:03:17.420 --> 00:03:20.750
+Podem ser os requisitos,
+eu vou usar a estrutura de classes,
+
+49
+00:03:20.750 --> 00:03:22.988
+mas qualquer coisa pode influenciar.
+
+50
+00:03:22.988 --> 00:03:25.496
+Mas basicamente eu vou usar os requisitos.
+
+51
+00:03:25.496 --> 00:03:30.678
+Dos requisitos normalmente eles não,
+eu não consigo derivar testes
+
+52
+00:03:30.678 --> 00:03:35.520
+direto para fazer o TDD funcionar.
+
+53
+00:03:35.520 --> 00:03:38.790
+Porque eu sou,
+eu preciso fazer teste antes.
+
+54
+00:03:38.790 --> 00:03:40.015
+Então o quê que eu faço?
+
+55
+00:03:40.015 --> 00:03:42.956
+Para cada requisito,
+não importa a técnica que eu esteja
+
+56
+00:03:42.956 --> 00:03:47.925
+usando para definir os requisitos,
+eu vou definir os casos de teste.
+
+57
+00:03:47.925 --> 00:03:53.500
+Casos de teste são os testes é,
+que você monta
+
+58
+00:03:53.500 --> 00:04:00.389
+para realmente poder usar o JUnit e aí
+para cada requisito você vai ter conjunto.
+
+59
+00:04:00.389 --> 00:04:03.990
+Nós vamos mostrar mais para
+frente como a gente faz isso.
+
+60
+00:04:03.990 --> 00:04:07.058
+Os requisitos a gente já mostrou lá no
+CRC, é o exemplo que a gente vai dar.
+
+61
+00:04:07.058 --> 00:04:09.038
+Existem outras técnicas de requisitos,
+
+62
+00:04:09.038 --> 00:04:12.230
+nós vamos usar por exemplo
+também histórias de usuário.
+
+63
+00:04:12.230 --> 00:04:18.010
+Mas aqui nesse curso nós vamos estar
+exemplificando com as responsabilidades.
+
+64
+00:04:18.010 --> 00:04:21.420
+De cada responsabilidade
+geramos alguns casos testes,
+
+65
+00:04:21.420 --> 00:04:25.956
+esses casos testes, e o importante que,
+por causa desse projeto ser suficiente,
+
+66
+00:04:25.956 --> 00:04:30.325
+eu não preciso ser completo porque o
+sistema vai funcionar, se eu esquecer
+
+67
+00:04:30.325 --> 00:04:35.090
+alguma coisa algum momento, eu posso
+refazer, mudar e assim por diante.
+
+68
+00:04:35.090 --> 00:04:39.163
+Bom, nesse conjunto de casos testes,
+aí eu escolho caso teste,
+
+69
+00:04:39.163 --> 00:04:43.030
+que era conjunto de casos testes
+para uma responsabilidade.
+
+70
+00:04:43.030 --> 00:04:48.359
+Eu vou começar o meu ciclo do TDD,
+eu faço falhar esse teste,
+
+71
+00:04:48.359 --> 00:04:54.120
+aí construo código de produção que
+vai fazer ele ser bem sucedido,
+
+72
+00:04:54.120 --> 00:04:58.805
+vai ficar verde, e depois se for
+necessário eu vou refatorar.
+
+73
+00:04:58.805 --> 00:05:03.490
+Se não for necessário refatorar, eu passo
+direto e pego o próximo caso de teste,
+
+74
+00:05:03.490 --> 00:05:05.604
+faço falhar e assim por diante.
+
+75
+00:05:05.604 --> 00:05:09.862
+Se aquele conjunto de casos
+de testes se esgotar,
+
+76
+00:05:09.862 --> 00:05:15.346
+eu pego o próximo requisito,
+seria a próxima responsabilidade,
+
+77
+00:05:15.346 --> 00:05:19.578
+defino os novos casos de testes
+para essa nova responsabilidade,
+
+78
+00:05:19.578 --> 00:05:22.000
+escolho uma delas e o ciclo recomeça.
+
+79
+00:05:22.000 --> 00:05:26.610
+E assim eu vou até acabar todos os
+requisitos que eu tenho nesse momento
+
+80
+00:05:26.610 --> 00:05:31.484
+ou enquanto eu estiver
+desenvolvendo o software, está ok?
+
+81
+00:05:31.484 --> 00:05:36.390
+Isso é, esses pontos que eu estou agora
+anotando aqui são os que eu chamo de
+
+82
+00:05:36.390 --> 00:05:40.204
+pontos dinâmicos,
+são os pontos que podem haver variações,
+
+83
+00:05:40.204 --> 00:05:42.480
+algumas poucas ou muitas variações.
+
+84
+00:05:42.480 --> 00:05:47.840
+Vocês vejam que, logo lá no começo
+vindo do projeto suficiente,
+
+85
+00:05:47.840 --> 00:05:50.513
+ali existe muita coisa que pode mudar.
+
+86
+00:05:50.513 --> 00:05:54.749
+Podem entrar novos requisitos,
+pode entrar, mudar requisitos,
+
+87
+00:05:54.749 --> 00:05:57.788
+eu posso mudar a arquitetura,
+eu posso mudar a base de dados.
+
+88
+00:05:57.788 --> 00:06:01.818
+Então eu posso mudar muita coisa ali,
+a estrutura das classes, não é?
+
+89
+00:06:01.818 --> 00:06:02.739
+Podem mudar.
+
+90
+00:06:02.739 --> 00:06:07.470
+Então ali é ponto dinâmico,
+é ponto que podem haver mudanças.
+
+91
+00:06:07.470 --> 00:06:13.540
+Lógico, se eu fiz projeto suficiente, é,
+pode ser que a mudança não seja tanto.
+
+92
+00:06:13.540 --> 00:06:19.884
+Bom, a partir disso, obtive os
+requisitos e, e, o ponto seguinte entre
+
+93
+00:06:19.884 --> 00:06:24.776
+requisitos e o caso de, os casos de testes
+é onde eu posso escolher os requisitos,
+
+94
+00:06:24.776 --> 00:06:28.525
+isso pode ter influência, por exemplo eu
+posso escolher a ordem dos requisitos,
+
+95
+00:06:28.525 --> 00:06:33.411
+os requisitos que sejam mais vamos dizer
+assim, fáceis de implementar ou eu
+
+96
+00:06:33.411 --> 00:06:37.811
+uso algum critério qualquer,
+diferente e eu posso escolher.
+
+97
+00:06:37.811 --> 00:06:39.737
+Então isso pode ser mudança.
+
+98
+00:06:39.737 --> 00:06:40.590
+Está certo?
+
+99
+00:06:40.590 --> 00:06:45.238
+Escolhendo o outro ponto de mudança
+é quando eu vou definir os casos
+
+100
+00:06:45.238 --> 00:06:47.340
+testes para aquele requisito.
+
+101
+00:06:47.340 --> 00:06:51.763
+Eu também vou fazer conjunto e eu
+posso escolher os casos testes.
+
+102
+00:06:51.763 --> 00:06:55.653
+Vocês vão ver exemplos mais
+para frente que eu vou ter
+
+103
+00:06:55.653 --> 00:06:59.801
+alguns critérios de como
+definir esses casos testes.
+
+104
+00:06:59.801 --> 00:07:02.598
+Depois eu posso usá-los
+numa ordem diferente.
+
+105
+00:07:02.598 --> 00:07:06.130
+Nessa hora é ponto dinâmico,
+eu escolho uma ordem diferente,
+
+106
+00:07:06.130 --> 00:07:09.892
+uma forma de escolher qual
+é o caso teste diferente.
+
+107
+00:07:09.892 --> 00:07:13.154
+O próximo ponto dinâmico é lá no, no.
+
+108
+00:07:13.154 --> 00:07:17.280
+no, quando eu vou fazer
+o código que falhou,
+
+109
+00:07:17.280 --> 00:07:22.430
+no meu teste eu vou fazer código que vai
+fazer funcionar, ser bem sucedido, não é?
+
+110
+00:07:22.430 --> 00:07:27.280
+E ao fazer isso eu posso escolher,
+geral é o que a gente chama de baby step,
+
+111
+00:07:27.280 --> 00:07:32.130
+eu vou fazer passos simples para
+construir o meu código de produção.
+
+112
+00:07:32.130 --> 00:07:38.090
+Mas eu poderei dados momentos ter
+alternativas de como construir.
+
+113
+00:07:38.090 --> 00:07:40.793
+Eu posso construir de jeito ou de outro,
+eu vou escolher.
+
+114
+00:07:40.793 --> 00:07:44.460
+Então é ponto que é dinâmico eu posso,
+dependendo da experiência do, do, do,
+
+115
+00:07:44.460 --> 00:07:48.310
+do desenvolvedor, ele pode escolher de
+jeito ou de outro, então é ponto dinâmico.
+
+116
+00:07:48.310 --> 00:07:54.670
+E finalmente a gente tem o, e é o mais
+importante, é o ponto da refatoração.
+
+117
+00:07:54.670 --> 00:07:56.939
+Esse é o mais dinâmico, está certo?
+
+118
+00:07:56.939 --> 00:07:58.410
+Esse é o mais dinâmico.
+
+119
+00:07:58.410 --> 00:08:02.820
+Eu vou falar mais para a frente, porque
+realmente é esse que é o foco que dá
+
+120
+00:08:02.820 --> 00:08:07.500
+dinamismo maior, desde que eu tenha
+projeto suficiente bem fundamentado
+
+121
+00:08:07.500 --> 00:08:13.143
+anteriormente e rapidamente não completo,
+mas razoavelmente fundamentado junto
+
+122
+00:08:13.143 --> 00:08:17.250
+com a refatoração, isso vai, vai fazer com
+que o meu código tenha mais qualidade.
+
+123
+00:08:17.250 --> 00:08:22.640
+E isso tudo então vai compor o que a gente
+chama de Projeto Dinâmico da Aplicação,
+
+124
+00:08:22.640 --> 00:08:23.853
+está certo?
+
+125
+00:08:23.853 --> 00:08:26.058
+Não é só a refatoração.
+
+126
+00:08:26.058 --> 00:08:31.370
+Antigamente as pessoas só olhavam
+dessa forma mais restrita.
+
+127
+00:08:31.370 --> 00:08:34.377
+Eu com a refatoração vou
+conseguir fazer tudo.
+
+128
+00:08:34.377 --> 00:08:39.250
+E aí começava a caminhar e não tinha
+prestado atenção alguma coisa que a gente
+
+129
+00:08:39.250 --> 00:08:42.840
+está agora colocando lá no EDUF,
+no projeto suficiente,
+
+130
+00:08:42.840 --> 00:08:47.194
+ou seja, a gente está olhando
+pouquinho mais para frente.
+
+131
+00:08:47.194 --> 00:08:52.690
+Então a gente otimiza isso, vai fazer uma,
+uso da refatoração agora pouquinho melhor.
+
+132
+00:08:52.690 --> 00:08:54.985
+Então essa combinação das
+duas coisas é importante.
+
+133
+00:08:54.985 --> 00:09:00.365
+por isso que a gente chama de projeto
+dinâmico o conjunto do que eu recebo
+
+134
+00:09:00.365 --> 00:09:06.320
+também lá do, do, do,
+do projeto suficiente.
+
+135
+00:09:06.320 --> 00:09:13.190
+Então agora vamos nos fixar mais no,
+na, no, na parte de refatoração.
+
+136
+00:09:13.190 --> 00:09:13.966
+Por quê?
+
+137
+00:09:13.966 --> 00:09:18.334
+Porque o maior impacto que
+vai haver na qualidade é,
+
+138
+00:09:18.334 --> 00:09:24.010
+e tornar o meu projeto mais flexível,
+é na refatoração.
+
+139
+00:09:24.010 --> 00:09:28.530
+Quais são as coisas que eu
+posso fazer na refatoração?
+
+140
+00:09:28.530 --> 00:09:35.313
+Eu posso fazer refatorações de dados
+e variáveis que eu esteja usando.
+
+141
+00:09:35.313 --> 00:09:39.360
+Como por exemplo, mudar o nome da
+variável, mudar o tipo do dado,
+
+142
+00:09:39.360 --> 00:09:40.170
+está certo?
+
+143
+00:09:40.170 --> 00:09:44.484
+Eu posso fazer a refatoração de métodos,
+está certo?
+
+144
+00:09:44.484 --> 00:09:48.015
+Métodos inclusive que
+podem mudar de classes,
+
+145
+00:09:48.015 --> 00:09:51.470
+método vai para outra
+classe e assim por diante.
+
+146
+00:09:51.470 --> 00:09:56.089
+Eu posso fazer refatoração no nível
+da classe, eu posso quebrar a classe
+
+147
+00:09:56.089 --> 00:10:01.490
+subclasses, eu posso criar superclasses
+da classe, eu posso pôr novos métodos,
+
+148
+00:10:01.490 --> 00:10:05.948
+tirar métodos dessa classe eu posso
+fazer monte de coisas com essa classe,
+
+149
+00:10:05.948 --> 00:10:10.355
+assim como eu posso fazer com a interface,
+com os subsistemas e a arquitetura,
+
+150
+00:10:10.355 --> 00:10:14.230
+ou seja, a refatoração é mais radical,
+porque eu posso mudar tudo.
+
+151
+00:10:14.230 --> 00:10:19.260
+Dependendo do meu projeto suficiente,
+do meu EDUF e do,
+
+152
+00:10:19.260 --> 00:10:24.444
+o tipo do projeto da aplicação que eu
+estou fazendo, se ela for uma aplicação
+
+153
+00:10:24.444 --> 00:10:28.787
+que é muito fluida, as pessoas não
+sabem direito o que querem, está certo?
+
+154
+00:10:28.787 --> 00:10:31.566
+Eu posso fazer uma
+refatoração muito grande,
+
+155
+00:10:31.566 --> 00:10:36.570
+incluindo inclusive a arquitetura,
+banco de dados e assim por diante.
+
+156
+00:10:36.570 --> 00:10:42.520
+O que tem que ficar claro,
+com o BDUF, o Big Design Up Front,
+
+157
+00:10:42.520 --> 00:10:49.410
+o sistema, tende a ficar mais rígido
+e inflexível a mudanças, isso é fato.
+
+158
+00:10:49.410 --> 00:10:54.883
+Se eu usar só a refatoração,
+eu perco aquela,
+
+159
+00:10:54.883 --> 00:10:59.791
+aquela antecipação de ver
+pouquinho à frente alguma coisa,
+
+160
+00:10:59.791 --> 00:11:04.765
+e eu posso estar indo direto
+a precipício e não estou sabendo.
+
+161
+00:11:04.765 --> 00:11:07.994
+Então o que é que é o certo fazer?
+
+162
+00:11:07.994 --> 00:11:12.785
+EDUF, que pode ser projeto
+suficiente que leve algumas horas,
+
+163
+00:11:12.785 --> 00:11:15.510
+alguns dias ou no máximo duas semanas.
+
+164
+00:11:15.510 --> 00:11:18.639
+O ideal, uma semana,
+aí no máximo duas semanas,
+
+165
+00:11:18.639 --> 00:11:22.307
+quando são projetos que são
+muito difíceis de projetar,
+
+166
+00:11:22.307 --> 00:11:27.241
+você tem poucas informações, nunca ninguém
+fez nada parecido com aquilo, está certo?
+
+167
+00:11:27.241 --> 00:11:28.620
+Então pode ficar difícil.
+
+168
+00:11:28.620 --> 00:11:33.461
+E o EDUF mais esses pontos
+dinâmicos principalmente com
+
+169
+00:11:33.461 --> 00:11:38.148
+a refatoração, aí você tem o que
+a gente chama de projeto emergente.
+
+170
+00:11:38.148 --> 00:11:41.670
+Antigamente, o projeto emergente
+ele não contava com o EDUF.
+
+171
+00:11:41.670 --> 00:11:45.146
+Agora o projeto emergente
+conta com o EDUF, então,
+
+172
+00:11:45.146 --> 00:11:50.840
+essa combinação é que torna ele muito
+melhor, quer dizer, o resultado final,
+
+173
+00:11:50.840 --> 00:11:55.810
+você vai obter sistema mais
+flexível e apto a mudanças,
+
+174
+00:11:55.810 --> 00:11:59.560
+mas com menos trauma,
+esse é o outro ganho que você tem.
+
+175
+00:11:59.560 --> 00:12:03.345
+E com mais qualidade no projeto
+de software, está certo?
+
+176
+00:12:03.345 --> 00:12:06.990
+Por isso que é importante ter
+essa combinação dos dois.
+
+177
+00:12:06.990 --> 00:12:09.546
+Algumas dessas técnicas é,
+
+178
+00:12:09.546 --> 00:12:14.560
+vão ser exemplificadas neste
+curso e nos próximos cursos.
+
+179
+00:12:14.560 --> 00:12:17.730
+Nós iremos exemplificar por exemplo,
+
+180
+00:12:17.730 --> 00:12:23.000
+usando EDUF, projeto suficiente,
+
+181
+00:12:23.000 --> 00:12:28.000
+baseado modelagem CRC, porque a gente
+já mostrou para vocês modelagem CRC.
+
+182
+00:12:28.000 --> 00:12:33.680
+E ela vai ser usada, pode ser usada
+qualquer outro tipo de requisitos.
+
+183
+00:12:33.680 --> 00:12:39.161
+Eu posso misturar a modelagem CRC por
+exemplo, com histórias de usuário,
+
+184
+00:12:39.161 --> 00:12:42.842
+casos de uso,
+não há impedimento de uma coisa.
+
+185
+00:12:42.842 --> 00:12:44.345
+Mais para a frente,
+
+186
+00:12:44.345 --> 00:12:48.480
+nós vamos dar uma ênfase no uso de
+requisitos baseado histórias de usuário.
+
+187
+00:12:48.480 --> 00:12:52.973
+Mas eu posso continuar usando a modelagem
+CRC para levantar as classes,
+
+188
+00:12:52.973 --> 00:12:58.635
+uma arquitetura inicial, as colaborações,
+as responsabilidades também têm utilidade,
+
+189
+00:12:58.635 --> 00:13:03.616
+a gente continua usando isso, mesmo
+trabalhando com histórias de usuário.
+
+190
+00:13:03.616 --> 00:13:08.230
+No nosso caso, desse curso que eu
+vou estar desenvolvendo a linha,
+
+191
+00:13:08.230 --> 00:13:11.258
+é usar requisitos baseados
+responsabilidades.
+
+192
+00:13:11.258 --> 00:13:15.731
+Na aula de hoje então, nós apresentamos
+que é importante você fazer
+
+193
+00:13:15.731 --> 00:13:20.489
+projeto dinâmico que se
+baseia no projeto suficiente,
+
+194
+00:13:20.489 --> 00:13:26.395
+a gente está chamando de EDUF,
+mais a refatoração, essa combinação é
+
+195
+00:13:26.395 --> 00:13:31.740
+que vai tornar o projeto mais dinâmico,
+o que a gente chama de projeto emergente.
+
+196
+00:13:31.740 --> 00:13:34.590
+Isso, isso é que vai ser importante.
+
+197
+00:13:34.590 --> 00:13:41.804
+Nós vamos exemplificar isso através de
+responsabilidades, cada responsabilidade,
+
+198
+00:13:41.804 --> 00:13:46.651
+você vai trabalhar casos de uso
+e aí entramos no ciclo do TDD.
+
+199
+00:13:46.651 --> 00:13:50.260
+E vamos até esgotar todas
+as responsabilidades.
+
+200
+00:13:50.260 --> 00:13:54.837
+Se nesse meio termo, aparecer uma
+responsabilidade nova, não tem problema.
+
+201
+00:13:54.837 --> 00:13:57.240
+Ela entra ali e aí cabe ao desenvolvedor,
+
+202
+00:13:57.240 --> 00:14:01.101
+colocar lá ordem de prioridade,
+qual que é que ele quer já trabalhar,
+
+203
+00:14:01.101 --> 00:14:05.351
+essa que acabou de surgir, essa
+responsabilidade nova, ou continua olhando
+
+204
+00:14:05.351 --> 00:14:09.150
+as anteriores e deixa essa nova mais
+para o fim, e assim por diante.
+
+205
+00:14:09.150 --> 00:14:14.960
+Então, o importante,
+é que o projeto seja dinâmico,
+
+206
+00:14:14.960 --> 00:14:20.891
+mas que você tenha uma perspectiva
+de que você vai ter início,
+
+207
+00:14:20.891 --> 00:14:23.530
+meio e fim mais organizado.
+
+208
+00:14:23.530 --> 00:14:30.190
+Obrigado!

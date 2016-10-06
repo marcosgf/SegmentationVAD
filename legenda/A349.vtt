@@ -1,0 +1,208 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.676
+Olá.
+
+2
+00:00:00.676 --> 00:00:05.375
+Neste vídeo vamos usar
+a carta de Nichols-Black para
+
+3
+00:00:05.375 --> 00:00:08.858
+verificar as alterações na resposta
+frequência de malha fechada que
+
+4
+00:00:08.858 --> 00:00:11.750
+os compensadores de avanço
+e atraso de fase promovem.
+
+5
+00:00:11.750 --> 00:00:16.311
+Assim você deverá ter uma visão
+mais sólida das situações que deve
+
+6
+00:00:16.311 --> 00:00:20.900
+usar cada deles e dos
+cuidados que deve tomar.
+
+7
+00:00:20.900 --> 00:00:24.536
+Para isso, desenhamos três curvas
+na carta de Nichols-Black para o
+
+8
+00:00:24.536 --> 00:00:27.093
+exemplo de projeto completo
+visto vídeo anterior.
+
+9
+00:00:27.093 --> 00:00:32.801
+Azul a curva do sistema G de s, você
+pode ver que não há cruzamento de 0 dB,
+
+10
+00:00:32.801 --> 00:00:35.700
+evidenciando que o sistema com
+retroalimentação unitária é
+
+11
+00:00:35.700 --> 00:00:39.306
+superamortecido, isso é,
+não apresenta sobressinal.
+
+12
+00:00:39.306 --> 00:00:44.517
+Com ganho muito baixo, baixas frequências,
+o sistema responde a uma entrada
+
+13
+00:00:44.517 --> 00:00:49.000
+de grau de maneira lenta e convergida para
+valor muito distante do valor desejado.
+
+14
+00:00:49.000 --> 00:00:53.505
+Para acelerar a resposta
+tornando o sistema mais rápido,
+
+15
+00:00:53.505 --> 00:00:56.308
+foi introduzido compensador
+de avanço de fase.
+
+16
+00:00:56.308 --> 00:00:58.010
+A curva obtida é a curva verde.
+
+17
+00:00:58.010 --> 00:01:03.014
+Você já pode notar que a frequência de
+cruzamento de 0 dB está entre 10 radianos
+
+18
+00:01:03.014 --> 00:01:08.317
+por segundo e 100 radianos por segundo,
+próximo de 30 radianos por segundo.
+
+19
+00:01:08.317 --> 00:01:10.970
+A margem de fase é de cerca de 60 graus.
+
+20
+00:01:10.970 --> 00:01:13.754
+Com essa frequência de cruzamento
+de 0 dB e essa margem de fase,
+
+21
+00:01:13.754 --> 00:01:17.273
+o sistema passa a responder de maneira
+bem mais rápida, porém com fator de
+
+22
+00:01:17.273 --> 00:01:22.390
+amortecimento de cerca de 0,6, resultando
+de sobressinal de aproximadamente 10%.
+
+23
+00:01:22.390 --> 00:01:27.410
+Agora, o sistema se comporta como
+sistema de segunda ordem subamortecido.
+
+24
+00:01:27.410 --> 00:01:31.880
+Contudo, devido ao ganho
+insuficiente frequências baixas,
+
+25
+00:01:31.880 --> 00:01:34.598
+o erro regime estacionário é inadequado.
+
+26
+00:01:34.598 --> 00:01:38.970
+Então, insere-se o compensador de
+atraso de fase para corrigir isso,
+
+27
+00:01:38.970 --> 00:01:44.063
+porém sempre atentando para o fato de
+que seu efeito deve-se limitar às baixas
+
+28
+00:01:44.063 --> 00:01:48.930
+frequências com o par 0 polo afastado
+da frequência de cruzamento de 0 dB.
+
+29
+00:01:48.930 --> 00:01:53.725
+A curva resultante é a vermelha, onde
+você pode ver que houve alteração apenas
+
+30
+00:01:53.725 --> 00:01:56.860
+das frequências distantes
+do cruzamento de 0 dB,
+
+31
+00:01:56.860 --> 00:02:01.800
+no sentido de aumentar o ganho.
+
+32
+00:02:01.800 --> 00:02:04.811
+Nas proximidades da frequência
+de cruzamento de 0 dB,
+
+33
+00:02:04.811 --> 00:02:08.791
+as curvas verde e vermelha se unem,
+evidenciando que a margem de fase e
+
+34
+00:02:08.791 --> 00:02:13.260
+a frequência de cruzamento de 0
+permaneceram essencialmente as mesmas.
+
+35
+00:02:13.260 --> 00:02:16.790
+Assim, fomos bem sucedidos nosso projeto.
+
+36
+00:02:16.790 --> 00:02:21.253
+Agora, você já sabe usar
+para projetar controladores
+
+37
+00:02:21.253 --> 00:02:24.968
+com dinâmica de maneira atender
+requisitos de amortecimento,
+
+38
+00:02:24.968 --> 00:02:27.860
+velocidade de resposta e
+erro regime estacionário.
+
+39
+00:02:27.860 --> 00:02:31.961
+Na próxima semana, você aprenderá
+a projetar controladores com dinâmica que
+
+40
+00:02:31.961 --> 00:02:33.710
+estão entre os mais utilizados.
+
+41
+00:02:33.710 --> 00:02:39.435
+controladores Proporcional Derivativo
+(ou PD), Proporcional Integrativo
+
+42
+00:02:39.435 --> 00:02:44.196
+(PI) e
+Proporcional Integrativo Derivativo (PID).
+
+43
+00:02:44.196 --> 00:02:44.880
+Até lá!

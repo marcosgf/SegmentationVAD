@@ -1,0 +1,122 @@
+WEBVTT
+
+1
+00:00:01.130 --> 00:00:03.390
+People make decisions every day.
+
+2
+00:00:03.390 --> 00:00:07.110
+For example, before you go outside you
+kind of have an if statement that says,
+
+3
+00:00:07.110 --> 00:00:11.180
+if it's raining,
+then I need to get my jacket.
+
+4
+00:00:11.180 --> 00:00:16.380
+And computers are amazing once you
+decide those kinds of statements
+
+5
+00:00:16.380 --> 00:00:21.900
+that they can reliably execute
+those things at unbelievable speed.
+
+6
+00:00:21.900 --> 00:00:27.550
+And so a computer program, really,
+is a little bit of math and
+
+7
+00:00:27.550 --> 00:00:31.880
+some if statements where
+the decision gets made.
+
+8
+00:00:31.880 --> 00:00:37.905
+So in this puzzle, the if block
+helps the zombie make a decision.
+
+9
+00:00:37.905 --> 00:00:40.130
+>> Brains.
+>> It shuts something.
+
+10
+00:00:40.130 --> 00:00:45.880
+For example, let's use the block that
+says If there's a path to the left and
+
+11
+00:00:45.880 --> 00:00:48.700
+put a turn left command inside it.
+
+12
+00:00:48.700 --> 00:00:51.850
+So we're telling the zombie
+to check it's surrounding.
+
+13
+00:00:51.850 --> 00:00:56.760
+See if there's that path on the left and
+if so make that turn.
+
+14
+00:00:56.760 --> 00:01:01.810
+And then we use the move forward
+block inside this repeat
+
+15
+00:01:01.810 --> 00:01:06.029
+to get it to keep moving forward as
+long as it just wants to go straight.
+
+16
+00:01:07.220 --> 00:01:08.330
+Then when there's the turn,
+
+17
+00:01:08.330 --> 00:01:12.460
+the if block will tell it to
+make this turn to the left.
+
+18
+00:01:12.460 --> 00:01:15.780
+And you can see, if we do that,
+if we're taking the turn to the left and
+
+19
+00:01:15.780 --> 00:01:18.490
+otherwise moving forward,
+we'll achieve our goal.
+
+20
+00:01:18.490 --> 00:01:21.860
+So it's an example of
+using an if statement,
+
+21
+00:01:21.860 --> 00:01:26.890
+which is really a fundamental
+concept in computer programming.
+
+22
+00:01:26.890 --> 00:01:32.580
+One of the first things I learned was how
+to write a program to play Tic-tac-toe.
+
+23
+00:01:32.580 --> 00:01:37.670
+So I had if statements to say okay if the
+other person is about to win go ahead and
+
+24
+00:01:37.670 --> 00:01:40.140
+block that spot.
+
+25
+00:01:40.140 --> 00:01:44.977
+So have fun learning how to use if
+statements, it's a key concept.

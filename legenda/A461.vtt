@@ -1,0 +1,910 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.334
+[MÚSICA] Esse
+
+2
+00:00:08.334 --> 00:00:13.928
+é o curso de Orientação
+a Objetos com Java.
+
+3
+00:00:13.928 --> 00:00:20.820
+Neste iii zone a gente vai tentar entender
+pouco mais a colaboração entre as classes.
+
+4
+00:00:20.820 --> 00:00:25.959
+O que a gente vai fazer, o nosso exercício
+é o seguinte: Vamos criar uma classe
+
+5
+00:00:25.959 --> 00:00:30.873
+que registra pontos do usuário,
+já vendo aí a questão do
+
+6
+00:00:30.873 --> 00:00:35.917
+nosso projeto de gamification,
+já aquecimento aí,
+
+7
+00:00:35.917 --> 00:00:41.650
+e a ideia que para esse registro
+de pontuação exista bónus,
+
+8
+00:00:41.650 --> 00:00:46.995
+certo, e para esse bónus a gente precisa,
+por exemplo,
+
+9
+00:00:46.995 --> 00:00:52.249
+vamos ter multiplicadores dependendo
+do tipo do usuário, está certo?
+
+10
+00:00:52.249 --> 00:00:57.663
+Ou de fatores do dia,
+então vamos ver como é que a gente pode
+
+11
+00:00:57.663 --> 00:01:03.229
+criar a classe que vão estar colaborando
+para fazer essa funcionalidade.
+
+12
+00:01:03.229 --> 00:01:06.020
+Então eu vou criar aqui novo projeto,
+
+13
+00:01:06.020 --> 00:01:11.140
+o projeto Java.
+
+14
+00:01:11.140 --> 00:01:16.300
+Eu vou chamar aqui de Pontuação.
+
+15
+00:01:16.300 --> 00:01:22.015
+[SEM ÁUDIO] Então
+
+16
+00:01:22.015 --> 00:01:26.460
+vou vir aqui, vou criar uma nova classe.
+
+17
+00:01:26.460 --> 00:01:31.240
+A princípio essa classe aqui,
+ela vai chamar
+
+18
+00:01:31.240 --> 00:01:36.590
+Registro de pontos, RegistroPontos.
+
+19
+00:01:36.590 --> 00:01:41.650
+Imagina que essa classe ela vai ter,
+
+20
+00:01:41.650 --> 00:01:49.832
+por exemplo, métodos para coisas
+que o usuário faz, certo?
+
+21
+00:01:49.832 --> 00:01:54.320
+Então vai ser, por exemplo, aqui,
+
+22
+00:01:54.320 --> 00:01:59.060
+vamos criar aqui os métodos Void,
+
+23
+00:01:59.060 --> 00:02:06.210
+eu vou colocar aqui fazerUmComentario.
+
+24
+00:02:06.210 --> 00:02:11.558
+Vamos a princípio criar aqui.
+
+25
+00:02:11.558 --> 00:02:13.798
+Bom, quem é que faz comentário?
+
+26
+00:02:13.798 --> 00:02:15.291
+Tem que ser usuário.
+
+27
+00:02:15.291 --> 00:02:21.295
+Eu vou criar aqui agora uma classe Usuário
+que a minha classe que vai ter os pontos.
+
+28
+00:02:21.295 --> 00:02:28.275
+Então vou criar aqui o Usuário, certo?
+
+29
+00:02:28.275 --> 00:02:32.570
+Vou criar aqui público mesmo, certo?
+
+30
+00:02:32.570 --> 00:02:37.456
+Então public, nome, opa,
+
+31
+00:02:37.456 --> 00:02:45.110
+String nome e public.
+
+32
+00:02:45.110 --> 00:02:51.336
+Vamos colocar aqui inteiro
+mesmo os pontos, certo?
+
+33
+00:02:51.336 --> 00:02:55.870
+Vamos colocar aqui uma informação aqui,
+
+34
+00:02:55.870 --> 00:02:59.548
+booleana, que é verdadeiro ou falso,
+
+35
+00:02:59.548 --> 00:03:04.930
+se ele é cliente vip, por exemplo, certo?
+
+36
+00:03:04.930 --> 00:03:10.531
+Bom, então eu tenho
+aqui fazerUmComentario,
+
+37
+00:03:10.531 --> 00:03:12.620
+vou passar aqui usuário.
+
+38
+00:03:12.620 --> 00:03:17.823
+[SEM ÁUDIO] Eu posso ter,
+
+39
+00:03:17.823 --> 00:03:22.300
+e vou criar outros métodos
+aqui que seriam, por exemplo,
+
+40
+00:03:22.300 --> 00:03:27.404
+criar tópico, por exemplo, certo?
+
+41
+00:03:27.404 --> 00:03:32.390
+Imagina que eu tenho aqui,
+que estou num fórum aqui.
+
+42
+00:03:32.390 --> 00:03:36.720
+Então vamos lá criar,
+
+43
+00:03:36.720 --> 00:03:42.797
+criarUmTopico, certo,
+
+44
+00:03:42.797 --> 00:03:47.435
+e por fim é que vamos
+
+45
+00:03:47.435 --> 00:03:56.214
+colocar aqui gostar,
+
+46
+00:03:56.214 --> 00:04:01.460
+vou colocar do jeito que todo o
+mundo fala que é dar like, certo?
+
+47
+00:04:01.460 --> 00:04:09.918
+Então ele está fazendo comentário
+criando tópico ou dando like.
+
+48
+00:04:09.918 --> 00:04:14.342
+Então imagina o seguinte:
+Se ele faz comentário,
+
+49
+00:04:14.342 --> 00:04:17.140
+se ele dá like,
+vamos começar aqui pelo menor.
+
+50
+00:04:17.140 --> 00:04:20.290
+Eu vou fazer aqui u.,
+
+51
+00:04:20.290 --> 00:04:25.350
+cadê aqui os pontos dele,
+
+52
+00:04:25.350 --> 00:04:30.520
+eu vou somar 1, certo?
+
+53
+00:04:30.520 --> 00:04:38.450
+Aqui no criar tópico, que seria aqui o
+mais complicado, ele ganha 5 pontos.
+
+54
+00:04:38.450 --> 00:04:47.099
+E fazer comentário ele vai
+ganhar 3 pontos, certo?
+
+55
+00:04:47.099 --> 00:04:49.775
+Só o que é que acontece?
+
+56
+00:04:49.775 --> 00:04:53.815
+Usuário vip ele tem 5 pontos,
+
+57
+00:04:53.815 --> 00:04:58.884
+ele multiplica por 5
+a pontuação que ele faz.
+
+58
+00:04:58.884 --> 00:05:03.420
+Isso aí são aqueles usuários que
+pagam para para por exemplo,
+
+59
+00:05:03.420 --> 00:05:06.500
+para o site ou que
+contribuem de alguma forma.
+
+60
+00:05:06.500 --> 00:05:11.958
+Ou, por exemplo,
+se eu tenho às vezes é dia
+
+61
+00:05:11.958 --> 00:05:16.850
+que estou querendo promover alguma coisa,
+eu tenho multiplicador para aquele dia.
+
+62
+00:05:16.850 --> 00:05:23.167
+Então esse tipo de coisa
+eu vou querer multiplicar.
+
+63
+00:05:23.167 --> 00:05:27.825
+Agora imagina o seguinte: Se eu
+tenho aqui para cada, por exemplo,
+
+64
+00:05:27.825 --> 00:05:32.000
+para cada método aqui fazer por exemplo,
+ou If,
+
+65
+00:05:32.000 --> 00:05:36.640
+por exemplo, u.vip,
+
+66
+00:05:36.640 --> 00:05:41.280
+então sei lá, multiplicador,
+uma coisa assim.
+
+67
+00:05:41.280 --> 00:05:46.830
+Por exemplo, int multiplicador,
+
+68
+00:05:46.830 --> 00:05:52.095
+por exemplo, aqui igual a 0 e aí
+
+69
+00:05:52.095 --> 00:05:57.900
+igual a 1,
+vamos zerar ali na hora de multiplicar.
+
+70
+00:05:57.900 --> 00:06:02.599
+Se ele for
+vip o multiplicador ele vira 5 e aí é
+
+71
+00:06:02.599 --> 00:06:07.470
+que eu multiplico pelo multiplicador.
+
+72
+00:06:07.470 --> 00:06:12.702
+Então isso daqui a gente
+
+73
+00:06:12.702 --> 00:06:21.680
+percebe que é uma coisa que pode,
+como é que fala isso aqui?
+
+74
+00:06:21.680 --> 00:06:25.510
+Eu vou ter que replicar
+todos esses métodos.
+
+75
+00:06:25.510 --> 00:06:27.137
+Então não é essa a ideia.
+
+76
+00:06:27.137 --> 00:06:29.383
+Então o que é que a gente vai fazer?
+
+77
+00:06:29.383 --> 00:06:34.671
+A gente vai criar uma outra classe
+
+78
+00:06:34.671 --> 00:06:41.260
+aqui que a gente vai chamar aqui de Bonus,
+
+79
+00:06:41.260 --> 00:06:46.700
+CalculadoraBonus.
+
+80
+00:06:46.700 --> 00:06:51.440
+Vai ser uma classe que vai ser
+
+81
+00:06:51.440 --> 00:06:57.377
+responsável por calcular esse
+bónus que o usuário vai ter.
+
+82
+00:06:57.377 --> 00:07:02.903
+Então por exemplo, eu posso ter aqui,
+
+83
+00:07:02.903 --> 00:07:09.350
+vamos colocar aqui bonusDoDia,
+
+84
+00:07:09.350 --> 00:07:12.650
+certo?
+
+85
+00:07:12.650 --> 00:07:18.166
+Colocar public aqui também
+para ficar aqui igual
+
+86
+00:07:18.166 --> 00:07:23.480
+ao outro ali,
+e tem a questão de o cara ser vip.
+
+87
+00:07:23.480 --> 00:07:28.930
+Que eu vou fazer aqui, Public,
+
+88
+00:07:28.930 --> 00:07:33.654
+vamos colocar
+
+89
+00:07:33.654 --> 00:07:38.530
+aqui bónus do usuário,
+
+90
+00:07:38.530 --> 00:07:43.580
+certo?
+
+91
+00:07:43.580 --> 00:07:47.480
+OK.
+
+92
+00:07:47.480 --> 00:07:49.632
+Então o que é que eu vou fazer?
+
+93
+00:07:49.632 --> 00:07:56.357
+Eu vou pegar aqui essa questão aqui
+para calcular o multiplicador, certo?
+
+94
+00:07:56.357 --> 00:08:04.330
+Vou jogar isso para cá e
+vou retornar aqui o bónus.
+
+95
+00:08:04.330 --> 00:08:08.960
+Ou melhor, vou retornar o multiplicador.
+
+96
+00:08:08.960 --> 00:08:13.526
+Eu posso começar aqui, por exemplo,
+
+97
+00:08:13.526 --> 00:08:20.270
+já com o bónus do dia,
+que eu posso modificar ali,
+
+98
+00:08:20.270 --> 00:08:25.350
+está certo?
+
+99
+00:08:25.350 --> 00:08:27.625
+Então o que é que eu vou fazer?
+
+100
+00:08:27.625 --> 00:08:33.125
+Eu vou vir aqui, vou criar uma
+calculadora bónus, ou melhor,
+
+101
+00:08:33.125 --> 00:08:38.038
+quando eu criar registro de pontos
+
+102
+00:08:38.038 --> 00:08:42.600
+eu já vou passar para ele no construtor
+
+103
+00:08:42.600 --> 00:08:47.290
+uma calculadora bónus,
+
+104
+00:08:47.290 --> 00:08:51.815
+certo?
+
+105
+00:08:51.815 --> 00:09:01.165
+Então vamos lá, Calculadora Bónus.
+
+106
+00:09:01.165 --> 00:09:06.454
+E aí aqui vou criar aqui uma, uma, vou até
+
+107
+00:09:06.454 --> 00:09:11.880
+criar como privado aqui, depois a gente
+vai ver direitinho como isso funciona,
+
+108
+00:09:11.880 --> 00:09:18.706
+vou chamar aqui CalculadoraBonus cb,
+
+109
+00:09:18.706 --> 00:09:22.540
+então a gente faz aqui,
+
+110
+00:09:22.540 --> 00:09:27.744
+ou melhor, vou chamar ali de bónus só,
+
+111
+00:09:27.744 --> 00:09:32.797
+então bonus.cb é igual a cb e
+
+112
+00:09:32.797 --> 00:09:38.452
+aí toda a vez que eu for
+fazer o comentário,
+
+113
+00:09:38.452 --> 00:09:42.916
+que eu vou somar os pontos,
+eu sempre vou multiplicar aqui pelo pelo
+
+114
+00:09:42.916 --> 00:09:47.650
+bónus ali, o bónus.,
+
+115
+00:09:47.650 --> 00:09:53.090
+o bónus daquele usuário, certo?
+
+116
+00:09:53.090 --> 00:09:58.760
+Para que é que serve isso daqui?
+
+117
+00:09:58.760 --> 00:10:02.687
+Por exemplo, se eu quiser
+modificar a minha lógica de bónus,
+
+118
+00:10:02.687 --> 00:10:07.876
+se eu quiser acrescentar,
+sei lá, bónus pelo cara entrar
+
+119
+00:10:07.876 --> 00:10:12.864
+todo o dia, ou ou bônus, sei lá,
+para os mais ativos do mês,
+
+120
+00:10:12.864 --> 00:10:16.969
+ou para o primeiro do ranking
+ou para quem está muito baixo,
+
+121
+00:10:16.969 --> 00:10:21.830
+para incentivar, eu posso estar
+colocando isso, dentro dessa lógica,
+
+122
+00:10:21.830 --> 00:10:25.740
+que o registro de pontos não vai
+precisar ser modificado, ta?
+
+123
+00:10:25.740 --> 00:10:30.790
+Então digamos assim, o registro de pontos,
+ele não precisa saber
+
+124
+00:10:30.790 --> 00:10:35.822
+como que é calculado esse
+bônus do usuário, certo?
+
+125
+00:10:35.822 --> 00:10:40.595
+Nem a calculadora de bônus tem
+que saber exatamente quanto que
+
+126
+00:10:40.595 --> 00:10:45.063
+é a pontuação de cada coisa,
+que é a função dessa classe aqui, certo?
+
+127
+00:10:45.063 --> 00:10:48.351
+Bom para gente verificar se está
+tudo funcionando direitinho,
+
+128
+00:10:48.351 --> 00:10:53.011
+vamos só criar testezinho de unidade,
+para a gente não perder o costume certo?
+
+129
+00:10:53.011 --> 00:10:55.671
+Então vou chamar aqui,
+
+130
+00:10:55.671 --> 00:11:01.790
+Teste RegistroPontos, certo?
+
+131
+00:11:01.790 --> 00:11:04.950
+Adiciona aqui.
+
+132
+00:11:04.950 --> 00:11:10.398
+Então, é teste,
+
+133
+00:11:10.398 --> 00:11:13.634
+vou colocar aqui,
+
+134
+00:11:13.634 --> 00:11:19.610
+teste vamos botar aqui,
+
+135
+00:11:19.610 --> 00:11:25.744
+pontosCriarTopico certo?
+
+136
+00:11:25.744 --> 00:11:29.450
+então eu vou criar aqui usuário,
+
+137
+00:11:29.450 --> 00:11:36.280
+new Usuario, certo?
+
+138
+00:11:36.280 --> 00:11:41.790
+vou botar nome aqui, nome igual a Guerra,
+
+139
+00:11:41.790 --> 00:11:46.040
+certo?
+
+140
+00:11:46.040 --> 00:11:50.340
+E aí vou também criar ali o meu,
+
+141
+00:11:50.340 --> 00:11:57.373
+note várias coisas que eu preciso fazer
+aqui, para preparar o meu teste certo?
+
+142
+00:11:57.373 --> 00:12:03.380
+Então eu preciso criar o registro
+de pontos para criar ele, eu
+
+143
+00:12:03.380 --> 00:12:10.188
+estou percebendo aqui que eu vou precisar
+da minha calculadora bônus, certo?
+
+144
+00:12:10.188 --> 00:12:15.720
+Então eu vou vir aqui CalculadoraBonus
+
+145
+00:12:15.720 --> 00:12:20.690
+new CalculadoraBonus
+
+146
+00:12:20.690 --> 00:12:25.520
+a princípio eu não vou adicionar
+o bônus do dia lá, certo?
+
+147
+00:12:25.520 --> 00:12:30.280
+Aí sim eu vou fazer aqui rp.
+
+148
+00:12:30.280 --> 00:12:36.525
+criarUmTopico, quem está
+criando é o Usuario, ta?
+
+149
+00:12:36.525 --> 00:12:43.410
+E aí eu tenho que ver se ele
+somou 5 pontos ali no Usuario.
+
+150
+00:12:43.410 --> 00:12:47.190
+Então vou fazer o assertEquals aqui, u.
+
+151
+00:12:47.190 --> 00:12:52.806
+pontos, isso aqui tem
+que ser igual a 5 certo?
+
+152
+00:12:52.806 --> 00:12:57.590
+Então salvo aqui, vou rodar o meu teste.
+
+153
+00:12:57.590 --> 00:13:01.600
+Opa, falhou!
+
+154
+00:13:01.600 --> 00:13:09.495
+Está 0, vamos ver porque é que está 0,
+
+155
+00:13:09.495 --> 00:13:16.563
+então está 5 vezes o bônus.
+
+156
+00:13:16.563 --> 00:13:17.143
+Olha!
+
+157
+00:13:17.143 --> 00:13:24.442
+O bônus do dia está sendo inicializado com
+0, vamos começar com ele com 1 ali, certo?
+
+158
+00:13:24.442 --> 00:13:27.342
+Vamos ver se agora funciona.
+
+159
+00:13:27.342 --> 00:13:30.590
+Aí viu como é importante o teste?
+
+160
+00:13:30.590 --> 00:13:31.514
+certo?
+
+161
+00:13:31.514 --> 00:13:37.446
+Agora funcionou,
+vamos testar aqui os ponstos
+
+162
+00:13:37.446 --> 00:13:42.484
+para criar o topico VIP, certo?
+
+163
+00:13:42.484 --> 00:13:47.063
+Então além de criar o usuário,
+eu vou colocar
+
+164
+00:13:47.063 --> 00:13:52.217
+aqui que o VIP dele é igual a true, certo?
+
+165
+00:13:52.217 --> 00:13:58.860
+Então ele tem que ser 5 vezes ali,
+ele tem que ser 25 pontos.
+
+166
+00:13:58.860 --> 00:13:59.540
+Certo?
+
+167
+00:13:59.540 --> 00:14:05.280
+Então eu vou rodar aqui o teste,
+vamos ver se vai passar os dois agora.
+
+168
+00:14:05.280 --> 00:14:10.202
+[SEM ÁUDIO] Rodou
+
+169
+00:14:10.202 --> 00:14:15.000
+ali os dois testes, com sucesso.
+
+170
+00:14:15.000 --> 00:14:15.861
+Certo?
+
+171
+00:14:15.861 --> 00:14:20.612
+Vamos fazer o teste agora
+aqui do bônus do dia,
+
+172
+00:14:20.612 --> 00:14:28.305
+vamos supor que esse dia esteja com é.
+
+173
+00:14:28.305 --> 00:14:34.140
+vamos botar aqui,
+bonusDoDia, vamos ver aqui,
+
+174
+00:14:34.140 --> 00:14:39.550
+se eu consigo fazer aqui,
+então se eu botar aqui que cb.
+
+175
+00:14:39.550 --> 00:14:44.969
+bonusDoDia se for igual a 3, então tem que
+
+176
+00:14:44.969 --> 00:14:50.100
+ser 15 pontos, então eu vou salvar,
+
+177
+00:14:50.100 --> 00:14:55.435
+vou rodar aqui os testes.
+
+178
+00:14:55.435 --> 00:15:01.186
+Bom, então a gente pode ver aqui
+que os três testes passaram, ta?
+
+179
+00:15:01.186 --> 00:15:07.684
+E aí para terminar ta faltando que
+mistura aqui o VIP com o bonusDoDia,
+
+180
+00:15:07.684 --> 00:15:13.394
+então eu vou colocar aqui o bonusDoDia 2,
+certo?
+
+181
+00:15:13.394 --> 00:15:19.810
+Vou colocar aqui o usuário como VIP certo?
+
+182
+00:15:19.810 --> 00:15:23.424
+Aqui, então vou colocar,
+
+183
+00:15:23.424 --> 00:15:28.087
+CriarTopicoVIP BonusDoDia, certo?
+
+184
+00:15:28.087 --> 00:15:33.069
+então ele tem que ganhar aqui, 50 pontos,
+
+185
+00:15:33.069 --> 00:15:39.260
+que seria 5 vezes do VIP mais,
+vezes 2 do bônus do dia.
+
+186
+00:15:39.260 --> 00:15:41.956
+Ta?
+Então vamos ver aqui se ele está,
+
+187
+00:15:41.956 --> 00:15:43.990
+calculando corretamente.
+
+188
+00:15:43.990 --> 00:15:49.700
+Opa, deu pau aqui,
+vamos ver, está sendo 25,
+
+189
+00:15:49.700 --> 00:15:54.330
+porque será?
+
+190
+00:15:54.330 --> 00:15:58.576
+Vamos ver aqui, aqui!
+
+191
+00:15:58.576 --> 00:16:02.276
+Achamos aqui erro ta?
+
+192
+00:16:02.276 --> 00:16:09.282
+Então o multiplicador está substituindo
+por 5, mas tem que ser vezes 5 certo?
+
+193
+00:16:09.282 --> 00:16:14.980
+Vamos ver agora salvar e rodar os testes
+de novo para ver se vai, agora foi.
+
+194
+00:16:14.980 --> 00:16:17.035
+Ta?
+Então a gente vê que os teste
+
+195
+00:16:17.035 --> 00:16:18.260
+são importantes.
+
+196
+00:16:18.260 --> 00:16:23.345
+A ideia desse exemplo aqui,
+foi mostrar para vocês,
+
+197
+00:16:23.345 --> 00:16:28.510
+como que é importante a gente
+dividir essas responsabilidades,
+
+198
+00:16:28.510 --> 00:16:34.373
+aí eu tenho uma classe que calcula o
+bônus, eu tenho outra classe que registra
+
+199
+00:16:34.373 --> 00:16:39.587
+os pontos, e a gente de quebra viu
+como que é importante testar, que as
+
+200
+00:16:39.587 --> 00:16:45.508
+vezes a princípio até uma lógica simples
+dessa a gente pode pisar na bola, certo?
+
+201
+00:16:45.508 --> 00:16:49.842
+Não vou fazer igual às vezes o professor
+que fala que errou de propósito,
+
+202
+00:16:49.842 --> 00:16:50.904
+acabei errando mesmo,
+
+203
+00:16:50.904 --> 00:16:55.498
+mas a gente viu que acontece, e a gente
+consegue detectar essas questões aí.
+
+204
+00:16:55.498 --> 00:16:58.060
+Muito obrigado por assistir.
+
+205
+00:16:58.060 --> 00:17:04.300
+[MÚSICA]

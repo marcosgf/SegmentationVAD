@@ -1,0 +1,365 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.853
+[MÚSICA] [MÚSICA] Meu
+
+2
+00:00:08.853 --> 00:00:14.672
+nome é Eduardo Guerra e esse é o curso
+de Orientação a Objetos com Java.
+
+3
+00:00:14.672 --> 00:00:18.418
+Hoje vamos estar falando para
+vocês aí sobre os construtores,
+
+4
+00:00:18.418 --> 00:00:23.073
+que é uma coisa extremamente importante
+quando a gente está falando classes.
+
+5
+00:00:23.073 --> 00:00:27.673
+Hoje a gente vai aprender aí o conceito
+de construtores e vamos ver como
+
+6
+00:00:27.673 --> 00:00:30.751
+que a gente cria e utiliza isso Java.
+
+7
+00:00:30.751 --> 00:00:36.180
+Na aula passada a gente aprendeu aqui,
+como que você cria objeto,
+
+8
+00:00:36.180 --> 00:00:40.387
+só que a princípio a gente
+não criou novo construtor,
+
+9
+00:00:40.387 --> 00:00:44.250
+a gente utilizou construtor que
+a gente chama como default,
+
+10
+00:00:44.250 --> 00:00:47.470
+que a gente não precisa passar
+parâmetro nenhum para ele.
+
+11
+00:00:47.470 --> 00:00:50.053
+Mas o que é que são esses construtores?
+
+12
+00:00:50.053 --> 00:00:54.050
+Os construtores eles são
+métodos especiais, certo,
+
+13
+00:00:54.050 --> 00:01:00.366
+que a gente utiliza para criar novos
+objetos, a gente pode ver o duck aqui,
+
+14
+00:01:00.366 --> 00:01:04.601
+na fabricazinha dele,
+produzindo ali vários objetos.
+
+15
+00:01:04.601 --> 00:01:08.005
+Uma coisa legal dos construtores
+é que a partir deles
+
+16
+00:01:08.005 --> 00:01:12.314
+você consegue parametrizar
+a construção dos objetos, ou seja,
+
+17
+00:01:12.314 --> 00:01:17.156
+você fala assim eu quero criar objeto
+mas eu quero criar objeto azul,
+
+18
+00:01:17.156 --> 00:01:21.993
+quero criar objeto vermelho,
+então a partir disso daí eu posso estar
+
+19
+00:01:21.993 --> 00:01:27.449
+passando esse parâmetro na hora de
+construir o meu objeto e aí aquele objeto
+
+20
+00:01:27.449 --> 00:01:32.030
+ele vai ter determinadas características
+que podem diferenciar ele dos outros.
+
+21
+00:01:32.030 --> 00:01:36.130
+Então vamos ver aqui, a gente viu
+aí nas outras aulas a classe Carro,
+
+22
+00:01:36.130 --> 00:01:39.694
+vamos ver como é que fica aí
+o construtor da classe Carro.
+
+23
+00:01:39.694 --> 00:01:43.828
+A gente pode ver aqui, por exemplo,
+a gente colocou aqui Carro,
+
+24
+00:01:43.828 --> 00:01:48.160
+passou como parâmetro a potência e
+a gente também está utilizando esse
+
+25
+00:01:48.160 --> 00:01:52.500
+construtor para inicializar por exemplo,
+a variável velocidade 0,
+
+26
+00:01:52.500 --> 00:01:55.984
+sendo que todo o carro sempre
+vai começar a velocidade 0.
+
+27
+00:01:55.984 --> 00:01:59.348
+Eu vou sair pouco aqui para
+a gente poder ver melhor né?
+
+28
+00:01:59.348 --> 00:02:02.265
+É melhor olhar o código
+do que a minha cara.
+
+29
+00:02:02.265 --> 00:02:06.345
+Vamos lá,
+então a gente pode ver que construtor,
+
+30
+00:02:06.345 --> 00:02:11.290
+ele não precisa ter retorno
+igual a método normal, certo?
+
+31
+00:02:11.290 --> 00:02:16.054
+Ele sempre vai ter o mesmo nome
+da classe e eu aproveito aí para
+
+32
+00:02:16.054 --> 00:02:21.030
+mostrar para vocês,
+pouco da palavra reservada "this"
+
+33
+00:02:21.030 --> 00:02:25.520
+que é utilizado para referenciar
+os elementos da classe.
+
+34
+00:02:25.520 --> 00:02:31.057
+Podendo ser métodos da classe
+ou atributos da classe.
+
+35
+00:02:31.057 --> 00:02:33.885
+Então ali note que por exemplo,
+
+36
+00:02:33.885 --> 00:02:39.235
+eu tenho parâmetro que é do tipo
+inteiro que se chama potência,
+
+37
+00:02:39.235 --> 00:02:44.093
+a minha classe Carro, deixa eu
+voltar aqui para mostrar para vocês,
+
+38
+00:02:44.093 --> 00:02:49.638
+ela também tem atributo chamado
+potência e aí para diferenciar
+
+39
+00:02:49.638 --> 00:02:54.668
+o parâmetro que eu estou
+recebendo do atributo eu estou
+
+40
+00:02:54.668 --> 00:03:01.207
+utilizando "this" para falar eu estou
+usando o potência que é da classe.
+
+41
+00:03:01.207 --> 00:03:05.920
+Então o "this" eu sempre posso
+estar utilizando para referenciar
+
+42
+00:03:05.920 --> 00:03:08.510
+esses elementos aí da classe.
+
+43
+00:03:08.510 --> 00:03:11.498
+Hey, hey, muito bom, muito bom!
+
+44
+00:03:11.498 --> 00:03:16.678
+Agora a gente aprendeu aí que
+a gente pode com os construtores
+
+45
+00:03:16.678 --> 00:03:21.743
+estar passando parâmetros na hora de
+construir uma classe, então por exemplo,
+
+46
+00:03:21.743 --> 00:03:26.924
+se eu chamar fizer essa construção que
+está aqui Carro f = new Carro e aí
+
+47
+00:03:26.924 --> 00:03:32.086
+eu passo 10 como parâmetro,
+a gente pode ver aqui que pelo código que
+
+48
+00:03:32.086 --> 00:03:37.203
+eu tinha mostrado antes, eu vou estar
+acertando a potencia com o valor 10.
+
+49
+00:03:37.203 --> 00:03:42.420
+Porque é que a gente conseguiu utilizar
+construtor no exemplo anterior?
+
+50
+00:03:42.420 --> 00:03:46.892
+Porque quando a gente não define
+nenhum construtor a linguagem Java,
+
+51
+00:03:46.892 --> 00:03:50.320
+na hora que compila o seu código,
+o compilador Java,
+
+52
+00:03:50.320 --> 00:03:55.148
+ele vai estar colocando
+construtor vazio e que, vazio,
+
+53
+00:03:55.148 --> 00:03:58.770
+que não faz nada e sem
+nenhum parâmetro para você.
+
+54
+00:03:58.770 --> 00:04:03.200
+Então foi esse construtor vazio que
+a gente utilizou no exemplo da outra aula.
+
+55
+00:04:03.200 --> 00:04:07.187
+Então na verdade, não é que a gente
+criou uma classe sem construtor,
+
+56
+00:04:07.187 --> 00:04:12.186
+é que uma classe que a gente não define
+explicitamente o construtor, ela sempre
+
+57
+00:04:12.186 --> 00:04:18.240
+vai estar recebendo esse construtor
+default já pelo próprio compilador.
+
+58
+00:04:18.240 --> 00:04:23.050
+A gente pode ter os construtores na classe
+mas a gente não é obrigado a ter só.
+
+59
+00:04:23.050 --> 00:04:26.555
+A gente pode ter mais de construtor,
+
+60
+00:04:26.555 --> 00:04:31.560
+se esses construtores tiverem
+tipos de parâmetros diferentes.
+
+61
+00:04:31.560 --> 00:04:36.599
+Então por exemplo eu posso ter aqui
+construtor do Carro recebendo inteiro
+
+62
+00:04:36.599 --> 00:04:41.953
+que é a potencia, eu posso ter que recebe
+uma string que é a marca do Carro ou posso
+
+63
+00:04:41.953 --> 00:04:47.160
+estar recebendo inteiro, uma string,
+o que eu não posso ter é por exemplo,
+
+64
+00:04:47.160 --> 00:04:52.032
+2 construtores, que recebe o inteiro,
+por exemplo, com a velocidade
+
+65
+00:04:52.032 --> 00:04:56.614
+inicial e outro que recebe o inteiro
+com a potência, isso porque eu sempre
+
+66
+00:04:56.614 --> 00:05:01.562
+preciso ter tipos diferentes
+quando defino mais de construtor,
+
+67
+00:05:01.562 --> 00:05:07.019
+mas você pode definir mais do que
+construtor e esses construtores eles podem
+
+68
+00:05:07.019 --> 00:05:12.284
+ter uma lógica diferente de inicialização
+do objeto que você está criando.
+
+69
+00:05:12.284 --> 00:05:15.747
+Então com isso, a gente conseguiu entender
+
+70
+00:05:15.747 --> 00:05:20.008
+pouco mais como é que funciona
+esse conceito dos construtores,
+
+71
+00:05:20.008 --> 00:05:24.541
+principalmente vendo como eles funcionam
+na linguagem Java e como é que eles podem
+
+72
+00:05:24.541 --> 00:05:28.545
+ser utilizados para a partir das
+classes estar criando os objetos.
+
+73
+00:05:28.545 --> 00:05:31.252
+Muito obrigado.
+
+74
+00:05:31.252 --> 00:05:34.320
+Até à próxima aula!
+
+75
+00:05:34.320 --> 00:05:36.130
+[MÚSICA]

@@ -1,0 +1,671 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.895
+Após esse vídeo, você será capaz de
+projetar controlador de avanço e atraso
+
+2
+00:00:03.895 --> 00:00:08.510
+de fase e de compensar o efeito indesejado
+do atraso de fase com avanço adicional.
+
+3
+00:00:08.510 --> 00:00:11.186
+Muito bem,
+está na hora de fazer projeto completo.
+
+4
+00:00:11.186 --> 00:00:14.913
+Continuando nosso política de reciclagem
+de exemplos para contribuir com o
+
+5
+00:00:14.913 --> 00:00:16.181
+nosso meio ambiente,
+
+6
+00:00:16.181 --> 00:00:21.081
+a função de transferência do sistema é:
+200 sobre s s mais 10 s mais 20 e você já
+
+7
+00:00:21.081 --> 00:00:25.155
+deve saber que que o LGR dessa função
+de tranferência tem essa forma.
+
+8
+00:00:25.155 --> 00:00:29.110
+Nós esboçamos esse LGR uma das
+últimas aulas da segunda semana.
+
+9
+00:00:29.110 --> 00:00:31.364
+Como exemplo de LGR de terceira ordem.
+
+10
+00:00:31.364 --> 00:00:35.940
+E você já sabe que o cruzamento do eixo
+imaginário ocorre próximo de mais ou menos
+
+11
+00:00:35.940 --> 00:00:39.706
+14j e que o ponto de saída do eixo
+real está próximo a menos 4,2.
+
+12
+00:00:39.706 --> 00:00:43.824
+Se não lembra direito não tem problema,
+pode traçar o LGR com o MATLAB.
+
+13
+00:00:43.824 --> 00:00:48.324
+G igual a zpk, nada, 0, menos 10,
+menos 20, 200, rlocus G.
+
+14
+00:00:48.324 --> 00:00:53.145
+Antes de fazermos nosso projeto de
+avanço de atraso de fase talvez você
+
+15
+00:00:53.145 --> 00:00:56.949
+esteja se perguntando: O que fazer
+se a fase de G de quadradinho d for
+
+16
+00:00:56.949 --> 00:00:58.700
+maior que menos 180 graus?
+
+17
+00:00:58.700 --> 00:01:03.535
+Por exemplo, menos 170 graus projetamos
+controlador de atraso de fase?
+
+18
+00:01:03.535 --> 00:01:04.253
+Não.
+
+19
+00:01:04.253 --> 00:01:09.106
+Fase de G de quadradinho d
+maior que 180 graus normalmente
+
+20
+00:01:09.106 --> 00:01:13.460
+indica que o LGR está dentro da região
+que atende ao requisito de desempenho.
+
+21
+00:01:13.460 --> 00:01:17.855
+Por exemplo, digamos que o nosso requisito
+de desempenho seja instante de pico de 360
+
+22
+00:01:17.855 --> 00:01:22.530
+milisegundos e tempo de acomodação para
+5 porcento do valor final de 1 segundo,
+
+23
+00:01:22.530 --> 00:01:25.917
+com isso precisamos ter ômega
+d igual a 5 e sigma igual a 3,
+
+24
+00:01:25.917 --> 00:01:28.596
+e o nosso quadradinho d
+será menos 3 mais 5j.
+
+25
+00:01:28.596 --> 00:01:32.600
+A região que atende esses requisitos
+de desempenho no plano s é essa,
+
+26
+00:01:32.600 --> 00:01:36.360
+e notamos que o LGR passa
+pelo interior da região.
+
+27
+00:01:36.360 --> 00:01:41.222
+Calculando a fase de G de quadradinho d,
+chagamos a menos 171,9 graus,
+
+28
+00:01:41.222 --> 00:01:45.070
+isso quer dizer que atentemos
+aos requisitos com certa folga.
+
+29
+00:01:45.070 --> 00:01:50.780
+Vamos mudar o polo desejado para
+quadradinho d igual a menos 3,3 mais 5,5j.
+
+30
+00:01:50.780 --> 00:01:54.765
+Assim tanto o instante de pico
+quanto o tempo de acomodação,
+
+31
+00:01:54.765 --> 00:01:57.520
+ficarão menores que o
+estipulado pelo requisito.
+
+32
+00:01:57.520 --> 00:02:01.476
+Calculando a fase para o novo polo
+desejado chegamos a menos 178,6 graus,
+
+33
+00:02:01.476 --> 00:02:05.850
+ainda não chegamos a menos 180 graus,
+mas estamos bem próximos.
+
+34
+00:02:05.850 --> 00:02:09.916
+Você pode alterar os polos novamente
+para tentar chegar mais perto dos menos
+
+35
+00:02:09.916 --> 00:02:10.750
+180 graus.
+
+36
+00:02:10.750 --> 00:02:14.979
+Mas essa fase já é suficiente para
+calcularmos o ganho, calculando o ganho
+
+37
+00:02:14.979 --> 00:02:20.735
+para quadradinho d igual a menos 3,3 mais
+5,5j, chegamos a k aproximadamente 4,9.
+
+38
+00:02:20.735 --> 00:02:25.712
+Utilizando esse valor de k obtemos T
+de s igual a 900 sobre s ao cubo mais
+
+39
+00:02:25.712 --> 00:02:28.897
+30s ao quadrado mais 200s mais 980,
+
+40
+00:02:28.897 --> 00:02:34.550
+e os polos são menos 23,3 e
+menos 3,4 mais ou menos 5,54j.
+
+41
+00:02:34.550 --> 00:02:38.630
+Bem próximo dos polos desejados e
+até melhores que os polos desejados,
+
+42
+00:02:38.630 --> 00:02:42.582
+então se a fase de G de quadradinho d for
+maior que menos 180 graus,
+
+43
+00:02:42.582 --> 00:02:46.670
+exija pouco mais do sistema apertando
+os requisitos de desempenho.
+
+44
+00:02:46.670 --> 00:02:47.345
+Para isso,
+
+45
+00:02:47.345 --> 00:02:51.680
+use requisitos de overshoot e tempos
+menores que os requisitos originais.
+
+46
+00:02:51.680 --> 00:02:55.250
+Voltemos ao nosso exemplo de
+projeto de avanço e atraso de fase.
+
+47
+00:02:55.250 --> 00:02:59.920
+Agora nossos requisitos de desempenho
+são overshoot de 16,3 porcento,
+
+48
+00:02:59.920 --> 00:03:03.983
+e tempo de subida de 0 a 100
+porcento de 300 milisegundos,
+
+49
+00:03:03.983 --> 00:03:08.210
+e erro regime permanente para uma
+entrada rampa unitária de 0,02.
+
+50
+00:03:08.210 --> 00:03:13.607
+Com isso temos csi igual a 0,5,
+e ômega d igual a 7 e kv igual a 50,
+
+51
+00:03:13.607 --> 00:03:18.607
+e o quadradinho d será menos 4,04
+mais 7j Calculando a fase de
+
+52
+00:03:18.607 --> 00:03:22.930
+G de quadradinho d,
+chegamos a menos 193,3 graus.
+
+53
+00:03:22.930 --> 00:03:27.120
+Precisamos então de avanço
+de fase de 13,3 graus.
+
+54
+00:03:27.120 --> 00:03:32.185
+Vamos usar o 0 do controlador de avanço de
+fase para cancelar dos polos do sistema.
+
+55
+00:03:32.185 --> 00:03:36.733
+Podemos cancelar o polo menos 10 ou o
+polo menos 20, mas não o polo na origem.
+
+56
+00:03:36.733 --> 00:03:37.250
+Porque?
+
+57
+00:03:37.250 --> 00:03:41.508
+Porque se cancelarmos o polo na origem,
+o sistema passa a ser do tipo 0 e teremos
+
+58
+00:03:41.508 --> 00:03:44.830
+erro regime permanente para
+entrada rampa que diverge.
+
+59
+00:03:44.830 --> 00:03:48.630
+Vamos cancelar o polo menos 10,
+depois você pode projetar
+
+60
+00:03:48.630 --> 00:03:52.150
+outro controlador tentando
+cancelar o polo menos 20.
+
+61
+00:03:52.150 --> 00:03:55.952
+Nosso controlador de avanço de
+fase está então C de s igual a k,
+
+62
+00:03:55.952 --> 00:03:57.570
+s mais 10 sobre s mais b.
+
+63
+00:03:57.570 --> 00:04:01.320
+E já sabemos que a fase com
+relação ao 0 é 49,6 graus,
+
+64
+00:04:01.320 --> 00:04:04.731
+nós calculamos essa fase
+para o polo menos 10,
+
+65
+00:04:04.731 --> 00:04:09.780
+e a fase com relação ao polo do
+controlador deve ser menos 36,3 graus.
+
+66
+00:04:09.780 --> 00:04:12.853
+Note que se já decidirmos
+que polo vamos cancelar,
+
+67
+00:04:12.853 --> 00:04:16.201
+nem precisamos calcular a fase
+com relação a esse polo.
+
+68
+00:04:16.201 --> 00:04:21.173
+Podemos calcular todas as outras fases e o
+que falta para chegar a menos 180 graus é
+
+69
+00:04:21.173 --> 00:04:23.349
+a fase do polo do controlador.
+
+70
+00:04:23.349 --> 00:04:28.840
+Calculando b obtemos 13,57 e
+calculando o ganho obtemos 8,33.
+
+71
+00:04:28.840 --> 00:04:35.526
+O controlador de avanço de fase fica
+então 8,33 s mais 10 sobre s mais 13,57.
+
+72
+00:04:35.526 --> 00:04:40.599
+Se você similar a resposta ao degrau com
+esse controlador verá overshoot é de 15,3
+
+73
+00:04:40.599 --> 00:04:45.315
+porcento e que o tempo de subida de 0
+a 100 porcento é de 344 milisegundos.
+
+74
+00:04:45.315 --> 00:04:50.258
+Isso porque temos terceiro polo
+menos 25,49 que deixa a resposta
+
+75
+00:04:50.258 --> 00:04:51.944
+mais lenta e mais amortecida.
+
+76
+00:04:51.944 --> 00:04:55.974
+Poderiamos já tentar atender os requisitos
+aumentando ômega n e projetando o
+
+77
+00:04:55.974 --> 00:04:57.650
+controlador de avanço de fase,
+
+78
+00:04:57.650 --> 00:05:01.266
+mas vamos primeiro projetar o
+controlador de atraso de fase.
+
+79
+00:05:01.266 --> 00:05:05.238
+Temos kv aproximadamente 6,14 e
+para atendermos ao requisito de
+
+80
+00:05:05.238 --> 00:05:09.070
+regime precisamos aumentar
+a constante de erro para fator 8,14.
+
+81
+00:05:09.070 --> 00:05:14.084
+Podemos posicionar o 0 do controlador
+do atraso de fase menos 0,4 e
+
+82
+00:05:14.084 --> 00:05:20.870
+obtemos C de s igual a 8,33 s mais
+10 sobre s mais 13,57 vezes mais 0,4
+
+83
+00:05:20.870 --> 00:05:26.710
+sobre s mais 0,5 e temos então,
+controlador de avanço e atraso de fase.
+
+84
+00:05:26.710 --> 00:05:30.180
+O par polo 0 mais próximo da origem
+corresponde ao atraso de fase e ajuste do
+
+85
+00:05:30.180 --> 00:05:31.510
+erro regime permanente.
+
+86
+00:05:31.510 --> 00:05:35.780
+O par polo 0 mais afastado da origem,
+corresponde ao avanço de fase e faz com
+
+87
+00:05:35.780 --> 00:05:38.352
+que o LGR passe pela
+posição do polo desejado.
+
+88
+00:05:38.352 --> 00:05:41.680
+E o ganho faz com que esse
+ponto seja polo malha fechada.
+
+89
+00:05:41.680 --> 00:05:43.664
+Se você simular a resposta ao degrau,
+
+90
+00:05:43.664 --> 00:05:48.315
+verá que temos overshoot de 22 porcento
+e tempo de subida de 328 milisegundos.
+
+91
+00:05:48.315 --> 00:05:49.955
+O controlador de atraso de fase,
+
+92
+00:05:49.955 --> 00:05:53.884
+alterou a posição dos polos malha fechada
+e fez com que o overshoot aumentasse
+
+93
+00:05:53.884 --> 00:05:57.353
+consideravelmente e com que o
+tempo de subida diminuísse pouco.
+
+94
+00:05:57.353 --> 00:06:00.938
+Podemos agora deixar o controlador de
+atraso mais próximo da origem para
+
+95
+00:06:00.938 --> 00:06:01.978
+diminuir o seu efeito,
+
+96
+00:06:01.978 --> 00:06:04.950
+mas isso faria o erro convergir
+mais lentamente para o valor final.
+
+97
+00:06:04.950 --> 00:06:09.414
+Ao invés disso, vamos alterar a parte de
+avanço de fase alterando a posição dos
+
+98
+00:06:09.414 --> 00:06:11.444
+polos desejados malha fechada.
+
+99
+00:06:11.444 --> 00:06:15.533
+O atraso de fase fez com que o overshoot
+aumentasse de 15,3 para 22 porcento.
+
+100
+00:06:15.533 --> 00:06:19.577
+Ao invés de projetar para overshoot
+de 16,3 porcento vamos projetar para
+
+101
+00:06:19.577 --> 00:06:21.580
+overshoot de cerca de 12 porcento.
+
+102
+00:06:21.580 --> 00:06:25.938
+Com sorte, o terceiro polo e o atraso
+farão com que o overshoot fique abaixo dos
+
+103
+00:06:25.938 --> 00:06:30.402
+16,3 porcento e vamos projetar para
+tempo de subida de 275 milisegundos,
+
+104
+00:06:30.402 --> 00:06:34.280
+na esperança de que ele não seja
+alterado para mais de 300 milisegundos.
+
+105
+00:06:34.280 --> 00:06:37.480
+Temos então,
+csi igual a 0,56 e ômega d igual a 7,9.
+
+106
+00:06:37.480 --> 00:06:42.860
+E nosso quadradinho d será
+menos 5,34 mais 7,87j.
+
+107
+00:06:42.860 --> 00:06:47.356
+Temos então, fase de G de quadradinho
+d igual a menos 211,8 graus,
+
+108
+00:06:47.356 --> 00:06:50.610
+e precisamos de avanço
+de fase de 31,8 graus.
+
+109
+00:06:50.610 --> 00:06:53.015
+Cancelando novamente o polo menos 10,
+
+110
+00:06:53.015 --> 00:06:55.810
+a fase com relação ao
+polo deve ser 27,6 graus.
+
+111
+00:06:55.810 --> 00:06:58.891
+Calculando b, chegamos a 20,4.
+
+112
+00:06:58.891 --> 00:07:04.452
+Calculando o ganho obtemos 13,4
+e chegamos a C de s igual a 13,4
+
+113
+00:07:04.452 --> 00:07:09.859
+s mais 10 sobre s mais 20,4 Com esse
+controlador temos kv igual a 6,6
+
+114
+00:07:09.859 --> 00:07:14.757
+e podemos manter o mesmo atraso chegando
+ao controlador de avanço de atraso de fase
+
+115
+00:07:14.757 --> 00:07:22.310
+C de s é igual 13,4 s mais 10 sobre s mais
+20,4 vezes s mais 0,4 sobre s mais 0,05.
+
+116
+00:07:22.310 --> 00:07:26.882
+Simulando a resposta ao degrau,
+chegamos ao overshoot de 16,9 porcento,
+
+117
+00:07:26.882 --> 00:07:30.605
+e tempo de subida de 300 milisegundos,
+o que para mim está ótimo.
+
+118
+00:07:30.605 --> 00:07:33.930
+Se quiser pode refazer o projeto
+para overshoot pouco menor.
+
+119
+00:07:33.930 --> 00:07:36.128
+Eu estou satisfeito com esse resultado,
+
+120
+00:07:36.128 --> 00:07:39.266
+o projeto de controle de
+sistemas envolve pouco de arte.
+
+121
+00:07:39.266 --> 00:07:41.086
+Não é apenas calcular os números,
+
+122
+00:07:41.086 --> 00:07:45.141
+é preciso fazer alguns ajustes para
+obter realmente a resposta desejada.
+
+123
+00:07:45.141 --> 00:07:50.043
+Ainda bem, se fosse apenas fazer contas o
+MATLAB faria tudo e ninguém precisaria de
+
+124
+00:07:50.043 --> 00:07:52.713
+pessoas que entendessem
+de controle de sistemas.
+
+125
+00:07:52.713 --> 00:07:54.695
+Só de gente que soubesse usar o MATLAB.
+
+126
+00:07:54.695 --> 00:07:56.829
+Se bem que o MATLAB está
+chegando perto disso,
+
+127
+00:07:56.829 --> 00:08:00.450
+mas ainda são necessárias as pessoas que
+realmente entendam de controle de sistemas
+
+128
+00:08:00.450 --> 00:08:02.681
+para pilotar o MATLAB de forma eficiente.
+
+129
+00:08:02.681 --> 00:08:06.726
+Então, felizmente para projetar
+controladores pelo menos por enquanto,
+
+130
+00:08:06.726 --> 00:08:09.245
+ainda é preciso mais do
+que aplicar fórmulas,
+
+131
+00:08:09.245 --> 00:08:12.560
+é preciso saber de onde virão
+as fórmulas e principalmente,
+
+132
+00:08:12.560 --> 00:08:16.654
+que considerações e aproximações foram
+feitas para se chegar a essas fórmulas.
+
+133
+00:08:16.654 --> 00:08:20.098
+Desse modo quando as aproximações não
+são mais válidas somos capazes de
+
+134
+00:08:20.098 --> 00:08:22.490
+fazer os ajustes necessários
+no nosso projeto.
+
+135
+00:08:22.490 --> 00:08:27.061
+É a arte de fazer aproximações e
+entender essas aproximações para usá-las
+
+136
+00:08:27.061 --> 00:08:28.010
+a nosso favor.
+
+137
+00:08:28.010 --> 00:08:32.237
+Agora você já é capaz de projetar
+controlador de avanço e atraso de fase e
+
+138
+00:08:32.237 --> 00:08:36.717
+de compensar o efeito indesejado do
+atraso de fase com o avanço adicional.
+
+139
+00:08:36.717 --> 00:08:40.309
+No próximo vídeo você verá
+projeto de controlador PID.

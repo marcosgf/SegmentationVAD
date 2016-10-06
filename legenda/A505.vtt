@@ -1,0 +1,469 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.892
+[MÚSICA] Meu
+
+2
+00:00:07.892 --> 00:00:10.041
+nome é Eduardo Guerra.
+
+3
+00:00:10.041 --> 00:00:14.345
+Esse é o curso de Orientação
+a Objetos com Java.
+
+4
+00:00:14.345 --> 00:00:19.155
+Hoje eu vou tá falando para vocês sobre
+interfaces na orientação a objetos.
+
+5
+00:00:19.155 --> 00:00:23.968
+A gente vai aprender nessa aula a ideia
+do que é que são interfaces e como
+
+6
+00:00:23.968 --> 00:00:28.562
+elas podem ser utilizadas na
+abstração de comportamento.
+
+7
+00:00:28.562 --> 00:00:32.562
+Imagina o seguinte: eu tenho ali,
+por exemplo,
+
+8
+00:00:32.562 --> 00:00:37.500
+uma classe cavalo, uma classe carro,
+ambos se movem e eu quero
+
+9
+00:00:37.500 --> 00:00:42.125
+modelar essa característica
+comum entre cavalos e carros.
+
+10
+00:00:42.125 --> 00:00:47.319
+Por exemplo, eu tenho, quero fazer
+uma classe corrida, eu posso fazer
+
+11
+00:00:47.319 --> 00:00:52.390
+uma corrida entre qualquer coisa que
+se move, então como é que eu faço isso?
+
+12
+00:00:52.390 --> 00:00:54.940
+Vamos pensar herança.
+
+13
+00:00:54.940 --> 00:01:00.007
+Cavalo não é carro,
+muito menos carro é cavalo.
+
+14
+00:01:00.007 --> 00:01:05.160
+Então não faz sentido eu pegar a classe,
+por exemplo,
+
+15
+00:01:05.160 --> 00:01:10.672
+cavalo estender carro para aproveitar
+a funcionalidade de movimento dela.
+
+16
+00:01:10.672 --> 00:01:14.989
+Nem faz sentido eu pegar a classe
+carro e estender cavalo para
+
+17
+00:01:14.989 --> 00:01:18.718
+aproveitar a característica
+de movimento dela.
+
+18
+00:01:18.718 --> 00:01:21.990
+Não é esse que é o reuso
+da orientação objeto.
+
+19
+00:01:21.990 --> 00:01:25.140
+A gente só deve usar
+a herança quando a subclasse,
+
+20
+00:01:25.140 --> 00:01:29.490
+ela é da superclasse,
+e nesse caso não se aplica.
+
+21
+00:01:29.490 --> 00:01:35.254
+Então o que a gente poderia fazer é,
+de repente, tentar pensar numa superclasse
+
+22
+00:01:35.254 --> 00:01:40.953
+comum que concentrasse essa
+funcionalidade e para que os dois pudessem
+
+23
+00:01:40.953 --> 00:01:46.526
+herdar dessa classe,
+os dois pudessem estender essa classe.
+
+24
+00:01:46.526 --> 00:01:52.250
+Só que o problema é que tanto
+o cavalo quanto o carro,
+
+25
+00:01:52.250 --> 00:01:55.520
+eles já têm uma hierarquia.
+
+26
+00:01:55.520 --> 00:02:00.665
+Então, por exemplo,
+o cavalo ele tem lá uma hierarquia,
+
+27
+00:02:00.665 --> 00:02:05.295
+por exemplo,
+de animais que talvez nem todos se
+
+28
+00:02:05.295 --> 00:02:09.818
+movam e o carro já vem de uma
+outra hierarquia de veículos.
+
+29
+00:02:09.818 --> 00:02:15.297
+Como a gente viu a herança, principalmente
+Java, ela não pode ser utilizada duas
+
+30
+00:02:15.297 --> 00:02:21.196
+vezes, então eu não consigo pegar e falar
+assim " eu vou criar aqui uma classe comum
+
+31
+00:02:21.196 --> 00:02:26.813
+entre carro e cavalo e vou fazer com
+que os dois herdem também dela".
+
+32
+00:02:26.813 --> 00:02:29.007
+E então não vou conseguir fazer isso.
+
+33
+00:02:29.007 --> 00:02:30.458
+A linguagem não me permite.
+
+34
+00:02:30.458 --> 00:02:35.085
+Se a gente pensar e falar assim: bom
+essas classes elas têm uma coisa
+
+35
+00:02:35.085 --> 00:02:38.380
+comum mas não têm a ver
+com o que elas são.
+
+36
+00:02:38.380 --> 00:02:43.465
+Que o relacionamento da herança ele
+tem haver com o que a classe é.
+
+37
+00:02:43.465 --> 00:02:47.080
+Quando a gente fala que é uma
+classe A estende uma classe B,
+
+38
+00:02:47.080 --> 00:02:49.754
+é porque a classe A é da classe B.
+
+39
+00:02:49.754 --> 00:02:54.660
+Nesse caso o que essas classes
+têm comum é comportamento.
+
+40
+00:02:54.660 --> 00:03:02.240
+Independente de uma ser animal outra ser
+veículo, elas se comportam da mesma forma.
+
+41
+00:03:02.240 --> 00:03:06.310
+Na verdade não precisam se comportar
+completamente da mesma forma
+
+42
+00:03:06.310 --> 00:03:09.590
+mas tem uma parte do
+comportamento delas que é comum.
+
+43
+00:03:09.590 --> 00:03:11.425
+Como que a gente faz isso?
+
+44
+00:03:11.425 --> 00:03:13.428
+Agora temos as interfaces.
+
+45
+00:03:13.428 --> 00:03:19.832
+Da mesma forma que a gente pode utilizar
+uma classe para abstrair conceito,
+
+46
+00:03:19.832 --> 00:03:25.021
+a interface ela é feita para
+abstrair comportamento.
+
+47
+00:03:25.021 --> 00:03:28.248
+É como se a interface
+fosse tipo de contrato.
+
+48
+00:03:28.248 --> 00:03:32.327
+No momento você fala assim:
+"Olha o comportamento de mover,
+
+49
+00:03:32.327 --> 00:03:37.350
+toda classe que precisar do comportamento
+de mover, ela vai ter esses métodos",
+
+50
+00:03:37.350 --> 00:03:42.548
+e aí no momento que uma classe
+implementa uma interface
+
+51
+00:03:42.548 --> 00:03:49.751
+nós dizemos que ela está assinando
+o contrato daquela interface,
+
+52
+00:03:49.751 --> 00:03:56.069
+significa que é meio que como ela
+se comprometesse a disponibilizar
+
+53
+00:03:56.069 --> 00:04:01.950
+os métodos daquela interface para
+que outras classes possam utilizar.
+
+54
+00:04:01.950 --> 00:04:06.407
+Recapitulando, a interface ela define
+
+55
+00:04:06.407 --> 00:04:11.557
+comportamento através de conjunto
+de métodos e a classe que
+
+56
+00:04:11.557 --> 00:04:16.575
+implementa aquela interface ela
+meio que assume o compromisso,
+
+57
+00:04:16.575 --> 00:04:21.075
+ela assina contrato de que
+vai prover aqueles métodos.
+
+58
+00:04:21.075 --> 00:04:26.754
+Então, por exemplo,
+no nosso caso ali do cavalo e do veículo,
+
+59
+00:04:26.754 --> 00:04:32.127
+a gente tem ali a classe,
+poderíamos definir uma interface móvel
+
+60
+00:04:32.127 --> 00:04:40.122
+que vai capturar esse comportamento que
+é comum tanto ao carro quanto ao cavalo,
+
+61
+00:04:40.122 --> 00:04:44.583
+e a gente diz que essa classe
+implementa ou realiza essa interface.
+
+62
+00:04:44.583 --> 00:04:50.215
+Então eu posso falar assim: "Olha
+o cavalo ele implementa móvel".
+
+63
+00:04:50.215 --> 00:04:54.783
+Significa que ele tem contrato
+de que vai ter todos os
+
+64
+00:04:54.783 --> 00:04:56.852
+métodos de móvel implementados.
+
+65
+00:04:56.852 --> 00:04:58.136
+Mesma coisa o carro.
+
+66
+00:04:58.136 --> 00:05:00.918
+Posso dizer, usando uma palavra diferente,
+
+67
+00:05:00.918 --> 00:05:07.042
+que o carro realiza móvel e com isso ele
+vai também ter todos os métodos de móvel.
+
+68
+00:05:07.042 --> 00:05:10.851
+Então imagine agora aquela classe
+que eu citei lá no começo,
+
+69
+00:05:10.851 --> 00:05:13.821
+a classe corrida,
+ela pode receber, por exemplo,
+
+70
+00:05:13.821 --> 00:05:18.385
+uma lista de objetos que
+implementam essa interface móvel.
+
+71
+00:05:18.385 --> 00:05:24.052
+Então, por exemplo, essa classe corrida,
+
+72
+00:05:24.052 --> 00:05:27.945
+ela pode tanto receber
+uma lista de cavalos,
+
+73
+00:05:27.945 --> 00:05:32.775
+quanto ela pode receber uma lista
+de carros, quanto ela pode receber
+
+74
+00:05:32.775 --> 00:05:37.665
+uma lista de qualquer objeto que
+implemente essa interface móvel.
+
+75
+00:05:37.665 --> 00:05:42.271
+Então se você pegar e falar
+assim: " quero fazer, sei lá,
+
+76
+00:05:42.271 --> 00:05:45.720
+uma corrida de qualquer outra coisa aí".
+
+77
+00:05:45.720 --> 00:05:50.820
+Você vai pegar a sua classe,
+vai fazer ela implementar essa interface
+
+78
+00:05:50.820 --> 00:05:55.360
+móvel e a partir desse momento ela também
+pode ser passada para a classe corrida.
+
+79
+00:05:55.360 --> 00:05:56.041
+Porquê?
+
+80
+00:05:56.041 --> 00:06:01.500
+Porque ela tem o contrato que a classe
+corrida precisa que uma classe tenha.
+
+81
+00:06:01.500 --> 00:06:02.417
+Como eu falei,
+
+82
+00:06:02.417 --> 00:06:06.870
+qualquer outra classe com essa interface
+móvel pode ser usada na corrida.
+
+83
+00:06:06.870 --> 00:06:11.323
+Esse sim é o verdadeiro
+reuso da orientação objeto.
+
+84
+00:06:11.323 --> 00:06:17.120
+Você poder criar classes novas e
+passar para classes que já existem.
+
+85
+00:06:17.120 --> 00:06:22.000
+Você fazer com que classes que
+já existem possam compreender
+
+86
+00:06:22.000 --> 00:06:24.429
+classes novas e trabalhar com elas.
+
+87
+00:06:24.429 --> 00:06:25.211
+Como isso?
+
+88
+00:06:25.211 --> 00:06:31.996
+Elas compartilhando esse mesmo contrato,
+elas compartilhando essa mesma interface.
+
+89
+00:06:31.996 --> 00:06:36.874
+Então qualquer classe que tenha
+móvel também poderia ser passada
+
+90
+00:06:36.874 --> 00:06:38.229
+ali para a corrida.
+
+91
+00:06:38.229 --> 00:06:43.273
+Não fique chateado porque não viu nenhum
+código porque na próxima aula a gente
+
+92
+00:06:43.273 --> 00:06:48.487
+vai mostrar pouco mais sobre como
+implementar essas interfaces Java,
+
+93
+00:06:48.487 --> 00:06:52.095
+e eu espero que você tenha
+entendido o conceito,
+
+94
+00:06:52.095 --> 00:06:55.866
+as ideias sobre o que é
+uma interface e porque ela
+
+95
+00:06:55.866 --> 00:07:00.428
+é importante e as situações que
+você pode estar aplicando isso aí.
+
+96
+00:07:00.428 --> 00:07:01.605
+Muito obrigado.
+
+97
+00:07:01.605 --> 00:07:06.300
+Na próxima aula a gente fala pouco
+mais da parte prática disso daí.
+
+98
+00:07:06.300 --> 00:07:12.100
+[MÚSICA}

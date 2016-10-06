@@ -1,0 +1,878 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.915
+[MÚSICA] [MÚSICA] Olá!
+
+2
+00:00:08.915 --> 00:00:12.859
+Bem vindo ao Curso de
+Orientação a Objetos com Java.
+
+3
+00:00:12.859 --> 00:00:14.840
+Eu sou Clovis Fernandes.
+
+4
+00:00:14.840 --> 00:00:20.080
+Hoje iremos falar sobre
+identificação de dependência.
+
+5
+00:00:20.080 --> 00:00:27.459
+Geral, as dependências mais complexas,
+visando aplicar uma nova técnica,
+
+6
+00:00:27.459 --> 00:00:32.963
+novo príncipio chamado Law of Demeter,
+Lei de Demeter.
+
+7
+00:00:32.963 --> 00:00:37.769
+Anteriormente nós identificamos
+acoplamento alto devido ao
+
+8
+00:00:37.769 --> 00:00:40.502
+uso de getters e setters de classe,
+
+9
+00:00:40.502 --> 00:00:45.056
+que permitiam expor os dados
+internos pulando o encapsulamento.
+
+10
+00:00:45.056 --> 00:00:50.630
+Na aula de hoje, nós iremos mostrar
+
+11
+00:00:50.630 --> 00:00:55.554
+que getter e setter quando devolvem
+algum objeto, não apenas dado,
+
+12
+00:00:55.554 --> 00:01:00.281
+tipo string, int, double, quando ele
+devolve algum objeto que é atributo de
+
+13
+00:01:00.281 --> 00:01:04.914
+algum relacionamento dentro da aplicação,
+isso também causa
+
+14
+00:01:04.914 --> 00:01:10.405
+acoplamento indevido e indesejado,
+muito grande por sinal.
+
+15
+00:01:10.405 --> 00:01:14.770
+Para isso nós vamos usar,
+aquele princípio, tell don't ask,
+
+16
+00:01:14.770 --> 00:01:19.681
+que foi mostrado anteriormente,
+que continua se aplicando, a técnica de
+
+17
+00:01:19.681 --> 00:01:24.728
+delegação, ou redirecionamento e esse novo
+
+18
+00:01:24.728 --> 00:01:30.296
+princípio que a gente
+costuma chamar de LoD.
+
+19
+00:01:30.296 --> 00:01:35.251
+Law of Demeter,
+para resolver esse acoplamento que ocorre,
+
+20
+00:01:35.251 --> 00:01:41.570
+devido ao acesso a objetos
+através de getters,
+
+21
+00:01:41.570 --> 00:01:45.380
+expõe objetos indevidamente.
+
+22
+00:01:45.380 --> 00:01:51.270
+A ideia dessa aula é meramente
+levantar e apontar esses problemas,
+
+23
+00:01:51.270 --> 00:01:56.979
+nós não vamos mostrar ainda a Law of
+Demeter, nós vamos apenas mostrar,
+
+24
+00:01:56.979 --> 00:02:01.851
+que essa exposição dos objetos
+de classes da aplicação,
+
+25
+00:02:01.851 --> 00:02:06.005
+não é uma coisa boa,
+nós vamos mostrar que isso é mau,
+
+26
+00:02:06.005 --> 00:02:10.300
+é muito ruim para o projeto,
+
+27
+00:02:10.300 --> 00:02:16.373
+porque causa dependências indevidas,
+dependências desnecessárias.
+
+28
+00:02:16.373 --> 00:02:18.402
+Como a gente havia falado,
+
+29
+00:02:18.402 --> 00:02:24.497
+até agora nós mostramos o uso inadequado
+de getters de estruturas de dados,
+
+30
+00:02:24.497 --> 00:02:29.019
+de getters de atributos do tipo int,
+string, double.
+
+31
+00:02:29.019 --> 00:02:33.581
+Nós queremos examinar hoje
+o que pode acontecer,
+
+32
+00:02:33.581 --> 00:02:39.463
+quando o getter devolve objeto de
+uma outra classe da aplicação,
+
+33
+00:02:39.463 --> 00:02:44.414
+eu não estou falando de classes que são do
+próprio Java, como por exemplo, string,
+
+34
+00:02:44.414 --> 00:02:50.787
+é uma classe do próprio Java, não, isso aí
+é uma classe que te ajuda a desenvolver
+
+35
+00:02:50.787 --> 00:02:56.753
+e você não tem o que fazer, porque ela
+é dada, ela é imposta pela linguagem.
+
+36
+00:02:56.753 --> 00:03:02.710
+Então, se eu tenho uma outra estrutura de
+dados também como BigDecimal, por exemplo,
+
+37
+00:03:02.710 --> 00:03:07.649
+que eu vou usar para demonstrar depois,
+não tem o que fazer, então a exposição de
+
+38
+00:03:07.649 --> 00:03:12.505
+objetos que são usados como básicos para
+a linguagem Java, isso não nos interessa,
+
+39
+00:03:12.505 --> 00:03:17.569
+o que nos interessa aqui é o
+getter que devolve objetos de
+
+40
+00:03:17.569 --> 00:03:23.319
+classes que eu estou projetando na minha
+aplicação, que são da minha aplicação.
+
+41
+00:03:23.319 --> 00:03:28.596
+Eu vou usar como exemplo sistema de
+logística, que eu estou chamando de SL,
+
+42
+00:03:28.596 --> 00:03:32.767
+que faz o calculo do frete,
+e para isso ele precisa calcular
+
+43
+00:03:32.767 --> 00:03:37.669
+o peso total da mercadoria,
+é isso que eu vou exemplificar.
+
+44
+00:03:37.669 --> 00:03:42.327
+Eu tenho a classe Frete aqui,
+ela é uma classe que tem o
+
+45
+00:03:42.327 --> 00:03:46.900
+construtor, tem objeto
+do tipo PedidoVenda,
+
+46
+00:03:46.900 --> 00:03:51.387
+internamente tem uma variável de
+instância que então é do tipo pedido,
+
+47
+00:03:51.387 --> 00:03:56.450
+e quando o construtor é executado,
+ele coloca esse parâmetro,
+
+48
+00:03:56.450 --> 00:04:00.590
+esse objeto PedidoVenda pedido,
+
+49
+00:04:00.590 --> 00:04:06.311
+e tenho o método getPesoMedida,
+que volta o peso BigDecimal,
+
+50
+00:04:06.311 --> 00:04:11.432
+que é uma estrutura de dados
+parecida com o double,
+
+51
+00:04:11.432 --> 00:04:16.648
+o integer, mas é uma classe, ela se
+chama BigDecimal, porque ela ajuda você
+
+52
+00:04:16.648 --> 00:04:22.283
+a trabalhar com números muito grandes,
+se você trabalha com integer ou double,
+
+53
+00:04:22.283 --> 00:04:27.416
+pouco tempo isso esgota o tamanho
+máximo na máquina, e com BigDecimal,
+
+54
+00:04:27.416 --> 00:04:32.220
+o número pode ficar até tamanho
+extremamente, excepcionalmente grande.
+
+55
+00:04:32.220 --> 00:04:35.963
+A função da getPesoPedido,
+como está marcado aí,
+
+56
+00:04:35.963 --> 00:04:40.815
+é obter o peso total do pedido,
+para isso ele cria uma variável
+
+57
+00:04:40.815 --> 00:04:45.640
+pesoTotal e inicializa como BigDecimal 0,
+zerado.
+
+58
+00:04:45.640 --> 00:04:52.399
+Aí seguida tem uma lista,
+que é seguida através de for,
+
+59
+00:04:52.399 --> 00:04:58.227
+que eu acesso da classe Pedido,
+o getItens e devolve uma lista de
+
+60
+00:04:58.227 --> 00:05:03.460
+itens de pedido, então eu tenho pedido e
+aí eu tenho uma lista de itens de pedido,
+
+61
+00:05:03.460 --> 00:05:07.680
+normalmente estes itens vão de 0, se não
+tem itens nenhum até 10 por exemplo,
+
+62
+00:05:07.680 --> 00:05:13.009
+20 dependendo do tamanho da nota do
+pedido que você está fazendo, e aí fica
+
+63
+00:05:13.009 --> 00:05:18.737
+personalizado cada item de pedido aí
+dessa lista que o getItens devolve.
+
+64
+00:05:18.737 --> 00:05:24.850
+Bom aí tem uma expressão apenas ali dentro
+que é o pesoTotal igual a pesoTotal.add,
+
+65
+00:05:24.850 --> 00:05:28.960
+pesoTotal tinha começado com 0, eu vou
+somar agora com pesoTotal de cada item,
+
+66
+00:05:28.960 --> 00:05:32.869
+aí eu vou acumulando, ele é acumuladores.
+
+67
+00:05:32.869 --> 00:05:37.230
+Aí eu pego o item e mando
+a mensagem getProduto,
+
+68
+00:05:37.230 --> 00:05:40.683
+então com isso item
+getProduto me volta produto,
+
+69
+00:05:40.683 --> 00:05:45.329
+então lembrem-se que eu tenho
+a classe Frete, a classe pedido,
+
+70
+00:05:45.329 --> 00:05:50.196
+que está associada a pedido,
+o pedido está associado a item de pedido,
+
+71
+00:05:50.196 --> 00:05:54.470
+cada item de pedido tem produto,
+então eu acesso o produto aqui.
+
+72
+00:05:54.470 --> 00:06:01.110
+Aí eu mando, pegar o peso,
+o getPeso é método da classe produto, ele
+
+73
+00:06:01.110 --> 00:06:06.020
+vai me voltar o peso BigDecimal do produto
+que eu estou olhando naquele momento,
+
+74
+00:06:06.020 --> 00:06:12.330
+aí ele multiplica isso com a quantidade,
+multiply aí é método de BigDecimal,
+
+75
+00:06:12.330 --> 00:06:16.416
+passa como parâmetro o getQuantidade
+de item, item é do ItemPedido,
+
+76
+00:06:16.416 --> 00:06:20.240
+então tem a quantidade,
+então estou sendo exposto aqui no caso,
+
+77
+00:06:20.240 --> 00:06:25.885
+a getter também,
+no final ele devolve o peso total.
+
+78
+00:06:25.885 --> 00:06:30.353
+Relembrando então que o objetivo dessa
+classe é obter o peso total do pedido,
+
+79
+00:06:30.353 --> 00:06:35.128
+isso é importante,
+porque quando a gente for refaturar,
+
+80
+00:06:35.128 --> 00:06:40.730
+aperfeiçoar, tirar as dependências
+indevidas que existem aqui,
+
+81
+00:06:40.730 --> 00:06:43.185
+isso vai ser importante, a considerar.
+
+82
+00:06:43.185 --> 00:06:48.040
+As classes que estão envolvidas aqui de
+cara, aquelas que aparecem como classe,
+
+83
+00:06:48.040 --> 00:06:51.260
+é a PedidoVenda, está lá no construtor,
+
+84
+00:06:51.260 --> 00:06:56.163
+está na variável de instância também,
+o BigDecimal, o ItemPedido,
+
+85
+00:06:56.163 --> 00:07:01.088
+então a gente tem essas 3 classes
+que estão, explicitamente aparecem
+
+86
+00:07:01.088 --> 00:07:05.847
+no trecho do código, PedidoVenda,
+BigDecimal e Item pedido.
+
+87
+00:07:05.847 --> 00:07:10.623
+A BigDecimal, como eu havia dito não
+vamos considerar porque ela é uma
+
+88
+00:07:10.623 --> 00:07:15.403
+classe da linguagem Java, do pacote Java,
+então não nos interessa aqui.
+
+89
+00:07:15.403 --> 00:07:19.033
+Será que são apenas essas
+classes que o Frete depende?
+
+90
+00:07:19.033 --> 00:07:24.530
+Quando nós vimos, logo quando eu mostrei
+a classe Frete, não é bem isso não é?
+
+91
+00:07:24.530 --> 00:07:30.519
+Ficou alguma coisa escondida ali, nós
+temos aqui, 4 getters, pedido getItens,
+
+92
+00:07:30.519 --> 00:07:35.272
+item getProduto getProduto,
+depois o getPeso e o getQuantidade,
+
+93
+00:07:35.272 --> 00:07:39.590
+item getQuantidade,
+então são 4 getters que nós temos aqui.
+
+94
+00:07:39.590 --> 00:07:44.484
+O getItens,
+ele é getter da classe Produto e
+
+95
+00:07:44.484 --> 00:07:49.200
+ele volta uma lista de itens de pedido,
+
+96
+00:07:49.200 --> 00:07:55.031
+que podem ser de 0 a número qualquer que
+eu vou exemplificar que vai ser de 0 a 10.
+
+97
+00:07:55.031 --> 00:08:00.131
+O getProduto,
+ele é getter da classe ItemPedido e ele
+
+98
+00:08:00.131 --> 00:08:05.282
+volta o produto que está
+associado aquele item de pedido,
+
+99
+00:08:05.282 --> 00:08:10.440
+já o getPeso,
+ele volta alguma coisa BigDecimal,
+
+100
+00:08:10.440 --> 00:08:16.928
+ele é da classe Produto, o getQuantidade
+ele também volta BigDecimal,
+
+101
+00:08:16.928 --> 00:08:22.627
+poderia não ser, nesse exemplo ele volta
+BigDecimal, e ele é da classe ItemPedido.
+
+102
+00:08:22.627 --> 00:08:27.790
+Então vocês percebam que nós
+falamos de classe Produto,
+
+103
+00:08:27.790 --> 00:08:33.245
+ItemPedido, Venda, e Frete,
+dessa forma, a classe Frete,
+
+104
+00:08:33.245 --> 00:08:38.510
+ela depende explicitamente da PedidoVenda,
+por que é que é explicitamente?
+
+105
+00:08:38.510 --> 00:08:42.450
+Porque a variável de
+instância PedidoVenda,
+
+106
+00:08:42.450 --> 00:08:47.472
+está lá explicitamente Frete,
+ele passa o valor, quem é o pedido naquele
+
+107
+00:08:47.472 --> 00:08:51.975
+momento pelo construtor, então
+explicitamente existe uma dependência.
+
+108
+00:08:51.975 --> 00:08:57.138
+Já as outras classes ItemPedido e Produto,
+elas aparecem de maneira indireta,
+
+109
+00:08:57.138 --> 00:09:01.683
+através do PedidoVenda,
+então a gente chama que isso é uma
+
+110
+00:09:01.683 --> 00:09:07.150
+dependência implícita,
+é uma dependência que ficou ali escondida,
+
+111
+00:09:07.150 --> 00:09:11.891
+que apareceu e provavelmente ela é
+indevida, como nós vamos mostrar.
+
+112
+00:09:11.891 --> 00:09:16.335
+Gostaria de ressaltar getPesoMedida
+que é o nome do método da
+
+113
+00:09:16.335 --> 00:09:21.331
+classe Frete que nós estamos examinando,
+ele é falso getter,
+
+114
+00:09:21.331 --> 00:09:26.325
+ele só tem lá get ali,
+mas na verdade ele é falso getter,
+
+115
+00:09:26.325 --> 00:09:30.101
+porque no fundo ele está
+fazendo muita coisa,
+
+116
+00:09:30.101 --> 00:09:34.939
+nós vamos ver que depois isso é
+inadequado, mas ele está fazendo muita
+
+117
+00:09:34.939 --> 00:09:39.166
+coisa que não corresponde a simples get,
+que é simplesmente
+
+118
+00:09:39.166 --> 00:09:43.280
+voltar o valor de uma determinada
+variável ou voltar determinado objeto.
+
+119
+00:09:43.280 --> 00:09:48.170
+Qual é o problema que nós estamos
+vendo nessa classe Frete?
+
+120
+00:09:48.170 --> 00:09:51.379
+Os dados estão expostos também,
+
+121
+00:09:51.379 --> 00:09:56.433
+eles não são dados do tipo string,
+Double int.
+
+122
+00:09:56.433 --> 00:10:01.610
+Mas eles são dados de relacionamento.
+
+123
+00:10:01.610 --> 00:10:06.245
+São classes,
+são objetos de classes da minha aplicação.
+
+124
+00:10:06.245 --> 00:10:10.753
+Mas são os dados então que
+estão explicitamente expostos.
+
+125
+00:10:10.753 --> 00:10:16.350
+Nós temos algo, o getItens que ele me
+volta uma lista de itens de produto.
+
+126
+00:10:16.350 --> 00:10:19.180
+Então ItemProduto está exposto.
+
+127
+00:10:19.180 --> 00:10:19.881
+Quer dizer,
+
+128
+00:10:19.881 --> 00:10:24.030
+todos os objetos do tipo ItemProduto
+que está naquela lista estão expostos.
+
+129
+00:10:24.030 --> 00:10:30.225
+Através do getProduto, eu tenho objeto
+que está exposto que é o produto.
+
+130
+00:10:30.225 --> 00:10:35.176
+Então isso também não é uma coisa boa.
+
+131
+00:10:35.176 --> 00:10:40.194
+O getPeso que retorna algo do
+tipo big decimal e pertence
+
+132
+00:10:40.194 --> 00:10:45.357
+à classe produto, ele esta expondo
+o valor do peso do produto.
+
+133
+00:10:45.357 --> 00:10:50.960
+Mas no caso, devido à característica
+especial da classe produto,
+
+134
+00:10:50.960 --> 00:10:54.756
+ele é tipo de uma classe que a gente
+chama de repositório de dados.
+
+135
+00:10:54.756 --> 00:10:59.526
+Não tem muito problema do dado peso ser
+exposto porque a classe foi construída
+
+136
+00:10:59.526 --> 00:11:03.946
+exatamente para isso: para manter
+valores do produto e serem
+
+137
+00:11:03.946 --> 00:11:06.660
+expostos para quem necessita.
+
+138
+00:11:06.660 --> 00:11:09.734
+Pode ser feito de alguma outra maneira,
+
+139
+00:11:09.734 --> 00:11:13.300
+aplicando o princípio do "Tell,
+don't ask"?
+
+140
+00:11:13.300 --> 00:11:16.646
+Pode.
+Mas você acaba querendo fazer alguma coisa
+
+141
+00:11:16.646 --> 00:11:21.724
+que faz perder muito mais tempo e
+não tendo retorno muito grande.
+
+142
+00:11:21.724 --> 00:11:27.478
+No caso dessa característica esse
+getPeso não é considerado get,
+
+143
+00:11:27.478 --> 00:11:30.545
+getter, vamos dizer assim maléfico.
+
+144
+00:11:30.545 --> 00:11:34.240
+O getQuantidade é get
+da classe itemProduto.
+
+145
+00:11:34.240 --> 00:11:39.198
+O valor que ele devolve é o BigDecimal
+também mas poderia ser int, por exemplo.
+
+146
+00:11:39.198 --> 00:11:43.255
+Estou mostrando agora para
+vocês o diagrama de classes,
+
+147
+00:11:43.255 --> 00:11:49.183
+incluindo as dependências,
+desse sistema que gira ao redor do frete.
+
+148
+00:11:49.183 --> 00:11:55.729
+Então nós examinamos que tem 4 classes:
+a própria classe frete e tem uma
+
+149
+00:11:55.729 --> 00:12:02.331
+dependência explícita com o PedidoVenda
+ali no getPeso Pedido de Frete.
+
+150
+00:12:02.331 --> 00:12:07.432
+Claramente ele faz uso do getItems e
+existem 3 dependências implícitas que
+
+151
+00:12:07.432 --> 00:12:12.458
+eu diria sim que são ocorrem por causa
+da dependência com a classe pedido
+
+152
+00:12:12.458 --> 00:12:19.142
+venda que é o getProduto de item pedido,
+o getQuantidade de item pedido.
+
+153
+00:12:19.142 --> 00:12:23.964
+Por causa desse acesso à classe
+itemPedido, por causa do getProduto,
+
+154
+00:12:23.964 --> 00:12:28.526
+o frete também depende da classe produto,
+o getPeso, diretamente.
+
+155
+00:12:28.526 --> 00:12:32.776
+Obviamente, como eu estou mostrando aí,
+esse é o antes,
+
+156
+00:12:32.776 --> 00:12:35.813
+os dados estão expostos
+para a classe frete.
+
+157
+00:12:35.813 --> 00:12:39.396
+Essas 3 classes, PedidoVenda,
+ItemPedido e Produto.
+
+158
+00:12:39.396 --> 00:12:41.069
+Isso não é uma coisa boa.
+
+159
+00:12:41.069 --> 00:12:44.903
+Então aplicando essa,
+o princípio "Tell, don't ask",
+
+160
+00:12:44.903 --> 00:12:48.010
+a Law of Demeter e o
+redirecionamento e delegação,
+
+161
+00:12:48.010 --> 00:12:53.420
+a gente elimina essas dependências,
+tanto as explícitas quanto a implícita.
+
+162
+00:12:53.420 --> 00:12:57.812
+Eu não vou mais precisar
+saber a informação por
+
+163
+00:12:57.812 --> 00:13:01.073
+exemplo do getItems para frete.
+
+164
+00:13:01.073 --> 00:13:05.370
+Eu vou resolver isso usando o "Tell,
+don't ask".
+
+165
+00:13:05.370 --> 00:13:08.731
+Eu ordeno para o pedido
+venda obter para mim o peso.
+
+166
+00:13:08.731 --> 00:13:11.732
+O peso total,
+é isso que eu quero que seja feito.
+
+167
+00:13:11.732 --> 00:13:16.940
+O que acabamos de mostrar é
+que o uso indevido do getter
+
+168
+00:13:16.940 --> 00:13:23.937
+que acaba expondo indevidamente
+tanto dados corriqueiros como do
+
+169
+00:13:23.937 --> 00:13:30.252
+tipo double ou objetos de classes da minha
+aplicação, isso não é uma coisa boa.
+
+170
+00:13:30.252 --> 00:13:33.840
+Isso causa essa dependência desnecessária.
+
+171
+00:13:33.840 --> 00:13:40.268
+Então, no exemplo que nós mostramos,
+nós tínhamos 4 dependências explícitas.
+
+172
+00:13:40.268 --> 00:13:45.740
+Nós podemos eliminar essas 4 dependências
+explícitas assim dessa forma.
+
+173
+00:13:45.740 --> 00:13:49.729
+Na verdade ficar só com uma dependência
+boa, mas uma dependência boa,
+
+174
+00:13:49.729 --> 00:13:51.453
+não uma dependência ruim.
+
+175
+00:13:51.453 --> 00:13:55.147
+Com isso a gente conclui
+a nossa aula de hoje,
+
+176
+00:13:55.147 --> 00:14:00.234
+tendo identificado esses
+acoplamentos que são altos e que
+
+177
+00:14:00.234 --> 00:14:05.430
+se multiplicados por outros
+métodos e outras classes,
+
+178
+00:14:05.430 --> 00:14:10.544
+tornam o nosso sistema muito complexo
+
+179
+00:14:10.544 --> 00:14:15.158
+e muito difícil depois
+de mudar e aperfeiçoar.
+
+180
+00:14:15.158 --> 00:14:16.916
+Até a próxima aula.
+
+181
+00:14:16.916 --> 00:14:22.200
+[MÚSICA] [MÚSICA]

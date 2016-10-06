@@ -1,0 +1,687 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.921
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.921 --> 00:00:14.337
+Bem vindo aos Hands-On do curso
+de Orientação a objetos com Java.
+
+3
+00:00:14.337 --> 00:00:15.880
+Eu sou o Eduardo Guerra.
+
+4
+00:00:15.880 --> 00:00:21.020
+Hoje vamos fazer exemplo, pouco mais
+significativo aí de exceções, né?
+
+5
+00:00:21.020 --> 00:00:25.590
+No último Hands-On de exceções, a gente
+mais explorou aí as possibilidades.
+
+6
+00:00:25.590 --> 00:00:32.090
+Hoje a gente vai fazer uma classe que por
+exemplo, faz a autenticação de usuário.
+
+7
+00:00:32.090 --> 00:00:33.117
+Certo?
+
+8
+00:00:33.117 --> 00:00:38.623
+E aí no caso, por exemplo,
+vai dar erro, né?
+
+9
+00:00:38.623 --> 00:00:44.329
+Vai jogar uma exceção caso o usuário
+não consiga fazer o login com sucesso.
+
+10
+00:00:44.329 --> 00:00:50.270
+Aí vamos ver como é que seria aí o teste
+de unidade dessas exceções, está certo?
+
+11
+00:00:50.270 --> 00:00:52.213
+Então, vamos lá.
+
+12
+00:00:52.213 --> 00:00:55.492
+Vou criar aqui novo projeto,
+
+13
+00:00:55.492 --> 00:00:59.931
+vou chamar ele de LogIn, certo?
+
+14
+00:00:59.931 --> 00:01:03.860
+Nesse projeto login,
+
+15
+00:01:03.860 --> 00:01:09.315
+eu vou criar uma classe que é
+representando o usuário certo?
+
+16
+00:01:09.315 --> 00:01:17.500
+É só uma classe assim mais para
+fazer parte do exemplo, né?
+
+17
+00:01:17.500 --> 00:01:20.446
+Ela vai ter
+
+18
+00:01:21.756 --> 00:01:27.040
+uma uma informação aqui,
+
+19
+00:01:27.040 --> 00:01:31.900
+que é simplesmente o login do usuário.
+
+20
+00:01:31.900 --> 00:01:36.850
+Aí eu vou vir aqui, vou criar construtor,
+
+21
+00:01:36.850 --> 00:01:39.721
+vou usar aqui o que o eclipse me dá,
+
+22
+00:01:39.721 --> 00:01:43.690
+vou criar o construtor e
+vou criar o método Get.
+
+23
+00:01:43.690 --> 00:01:45.010
+Certo?
+
+24
+00:01:45.010 --> 00:01:51.920
+Generate Getters só o getter que eu quero,
+não quero que a pessoa possa modificar.
+
+25
+00:01:51.920 --> 00:01:52.421
+Certo?
+
+26
+00:01:52.421 --> 00:01:55.782
+Então essa é aqui a minha classe Usuário,
+certo?
+
+27
+00:01:55.782 --> 00:02:04.110
+E aí eu vou criar uma classe que
+seria o meu autenticador, certo?
+
+28
+00:02:04.110 --> 00:02:09.663
+E aí, essa classe Autenticador,
+ela vai ter
+
+29
+00:02:09.663 --> 00:02:15.719
+método aqui que vai retornar usuário,
+certo?
+
+30
+00:02:15.719 --> 00:02:20.450
+Esse método aqui ele vai se chamar logar,
+certo?
+
+31
+00:02:20.450 --> 00:02:29.170
+E eu vou ter String com login e
+uma String com a senha, certo?
+
+32
+00:02:29.170 --> 00:02:36.390
+Então, eu vou ter uma String com
+login e uma String com a senha.
+
+33
+00:02:36.390 --> 00:02:44.535
+Eu quero que no caso de não conseguir
+autenticar, que ele dê erro, certo?
+
+34
+00:02:44.535 --> 00:02:47.880
+Então eu vou criar a minha exceção.
+
+35
+00:02:47.880 --> 00:02:53.650
+Então, uma classe normal, eu vou
+chamar aqui de LoginExeption, certo?
+
+36
+00:02:53.650 --> 00:02:58.350
+A superclasse vai ser Exception
+
+37
+00:02:58.350 --> 00:03:03.411
+certo?
+
+38
+00:03:03.411 --> 00:03:05.154
+E criei né?
+
+39
+00:03:05.154 --> 00:03:09.920
+Vou pegar aqui,
+vou vir aqui e vou falar: eu quero
+
+40
+00:03:09.920 --> 00:03:13.306
+pegar construtor da superclasse, né?
+
+41
+00:03:13.306 --> 00:03:20.739
+Eu simplesmente quero esse daqui que
+recebe uma String, com a mensagem.
+
+42
+00:03:20.739 --> 00:03:26.100
+Então, esse aqui é
+a minha exceção de login.
+
+43
+00:03:26.100 --> 00:03:31.692
+Eu quero também, uma coisa
+interessante que eu posso fazer aqui,
+
+44
+00:03:31.692 --> 00:03:35.898
+eu posso na minha exceção
+colocar a informação né?
+
+45
+00:03:35.898 --> 00:03:39.670
+De quem falhou o login, né?
+
+46
+00:03:39.670 --> 00:03:43.510
+Então, eu vou colocar aqui o login, né?
+
+47
+00:03:43.510 --> 00:03:48.850
+Eu vou passar ele como parâmetro, certo?
+
+48
+00:03:48.850 --> 00:03:54.438
+E vou fazer this.login igual a login,
+certo?
+
+49
+00:03:54.438 --> 00:03:59.220
+E aí eu venho aqui e vou
+também criar método get
+
+50
+00:03:59.220 --> 00:04:04.053
+que permita eu pegar essa
+
+51
+00:04:04.053 --> 00:04:08.914
+informação ali,
+se eu receber aquele erro, ou seja,
+
+52
+00:04:08.914 --> 00:04:14.428
+quem é que não está conseguindo,
+que não conseguiu se autenticar.
+
+53
+00:04:14.428 --> 00:04:19.082
+E aqui eu vou colocar throws new, new não,
+
+54
+00:04:19.082 --> 00:04:24.753
+aqui eu simplesmente digo que ele joga
+
+55
+00:04:24.753 --> 00:04:30.040
+LoginException, muito bem.
+
+56
+00:04:30.040 --> 00:04:35.773
+E aí, eu vou fazer uma
+autenticação bem deste aqui,
+
+57
+00:04:35.773 --> 00:04:40.540
+normalmente, a gente busca num banco
+de dados ou algum arquivo que você lê,
+
+58
+00:04:40.540 --> 00:04:45.866
+eu simplesmente vou ver
+aqui se o login é igual,
+
+59
+00:04:45.866 --> 00:04:53.560
+na verdade quando é String, a gente não
+usa igual igual a gente usa o equals, né?
+
+60
+00:04:53.560 --> 00:05:00.575
+Se for igual a por exemplo,
+
+61
+00:05:00.575 --> 00:05:06.692
+guerra e a senha for
+
+62
+00:05:06.692 --> 00:05:10.345
+igual opa, de novo,
+
+63
+00:05:10.345 --> 00:05:15.594
+estou fazendo o mesmo erro, equals, né?
+
+64
+00:05:15.594 --> 00:05:21.836
+Ahh, achou que eu fosse dar
+a minha senha para vocês né?
+
+65
+00:05:21.836 --> 00:05:24.290
+[RISOS] A senhadoguerra.
+
+66
+00:05:24.290 --> 00:05:25.902
+Certo?
+
+67
+00:05:25.902 --> 00:05:29.587
+Não vou falar não.
+
+68
+00:05:29.587 --> 00:05:32.257
+O então, se foi igual a isso,
+
+69
+00:05:32.257 --> 00:05:38.190
+então eu vou retornar new usuário, né?
+
+70
+00:05:38.190 --> 00:05:43.350
+Passando como parâmetro ali o login.
+
+71
+00:05:43.350 --> 00:05:44.998
+Certo?
+
+72
+00:05:44.998 --> 00:05:48.462
+Bom, se não foi isso,
+
+73
+00:05:48.462 --> 00:05:53.260
+então eu vou dar throw new LoginException.
+
+74
+00:05:53.260 --> 00:06:00.400
+Isso, passando aqui a mensagem,
+
+75
+00:06:00.400 --> 00:06:06.787
+que é, por exemplo,
+o usuário e a senha não batem,
+
+76
+00:06:06.787 --> 00:06:11.613
+lógico que nenhum sistema
+ia botar não batem,
+
+77
+00:06:11.613 --> 00:06:16.367
+mas aqui vai, e o login vai ser,
+opa, guerra não,
+
+78
+00:06:16.367 --> 00:06:21.440
+vai ser o que está na variável login,
+certo?
+
+79
+00:06:21.440 --> 00:06:25.794
+Então, eu salvo aqui o
+meu autenticador e vamos
+
+80
+00:06:25.794 --> 00:06:30.550
+fazer teste de unidade aqui, está?
+
+81
+00:06:30.550 --> 00:06:34.910
+E então, vou criar novo teste do JUnit,
+
+82
+00:06:34.910 --> 00:06:39.918
+vou chamar de teste de autenticador, né?
+
+83
+00:06:39.918 --> 00:06:44.218
+O eclipse aqui já vai oferecer adicional,
+
+84
+00:06:44.218 --> 00:06:47.925
+o JUnit eu aceito de bom grado, está?
+
+85
+00:06:47.925 --> 00:06:54.792
+Vamos criar o nosso primeiro teste,
+que seria o login com sucesso.
+
+86
+00:06:54.792 --> 00:07:00.410
+Então, eu crio uma
+instância de autenticador,
+
+87
+00:07:00.410 --> 00:07:05.140
+vamos eclipse, por favor, obrigado.
+
+88
+00:07:05.140 --> 00:07:10.067
+new Autenticador e aí
+
+89
+00:07:10.067 --> 00:07:15.114
+eu vou pegar aqui o
+
+90
+00:07:15.114 --> 00:07:19.936
+usuário u de que vem
+
+91
+00:07:19.936 --> 00:07:24.690
+aqui a.logar,
+
+92
+00:07:24.690 --> 00:07:31.332
+aí como login eu vou passar guerra e
+como senha eu vou passar senhadoguerra.
+
+93
+00:07:31.332 --> 00:07:36.580
+Então, nesse caso aqui,
+tem que executar com sucesso, né?
+
+94
+00:07:36.580 --> 00:07:42.840
+E aí eu vou fazer assertEquals, opa,
+
+95
+00:07:42.840 --> 00:07:49.115
+eu espero que o resultado seja guerra,
+
+96
+00:07:49.115 --> 00:07:55.250
+opa, que vai ser o que vai ser
+retornado ali no meu usuário.
+
+97
+00:07:55.250 --> 00:07:58.385
+u.getLogin, está?
+
+98
+00:07:58.385 --> 00:08:02.810
+Note que como o autenticador
+joga uma exceção,
+
+99
+00:08:02.810 --> 00:08:07.830
+ele está reclamando disso aqui eu posso,
+como nesse caso não é para acontecer
+
+100
+00:08:07.830 --> 00:08:12.678
+uma exceção, eu posso simplesmente
+colocar throws ali, certo?
+
+101
+00:08:12.678 --> 00:08:18.312
+Então eu vou vir aqui vou
+rodar aqui o meu teste, né?
+
+102
+00:08:18.312 --> 00:08:23.006
+E vamos ver se ele funciona né?
+
+103
+00:08:23.006 --> 00:08:26.860
+Funcionou, está?
+
+104
+00:08:26.860 --> 00:08:30.580
+Como é que eu faço o teste, por exemplo?
+
+105
+00:08:30.580 --> 00:08:37.155
+É login, eu vou vir aqui no meu @Teste né?
+
+106
+00:08:37.155 --> 00:08:43.010
+E vou colocar, expected,
+ou seja, eu espero que aconteça
+
+107
+00:08:43.010 --> 00:08:47.670
+a exceção, LoginException.
+
+108
+00:08:47.670 --> 00:08:52.820
+No caso aqui,
+eu boto LoginException.class.
+
+109
+00:08:52.820 --> 00:08:58.090
+Eu espero que essa classe de
+exceção seja lançada, né?
+
+110
+00:08:58.090 --> 00:09:03.990
+Posso tirar isso daqui,
+vou botar aqui, senhaerradadoguerra.
+
+111
+00:09:03.990 --> 00:09:04.912
+Certo?
+
+112
+00:09:04.912 --> 00:09:09.790
+Então, rodo aqui, rodo o teste, passou.
+
+113
+00:09:09.790 --> 00:09:10.489
+Está?
+
+114
+00:09:10.489 --> 00:09:11.422
+Porquê?
+
+115
+00:09:11.422 --> 00:09:13.640
+Porque deu a exceção.
+
+116
+00:09:13.640 --> 00:09:19.156
+Agora imagina que eu queira
+fazer esse teste mas eu quero,
+
+117
+00:09:19.156 --> 00:09:23.476
+eu vou colocar aqui,
+loginFalho, ou melhor,
+
+118
+00:09:23.476 --> 00:09:29.284
+eu vou colocar aqui o teste
+da informação do erro, está?
+
+119
+00:09:29.284 --> 00:09:32.655
+Eu quero ver se a exceção,
+
+120
+00:09:32.655 --> 00:09:37.880
+se ela realmente está,
+
+121
+00:09:37.880 --> 00:09:43.570
+se ela realmente está com a informação
+do login que eu quero que ela tenha, né?
+
+122
+00:09:43.570 --> 00:09:44.233
+Certo?
+
+123
+00:09:44.233 --> 00:09:47.840
+Então, eu posso até
+tirar esse throws aqui,
+
+124
+00:09:47.840 --> 00:09:52.845
+ele vai reclamar,
+eu vou vir aqui e vou colocar try/catch.
+
+125
+00:09:52.845 --> 00:09:59.274
+Aqui, se ele não der exceção é para
+falhar, então eu vou colocar fail certo?
+
+126
+00:09:59.274 --> 00:10:03.850
+E aqui eu vou fazer o assert,
+vou roubar ali,
+
+127
+00:10:03.850 --> 00:10:08.644
+copiar pouquinho ali de cima,
+eu vou fazer o assert aqui,
+
+128
+00:10:08.644 --> 00:10:14.151
+para verificar se a minha exceção,
+se o login dela,
+
+129
+00:10:14.151 --> 00:10:19.120
+opa, .getlogin se é o guerra.
+
+130
+00:10:19.120 --> 00:10:24.060
+Então, vou rodar aqui, rodo aqui também.
+
+131
+00:10:24.060 --> 00:10:27.427
+E todos os testes passando.
+
+132
+00:10:27.427 --> 00:10:34.172
+Só para mostrar aqui se fosse
+simplesmente senhadoguerra, né?
+
+133
+00:10:34.172 --> 00:10:37.780
+E eu rodasse ele vai falhar, né?
+
+134
+00:10:37.780 --> 00:10:38.874
+Porquê?
+
+135
+00:10:38.874 --> 00:10:43.260
+Porque ele passou pelo comando fail.
+
+136
+00:10:43.260 --> 00:10:46.860
+Está?
+
+137
+00:10:46.860 --> 00:10:51.240
+Então, voltei aqui, está?
+
+138
+00:10:51.240 --> 00:10:55.340
+Acabei voltando pouquinho demais,
+getLogin,
+
+139
+00:10:55.340 --> 00:10:58.780
+então, estou mostrando para vocês,
+que os testes aqui estão,
+
+140
+00:10:58.780 --> 00:11:04.700
+eles não passam se não acontecer
+a exceção, mesma coisa aqui.
+
+141
+00:11:04.700 --> 00:11:06.580
+Eu vou salvar, né?
+
+142
+00:11:06.580 --> 00:11:09.130
+Coloquei a senha correta.
+
+143
+00:11:09.130 --> 00:11:14.485
+Eu rodo,
+o loginFalho é teste que não vai passar,
+
+144
+00:11:14.485 --> 00:11:18.297
+porque ele vai falar aqui,
+vou até aumentar aqui para vocês verem,
+
+145
+00:11:18.297 --> 00:11:21.320
+eu esperava a exceção
+LogInException e ela não aconteceu.
+
+146
+00:11:21.320 --> 00:11:21.894
+Está?
+
+147
+00:11:21.894 --> 00:11:27.260
+Então, só para a gente finalizar
+rodando tudo com sucesso, certo?
+
+148
+00:11:27.260 --> 00:11:32.156
+Então, espero que neste Hands-On, vocês
+tenham entendido melhor aí a questão de
+
+149
+00:11:32.156 --> 00:11:37.996
+criar as suas exceções, jogar elas casos
+de erro e a fazer os testes de unidade,
+
+150
+00:11:37.996 --> 00:11:43.120
+considerando as exceções, tanto
+quando você quer pegar as informações
+
+151
+00:11:43.120 --> 00:11:47.720
+tanto quando você quer simplesmente saber
+se a exceção aconteceu ou não, certo?
+
+152
+00:11:47.720 --> 00:11:48.730
+Muito obrigado.
+
+153
+00:11:48.730 --> 00:11:56.170
+Até á próxima!

@@ -1,0 +1,1031 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.989
+[MÚSICA] Olá,
+bem vindo ao curso sobre TDD.
+
+2
+00:00:09.989 --> 00:00:12.218
+Eu sou Clovis Fernandes,
+
+3
+00:00:12.218 --> 00:00:18.014
+na aula de hoje iremos falar sobre
+projeto suficiente com modelagem CRC.
+
+4
+00:00:18.014 --> 00:00:22.633
+É possível fazer projeto
+suficiente com modelagem CRC?
+
+5
+00:00:22.633 --> 00:00:26.421
+Essa é a ideia que nós
+iremos mostrar aqui,
+
+6
+00:00:26.421 --> 00:00:31.028
+mas iremos detalhar isso
+nas próximas aulas,
+
+7
+00:00:31.028 --> 00:00:35.789
+hoje só iremos mostrar que é possível.
+
+8
+00:00:35.789 --> 00:00:42.790
+No TDD, nós vimos que não se deve
+empregar o BDUF nem o NoDUF,
+
+9
+00:00:42.790 --> 00:00:49.305
+ou seja, eu não quero empregar
+nem fazer Big Design Up Front,
+
+10
+00:00:49.305 --> 00:00:54.240
+projeto grande antecipadamente, nem NoDUF,
+
+11
+00:00:54.240 --> 00:00:58.481
+No Design Up Front,
+projeto algum antecipadamente.
+
+12
+00:00:58.481 --> 00:01:02.877
+Eu não quero sem nada,
+eu quero o meio termo está certo?
+
+13
+00:01:02.877 --> 00:01:04.760
+O que seja suficiente.
+
+14
+00:01:04.760 --> 00:01:08.650
+O problema é que eu não sei direito
+o que é que é esse suficiente.
+
+15
+00:01:08.650 --> 00:01:14.130
+Na literatura aparece o EDUF,
+
+16
+00:01:14.130 --> 00:01:20.190
+ENOUGH Design Up Front,
+que é o design suficiente antecipadamente.
+
+17
+00:01:20.190 --> 00:01:25.154
+Quero lembrar para vocês que essa sigla,
+ela não é usada na literatura,
+
+18
+00:01:25.154 --> 00:01:28.930
+eu que estou colocando aqui
+apenas para efeitos didáticos,
+
+19
+00:01:28.930 --> 00:01:34.370
+agora o ENOUGH Design Up Front
+aparece vários textos da literatura.
+
+20
+00:01:34.370 --> 00:01:40.160
+O projeto suficiente,
+feito antecipadamente,
+
+21
+00:01:40.160 --> 00:01:45.520
+é para permitir dar início,
+com mais segurança,
+
+22
+00:01:45.520 --> 00:01:50.180
+ao que você precisa fazer,
+ou seja, você não vai olhar tudo,
+
+23
+00:01:50.180 --> 00:01:57.180
+mas você olha algumas coisas a mais,
+você antecipa algumas coisas, está certo?
+
+24
+00:01:57.180 --> 00:02:02.400
+Ou seja, ele vai dar a primeira
+direção com alguma visão do caminho,
+
+25
+00:02:02.400 --> 00:02:05.808
+que vai ser trilhado para
+resolver o seu problema,
+
+26
+00:02:05.808 --> 00:02:09.330
+para implementar a sua aplicação.
+
+27
+00:02:09.330 --> 00:02:13.866
+O resultado final, usando o EDUF,
+
+28
+00:02:13.866 --> 00:02:19.668
+é que eu deverei ter conjunto
+de informações suficiente para
+
+29
+00:02:19.668 --> 00:02:25.326
+eu começar com mais segurança,
+quando eu falo com mais segurança é,
+
+30
+00:02:25.326 --> 00:02:30.692
+o risco menor, o risco menor ter
+problemas no futuro com novos
+
+31
+00:02:30.692 --> 00:02:36.291
+requisitos ou mudanças de requisitos e
+que possa atrapalhar substancialmente
+
+32
+00:02:36.291 --> 00:02:40.960
+o que eu tinha feito anteriormente,
+é isso que eu vou me antecipar.
+
+33
+00:02:40.960 --> 00:02:45.274
+Esse projeto antecipado
+dependendo da aplicação,
+
+34
+00:02:45.274 --> 00:02:49.930
+ele pode ser feito dia,
+uma semana ou até duas semanas,
+
+35
+00:02:49.930 --> 00:02:53.840
+mas ele não deve se estender
+mais do que duas semanas.
+
+36
+00:02:53.840 --> 00:02:56.884
+A ideia, na verdade,
+
+37
+00:02:56.884 --> 00:03:01.690
+é fazer esse projeto antecipado,
+esse EDUF,
+
+38
+00:03:01.690 --> 00:03:07.070
+dentro do sprint ou da
+
+39
+00:03:07.070 --> 00:03:12.700
+iteração preliminar do processo
+ágil que você estiver empregando.
+
+40
+00:03:12.700 --> 00:03:14.591
+Essa é a ideia.
+
+41
+00:03:14.591 --> 00:03:19.972
+O EDUF, que é uma sigla que eu uso,
+está certo?
+
+42
+00:03:19.972 --> 00:03:26.830
+Tem nomes diferentes, por exemplo,
+ele tem esse aí: RDUF,
+
+43
+00:03:26.830 --> 00:03:33.005
+ROUGH Design Up Front,
+que traduzindo toscamente é,
+
+44
+00:03:33.005 --> 00:03:37.536
+projeto tosco ou preliminar
+antecipadamente,
+
+45
+00:03:37.536 --> 00:03:44.215
+ao contrário do EDUF o RDUF é uma
+sigla que aparece na literatura.
+
+46
+00:03:44.215 --> 00:03:49.030
+Aparace tanto o termo
+ROUGH Design Up Front, quanto o RDUF,
+
+47
+00:03:49.030 --> 00:03:56.508
+mas é com o mesmo significado do que eu
+dou no EDUF, os termos são equivalentes.
+
+48
+00:03:56.508 --> 00:04:02.270
+O outro, é termo que era usado antes
+para quando você fazia o NoDUF,
+
+49
+00:04:02.270 --> 00:04:09.540
+quase com pouco projeto, que é o
+Emergent Design, projeto emergente.
+
+50
+00:04:09.540 --> 00:04:15.212
+A diferença agora é que ele passa a ser
+empregado junto com esse conceito
+
+51
+00:04:15.212 --> 00:04:20.936
+de projeto suficiente ou projeto
+tosco preliminar, ou seja,
+
+52
+00:04:20.936 --> 00:04:27.402
+você tem uma base do seu projeto, aí sim,
+ou seja, você olhou pouquinho acima,
+
+53
+00:04:27.402 --> 00:04:33.140
+pouquinho mais a frente do projeto,
+sem se antecipar muito, está certo?
+
+54
+00:04:33.140 --> 00:04:37.730
+Então você já tem uma base
+melhor para fazer agora com
+
+55
+00:04:37.730 --> 00:04:40.024
+pouco mais de segurança, emergir.
+
+56
+00:04:40.024 --> 00:04:45.435
+Emergir significa vir, alguma coisa
+que vai aflorar na superfície.
+
+57
+00:04:45.435 --> 00:04:51.214
+Então meu projeto ele vai emergindo,
+ele vai aparecendo, ou seja,
+
+58
+00:04:51.214 --> 00:04:57.030
+eu faço preliminar,
+EDUF ou RDUF, está certo?
+
+59
+00:04:57.030 --> 00:05:01.656
+E ele se chama agora, poderia se chamar
+agora, esse projeto emergente que já
+
+60
+00:05:01.656 --> 00:05:05.683
+agora incorpora isso,
+ou seja, ele tem essa base,
+
+61
+00:05:05.683 --> 00:05:11.471
+esse olhar adicional que eu
+olho para ter mais condições,
+
+62
+00:05:11.471 --> 00:05:14.695
+condições suficientes para caminhar,
+
+63
+00:05:14.695 --> 00:05:18.360
+para desenvolver meu
+software com mais segurança.
+
+64
+00:05:18.360 --> 00:05:26.099
+Agora meu problema é: o quanto é
+suficiente projetar antecipadamente?
+
+65
+00:05:26.099 --> 00:05:30.244
+O paradoxo é que na modelagem ágil,
+
+66
+00:05:30.244 --> 00:05:36.360
+do seus princípios é que eu
+devo adiar ao máximo possível,
+
+67
+00:05:36.360 --> 00:05:41.570
+tomar decisões, porque ao tomar
+decisões eu estou enrijecendo.
+
+68
+00:05:41.570 --> 00:05:48.175
+Eu posso tomar decisões que ainda
+mantenham alguma coisa flexível,
+
+69
+00:05:48.175 --> 00:05:52.645
+mas outras vão enrijecer, de alguma
+forma é alguma coisa que enrijece.
+
+70
+00:05:52.645 --> 00:05:57.970
+Então, ao tentar procurar
+
+71
+00:05:57.970 --> 00:06:04.000
+estender o máximo possível suficiente,
+mas não tomar decisões,
+
+72
+00:06:04.000 --> 00:06:09.774
+muitas decisões antecipadamente, esse é
+o conflito que eu vou ter que resolver,
+
+73
+00:06:09.774 --> 00:06:12.460
+e isso vai servir para cada aplicação.
+
+74
+00:06:12.460 --> 00:06:18.240
+Isso vai estar na cabeça de cada
+desenvolvedor ou time de desenvolvedores,
+
+75
+00:06:18.240 --> 00:06:23.254
+não é uma coisa que tem uma
+regra que sai de repente
+
+76
+00:06:23.254 --> 00:06:27.380
+e está funcionando para todo mundo,
+não, isso não é dessa forma que ocorre.
+
+77
+00:06:27.380 --> 00:06:30.470
+O que é que eu preciso
+olhar antecipadamente?
+
+78
+00:06:30.470 --> 00:06:36.060
+Eu preciso ter mais informações
+sobre o contexto da aplicação,
+
+79
+00:06:36.060 --> 00:06:40.485
+quem vão ser os usuários,
+quais são os outros softwares que se
+
+80
+00:06:40.485 --> 00:06:44.270
+interconectam com essa aplicação
+que eu estou fazendo, está certo?
+
+81
+00:06:44.270 --> 00:06:49.804
+Eu posso estar fazendo uma aplicação
+para celular, cuja parte de pagamentos
+
+82
+00:06:49.804 --> 00:06:55.347
+vai ter que interagir com sistemas
+bancários ou de cartões, está certo?
+
+83
+00:06:55.347 --> 00:07:00.567
+Então eu preciso levantar os requisitos
+principais, eu não preciso ser completo,
+
+84
+00:07:00.567 --> 00:07:04.140
+levantar todos os requisitos, mas os
+principais, aqueles que são mais óbvios.
+
+85
+00:07:04.140 --> 00:07:06.119
+Eu preciso estar com essas informações,
+
+86
+00:07:06.119 --> 00:07:08.670
+aqueles que são mais
+problemáticos eventualmente.
+
+87
+00:07:08.670 --> 00:07:12.755
+Eu preciso ter alguma estrutura
+da arquitetura do meu sistema.
+
+88
+00:07:12.755 --> 00:07:17.936
+Eu vou ter software que vai
+funcionar telefones Iphone,
+
+89
+00:07:17.936 --> 00:07:22.919
+telefones Android, vai ter cada loja da
+
+90
+00:07:22.919 --> 00:07:28.150
+minha cadeira de lojas e
+das nuvens estar reunindo,
+
+91
+00:07:28.150 --> 00:07:33.134
+armazenando sobre tudo isso base de dados,
+eu vou ter então,
+
+92
+00:07:33.134 --> 00:07:35.030
+essa estrutura de subsistemas.
+
+93
+00:07:35.030 --> 00:07:39.494
+Essas informações,
+eu preciso ter o conjunto de informações
+
+94
+00:07:39.494 --> 00:07:43.996
+suficientes para isso,
+é esse o suficiente e aí eu não posso,
+
+95
+00:07:43.996 --> 00:07:48.440
+por exemplo, eu posso definir
+que vou usar algumas linguagens,
+
+96
+00:07:48.440 --> 00:07:52.192
+por exemplo, no Iphone eu vou
+ter que usar tipo de linguagem,
+
+97
+00:07:52.192 --> 00:07:55.666
+eu sou obrigado a usar aquela,
+ao ter dito que vou fazer
+
+98
+00:07:55.666 --> 00:08:00.402
+Iphone eu já tornei restrito tipo de
+linguagem para programar no Iphone.
+
+99
+00:08:00.402 --> 00:08:04.905
+No Android, eu vou usar Java
+ou alguma framework que me
+
+100
+00:08:04.905 --> 00:08:07.772
+ajude a fazer essa programação.
+
+101
+00:08:07.772 --> 00:08:12.539
+Então, eu vou tomando decisões
+que podem atrapalhar o futuro,
+
+102
+00:08:12.539 --> 00:08:14.978
+ou não, vai depender então, desse,
+
+103
+00:08:14.978 --> 00:08:20.233
+da aplicação e da experiência que o grupo,
+o time de desenvolvedores têm.
+
+104
+00:08:20.233 --> 00:08:26.341
+Então, como eu havia dito, né,
+uma sprint ou iteração de no máximo uma,
+
+105
+00:08:26.341 --> 00:08:31.416
+duas semanas,
+eu teria isso resolvido, está certo?
+
+106
+00:08:31.416 --> 00:08:35.574
+Eu vou obter o conjunto de informações
+suficientes para tocar o projeto sem
+
+107
+00:08:35.574 --> 00:08:39.514
+muitos sobressaltos,
+sem receio de que vai acontecer alguma
+
+108
+00:08:39.514 --> 00:08:44.050
+coisa lá mais para frente,
+porque ao não me demorar muito no projeto,
+
+109
+00:08:44.050 --> 00:08:48.310
+eu não vou engessar muitas coisas,
+eu não vou tomar muitas decisões,
+
+110
+00:08:48.310 --> 00:08:53.448
+além disso eu vou dar uma ênfase maior no,
+o quê fazer,
+
+111
+00:08:53.448 --> 00:08:58.790
+não no, como fazer e principalmente
+sem ter a pretenção de ser completo,
+
+112
+00:08:58.790 --> 00:09:02.768
+eu não vou ter essa
+pretenção de ser completo.
+
+113
+00:09:02.768 --> 00:09:10.416
+Agora eu não posso deixar de levantar
+algumas coisas e isso vai ser importante.
+
+114
+00:09:10.416 --> 00:09:14.990
+Vocês vejam que eu estou
+dando ênfase no what, o que,
+
+115
+00:09:14.990 --> 00:09:18.550
+ou seja, quando eu estiver
+fazendo meu projeto antecipado,
+
+116
+00:09:18.550 --> 00:09:22.830
+é muito importante eu saber o
+que fazer versus o como fazer.
+
+117
+00:09:22.830 --> 00:09:29.640
+O que, se eu consigo dirimir bem isso,
+ele vai mudar pouco no futuro,
+
+118
+00:09:29.640 --> 00:09:35.972
+o como, eu tenho uma miríade de formas de
+como fazer isso e aí estaria engessando,
+
+119
+00:09:35.972 --> 00:09:40.000
+tomando muitas decisões antecipadamente,
+
+120
+00:09:40.000 --> 00:09:44.214
+acarretando problemas posteriores.
+
+121
+00:09:44.214 --> 00:09:49.075
+Na prática, naquela parte de
+projeto que tem a ver com o
+
+122
+00:09:49.075 --> 00:09:54.661
+levantamento dos requisitos,
+eu posso usar casos de uso,
+
+123
+00:09:54.661 --> 00:09:59.860
+histórias de usuário e user stories,
+para definir os requisitos de sistema.
+
+124
+00:09:59.860 --> 00:10:06.656
+Então, por exemplo,
+eu posso estar usando os casos de uso,
+
+125
+00:10:06.656 --> 00:10:10.973
+que são definidos através da UML,
+
+126
+00:10:10.973 --> 00:10:17.525
+diagramas da UML, eu posso estar
+usando os cartões CRC, né, tá certo?
+
+127
+00:10:17.525 --> 00:10:23.010
+A modelagem CRC para definir
+a responsabilidade de colaborações,
+
+128
+00:10:23.010 --> 00:10:26.581
+e eu posso usar uma coisa que
+nós vamos usar mais para frente,
+
+129
+00:10:26.581 --> 00:10:31.230
+bastante, curso mais para frente,
+que são as User Story, está certo?
+
+130
+00:10:31.230 --> 00:10:35.649
+Que ali eu estou mostrando determinado
+formato de uma User Story.
+
+131
+00:10:35.649 --> 00:10:38.900
+Que todos eles vão me ajudar
+a definir os requisitos.
+
+132
+00:10:38.900 --> 00:10:44.465
+Obviamente, nesse meu exemplo,
+eu vou usar a modelagem
+
+133
+00:10:44.465 --> 00:10:51.109
+CRC e obter responsabilidades,
+colaborações e cartões CRC.
+
+134
+00:10:51.109 --> 00:10:55.931
+Obviamente eu também vou usar alguns
+diagramas UML de classes que vão me
+
+135
+00:10:55.931 --> 00:11:00.172
+ajudar a entender melhor, quer dizer,
+eu tenho as colaboração, os cartões,
+
+136
+00:11:00.172 --> 00:11:02.725
+etcetera, mas também vou usar isso.
+
+137
+00:11:02.725 --> 00:11:05.240
+Aí, suponha que eu vá fazer isso.
+
+138
+00:11:05.240 --> 00:11:10.903
+Eu vou usar a modelagem CRC
+como se fosse EDUF, está certo?
+
+139
+00:11:10.903 --> 00:11:13.500
+Quer dizer, projeto antecipado.
+
+140
+00:11:13.500 --> 00:11:17.880
+Vocês lembram quando eu fiz
+o projeto do sistema SAB,
+
+141
+00:11:17.880 --> 00:11:23.025
+eu tentei ser o mais completo possível lá,
+na parte de projeto,
+
+142
+00:11:23.025 --> 00:11:31.280
+que eu fazia análise inclusive
+até de como era a representação,
+
+143
+00:11:31.280 --> 00:11:36.146
+os códigos implícitos das
+responsabilidades que permitiam que
+
+144
+00:11:36.146 --> 00:11:39.730
+eu descobrisse novas responsabilidades,
+novas colaborações, está certo.
+
+145
+00:11:39.730 --> 00:11:41.547
+Aqui eu não preciso disso.
+
+146
+00:11:41.547 --> 00:11:45.260
+Eu vou fazer uma coisa mais simplificada,
+está certo.
+
+147
+00:11:45.260 --> 00:11:50.780
+Eu vou usar os cartões CRC ou as classes
+correspondentes, né, a cada cartão,
+
+148
+00:11:50.780 --> 00:11:56.094
+também associadas a esses
+diagramas de classe da UML.
+
+149
+00:11:56.094 --> 00:12:01.299
+Eu poderei fazer,
+como eu vou mostrar aulas no futuro,
+
+150
+00:12:01.299 --> 00:12:07.500
+refatorações, olhamos apenas o código
+de produção e o código de testes.
+
+151
+00:12:07.500 --> 00:12:08.418
+Está certo?
+
+152
+00:12:08.418 --> 00:12:13.757
+Então no sistema SAB, o sistema de
+automação da biblioteca que eu fiz no CRC,
+
+153
+00:12:13.757 --> 00:12:20.985
+eu vou apresentar para vocês o código da
+implementação deles, do SAB, e aí vocês,
+
+154
+00:12:20.985 --> 00:12:26.280
+vou usar isso também como pretexto
+para fazer as refatorações.
+
+155
+00:12:26.280 --> 00:12:31.617
+Obviamente muitas dessas refatorações
+
+156
+00:12:31.617 --> 00:12:36.990
+vai ajudar muito olhar as representações
+de relacionamento, de associações
+
+157
+00:12:36.990 --> 00:12:41.700
+entre as classes correspondentes do meu
+exemplo, que no caso vai ser o SAB.
+
+158
+00:12:41.700 --> 00:12:46.375
+Ele vai poder facilitar ou fazer
+com que você entenda melhor
+
+159
+00:12:46.375 --> 00:12:51.050
+a técnica de refatoração
+empregada à proposta dado momento.
+
+160
+00:12:51.050 --> 00:12:54.380
+O que é que nós estamos propondo aqui?
+
+161
+00:12:54.380 --> 00:12:59.523
+Nós vamos fazer projeto
+simplificado que corresponderia ao
+
+162
+00:12:59.523 --> 00:13:05.125
+que eu estava chamando de EDUF,
+Enough Design up Front,
+
+163
+00:13:05.125 --> 00:13:10.447
+projeto suficiente e simplificado
+antecipadamente, que vai ser
+
+164
+00:13:10.447 --> 00:13:16.087
+uma modelagem CRC pouquinho mais simples,
+que vai anteceder a modelagem ágil,
+
+165
+00:13:16.087 --> 00:13:20.670
+que no nosso caso na modelagem ágil,
+nós estaremos usando o TDD.
+
+166
+00:13:20.670 --> 00:13:25.180
+Então, com base nas responsabilidades,
+
+167
+00:13:25.180 --> 00:13:31.569
+eu vou começar a fazer a propor os testes,
+com os
+
+168
+00:13:31.569 --> 00:13:38.410
+testes eu vou construindo os códigos para
+as classes que eu estiver representando.
+
+169
+00:13:38.410 --> 00:13:42.672
+No meu caso do SAB, eu estaria
+trabalhando com classe biblioteca,
+
+170
+00:13:42.672 --> 00:13:44.635
+classe livro e classe usuário.
+
+171
+00:13:44.635 --> 00:13:49.220
+E eu estaria então, trabalhando com
+as responsabilidades correspondentes
+
+172
+00:13:49.220 --> 00:13:54.142
+e eu iria fazendo os testes e iria
+criando códigos diferentemente
+
+173
+00:13:54.142 --> 00:13:55.564
+do que eu fiz no meu exemplo.
+
+174
+00:13:55.564 --> 00:13:58.540
+No meu exemplo,
+eu fiz usando uma modelagem tradicional.
+
+175
+00:13:58.540 --> 00:14:04.219
+Eu fiz todo o projeto com a modelagem CRC,
+
+176
+00:14:04.219 --> 00:14:09.590
+implementei todo o código e só
+depois é que eu fui fazer o teste.
+
+177
+00:14:09.590 --> 00:14:16.080
+A única diferença é que eu fiz
+teste como se fosse usando
+
+178
+00:14:16.080 --> 00:14:21.462
+a técnica de cada teste que eu ia fazendo,
+
+179
+00:14:21.462 --> 00:14:25.163
+eu ia testando primeiro ele a primeiro,
+
+180
+00:14:25.163 --> 00:14:28.654
+para no final ter o conjunto
+de teste todos, está certo,
+
+181
+00:14:28.654 --> 00:14:33.750
+então eu fiz desta maneira
+misturando pouco as técnicas.
+
+182
+00:14:33.750 --> 00:14:37.376
+Mas, o que fica aqui,
+eu estou usando a modelagem CRC de
+
+183
+00:14:37.376 --> 00:14:40.860
+uma maneira simplificado para
+obter as responsabilidades,
+
+184
+00:14:40.860 --> 00:14:45.375
+as colaborações e com isso então
+eu posso definir os testes,
+
+185
+00:14:45.375 --> 00:14:51.670
+eu posso começar a fazer o ciclo
+do TDD de fazer o teste falhar,
+
+186
+00:14:51.670 --> 00:14:56.494
+construir teste que faça ele funcionar,
+refatorar e etc.
+
+187
+00:14:56.494 --> 00:15:02.128
+Então eu vou ter refatorações que eu faço
+no ciclo, que eu posso fazer no ciclo,
+
+188
+00:15:02.128 --> 00:15:06.690
+ou refatorações adicionais de
+melhoria da estrutura do meu código.
+
+189
+00:15:06.690 --> 00:15:08.121
+O que pode acontecer?
+
+190
+00:15:08.121 --> 00:15:10.756
+Eu fiz antecipado, simplesmente,
+
+191
+00:15:10.756 --> 00:15:14.810
+dado momento e aí começam
+a aparecer alguns novos requisitos,
+
+192
+00:15:14.810 --> 00:15:20.232
+ou mudanças de requisitos que o meu
+projeto TDD começa a ficar complexo.
+
+193
+00:15:20.232 --> 00:15:22.674
+O que é que eu faço então?
+
+194
+00:15:22.674 --> 00:15:30.612
+Eu volto a fazer alguma coisa também como
+se fosse uma EDUF, reprojeto simplificado.
+
+195
+00:15:30.612 --> 00:15:35.810
+Eu volto lá para o CRC para
+trabalhar como se fossem os cartões
+
+196
+00:15:35.810 --> 00:15:40.740
+CRC para aqueles novos requisitos
+para tentar esclarecer melhor.
+
+197
+00:15:40.740 --> 00:15:45.403
+Só que agora ao invés de levar uma semana
+ou duas, como a gente está propondo no
+
+198
+00:15:45.403 --> 00:15:49.886
+começo, nesse dado momento eu vou
+levar 1 hora, meia hora, 2 horas.
+
+199
+00:15:49.886 --> 00:15:52.415
+Pouco tempo que eu retrabalho,
+
+200
+00:15:52.415 --> 00:15:57.110
+eu volto para trabalhar na modelagem
+e volto de novo para o TDD.
+
+201
+00:15:57.110 --> 00:16:00.550
+Entendi o que eu tinha que fazer,
+aí eu volto para lá.
+
+202
+00:16:00.550 --> 00:16:01.412
+Entendeu?
+
+203
+00:16:01.412 --> 00:16:06.302
+Então eu posso fazer essa mistura,
+que eu sempre vou recorrer a esse
+
+204
+00:16:06.302 --> 00:16:10.751
+projeto ou reprojeto simplificado,
+toda vez que for necessário.
+
+205
+00:16:10.751 --> 00:16:15.255
+Eu faço uma vez, pouquinho mais longo,
+olho pouquinho mais para frente,
+
+206
+00:16:15.255 --> 00:16:18.701
+mas num dado momento eu posso
+recorrer de novo à técnica.
+
+207
+00:16:18.701 --> 00:16:21.480
+Isso é muito usual, na verdade.
+
+208
+00:16:21.480 --> 00:16:25.930
+Com isso, nessa aula,
+
+209
+00:16:25.930 --> 00:16:32.534
+você terá entendido que é possível fazer
+projeto suficiente com modelagem CRC.
+
+210
+00:16:32.534 --> 00:16:37.230
+Nós só não estamos mostrando como fazer,
+vai ser fruto das próximas aulas.
+
+211
+00:16:37.230 --> 00:16:40.892
+Nós iremos mostrar com base
+nas responsabilidades,
+
+212
+00:16:40.892 --> 00:16:45.287
+como é que eu vou criando os testes,
+para entrar no ciclo do TDD.
+
+213
+00:16:45.287 --> 00:16:48.400
+É isso que nós iremos
+fazer nas próximas aulas.
+
+214
+00:16:48.400 --> 00:16:51.650
+Obrigado.
+
+215
+00:16:51.650 --> 00:16:54.900
+[MÚSICA]

@@ -1,0 +1,911 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.196
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:09.196 --> 00:00:13.378
+bem vindo ao curso de
+Orientação a Objetos com Java.
+
+3
+00:00:13.378 --> 00:00:15.480
+Eu sou Clóvis Fernandes,
+
+4
+00:00:15.480 --> 00:00:19.917
+e nesta aula iremos apresentar
+a parte 2 da modelagem CRC.
+
+5
+00:00:19.917 --> 00:00:24.444
+Nesta parte iremos identificar
+completamente as classes,
+
+6
+00:00:24.444 --> 00:00:27.074
+no passo anterior, até o passo 2,
+
+7
+00:00:27.074 --> 00:00:31.679
+nós identificamos apenas os nomes
+das classes e a sua descrição.
+
+8
+00:00:31.679 --> 00:00:36.697
+Agora iremos complementar isso
+identificando as responsabilidades e
+
+9
+00:00:36.697 --> 00:00:42.725
+as colaborações de cada uma das 3 classes
+que nós levantamos na aula anterior.
+
+10
+00:00:42.725 --> 00:00:46.730
+Relembrando pouco, nós estamos
+falando então, da modelagem CRC.
+
+11
+00:00:46.730 --> 00:00:51.824
+O sistema que nós estamos exemplificando
+didaticamente nesta aula é sobre o sistema
+
+12
+00:00:51.824 --> 00:00:57.172
+de automação de biblioteca, que nós
+já tínhamos identificado 3 classes.
+
+13
+00:00:57.172 --> 00:01:01.655
+A classe biblioteca,
+a classe livro e a classe usuário.
+
+14
+00:01:01.655 --> 00:01:06.528
+Para cada uma delas nós tínhamos também
+feito uma descrição da finalidade
+
+15
+00:01:06.528 --> 00:01:08.180
+de cada uma dessas classes.
+
+16
+00:01:08.180 --> 00:01:13.048
+Nesta aula iremos começar
+a apresentar o passo 3.
+
+17
+00:01:13.048 --> 00:01:16.727
+Descrevemos as responsabilidades óbvias.
+
+18
+00:01:16.727 --> 00:01:19.721
+O que são as responsabilidades óbvias?
+
+19
+00:01:19.721 --> 00:01:24.863
+São aquelas que ao olhar o nome da classe
+e ao olhar a descrição que nós demos
+
+20
+00:01:24.863 --> 00:01:31.320
+para a finalidade da classe, algumas
+resposabilidades aparecem naturalmente.
+
+21
+00:01:31.320 --> 00:01:34.534
+Por isso é que a gente
+diz que elas são óbvias.
+
+22
+00:01:34.534 --> 00:01:39.885
+Neste passo 3, então a nossa
+atividade vai ser para cada classe
+
+23
+00:01:39.885 --> 00:01:45.764
+identificada fazer o levantamento
+das responsabilidades óbvias.
+
+24
+00:01:45.764 --> 00:01:51.931
+Por exemplo, na classe biblioteca nós
+temos 5 responsabilidades óbvias.
+
+25
+00:01:51.931 --> 00:01:57.413
+A classe biblioteca sabe o nome da
+biblioteca, sabe o catálogo de livros,
+
+26
+00:01:57.413 --> 00:02:02.050
+sabe a lista de usuários
+registrados na biblioteca.
+
+27
+00:02:02.050 --> 00:02:08.026
+Com relação às responsabilidades
+do tipo Faz, a biblioteca registra
+
+28
+00:02:08.026 --> 00:02:13.440
+novo usuário,
+ela adiciona novo livro ao catálogo.
+
+29
+00:02:13.440 --> 00:02:16.502
+Essas são as responsabilidades óbvias.
+
+30
+00:02:16.502 --> 00:02:20.230
+Mas uma coisa que tem que ficar
+bem claro para todo mundo.
+
+31
+00:02:20.230 --> 00:02:24.585
+Mesmo que eu não consiga identificar
+uma responsabilidade óbvia,
+
+32
+00:02:24.585 --> 00:02:28.602
+que potencialmente seria óbvia,
+mais para a frente,
+
+33
+00:02:28.602 --> 00:02:33.511
+ao trabalhar colaborações,
+ao trabalhar novas classes,
+
+34
+00:02:33.511 --> 00:02:39.230
+eventualmente essas classes que
+tenhamos esquecido, elas vão aparecer.
+
+35
+00:02:39.230 --> 00:02:43.540
+Então não precisamos ficar muito
+preocupados se estamos sendo completos,
+
+36
+00:02:43.540 --> 00:02:50.090
+se estamos conseguindo identificar todas
+as responsabilidades que são óbvias.
+
+37
+00:02:50.090 --> 00:02:54.686
+Com relação à classe livro,
+a classe livro sabe o título do livro,
+
+38
+00:02:54.686 --> 00:03:00.200
+ela sabe o autor do livro,
+ela sabe também o número único do livro
+
+39
+00:03:00.200 --> 00:03:05.618
+que é identificado pela biblioteca,
+para diferenciar livro do outro.
+
+40
+00:03:05.618 --> 00:03:11.670
+A classe livro também sabe se o livro
+está disponível para empréstimo ou não.
+
+41
+00:03:11.670 --> 00:03:14.760
+Isso é uma informação que ela sabe.
+
+42
+00:03:14.760 --> 00:03:20.485
+Outra informação que ela sabe é,
+caso o livro tenha sido emprestado,
+
+43
+00:03:20.485 --> 00:03:23.463
+para qual usuário ele foi emprestado.
+
+44
+00:03:23.463 --> 00:03:24.976
+A classe livro sabe.
+
+45
+00:03:24.976 --> 00:03:28.810
+Se o livro não foi emprestado ainda,
+não tem usuário.
+
+46
+00:03:28.810 --> 00:03:34.430
+Mas se o livro foi emprestado, ela sabe
+para qual usuário o livro foi emprestado.
+
+47
+00:03:34.430 --> 00:03:38.515
+Já a classe usuário,
+ela sabe o nome do usuário.
+
+48
+00:03:38.515 --> 00:03:45.310
+Ela sabe também a lista dos livros que
+esse usuário emprestou num dado momento.
+
+49
+00:03:45.310 --> 00:03:49.017
+Inicialmente ele é vazio,
+se ele emprestar livro,
+
+50
+00:03:49.017 --> 00:03:51.209
+vai ter livro indicando que livro é esse.
+
+51
+00:03:51.209 --> 00:03:53.877
+Então ele tem uma lista dos
+livros que ele emprestou.
+
+52
+00:03:53.877 --> 00:03:57.320
+Quando não tiver nenhum livro,
+ela é uma lista vazia.
+
+53
+00:03:57.320 --> 00:04:01.754
+Uma maneira usual de descobrir
+as responsabilidades é
+
+54
+00:04:01.754 --> 00:04:05.720
+inicialmente examinando as
+responsabilidades óbvias.
+
+55
+00:04:05.720 --> 00:04:10.413
+Mas nem sempre nós descobrimos ou
+conseguimos identificar com clareza
+
+56
+00:04:10.413 --> 00:04:13.850
+quais são essas responsabilidades óbvias.
+
+57
+00:04:13.850 --> 00:04:20.789
+Então no próximo passo,
+iremos analisar os verbos de ação que se
+
+58
+00:04:20.789 --> 00:04:26.328
+encontram na especificação de requisitos
+do sistema de automação de biblioteca.
+
+59
+00:04:26.328 --> 00:04:30.037
+Eu consigo identificar tem nome,
+pode emprestar livro,
+
+60
+00:04:30.037 --> 00:04:34.347
+devolver o livro, registrar novo
+usuário de biblioteca e outros
+
+61
+00:04:34.347 --> 00:04:39.010
+verbos que se encontram na especificação.
+
+62
+00:04:39.010 --> 00:04:40.530
+O que é que eu faço?
+
+63
+00:04:40.530 --> 00:04:46.423
+Eu faço uma lista desses verbos,
+desconsiderando as responsabilidades
+
+64
+00:04:46.423 --> 00:04:51.720
+do tipo Sabe, eu listo todos os verbos de
+ação que eu encontro na especificação.
+
+65
+00:04:51.720 --> 00:04:56.522
+Aqui eu vou apresentar apenas
+os verbos que correspondem à
+
+66
+00:04:56.522 --> 00:04:59.270
+responsabilidades do tipo Faz.
+
+67
+00:04:59.270 --> 00:05:04.114
+Então eu tenho aqui o Emprestar livro,
+Devolver livro, Registrar novo usuário,
+
+68
+00:05:04.114 --> 00:05:08.397
+Exibir livros disponíveis para
+empréstimo e Exibir livros indisponíveis
+
+69
+00:05:08.397 --> 00:05:09.470
+para empréstimo.
+
+70
+00:05:09.470 --> 00:05:11.817
+Diferentemente do esquema anterior,
+
+71
+00:05:11.817 --> 00:05:17.766
+que eu dada uma classe eu definia
+as responsabilidades óbvias,
+
+72
+00:05:17.766 --> 00:05:23.374
+agora eu estou fazendo uma lista
+de todos os verbos e consigo
+
+73
+00:05:23.374 --> 00:05:28.999
+identificar responsabilidades
+mas que essas responsabilidades
+
+74
+00:05:28.999 --> 00:05:34.140
+não estão claramente definidas
+para quais classes elas pertencem.
+
+75
+00:05:34.140 --> 00:05:39.800
+Por isso, eu preciso fazer,
+nesta parte desse passo,
+
+76
+00:05:39.800 --> 00:05:46.010
+a atribuição da responsabilidade a alguma
+das classes que já estão definidas.
+
+77
+00:05:46.010 --> 00:05:51.828
+No nosso caso, as 3 classes anteriores,
+biblioteca, livro e usuário.
+
+78
+00:05:51.828 --> 00:05:56.640
+Para cada potencial responsabilidade,
+eu examino
+
+79
+00:05:56.640 --> 00:06:01.634
+as classes existentes, se ela corresponde
+a alguma responsabilidade óbvia.
+
+80
+00:06:01.634 --> 00:06:06.663
+Se corresponder a alguma
+responsabilidade óbvia de alguma classe,
+
+81
+00:06:06.663 --> 00:06:11.844
+eu examino se ela pertence,
+ou pode pertencer à outra classe.
+
+82
+00:06:11.844 --> 00:06:15.400
+Se não existir nenhuma
+responsabilidade óbvia,
+
+83
+00:06:15.400 --> 00:06:20.055
+eu vou analisar se ela deve
+fazer parte dessa classe ou não.
+
+84
+00:06:20.055 --> 00:06:25.654
+Se fizer, eu atribuo a essa classe,
+se não eu passo para a próxima classe,
+
+85
+00:06:25.654 --> 00:06:31.200
+para examinar se a responsabilidade deve
+ser atribuída a essa nova classe ou não.
+
+86
+00:06:31.200 --> 00:06:34.050
+E assim eu vou fazendo
+para todas as classes,
+
+87
+00:06:34.050 --> 00:06:36.636
+até esgotar a lista de responsabilidades.
+
+88
+00:06:36.636 --> 00:06:39.630
+Passo para a próxima
+responsabilidade potencial,
+
+89
+00:06:39.630 --> 00:06:44.460
+examino qual classe ela poderá
+ser atribuída e assim por diante.
+
+90
+00:06:44.460 --> 00:06:49.125
+Por exemplo, a lista das responsabilidades
+que eu apresentei anteriormente,
+
+91
+00:06:49.125 --> 00:06:55.874
+como exemplo, o emprestar livro,
+devolver livro, registrar novo usuário,
+
+92
+00:06:55.874 --> 00:07:01.659
+exibir lista de livros disponíveis e
+exibir lista de livros indisponíveis.
+
+93
+00:07:01.659 --> 00:07:06.240
+Por acaso, nesse exemplo,
+essas 5 responsabilidades
+
+94
+00:07:06.240 --> 00:07:10.040
+devem ser atribuídas à classes biblioteca.
+
+95
+00:07:10.040 --> 00:07:11.627
+Então é isso que eu vou fazer.
+
+96
+00:07:11.627 --> 00:07:15.505
+Se essas responsabilidades devem
+ser atribuídas à classe biblioteca,
+
+97
+00:07:15.505 --> 00:07:16.583
+é o que eu vou fazer.
+
+98
+00:07:16.583 --> 00:07:19.987
+Porque é que elas vão ser
+atribuídas a essa classe?
+
+99
+00:07:19.987 --> 00:07:24.865
+Porque toda a transação que eu
+fizer com a classe biblioteca vai
+
+100
+00:07:24.865 --> 00:07:27.504
+coincidir com essas responsabilidades.
+
+101
+00:07:27.504 --> 00:07:28.903
+O que é que eu faço então?
+
+102
+00:07:28.903 --> 00:07:29.705
+Acrescento.
+
+103
+00:07:29.705 --> 00:07:35.870
+Vocês podem ver que agora a classe
+biblioteca tem 5 novas responsabilidades,
+
+104
+00:07:35.870 --> 00:07:40.400
+além daquelas óbvias que eu
+tinha examinado anteriormente.
+
+105
+00:07:40.400 --> 00:07:45.614
+Eu poderia ter esquecido alguma
+óbvia e ela apareceria porque ao
+
+106
+00:07:45.614 --> 00:07:50.833
+examinar a especificação e ver
+verbo de ação, eu poderia encontrar
+
+107
+00:07:50.833 --> 00:07:55.686
+essa classe óbvia que eu tivesse
+esquecido provavelmente.
+
+108
+00:07:55.686 --> 00:08:03.153
+Nesse passo 5 nós conseguimos então, fazer
+a atribuição de todas as responsabilidades
+
+109
+00:08:03.153 --> 00:08:07.859
+que nós levantamos olhando
+a especificação, no nosso caso agora,
+
+110
+00:08:07.859 --> 00:08:13.174
+do exemplo, elas foram todas
+atribuídas à classe biblioteca.
+
+111
+00:08:13.174 --> 00:08:20.325
+O passo 6 vai ampliar pouco o escopo
+da identificação de responsabilidades.
+
+112
+00:08:20.325 --> 00:08:23.049
+O que nós vamos fazer no passo 6?
+
+113
+00:08:23.049 --> 00:08:27.611
+É descrever a lógica de cada
+responsabilidade de cada
+
+114
+00:08:27.611 --> 00:08:30.099
+classe que nós levantamos.
+
+115
+00:08:30.099 --> 00:08:34.932
+Sabemos de antemão que as
+responsabilidades do tipo Sabe elas
+
+116
+00:08:34.932 --> 00:08:37.788
+são muito simples de serem descritas,
+
+117
+00:08:37.788 --> 00:08:41.898
+vamos nos fixar apenas nas
+responsabilidades do tipo Faz,
+
+118
+00:08:41.898 --> 00:08:46.825
+como por exemplo, emprestar livro,
+devolver livro e assim por diante.
+
+119
+00:08:46.825 --> 00:08:50.729
+Vemos agora a lógica emprestar
+livro da biblioteca.
+
+120
+00:08:50.729 --> 00:08:55.844
+Ou seja, quais são as ações que eu
+preciso fazer nessa responsabilidade?
+
+121
+00:08:55.844 --> 00:09:00.820
+Primeiramente, eu tenho livro para
+empréstimo para dado usuário, ou seja,
+
+122
+00:09:00.820 --> 00:09:05.418
+para emprestar esse livro,
+eu já tenho isso mãos.
+
+123
+00:09:05.418 --> 00:09:09.921
+Eu sei qual é o livro e
+eu sei qual é o usuário.
+
+124
+00:09:09.921 --> 00:09:14.634
+O 2º passo é marcar esse
+livro como emprestado,
+
+125
+00:09:14.634 --> 00:09:19.463
+para que ninguém mais possa
+ver esse livro na lista dos
+
+126
+00:09:19.463 --> 00:09:23.530
+livros ainda disponíveis
+e poder querer emprestar.
+
+127
+00:09:23.530 --> 00:09:27.978
+O 3º passo a gente anexa o usuário
+como emprestador do livro.
+
+128
+00:09:27.978 --> 00:09:34.035
+O usuário que está emprestando esse livro,
+ele vai para o constar do livro mostrando
+
+129
+00:09:34.035 --> 00:09:39.760
+quem é o usuário que está
+com aquele livro emprestado.
+
+130
+00:09:39.760 --> 00:09:47.230
+E anexa, nessa lógica, a 4º parte, anexa
+o livro à lista de livros do usuário.
+
+131
+00:09:47.230 --> 00:09:51.365
+Essas 3 últimas ações,
+o marca livro como emprestado,
+
+132
+00:09:51.365 --> 00:09:54.010
+anexa Usuário como emprestador do livro.
+
+133
+00:09:54.010 --> 00:09:59.900
+Anexa livro à lista de livros do
+usuário são novas responsabilidades,
+
+134
+00:09:59.900 --> 00:10:04.399
+são responsabilidades que
+eu estou identificando
+
+135
+00:10:04.399 --> 00:10:07.858
+na lógica emprestar livro de biblioteca.
+
+136
+00:10:07.858 --> 00:10:12.460
+Dentro do passo 6 eu quero
+agora identificar colaborações.
+
+137
+00:10:12.460 --> 00:10:17.077
+Eu verifico que essas 3
+responsabilidades são novas.
+
+138
+00:10:17.077 --> 00:10:18.950
+O que significa isso?
+
+139
+00:10:18.950 --> 00:10:24.230
+Elas não se encontram
+descritas nem na hora
+
+140
+00:10:24.230 --> 00:10:29.900
+que eu listei as responsabilidades
+óbvias para cada classe, nem quando eu
+
+141
+00:10:29.900 --> 00:10:35.570
+olhei a especificação dos meus requisitos
+para o sistema de automação da biblioteca.
+
+142
+00:10:35.570 --> 00:10:40.185
+Elas só apareceram quando eu comecei
+a fazer a descrição da lógica.
+
+143
+00:10:40.185 --> 00:10:45.680
+Por isso é que é importante, muito
+importante, fazer a descrição da lógica.
+
+144
+00:10:45.680 --> 00:10:50.169
+Nessa hora, eu identifico
+responsabilidades e são novas
+
+145
+00:10:50.169 --> 00:10:55.021
+e encontro responsabilidades
+que já apareceram como
+
+146
+00:10:55.021 --> 00:11:00.378
+óbvias ou foram retiradas da parte
+da especificação de requisitos.
+
+147
+00:11:00.378 --> 00:11:05.445
+Para identificar as colaborações eu
+tenho que identificar quais são as
+
+148
+00:11:05.445 --> 00:11:11.306
+classes colaboradoras para quem eu
+devo atribuir essas responsabilidades.
+
+149
+00:11:11.306 --> 00:11:18.044
+Então, as 2 primeiras responsabilidades,
+marca livro como emprestado,
+
+150
+00:11:18.044 --> 00:11:24.253
+anexa usuário como emprestador do livro,
+essas 2 responsabilidades,
+
+151
+00:11:24.253 --> 00:11:28.192
+elas devem ser atribuidas à classe livro.
+
+152
+00:11:28.192 --> 00:11:33.020
+É uma responsabilidade
+da classe livro marcar
+
+153
+00:11:33.020 --> 00:11:37.691
+quando alguém emprestar aquele dado livro,
+que o livro está emprestado.
+
+154
+00:11:37.691 --> 00:11:40.923
+No caso é simplesmente valor
+de verdadeiro ou falso.
+
+155
+00:11:40.923 --> 00:11:45.132
+Inicialmente falso, o livro ainda
+não foi emprestado para ninguém.
+
+156
+00:11:45.132 --> 00:11:48.733
+Foi emprestado para alguém,
+ele fica verdadeiro.
+
+157
+00:11:48.733 --> 00:11:53.362
+E a segunda responsabilidade
+é para pegar o objeto do
+
+158
+00:11:53.362 --> 00:11:58.541
+usuário que está emprestando
+o livro e incluir isso,
+
+159
+00:11:58.541 --> 00:12:03.700
+anexar isso, ao dado livro que está
+sendo emprestado a esse usuário.
+
+160
+00:12:03.700 --> 00:12:07.922
+Já a responsabilidade anexa
+livro à lista de livros
+
+161
+00:12:07.922 --> 00:12:12.996
+emprestados do usuário,
+ela claramente tem que fazer parte,
+
+162
+00:12:12.996 --> 00:12:18.723
+tem que ser atribuída à classe usuário
+porque é a classe usuário que vai,
+
+163
+00:12:18.723 --> 00:12:22.225
+quando ele faz o empréstimo de dado livro,
+
+164
+00:12:22.225 --> 00:12:27.291
+anexar o objeto desse livro à
+sua lista de livros emprestados.
+
+165
+00:12:27.291 --> 00:12:30.850
+Então, claramente, é a classe usuário.
+
+166
+00:12:30.850 --> 00:12:36.247
+Tendo identificado as minhas colaborações
+que significa identificar as classes
+
+167
+00:12:36.247 --> 00:12:41.645
+colaboradoras e as responsabilidades
+dessas classes colaboradoras,
+
+168
+00:12:41.645 --> 00:12:43.004
+o que acontece?
+
+169
+00:12:43.004 --> 00:12:47.921
+Eu acabo aclopando,
+fazendo com que a classe biblioteca
+
+170
+00:12:47.921 --> 00:12:51.498
+dependa das classes livro e usuário.
+
+171
+00:12:51.498 --> 00:12:53.970
+O que é que eu tenho agora?
+
+172
+00:12:53.970 --> 00:12:58.369
+Eu tenho que a classe biblioteca
+depende da classe livro.
+
+173
+00:12:58.369 --> 00:13:03.490
+Pelo menos levando consideração
+a responsabilidade emprestar livro,
+
+174
+00:13:03.490 --> 00:13:08.180
+eu preciso para completar a minha
+responsabilidade que é emprestar livro,
+
+175
+00:13:08.180 --> 00:13:11.406
+eu preciso da colaboração
+da classe livro para marcar
+
+176
+00:13:11.406 --> 00:13:15.776
+livro e marcar quem é o usuário
+que está emprestando esse livro.
+
+177
+00:13:15.776 --> 00:13:21.681
+Eu preciso também da colaboração,
+ou seja, eu dependo da classe usuário.
+
+178
+00:13:21.681 --> 00:13:25.363
+O que, para eu cumprir a minha
+responsabilidade como todo,
+
+179
+00:13:25.363 --> 00:13:30.834
+que é o emprestar o livro como todo,
+que a classe usuário também marque
+
+180
+00:13:30.834 --> 00:13:36.539
+na sua lista de livros emprestados esse
+livro que ele acabou de emprestar.
+
+181
+00:13:36.539 --> 00:13:39.345
+Com isso concluímos a modelagem CRC.
+
+182
+00:13:39.345 --> 00:13:44.422
+Ao terminarmos essa parte 2,
+que é composta dos passos 3 a 6,
+
+183
+00:13:44.422 --> 00:13:48.705
+nós conseguimos identificar
+completamente as
+
+184
+00:13:48.705 --> 00:13:53.406
+classes da aplicação de
+automação da biblioteca.
+
+185
+00:13:53.406 --> 00:13:57.875
+Isso que nós fizemos para esse exemplo
+didático pode ser feito para qualquer
+
+186
+00:13:57.875 --> 00:13:58.730
+aplicação.
+
+187
+00:13:58.730 --> 00:14:03.530
+O que nós fizemos foi exemplo de dados
+com requisitos simplificados mas
+
+188
+00:14:03.530 --> 00:14:06.260
+ele pode ser aplicado
+para qualquer sistema.
+
+189
+00:14:06.260 --> 00:14:07.310
+Muito obrigado!
+
+190
+00:14:07.310 --> 00:14:12.710
+[MÚSICA] [MÚSICA]

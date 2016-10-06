@@ -1,0 +1,207 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.820
+[MÚSICA]
+
+2
+00:00:07.820 --> 00:00:16.058
+[MÚSICA] E ai pessoal, tudo bem?
+
+3
+00:00:16.058 --> 00:00:20.280
+Nessa aula iremos ver como
+utilizar date picker.
+
+4
+00:00:20.280 --> 00:00:23.777
+Criaremos aplicativo
+apenas com date picker.
+
+5
+00:00:23.777 --> 00:00:28.086
+Quando a data for alterada mostramos
+a nova data no terminal do Xcode.
+
+6
+00:00:28.086 --> 00:00:32.520
+Vamos iniciar criando novo projeto
+com a opção Single View Application.
+
+7
+00:00:32.520 --> 00:00:36.610
+Escolha nome de projeto e
+em Devices deixe Universal.
+
+8
+00:00:36.610 --> 00:00:40.260
+Com o projeto criado, vamos ao storyboard.
+
+9
+00:00:40.260 --> 00:00:46.380
+Adicione uma label.
+
+10
+00:00:46.380 --> 00:00:52.500
+Ajuste o tamanho e cor e
+mude para Escolha Uma Data.
+
+11
+00:00:52.500 --> 00:00:56.450
+Agora adicione date picker.
+
+12
+00:00:56.450 --> 00:01:00.918
+No inspetor de atributos é
+
+13
+00:01:00.918 --> 00:01:06.101
+possível fazer date picker
+para data e horário.
+
+14
+00:01:06.101 --> 00:01:08.914
+Vamos deixar no modo de Apenas Data.
+
+15
+00:01:08.914 --> 00:01:15.965
+Altere a localização
+para o Brasil [SEM_ÁUDIO]
+
+16
+00:01:15.965 --> 00:01:20.370
+e também não colocar restrição
+de valor mínimo e máximo.
+
+17
+00:01:20.370 --> 00:01:24.218
+Agora vamos adicionar algumas
+constraints para poder executar
+
+18
+00:01:24.218 --> 00:01:26.122
+tanto em iPhone como em iPad.
+
+19
+00:01:26.122 --> 00:01:29.930
+Vou fixar a label a 20 píxels
+do topo e 0 nas laterais.
+
+20
+00:01:29.930 --> 00:01:37.160
+[SEM_ÁUDIO] O
+
+21
+00:01:37.160 --> 00:01:43.103
+date picker fixar com
+0 píxels nas laterais
+
+22
+00:01:43.103 --> 00:01:48.436
+também deixar espaço
+de 60 píxels da label.
+
+23
+00:01:48.436 --> 00:01:51.216
+Vamos conectar ao código.
+
+24
+00:01:51.216 --> 00:01:56.060
+Nesse caso apenas precisamos
+conectar uma action
+
+25
+00:01:56.060 --> 00:01:59.360
+de value changed para o date picker.
+
+26
+00:01:59.360 --> 00:02:02.560
+Vou chamar de date picker changed.
+
+27
+00:02:02.560 --> 00:02:06.510
+Vamos ao código.
+
+28
+00:02:06.510 --> 00:02:11.190
+Date picker é mais fácil de utilizar
+não tendo o delegate ou data
+
+29
+00:02:11.190 --> 00:02:15.967
+source portanto apenas com a action criada
+já conseguimos obter o valor da data
+
+30
+00:02:15.967 --> 00:02:18.380
+escolhida pelo usuário do aplicativo.
+
+31
+00:02:18.380 --> 00:02:21.094
+Vamos imprimir a data
+escolhida no date picker.
+
+32
+00:02:21.094 --> 00:02:23.950
+Apenas com isso já podemos
+executar no simulador.
+
+33
+00:02:23.950 --> 00:02:32.386
+[SEM_ÁUDIO] Repare
+
+34
+00:02:32.386 --> 00:02:36.838
+que sempre que mudamos
+
+35
+00:02:36.838 --> 00:02:41.315
+a data ocorre a impressão da
+nova data na consola do Xcode.
+
+36
+00:02:41.315 --> 00:02:45.855
+Sempre que fazemos exemplos com
+a impressão no console é para mostrar que
+
+37
+00:02:45.855 --> 00:02:48.725
+capturamos esta informação
+que foi impressa.
+
+38
+00:02:48.725 --> 00:02:53.144
+Isto significa que em aplicativo mais
+complexo seria possível fazer alguma
+
+39
+00:02:53.144 --> 00:02:54.980
+operação com este valor obtido.
+
+40
+00:02:54.980 --> 00:02:59.420
+No caso de datas em date picker o
+usuário podia estar criando uma lista de
+
+41
+00:02:59.420 --> 00:03:00.975
+notificações com data,
+
+42
+00:03:00.975 --> 00:03:04.866
+pedindo para ser notificado de
+alguma coisa em determinada data.
+
+43
+00:03:04.866 --> 00:03:08.620
+No próximo módulo vamos ver como
+salvar esses dados que obtemos.
+
+44
+00:03:08.620 --> 00:03:12.815
+Na próxima aula faremos
+a recapitulação do módulo.
+
+45
+00:03:12.815 --> 00:03:13.490
+Até lá!

@@ -1,0 +1,662 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.526
+[MÚSICA] Bem-vindos a mais
+
+2
+00:00:09.526 --> 00:00:14.640
+"hands on" do curso de
+orientação a objetos com Java.
+
+3
+00:00:14.640 --> 00:00:18.093
+Hoje eu queria mostrar para vocês
+
+4
+00:00:18.093 --> 00:00:23.110
+pouco mais sobre como que
+funciona a orientação a objetos,
+
+5
+00:00:23.110 --> 00:00:27.270
+como que a gente cria
+métodos orientados a objetos.
+
+6
+00:00:27.270 --> 00:00:33.214
+Então a ideia é: eu vou criar
+primeiro método digamos assim
+
+7
+00:00:33.214 --> 00:00:40.690
+da forma que a gente estava acostumado a
+criar numa programação estruturada, certo?
+
+8
+00:00:40.690 --> 00:00:43.522
+E depois eu vou mostrar para vocês como
+
+9
+00:00:43.522 --> 00:00:48.444
+que seria esse mesmo método com
+uma cara mais orientada a objetos.
+
+10
+00:00:48.444 --> 00:00:49.658
+Então vamos lá.
+
+11
+00:00:49.658 --> 00:00:56.036
+Eu vou criar aqui uma funcionalidade
+simples que vai ser aqui,
+
+12
+00:00:56.036 --> 00:01:03.090
+eu vou chamar aqui de Escola.
+
+13
+00:01:03.090 --> 00:01:05.324
+O meu projeto vai se chamar Escola.
+
+14
+00:01:05.324 --> 00:01:06.737
+O quê que eu vou fazer?
+
+15
+00:01:06.737 --> 00:01:11.928
+Eu vou criar aluno,
+ele vai ter notas bimestrais, certo?
+
+16
+00:01:11.928 --> 00:01:17.291
+E eu vou ter uma lógica que vai,
+
+17
+00:01:17.291 --> 00:01:22.430
+por exemplo, estar me calculando qual
+é a média e se o aluno passou ou não.
+
+18
+00:01:22.430 --> 00:01:22.984
+Certo?
+
+19
+00:01:22.984 --> 00:01:26.630
+Então eu vou criar aqui
+primeiro a minha classe Aluno,
+
+20
+00:01:26.630 --> 00:01:33.430
+certo?
+
+21
+00:01:33.430 --> 00:01:34.939
+Então criei aqui.
+
+22
+00:01:34.939 --> 00:01:38.428
+Eu vou ter aqui as notas
+dos bimestres não é?
+
+23
+00:01:38.428 --> 00:01:43.629
+Então eu vou criar aqui int 1º bimestre,
+
+24
+00:01:43.629 --> 00:01:47.030
+int 2º bimestre,
+
+25
+00:01:47.030 --> 00:01:52.650
+int 3º bimestre e por fim int 4º bimestre.
+
+26
+00:01:52.650 --> 00:01:55.049
+Certo?
+
+27
+00:01:55.049 --> 00:01:59.420
+Não pode começar aqui.
+
+28
+00:01:59.420 --> 00:02:02.261
+Então eu vou colocar no final.
+
+29
+00:02:02.261 --> 00:02:06.913
+Eu me esqueci desse
+detalhe aqui que Java você
+
+30
+00:02:06.913 --> 00:02:11.803
+não pode começar as variáveis com números,
+certo?
+
+31
+00:02:11.803 --> 00:02:14.150
+Então tem que vir depois.
+
+32
+00:02:14.150 --> 00:02:17.816
+Então eu simplesmente criei aqui,
+como às vezes a gente
+
+33
+00:02:17.816 --> 00:02:21.736
+cria os struts ou arrays lá na
+programação estruturada não é?
+
+34
+00:02:21.736 --> 00:02:25.980
+No sistema mesmo a classe Aluno
+acabaria tendo outras informações.
+
+35
+00:02:25.980 --> 00:02:33.717
+Então eu vou criar aqui uma outra classe,
+certo?
+
+36
+00:02:33.717 --> 00:02:42.090
+Que eu vou colocar aqui
+Verificadora de Notas certo?
+
+37
+00:02:42.090 --> 00:02:47.630
+E vou criar nessa classe
+alguns métodos estáticos,
+
+38
+00:02:47.630 --> 00:02:52.190
+que são equivalentes às funções que
+a gente tem lá na programação estruturada.
+
+39
+00:02:52.190 --> 00:02:56.436
+Então eu vou vir aqui e vou criar aqui,
+
+40
+00:02:56.436 --> 00:03:03.305
+public static int média aluno.
+
+41
+00:03:03.305 --> 00:03:09.361
+Então eu passo aqui o
+aluno como parâmetro e vou
+
+42
+00:03:09.361 --> 00:03:16.503
+criar aqui a lógica desse método.
+
+43
+00:03:16.503 --> 00:03:20.530
+Então eu vou criar aqui int total certo?
+
+44
+00:03:20.530 --> 00:03:25.085
+Começando aqui com 0,
+eu vou fazer aqui total mais
+
+45
+00:03:25.085 --> 00:03:30.370
+igual ao aluno ponto 1º bimestre
+
+46
+00:03:30.370 --> 00:03:35.240
+e vou fazer isso aqui para todos.
+
+47
+00:03:35.240 --> 00:03:41.679
+2º bimestre, 3º bimestre, 4º bimestre.
+
+48
+00:03:41.679 --> 00:03:47.761
+E aí eu vou retornar o total
+dividido por 4, certo?
+
+49
+00:03:47.761 --> 00:03:50.720
+É a média ali do aluno.
+
+50
+00:03:50.720 --> 00:03:52.195
+Certo?
+
+51
+00:03:52.195 --> 00:03:58.024
+Vou criar aqui também outro método
+
+52
+00:03:58.024 --> 00:04:04.606
+que ele vai por exemplo retornar booleano,
+true ou false não é?
+
+53
+00:04:04.606 --> 00:04:09.735
+True ou false aqui para mim,
+se o aluno passou de ano não é?
+
+54
+00:04:09.735 --> 00:04:13.515
+Então ele vai vir aqui aluno "a" certo?
+
+55
+00:04:13.515 --> 00:04:15.944
+Então o que é que ele vai fazer?
+
+56
+00:04:15.944 --> 00:04:21.156
+Vai usar o de cima ali, ele vai vir aqui,
+
+57
+00:04:21.156 --> 00:04:25.450
+média aluno.
+
+58
+00:04:25.450 --> 00:04:26.538
+Opa!
+
+59
+00:04:26.538 --> 00:04:33.785
+Vai chamar o método ali de cima, certo?
+
+60
+00:04:33.785 --> 00:04:38.702
+E aí vai ver aqui, se a média for
+
+61
+00:04:38.702 --> 00:04:42.450
+maior ou igual que 60 certo?
+
+62
+00:04:42.450 --> 00:04:48.320
+Ele vai retornar true,
+senão ele retorna false.
+
+63
+00:04:48.320 --> 00:04:52.970
+Certo?
+
+64
+00:04:52.970 --> 00:04:56.963
+Então o que acontece?
+
+65
+00:04:56.963 --> 00:05:01.304
+Esse aqui é o jeito que a gente
+
+66
+00:05:01.304 --> 00:05:05.923
+costuma fazer na programação estruturada,
+
+67
+00:05:05.923 --> 00:05:10.714
+onde a gente não tem objetos,
+não tem esse de tipo de coisa.
+
+68
+00:05:10.714 --> 00:05:13.470
+Então o quê que a gente vai fazer aqui?
+
+69
+00:05:13.470 --> 00:05:17.100
+A gente pode ver que
+a média do aluno é uma
+
+70
+00:05:17.100 --> 00:05:20.960
+funcionalidade que tem a ver com o aluno.
+
+71
+00:05:20.960 --> 00:05:25.678
+Então eu não deveria ter que perguntar
+para uma outra classe qual que é
+
+72
+00:05:25.678 --> 00:05:27.541
+a média desse aluno certo?
+
+73
+00:05:27.541 --> 00:05:30.540
+Eu deveria perguntar para o próprio aluno.
+
+74
+00:05:30.540 --> 00:05:35.117
+Eu vou criar aqui método
+principal só para a gente
+
+75
+00:05:35.117 --> 00:05:39.554
+ilustrar aqui como que seria
+usar essa solução aqui.
+
+76
+00:05:39.554 --> 00:05:46.740
+Eu vou chamar aqui de principal,
+bota aqui para criar método main, certo?
+
+77
+00:05:46.740 --> 00:05:51.550
+Então eu vou vir aqui,
+
+78
+00:05:51.550 --> 00:05:57.200
+vou criar aluno,
+vou chamar aqui de Guerra.
+
+79
+00:05:57.200 --> 00:06:02.790
+Eu vou colocar aqui
+
+80
+00:06:02.790 --> 00:06:07.840
+guerra, ponto.
+
+81
+00:06:07.840 --> 00:06:13.720
+No 1º bimestre ele tirou por exemplo 70,
+
+82
+00:06:13.720 --> 00:06:19.398
+vou para
+
+83
+00:06:19.398 --> 00:06:25.170
+facilitar aqui usar o control c,
+control v, certo?
+
+84
+00:06:25.170 --> 00:06:28.570
+Aí aqui por exemplo 60,
+
+85
+00:06:28.570 --> 00:06:32.830
+80 e 70.
+
+86
+00:06:32.830 --> 00:06:36.930
+A média ali tem que ser 70.
+
+87
+00:06:36.930 --> 00:06:39.066
+Então o que que eu vou fazer?
+
+88
+00:06:39.066 --> 00:06:44.958
+Agora eu tenho que ir lá no verificador
+de notas, eu vou mandar imprimir aqui.
+
+89
+00:06:44.958 --> 00:06:53.500
+Então eu vou vir aqui,
+verificador notas ponto, vamos!
+
+90
+00:06:53.500 --> 00:06:58.820
+É verificadora notas.
+
+91
+00:06:58.820 --> 00:07:03.982
+A média do aluno, certo?
+
+92
+00:07:03.982 --> 00:07:07.675
+E aí eu vou passar o Guerra ali, certo?
+
+93
+00:07:07.675 --> 00:07:12.150
+Eu acho que no método, aqui embaixo eu
+me esqueci de colocar static também.
+
+94
+00:07:12.150 --> 00:07:16.565
+Pronto.
+
+95
+00:07:16.565 --> 00:07:20.980
+Vamos ver.
+
+96
+00:07:20.980 --> 00:07:22.582
+Então dá 70.
+
+97
+00:07:22.582 --> 00:07:25.670
+Vamos ver se o Guerra passou.
+
+98
+00:07:25.670 --> 00:07:30.350
+É. [errado]   
+
+99
+00:07:30.350 --> 00:07:35.910
+Verificadora notas ponto,
+
+100
+00:07:35.910 --> 00:07:39.710
+passou de ano o Guerra.
+
+101
+00:07:39.710 --> 00:07:42.910
+Então vamos ver aqui se ele passou de ano.
+
+102
+00:07:42.910 --> 00:07:47.340
+True.
+
+103
+00:07:47.340 --> 00:07:51.592
+Então, quem está usando isso aqui ele
+não só vai conhecer a classe Aluno,
+
+104
+00:07:51.592 --> 00:07:56.911
+mas ele tem que saber que tem uma outra
+classe que faz esse tipo de cálculo.
+
+105
+00:07:56.911 --> 00:08:00.980
+Como que seria uma abordagem
+orientada a objetos?
+
+106
+00:08:00.980 --> 00:08:05.030
+Seria este método aqui ele
+está na própria classe Aluno.
+
+107
+00:08:05.030 --> 00:08:11.260
+Então eu posso vir aqui e dar Move, certo?
+
+108
+00:08:11.260 --> 00:08:19.922
+Ele vai, no caso aqui como ele é estático,
+talvez ele não deixe eu fazer isso.
+
+109
+00:08:19.922 --> 00:08:21.640
+Eu vou mover aqui na mão mesmo.
+
+110
+00:08:21.640 --> 00:08:27.997
+Então eu vou vir aqui,
+ao invés de chamar de média aluno,
+
+111
+00:08:27.997 --> 00:08:33.800
+eu vou chamar só de média,
+porque eu já estou na classe aluno, certo?
+
+112
+00:08:33.800 --> 00:08:38.280
+E não preciso mais passar isso
+aqui como parâmetro também.
+
+113
+00:08:38.280 --> 00:08:44.090
+Essas informações aqui, se eu quiser
+eu posso substituir o "a" pelo this.
+
+114
+00:08:44.090 --> 00:08:47.120
+Mas também não é obrigatório.
+
+115
+00:08:47.120 --> 00:08:53.642
+E aí a mesma coisa eu vou fazer aqui
+no método passou de ano, certo?
+
+116
+00:08:53.642 --> 00:08:57.710
+Também ao invés de eu ter outro método,
+
+117
+00:08:57.710 --> 00:09:04.469
+eu vou perguntar para o próprio
+aluno se ele passou de ano, certo?
+
+118
+00:09:04.469 --> 00:09:12.735
+Eu posso inclusive já chamar
+direto aqui o método média, certo?
+
+119
+00:09:12.735 --> 00:09:18.713
+Então olha como que fica mais intuitivo,
+
+120
+00:09:18.713 --> 00:09:21.535
+na hora que o cara vem aqui e aperta aqui.
+
+121
+00:09:21.535 --> 00:09:24.348
+O quê que eu posso fazer com o aluno?
+
+122
+00:09:24.348 --> 00:09:28.730
+Aqui eu posso calcular a média,
+eu posso ver se ele passou de ano.
+
+123
+00:09:28.730 --> 00:09:33.913
+Então para quem está utilizando aqui,
+ele não tem que saber que
+
+124
+00:09:33.913 --> 00:09:39.689
+existe uma outra classe com outros métodos
+que recebem o aluno como parâmetro.
+
+125
+00:09:39.689 --> 00:09:44.590
+Ele simplesmente vai perguntar para o
+próprio aluno: qual que é a sua média?
+
+126
+00:09:44.590 --> 00:09:47.301
+Você passou de ano meu amigo?
+
+127
+00:09:47.301 --> 00:09:48.060
+Certo?
+
+128
+00:09:48.060 --> 00:09:53.060
+Então, a gente percebe que fica
+muito mais intuitivo não é?
+
+129
+00:09:53.060 --> 00:09:55.164
+E assim, essa é uma coisa,
+
+130
+00:09:55.164 --> 00:10:00.760
+é erro que eu percebo muito quem está
+vindo da programação estruturada,
+
+131
+00:10:00.760 --> 00:10:04.926
+que está acostumado a fazer as
+coisas dessa forma lá, certo?
+
+132
+00:10:04.926 --> 00:10:11.500
+Criar funções, então acaba usando ali as
+classes mais para fazer uma definição.
+
+133
+00:10:11.500 --> 00:10:15.192
+A gente pode ver que o
+resultado aqui é o mesmo.
+
+134
+00:10:15.192 --> 00:10:19.756
+Ele está acostumado a criar as
+classes só como uma estrutura de
+
+135
+00:10:19.756 --> 00:10:24.346
+dados e criar uma série de funções
+que utilizam essa estrutura de dados,
+
+136
+00:10:24.346 --> 00:10:28.400
+enquanto que muitas dessas coisas
+tinham que estar na própria classe.
+
+137
+00:10:28.400 --> 00:10:33.880
+Muitas vezes pode ser que
+não seja tão intuitivo
+
+138
+00:10:33.880 --> 00:10:38.793
+assim você migrar, porque às vezes
+não vai ser o método inteiro que
+
+139
+00:10:38.793 --> 00:10:42.890
+vai poder ser migrado, às vezes é
+pedaço dele que tem a ver com o objeto.
+
+140
+00:10:42.890 --> 00:10:44.978
+Então aí você tem que separar ele.
+
+141
+00:10:44.978 --> 00:10:50.590
+A gente vai entrar mais detalhes com isso
+quando a gente for falar de refatoração.
+
+142
+00:10:50.590 --> 00:10:55.878
+Mas eu achei interessante introduzir
+essa questão agora justamente
+
+143
+00:10:55.878 --> 00:11:00.701
+para você ter esse contraste de
+como que programador de programação
+
+144
+00:11:00.701 --> 00:11:06.289
+estruturada fazia e como que programador
+orientado a objetos vai fazer isso daí.
+
+145
+00:11:06.289 --> 00:11:10.222
+Espero que tenha ajudado e tenha
+ficado mais claro essa questão.
+
+146
+00:11:10.222 --> 00:11:11.990
+Muito obrigado por assistir.
+
+147
+00:11:11.990 --> 00:11:13.150
+Até a próxima aula.
+
+148
+00:11:13.150 --> 00:11:19.230
+[MÚSICA]

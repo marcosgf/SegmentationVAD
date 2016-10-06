@@ -1,0 +1,320 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.773
+[MÚSICA] [MÚSICA] Fala,
+
+2
+00:00:08.773 --> 00:00:10.088
+pessoal, tudo bem?
+
+3
+00:00:10.088 --> 00:00:14.451
+Agora que você já tem sua conta de
+desenvolvedor ou se ela ainda não estiver
+
+4
+00:00:14.451 --> 00:00:16.930
+pronta, vamos começar nossa segunda aula.
+
+5
+00:00:16.930 --> 00:00:22.200
+Nesta aula vamos aprender como
+rodar seu aplicativo em seu iPhone.
+
+6
+00:00:22.200 --> 00:00:27.700
+Caso você não tem iPhone mas tenha iPad,
+você poderá testar seu app do mesmo jeito.
+
+7
+00:00:27.700 --> 00:00:32.638
+Para começar vou criar aplicativo novo
+mas caso você já tenha programado algum
+
+8
+00:00:32.638 --> 00:00:36.900
+app e queira testá-lo, você poderá
+usá-lo também sem nenhum problema.
+
+9
+00:00:36.900 --> 00:00:40.054
+Vou criar aplicativo simples de uma tela,
+
+10
+00:00:40.054 --> 00:00:45.370
+como já fizemos algumas vezes ao longo dos
+cursos de iOS oferecidos pela Unicamp.
+
+11
+00:00:45.370 --> 00:00:49.360
+Vou usar nova linguagem Swift
+e usar o layout do iPhone.
+
+12
+00:00:49.360 --> 00:00:54.666
+[SEM_ÁUDIO] Com seu
+
+13
+00:00:54.666 --> 00:01:00.590
+projeto do Xcode aberto,
+vamos abrir o organizador de devices.
+
+14
+00:01:00.590 --> 00:01:04.800
+Para isso, segure as teclas
+command + shift e o número 2.
+
+15
+00:01:04.800 --> 00:01:09.771
+Repare que nesta lista há apenas o Mac que
+eu estou usando agora e os simuladores
+
+16
+00:01:09.771 --> 00:01:10.455
+do Xcode.
+
+17
+00:01:10.455 --> 00:01:13.207
+Para que você possa testar
+seu app em seu iPhone,
+
+18
+00:01:13.207 --> 00:01:18.192
+o primeiro passo é conectar seu aparelho
+com seu Mac através de seu cabo USB.
+
+19
+00:01:18.192 --> 00:01:21.094
+Depois de plugar seu iPhone é provável
+
+20
+00:01:21.094 --> 00:01:24.850
+que seu Mac abra o iTunes e talvez
+a galeria de fotos de seu iPhone.
+
+21
+00:01:24.850 --> 00:01:28.470
+Se isto acontecer,
+volte para a tela do Xcode.
+
+22
+00:01:28.470 --> 00:01:31.548
+Seu iPhone vai aparecer
+na lista de devices.
+
+23
+00:01:31.548 --> 00:01:35.645
+Espere até que o Xcode sincronize
+totalmente com seu aparelho.
+
+24
+00:01:35.645 --> 00:01:37.486
+Isto pode levar alguns segundos.
+
+25
+00:01:37.486 --> 00:01:40.790
+Agora temos que atrelar sua
+conta de desenvolvedor ao Xcode.
+
+26
+00:01:40.790 --> 00:01:45.945
+Para isso, clique primeiro em
+Preferências e depois em Contas.
+
+27
+00:01:45.945 --> 00:01:51.100
+No canto inferior esquerdo, clique no
+sinal de + e depois em Add Apple ID.
+
+28
+00:01:51.100 --> 00:01:53.980
+Entre com seu Apple ID e sua senha.
+
+29
+00:01:53.980 --> 00:01:58.433
+Após preencher sua informações,
+aparecerá o nome de sua
+
+30
+00:01:58.433 --> 00:02:02.640
+equipe e sua relação com o
+programa de desenvolvedores iOS.
+
+31
+00:02:02.640 --> 00:02:06.806
+No caso de minha conta,
+por ser apenas uma conta demonstrativa,
+
+32
+00:02:06.806 --> 00:02:08.860
+aparece que é uma conta grátis.
+
+33
+00:02:08.860 --> 00:02:12.810
+Vamos agora atrelar sua conta ao Xcode.
+
+34
+00:02:12.810 --> 00:02:14.000
+Antes de mais nada,
+
+35
+00:02:14.000 --> 00:02:18.410
+certifique-se de usar bundle
+identifier único para o seu aplicativo.
+
+36
+00:02:18.410 --> 00:02:22.496
+Agora clique no ícone do seu projeto.
+
+37
+00:02:22.496 --> 00:02:26.313
+Na aba General,
+onde você deve escolher sua equipe,
+
+38
+00:02:26.313 --> 00:02:30.170
+clique na setinha azul e selecione
+a conta que acabamos de adicionar.
+
+39
+00:02:30.170 --> 00:02:34.759
+Caso apareça alerta sobre provisioning
+profiles não encontrados,
+
+40
+00:02:34.759 --> 00:02:37.980
+não se preocupe que vamos
+resolvê-lo logo logo.
+
+41
+00:02:37.980 --> 00:02:40.410
+Para que nosso aplicativo
+não fique em branco,
+
+42
+00:02:40.410 --> 00:02:43.460
+vamos colocar label como uma
+mensagem de boas-vindas.
+
+43
+00:02:43.460 --> 00:02:48.530
+[SEM_ÁUDIO]
+
+44
+00:02:48.530 --> 00:02:54.106
+[SEM_ÁUDIO] Agora
+
+45
+00:02:54.106 --> 00:02:58.940
+clique no ícone do simulador iOS que
+você está usando e selecione seu iPhone.
+
+46
+00:02:58.940 --> 00:03:00.752
+Assim que você rodar seu app,
+
+47
+00:03:00.752 --> 00:03:04.680
+o Xcode vai arrumar aquele
+problema de provisioning profiles.
+
+48
+00:03:04.680 --> 00:03:09.111
+Este problema ocorre porque não criamos
+nenhum certificado manualmente em sua
+
+49
+00:03:09.111 --> 00:03:11.100
+conta no portal de desenvolvedor.
+
+50
+00:03:11.100 --> 00:03:14.993
+Mas isto não é nenhum problema,
+uma vez que o Xcode é capaz de criar os
+
+51
+00:03:14.993 --> 00:03:18.560
+certificados necessários
+automaticamente em nossa conta.
+
+52
+00:03:18.560 --> 00:03:22.971
+Se sua conta ainda não está ativa no
+programa de desenvolvedor da Apple,
+
+53
+00:03:22.971 --> 00:03:26.020
+ou seja,
+se você ainda não pagou os 99 dólares,
+
+54
+00:03:26.020 --> 00:03:28.690
+talvez apareça uma nova mensagem de erro.
+
+55
+00:03:28.690 --> 00:03:31.835
+Desta vez o problema é com
+a segurança de sua conta.
+
+56
+00:03:31.835 --> 00:03:35.970
+Para resolver este problema,
+você precisará ter seu iPhone em mãos.
+
+57
+00:03:35.970 --> 00:03:39.460
+Em seu aparelho vá em
+Ajustes e depois em Geral.
+
+58
+00:03:39.460 --> 00:03:41.516
+Neste menu clique em Perfil.
+
+59
+00:03:41.516 --> 00:03:45.463
+Você verá o e-mail usado em
+sua conta de desenvolvedor.
+
+60
+00:03:45.463 --> 00:03:46.460
+Clique nele.
+
+61
+00:03:46.460 --> 00:03:49.914
+Nesta tela há uma mensagem
+azul que diz Confiar e entre
+
+62
+00:03:49.914 --> 00:03:51.908
+aspas está o nome de sua conta.
+
+63
+00:03:51.908 --> 00:03:52.829
+Clique nele.
+
+64
+00:03:52.829 --> 00:03:53.460
+Pronto.
+
+65
+00:03:53.460 --> 00:03:58.017
+Rode novamente seu app e desta vez ele
+funcionará em seu iPhone sem problemas.
+
+66
+00:03:58.017 --> 00:04:00.510
+Espero que você tenha gostado desta aula.
+
+67
+00:04:00.510 --> 00:04:04.078
+Agora você já pode testar
+seu apps sempre que quiser.
+
+68
+00:04:04.078 --> 00:04:06.141
+Nos vemos nas próximas aulas.
+
+69
+00:04:06.141 --> 00:04:06.710
+Até lá!

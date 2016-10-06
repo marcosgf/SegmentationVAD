@@ -1,0 +1,400 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.756
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:08.756 --> 00:00:12.024
+estamos de volta aqui
+com o nosso hands-on,
+
+3
+00:00:12.024 --> 00:00:15.503
+onde estamos fazendo aqui tradutor, certo?
+
+4
+00:00:15.503 --> 00:00:20.006
+E eu estou aqui com o meu chapéu de
+TDD e agora acabamos de refatorar,
+
+5
+00:00:20.006 --> 00:00:24.413
+né, no final do outro vídeo, a gente
+fez uma pequena mudança aí no nome de
+
+6
+00:00:24.413 --> 00:00:29.098
+método e agora vamos voltar para
+a componente vermelha aqui do
+
+7
+00:00:29.098 --> 00:00:34.056
+nosso chapéu de TDD para
+criarmos mais teste, né?
+
+8
+00:00:34.056 --> 00:00:39.794
+Agora, né, o próximo teste que vamos
+criar é as duas traduções, tá?
+
+9
+00:00:39.794 --> 00:00:45.754
+Então, eu vou aproveitar aqui,
+o conteúdo deste teste, tá?
+
+10
+00:00:45.754 --> 00:00:50.476
+E vou colocar aqui vou
+
+11
+00:00:50.476 --> 00:00:55.820
+chamar ele de duasTraducoes.
+
+12
+00:00:55.820 --> 00:01:01.560
+Então eu adicionei aqui bom,
+
+13
+00:01:01.560 --> 00:01:10.068
+good, e vou adicionar aqui o mau,
+
+14
+00:01:10.068 --> 00:01:14.917
+é o bad, certo?
+
+15
+00:01:14.917 --> 00:01:19.873
+Então eu vou, ali a questão do
+
+16
+00:01:19.873 --> 00:01:24.303
+estar vazio ou não eu vou
+usar ali o do de cima,
+
+17
+00:01:24.303 --> 00:01:28.010
+acho que não é mais necessário
+eu estar verificando isso,
+
+18
+00:01:28.010 --> 00:01:33.520
+e aqui eu vou adicionar aqui essa...
+
+19
+00:01:33.520 --> 00:01:39.085
+a nova tradução, né, se ele pedir para
+
+20
+00:01:39.085 --> 00:01:44.754
+traduzir mau, tem que ser bad, tá?
+
+21
+00:01:44.754 --> 00:01:49.175
+Então eu vou salvar,
+eu vou rodar o meu teste, vai falhar.
+
+22
+00:01:49.175 --> 00:01:51.464
+Repare que agora, por exemplo,
+
+23
+00:01:51.464 --> 00:01:56.433
+eu não precisei mais ir lá criar novos
+métodos na classe, né, eu simplesmente vou
+
+24
+00:01:56.433 --> 00:02:01.440
+estar acrescentando métodos
+na classe que já existe, tá?
+
+25
+00:02:01.440 --> 00:02:02.430
+Métodos não,
+
+26
+00:02:02.430 --> 00:02:07.878
+eu vou estar acrescentando funcionalidades
+nos métodos que já existem, tá?
+
+27
+00:02:07.878 --> 00:02:12.940
+Então eu vou, deu problema aqui,
+eu posso aqui que ele..
+
+28
+00:02:12.940 --> 00:02:19.129
+olha lá, onde era good,
+né, ele colocou bad.
+
+29
+00:02:19.129 --> 00:02:23.324
+Então eu preciso vir aqui no meu
+tradutor e arrumar isso, tá?
+
+30
+00:02:23.324 --> 00:02:30.656
+Então tiro o chapéu vermelho,
+passo para o meu chapéu verde, certo?
+
+31
+00:02:30.656 --> 00:02:34.787
+E aí eu vou tentar fazer isso funcionar.
+
+32
+00:02:34.787 --> 00:02:37.865
+Então já não dá mais para
+guardar uma variável só,
+
+33
+00:02:37.865 --> 00:02:42.440
+eu tenho que transformar
+isso daqui num mapa.
+
+34
+00:02:42.440 --> 00:02:48.190
+Então eu vou botar aqui map
+de string para string, né?
+
+35
+00:02:48.190 --> 00:02:53.470
+E aqui não vou cair mais naquela
+
+36
+00:02:53.470 --> 00:02:58.464
+armadilha, né, eu sei que ali
+
+37
+00:02:58.464 --> 00:03:03.455
+eu vou precisar alterar isso, né?
+
+38
+00:03:03.455 --> 00:03:10.480
+Então aqui tradução é, é...
+
+39
+00:03:10.480 --> 00:03:13.797
+deve ter exempt aqui tem.
+
+40
+00:03:13.797 --> 00:03:17.771
+Se ele estiver vazio,
+então também está vazio,
+
+41
+00:03:17.771 --> 00:03:24.850
+aqui eu vou inicializar também outro,
+outra armadilha aqui para não cair.
+
+42
+00:03:24.850 --> 00:03:31.380
+Aí então new HashMap, então salvo aqui,
+
+43
+00:03:31.380 --> 00:03:38.790
+vamos importar também o HashMap.
+
+44
+00:03:38.790 --> 00:03:43.903
+E aí aqui, esse tradução
+
+45
+00:03:43.903 --> 00:03:49.260
+aqui já não,
+esse aqui já está errado aqui,
+
+46
+00:03:49.260 --> 00:03:53.599
+então eu vou adicionar aqui é o put, né,
+
+47
+00:03:53.599 --> 00:03:58.430
+na coisa,
+eu vou adicionar a palavra e a tradução.
+
+48
+00:03:58.430 --> 00:04:03.640
+Então palavra, opa, e a tradução.
+
+49
+00:04:03.640 --> 00:04:09.664
+E aqui, ao invés de simplesmente retornar,
+
+50
+00:04:09.664 --> 00:04:15.020
+ele está como object inclusive,
+eu vou botar para ele retornar uma string,
+
+51
+00:04:15.020 --> 00:04:21.690
+ele vai ter o traducao.get a palavra.
+
+52
+00:04:21.690 --> 00:04:28.690
+Então eu salvo aqui.
+
+53
+00:04:28.690 --> 00:04:33.982
+Vamos ver se salvou,
+está sem nenhum erro de compilação,
+
+54
+00:04:33.982 --> 00:04:37.798
+eu vou rodar de novo e meu teste passou.
+
+55
+00:04:37.798 --> 00:04:42.385
+Lembrando que ainda não vou
+para outro teste, não, eu vou
+
+56
+00:04:42.385 --> 00:04:47.012
+primeiro para o meu chapeuzinho azul aqui,
+vamos ver o que é que pode ser melhorado.
+
+57
+00:04:47.012 --> 00:04:47.870
+Bom, aqui.
+
+58
+00:04:47.870 --> 00:04:51.170
+eu já vejo que tradução já não é
+
+59
+00:04:51.170 --> 00:04:55.910
+nome adequado para uma variável que
+está guardando mais de uma tradução.
+
+60
+00:04:55.910 --> 00:05:01.038
+Então eu vou vir aqui,
+vou dar rename e vou
+
+61
+00:05:01.038 --> 00:05:06.998
+mudar aqui para traduções, note que quando
+eu mudo ali, ele muda tudo junto, tá?
+
+62
+00:05:06.998 --> 00:05:12.000
+Então, eu vou mudar aqui para traduções,
+eu acho que fica melhor,
+
+63
+00:05:12.000 --> 00:05:16.100
+nessa parte eu estou satisfeito
+e no meu teste aqui,
+
+64
+00:05:16.100 --> 00:05:19.204
+eu estou repetindo sempre
+esse tradutor aqui.
+
+65
+00:05:19.204 --> 00:05:25.530
+Então para não ter que repetir mais isso,
+eu vou refatorar também o meu teste, tá?
+
+66
+00:05:25.530 --> 00:05:29.483
+Então quando a gente bota o chapéu azul,
+não quer dizer que a gente está
+
+67
+00:05:29.483 --> 00:05:34.126
+refatorando só o código de produção,
+a gente pode refatorar teste também,
+
+68
+00:05:34.126 --> 00:05:39.586
+mas lembre que refatorar o teste você não
+muda o que o teste está verificando, tá?
+
+69
+00:05:39.586 --> 00:05:44.194
+Então eu vou vir aqui,
+botar aqui Before, né,
+
+70
+00:05:44.194 --> 00:05:48.360
+vou criar aqui método public void
+
+71
+00:05:48.360 --> 00:05:56.010
+criarTradutor, certo,
+
+72
+00:05:56.010 --> 00:06:01.830
+e aí eu vou copiar isso
+aqui aqui para cima,
+
+73
+00:06:01.830 --> 00:06:06.060
+né, na verdade o tradutor
+eu vou criar cada...
+
+74
+00:06:06.060 --> 00:06:11.130
+toda vez, antes de cada teste,
+a gente viu que
+
+75
+00:06:11.130 --> 00:06:17.459
+o Before ele roda antes de cada teste
+que eu vou só declarar a variável t,
+
+76
+00:06:17.459 --> 00:06:21.354
+para poder ser usada também
+nos métodos ali, tá?
+
+77
+00:06:21.354 --> 00:06:26.234
+E aí, a partir do momento que ele
+faz isso, eu posso retirar essa
+
+78
+00:06:26.234 --> 00:06:31.328
+inicialização de todos os testes aqui, né?
+
+79
+00:06:31.328 --> 00:06:33.878
+Acho que agora ficou melhor.
+
+80
+00:06:33.878 --> 00:06:38.625
+Está faltando só importar o Before,
+mesmo refatorando o
+
+81
+00:06:38.625 --> 00:06:43.904
+teste eu preciso salvar aqui e
+rodar os testes de novo, né?
+
+82
+00:06:43.904 --> 00:06:50.400
+E passou, agora sim eu posso marcar
+aqui como OK aqui as duas traduções, tá?
+
+83
+00:06:50.400 --> 00:06:57.199
+Bom, então nessa parte do
+nosso hands-on foi isso,
+
+84
+00:06:57.199 --> 00:07:02.621
+aguardo você na próxima parte para
+a gente poder terminar aqui, né,
+
+85
+00:07:02.621 --> 00:07:08.889
+seguir aqui com os nossos cenários
+aqui de teste, está certo?
+
+86
+00:07:08.889 --> 00:07:11.870
+Vejo vocês no próximo.
+
+87
+00:07:11.870 --> 00:07:17.350
+[MÚSICA]

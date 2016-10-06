@@ -1,0 +1,968 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.595
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:08.595 --> 00:00:12.981
+o meu nome é Eduardo Guerra e estamos
+no curso de Desenvolvimento de
+
+3
+00:00:12.981 --> 00:00:14.950
+Software Guiado por Testes.
+
+4
+00:00:14.950 --> 00:00:20.250
+Hoje vamos falar sobre os
+princípios do TDD, está?
+
+5
+00:00:20.250 --> 00:00:25.251
+A ideia é assim, falar pouco sobre
+o que tem por trás ali do TDD,
+
+6
+00:00:25.251 --> 00:00:30.940
+porque é que ele funciona,
+quais são aqueles princípios ali,
+
+7
+00:00:30.940 --> 00:00:35.250
+o que é que é importante a gente entender,
+
+8
+00:00:35.250 --> 00:00:40.050
+do porquê o TDD, é uma técnica,
+entender os seus benefícios,
+
+9
+00:00:40.050 --> 00:00:45.814
+quais os valores que tem
+ali por trás do TDD, certo?
+
+10
+00:00:45.814 --> 00:00:52.401
+Então, agora que vocês já viram
+pouquinho do TDD na prática,
+
+11
+00:00:52.401 --> 00:00:57.820
+a gente vai falar pouquinho para vocês
+entenderem melhor como isso daí funciona.
+
+12
+00:00:57.820 --> 00:01:02.964
+Bom, o primeiro princípio do TDD,
+é que ele se baseia no
+
+13
+00:01:02.964 --> 00:01:08.040
+facto de que o feedback rápido é
+importante para o aprendizado.
+
+14
+00:01:08.040 --> 00:01:13.697
+Bom, vou pegar exemplo aqui que talvez
+todos vocês aí já tenham passado dia.
+
+15
+00:01:13.697 --> 00:01:19.591
+Imagina aquele professor que você vai,
+faz, você estuda,
+
+16
+00:01:19.591 --> 00:01:26.990
+faz a prova e aí ele vai e só entrega
+a prova, corrigida, 2 meses depois.
+
+17
+00:01:26.990 --> 00:01:31.043
+E aí você pega,
+você viu que acertou algumas coisas,
+
+18
+00:01:31.043 --> 00:01:35.517
+que errou e aí você já não
+consegue mais julgar direito,
+
+19
+00:01:35.517 --> 00:01:40.361
+você não sabe porquê é que foi mesmo que
+eu fiz esse exercício desse jeito e aí
+
+20
+00:01:40.361 --> 00:01:44.680
+aquele feedback às vezes já
+não tem muito valor para você.
+
+21
+00:01:44.680 --> 00:01:50.674
+Por outro lado, aquele professor que pega
+e entrega a prova rápido, você fez a prova
+
+22
+00:01:50.674 --> 00:01:54.527
+e 2 dias depois ele entregou a prova,
+a matéria está fresca na sua cabeça,
+
+23
+00:01:54.527 --> 00:01:58.810
+você sabe porque você usou aquela
+solução e aí se você errar alguma coisa,
+
+24
+00:01:58.810 --> 00:02:03.111
+você vai ali olhar para aquela prova
+de uma forma muito mais crítica,
+
+25
+00:02:03.111 --> 00:02:05.195
+você vai aprender com aquilo.
+
+26
+00:02:05.195 --> 00:02:10.078
+Então, o feedback rápido ele é
+muito importante para que você
+
+27
+00:02:10.078 --> 00:02:15.250
+consiga lembrar da, do porquê que você
+fez aquilo, do porque é que deu errado.
+
+28
+00:02:15.250 --> 00:02:19.059
+Uma coisa que eu vejo,
+às vezes o cara vai lá,
+
+29
+00:02:19.059 --> 00:02:23.740
+está fazendo software e às vezes é
+software que tem várias camadas,
+
+30
+00:02:23.740 --> 00:02:28.314
+tem vários pedaços e o cara vai cria
+'iii' de dados, cria lógica de negócios,
+
+31
+00:02:28.314 --> 00:02:30.860
+cria o cara ali que
+processo arquivo e tal,
+
+32
+00:02:30.860 --> 00:02:35.911
+e aí demora uns 2 ou 3 dias para o
+cara conseguir realmente rodar e
+
+33
+00:02:35.911 --> 00:02:41.169
+testar aquele software e aí
+com isso ele perde o feedback,
+
+34
+00:02:41.169 --> 00:02:45.779
+aí ele roda,
+dá uma coisa errada e ele fala " nossa,
+
+35
+00:02:45.779 --> 00:02:49.913
+o erro está nessa classe, mas eu nem
+lembro porque é que eu fiz assim,
+
+36
+00:02:49.913 --> 00:02:53.986
+eu nem lembro direito dessa classe."
+No TDD o feedback é imediato,
+
+37
+00:02:53.986 --> 00:02:56.552
+você criou o teste,
+se você rodar e não passar,
+
+38
+00:02:56.552 --> 00:02:59.729
+você já vê o porque é que
+aquele teste não está passando.
+
+39
+00:02:59.729 --> 00:03:04.470
+Se você fez uma modificação no código,
+seja por uma refaturação ou porque você
+
+40
+00:03:04.470 --> 00:03:09.020
+está adicionando mais funcionalidade e
+de repente quebra teste anterior e tal,
+
+41
+00:03:09.020 --> 00:03:13.387
+você vai olhar e vai falar assim:
+" é por isso que deu problema!".
+
+42
+00:03:13.387 --> 00:03:16.088
+Você entende, o seu feedback é na hora.
+
+43
+00:03:16.088 --> 00:03:20.542
+Então, isso faz com que você
+entenda o porquê que aquele erro
+
+44
+00:03:20.542 --> 00:03:23.178
+aconteceu e evite ele no futuro.
+
+45
+00:03:23.178 --> 00:03:27.938
+Então, o aprendizado, quando o feedback
+é rápido, ele é muito mais depressa.
+
+46
+00:03:27.938 --> 00:03:33.210
+Você vai ver que fazendo o TDD,
+você rapidamente vai conseguir não
+
+47
+00:03:33.210 --> 00:03:38.200
+errar mais aquelas mesmas coisas
+que você errava, você vai
+
+48
+00:03:38.200 --> 00:03:43.310
+aprender muito mais rápido, você vai
+andar para a frente com mais segurança.
+
+49
+00:03:43.310 --> 00:03:49.645
+Uma outra questão do TDD que eu já falei,
+vou vir aqui para o Espaço,
+
+50
+00:03:49.645 --> 00:03:54.641
+aqui para contar uma
+historinha para vocês, certo?
+
+51
+00:03:54.641 --> 00:04:00.930
+Que é o TDD ele é ele usa esse princípio
+da solução mais simples que funciona.
+
+52
+00:04:00.930 --> 00:04:05.247
+Desculpe que eu estou meio tonto
+aqui de estar aqui no Espaço.
+
+53
+00:04:05.247 --> 00:04:09.785
+Mas ele usa, eu vou contar uma
+história para vocês, certo?
+
+54
+00:04:09.785 --> 00:04:15.535
+É uma história fictícia,
+mas eu acho que ilustra bem,
+
+55
+00:04:15.535 --> 00:04:21.060
+que dizem que o pessoal vende aí na
+internet a tal da caneta da Nasa,
+
+56
+00:04:21.060 --> 00:04:25.210
+você pode escrever de ponta à cabeça a
+gravidade zero que você consegue escrever.
+
+57
+00:04:25.210 --> 00:04:28.891
+E aí gastou milhões para
+desenvolver essa caneta,
+
+58
+00:04:28.891 --> 00:04:34.566
+a tecnologia dessa caneta, e aí foram os
+russos lá e levaram lápis para o Espaço.
+
+59
+00:04:34.566 --> 00:04:39.440
+Essa história é meio que uma lenda urbana
+mas mostra que muitas vezes a gente,
+
+60
+00:04:39.440 --> 00:04:43.472
+a gente se prende ao facto de que,
+tem que ser uma caneta,
+
+61
+00:04:43.472 --> 00:04:47.440
+e aí busca, vamos fazer
+a caneta que escreve no Espaço.
+
+62
+00:04:47.440 --> 00:04:51.100
+E esquece-se que ás vezes o meu
+problema é escrever no Espaço,
+
+63
+00:04:51.100 --> 00:04:54.350
+e às vezes existem outras
+soluções que não são caneta.
+
+64
+00:04:54.350 --> 00:04:55.175
+Então o TDD,
+
+65
+00:04:55.175 --> 00:04:59.610
+tem como seu princípio de buscar
+a solução mais simples que funciona.
+
+66
+00:04:59.610 --> 00:05:04.485
+Talvez você fale assim: mas nem sempre
+vais ser uma solução simples que vai
+
+67
+00:05:04.485 --> 00:05:05.300
+funcionar.
+
+68
+00:05:05.300 --> 00:05:11.961
+Sim, mas é a que, talvez seja a mais
+simples que funciona para aqueles testes,
+
+69
+00:05:11.961 --> 00:05:15.780
+e às vezes a mais simples para
+aqueles testes é a complicada.
+
+70
+00:05:15.780 --> 00:05:20.985
+A questão é que normalmente as soluções
+que precisam de ser complicadas elas podem
+
+71
+00:05:20.985 --> 00:05:28.918
+ser muito mais complicadas se você
+não prezar pela simplicidade, está?
+
+72
+00:05:28.918 --> 00:05:34.790
+O TDD ele tem essa ideia
+do design evolutivo.
+
+73
+00:05:34.790 --> 00:05:39.069
+E seguindo as necessidades da aplicação.
+
+74
+00:05:39.069 --> 00:05:44.088
+Erro muito comum que a gente
+vê no design de software,
+
+75
+00:05:44.088 --> 00:05:48.401
+é o chamado overdesign,
+ou seja quando o cara faz
+
+76
+00:05:48.401 --> 00:05:52.540
+projeto muito maior ou muito mais
+complicado do que o necessário.
+
+77
+00:05:52.540 --> 00:05:56.532
+Então, uma coisa que já me
+falaram que é muito sábia,
+
+78
+00:05:56.532 --> 00:06:00.669
+é aquela coisa,
+quando você tenta prever como vai ser eu
+
+79
+00:06:00.669 --> 00:06:05.148
+já vi muita gente: mas pode ser que mude
+isso, pode ser que mude aquilo, então,
+
+80
+00:06:05.148 --> 00:06:08.980
+por isso é que estou colocando isso, por
+isso é que estou colocando aqui no outro.
+
+81
+00:06:08.980 --> 00:06:10.371
+Então, o que acontece?
+
+82
+00:06:10.371 --> 00:06:15.275
+Quando você tentar prever mudança, a mim
+pelo menos, a minha experiência mostra que
+
+83
+00:06:15.275 --> 00:06:19.882
+muitas vezes aquela mudança não acontece
+e às vezes você acaba gastando tempo,
+
+84
+00:06:19.882 --> 00:06:23.420
+gastando esforço da sua equipa
+para desenvolver uma solução
+
+85
+00:06:23.420 --> 00:06:28.152
+que não não vai ser usada e muitas
+vezes quando aquilo acontece,
+
+86
+00:06:28.152 --> 00:06:32.994
+acontece de uma forma, de jeito
+diferente do que você tinha previsto e
+
+87
+00:06:32.994 --> 00:06:38.007
+mesmo assim aquela solução que você tinha
+bolado não vai poder ser utilizada.
+
+88
+00:06:38.007 --> 00:06:42.466
+Então, o TDD tem essa questão,
+a questão da solução mais simples,
+
+89
+00:06:42.466 --> 00:06:47.043
+faz com que à medida que você for
+criando testes,
+
+90
+00:06:47.043 --> 00:06:52.139
+o design vai evoluindo junto
+com as suas necessidades
+
+91
+00:06:52.139 --> 00:06:57.025
+e o facto de a refaturação
+ser passo importante do TDD,
+
+92
+00:06:57.025 --> 00:07:00.675
+e a cada ciclo você olha
+para a refaturação,
+
+93
+00:07:00.675 --> 00:07:05.434
+isso significa que a cada ciclo
+do TDD uma questão de minutos,
+
+94
+00:07:05.434 --> 00:07:09.389
+ou às vezes nem isso,
+dependendo da velocidade do ciclo,
+
+95
+00:07:09.389 --> 00:07:14.011
+você está olhando para a sua
+classe repensando o design dela.
+
+96
+00:07:14.011 --> 00:07:19.412
+Então, se algum ponto você vê que
+uma outra solução vai ser melhor,
+
+97
+00:07:19.412 --> 00:07:24.221
+vai ser mais eficiente,
+você vai e refatora o seu código para ela.
+
+98
+00:07:24.221 --> 00:07:29.319
+Então, o seu código,
+ele não é nem mais nem menos do que
+
+99
+00:07:29.319 --> 00:07:34.065
+aquilo que a sua aplicação
+precisa naquele momento,
+
+100
+00:07:34.065 --> 00:07:37.853
+você não vai fazer uma solução para teste,
+
+101
+00:07:37.853 --> 00:07:41.911
+digamos assim,
+que ainda não chegou, certo?
+
+102
+00:07:41.911 --> 00:07:47.049
+Nem você vai ficar com design
+que já está ultrapassado
+
+103
+00:07:47.049 --> 00:07:51.370
+para as necessidade
+correntes da sua solução.
+
+104
+00:07:51.370 --> 00:07:55.352
+O design ele vai andando
+junto com o código,
+
+105
+00:07:55.352 --> 00:08:01.150
+a estrutura da sua aplicação, das suas
+classes, vai andando junto com o código.
+
+106
+00:08:01.150 --> 00:08:07.130
+Então, você nem vai fazer algo
+complicado demais, nem simples demais.
+
+107
+00:08:07.130 --> 00:08:08.730
+Você vai na medida exata.
+
+108
+00:08:08.730 --> 00:08:09.312
+Porquê?
+
+109
+00:08:09.312 --> 00:08:13.110
+Porque você está evoluindo e
+está pensando nisso toda a hora.
+
+110
+00:08:13.110 --> 00:08:15.124
+Bom, temos os testes,
+
+111
+00:08:15.124 --> 00:08:20.975
+os testes acabam sendo aí uma herança
+boa que o TDD deixa para a gente.
+
+112
+00:08:20.975 --> 00:08:26.172
+Então, os testes eles dão
+uma segurança bem grande,
+
+113
+00:08:26.172 --> 00:08:31.756
+para que a gente possa saber quando alguma
+coisa deu errada e isso é muito bom.
+
+114
+00:08:31.756 --> 00:08:35.020
+Eu vejo que muita gente às
+vezes fica lambendo o código,
+
+115
+00:08:35.020 --> 00:08:36.840
+ou seja: será que eu errei?
+
+116
+00:08:36.840 --> 00:08:38.388
+Será que está certo?
+
+117
+00:08:38.388 --> 00:08:42.688
+Aí o cara vai olha o código,
+1, 2, 3, 10, 20 vezes
+
+118
+00:08:42.688 --> 00:08:47.623
+conferindo para ver se está certo e cada
+mudancinha que faz, principalmente se for
+
+119
+00:08:47.623 --> 00:08:50.970
+pedaço de código importante,
+o cara vai e olha, olha e olha.
+
+120
+00:08:50.970 --> 00:08:55.000
+Enquanto que com os testes ele
+simplesmente pode chegar lá,
+
+121
+00:08:55.000 --> 00:08:57.574
+executar os testes e ver se falhou ou não,
+
+122
+00:08:57.574 --> 00:09:00.839
+se quebrou ou não alguma
+funcionalidade que já existia.
+
+123
+00:09:00.839 --> 00:09:05.096
+Se você não está seguro com os seus
+testes, você pode ir lá e criar mais
+
+124
+00:09:05.096 --> 00:09:10.159
+testes, criar testes de novos cenários
+para que você possa ter segurança
+
+125
+00:09:10.159 --> 00:09:15.580
+e isso ajudar nas mudanças,
+principalmente na refatoração,
+
+126
+00:09:15.580 --> 00:09:20.401
+muitas vezes a gente não vai lá
+e não melhora uma classe porque
+
+127
+00:09:20.401 --> 00:09:25.248
+a gente tem medo que ao fazer isso
+a gente quebrar aquela classe,
+
+128
+00:09:25.248 --> 00:09:28.289
+a gente inserir bug ali sem querer,
+
+129
+00:09:28.289 --> 00:09:32.515
+e com os testes a gente
+vai saber se aparecer bug.
+
+130
+00:09:32.515 --> 00:09:34.825
+Então, você ter os testes,
+
+131
+00:09:34.825 --> 00:09:40.455
+é uma segurança para você poder
+fazer modificações nos seu código.
+
+132
+00:09:40.455 --> 00:09:47.010
+Isso daí é uma coisa bem positiva
+que é dos princípios aí do TDD.
+
+133
+00:09:47.010 --> 00:09:53.104
+Documentação, eu já vi muita
+documentação desatualizada,
+
+134
+00:09:53.104 --> 00:09:57.315
+certo, De código, o cara pega
+lá: deixa eu ver a documentação,
+
+135
+00:09:57.315 --> 00:10:00.850
+aí pega lá vai olhar a classe e
+está completamente diferente.
+
+136
+00:10:00.850 --> 00:10:01.378
+está?
+
+137
+00:10:01.378 --> 00:10:05.426
+A documentação é gerada pelo
+TDD nos próprios testes,
+
+138
+00:10:05.426 --> 00:10:08.770
+o que é que são os testes
+senão vários exemplos
+
+139
+00:10:08.770 --> 00:10:13.535
+de como aquela classe funciona
+e como ela tem que ser usada.
+
+140
+00:10:13.535 --> 00:10:19.188
+Tem caso aí, não aconteceu comigo,
+colega meu trabalha numa
+
+141
+00:10:19.188 --> 00:10:26.097
+empresa e ele precisava gerar componente,
+na Web para uma outra empresa consumir.
+
+142
+00:10:26.097 --> 00:10:27.585
+E aí o que é que ele fez?
+
+143
+00:10:27.585 --> 00:10:32.746
+Ele pegou, criou o componente,
+criou os testes e criou uma documentação
+
+144
+00:10:32.746 --> 00:10:38.190
+de como utilizar, colocou os testes
+e a documentação para download.
+
+145
+00:10:38.190 --> 00:10:40.182
+O cara foi, implementou, usou,
+
+146
+00:10:40.182 --> 00:10:44.935
+funcionou direitinho e aí quando ele foi
+olhar as estatísticas do servidor dele,
+
+147
+00:10:44.935 --> 00:10:49.781
+ele viu que o cara tinha baixado o
+teste mas nem baixou a documentação.
+
+148
+00:10:49.781 --> 00:10:54.104
+Então, é aquela coisa: o que é que você
+vai querer, você quer saber como usar
+
+149
+00:10:54.104 --> 00:10:57.794
+uma classe, o que é que você vai buscar lá
+no Google, você vai procurar exemplo de
+
+150
+00:10:57.794 --> 00:11:02.681
+alguém usando essa classe, ou você vai lá
+e vai querer ver uma descrição da classe?
+
+151
+00:11:02.681 --> 00:11:07.575
+Normalmente a gente quer logo exemplo
+para a gente ver e o teste nada
+
+152
+00:11:07.575 --> 00:11:10.838
+mais é do que isso,
+não só o exemplo como através
+
+153
+00:11:10.838 --> 00:11:14.235
+das asserções ele já diz
+como é que aquilo funciona.
+
+154
+00:11:14.235 --> 00:11:18.480
+E a grande vantagem dos testes
+é que como eles estão rodando,
+
+155
+00:11:18.480 --> 00:11:22.940
+eles estão 100 por cento atualizados
+com o que a classe está fazendo,
+
+156
+00:11:22.940 --> 00:11:27.821
+então, os testes, eles não só
+servem para a questão da segurança,
+
+157
+00:11:27.821 --> 00:11:33.423
+de você não introduzir erros de forma
+acidental no código, mas também como
+
+158
+00:11:33.423 --> 00:11:38.470
+uma documentação, que você pode consultar
+eles e uma documentação sempre atualizada.
+
+159
+00:11:38.470 --> 00:11:43.229
+Outra coisa,
+todo código é culpado a não ser
+
+160
+00:11:43.229 --> 00:11:48.061
+que ele se prove inocente,
+o que é que significa isso?
+
+161
+00:11:48.061 --> 00:11:51.387
+Eu vejo muita gente:
+tem Bug no seu código,
+
+162
+00:11:51.387 --> 00:11:53.920
+aí sai o cara: me prova, me mostra.
+
+163
+00:11:53.920 --> 00:11:58.373
+Ou seja,
+o ônus de provar que tem Bug é do cliente,
+
+164
+00:11:58.373 --> 00:12:01.520
+eu acho que deveria ser o contrário.
+
+165
+00:12:01.520 --> 00:12:07.082
+O código, ele tem Bug a não ser que
+você prove que aquilo está funcionando,
+
+166
+00:12:07.082 --> 00:12:09.120
+que ele se prove inocente.
+
+167
+00:12:09.120 --> 00:12:09.846
+Certo?
+
+168
+00:12:09.846 --> 00:12:15.032
+Então o teste é isso daí,
+para você entregar o código, você
+
+169
+00:12:15.032 --> 00:12:20.093
+tem que provar que ele está funcionando
+e você faz isso através do teste, está?
+
+170
+00:12:20.093 --> 00:12:24.938
+Pensa nisso, vê se não faz sentido que é
+quem está entregando que tem que provar
+
+171
+00:12:24.938 --> 00:12:28.920
+que aquilo está funcionando e não
+quem está recebendo que tem que
+
+172
+00:12:28.920 --> 00:12:32.995
+provar que alguma coisa não
+está funcionando ali no código.
+
+173
+00:12:32.995 --> 00:12:37.912
+Então lembre-se disso,
+lembre-se dessa frase: Todo código é
+
+174
+00:12:37.912 --> 00:12:41.660
+culpado até que se prove inocente.
+
+175
+00:12:41.660 --> 00:12:48.302
+[SEM ÁUDIO] E para terminar,
+é mais divertido fazer os testes antes,
+
+176
+00:12:48.302 --> 00:12:52.210
+do que você criar o código
+e fazer os testes depois.
+
+177
+00:12:52.210 --> 00:12:55.016
+Por que é mais divertido
+fazer os testes antes?
+
+178
+00:12:55.016 --> 00:12:57.191
+Acho que vocês vão experimentar aí,
+
+179
+00:12:57.191 --> 00:13:01.905
+quem fez o curso de Orientação a Objetos,
+criou testes lá com JUnit,
+
+180
+00:13:01.905 --> 00:13:06.758
+talvez tenha criado depois, se não
+conhecia o TDD, e você vai ver agora,
+
+181
+00:13:06.758 --> 00:13:12.020
+que quando você está criando os testes
+agora, é muito mais interessante, por quê?
+
+182
+00:13:12.020 --> 00:13:17.274
+Porque no TDD, quando você cria teste,
+você está criando muito mais do que teste,
+
+183
+00:13:17.274 --> 00:13:21.752
+você está especificando a classe que
+você vai criar, você está especificando
+
+184
+00:13:21.752 --> 00:13:26.166
+a interface, você está definindo
+qual vai ser o comportamento dela.
+
+185
+00:13:26.166 --> 00:13:31.750
+Então você criar o teste no TDD é uma
+intimidade muito mais interessante
+
+186
+00:13:31.750 --> 00:13:37.759
+que exige muito mais da sua cabeça,
+que você tem que pensar muito mais, do
+
+187
+00:13:37.759 --> 00:13:43.496
+que simplesmente você ir lá e criar teste
+para uma coisa que já está funcionando.
+
+188
+00:13:43.496 --> 00:13:45.706
+Então é muito mais divertido,
+
+189
+00:13:45.706 --> 00:13:49.812
+quero escutar aí no fórum aí
+nos comentários, se vocês,
+
+190
+00:13:49.812 --> 00:13:55.560
+se não é muito mais legal criar os testes
+antes do código do que criar depois.
+
+191
+00:13:55.560 --> 00:13:56.761
+Está certo?
+
+192
+00:13:56.761 --> 00:13:57.306
+Bom.
+
+193
+00:13:57.306 --> 00:14:02.546
+nessa aula, a gente falou
+alguns dos princípios do TDD,
+
+194
+00:14:02.546 --> 00:14:07.753
+questões que estão ali, digamos assim,
+no âmago ali do TDD, do porquê que
+
+195
+00:14:07.753 --> 00:14:13.891
+ele funciona e por que é que é uma técnica
+que está sendo cada vez mais adotada.
+
+196
+00:14:13.891 --> 00:14:18.169
+Não só para você criar lá
+os seus códigos com TDD
+
+197
+00:14:18.169 --> 00:14:22.060
+e constatar que aquilo
+ali está funcionando,
+
+198
+00:14:22.060 --> 00:14:27.529
+mas para você entender o porquê de
+ter esses benefícios aí que ele traz.
+
+199
+00:14:27.529 --> 00:14:28.540
+Está certo?
+
+200
+00:14:28.540 --> 00:14:35.950
+Muito obrigado, até a próxima aula!

@@ -1,0 +1,518 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.795
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.795 --> 00:00:11.611
+Meu nome é Eduardo Guerra.
+
+3
+00:00:11.611 --> 00:00:15.399
+Esse é o curso de orientação
+a objetos com Java.
+
+4
+00:00:15.399 --> 00:00:19.803
+Hoje eu vou estar falando para
+vocês sobre encapsulamento.
+
+5
+00:00:19.803 --> 00:00:25.647
+Só que agora eu vou falar quando você tem
+objetos e arrays dentro da sua classe,
+
+6
+00:00:25.647 --> 00:00:30.673
+para você entender alguns dos cuidados
+que você precisa ter quando você
+
+7
+00:00:30.673 --> 00:00:35.660
+vai retornar esse tipo de informação
+para quem está do lado de fora.
+
+8
+00:00:35.660 --> 00:00:36.704
+Vamos ver então?
+
+9
+00:00:36.704 --> 00:00:37.679
+O que acontece?
+
+10
+00:00:37.679 --> 00:00:42.648
+Uma classe, voltando aí o nosso exemplo
+da classe Atriz, a gente pode ter dentro
+
+11
+00:00:42.648 --> 00:00:47.703
+da classe informações mais complexas,
+como arrays, como objeto.
+
+12
+00:00:47.703 --> 00:00:52.703
+Então a gente tem o exemplo aí,
+por exemplo array de strings aí que
+
+13
+00:00:52.703 --> 00:00:58.561
+guarda os prêmios da atriz e
+podemos ter por exemplo o amante,
+
+14
+00:00:58.561 --> 00:01:01.304
+que é o ator, que é objeto.
+
+15
+00:01:01.304 --> 00:01:04.652
+Então por exemplo o que que acontece?
+
+16
+00:01:04.652 --> 00:01:12.200
+Se eu for lá e der o getPremios,
+eu vou receber aquele array de strings.
+
+17
+00:01:12.200 --> 00:01:15.990
+Esse array de strings eu
+posso pegar e modificar ele.
+
+18
+00:01:15.990 --> 00:01:23.017
+Por mais que eu não tenha setPremios que
+me permite setar ali array de prêmios,
+
+19
+00:01:23.017 --> 00:01:28.831
+se eu posso receber ele e eu modificar,
+ele vai ser modificado dentro do objeto.
+
+20
+00:01:28.831 --> 00:01:33.650
+Então por exemplo se eu pegar ali e
+colocar ali o "Framboesa de Ouro",
+
+21
+00:01:33.650 --> 00:01:38.150
+o famoso "Razzie Awards" premia
+aí os piores do ano não é?
+
+22
+00:01:38.150 --> 00:01:43.908
+Perto ali do Oscar que premia os melhores,
+o "Framboesa de Ouro" são os piores.
+
+23
+00:01:43.908 --> 00:01:48.917
+Eu posso pegar e colocar ali o "Framboesa
+de Ouro" ali para o ator, sem que o objeto
+
+24
+00:01:48.917 --> 00:01:53.346
+saiba disso, porque eu estou pegando o
+array, que está lá dentro do objeto.
+
+25
+00:01:53.346 --> 00:01:54.880
+Eu estou modificando ele.
+
+26
+00:01:54.880 --> 00:01:58.555
+Então com isso daí vai modificar
+dentro do objeto também.
+
+27
+00:01:58.555 --> 00:02:03.537
+A mesma coisa funciona ali para
+objeto que esteja dentro do objeto.
+
+28
+00:02:03.537 --> 00:02:08.841
+Então se eu der getAmante e recuperar
+o objeto ator e eu setar nome ali,
+
+29
+00:02:08.841 --> 00:02:13.230
+o seu amante é o fulano agora,
+aquela informação do objeto,
+
+30
+00:02:13.230 --> 00:02:17.694
+o objeto ator que eu estou modificando
+é o mesmo que está dentro do objeto.
+
+31
+00:02:17.694 --> 00:02:19.998
+Então ele vai ser alterado lá também.
+
+32
+00:02:19.998 --> 00:02:22.712
+Isso daí é uma quebra de encapsulamento.
+
+33
+00:02:22.712 --> 00:02:23.370
+Porquê?
+
+34
+00:02:23.370 --> 00:02:25.673
+Porque às vezes o cara vai lá não é?
+
+35
+00:02:25.673 --> 00:02:29.310
+Ele fala assim: " eu não vou
+permitir que altere o ator".
+
+36
+00:02:29.310 --> 00:02:32.851
+Eu não vou permitir que
+altere o array de prêmios,
+
+37
+00:02:32.851 --> 00:02:37.080
+ou que isso seja alterado
+somente de uma forma controlada.
+
+38
+00:02:37.080 --> 00:02:42.703
+Mas o que acontece é que se você
+consegue recuperar e alterar
+
+39
+00:02:42.703 --> 00:02:48.152
+as informações dele, não só você pode
+causar funcionamento errado como
+
+40
+00:02:48.152 --> 00:02:53.463
+você está quebrando o encapsulamento que
+tinha sido planejado para aquela classe.
+
+41
+00:02:53.463 --> 00:02:56.403
+E a gente já viu esse
+carinha aí numa outra aula.
+
+42
+00:02:56.403 --> 00:03:00.474
+Ele olhou e falou assim: "puxa eu
+estou querendo modificar prêmio.
+
+43
+00:03:00.474 --> 00:03:02.345
+Eu não sei jeito certo de fazer.
+
+44
+00:03:02.345 --> 00:03:05.489
+Olha, se eu recuperar
+array eu posso mudar aqui.
+
+45
+00:03:05.489 --> 00:03:08.893
+Eu estou querendo botar outro
+amante aqui para essa atriz.
+
+46
+00:03:08.893 --> 00:03:13.441
+Olha, eu consigo alterar o nome do ator,
+dá para fazer isso, vai imprimir na tela
+
+47
+00:03:13.441 --> 00:03:18.070
+do jeito que eu quero, por mais que eu não
+tenha alterado as outras informações".
+
+48
+00:03:18.070 --> 00:03:21.645
+Não dá essa chance para o cara
+fazer besteira no seu software.
+
+49
+00:03:21.645 --> 00:03:25.650
+Já falei isso antes num outro contexto,
+falo agora novamente.
+
+50
+00:03:25.650 --> 00:03:29.609
+Para essa questão a gente tem
+duas soluções que a gente pode
+
+51
+00:03:29.609 --> 00:03:30.897
+estar utilizando.
+
+52
+00:03:30.897 --> 00:03:33.250
+Eu vou falar aí sobre cada uma delas.
+
+53
+00:03:33.250 --> 00:03:36.910
+A primeira delas é você retornar clone,
+ou seja,
+
+54
+00:03:36.910 --> 00:03:41.250
+você copia aquele objeto que
+está dentro da classe e retorna.
+
+55
+00:03:41.250 --> 00:03:46.575
+E aí aquilo que for alterado não
+é o que está dentro do objeto.
+
+56
+00:03:46.575 --> 00:03:50.693
+Então ele pode pegar, pode alterar
+à vontade que não vai ter efeito.
+
+57
+00:03:50.693 --> 00:03:55.898
+Então por exemplo,
+imagina ali que no método getAtor,
+
+58
+00:03:55.898 --> 00:04:00.313
+do getAmante quer dizer, eu crio novo
+
+59
+00:04:00.313 --> 00:04:05.065
+objeto ator com todas as
+informações daquele objeto.
+
+60
+00:04:05.065 --> 00:04:09.516
+Eu posso criar novo, copiar as
+informações, tem outras estratégias aí
+
+61
+00:04:09.516 --> 00:04:13.227
+para clonar objetos,
+não é o escopo aqui da nossa aula.
+
+62
+00:04:13.227 --> 00:04:17.520
+E aí dessa forma se a pessoa
+recuperar o ator e mudar o nome dele,
+
+63
+00:04:17.520 --> 00:04:22.216
+isso não vai influenciar o objeto
+ator que está dentro da classe Atriz.
+
+64
+00:04:22.216 --> 00:04:25.960
+Então ele pode alterar à vontade
+que isso não vai quebrar o
+
+65
+00:04:25.960 --> 00:04:28.813
+encapsulamento e não vai alterar.
+
+66
+00:04:28.813 --> 00:04:33.694
+A mesma coisa vale para os arrays,
+a gente tem alguns métodos na
+
+67
+00:04:33.694 --> 00:04:38.284
+biblioteca do Java para cópia de arrays,
+aí eu usei o Arrays.copyOf.
+
+68
+00:04:38.284 --> 00:04:40.720
+Então eu pego copio o array e retorno.
+
+69
+00:04:40.720 --> 00:04:44.661
+Aí a pessoa pode fazer o que quiser
+com aquele array que vai ser
+
+70
+00:04:44.661 --> 00:04:48.130
+array diferente daquele que
+está dentro da minha classe.
+
+71
+00:04:48.130 --> 00:04:50.454
+Também não vai dar problema.
+
+72
+00:04:50.454 --> 00:04:55.293
+A outra solução é você esconder o objeto,
+ou seja,
+
+73
+00:04:55.293 --> 00:04:58.206
+você não retornar ele de forma nenhuma.
+
+74
+00:04:58.206 --> 00:05:03.280
+E aí você fala assim: " mas como é que
+a pessoa vai ter acesso aquilo?" Você pode
+
+75
+00:05:03.280 --> 00:05:08.948
+criar métodos que vão controlar o acesso
+sem retornar o objeto diretamente.
+
+76
+00:05:08.948 --> 00:05:11.133
+Vamos ver como é que isso fica.
+
+77
+00:05:11.133 --> 00:05:14.340
+Então por exemplo,
+ao invés de eu retornar,
+
+78
+00:05:14.340 --> 00:05:19.992
+dá getAmante e retornar ator,
+eu posso ter por exemplo,
+
+79
+00:05:19.992 --> 00:05:25.897
+getNomeAmante ou getIdadeAmante que
+seriam as informações ali do ator,
+
+80
+00:05:25.897 --> 00:05:29.814
+que a pessoa de repente
+poderia recuperar para pegar.
+
+81
+00:05:29.814 --> 00:05:34.776
+Só que eu faço isso retornando as
+informações direto e não retornando
+
+82
+00:05:34.776 --> 00:05:36.748
+o objeto inteiro.
+
+83
+00:05:36.748 --> 00:05:41.724
+No caso do array seria alguma
+coisa mais assim: ao invés
+
+84
+00:05:41.724 --> 00:05:46.494
+de eu falar getPremios e receber o array,
+eu falaria getPremio e
+
+85
+00:05:46.494 --> 00:05:51.111
+aí eu receberia, passaria como parâmetro o
+
+86
+00:05:51.111 --> 00:05:56.073
+índice do array que aí ele me
+retornaria aquela string específica.
+
+87
+00:05:56.073 --> 00:06:01.341
+Então dessa forma também eu não estaria
+expondo o array de forma a dar chance
+
+88
+00:06:01.341 --> 00:06:06.216
+de eles poderem ser modificados
+de forma indevida pela pessoa.
+
+89
+00:06:06.216 --> 00:06:09.429
+Então são essas duas
+alternativas que eu tenho,
+
+90
+00:06:09.429 --> 00:06:13.678
+que é estar copiando o objeto antes
+de retornar e estar encapsulando
+
+91
+00:06:13.678 --> 00:06:17.580
+completamente o acesso e
+nunca fazendo esse retorno.
+
+92
+00:06:17.580 --> 00:06:22.416
+Então eu espero aí que com essa
+aula tenha sido possível entender
+
+93
+00:06:22.416 --> 00:06:27.603
+melhor essa questão do encapsulamento,
+principalmente quando
+
+94
+00:06:27.603 --> 00:06:32.310
+a gente tem objetos e arrays
+dentro de outros objetos.
+
+95
+00:06:32.310 --> 00:06:36.833
+Entender o que é que pode acontecer
+quando a gente retorna isso,
+
+96
+00:06:36.833 --> 00:06:40.540
+considerar isso quando a gente
+está fazendo o design das classes.
+
+97
+00:06:40.540 --> 00:06:43.937
+Quando eu comecei a falar de
+encapsulamento, eu falei que não é uma
+
+98
+00:06:43.937 --> 00:06:48.560
+coisa que vem de graça, é uma coisa que
+a gente tem que projetar nossas classes,
+
+99
+00:06:48.560 --> 00:06:53.293
+projetar o nosso software para que
+seja possível ter este encapsulamento,
+
+100
+00:06:53.293 --> 00:06:55.515
+esse encapsulamento ser real.
+
+101
+00:06:55.515 --> 00:07:00.824
+Se você permitir que o cara pegue o objeto
+e modifique e o desenvolvedor perceber
+
+102
+00:07:00.824 --> 00:07:05.677
+que isso é possível, ele vai usar isso,
+ele vai quebrar o seu encapsulamento.
+
+103
+00:07:05.677 --> 00:07:07.060
+Então muito cuidado.
+
+104
+00:07:07.060 --> 00:07:10.805
+Aprendemos duas formas de
+resolver essa questão.
+
+105
+00:07:10.805 --> 00:07:12.809
+Espero que tenham ficado,
+
+106
+00:07:12.809 --> 00:07:17.184
+todos agora estejam cientes desse
+problema e saibam como resolvê-lo.
+
+107
+00:07:17.184 --> 00:07:18.237
+Muito obrigado.
+
+108
+00:07:18.237 --> 00:07:19.440
+Até à próxima aula.
+
+109
+00:07:19.440 --> 00:07:25.150
+[MÚSICA]

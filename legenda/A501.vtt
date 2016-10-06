@@ -1,0 +1,732 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.747
+[MÚSICA] [MÚSICA] Olá a todos,
+
+2
+00:00:09.747 --> 00:00:13.891
+esse é o curso de Orientação
+a Objetos com Java.
+
+3
+00:00:13.891 --> 00:00:19.217
+Nesse hands on vamos falar pouco
+sobre encapsulamento está?
+
+4
+00:00:19.217 --> 00:00:24.489
+A ideia é eu mostrar para vocês
+uma classe uma classe pilha,
+
+5
+00:00:24.489 --> 00:00:28.693
+não é, estrutura de dados que
+todos aí já conhecem, certo,
+
+6
+00:00:28.693 --> 00:00:32.464
+e mostrar que se a gente
+quebrar o encapsulamento dela,
+
+7
+00:00:32.464 --> 00:00:38.191
+expôr demais as informações pode
+causar funcionamento não desejado,
+
+8
+00:00:38.191 --> 00:00:41.607
+completamente errado aí na classe, está?
+
+9
+00:00:41.607 --> 00:00:47.210
+Então para mostrar isso para vocês
+eu vou começar aqui criando projeto,
+
+10
+00:00:47.210 --> 00:00:52.665
+está eu vou chamar de pilha encapsulada,
+não é, já que estamos
+
+11
+00:00:52.665 --> 00:00:57.930
+falando de encapsulamento e vou criar aqui
+
+12
+00:00:57.930 --> 00:01:02.983
+rapidamente uma classe pilha, certo?
+
+13
+00:01:02.983 --> 00:01:08.317
+Vou utilizar array não é para armazenar
+
+14
+00:01:08.317 --> 00:01:14.213
+internamente as informações da pilha,
+está certo?
+
+15
+00:01:14.213 --> 00:01:17.110
+Então eu vou chamar
+aqui a classe de pilha.
+
+16
+00:01:17.110 --> 00:01:22.663
+Bom, na minha pilha,
+não é, eu já vou criar
+
+17
+00:01:22.663 --> 00:01:27.660
+aqui todos, toda a estrutura
+de dados como privada, não é,
+
+18
+00:01:27.660 --> 00:01:32.830
+vou criar aqui array de objetos,
+
+19
+00:01:32.830 --> 00:01:38.390
+para guardar os elementos da minha pilha,
+vou chamar aqui de elementos,
+
+20
+00:01:38.390 --> 00:01:43.481
+certo, e eu
+
+21
+00:01:43.481 --> 00:01:49.047
+vou criar aqui uma variável inteira
+
+22
+00:01:49.047 --> 00:01:54.211
+para poder guardar o ponto da minha pilha,
+
+23
+00:01:54.211 --> 00:01:58.670
+onde que está o topo da minha pilha,
+não é,
+
+24
+00:01:58.670 --> 00:02:01.952
+vou chamar aqui de topo, certo?
+
+25
+00:02:01.952 --> 00:02:07.702
+Então o topo ele começa com o 0,
+não é, eu começo sem nada.
+
+26
+00:02:07.702 --> 00:02:12.653
+Aqui no construtor da pilha eu
+preciso criar ali o meu array.
+
+27
+00:02:12.653 --> 00:02:20.482
+Eu vou criar aqui a pessoa passando
+o tamanho máximo da pilha, está?
+
+28
+00:02:20.482 --> 00:02:25.448
+Então eu já vou ali e já vou criar
+o meu array de elementos é igual
+
+29
+00:02:25.448 --> 00:02:30.653
+a new Object coloco 1, 10 não
+
+30
+00:02:30.653 --> 00:02:35.890
+máximo aqui, não é,
+eu vou passando ali como parâmetro.
+
+31
+00:02:35.890 --> 00:02:36.611
+está?
+
+32
+00:02:36.611 --> 00:02:41.655
+Então a pilha ela tem 3
+operações básicas está?
+
+33
+00:02:41.655 --> 00:02:48.659
+A operação de empilhar,
+que você coloca novo elemento na pilha,
+
+34
+00:02:48.659 --> 00:02:53.041
+você empilha a pilha como se
+fosse uma pilha mesmo de livros.
+
+35
+00:02:53.041 --> 00:02:57.433
+O que você coloca você coloca cima e
+quando você retira você retira de cima.
+
+36
+00:02:57.433 --> 00:03:00.221
+Então o empilhar você vai colocando
+
+37
+00:03:00.221 --> 00:03:05.168
+cima e o desempilhar você
+vai retirando de cima, está?
+
+38
+00:03:05.168 --> 00:03:12.444
+E aí topo ela serve justamente para
+marcar esse, onde que ele está.
+
+39
+00:03:12.444 --> 00:03:20.094
+Então eu vou criar aqui o não é,
+
+40
+00:03:20.094 --> 00:03:24.443
+ele vai receber objeto,
+
+41
+00:03:24.443 --> 00:03:28.320
+elemento aí o que é que ele vai fazer?
+
+42
+00:03:28.320 --> 00:03:35.766
+Ele vai colocar aquele elemento na
+posição onde está o topo ali certo?
+
+43
+00:03:35.766 --> 00:03:41.888
+Então obviamente ele vai começar com 0 mas
+aí eu tenho que incrementar o meu topo,
+
+44
+00:03:41.888 --> 00:03:44.960
+não é,
+então eu vou fazer aqui topo mais mais,
+
+45
+00:03:44.960 --> 00:03:48.046
+então depois que ele
+coloca ele aumenta o topo.
+
+46
+00:03:48.046 --> 00:03:51.300
+Eu preciso fazer agora o meu desempilhar,
+não é?
+
+47
+00:03:51.300 --> 00:03:58.311
+É, vou
+
+48
+00:03:58.311 --> 00:04:03.652
+aqui colocar o
+
+49
+00:04:03.652 --> 00:04:08.795
+meu [SEM ÁUDIO]
+
+50
+00:04:08.795 --> 00:04:16.040
+o desempilhar na verdade retorna objeto,
+não é, o que está mais cima, não é?
+
+51
+00:04:16.040 --> 00:04:16.846
+certo?
+
+52
+00:04:16.846 --> 00:04:23.393
+Então eu vou fazer o seguinte
+eu vou pegar paraRetorno,
+
+53
+00:04:23.393 --> 00:04:28.600
+eu vou pegar o elemento
+que está na posição
+
+54
+00:04:28.600 --> 00:04:35.276
+eu posso até já diminuir o topo aqui não
+é, fazer aqui topo mas eu tenho que,
+
+55
+00:04:35.276 --> 00:04:39.176
+isso, topo menos menos certo,
+
+56
+00:04:39.176 --> 00:04:46.278
+o objeto para retorno é o que está,
+não eu já vou retornar ele de uma vez,
+
+57
+00:04:46.278 --> 00:04:51.462
+eu nem vou fazer isso
+aqui não vou fazer return
+
+58
+00:04:51.462 --> 00:04:56.130
+elementos eu já subtrai ali o topo não é,
+
+59
+00:04:56.130 --> 00:05:00.442
+então se ele tem 1,
+vamos pegar aqui o primeiro exemplo,
+
+60
+00:05:00.442 --> 00:05:07.350
+ele vai estar na posição 0 não é,
+então eu vou retornar aqui.
+
+61
+00:05:07.350 --> 00:05:12.140
+Eu tenho também o topo,
+
+62
+00:05:12.140 --> 00:05:17.419
+não é, e esse não remove,
+ele só me diz quem que está
+
+63
+00:05:17.419 --> 00:05:22.220
+cima então nesse caso como eu não estou
+reduzindo o topo seria o elementos
+
+64
+00:05:22.220 --> 00:05:28.680
+opa topo mais
+
+65
+00:05:28.680 --> 00:05:34.978
+opa menos e por fim vou criar
+
+66
+00:05:34.978 --> 00:05:40.920
+método aqui que vai retornar o tamanho,
+qual que é o tamanho atual da minha pilha,
+
+67
+00:05:40.920 --> 00:05:46.234
+esse aqui simplesmente vai
+retornar o topo, certo?
+
+68
+00:05:46.234 --> 00:05:50.874
+Bom, mas aí eu
+
+69
+00:05:50.874 --> 00:05:55.740
+posso querer criar
+
+70
+00:05:55.740 --> 00:06:00.389
+métodos get set ali daqueles,
+dessas informações.
+
+71
+00:06:00.389 --> 00:06:04.599
+Tem gente que acha que encapsulamento
+é simplesmente colocar os atributos
+
+72
+00:06:04.599 --> 00:06:05.664
+privados, não é,
+
+73
+00:06:05.664 --> 00:06:10.282
+mas não adianta nada se você expôr aquelas
+informações de outra forma, não é?
+
+74
+00:06:10.282 --> 00:06:15.751
+Então eu vou vir aqui,
+só para a gente fazer aqui esse
+
+75
+00:06:15.751 --> 00:06:20.697
+exercício, não é,
+eu vou gerar aqui os métodos get set,
+
+76
+00:06:20.697 --> 00:06:25.603
+que o próprio Eclipse faz isso aqui
+para mim marca tudo aqui, não é,
+
+77
+00:06:25.603 --> 00:06:29.290
+já vi muita gente fazer
+isto sem pensar muito.
+
+78
+00:06:29.290 --> 00:06:36.225
+Então vai fazer esse getTopo
+ali ser equivalente ao tamanho,
+
+79
+00:06:36.225 --> 00:06:40.748
+então vou até tirar isso daqui está certo?
+
+80
+00:06:40.748 --> 00:06:45.141
+Então vou salvar, não é,
+
+81
+00:06:45.141 --> 00:06:50.087
+e aí agora vou criar aqui
+codigozinho só a gente
+
+82
+00:06:50.087 --> 00:06:54.420
+usando a pilha para a gente
+entender como que ela funciona.
+
+83
+00:06:54.420 --> 00:06:59.940
+Então vou criar uma nova classe aqui,
+vou chamar ela de principal,
+
+84
+00:06:59.940 --> 00:07:05.295
+[SEM ÁUDIO]
+
+85
+00:07:05.295 --> 00:07:09.082
+opa vou apagar isso aqui,
+vou deixar só o método main mesmo.
+
+86
+00:07:09.082 --> 00:07:12.566
+Então vou criar uma pilha e pilha,
+
+87
+00:07:12.566 --> 00:07:17.646
+vou criar uma pilha com 10
+
+88
+00:07:17.646 --> 00:07:22.780
+no máximo, certo, e aí vou empilhar aqui.
+
+89
+00:07:22.780 --> 00:07:29.782
+empilhar, vou colocar aqui vários nomes,
+
+90
+00:07:29.782 --> 00:07:35.075
+não é, vou colocar aqui Eduardo,
+vou colocar
+
+91
+00:07:35.075 --> 00:07:40.500
+aqui Maria,
+
+92
+00:07:40.500 --> 00:07:47.010
+vou colocar aqui por exemplo,
+sei lá, José, certo?
+
+93
+00:07:47.010 --> 00:07:51.920
+Aí, por exemplo,
+se eu pedir para ele me imprimir o topo
+
+94
+00:07:51.920 --> 00:07:55.770
+ele tem que imprimir o José.
+
+95
+00:07:55.770 --> 00:08:00.740
+Se eu pedir para ele me imprimir o
+
+96
+00:08:00.740 --> 00:08:05.429
+tamanho, tem que ser 3, certo?
+
+97
+00:08:05.429 --> 00:08:09.006
+Vamos ver se ele está
+rodando direitinho isso aqui?
+
+98
+00:08:09.006 --> 00:08:12.694
+Então eu rodo, deveria estar
+fazendo teste de unidade, não é,
+
+99
+00:08:12.694 --> 00:08:17.969
+mas aqui como eu quero mostrar o errado,
+eu estou fazendo aqui no main mesmo,
+
+100
+00:08:17.969 --> 00:08:23.890
+está, então o topo deu José e o
+tamanho está 3, está tranquilo, está?
+
+101
+00:08:23.890 --> 00:08:28.574
+Vamos remover uns agora, não é,
+eu já vou remover dentro do sysout eu
+
+102
+00:08:28.574 --> 00:08:33.570
+vou fazer aqui eu vou fazer
+
+103
+00:08:33.570 --> 00:08:39.570
+p.desempilhar, certo,
+
+104
+00:08:39.570 --> 00:08:45.160
+e aí vou imprimir novamente
+o topo e o tamanho, está?
+
+105
+00:08:45.160 --> 00:08:53.860
+Então eu vou até colocar comentariozinho
+aqui Desempilhando, certo?
+
+106
+00:08:53.860 --> 00:09:00.680
+Então eu vou vir aqui e vou rodar, certo?
+
+107
+00:09:00.680 --> 00:09:05.294
+Então ele está aqui o José e o 3,
+
+108
+00:09:05.294 --> 00:09:10.946
+é o que a gente tinha feito
+eu vou até fazer assim
+
+109
+00:09:10.946 --> 00:09:15.937
+para ele dar uma separadinha
+ali para a gente, no console.
+
+110
+00:09:15.937 --> 00:09:19.908
+Deixa eu rodar de novo aqui,
+salva, roda outra vez, não é,
+
+111
+00:09:19.908 --> 00:09:22.149
+para a gente poder visualizar.
+
+112
+00:09:22.149 --> 00:09:25.551
+Então José e 3 é o que ele
+fez ali no começo não é,
+
+113
+00:09:25.551 --> 00:09:28.432
+aí aquela ali desempilhou,
+desempilhou o José.
+
+114
+00:09:28.432 --> 00:09:34.730
+Agora o topo ficou Maria e o
+tamanho ficou 2, perfeito, certo?
+
+115
+00:09:34.730 --> 00:09:42.758
+Imagina que, por exemplo aqui
+na hora que eu desempilho,
+
+116
+00:09:42.758 --> 00:09:49.524
+eu quero fazer isso aqui,
+está, é uma string não é?
+
+117
+00:09:49.524 --> 00:09:54.253
+Eu posso querer chamar algum método
+por exemplo, só que veja que a pilha,
+
+118
+00:09:54.253 --> 00:09:58.749
+não é, imagina que eu sou desenvolvedor
+que estou usando a pilha aqui,
+
+119
+00:09:58.749 --> 00:10:00.794
+o que é que eu posso fazer aqui?
+
+120
+00:10:00.794 --> 00:10:03.511
+"Olha eu posso mudar o topo" não é?
+
+121
+00:10:03.511 --> 00:10:08.602
+Então eu venho aqui e seto
+o meu topo para 6 certo?
+
+122
+00:10:08.602 --> 00:10:11.720
+O que é que será que vai acontecer?
+
+123
+00:10:11.720 --> 00:10:15.429
+Eu vou rodar aqui e ele,
+
+124
+00:10:15.429 --> 00:10:19.565
+ele está retornando todo o mundo null ali,
+certo?
+
+125
+00:10:19.565 --> 00:10:24.670
+Se de repente eu venho aqui
+nesse desempilhar, não é,
+
+126
+00:10:24.670 --> 00:10:29.717
+chamo aqui
+
+127
+00:10:30.840 --> 00:10:34.377
+toString.toUpperCase por exemplo, não é,
+
+128
+00:10:34.377 --> 00:10:38.810
+eu quero o nome todo maiúscula não é?
+
+129
+00:10:38.810 --> 00:10:45.801
+Certo, vou fazer a mesma coisa aqui com
+o topo, então eu salvo aqui vou rodar,
+
+130
+00:10:45.801 --> 00:10:52.858
+olha lá ele vai colocar o José e
+o Maria como maiúsculo, certo?
+
+131
+00:10:52.858 --> 00:10:57.920
+Agora se eu mudar pouco aqui quando eu
+
+132
+00:10:57.920 --> 00:11:04.274
+rodar aquilo ali ele vai dar por
+exemplo nullPointerException,
+
+133
+00:11:04.274 --> 00:11:08.884
+se eu clicar aqui ele já me mostra
+de onde que está dando o problema.
+
+134
+00:11:08.884 --> 00:11:09.469
+Porquê?
+
+135
+00:11:09.469 --> 00:11:11.954
+Porque eu estou recebendo cara nulo.
+
+136
+00:11:11.954 --> 00:11:16.530
+Então mudar esse topo aqui
+eu estou mudando a estrutura
+
+137
+00:11:16.530 --> 00:11:19.987
+interna da minha pilha está certo?
+
+138
+00:11:19.987 --> 00:11:24.408
+Então eu não posso permitir isso certo?
+
+139
+00:11:24.408 --> 00:11:29.650
+Então a gente vê que não é porque
+eu tenho aqui uma propriedade
+
+140
+00:11:29.650 --> 00:11:34.434
+que eu vou deixar que as
+pessoas mudem à vontade não é?
+
+141
+00:11:34.434 --> 00:11:38.945
+Obviamente pegar o topo,
+podia nem ser o caso não é,
+
+142
+00:11:38.945 --> 00:11:43.676
+pegar o topo aqui é relevante porque
+isso aqui é o tamanho que está a minha
+
+143
+00:11:43.676 --> 00:11:48.333
+pilha e a quantidade de elementos
+atual da minha pilha, está certo?
+
+144
+00:11:48.333 --> 00:11:53.570
+Quer ver deixa eu mostrar
+mais problema aqui Imagina
+
+145
+00:11:53.570 --> 00:11:59.671
+que eu venho aqui e desempilho.
+
+146
+00:11:59.671 --> 00:12:06.013
+Se eu desempilhar 2 e somar no topo,
+eu vou retornar, não é,
+
+147
+00:12:06.013 --> 00:12:11.400
+como eu não removo aqui por exemplo eu
+desempilho, eu simplesmente reduzo o topo
+
+148
+00:12:11.400 --> 00:12:15.620
+porque ele não vai ter mais acesso aqueles
+elementos ali de cima não é, de repente eu
+
+149
+00:12:15.620 --> 00:12:19.995
+posso ter acesso aqueles elementos de
+cima então não é para fazer isso, está?
+
+150
+00:12:19.995 --> 00:12:24.557
+Eu vou deixar esse get
+set aqui para a próximo,
+
+151
+00:12:24.557 --> 00:12:28.149
+para o próximo hands on
+a gente discutir está certo?
+
+152
+00:12:28.149 --> 00:12:33.143
+Então com isso a gente vê que o
+encapsulamento realmente é importante e
+
+153
+00:12:33.143 --> 00:12:37.353
+a gente dá a brecha para que quem está
+usando a classe possa modificar qualquer
+
+154
+00:12:37.353 --> 00:12:42.004
+coisa pode quebrar completamente o
+funcionamento esperado da classe,
+
+155
+00:12:42.004 --> 00:12:47.892
+podendo gerar bugs como eu mostrei
+no PointerException aí no programa,
+
+156
+00:12:47.892 --> 00:12:49.669
+está certo?
+
+157
+00:12:49.669 --> 00:12:54.084
+Então esse hands on foi isso,
+até ao próximo.
+
+158
+00:12:54.084 --> 00:12:59.820
+[MÚSICA] [MÚSICA]

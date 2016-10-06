@@ -1,0 +1,544 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.285
+Após esse video você será capaz de
+explicar o que são os ramos do LGR,
+
+2
+00:00:05.285 --> 00:00:10.132
+qual a quantidade de ramos de LGR para
+uma função de transferência específica e
+
+3
+00:00:10.132 --> 00:00:13.203
+que trechos do eixo real
+fazem parte do LGR.
+
+4
+00:00:13.203 --> 00:00:18.750
+Muito bem, você já sabe o que é Lugar
+Geométrico das Raízes e também já sabe
+
+5
+00:00:18.750 --> 00:00:23.646
+como representar requisitos de desempenho
+da resposta ou degrau no Plano-s.
+
+6
+00:00:23.646 --> 00:00:28.318
+Para verificar se é possível ou não
+atender aos requisitos de desempenho com
+
+7
+00:00:28.318 --> 00:00:30.000
+o controle proporcional,
+
+8
+00:00:30.000 --> 00:00:35.670
+você só precisa verificar se o LGR passa
+pela região que atende a esses requisitos.
+
+9
+00:00:35.670 --> 00:00:41.115
+Então, bastaria escolher ponto do LGR
+dentro da região de desempenho e calcular
+
+10
+00:00:41.115 --> 00:00:46.060
+o ganho correspondente,
+mas para fazer isso é preciso desenhar,
+
+11
+00:00:46.060 --> 00:00:48.720
+traçar ou ao menos esboçar o LGR.
+
+12
+00:00:48.720 --> 00:00:53.206
+É claro que ferramentas computacionais
+como o MATLAB podem ser usadas para
+
+13
+00:00:53.206 --> 00:00:54.640
+efetuar esse traçado.
+
+14
+00:00:54.640 --> 00:00:59.820
+Daqui a pouco usaremos a função
+rlocus no MATLAB para fazer isso.
+
+15
+00:00:59.820 --> 00:01:04.617
+Mas mesmo tendo ferramentas computacionais
+disponíveis para traçar o LGR com
+
+16
+00:01:04.617 --> 00:01:08.910
+a exatidão necessária,
+é importante que você saiba ao menos
+
+17
+00:01:08.910 --> 00:01:13.784
+esboçar o LGR para poder conferir
+rapidamente, se não tem nenhum problema
+
+18
+00:01:13.784 --> 00:01:17.560
+com o programa sendo usado ou se
+não tem nenhum erro de digitação.
+
+19
+00:01:17.560 --> 00:01:21.144
+Uma coisa ou outra podem
+levar a ganho errado,
+
+20
+00:01:21.144 --> 00:01:26.176
+o que pode ser desastroso para o seu
+sistema, então não confie demais
+
+21
+00:01:26.176 --> 00:01:31.870
+nas ferramentas computacionais e nem na
+interface entre a cadeira e o teclado.
+
+22
+00:01:31.870 --> 00:01:35.314
+Além disso,
+você nunca sabe quando sofreremos
+
+23
+00:01:35.314 --> 00:01:40.215
+ataque alienígena ou extra dimensional
+que acabará com todos os computadores
+
+24
+00:01:40.215 --> 00:01:44.840
+e para salvar a humanidade você terá que
+projetar controlador proporcional apenas
+
+25
+00:01:44.840 --> 00:01:49.790
+com uma calculadora de bolso com painel
+solar, encontrada no baú do seu avô,
+
+26
+00:01:49.790 --> 00:01:53.930
+ou pior, com papel,
+lápis, régua e compasso.
+
+27
+00:01:53.930 --> 00:01:58.570
+Com sorte você pode encontrar
+transferidor e esquadro também,
+
+28
+00:01:58.570 --> 00:02:05.650
+talvez até uma espírula, supondo, é claro,
+que você saiba como usar papel e lápis.
+
+29
+00:02:05.650 --> 00:02:10.573
+Ou então, hackers podem dominar o mundo
+e sabendo que apenas controleiros
+
+30
+00:02:10.573 --> 00:02:15.983
+poderiam detê-los, podem infectar todas
+as licenças do MATLAB e de outros
+
+31
+00:02:15.983 --> 00:02:20.699
+programas que auxiliam no projeto de
+controladores e novamente você teria que
+
+32
+00:02:20.699 --> 00:02:26.310
+salvar o mundo sem usar nenhuma ferramenta
+computacional capaz de traçar o LGR.
+
+33
+00:02:26.310 --> 00:02:30.945
+Sabendo como esboçar o LGR
+você também saberá como
+
+34
+00:02:30.945 --> 00:02:35.763
+podemos alterá-lo a nosso favor usando
+controladores mais elaborados do
+
+35
+00:02:35.763 --> 00:02:40.540
+que simples ganho,
+o que melhorará o processo de projeto.
+
+36
+00:02:40.540 --> 00:02:44.424
+Além disso, você também saberá
+o que acontece com os polos
+
+37
+00:02:44.424 --> 00:02:48.400
+malha fechada à medida que
+aumentamos ou diminuímos o ganho.
+
+38
+00:02:48.400 --> 00:02:52.939
+Então vamos lá, nesse e nos próximos
+videos veremos as regras para o
+
+39
+00:02:52.939 --> 00:02:55.740
+traçado do Lugar Geométrico das Raízes.
+
+40
+00:02:55.740 --> 00:03:00.791
+Dada uma função de transferência malha
+aberta: G de s igual a b m s elevado
+
+41
+00:03:00.791 --> 00:03:06.154
+a m mais b m menos 1 s elevado a m
+menos 1, parari parara, até b 1
+
+42
+00:03:06.154 --> 00:03:12.059
+s mais b 0 sobre a n s elevado a n, mais,
+mais, mais, mais, mais a 1 s mais a 0.
+
+43
+00:03:12.059 --> 00:03:16.827
+Malha fechada com realimentação
+unitária e controle proporcional k,
+
+44
+00:03:16.827 --> 00:03:23.626
+temos: T de s igual a k numerador sobre
+denominador mais k numerador e podemos
+
+45
+00:03:23.626 --> 00:03:29.318
+ver claramente que o grau do denominador
+do T de s é o máximo entre n e m.
+
+46
+00:03:29.318 --> 00:03:34.080
+Normalmente o n vai ser
+maior ou igual a n e podemos
+
+47
+00:03:34.080 --> 00:03:38.965
+supor então que o grau do denominador
+de T de s será n, ou seja,
+
+48
+00:03:38.965 --> 00:03:43.407
+teremos n raízes,
+e cada ramo do LRG corresponde a uma
+
+49
+00:03:43.407 --> 00:03:48.411
+dessas raízes ou a dos polos
+malha fechada, ou seja,
+
+50
+00:03:48.411 --> 00:03:52.818
+o número de ramos do LGR é igual
+ao número de polos malha fechada,
+
+51
+00:03:52.818 --> 00:03:56.140
+que normalmente é igual ao
+número de polos malha aberta.
+
+52
+00:03:56.140 --> 00:04:01.317
+Uma vez que os polos complexos irão
+aparecer na forma de pares conjugados,
+
+53
+00:04:01.317 --> 00:04:04.390
+o LGR é simétrico relação ao eixo real.
+
+54
+00:04:04.390 --> 00:04:09.003
+Na reta real o Lugar Geométrico
+das Raízes fica à esquerda de
+
+55
+00:04:09.003 --> 00:04:11.320
+número ímpar de polos e zeros.
+
+56
+00:04:11.320 --> 00:04:12.749
+Vamos ver porquê.
+
+57
+00:04:12.749 --> 00:04:17.929
+Considere a função de transferência
+na forma fatorada: G de s é igual
+
+58
+00:04:17.929 --> 00:04:25.090
+a b m vezes o produto de s menos os
+zês sobre o produto de s menos os pês.
+
+59
+00:04:25.090 --> 00:04:30.023
+Onde todos os polos e zeros
+são números reais e vamos
+
+60
+00:04:30.023 --> 00:04:34.912
+tomar ponto s 0 à direita de
+todos os polos e zeros, ou seja,
+
+61
+00:04:34.912 --> 00:04:38.140
+à esquerda de 0 polos e zeros.
+
+62
+00:04:38.140 --> 00:04:43.641
+Temos então: o s 0 maior que z 1,
+o s 0 maior que z 2,
+
+63
+00:04:43.641 --> 00:04:49.196
+s 0 maior que z n, o s 0 é maior que p 1,
+o s 0 é maior que p 2,
+
+64
+00:04:49.196 --> 00:04:54.118
+o s 0 é maior que p n e podemos
+escrever: s 0 menos z 1 maior que 0,
+
+65
+00:04:54.118 --> 00:04:59.340
+s 0 menor que z 2 maior que 0 e assim por
+diante até s 0 menos z n maior do que 0.
+
+66
+00:04:59.340 --> 00:05:03.565
+E a mesma coisa para os polos:
+s 0 menos p1 maior do que 0,
+
+67
+00:05:03.565 --> 00:05:08.310
+s 0 menos p 2 maior que 0,
+até s 0 menos p n maior do que 0.
+
+68
+00:05:08.310 --> 00:05:12.972
+E como a fase de G de s 0 é
+igual a fase de s 0 menos z 1
+
+69
+00:05:12.972 --> 00:05:17.896
+mais fase de s 0 menos z 2,
+parari parara, mais a fase de s 0
+
+70
+00:05:17.896 --> 00:05:22.740
+menos z m menos a fase de s 0 menos p 1,
+menos a fase de s 0 menos p 2,
+
+71
+00:05:22.740 --> 00:05:28.282
+menos a fase de s 0 menos p m,
+temos que, a fase de G de s 0,
+
+72
+00:05:28.282 --> 00:05:33.865
+será: 0 mais 0 mais 0 mais 0,
+menos 0 menos 0 menos 0 menos 0,
+
+73
+00:05:33.865 --> 00:05:39.250
+o que dá 0 grau, e esse 0 não faz
+parte do Lugar Geométrico das Raízes.
+
+74
+00:05:39.250 --> 00:05:44.508
+Tomemos agora ponto s 1 que
+fica à esquerda do polo ou 0
+
+75
+00:05:44.508 --> 00:05:49.620
+mais à direita,
+vamos considerar que seja o polo p n.
+
+76
+00:05:49.620 --> 00:05:54.742
+As fases dos termos de todos os
+outros polos e zeros continuam
+
+77
+00:05:54.742 --> 00:06:00.081
+0 grau e como agora s 1 menor do que p n,
+temos: s 1 menos
+
+78
+00:06:00.081 --> 00:06:06.196
+p n menor do que 0 e a fase de s 1 menos
+p n será igual a menos 180 graus ou
+
+79
+00:06:06.196 --> 00:06:11.530
+mais 180 graus e s 1 faz parte
+do Lugar Geométrico das Raízes.
+
+80
+00:06:11.530 --> 00:06:16.431
+Note que se tivéssemos considerado que
+dos zeros estivesse mais à direita,
+
+81
+00:06:16.431 --> 00:06:18.890
+a conclusão seria exatamente a mesma.
+
+82
+00:06:18.890 --> 00:06:24.184
+Vamos agora considerar ponto s 2
+à esquerda de dois polos ou dois
+
+83
+00:06:24.184 --> 00:06:29.894
+zeros ou de polo e 0,
+vamos considerar que sejam dois polos,
+
+84
+00:06:29.894 --> 00:06:35.230
+p n e p 1, temos: s 2 menor do
+que p 1 e s 2 menor do que p n,
+
+85
+00:06:35.230 --> 00:06:41.100
+então s 2 menos p n menor que 0
+e s 2 menos p 1 menor do que 0.
+
+86
+00:06:41.100 --> 00:06:46.405
+E portanto a fase de s 2 menos
+p n é igual a menos 180 graus
+
+87
+00:06:46.405 --> 00:06:51.890
+e a fase de s 2 menos p 1 também
+é igual a menos 180 graus.
+
+88
+00:06:51.890 --> 00:06:55.670
+Polo faz com que a fase
+vá para menos 180 graus,
+
+89
+00:06:55.670 --> 00:07:00.795
+mas o outro polo faz com que fase
+vá para 360 graus ou menos 360
+
+90
+00:07:00.795 --> 00:07:05.710
+graus e s 2 não faz parte do
+Lugar Geométrico das Raízes.
+
+91
+00:07:05.710 --> 00:07:09.692
+Note que se tivéssemos
+considerado 2 zeros ou polo e 0,
+
+92
+00:07:09.692 --> 00:07:12.040
+a conclusão seria exatamente a mesma.
+
+93
+00:07:12.040 --> 00:07:16.534
+Podemos considerar ponto s
+3 à esquerda de 3 polos ou
+
+94
+00:07:16.534 --> 00:07:21.144
+zeros e veremos que a fase de G de
+s 3 volta a tender a restrição de
+
+95
+00:07:21.144 --> 00:07:24.640
+ângulo e s 3 faz parte do
+Lugar Geométrico das Raízes.
+
+96
+00:07:24.640 --> 00:07:29.429
+Podemos considerar ponto s 4 à
+esquerda de 4 polos ou zeros e veremos
+
+97
+00:07:29.429 --> 00:07:34.294
+que a fase de G de s 4 não vai atender
+a restrição de ângulo e podemos
+
+98
+00:07:34.294 --> 00:07:39.290
+continuar isso com s 5, s 6, s 7 etc.
+
+99
+00:07:39.290 --> 00:07:43.603
+E a conclusão final é de que,
+se o ponto questão estiver à esquerda de
+
+100
+00:07:43.603 --> 00:07:47.566
+número ímpar de polos e zeros,
+ele faz parte do LGR.
+
+101
+00:07:47.566 --> 00:07:51.563
+Então os trechos da
+reta real à esquerda de
+
+102
+00:07:51.563 --> 00:07:55.300
+número ímpar de polos e
+zeros fazem parte do LGR.
+
+103
+00:07:55.300 --> 00:08:00.560
+E se tivéssemos polos ou zeros
+complexos conjugados G de s?
+
+104
+00:08:00.560 --> 00:08:06.128
+A fase do termo com relação a desses polos
+ou zeros complexos seria menos a fase
+
+105
+00:08:06.128 --> 00:08:11.477
+do termo com relação ao seu complexo
+conjugado e a contribuição angular do par
+
+106
+00:08:11.477 --> 00:08:17.570
+de polos ou zeros complexos conjugados
+seria nula para pontos sobre o eixo real.
+
+107
+00:08:17.570 --> 00:08:22.205
+Agora você já é capaz de explicar
+o que são os ramos do LGR,
+
+108
+00:08:22.205 --> 00:08:27.186
+qual a quantidade de ramos de LGR para uma
+função de transferência específica e que
+
+109
+00:08:27.186 --> 00:08:30.135
+trechos do eixo real fazem parte do LGR.
+
+110
+00:08:30.135 --> 00:08:35.030
+No próximo video você verá onde os
+ramos do LGR começam e terminam e
+
+111
+00:08:35.030 --> 00:08:40.059
+com que ângulos eles partem e
+chegam de polos e zeros complexos.

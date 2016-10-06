@@ -1,0 +1,787 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.400
+[MÚSICA] Olá!
+
+2
+00:00:02.400 --> 00:00:09.482
+Bem vindos ao nosso último vídeo em
+que a gente vai fazer resumo de tudo
+
+3
+00:00:09.482 --> 00:00:15.082
+o que foi visto até agora e vai concluir
+mostrando o teorema da amostragem que diz
+
+4
+00:00:15.082 --> 00:00:20.770
+que é possível sim recuperar exatamente o
+sinal desejado a partir das suas amostras.
+
+5
+00:00:20.770 --> 00:00:23.480
+Então vamos ver tudo o que
+a gente viu por enquanto.
+
+6
+00:00:23.480 --> 00:00:28.354
+Vamos imaginar que a gente
+queira amostrar sinal X de t que
+
+7
+00:00:28.354 --> 00:00:33.239
+tenha essa característica em frequência,
+ela tem esse sinalzinho em preto
+
+8
+00:00:33.239 --> 00:00:36.860
+que é o que nos interessa e vai
+até uma frequência máxima fm.
+
+9
+00:00:36.860 --> 00:00:40.103
+A gente tem esse sinalzinho
+em azul aqui que é
+
+10
+00:00:40.103 --> 00:00:43.190
+ruído dentro dessa faixa
+inicial de frequência.
+
+11
+00:00:43.190 --> 00:00:45.275
+Ruído a gente não tem o que fazer,
+ele existe.
+
+12
+00:00:45.275 --> 00:00:47.417
+Eu estou gravando essa voz aqui,
+tenho ruído,
+
+13
+00:00:47.417 --> 00:00:50.064
+não tem muito o que fazer
+em relação a ele, vá.
+
+14
+00:00:50.064 --> 00:00:53.057
+Mas eu também tenho algum ruído,
+alguma coisa,
+
+15
+00:00:53.057 --> 00:00:57.112
+fora da faixa de interesse
+indo de fs sobre 2 até fs,
+
+16
+00:00:57.112 --> 00:01:01.669
+de fs até 3 fs sobre 2,
+e vai embora, aqui se repete.
+
+17
+00:01:01.669 --> 00:01:07.770
+Se eu simplesmente pegar esse sinal
+e amostrar ele eu vou ter 2 detalhes.
+
+18
+00:01:07.770 --> 00:01:11.204
+Primeiro, a gente viu que a maior
+frequência digital que existe é
+
+19
+00:01:11.204 --> 00:01:17.527
+a frequência Pi e a gente viu que quando
+a gente amostra aqui a frequência fs sobre
+
+20
+00:01:17.527 --> 00:01:23.273
+2, onde fs é a frequência de amostragem,
+é mapeada na frequência Pi digital.
+
+21
+00:01:23.273 --> 00:01:29.143
+Então se eu quero representar bem essa
+minha frequência fm aqui e a maior
+
+22
+00:01:29.143 --> 00:01:33.190
+frequência que eu consigo representar
+do mundo analógico é fs sobre 2,
+
+23
+00:01:33.190 --> 00:01:37.940
+eu preciso escolher a minha frequência
+de amostragem tal que fs sobre 2 seja
+
+24
+00:01:37.940 --> 00:01:42.690
+maior do que fm, ou seja, a minha
+frequência de amostragem tem que ser
+
+25
+00:01:42.690 --> 00:01:46.800
+mais do que duas vezes
+a maior frequência do sinal.
+
+26
+00:01:46.800 --> 00:01:51.287
+O segundo fenómeno importante é o fenómeno
+do aliasing que diz diz que várias
+
+27
+00:01:51.287 --> 00:01:54.095
+frequências vão se misturar
+após a amostragem.
+
+28
+00:01:54.095 --> 00:01:56.783
+Então o que eu estou mostrando
+aqui é o que é que vai
+
+29
+00:01:56.783 --> 00:01:59.160
+acontecer se eu amostrar esse sinal aqui.
+
+30
+00:01:59.160 --> 00:02:03.240
+No sinal discreto eu vou
+ter de 0 até fs sobre 2,
+
+31
+00:02:03.240 --> 00:02:07.350
+eu vou ter a mesma coisa do
+meu sinal aqui, não muda nada.
+
+32
+00:02:07.350 --> 00:02:10.499
+Eu tenho o preto e eu tenho o azul aqui.
+
+33
+00:02:10.499 --> 00:02:15.402
+De fs sobre 2 até fs, a gente vai
+ter aquela ambiguidade que diz que
+
+34
+00:02:15.402 --> 00:02:20.740
+a frequência f e a frequência fs menos f
+são indistinguíveis após a amostragem,
+
+35
+00:02:20.740 --> 00:02:24.198
+fora uma questão de fase
+que eu tenho que mudar.
+
+36
+00:02:24.198 --> 00:02:28.100
+Então a gente vai ter aqui
+fs vai acabar afetando o 0,
+
+37
+00:02:28.100 --> 00:02:31.922
+essa frequência vai acabar afetando
+aqui no meio e fs sobre 2 aqui
+
+38
+00:02:31.922 --> 00:02:35.690
+pouquinho maior acaba afetando
+pouquinho antes do fs sobre 2.
+
+39
+00:02:35.690 --> 00:02:40.340
+Então tem espelhamento aí porque
+é fs menos f, então é o espelho.
+
+40
+00:02:40.340 --> 00:02:43.438
+Então esses caras vão
+aparecer aqui afetando.
+
+41
+00:02:43.438 --> 00:02:47.646
+Esses caras em vermelho vão aparecer
+afetando assim porque frequências
+
+42
+00:02:47.646 --> 00:02:50.269
+analógicas separadas de fs se distinguem,
+
+43
+00:02:50.269 --> 00:02:53.030
+então daí eu ando daqui
+para cá eu ando fs.
+
+44
+00:02:53.030 --> 00:02:58.139
+Então eu vou ter o meu sinal analógico,
+o meu sinal digital perdão, ele vai ser
+
+45
+00:02:58.139 --> 00:03:03.175
+composto nessa frequência aqui pela
+soma dessa frequência com essa amplitude
+
+46
+00:03:03.175 --> 00:03:07.580
+de fase, mais a frequência verdinha com
+amplitude fase dada pela curva verdinha,
+
+47
+00:03:07.580 --> 00:03:13.080
+mais a frequência, a mesma frequência com
+a amplitude fase dada pela curva azul,
+
+48
+00:03:13.080 --> 00:03:17.620
+mais essa mesma frequência com
+amplitude de fase dada pela curva em
+
+49
+00:03:17.620 --> 00:03:20.035
+vermelho aqui e azul aqui, está bom?
+
+50
+00:03:20.035 --> 00:03:21.976
+Então a gente vai ter que vai,
+
+51
+00:03:21.976 --> 00:03:26.240
+o nosso sinal vai ser o desejado
+mais uma mistura de 3 ruídos.
+
+52
+00:03:26.240 --> 00:03:29.994
+Bom, o ruído em azul não tem o que eu
+fazer com ele porque ele está bem em cima
+
+53
+00:03:29.994 --> 00:03:33.353
+das nossas frequências, eu não tenho
+como distinguir aqui o que é que é sinal
+
+54
+00:03:33.353 --> 00:03:37.323
+de interesse e o que é que é sinal ruído.
+
+55
+00:03:37.323 --> 00:03:41.322
+Mas o verde ele não precisava se
+misturar aqui, eu não vou ser capaz de
+
+56
+00:03:41.322 --> 00:03:45.538
+representar esse sinal verde de qualquer
+jeito porque ele está acima de fs sobre 2,
+
+57
+00:03:45.538 --> 00:03:49.076
+mas ele não precisava se misturar aqui,
+eu posso evitar isso.
+
+58
+00:03:49.076 --> 00:03:50.370
+O vermelho, também.
+
+59
+00:03:50.370 --> 00:03:52.218
+Como eu evito tudo isso?
+
+60
+00:03:52.218 --> 00:03:54.418
+Com filtro anti aliasing.
+
+61
+00:03:54.418 --> 00:03:58.178
+Esse filtro anti aliasing
+que é que ele tem que fazer?
+
+62
+00:03:58.178 --> 00:04:02.668
+Ele tem que deixar chegar na entrada
+do meu conversor analógico-digital
+
+63
+00:04:02.668 --> 00:04:07.525
+ele tem que deixar sinal, chegar sinal
+que tenha, preserve o sinal de interesse
+
+64
+00:04:07.525 --> 00:04:10.682
+até à frequência fm,
+então eu tenho que ter uma passagem,
+
+65
+00:04:10.682 --> 00:04:15.572
+uma faixa de passagem esse meu filtro
+que vai até fm sem distorcer o
+
+66
+00:04:15.572 --> 00:04:20.156
+sinal mas ele não pode deixar
+aparecer aqui as frequências que
+
+67
+00:04:20.156 --> 00:04:24.565
+vão me causar aliasing na faixa de
+interesse depois da amostragem.
+
+68
+00:04:24.565 --> 00:04:28.653
+Então eu tenho que cortar até
+à frequência fs menos fm,
+
+69
+00:04:28.653 --> 00:04:32.920
+porque lembra que fm e fs menos
+fm vão se misturar depois.
+
+70
+00:04:32.920 --> 00:04:38.816
+Então quem eu vou amostrar na realidade
+não é o sinal completo com azul, verde
+
+71
+00:04:38.816 --> 00:04:43.188
+e vermelho, é o sinal com azul, verde e
+vermelho depois de passar por esse filtro.
+
+72
+00:04:43.188 --> 00:04:46.730
+E o que é que vai acontecer com essas
+frequências aqui na faixa de redução?
+
+73
+00:04:46.730 --> 00:04:52.323
+Elas vão ser altamente atenuadas,
+então na realidade o que eu vou amostrar
+
+74
+00:04:52.323 --> 00:04:57.457
+aqui vai ter o preto e o azul e esse
+verde aqui já atenuando bastante,
+
+75
+00:04:57.457 --> 00:05:01.865
+então o aliasing que o verde vai
+causar vai ser esse verde aqui,
+
+76
+00:05:01.865 --> 00:05:06.171
+que vocês deve ver mal, que é altamente
+atenuado em relação a esse verde.
+
+77
+00:05:06.171 --> 00:05:09.877
+O vermelho já não vai aparecer mais
+aqui porque ele foi muito atenuado pelo
+
+78
+00:05:09.877 --> 00:05:10.550
+meu filtro.
+
+79
+00:05:10.550 --> 00:05:14.972
+Essa parte do verde que causaria aliasing
+na frequência de interesse também não
+
+80
+00:05:14.972 --> 00:05:16.560
+aparece, o filtro atenua.
+
+81
+00:05:16.560 --> 00:05:21.853
+Então o que a gente observa é que o que eu
+vou amostrar ele tem exatamente o sinal de
+
+82
+00:05:21.853 --> 00:05:26.553
+interesse até à frequência de interesse e
+algum ruído aqui, que é diferente do ruído
+
+83
+00:05:26.553 --> 00:05:31.580
+original mas que não afeta a faixa
+de interesse de frequências, está.
+
+84
+00:05:31.580 --> 00:05:34.171
+Aí eu passo para
+a reconstrução desse sinal.
+
+85
+00:05:34.171 --> 00:05:38.070
+Eu poderia jogar ele num conversor
+digital para analógico direto.
+
+86
+00:05:38.070 --> 00:05:39.621
+E aí o que é que eu tenho?
+
+87
+00:05:39.621 --> 00:05:44.738
+Eu tenho o meu sinal digital aqui que até
+essa frequência tem aquela curvinha preta
+
+88
+00:05:44.738 --> 00:05:49.668
+mais o ruído em azul, aqui tem aquele
+ruído que é o azul mais o verde,
+
+89
+00:05:49.668 --> 00:05:55.028
+então preto mais azul, azul mais verde
+e aqui tem as réplicas do espectro,
+
+90
+00:05:55.028 --> 00:05:59.843
+você lembra que no espectro digital tem
+aquelas ambiguidades de frequência que se
+
+91
+00:05:59.843 --> 00:06:01.590
+manifestam como réplicas, não é?
+
+92
+00:06:01.590 --> 00:06:04.280
+Frequências separadas de
+2 Pi são indistinguíveis,
+
+93
+00:06:04.280 --> 00:06:07.499
+então esse cara aparece
+aqui deslocado de 2 Pi.
+
+94
+00:06:07.499 --> 00:06:12.524
+A frequência ômega e a frequência de 2
+Pi menos ômega fora a questão da fase,
+
+95
+00:06:12.524 --> 00:06:14.170
+também dá a mesma coisa.
+
+96
+00:06:14.170 --> 00:06:16.300
+Então, essas frequências aqui ômega,
+
+97
+00:06:16.300 --> 00:06:19.130
+aparecem aqui como as
+frequências 2 Pi menos ômega.
+
+98
+00:06:19.130 --> 00:06:24.327
+A hora que eu passo esse sinal pelo
+conversor de digital para analógico,
+
+99
+00:06:24.327 --> 00:06:29.308
+eu vou pegar o espectro do sinal
+digital e vou fazer duas coisas:
+
+100
+00:06:29.308 --> 00:06:32.415
+primeiro eu desfaço a regrinha de 3,
+
+101
+00:06:32.415 --> 00:06:37.200
+então as frequências Pi aparecem
+nas frequências fs sobre 2.
+
+102
+00:06:37.200 --> 00:06:43.647
+Segunda coisa, eu multiplico esse espectro
+resultante pela transformada de Fourier,
+
+103
+00:06:43.647 --> 00:06:47.503
+usada no, do pulso usado pelo meu
+conversor de digital para analógico,
+
+104
+00:06:47.503 --> 00:06:49.440
+que em geral tem uma
+cara mais ou menos assim.
+
+105
+00:06:49.440 --> 00:06:53.170
+Então, aqui em em preto eu já estou
+mostrando o resultado desse produto,
+
+106
+00:06:53.170 --> 00:06:56.482
+aqui eu estou mostrando a transformada de
+Fourier do pulso e aqui já o resultado
+
+107
+00:06:56.482 --> 00:06:57.040
+do produto.
+
+108
+00:06:57.040 --> 00:06:58.358
+O que acontece?
+
+109
+00:06:58.358 --> 00:07:00.336
+Acontecem duas coisas.
+
+110
+00:07:00.336 --> 00:07:05.125
+Primeiro aparece essa imagem,
+essas frequências
+
+111
+00:07:05.125 --> 00:07:09.696
+em fs que vêm da, dessas réplicas aqui à
+hora que eu multiplico pela transformada
+
+112
+00:07:09.696 --> 00:07:14.660
+de Fourier do pulso e aqui eu introduzi,
+pela primeira vez, uma distorção na
+
+113
+00:07:14.660 --> 00:07:19.405
+minha faixa de interesse, porque eu estou
+multiplicando essas frequências aqui
+
+114
+00:07:19.405 --> 00:07:23.404
+que são exatamente as mesmas frequências
+que tinham no meu sinal original, eu estou
+
+115
+00:07:23.404 --> 00:07:27.513
+agora multiplicando pela transformada de
+Fourier do pulso que dá ganho menor para
+
+116
+00:07:27.513 --> 00:07:32.275
+as altas frequências do que para as baixas
+frequências, você tem uma distorção aqui.
+
+117
+00:07:32.275 --> 00:07:36.448
+Então eu tenho 2 problemas: o primeiro
+problema que a gente pode eliminar é o
+
+118
+00:07:36.448 --> 00:07:40.276
+problema da imagem, esse problema da
+imagem tem que ser eliminado no mundo
+
+119
+00:07:40.276 --> 00:07:43.801
+analógico porque eu não tenho como
+evitar essas réplicas no mundo digital,
+
+120
+00:07:43.801 --> 00:07:45.910
+eu não tenho como fazer
+esse processamento.
+
+121
+00:07:45.910 --> 00:07:50.844
+O mundo digital sempre vai aparecer
+a frequência 0 vai ser igual à
+
+122
+00:07:50.844 --> 00:07:53.377
+frequência 2 Pi, não importa o
+que eu fizer com o meu sinal.
+
+123
+00:07:53.377 --> 00:07:56.868
+Então para eliminar essa imagem eu
+tenho que trabalhar no mundo analógico.
+
+124
+00:07:56.868 --> 00:07:58.122
+E aí o que é que eu faço?
+
+125
+00:07:58.122 --> 00:08:00.830
+Eu passo por filtro para
+eliminar as imagens.
+
+126
+00:08:00.830 --> 00:08:02.398
+Esse filtro aqui.
+
+127
+00:08:02.398 --> 00:08:05.828
+Então esse filtro vai
+pegar o sinal Y de t,
+
+128
+00:08:05.828 --> 00:08:10.656
+que é esse camarada em preto aqui,
+e simplesmente vai cortar essa
+
+129
+00:08:10.656 --> 00:08:14.216
+imagem e todas as outras imagens
+que tem aqui pra frente.
+
+130
+00:08:14.216 --> 00:08:19.068
+Ele não vai causar nenhuma distorção aqui
+e vai eliminar desse ponto em diante.
+
+131
+00:08:19.068 --> 00:08:24.301
+Então ele tem uma faixa de passagem,
+esse filtro que não distorce a frequência
+
+132
+00:08:24.301 --> 00:08:29.106
+de interesse mas que rejeita daqui para
+a frente, de forma que a transformada de
+
+133
+00:08:29.106 --> 00:08:33.917
+Fourier agora, o espectro de frequência
+do sinal reconstruído passa a ser:
+
+134
+00:08:33.917 --> 00:08:39.000
+alguma coisa aqui entre 0 e
+a frequência máxima que é o sinal
+
+135
+00:08:39.000 --> 00:08:43.778
+original distorcido pela
+transformada do pulso e a partir
+
+136
+00:08:43.778 --> 00:08:48.645
+daqui eu tenho aqueles ruídos e aqui
+eu tenho uma coisa altamente atenuada.
+
+137
+00:08:48.645 --> 00:08:54.903
+A partir daqui eu tenho uma atenuação dada
+pela atenuação do meu filtro, está bom?
+
+138
+00:08:54.903 --> 00:08:58.125
+Agora falta só eu corrigir essa distorção,
+
+139
+00:08:58.125 --> 00:09:02.427
+mas eu conheço qual é o pulso usado no meu
+conversor digital para analógico, então
+
+140
+00:09:02.427 --> 00:09:06.650
+para eliminar a distorção eu simplesmente
+passo por filtro que tenta compensar.
+
+141
+00:09:06.650 --> 00:09:10.983
+Se o conversor digital para analógico dá
+ganho de meio em alguma frequência eu
+
+142
+00:09:10.983 --> 00:09:15.355
+antes de jogar lá ou depois de jogar lá
+eu multiplico isso aqui por 2 e compenso
+
+143
+00:09:15.355 --> 00:09:16.253
+esse ganho.
+
+144
+00:09:16.253 --> 00:09:22.060
+Então eu passo o meu sinal finalmente por
+filtro que vai compensar as distorções.
+
+145
+00:09:22.060 --> 00:09:24.213
+E aí olha o que é que vai acontecer,
+
+146
+00:09:24.213 --> 00:09:28.927
+eu tinha originalmente aqui sinal
+em frequência com o sinal de
+
+147
+00:09:28.927 --> 00:09:33.920
+interesse algum ruído dentro da minha
+faixa de interesse e outras coisas
+
+148
+00:09:33.920 --> 00:09:38.648
+fora da minha faixa de interesse que não
+me interessam, eu não quero ganhar eles.
+
+149
+00:09:38.648 --> 00:09:43.470
+Depois que eu fiz toda essa operação
+aqui conversão analógico digital,
+
+150
+00:09:43.470 --> 00:09:48.682
+digital para analógico eliminei as
+imagens e compensei as distorções,
+
+151
+00:09:48.682 --> 00:09:50.956
+eu tenho sinal reconstruído aqui,
+
+152
+00:09:50.956 --> 00:09:55.120
+que é exatamente igual ao meu sinal
+original na faixa de interesse e fora da
+
+153
+00:09:55.120 --> 00:10:00.532
+faixa de interesse eu tenho algum
+ruído que não me afeta muito.
+
+154
+00:10:00.532 --> 00:10:01.964
+Qual é a conclusão?
+
+155
+00:10:01.964 --> 00:10:07.225
+É que se a gente escolher corretamente
+os filtros e a frequência de amostragem,
+
+156
+00:10:07.225 --> 00:10:12.115
+a gente consegue recuperar perfeitamente
+o sinal de interesse após uma
+
+157
+00:10:12.115 --> 00:10:16.605
+amostragem bem feita e esse é o
+famoso Teorema da Amostragem.
+
+158
+00:10:16.605 --> 00:10:20.850
+Isso conclui o nosso curso,
+espero que vocês tenham aproveitado,
+
+159
+00:10:20.850 --> 00:10:25.488
+se divertido pouco, adquirido interesse
+por essa área de processamento de sinais e
+
+160
+00:10:25.488 --> 00:10:29.192
+eu espero vê-los em outros cursos aqui
+do Coursera ou em eventualmente outros
+
+161
+00:10:29.192 --> 00:10:31.000
+cursos que eu mesmo venha a oferecer.
+
+162
+00:10:31.000 --> 00:10:36.376
+Obrigada pelo interesse,
+obrigada pela atenção e até à próxima!
+
+163
+00:10:36.376 --> 00:10:37.340
+[MÚSICA]

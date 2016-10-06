@@ -1,0 +1,269 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.520
+Olá.
+
+2
+00:00:00.520 --> 00:00:06.453
+Neste vídeo você aprenderá a ajustar o
+ganho de realimentação proporcional,
+
+3
+00:00:06.453 --> 00:00:10.200
+de forma a atender requisitos de
+tempo que se traduzem na frequência
+
+4
+00:00:10.200 --> 00:00:12.060
+natural do sistema malha fechada.
+
+5
+00:00:12.060 --> 00:00:13.111
+Como resultado,
+
+6
+00:00:13.111 --> 00:00:17.669
+o fator de amortecimento estará atrelado
+à margem de fase que resultará dessa
+
+7
+00:00:17.669 --> 00:00:22.060
+manipulação do ganho e você aprenderá a
+estimar o valor de sobressinal resultante.
+
+8
+00:00:22.060 --> 00:00:26.648
+Seja sistema G de S igual
+
+9
+00:00:26.648 --> 00:00:31.700
+a 0,005 sobre S + 0,03
+
+10
+00:00:31.700 --> 00:00:37.037
+vezes S + 0,5 vezes S + 1 cuja
+
+11
+00:00:37.037 --> 00:00:42.770
+resposta no tempo para ganho
+unitário é dada na figura.
+
+12
+00:00:42.770 --> 00:00:44.300
+Você pode constatar,
+
+13
+00:00:44.300 --> 00:00:50.110
+a partir dessa figura que o sobressinal é
+de 17% e o tempo de pico é de 34 segundos.
+
+14
+00:00:50.110 --> 00:00:56.980
+Suponha que você precisa fazer o
+sistema responder mais rapidamente,
+
+15
+00:00:56.980 --> 00:01:02.425
+isto é, o requisito a ser atendido é
+que o tempo máximo seja de 25 segundos.
+
+16
+00:01:02.425 --> 00:01:08.711
+Lembrando a fórmula do tempo de
+pico: Tp igual a Pi sobre ómega d,
+
+17
+00:01:08.711 --> 00:01:13.359
+que ómega d é a frequência natural
+amortecida com valor ómega
+
+18
+00:01:13.359 --> 00:01:17.260
+d igual a ómega n vezes
+raiz de 1- Si ao quadrado.
+
+19
+00:01:17.260 --> 00:01:20.871
+Para tempo de pico de 25 segundos,
+
+20
+00:01:20.871 --> 00:01:25.211
+ómega d igual a Pi sobre Tp que
+é igual a Pi sobre 25 que dá,
+
+21
+00:01:25.211 --> 00:01:28.260
+aproximadamente, 0,13
+radianos por segundo.
+
+22
+00:01:28.260 --> 00:01:32.862
+Para isso, você deve escolher uma
+frequência natural malha fechada perto
+
+23
+00:01:32.862 --> 00:01:37.169
+desse valor Vamos escolher exatamente
+0,13 radianos por segundo,
+
+24
+00:01:37.169 --> 00:01:39.990
+ómega n igual a 0,13 radianos por segundo.
+
+25
+00:01:39.990 --> 00:01:46.324
+Isso porque, nessa frequência a margem
+de fase é de 35º, o que resulta fator
+
+26
+00:01:46.324 --> 00:01:52.130
+de amortecimento Si igual a PM sobre 100
+que é igual a 35 sobre 100 igual a 0,35.
+
+27
+00:01:52.130 --> 00:01:57.818
+Com isso, ómega D é igual à raiz
+de 1- Si ao quadrado ómega N que é
+
+28
+00:01:57.818 --> 00:02:03.738
+igual à raiz de 1- 0,35 ao quadrado
+vezes 0,13, o que dá, aproximadamente,
+
+29
+00:02:03.738 --> 00:02:07.760
+0,12 radianos por segundo, apenas
+levemente menor do que o necessário.
+
+30
+00:02:07.760 --> 00:02:12.797
+Olhando o diagrama de Bode
+de G de J ómega vemos
+
+31
+00:02:12.797 --> 00:02:17.489
+que nessa frequência o
+módulo dB é- 7,3 isto é,
+
+32
+00:02:17.489 --> 00:02:21.240
+devemos adicionar ganho de 7,3 dB.
+
+33
+00:02:21.240 --> 00:02:25.273
+K igual a- módulo de G de J 0,13.
+
+34
+00:02:25.273 --> 00:02:31.460
+DB 7,3,
+ou convertendo K aproximadamente 2,3.
+
+35
+00:02:31.460 --> 00:02:37.240
+Com esse valor de ganho, espera-se obter
+o tempo de pico desejado e sobressinal
+
+36
+00:02:37.240 --> 00:02:42.284
+de Mp igual a E elevado a- Pi 0,35 sobre
+
+37
+00:02:42.284 --> 00:02:47.140
+a raiz de 1- 0,35 ao quadrado,
+que dá 0,31.
+
+38
+00:02:47.140 --> 00:02:50.962
+Simulando o sistema malha
+fechada com ganho de 2,3,
+
+39
+00:02:50.962 --> 00:02:53.770
+obtém-se a resposta ao degrau unitário.
+
+40
+00:02:53.770 --> 00:02:59.040
+Nessa figura, pode-se apurar que o
+tempo de pico ficou 23 segundos,
+
+41
+00:02:59.040 --> 00:03:01.820
+levemente mais rápido do que o necessário.
+
+42
+00:03:01.820 --> 00:03:05.510
+O sobressinal foi de cerca de 40%,
+acima do estimado.
+
+43
+00:03:05.510 --> 00:03:10.160
+Com isso, vemos que o sistema de terceira
+ordem respondeu mais rapidamente do que o
+
+44
+00:03:10.160 --> 00:03:10.830
+estimado.
+
+45
+00:03:10.830 --> 00:03:13.085
+Se o sobressinal for elevado demais,
+
+46
+00:03:13.085 --> 00:03:16.762
+mais interações de projeto terão
+que ser feitas ou teremos que usar
+
+47
+00:03:16.762 --> 00:03:20.340
+os valores exatos para estimular melhor
+o sobressinal e a frequência natural.
+
+48
+00:03:20.340 --> 00:03:25.413
+Contudo, se tivermos requisitos sobre o
+sobressinal e sobre o tempo é provável
+
+49
+00:03:25.413 --> 00:03:29.460
+que não seja possível atender os dois ao
+mesmo tempo, apenas manipulando o ganho K.
+
+50
+00:03:29.460 --> 00:03:33.690
+Nesse caso, é necessário o uso
+de compensador mais complexo,
+
+51
+00:03:33.690 --> 00:03:36.201
+que será alvo de estudos
+nas próximas semanas.
+
+52
+00:03:36.201 --> 00:03:40.430
+Por enquanto, ficaremos com ganho
+proporcional e concluíremos essa semana.
+
+53
+00:03:40.430 --> 00:03:44.961
+Nas próximas aulas, você vai aprender
+a analisar a estabilidade do
+
+54
+00:03:44.961 --> 00:03:49.150
+sistema com realimentação unitária e
+ganho variável a partir da resposta
+
+55
+00:03:49.150 --> 00:03:53.211
+frequência de malha aberta sem usar
+aproximações, de maneira exata.
+
+56
+00:03:53.211 --> 00:03:57.210
+Para isto, você aprenderá o critério
+de estabilidade de Nyquist.
+
+57
+00:03:57.210 --> 00:04:00.610
+Até a próxima aula.

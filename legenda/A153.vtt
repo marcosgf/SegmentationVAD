@@ -1,0 +1,147 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.203
+[MÚSICA] E aí
+
+2
+00:00:05.203 --> 00:00:10.085
+pessoal, tudo bem?
+
+3
+00:00:10.085 --> 00:00:13.855
+Sejam bem vindos ao quarto curso do
+programa de Cursos Integrados de
+
+4
+00:00:13.855 --> 00:00:15.780
+Desenvolvimento iOS da Unicamp.
+
+5
+00:00:15.780 --> 00:00:18.458
+Meu nome é Rodrigo Takase
+e eu serei o professor
+
+6
+00:00:18.458 --> 00:00:21.630
+desse curso sobre desenvolvimento
+de jogos para iOS.
+
+7
+00:00:21.630 --> 00:00:25.670
+Eu particularmente sempre gostei
+muito de jogar e criar jogos.
+
+8
+00:00:25.670 --> 00:00:30.194
+É muito empolgante a possibilidade
+de criar jogos para iOS pois na
+
+9
+00:00:30.194 --> 00:00:34.970
+App Store a categoria mais popular e a que
+mais gera receita é a categoria de jogos.
+
+10
+00:00:34.970 --> 00:00:39.805
+Por outro lado é grande desafio pois
+a concorrência é alta e você tem que
+
+11
+00:00:39.805 --> 00:00:42.270
+tentar se destacar de alguma forma.
+
+12
+00:00:42.270 --> 00:00:46.771
+O primeiro pré-requisito para esse curso
+é que você já tenha experiência com
+
+13
+00:00:46.771 --> 00:00:49.550
+a linguagem de programação
+Swift e com o XCode.
+
+14
+00:00:49.550 --> 00:00:53.614
+Se não tem, recomendo que você faça
+primeiro os outros cursos desse programa
+
+15
+00:00:53.614 --> 00:00:56.902
+de cursos integrados
+principalmente o primeiro curso.
+
+16
+00:00:56.902 --> 00:01:01.000
+Deixaremos os links dos cursos na
+página de perguntas frequentes.
+
+17
+00:01:01.000 --> 00:01:05.691
+O segundo pré-requisito é que você já
+saiba conceitos mais avançados de lógica
+
+18
+00:01:05.691 --> 00:01:10.779
+de programação e algoritmos pois existem
+muitos tipo diferentes de jogos e cada
+
+19
+00:01:10.779 --> 00:01:12.600
+tem a sua particularidade.
+
+20
+00:01:12.600 --> 00:01:17.304
+Vamos ensinar algumas técnicas de
+programação de jogos mas para fazer
+
+21
+00:01:17.304 --> 00:01:21.132
+jogo diferente você deverá ter as
+suas próprias ideias para criar
+
+22
+00:01:21.132 --> 00:01:22.855
+as regras e a lógica do jogo.
+
+23
+00:01:22.855 --> 00:01:26.107
+O terceiro pré-requisito
+é que você tenha Mac ou
+
+24
+00:01:26.107 --> 00:01:28.650
+MacBook para de fato botar a mão na massa.
+
+25
+00:01:28.650 --> 00:01:32.380
+É possível testar os jogos no
+simulador que o XCode oferece,
+
+26
+00:01:32.380 --> 00:01:37.890
+mas no simulador o jogo pode ficar lento,
+com uma baixa taxa de quadros por segundo.
+
+27
+00:01:37.890 --> 00:01:40.823
+O ideal é que você também tenha iPhone e
+
+28
+00:01:40.823 --> 00:01:44.420
+iPad para poder testar o
+jogo com a velocidade real.
+
+29
+00:01:44.420 --> 00:01:48.450
+Estamos curiosos para ver o
+que você será capaz de criar.
+
+30
+00:01:48.450 --> 00:01:52.718
+Acreditamos que a melhor
+forma de aprender é fazendo,
+
+31
+00:01:52.718 --> 00:01:55.330
+então mãos à obra e bons estudos!

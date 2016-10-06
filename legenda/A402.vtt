@@ -1,0 +1,1008 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.814
+[MÚSICA] [MÚSICA] Olá a todos!
+
+2
+00:00:08.814 --> 00:00:13.710
+Esse é o curso de Desenvolvimento
+de Software Guiado por Testes.
+
+3
+00:00:13.710 --> 00:00:20.470
+Meu nome é Eduardo Guerra e hoje vou estar
+falando para você sobre o ciclo do TDD.
+
+4
+00:00:20.470 --> 00:00:23.191
+O ciclo do Test Driven Development, certo?
+
+5
+00:00:23.191 --> 00:00:28.178
+Então nessa aula a gente vai entender aí
+como é que é o andamento do TDD e vai
+
+6
+00:00:28.178 --> 00:00:32.688
+ver como é que funciona aí
+esse ciclo do TDD, certo?
+
+7
+00:00:32.688 --> 00:00:37.310
+Bom, hoje eu vou fazer as coisas
+de uma forma diferente, está?
+
+8
+00:00:37.310 --> 00:00:42.420
+Que é que você faz quando você
+tem uma dúvida nos dias de hoje,
+
+9
+00:00:42.420 --> 00:00:44.191
+não é, uma coisa que você não sabe?
+
+10
+00:00:44.191 --> 00:00:48.355
+Não é, por exemplo no outro dia minha
+filha chegou para mim e me perguntou: "Pai
+
+11
+00:00:48.355 --> 00:00:51.500
+que é que é uma supernova?" Não é, certo?
+
+12
+00:00:51.500 --> 00:00:54.011
+"Que é que é uma nebulosa?" Não é?
+
+13
+00:00:54.011 --> 00:00:55.539
+Vou ter que [RISOS] não é,
+
+14
+00:00:55.539 --> 00:00:59.630
+dar uma procurada para poder responder
+corretamente, onde é que você vai?
+
+15
+00:00:59.630 --> 00:01:02.682
+Você vai no Google, está?
+
+16
+00:01:02.682 --> 00:01:07.744
+Então vamos fazer aqui hoje uma abordagem
+diferente, que a gente vai ver o que é
+
+17
+00:01:07.744 --> 00:01:13.395
+que o Google tem a dizer certo,
+sobre o ciclo do TDD, não é?
+
+18
+00:01:13.395 --> 00:01:18.153
+Então o que é que é o ciclo do
+TDD segundo aí o Google, está?
+
+19
+00:01:18.153 --> 00:01:23.310
+Então eu fiz uma pesquisa lá no Google
+Images e vamos ver o que é que apareceu,
+
+20
+00:01:23.310 --> 00:01:23.959
+está?
+
+21
+00:01:23.959 --> 00:01:29.060
+Bom, uma das figuras que
+apareceu foi essa daqui está?
+
+22
+00:01:29.060 --> 00:01:31.098
+É, como é que funciona o ciclo?
+
+23
+00:01:31.098 --> 00:01:35.795
+Vamos lá, começa no vermelhinho: você
+adiciona teste certo e aí você vai
+
+24
+00:01:35.795 --> 00:01:40.299
+rodar esse teste, não é, já passando para
+o próximo e vai ver ele falhar está?
+
+25
+00:01:40.299 --> 00:01:43.910
+Porque é que você tem que rodar
+o teste e ver ele falhar?
+
+26
+00:01:43.910 --> 00:01:46.840
+Porque se você tem teste
+que já está funcionando,
+
+27
+00:01:46.840 --> 00:01:49.683
+então você não precisa
+fazer mais nada está?
+
+28
+00:01:49.683 --> 00:01:57.575
+O TDD, a motivação que você tem para mexer
+no código é ter teste falhando está?
+
+29
+00:01:57.575 --> 00:02:02.618
+Então no TDD ele tem essa ideia
+de que você só vai mexer no
+
+30
+00:02:02.618 --> 00:02:07.611
+código se tiver uma,
+
+31
+00:02:07.611 --> 00:02:11.122
+teste que não está funcionando está?
+
+32
+00:02:11.122 --> 00:02:13.664
+E aí o que é que vai acontecer,
+você vai lá então,
+
+33
+00:02:13.664 --> 00:02:17.830
+já que tem teste que não está funcionando,
+você vai lá escrever código,
+
+34
+00:02:17.830 --> 00:02:22.662
+vai mexer no código da aplicação
+para fazer aquele teste funcionar.
+
+35
+00:02:22.662 --> 00:02:25.581
+Seguida você vai rodar os testes não é,
+
+36
+00:02:25.581 --> 00:02:30.310
+se não funcionou você volta escreve
+mais o código, mexe no código até
+
+37
+00:02:30.310 --> 00:02:35.580
+aquele teste e todos os outros
+testes estarem passando está?
+
+38
+00:02:35.580 --> 00:02:40.787
+E aí no final você vai,
+refatora o código não é, ou seja a gente
+
+39
+00:02:40.787 --> 00:02:45.709
+vai falar pouco mais de refatoração nas
+próximas aulas, mas o refatorar entenda
+
+40
+00:02:45.709 --> 00:02:51.043
+como melhorar a estrutura do código
+sem alterar o que ele faz certo?
+
+41
+00:02:51.043 --> 00:02:56.027
+E aí depois você vai e adiciona, depois
+que está tudo funcionando e está com
+
+42
+00:02:56.027 --> 00:03:01.378
+aquela estrutura bacana,
+você vai lá e adiciona novo teste, está?
+
+43
+00:03:01.378 --> 00:03:06.175
+Então ele vai nesse ciclo até
+que todas as funcionalidades
+
+44
+00:03:06.175 --> 00:03:09.941
+que você deseja já estejam ali nos testes,
+está?
+
+45
+00:03:09.941 --> 00:03:12.025
+Vamos ver o próximo, está?
+
+46
+00:03:12.025 --> 00:03:16.620
+Então ele fala assim:
+escreva teste que falhe,
+
+47
+00:03:16.620 --> 00:03:20.820
+não é, ele já resumiu,
+faça esse teste passar,
+
+48
+00:03:20.820 --> 00:03:25.020
+como que você vai fazer esse teste passar?
+
+49
+00:03:25.020 --> 00:03:29.851
+Criando código, não é, indo lá na
+classe que você quer implementar e
+
+50
+00:03:29.851 --> 00:03:34.540
+criando código para fazer aquele teste
+passar e depois você vai lá e refatora.
+
+51
+00:03:34.540 --> 00:03:40.223
+Note aqui que na parte de cima
+a setinha é vermelha, porquê?
+
+52
+00:03:40.223 --> 00:03:45.137
+Porque naquele momento a nossa barrinha
+lá do JUnit ela está vermelha não é?
+
+53
+00:03:45.137 --> 00:03:49.729
+O teste está falhando e aí nas outras
+duas depois que o teste passou e
+
+54
+00:03:49.729 --> 00:03:54.153
+depois ali quando você refatora,
+a barrinha tem que estar verde,
+
+55
+00:03:54.153 --> 00:03:58.496
+ou seja todos os testes têm
+que estar passando, está?
+
+56
+00:03:58.496 --> 00:04:04.068
+Bom, dizem que para bom
+entendedor meia palavra basta,
+
+57
+00:04:04.068 --> 00:04:10.169
+então resumindo o ciclo do TDD
+seria o vermelho, verde, refatora.
+
+58
+00:04:10.169 --> 00:04:11.418
+Vermelho é o quê?
+
+59
+00:04:11.418 --> 00:04:16.746
+Quando você cria teste que está falhando,
+então está vermelho.
+
+60
+00:04:16.746 --> 00:04:18.033
+O verde é o quê?
+
+61
+00:04:18.033 --> 00:04:22.633
+Você fazer esse teste passar
+e o refatorar é você melhorar
+
+62
+00:04:22.633 --> 00:04:25.751
+a estrutura mantendo o comportamento.
+
+63
+00:04:25.751 --> 00:04:30.446
+Então resumindo o ciclo do TDD
+é vermelho- verde- refatora,
+
+64
+00:04:30.446 --> 00:04:35.667
+vermelho- verde- refatora,
+vermelho- verde- refatora, certo?
+
+65
+00:04:35.667 --> 00:04:39.393
+Eh vamos lá agora para a minha
+figura favorita, não é,
+
+66
+00:04:39.393 --> 00:04:43.588
+que ganhou aí o prémio de
+honra aí na busca que eu fiz.
+
+67
+00:04:43.588 --> 00:04:46.170
+É esse cartãozinho aqui.
+
+68
+00:04:46.170 --> 00:04:50.943
+O cara colocou aqui o principal do TDD,
+não é?
+
+69
+00:04:50.943 --> 00:04:57.728
+Então o vermelho, o teste falha, e aí fica
+com a carinha triste, fica lá hmmm, não é?
+
+70
+00:04:57.728 --> 00:04:58.348
+Porquê?
+
+71
+00:04:58.348 --> 00:05:02.905
+Porque não está funcionando,
+o teste não está passando, certo?
+
+72
+00:05:02.905 --> 00:05:07.572
+Aí depois você vai e faz o teste
+passar e aí você fica feliz porque o
+
+73
+00:05:07.572 --> 00:05:09.950
+seu código está funcionando,
+então você faz.
+
+74
+00:05:09.950 --> 00:05:13.453
+Você fica lá, não é,
+na frente do computador.
+
+75
+00:05:13.453 --> 00:05:18.750
+E aí você vai e refatora e aí o seu
+código não só está passando como ele está
+
+76
+00:05:18.750 --> 00:05:24.847
+com uma ótima estrutura, ele está limpo,
+ele está claro de ser lido,
+
+77
+00:05:24.847 --> 00:05:29.531
+está sem duplicação e aí você
+fica mais feliz ainda, não é?
+
+78
+00:05:29.531 --> 00:05:33.870
+Então você estava lá, o teste passou
+você e aí depois que refatora,
+
+79
+00:05:33.870 --> 00:05:38.550
+você vai ficar dando aquele
+sorrisão não é e aí até criar
+
+80
+00:05:38.550 --> 00:05:42.816
+novo teste que aí você volta
+a ficar triste, certo?
+
+81
+00:05:42.816 --> 00:05:45.704
+Mas aí você fica feliz
+quando faz ele passar,
+
+82
+00:05:45.704 --> 00:05:50.725
+mais feliz ainda quando refatora e volta,
+mas você não precisa ser aí
+
+83
+00:05:50.725 --> 00:05:56.042
+bipolar nem nada disso para fazer TDD,
+é só uma pequena brincadeira.
+
+84
+00:05:56.042 --> 00:05:56.906
+Na verdade,
+
+85
+00:05:56.906 --> 00:06:01.705
+quando você cria o teste que falha
+você não fica tão triste assim porquê?
+
+86
+00:06:01.705 --> 00:06:04.990
+Apesar de não estar funcionando
+tudo o que você quer,
+
+87
+00:06:04.990 --> 00:06:08.567
+o teste te mostra exatamente o
+que é que você tem que fazer,
+
+88
+00:06:08.567 --> 00:06:13.457
+então não é tão feliz quanto fazer passar,
+mas também não é triste porque você
+
+89
+00:06:13.457 --> 00:06:17.467
+sabe o que você precisa fazer
+agora para fazer o teste passar.
+
+90
+00:06:17.467 --> 00:06:20.074
+Bom, agora que a gente falou do ciclo,
+
+91
+00:06:20.074 --> 00:06:24.934
+eu vou entrar no detalhe de cada
+desses 3 passos do TDD, está?
+
+92
+00:06:24.934 --> 00:06:29.467
+Então o primeiro passo é
+adicionar o teste, está?
+
+93
+00:06:29.467 --> 00:06:33.035
+Só que, o que é que é o adicionar o teste?
+
+94
+00:06:33.035 --> 00:06:35.350
+Não é só ir lá no JUnit e pá!
+
+95
+00:06:35.350 --> 00:06:37.261
+Enquanto você faz isso,
+
+96
+00:06:37.261 --> 00:06:42.817
+você está definindo qual que é a interface
+da classe que você está implementado.
+
+97
+00:06:42.817 --> 00:06:47.010
+Ou seja, você fala assim " eu estou
+criando aqui uma classe por exemplo,
+
+98
+00:06:47.010 --> 00:06:50.773
+que eu quero que ela mande
+arquivo através da rede" não é?
+
+99
+00:06:50.773 --> 00:06:56.420
+E aí você fala assim "como é que alguém
+vai acessar essa classe para fazer isso?
+
+100
+00:06:56.420 --> 00:06:58.640
+Eu vou chamar método connect?
+
+101
+00:06:58.640 --> 00:07:04.440
+Eu vou dar send file já com os dados
+para onde eu quero que ele mande?
+
+102
+00:07:04.440 --> 00:07:07.543
+Eu vou criar uma conexão, estabeleço,
+
+103
+00:07:07.543 --> 00:07:12.194
+depois eu mando ou eu faço tudo de
+método só e encerro a conexão, não é?
+
+104
+00:07:12.194 --> 00:07:15.533
+Será que eu vou querer mandar
+mais de arquivo ao mesmo tempo?
+
+105
+00:07:15.533 --> 00:07:18.689
+Então, nesse momento quando
+você está criando o teste,
+
+106
+00:07:18.689 --> 00:07:23.092
+você está criando a visão que os seus
+clientes vão ter da sua classe, está?
+
+107
+00:07:23.092 --> 00:07:28.851
+Então o criar o teste, uma das coisas
+que você faz é projetar a interface da
+
+108
+00:07:28.851 --> 00:07:35.041
+classe que você está criando, ou seja como
+quem está de fora enxerga essa classe.
+
+109
+00:07:35.041 --> 00:07:39.870
+E outra coisa que você faz é definir
+o comportamento dessa classe,
+
+110
+00:07:39.870 --> 00:07:44.697
+e nessa definição de comportamento você
+diz o que é que vai acontecer depois
+
+111
+00:07:44.697 --> 00:07:46.390
+que você chamar o método.
+
+112
+00:07:46.390 --> 00:07:51.570
+Então se é método que faz cálculo de
+repente ele vai-te retornar valor,
+
+113
+00:07:51.570 --> 00:07:55.707
+se é uma classe que de repente isso
+aí vai mudar o estado interno,
+
+114
+00:07:55.707 --> 00:08:00.555
+então você de repente vai chamar
+outro método para ver qual é aquele
+
+115
+00:08:00.555 --> 00:08:04.705
+estado interno,
+ou se a classe se comporta não é,
+
+116
+00:08:04.705 --> 00:08:09.891
+da forma que ela deveria se comportar
+tendo aquele estado interno, está?
+
+117
+00:08:09.891 --> 00:08:14.657
+Então quando você definiu o teste,
+na verdade o que é que você está fazendo?
+
+118
+00:08:14.657 --> 00:08:18.869
+Você está definindo a interface da sua
+classe e qual que é o comportamento
+
+119
+00:08:18.869 --> 00:08:20.737
+esperado para ela, está?
+
+120
+00:08:20.737 --> 00:08:26.810
+Bom, quando a gente faz o teste passar,
+que é o segundo passo,
+
+121
+00:08:26.810 --> 00:08:31.468
+nesse ponto a gente realmente está
+implementando a classe, não é?
+
+122
+00:08:31.468 --> 00:08:36.463
+A ideia do TDD é não, não se virar e falar
+assim " eu sei que tenho esse teste mas eu
+
+123
+00:08:36.463 --> 00:08:40.583
+sei quais vão ser os próximos 3 então,
+eu já vou criar aqui monte de coisas".
+
+124
+00:08:40.583 --> 00:08:45.416
+Não, é você tentar fazer a solução
+mais simples possível para que aquele
+
+125
+00:08:45.416 --> 00:08:46.961
+teste passe está?
+
+126
+00:08:46.961 --> 00:08:50.868
+E eu, isso aí é uma experiência minha,
+está,
+
+127
+00:08:50.868 --> 00:08:55.415
+várias vezes eu peguei uma classe
+para fazer usando TDD e eu pensei,
+
+128
+00:08:55.415 --> 00:09:01.777
+olhando por alto assim os requisitos,
+eu pensava " vou ter que criar tal coisa,
+
+129
+00:09:01.777 --> 00:09:05.456
+vou ter que fazer desse jeito, daquele
+outro mas vamos fazer aqui pelo TDD".
+
+130
+00:09:05.456 --> 00:09:10.275
+E aí eu começava fazendo uma solução mais
+simples, mais simples e aí quando acabavam
+
+131
+00:09:10.275 --> 00:09:15.566
+todos os testes eu via que aquela solução
+que eu tinha pensado inicialmente, antes
+
+132
+00:09:15.566 --> 00:09:21.700
+de começar a fazer o TDD, era muito mais
+complicada do que a solução final, não é?
+
+133
+00:09:21.700 --> 00:09:28.376
+Então, realmente essa questão de
+você buscar a solução mais simples,
+
+134
+00:09:28.376 --> 00:09:33.113
+que faça os teste que você já tem
+passar e não ficar pensando na
+
+135
+00:09:33.113 --> 00:09:37.806
+frente é uma questão muito
+importante do TDD, está?
+
+136
+00:09:37.806 --> 00:09:46.079
+Você é, é assim do meu ponto de vista
+é dos grandes ganhos que você tem TDD,
+
+137
+00:09:46.079 --> 00:09:50.640
+você termina com código limpo,
+com código fácil de ler,
+
+138
+00:09:50.640 --> 00:09:55.755
+código simples, o mais simples
+possível para aqueles seus requisitos.
+
+139
+00:09:55.755 --> 00:10:00.172
+E a minha experiência, não é, pela minha
+experiência eu posso afirmar com certeza,
+
+140
+00:10:00.172 --> 00:10:03.500
+que muitas vezes eu pensei
+soluções muito mais complicadas,
+
+141
+00:10:03.500 --> 00:10:07.030
+do que aquelas que eu ia fazer,
+usando o TDD, tá.
+
+142
+00:10:07.030 --> 00:10:13.160
+Bom e a gente vai para o último
+passo que é a refatoração, tá.
+
+143
+00:10:13.160 --> 00:10:17.490
+Então, quando a gente refatora,
+o que é que a gente faz,
+
+144
+00:10:17.490 --> 00:10:20.757
+a gente limpa o código que a gente criou.
+
+145
+00:10:20.757 --> 00:10:22.531
+Então o que é limpar?
+
+146
+00:10:22.531 --> 00:10:27.540
+Como eu falei,
+a gente vai falar sobre refatoração
+
+147
+00:10:27.540 --> 00:10:32.243
+nas próximas aulas aí,
+na verdade vamos falar bastante
+
+148
+00:10:32.243 --> 00:10:36.948
+de refatoração várias aulas desse curso,
+mas vou dar alguns exemplos.
+
+149
+00:10:36.948 --> 00:10:41.230
+Por exemplo, você vai lá e cria nome de
+uma variável que não está muito legal, né.
+
+150
+00:10:41.230 --> 00:10:45.709
+Esse é o momento de você ir lá e
+mudar o nome daquela variável.
+
+151
+00:10:45.709 --> 00:10:51.837
+Você criou item ali, deu uma duplicada de
+códigos, ou o método ficou muito grande.
+
+152
+00:10:51.837 --> 00:10:56.823
+É o momento de você ir lá eliminar
+aquela duplicação, extrair o método,
+
+153
+00:10:56.823 --> 00:10:58.830
+melhorar o nome da variável.
+
+154
+00:10:58.830 --> 00:11:01.866
+É você melhorar o código.
+
+155
+00:11:01.866 --> 00:11:07.223
+E muitas vezes isso acaba mexendo
+no próprio design da classe,
+
+156
+00:11:07.223 --> 00:11:10.380
+às vezes você começa
+a implementar e você fala: "opa,
+
+157
+00:11:10.380 --> 00:11:13.745
+essa classe está com código
+duplicado relação àquela outra.
+
+158
+00:11:13.745 --> 00:11:18.417
+Eu vou criar uma superclasse, vou criar
+uma biblioteca de classe, o que é que eu
+
+159
+00:11:18.417 --> 00:11:23.430
+vou fazer aqui para esse código ficar
+melhor." E a vantagem é que você tem os
+
+160
+00:11:23.430 --> 00:11:29.670
+testes como uma segurança, né, como seguro
+ali, porque se alguma coisa der errado,
+
+161
+00:11:29.670 --> 00:11:34.780
+ele vai te ajudar a detectar
+isso o mais rápido possível.
+
+162
+00:11:34.780 --> 00:11:39.890
+Ou seja, o pessoal fala,
+time que está ganhando você não mexe.
+
+163
+00:11:39.890 --> 00:11:42.384
+Agora quando a gente tem os testes,
+
+164
+00:11:42.384 --> 00:11:46.220
+a gente pode mexer e ver se
+ele vai continuar ganhando,
+
+165
+00:11:46.220 --> 00:11:52.135
+e se a gente tiver uma estrutura melhor,
+a gente sai ganhando mais ainda, né.
+
+166
+00:11:52.135 --> 00:11:56.143
+Porque quem for mexer naquele
+código depois, vai ter facilidade,
+
+167
+00:11:56.143 --> 00:11:58.050
+isso vai ajudar na manutenção,
+
+168
+00:11:58.050 --> 00:12:04.050
+são vários os benefícios que têm de você
+refatorar o seu código com frequência.
+
+169
+00:12:04.050 --> 00:12:09.312
+Tá, eu não poderia falar sobre o ciclo
+
+170
+00:12:09.312 --> 00:12:14.210
+do TDD sem falar sobre os baby steps, né.
+
+171
+00:12:14.210 --> 00:12:16.321
+Olha isso daí, que fofo!
+
+172
+00:12:16.321 --> 00:12:18.280
+Né?
+Fofinho, né, certo.
+
+173
+00:12:18.280 --> 00:12:20.978
+O que é que a gente vai
+aprender com esse nenê?
+
+174
+00:12:20.978 --> 00:12:23.364
+A andar devagarzinho, certo?
+
+175
+00:12:23.364 --> 00:12:31.993
+No TDD, não basta você ir lá e fazer ciclo
+grandão daqueles com monte de testes.
+
+176
+00:12:31.993 --> 00:12:36.743
+A questão, esse ciclo do TDD,
+durante uma seção de desenvolvimento,
+
+177
+00:12:36.743 --> 00:12:38.860
+ele tem que girar várias vezes.
+
+178
+00:12:38.860 --> 00:12:41.902
+Tá.
+Então esse é o baby steps né.
+
+179
+00:12:41.902 --> 00:12:45.940
+É você aos poucos, né, você cria teste,
+
+180
+00:12:45.940 --> 00:12:49.995
+implementa, refatora,
+você deu pequeno passo.
+
+181
+00:12:49.995 --> 00:12:53.607
+Você criou outro teste, deu outro passo.
+
+182
+00:12:53.607 --> 00:12:58.472
+E aos pouquinhos você vai se
+aproximando daquilo que você quer.
+
+183
+00:12:58.472 --> 00:12:59.110
+Certo?
+
+184
+00:12:59.110 --> 00:13:05.000
+Então, explicando melhor,
+muita gente entende
+
+185
+00:13:05.000 --> 00:13:10.533
+o baby step como: " eu tenho que adicionar
+pouca coisa de teste para o outro".
+
+186
+00:13:10.533 --> 00:13:13.615
+E aí, às vezes a pessoa fala assim: "poxa,
+mas eu já sou
+
+187
+00:13:13.615 --> 00:13:17.520
+desenvolvedor mais experiente,
+eu não preciso andar tão devagar".
+
+188
+00:13:17.520 --> 00:13:21.177
+Então, na verdade,
+eu gosto de dizer que o baby
+
+189
+00:13:21.177 --> 00:13:25.991
+step não significa andar devagar,
+adicionar pouca coisa.
+
+190
+00:13:25.991 --> 00:13:30.424
+Eu prefiro dizer que o baby step,
+ele é você alternar com
+
+191
+00:13:30.424 --> 00:13:35.317
+frequência entre criar
+testes e código de produção.
+
+192
+00:13:35.317 --> 00:13:39.346
+Então se você é desenvolvedor
+mais experiente,
+
+193
+00:13:39.346 --> 00:13:44.373
+você vai conseguir criar,
+avançar mais rápido e aí você vai,
+
+194
+00:13:44.373 --> 00:13:49.710
+implementa mais rápido e
+volta para o teste de novo.
+
+195
+00:13:49.710 --> 00:13:54.358
+O que não é baby steps, é por exemplo,
+sei lá, você criar ultra teste que
+
+196
+00:13:54.358 --> 00:13:58.590
+engloba tudo o que a classe faz,
+depois você fica uma hora programando.
+
+197
+00:13:58.590 --> 00:14:01.559
+Não importa o tamanho do pulo,
+
+198
+00:14:01.559 --> 00:14:06.590
+tamanho do salto que você
+dá de teste para o outro,
+
+199
+00:14:06.590 --> 00:14:11.258
+o quanto que você está incrementando na
+funcionalidade da classe de teste para o
+
+200
+00:14:11.258 --> 00:14:16.890
+outro, mas sim, a frequência que você
+varia do teste para o código de produção.
+
+201
+00:14:16.890 --> 00:14:21.587
+Teste, código de produção,
+fez mais teste, mais código de produção.
+
+202
+00:14:21.587 --> 00:14:26.041
+Se você está fazendo isso com frequência,
+se você está girando esse ciclo do TDD
+
+203
+00:14:26.041 --> 00:14:29.776
+várias vezes,
+então você está correto no baby steps.
+
+204
+00:14:29.776 --> 00:14:30.485
+Certo.
+
+205
+00:14:30.485 --> 00:14:35.252
+Então com isso,
+nessa aula a gente falou do ciclo do TDD,
+
+206
+00:14:35.252 --> 00:14:41.550
+do Test Driven Development, e espero que
+vocês tenham entendido melhor o andamento,
+
+207
+00:14:41.550 --> 00:14:49.630
+o papel de cada desses passos para você
+construir a funcionalidade no TDD.
+
+208
+00:14:49.630 --> 00:14:51.563
+Bom, próxima aula é hands-on,
+
+209
+00:14:51.563 --> 00:14:54.784
+a gente vai ver na prática como
+é que esse ciclo aí funciona.
+
+210
+00:14:54.784 --> 00:14:59.019
+Muito obrigado Até a próxima.
+
+211
+00:14:59.019 --> 00:15:01.630
+[MÚSICA]

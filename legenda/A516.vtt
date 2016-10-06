@@ -1,0 +1,486 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.775
+[MÚSICA] [MÚSICA]
+
+2
+00:00:08.775 --> 00:00:13.429
+Olá a todos, bem vindos a mais hands-on do
+
+3
+00:00:13.429 --> 00:00:18.338
+curso de Orientação a Objetos com Java,
+eu sou o Eduardo Guerra e hoje
+
+4
+00:00:18.338 --> 00:00:22.952
+a gente vai exercitar pouco
+essa parte de excepções, não é?
+
+5
+00:00:22.952 --> 00:00:27.021
+Eu sei que às vezes mostrando o
+código no slide fica tudo às vezes
+
+6
+00:00:27.021 --> 00:00:28.962
+pouco meio abstrato, não é?
+
+7
+00:00:28.962 --> 00:00:34.336
+Então vamos ver aqui na prática o
+funcionamento das excepções, a propagação,
+
+8
+00:00:34.336 --> 00:00:38.679
+a questão dos, as [INAUDIBLE],
+o Try Catch, o Throws,
+
+9
+00:00:38.679 --> 00:00:43.591
+então vamos exercitar tudo
+isso daqui num exemplo, está?
+
+10
+00:00:43.591 --> 00:00:46.999
+Então eu vou criar aqui novo projeto,
+não é,
+
+11
+00:00:46.999 --> 00:00:52.584
+eu vou chamar aqui de Excepções, certo?
+
+12
+00:00:52.584 --> 00:00:58.544
+E eu vou criar uma classe
+principal que chama OutrosMétodos
+
+13
+00:00:58.544 --> 00:01:03.130
+que aí a gente vai ver a questão da
+propagação das excepções entre eles.
+
+14
+00:01:03.130 --> 00:01:08.898
+Aí então eu vou criar aqui
+uma classe principal opa,
+
+15
+00:01:08.898 --> 00:01:13.889
+principal, vou marcar aqui
+
+16
+00:01:13.889 --> 00:01:19.350
+para que ela tenha método main, certo?
+
+17
+00:01:19.350 --> 00:01:26.120
+Essa classe aqui, eu vou criar aqui outros
+métodos, vou criar estático mesmo, não é?
+
+18
+00:01:26.120 --> 00:01:32.044
+Para então
+
+19
+00:01:32.044 --> 00:01:36.930
+vou criar aqui método chamado a,
+
+20
+00:01:36.930 --> 00:01:42.610
+certo, vou passar aqui inteiro aqui para,
+
+21
+00:01:42.610 --> 00:01:48.470
+como parâmetro e vou criar método static
+
+22
+00:01:48.470 --> 00:01:53.717
+void b também recebendo inteiro, certo?
+
+23
+00:01:53.717 --> 00:01:58.300
+Então o que é que vai acontecer?
+
+24
+00:01:58.300 --> 00:02:01.591
+O método main ele vai chamar o método a,
+certo,
+
+25
+00:02:01.591 --> 00:02:05.990
+eu vou colocar aqui por
+exemplo passando 100, não é,
+
+26
+00:02:05.990 --> 00:02:11.520
+o metodo a ele vai chamar
+o método b passando
+
+27
+00:02:11.520 --> 00:02:17.130
+100 e o método b vai imprimir isso aqui
+
+28
+00:02:17.130 --> 00:02:22.891
+eu vou colocar aqui "executando
+
+29
+00:02:22.891 --> 00:02:28.010
+b com" e aí o número, não é?
+
+30
+00:02:28.010 --> 00:02:32.014
+Vou fazer o mesmo aqui no a aqui.
+
+31
+00:02:32.014 --> 00:02:38.189
+Então ele executando o a com ui, certo?
+
+32
+00:02:38.189 --> 00:02:42.490
+Então vou salvar isso daqui, vou rodar,
+
+33
+00:02:42.490 --> 00:02:48.040
+por enquanto esse código não tem
+para gente nenhuma novidade, certo?
+
+34
+00:02:48.040 --> 00:02:53.037
+Ele vai chamar ali
+
+35
+00:02:53.037 --> 00:02:57.001
+"Executando a com 100",
+"Executando b com 100", está?
+
+36
+00:02:57.001 --> 00:02:59.407
+Agora aqui no b o que é que eu vou fazer?
+
+37
+00:02:59.407 --> 00:03:06.050
+Eu vou dar,
+eu vou dar throw new Exception, está?
+
+38
+00:03:06.050 --> 00:03:11.480
+Aí e aí eu vou colocar uma mensagem:
+a minha mensagem vai ser "mensagem",
+
+39
+00:03:11.480 --> 00:03:16.630
+opa, faltou aqui r, certo?
+
+40
+00:03:16.630 --> 00:03:19.710
+Bom, ele não aceita,
+porque é que ele não aceita?
+
+41
+00:03:19.710 --> 00:03:25.112
+O que ele diz que o método ele precisa,
+
+42
+00:03:25.112 --> 00:03:28.839
+não é, tratar essa exceção, está?
+
+43
+00:03:28.839 --> 00:03:32.848
+Então eu posso vir aqui
+e dar throws exception.
+
+44
+00:03:32.848 --> 00:03:37.920
+Só que aí o erro vai ser no a que invoca
+o b, ele fala assim "Opa esse cara
+
+45
+00:03:37.920 --> 00:03:44.274
+ele não joga uma exceção também", então eu
+posso vir aqui e adicionar o throws certo?
+
+46
+00:03:44.274 --> 00:03:51.075
+E aí o mesmo erro vai dar aqui no main
+e eu vou fazer a mesma coisa, está?
+
+47
+00:03:51.075 --> 00:03:55.049
+Muito bom, está?
+
+48
+00:03:55.049 --> 00:04:00.593
+Bom, quando eu rodar agora ele
+vai executar o a, o b certo?
+
+49
+00:04:00.593 --> 00:04:03.493
+E ele vai dar essa exceção.
+
+50
+00:04:03.493 --> 00:04:06.521
+Note aqui o stack trace da exceção,
+
+51
+00:04:06.521 --> 00:04:10.458
+eu vou até puxar aqui para o
+meio para vocês verem, está?
+
+52
+00:04:10.458 --> 00:04:13.518
+Note aqui ele deu o tipo da exceção,
+a mensagem,
+
+53
+00:04:13.518 --> 00:04:17.167
+aí ele fala assim "Olha essa
+exceção ela apareceu b.
+
+54
+00:04:17.167 --> 00:04:23.058
+Se eu clicar aqui ele já vai para
+a linha de código onde aconteceu, não é?
+
+55
+00:04:23.058 --> 00:04:26.578
+Passou por a, que linha ele passou no a?
+
+56
+00:04:26.578 --> 00:04:29.510
+Nessa chamada aqui foi para o main, não é?
+
+57
+00:04:29.510 --> 00:04:33.386
+Então essa sequência aqui é o
+stack trace da exceção, não é?
+
+58
+00:04:33.386 --> 00:04:39.250
+Ele estava dentro do método main, dentro
+do método a e dentro do método b, está?
+
+59
+00:04:39.250 --> 00:04:47.635
+Bom, vou mostrar agora como que
+ficaria para fazer o try catch, está?
+
+60
+00:04:47.635 --> 00:04:52.167
+Então vou encolher de
+volta aqui o console está?
+
+61
+00:04:52.167 --> 00:04:57.438
+Então ao invés de jogar essa exceção aqui
+para a frente, não é, eu vou tratar.
+
+62
+00:04:57.438 --> 00:05:02.867
+Então o Eclipse me ajuda aqui também ele
+dá a opção Surround with try/catch, está?
+
+63
+00:05:02.867 --> 00:05:07.791
+Então eu aqui eu posso dar o print track
+trace mas ao invés de fazer isso eu
+
+64
+00:05:07.791 --> 00:05:12.850
+vou imprimir aqui
+
+65
+00:05:12.850 --> 00:05:17.560
+"tratando a exceção".
+
+66
+00:05:17.560 --> 00:05:24.972
+Aí eu vou botar dois pontos
+e aí eu vou colocar aqui
+
+67
+00:05:24.972 --> 00:05:30.399
+e.getMessage, não é,
+é a mensagem ali do erro, está?
+
+68
+00:05:30.399 --> 00:05:35.163
+Nesse caso, não é, aqui por exemplo
+eu nem precisaria do throws, está?
+
+69
+00:05:35.163 --> 00:05:38.552
+Então eu salvo e aí por exemplo,
+
+70
+00:05:38.552 --> 00:05:43.734
+quando eu rodar ele vai vir
+executar "tratando a exceção".
+
+71
+00:05:43.734 --> 00:05:48.635
+A exceção ela não significa que tem que
+ser " deu erro no programa, deu pau", não,
+
+72
+00:05:48.635 --> 00:05:53.872
+a exceção é erro, está, é erro que pode
+ser normal, então quem recebe esse
+
+73
+00:05:53.872 --> 00:05:59.431
+erro pode tratar e continuar a execução,
+como é o caso que acontece aqui está?
+
+74
+00:05:59.431 --> 00:06:05.851
+Por exemplo,
+se eu imprimir aqui por exemplo
+
+75
+00:06:06.880 --> 00:06:13.299
+"terminando execução de a" não é?
+
+76
+00:06:13.299 --> 00:06:16.758
+Tirar esse finalzinho aqui, não é?
+
+77
+00:06:16.758 --> 00:06:23.545
+E por exemplo "terminando
+a execução de main", certo?
+
+78
+00:06:23.545 --> 00:06:28.758
+Se eu rodar isso daqui depois
+
+79
+00:06:28.758 --> 00:06:33.092
+que ele tratou o erro ali da mensagem,
+
+80
+00:06:33.092 --> 00:06:36.870
+ele termina a execução do a e depois
+volta para o main normalmente.
+
+81
+00:06:36.870 --> 00:06:40.707
+Ele só vai dar aquele problema
+de interromper a execução,
+
+82
+00:06:40.707 --> 00:06:43.658
+não é, se a exceção não for
+tratada, não é?
+
+83
+00:06:43.658 --> 00:06:49.229
+Note, por exemplo depois que eu jogo
+a exceção eu acho que ele nem deixa eu,
+
+84
+00:06:49.229 --> 00:06:56.360
+eu adicionar alguma coisa aqui ele
+diz que aquele código ele não pode,
+
+85
+00:06:56.360 --> 00:07:00.634
+nunca será atingido,
+está a ver "Unreachable code", está?
+
+86
+00:07:00.634 --> 00:07:06.278
+O que eu posso fazer é de repente colocar
+condicional aqui por exemplo se i for
+
+87
+00:07:06.278 --> 00:07:11.250
+maior do que 0, então ele joga
+a exceção por exemplo, está?
+
+88
+00:07:11.250 --> 00:07:13.199
+Aí ele aceita, não é?
+
+89
+00:07:13.199 --> 00:07:18.246
+Mas note que se ele executar a exceção,
+se ele chegar na exceção ele
+
+90
+00:07:18.246 --> 00:07:23.097
+não continua a execução dessa,
+dessa instrução aqui, está?
+
+91
+00:07:23.097 --> 00:07:30.443
+Olha lá a gente rodou aqui viu que
+ele não, não não fez aquilo, está?
+
+92
+00:07:30.443 --> 00:07:36.148
+E aí aqui eu vou passar aqui então, por
+exemplo, -100 para ele não dar exceção ali
+
+93
+00:07:36.148 --> 00:07:42.250
+baixo, está, ele executa normalmente.
+
+94
+00:07:42.250 --> 00:07:49.670
+Opa, o b está passando 100 não,
+ficou meio esquisito isso.
+
+95
+00:07:49.670 --> 00:07:55.655
+Então salvo aqui, agora roda de novo,
+olha lá então ele executa o a,
+
+96
+00:07:55.655 --> 00:08:01.550
+ele executa o b e aí no b ele não vai dar
+a exceção porque ele não é maior que 0,
+
+97
+00:08:01.550 --> 00:08:06.320
+aí ele termina a execução de b,
+ele não vai passar pelo catch,
+
+98
+00:08:06.320 --> 00:08:09.628
+ele termina a execução de a,
+não é, ou seja,
+
+99
+00:08:09.628 --> 00:08:15.000
+depois do try ele continua baixo não é,
+e aqui vai executar o main, está?
+
+100
+00:08:15.000 --> 00:08:18.673
+Espero que mostrando aí
+as várias possibilidades,
+
+101
+00:08:18.673 --> 00:08:24.064
+mostrando que dá erro se você não coloca
+o throws ou não coloca o try catch,
+
+102
+00:08:24.064 --> 00:08:30.094
+espero que tenha ficado mais claro aí o
+funcionamento aí dessa parte de exceções.
+
+103
+00:08:30.094 --> 00:08:31.410
+Muito obrigado.
+
+104
+00:08:31.410 --> 00:08:36.300
+Até ao próximo hands-on.
+
+105
+00:08:36.300 --> 00:08:38.429
+[MÚSICA]

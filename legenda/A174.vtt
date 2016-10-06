@@ -1,0 +1,302 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.932
+[MÚSICA] E aí,
+
+2
+00:00:05.932 --> 00:00:09.322
+pessoal, tudo bem?
+
+3
+00:00:09.322 --> 00:00:13.040
+Nessa aula vamos ver como lidar
+com diferentes tamanhos de tela.
+
+4
+00:00:13.040 --> 00:00:17.828
+Como adaptar o nosso jogo para funcionar
+corretamente tanto em iPhones quanto
+
+5
+00:00:17.828 --> 00:00:18.340
+iPads.
+
+6
+00:00:18.340 --> 00:00:23.590
+Primeiro vamos rodar esse jogo no
+emulador de iPad para ver o que acontece.
+
+7
+00:00:23.590 --> 00:00:29.190
+Note que a altura
+
+8
+00:00:29.190 --> 00:00:33.495
+do jogo se ajustou ao tamanho do iPad.
+
+9
+00:00:33.495 --> 00:00:35.327
+Para não perder a proporção,
+
+10
+00:00:35.327 --> 00:00:38.718
+as partes laterais esquerda
+e direita foram cortadas.
+
+11
+00:00:38.718 --> 00:00:41.430
+Assim o label de pontuação
+não aparece mais.
+
+12
+00:00:41.430 --> 00:00:45.818
+A maneira mais fácil de resolver esse
+
+13
+00:00:45.818 --> 00:00:49.580
+problema é mudarmos o scaleMode
+da cena para AspectFit.
+
+14
+00:00:49.580 --> 00:00:57.680
+[SEM_ÁUDIO] Porém 2 barras
+pretas são criadas.
+
+15
+00:00:57.680 --> 00:01:02.436
+Vamos voltar o scaleMode
+
+16
+00:01:02.436 --> 00:01:06.062
+para AspectFill e lidar
+
+17
+00:01:06.062 --> 00:01:10.060
+com a diferença de tamanhos e
+proporções de telas pelo código.
+
+18
+00:01:10.060 --> 00:01:15.800
+[SEM_ÁUDIO] Vamos
+
+19
+00:01:15.800 --> 00:01:20.370
+criar uma função chamada AdjustScreenSize.
+
+20
+00:01:20.370 --> 00:01:24.023
+Para pegar o tamanho
+real da tela do aparelho,
+
+21
+00:01:24.023 --> 00:01:28.340
+utilizamos
+UIScreen.mainScreen.nativeBounds.
+
+22
+00:01:28.340 --> 00:01:32.742
+Porém o valor da altura e largura
+de nativeBounds considera sempre
+
+23
+00:01:32.742 --> 00:01:34.641
+a orientação em modo retrato.
+
+24
+00:01:34.641 --> 00:01:39.200
+Portanto, como estamos implementando o
+jogo com orientação em modo paisagem,
+
+25
+00:01:39.200 --> 00:01:42.290
+na hora de redefinir o
+tamanho dos limites da cena,
+
+26
+00:01:42.290 --> 00:01:46.988
+temos que utilizar o valor da altura de
+nativeBounds para a largura da cena e
+
+27
+00:01:46.988 --> 00:01:50.060
+a largura de nativeBounds
+para a altura da cena.
+
+28
+00:01:50.060 --> 00:01:55.480
+Execute a função AdjustScreenSize
+no início de didMovieToView
+
+29
+00:01:55.480 --> 00:01:59.975
+e rode no simulador para
+ver o que acontece.
+
+30
+00:01:59.975 --> 00:02:04.470
+Agora temos o tamanho da cena igual
+ao tamanho da tela do aparelho.
+
+31
+00:02:04.470 --> 00:02:09.033
+Precisamos redimensionar a imagem do
+fundo e reposicionar o indicador de
+
+32
+00:02:09.033 --> 00:02:10.880
+pontos e o label de Game Over.
+
+33
+00:02:10.880 --> 00:02:15.399
+Note que como definimos os limites
+de movimento do inimigo para
+
+34
+00:02:15.399 --> 00:02:20.033
+a largura e altura da cena,
+e para a posição aleatória da moeda também
+
+35
+00:02:20.033 --> 00:02:24.450
+consideramos o tamanho da cena,
+não precisamos ajustar o comportamento do
+
+36
+00:02:24.450 --> 00:02:26.800
+inimigo nem do sorteio
+da posição da moeda.
+
+37
+00:02:26.800 --> 00:02:34.956
+[SEM_ÁUDIO] No
+
+38
+00:02:34.956 --> 00:02:39.659
+editor de cena vamos renomear a imagem
+de fundo para Background e mudar
+
+39
+00:02:39.659 --> 00:02:43.420
+o ponto de âncora para 0,
+tanto no X quanto no Y.
+
+40
+00:02:43.420 --> 00:02:47.770
+Assim, quando redimensionarmos a imagem de
+fundo não precisamos ajustar a posição.
+
+41
+00:02:47.770 --> 00:02:56.236
+[SEM_ÁUDIO] No código,
+
+42
+00:02:56.236 --> 00:03:01.250
+crie uma variável BackgroundNode
+
+43
+00:03:01.250 --> 00:03:05.430
+e procure pelo nó com o nome Background.
+
+44
+00:03:05.430 --> 00:03:09.260
+Atualize a propriedade Size
+de BackgroundNode para
+
+45
+00:03:09.260 --> 00:03:13.169
+screenSize.height tanto para
+largura quanto para altura,
+
+46
+00:03:13.169 --> 00:03:17.450
+pois a imagem é quadrada e estamos
+considerando a maior dimensão da tela.
+
+47
+00:03:17.450 --> 00:03:23.980
+Vamos ajustar a posição Y
+do indicador de pontos.
+
+48
+00:03:23.980 --> 00:03:28.948
+Mude primeiro a posição do ícone de
+moeda coinHUD para o valor da altura do
+
+49
+00:03:28.948 --> 00:03:31.796
+frame da cena menos a altura do ícone,
+
+50
+00:03:31.796 --> 00:03:37.868
+subtraindo coinHUD.frame.height Ajuste
+também a posição do label scoreNode.
+
+51
+00:03:37.868 --> 00:03:40.788
+Como já calculamos a posição de coinHUD,
+
+52
+00:03:40.788 --> 00:03:44.890
+basta colocar a mesma posição
+do eixo Y para scoreNode.
+
+53
+00:03:44.890 --> 00:03:49.190
+Lembre-se de deixar o alinhamento
+vertical deste label no centro.
+
+54
+00:03:49.190 --> 00:03:53.946
+Por fim, vamos atualizar a posição
+do label gameOverNode para o
+
+55
+00:03:53.946 --> 00:03:58.094
+centro da cena através dessa
+linha que calcula o ponto
+
+56
+00:03:58.094 --> 00:04:01.560
+central do frame da cena
+no eixo X e no eixo Y.
+
+57
+00:04:01.560 --> 00:04:05.450
+Rode no simulador de iPad
+para ver o resultado.
+
+58
+00:04:05.450 --> 00:04:10.345
+Se você desejar, também pode mudar o
+
+59
+00:04:10.345 --> 00:04:15.240
+tamanho do jogador, tamanho do inimigo e
+moeda multiplicando por uma constante.
+
+60
+00:04:15.240 --> 00:04:20.300
+Rode também no simulador
+de iPhone 6 por exemplo.
+
+61
+00:04:20.300 --> 00:04:28.677
+[SEM_ÁUDIO] Na
+
+62
+00:04:28.677 --> 00:04:33.200
+próxima aula, veremos como
+
+63
+00:04:33.200 --> 00:04:37.662
+lidar com mais de uma cena no jogo,
+
+64
+00:04:37.662 --> 00:04:42.523
+seja para implementar
+menu ou outras fases.
+
+65
+00:04:42.523 --> 00:04:43.380
+Até lá!

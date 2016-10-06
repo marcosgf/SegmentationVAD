@@ -1,0 +1,273 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:00.563
+Olá!
+
+2
+00:00:00.563 --> 00:00:05.346
+Você já viu que a margem de
+ganho é o quanto falta para o
+
+3
+00:00:05.346 --> 00:00:09.930
+ganho ser unitário na frequência
+que a fase vale menos 180 graus,
+
+4
+00:00:09.930 --> 00:00:14.550
+conferindo uma medida do grau de
+estabilidade de sistema, isto é,
+
+5
+00:00:14.550 --> 00:00:18.840
+quanto o ganho pode variar antes
+de tornar o sistema instável.
+
+6
+00:00:18.840 --> 00:00:21.418
+Neste vídeo você aprenderá a determinar
+
+7
+00:00:21.418 --> 00:00:24.610
+a margem de ganho a partir
+do diagrama de Nyquist.
+
+8
+00:00:24.610 --> 00:00:29.504
+Vamos escolher sistema de tipo que
+ainda não vimos: G de s igual a s
+
+9
+00:00:29.504 --> 00:00:34.600
+menos z1 sobre s menos
+p1 vezes s menos p2.
+
+10
+00:00:34.600 --> 00:00:39.550
+Esse sistema tem zero z1
+e dois polos p1 e p2.
+
+11
+00:00:39.550 --> 00:00:42.925
+Para o nosso exemplo
+vamos assumir o zero e
+
+12
+00:00:42.925 --> 00:00:47.770
+dos polos no semiplano esquerdo: z1
+menor do que 0 e p1 menor do que 0.
+
+13
+00:00:47.770 --> 00:00:52.640
+O outro polo será assumido no
+semiplano direito: p2 maior do que 0.
+
+14
+00:00:52.640 --> 00:00:57.457
+Os módulos mantêm a seguinte relação:
+módulo de p1 menor do que módulo de z1
+
+15
+00:00:57.457 --> 00:00:59.170
+menor do que módulo de p2.
+
+16
+00:00:59.170 --> 00:01:02.870
+Então o sistema é estritamente próprio,
+
+17
+00:01:02.870 --> 00:01:06.420
+módulo de G de s vai para 0,
+quando r tende para infinito.
+
+18
+00:01:06.420 --> 00:01:10.167
+A fase inicialmente é menos 180 graus,
+
+19
+00:01:10.167 --> 00:01:15.380
+pois G de 0 igual a menos z1
+sobre menos p1 vezes menos p2,
+
+20
+00:01:15.380 --> 00:01:19.530
+que é igual a menos z1 sobre p1 vezes p2,
+que é menor do que 0.
+
+21
+00:01:19.530 --> 00:01:25.663
+Conforme ômega vai para infinito, a fase
+vai para menos 90 graus, visto que os dois
+
+22
+00:01:25.663 --> 00:01:31.010
+polos contribuem com menos 90 graus cada,
+mas o zero contribui com mais 90 graus.
+
+23
+00:01:31.010 --> 00:01:37.810
+Somando, mais 90 graus menos 90 graus
+menos 90 graus igual a menos 90 graus.
+
+24
+00:01:37.810 --> 00:01:42.117
+Como o módulo de p1 é a primeira
+frequência de quebra,
+
+25
+00:01:42.117 --> 00:01:48.479
+a fase começa a decrescer primeiro,
+ficando menor do que menos 180 graus.
+
+26
+00:01:48.479 --> 00:01:53.510
+Depois, ao atingir z1, passa a aumentar
+retornando a menos 180 graus.
+
+27
+00:01:53.510 --> 00:01:57.390
+E, depois de passar por p2,
+vai a menos 90 graus.
+
+28
+00:01:57.390 --> 00:02:01.470
+O diagrama de Nyquist
+é mostrado na figura,
+
+29
+00:02:01.470 --> 00:02:05.731
+onde pode-se ver que há dois cruzamentos
+com o eixo real no semiplano esquerdo:
+
+30
+00:02:05.731 --> 00:02:10.710
+deles menos z1 sobre p1 p2 e
+outro menos R, a determinar.
+
+31
+00:02:10.710 --> 00:02:15.310
+Como malha aberta há polo no
+semiplano direito, p igual a 1.
+
+32
+00:02:15.310 --> 00:02:21.350
+Para a estabilidade deve-se ter Z
+igual a P mais N, que é igual a 0.
+
+33
+00:02:21.350 --> 00:02:25.940
+Portanto N tem que ser igual a menos P,
+que é igual a a menos 1, ou seja,
+
+34
+00:02:25.940 --> 00:02:30.400
+uma volta torno de menos 1 sobre
+K no sentido anti-horário.
+
+35
+00:02:30.400 --> 00:02:34.380
+Pelo diagrama isso ocorrerá no caso verde,
+
+36
+00:02:34.380 --> 00:02:38.930
+com 0 menor do que 1
+sobre K menor do que R.
+
+37
+00:02:38.930 --> 00:02:44.466
+No caso vermelho tem-se
+p1 p2 sobre z1 menor do
+
+38
+00:02:44.466 --> 00:02:49.621
+que K2 menor do que 1 sobre R,
+com uma volta no sentido horário,
+
+39
+00:02:49.621 --> 00:02:55.550
+isto é, N igual a 1, o que implica Z igual
+a N mais P igual a 1 mais 1 igual a 2.
+
+40
+00:02:55.550 --> 00:02:57.995
+Polos no semiplano direito.
+
+41
+00:02:57.995 --> 00:03:02.546
+Caso tenhamos K menor do que p1
+p2 sobre z1 ou K menor do 0,
+
+42
+00:03:02.546 --> 00:03:07.868
+então não há nenhuma volta torno de menos
+1 sobre K, N igual a 0, o que implica
+
+43
+00:03:07.868 --> 00:03:13.250
+Z igual a N mais P, que é igual 0 mais
+1 igual a 1: polo no semiplano direito.
+
+44
+00:03:13.250 --> 00:03:18.860
+Ou seja, há limite inferior para o ganho
+de modo a manter o sistema estável.
+
+45
+00:03:18.860 --> 00:03:21.185
+K1 maior do que 1 sobre R,
+
+46
+00:03:21.185 --> 00:03:26.660
+de forma que menos 1 sobre K1 não
+cruze o ponto s igual a menos R.
+
+47
+00:03:26.660 --> 00:03:30.543
+Nesse caso,
+para valor fixo de K nessa faixa,
+
+48
+00:03:30.543 --> 00:03:36.048
+as margens de estabilidade são: infinito,
+margem superior, pois teremos
+
+49
+00:03:36.048 --> 00:03:41.172
+que multiplicar K por infinito para
+cruzar o 0; e 1 sobre RK inferior,
+
+50
+00:03:41.172 --> 00:03:47.285
+multiplicando K por 1 sobre RK,
+então menos 1 sobre K igual a menos R.
+
+51
+00:03:47.285 --> 00:03:52.191
+DB a margem superior será infinita
+e a margem inferior será 20
+
+52
+00:03:52.191 --> 00:03:57.100
+log de 1 sobre RK, que é igual
+a menos 20 log de R menos 20 log de K.
+
+53
+00:03:57.100 --> 00:04:01.670
+Agora você sabe encontrar as margens
+de ganho a partir do diagrama de
+
+54
+00:04:01.670 --> 00:04:06.240
+Nyquist e avaliar para que faixas de
+valores de ganho o sistema será estável.
+
+55
+00:04:06.240 --> 00:04:11.005
+Nos próximos vídeos você vai aprender a
+lidar com o atraso de transporte, isto é,
+
+56
+00:04:11.005 --> 00:04:15.770
+quando o sistema tem atraso de tempo
+entre a entrada e seu efeito na saída.

@@ -1,0 +1,310 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.921
+Após esse vídeo você será capaz de esboçar
+o LGR para sistemas de quarta ordem sem
+
+2
+00:00:04.921 --> 00:00:06.175
+zeros e com zero.
+
+3
+00:00:06.175 --> 00:00:11.294
+Vamos esboçar o LGR para a seguinte
+função de transferência G de s igual
+
+4
+00:00:11.294 --> 00:00:17.647
+a 400 sobre s s mais 2, s mais 10, s mais
+20, são quatro ramos do LGR, no eixo real
+
+5
+00:00:17.647 --> 00:00:22.811
+os trechos entre 0 e menos2 e entre
+menos 10 e menos 20 fazem parte do LGR.
+
+6
+00:00:22.811 --> 00:00:27.598
+Temos quatro assíntotas com mais
+e menos 135 graus e mais e menos
+
+7
+00:00:27.598 --> 00:00:30.160
+45 graus que se cruzam menos 8.
+
+8
+00:00:30.160 --> 00:00:34.415
+Construímos a tabela de Routh para
+determinar onde o LGR cruza o eixo
+
+9
+00:00:34.415 --> 00:00:35.320
+imaginário.
+
+10
+00:00:35.320 --> 00:00:43.100
+P de s será s a 4ª mais 32 s³
+mais 260s² mais 400s +mais 400k.
+
+11
+00:00:43.100 --> 00:00:46.766
+Podemos dividir a linha s³ por 16,
+
+12
+00:00:46.766 --> 00:00:52.406
+o primeiro elemento da linha
+s² é 520 menos 25 dividido
+
+13
+00:00:52.406 --> 00:00:58.000
+por 2 que é igual a 247,5 e
+o segundo elemento é 400.
+
+14
+00:00:58.000 --> 00:01:03.118
+O elemento da linha s1 é 247,5 vezes 25
+
+15
+00:01:03.118 --> 00:01:09.401
+menos 800k sobre 247,5 e para
+podermos ter par de polos imaginários
+
+16
+00:01:09.401 --> 00:01:15.590
+puros precisamos ter 800k
+igual a 247,5 vezes 25.
+
+17
+00:01:15.590 --> 00:01:20.336
+Note que não precisamos realmente
+calcular K, só precisamos de 400k,
+
+18
+00:01:20.336 --> 00:01:26.910
+que nesse caso é 247,5
+vezes 25 dividido por 2.
+
+19
+00:01:26.910 --> 00:01:33.630
+Substituindo esse valor de 400k na
+linha s² obtemos o polinômio auxiliar,
+
+20
+00:01:33.630 --> 00:01:40.514
+247,5s² mais 247,5 vezes
+25 sobre 2 igual a 0,
+
+21
+00:01:40.514 --> 00:01:45.656
+que podemos simplificar para
+s² mais 12,5 igual a 0,
+
+22
+00:01:45.656 --> 00:01:50.530
+e as raízes que são os pontos de
+cruzamento do eixo imaginário são mais
+
+23
+00:01:50.530 --> 00:01:55.560
+ou menos raiz quadrada de 12,5j
+que dá aproximadamente 3,5j.
+
+24
+00:01:55.560 --> 00:01:58.628
+Calculando a saída do eixo real,
+
+25
+00:01:58.628 --> 00:02:03.680
+4s³ mais 96s² mais 520s
+mais 400 é igual 0,
+
+26
+00:02:03.680 --> 00:02:08.935
+que podemos simplificar
+para s³ mais 24s² mais 130s
+
+27
+00:02:08.935 --> 00:02:14.676
+mais 100 igual a 0 cujas
+raízes são menos 16,5,
+
+28
+00:02:14.676 --> 00:02:19.504
+menos 6,6 e menos 0,92
+e os pontos de saída do
+
+29
+00:02:19.504 --> 00:02:22.875
+eixo real são menos 0,92 e menos 16,5.
+
+30
+00:02:22.875 --> 00:02:27.760
+E podemos finalizar o esboço do
+lugar geométrico das raízes.
+
+31
+00:02:27.760 --> 00:02:34.433
+Note que para esboçar o LGR na verdade não
+precisaríamos do ponto exato que os ramos
+
+32
+00:02:34.433 --> 00:02:39.330
+cruzam o eixo imaginário, e nem do ponto
+exato onde os ramos saem do eixo real.
+
+33
+00:02:39.330 --> 00:02:43.995
+Sabendo que os ramos começam nos polos e
+terminam nos zeros ou seguem direção às
+
+34
+00:02:43.995 --> 00:02:48.660
+assíntotas, já temos uma boa
+ideia de como o LGR deve ser.
+
+35
+00:02:48.660 --> 00:02:53.835
+Vamos tentar isso nosso próximo exemplo,
+se você precisar desenhar o LGR
+
+36
+00:02:53.835 --> 00:02:59.010
+com mais precisão ou estiver dúvida
+sobre por onde os ramos devem passar,
+
+37
+00:02:59.010 --> 00:03:02.427
+você pode calcular os pontos exatos.
+
+38
+00:03:02.427 --> 00:03:07.924
+Vamos esboçar rapidamente o LGR de
+G de s igual a 80 s mais 5 sobre s,
+
+39
+00:03:07.924 --> 00:03:10.480
+s mais 2, s mais 10, s mais 20.
+
+40
+00:03:10.480 --> 00:03:14.856
+São quatro ramos do LGR no eixo
+real os trechos entre 0 e menos 2,
+
+41
+00:03:14.856 --> 00:03:19.817
+entre menos 5 e menos 10 e à esquerda
+de menos 20 fazem parte do LGR.
+
+42
+00:03:19.817 --> 00:03:26.355
+Temos três assíntotas com 180° e mais
+ou menos 60° que se cruzam menos 9.
+
+43
+00:03:26.355 --> 00:03:31.099
+É fácil constatar que para finalizar
+o LGR basta traçarmos os ramos
+
+44
+00:03:31.099 --> 00:03:35.640
+saindo do eixo real e indo direção das
+assíntotas para o semiplano direito.
+
+45
+00:03:35.640 --> 00:03:39.410
+Vamos conferir nossos esboços
+com o auxílio do Matlab.
+
+46
+00:03:39.410 --> 00:03:44.340
+Execute o Matlab e na
+linha de comando digite:
+
+47
+00:03:44.340 --> 00:03:49.270
+G1 igual a zpk nada, 0, menos 2,
+menos 10, menos 20, 400, enter.
+
+48
+00:03:49.270 --> 00:03:51.271
+Rlocus G1 enter.
+
+49
+00:03:51.271 --> 00:03:57.445
+Note que o LGR traçado pelo Matlab
+corresponde ao nosso esboço,
+
+50
+00:03:57.445 --> 00:04:02.261
+digite agora g2 igual a zpk menos 5,
+0, menos 2, menos 10,
+
+51
+00:04:02.261 --> 00:04:07.440
+menos 20 80 enter, e rlocus G2 enter.
+
+52
+00:04:07.440 --> 00:04:10.796
+Note que os ramos que saem
+do eixo real vão primeiro
+
+53
+00:04:10.796 --> 00:04:14.400
+pouco para esquerda e depois
+para o semiplano direito.
+
+54
+00:04:14.400 --> 00:04:19.129
+Mesmo assim, nosso esboço está bem
+próximo do LGR traçado pelo Matlab,
+
+55
+00:04:19.129 --> 00:04:23.617
+e mesmo que tivéssemos calculado os pontos
+de cruzamento do eixo imaginário e o ponto
+
+56
+00:04:23.617 --> 00:04:28.010
+de saída do eixo real,
+não teríamos previsto esse comportamento.
+
+57
+00:04:28.010 --> 00:04:33.120
+Mude as posições dos polos e dos zero,
+esboce o LGR e confira com o Matlab.
+
+58
+00:04:33.120 --> 00:04:38.490
+Acrescente também mais zeros e polos e
+tenha esboço com funções de ordem maior.
+
+59
+00:04:38.490 --> 00:04:43.044
+Ou então apenas trace o LGR de
+outras funções no Matlab para
+
+60
+00:04:43.044 --> 00:04:47.030
+você ter uma ideia de como é o LGR
+dessas funções de transferência.
+
+61
+00:04:47.030 --> 00:04:51.444
+Agora você já é capaz de esboçar
+o LGR para sistemas de quarta
+
+62
+00:04:51.444 --> 00:04:56.141
+ordem sem e com os zeros e pode praticar
+com sistemas de ordem superior.
+
+63
+00:04:56.141 --> 00:04:59.418
+No próximo vídeo você verá
+a impossibilidade de atender
+
+64
+00:04:59.418 --> 00:05:03.070
+requisito de tempo de acomodação
+com o controle proporcional.

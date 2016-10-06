@@ -1,0 +1,238 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.841
+[MÚSICA] Fala,
+
+2
+00:00:05.841 --> 00:00:09.130
+pessoal.
+
+3
+00:00:09.130 --> 00:00:09.843
+Tudo bem?
+
+4
+00:00:09.843 --> 00:00:14.610
+Nesta aula, vamos aprender como
+adicionar propagandas em nosso app.
+
+5
+00:00:14.610 --> 00:00:20.845
+Essas propagandas são conhecidas com
+iAds e representam uma forma alternativa
+
+6
+00:00:20.845 --> 00:00:25.910
+de monitorização de seu app, caso você
+não queira cobrar por ele na App Store.
+
+7
+00:00:25.910 --> 00:00:30.224
+Antes de começarmos, é importante
+que você tenha aceitado os termos do
+
+8
+00:00:30.224 --> 00:00:34.200
+iAd App Network,
+conforme mostramos anteriormente.
+
+9
+00:00:34.200 --> 00:00:38.567
+Caso você ainda não tenha feito esta
+etapa, vá para iTunes Connect e clique em
+
+10
+00:00:38.567 --> 00:00:41.488
+contratos, impostos,
+informações bancárias.
+
+11
+00:00:41.488 --> 00:00:45.780
+Para aceitar o contrato, basta seguir
+os passos apresentados pelo site.
+
+12
+00:00:45.780 --> 00:00:48.665
+Voltando ao assunto de nossa aula,
+vamos, então,
+
+13
+00:00:48.665 --> 00:00:50.960
+implementar iAd em nosso aplicativo.
+
+14
+00:00:50.960 --> 00:00:53.961
+Para isso,
+vamos utilizar o nosso projeto no Xcode.
+
+15
+00:00:53.961 --> 00:00:57.545
+Você pode usar o seu próprio
+aplicativo para aplicar o iAd,
+
+16
+00:00:57.545 --> 00:01:01.140
+mas eu recomendo primeiro
+testar em aplicativo à parte.
+
+17
+00:01:01.140 --> 00:01:05.615
+Para começar, precisamos adicionar
+o Framework iAds em nosso projeto.
+
+18
+00:01:05.615 --> 00:01:08.302
+Para isso, clique no ícone de seu projeto.
+
+19
+00:01:08.302 --> 00:01:09.616
+Na tela que se abriu,
+
+20
+00:01:09.616 --> 00:01:14.150
+role pouco para baixo até encontrar
+Linked Frameworks and Libraries.
+
+21
+00:01:14.150 --> 00:01:18.150
+Clique no sinal de mais para
+adicionar uma nova Framework,
+
+22
+00:01:18.150 --> 00:01:21.840
+procure por iAd,
+selecione o Framework e clique Add.
+
+23
+00:01:21.840 --> 00:01:26.280
+Agora, precisamos importar esse Framework
+para a view em que vamos utilizá-lo.
+
+24
+00:01:26.280 --> 00:01:30.330
+Para isso, clique em sua
+viewController e importe o iAd.
+
+25
+00:01:30.330 --> 00:01:37.672
+[SEM_ÁUDIO] Vamos aproveitar
+
+26
+00:01:37.672 --> 00:01:42.620
+também para dizer à nossa view que ela
+pode mostrar as propagandas do iAd.
+
+27
+00:01:42.620 --> 00:01:48.390
+Pronto.
+
+28
+00:01:48.390 --> 00:01:49.850
+Se você rodar o seu app,
+
+29
+00:01:49.850 --> 00:01:54.160
+você verá que já aparece uma propaganda
+na parte inferior de sua tela.
+
+30
+00:01:54.160 --> 00:01:57.950
+Pode levar certo tempo até que
+a propaganda seja carregada.
+
+31
+00:01:57.950 --> 00:02:02.315
+Isso depende de sua conexão e
+também do servidor da Apple.
+
+32
+00:02:02.315 --> 00:02:03.970
+Depois que a propaganda aparecer,
+
+33
+00:02:03.970 --> 00:02:06.680
+clique nela para ver como ela
+vai se comportar em sua tela.
+
+34
+00:02:06.680 --> 00:02:10.460
+Como você pode ver,
+a propaganda toma a tela toda.
+
+35
+00:02:10.460 --> 00:02:16.060
+Dependendo da proposta de seu aplicativo,
+isto pode ser problema.
+
+36
+00:02:16.060 --> 00:02:22.580
+Por exemplo, caso o usuário esteja vendo
+vídeo, no momento em que ele clica no iAd,
+
+37
+00:02:22.580 --> 00:02:26.605
+talvez seja interessante você
+dizer para seu app pausar o vídeo.
+
+38
+00:02:26.605 --> 00:02:32.314
+Para isso, basta que você use as funções:
+View will appear e View will disappear.
+
+39
+00:02:32.314 --> 00:02:37.201
+A View will disappear é chamada quando
+o usuário clica na propaganda e
+
+40
+00:02:37.201 --> 00:02:40.770
+a View will appear,
+quando a propaganda é fechada.
+
+41
+00:02:40.770 --> 00:02:43.206
+Para que você entenda
+melhor como funcionam,
+
+42
+00:02:43.206 --> 00:02:46.960
+vamos pedir para que estas funções
+nos mostrem quando forem chamadas.
+
+43
+00:02:46.960 --> 00:02:50.970
+Caso você tenha que fazer algum ajuste,
+poderá usar estas funções.
+
+44
+00:02:50.970 --> 00:02:55.202
+Existem ainda outros modos de
+apresentar iAd em seu aplicativo,
+
+45
+00:02:55.202 --> 00:02:58.630
+como na forma de retângulo
+ou na transição de telas.
+
+46
+00:02:58.630 --> 00:03:00.992
+Caso você queira saber
+mais sobre esses iAds,
+
+47
+00:03:00.992 --> 00:03:03.425
+não deixe de conferir
+a documentação da Apple.
+
+48
+00:03:03.425 --> 00:03:05.441
+Espero que tenham gostado.
+
+49
+00:03:05.441 --> 00:03:07.625
+Nos vemos nas próximas aulas.
+
+50
+00:03:07.625 --> 00:03:08.220
+Até lá.

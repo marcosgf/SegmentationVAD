@@ -1,0 +1,1139 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.435
+[MÚSICA] [MÚSICA] Olá,
+
+2
+00:00:08.435 --> 00:00:10.910
+bem vindo ao curso sobre TDD.
+
+3
+00:00:10.910 --> 00:00:13.090
+Eu sou Clovis Fernandes.
+
+4
+00:00:13.090 --> 00:00:17.860
+E hoje iremos mostrar uma forma,
+
+5
+00:00:17.860 --> 00:00:23.192
+exemplo de definição de casos de teste,
+de uma forma mais prática,
+
+6
+00:00:23.192 --> 00:00:27.726
+que vai ser cima do SAB,
+o sistema de automação de biblioteca
+
+7
+00:00:27.726 --> 00:00:32.240
+que nós mostramos uma modelagem CRC,
+no curso anterior.
+
+8
+00:00:32.240 --> 00:00:37.367
+Então, a ideia aqui então,
+é definir os casos testes com
+
+9
+00:00:37.367 --> 00:00:42.750
+base nas responsabilidades que
+nós já identificámos no SAB.
+
+10
+00:00:42.750 --> 00:00:49.163
+Essa é a ideia, nós vamos exemplificar
+usando uma responsabilidade
+
+11
+00:00:49.163 --> 00:00:53.753
+da classe biblioteca,
+que é o Empresta livro,
+
+12
+00:00:53.753 --> 00:00:58.888
+então, obviamente,
+vocês estão vendo que a classe biblioteca,
+
+13
+00:00:58.888 --> 00:01:04.135
+tem várias responsabilidades, nós podemos
+trabalhar até mais sobre esse material,
+
+14
+00:01:04.135 --> 00:01:08.830
+então, vamos trabalhar agora
+aqui no empresta livro.
+
+15
+00:01:08.830 --> 00:01:13.940
+Porque ele é vamos dizer assim ele é
+fundamental para o caso da biblioteca que
+
+16
+00:01:13.940 --> 00:01:19.754
+é o ato de você emprestar, o outro seria
+o devolver, são as duas mais importantes.
+
+17
+00:01:19.754 --> 00:01:23.084
+Então o empresta livro é
+o que nós vamos olhar.
+
+18
+00:01:23.084 --> 00:01:27.844
+Ele é uma responsabilidade,
+eu vou olhar isso como se fosse requisito,
+
+19
+00:01:27.844 --> 00:01:32.542
+então se eu estivesse listando os meus
+requisitos eu ia chamar de requisito 1, 2,
+
+20
+00:01:32.542 --> 00:01:37.950
+3 assim os que eu acho mais importantes
+para começar a trabalhar e o requisito
+
+21
+00:01:37.950 --> 00:01:45.739
+empresta livro, ele para mim ele é o
+requisito primeiro para fazer, está certo?
+
+22
+00:01:45.739 --> 00:01:50.031
+Mas a gente fica livre, cada fica
+livre de escolher qual que seria o
+
+23
+00:01:50.031 --> 00:01:52.420
+requisito importante para aquele momento.
+
+24
+00:01:52.420 --> 00:01:56.380
+Nesse momento para mim,
+é o requisito 1, é o empresta livro.
+
+25
+00:01:56.380 --> 00:02:02.220
+Eu sei que ele é da classe biblioteca
+e ele foi, vamos dizer assim,
+
+26
+00:02:02.220 --> 00:02:07.208
+incorporado num método chamado
+empresta livro que é bem
+
+27
+00:02:07.208 --> 00:02:11.330
+próximo do nome da responsabilidade,
+não é, está certo?
+
+28
+00:02:11.330 --> 00:02:16.410
+E com dois parâmetros,
+o parâmetro livro e o parâmetro usuário,
+
+29
+00:02:16.410 --> 00:02:22.300
+ou seja eu empresto o livro para usuário,
+é isso que a gente está pensando fazer.
+
+30
+00:02:22.300 --> 00:02:27.500
+Obviamente, nós vamos definir aqui,
+exemplificar a definição
+
+31
+00:02:27.500 --> 00:02:32.219
+de casos testes com base
+nas responsabilidades.
+
+32
+00:02:32.219 --> 00:02:37.628
+Nós vamos então seguir aquele padrão que
+já foi mostrado anteriormente material
+
+33
+00:02:37.628 --> 00:02:42.647
+de leitura, que nós mostramos como se
+
+34
+00:02:42.647 --> 00:02:49.528
+define os casos testes quando
+você está querendo transformar
+
+35
+00:02:49.528 --> 00:02:54.550
+ele código do JUnit para ser testado,
+não é, está certo?
+
+36
+00:02:54.550 --> 00:03:01.798
+Então você usa duas características,
+uma é a do caminho feliz e o outro é o,
+
+37
+00:03:01.798 --> 00:03:05.610
+caminho feliz onde todos
+os dados de entrada,
+
+38
+00:03:05.610 --> 00:03:10.028
+ou que são considerados
+apropriados para aquele contexto,
+
+39
+00:03:10.028 --> 00:03:15.672
+são válidos e o caminho que
+a gente chama de negative testing,
+
+40
+00:03:15.672 --> 00:03:20.641
+ou caminho alternativo,
+que alguns desses dados de
+
+41
+00:03:20.641 --> 00:03:25.360
+entrada ou de contexto são inválidos,
+está certo?
+
+42
+00:03:25.360 --> 00:03:28.480
+No caso aqui eu tenho o ct1.
+
+43
+00:03:28.480 --> 00:03:33.580
+O ct1, nesse caso do caminho feliz,
+o livro e o usuário são
+
+44
+00:03:33.580 --> 00:03:40.299
+válidos o ct1 eu tenho: empresto
+o livro ao usuário, está certo?
+
+45
+00:03:40.299 --> 00:03:44.508
+Que o livro, ai,
+
+46
+00:03:44.508 --> 00:03:48.660
+os dados de entrada são livro válido,
+usuário válido.
+
+47
+00:03:48.660 --> 00:03:53.855
+Então, o meu caso teste, sempre quando eu
+coloco entre colchetes é o meu caso teste,
+
+48
+00:03:53.855 --> 00:03:58.535
+ou seja, eu estou derivando desse, do ct1,
+
+49
+00:03:58.535 --> 00:04:02.044
+que é empresta livro ao usuário,
+
+50
+00:04:02.044 --> 00:04:07.039
+que o livro e o usuário são válidos,
+eu vou criar caso teste.
+
+51
+00:04:07.039 --> 00:04:11.905
+Então a entrada é livro e
+usuário válido e eu espero
+
+52
+00:04:11.905 --> 00:04:15.968
+que ao emprestar o livro,
+no nosso sistema,
+
+53
+00:04:15.968 --> 00:04:20.840
+aquele livro ele se torna indisponível,
+ele pode ter várias cópias,
+
+54
+00:04:20.840 --> 00:04:25.776
+mas aquela cópia se torna indisponível
+para ser emprestada para outros usuários.
+
+55
+00:04:25.776 --> 00:04:32.029
+Então, nessa hora o livro eu espero
+que ele se torne indisponível.
+
+56
+00:04:32.029 --> 00:04:37.130
+Quando eu fizer o código real,
+não é, está certo?
+
+57
+00:04:37.130 --> 00:04:41.505
+O livro tem que se tornar realmente
+indisponível, ou seja, o que eu esperava
+
+58
+00:04:41.505 --> 00:04:46.316
+que é livro indisponível e o real que
+aconteceu do livro ser indisponível mesmo.
+
+59
+00:04:46.316 --> 00:04:47.934
+Ok, eles coincidiram?
+
+60
+00:04:47.934 --> 00:04:53.379
+Beleza, então o meu programa
+está funcionando, foi sucesso.
+
+61
+00:04:53.379 --> 00:04:57.880
+Se o livro o resultado
+real foi que o livro
+
+62
+00:04:57.880 --> 00:05:02.725
+continua ainda por exemplo,
+disponível, então ocorreu erro.
+
+63
+00:05:02.725 --> 00:05:04.714
+O que é que eu tenho que fazer?
+
+64
+00:05:04.714 --> 00:05:10.993
+Debugar o meu programa e escrever código
+que faça ele funcionar, ser bem sucedido.
+
+65
+00:05:10.993 --> 00:05:13.580
+Então esse é o caso de teste,
+
+66
+00:05:13.580 --> 00:05:17.753
+quando eu empresto livro ao
+usuário que os 2 são válidos.
+
+67
+00:05:17.753 --> 00:05:20.370
+O ct2, não é, que é o caso de teste 2,
+
+68
+00:05:20.370 --> 00:05:24.043
+eu empresto livro ao usuário
+com nenhum livro emprestado,
+
+69
+00:05:24.043 --> 00:05:28.080
+ou seja ele não tinha emprestado
+nenhum livro da biblioteca antes.
+
+70
+00:05:28.080 --> 00:05:32.480
+Ou seja, o tamanho da lista
+de livros dele antes era 0.
+
+71
+00:05:32.480 --> 00:05:36.110
+Ao emprestar esse livro,
+a lista dele passa a ser 1,
+
+72
+00:05:36.110 --> 00:05:42.026
+então o meu caso teste aí é simplesmente,
+
+73
+00:05:42.026 --> 00:05:47.060
+verificar que dado que livro e
+usuário válidos que o usuário
+
+74
+00:05:47.060 --> 00:05:53.951
+ele não tinha nenhum livro emprestado,
+então, a lista de livros dele vai ser,
+
+75
+00:05:53.951 --> 00:05:58.460
+esperada, é 1,
+o resultado real tem que ser 1 também.
+
+76
+00:05:58.460 --> 00:06:03.350
+Se não bater, vai dar erro e eu
+vou precisar debugar o meu código
+
+77
+00:06:03.350 --> 00:06:08.155
+correspondente ou de produção
+correspondente a esse teste.
+
+78
+00:06:08.155 --> 00:06:13.858
+Eu vou exemplificar aqui o código, vamos
+voltar lá para vocês verem, o ct1, não é,
+
+79
+00:06:13.858 --> 00:06:18.869
+é o empresta o livro ao usuário
+então percebam que esse caso teste,
+
+80
+00:06:18.869 --> 00:06:23.764
+quando vocês vêm isso no fluxo no ciclo do
+
+81
+00:06:23.764 --> 00:06:28.750
+TDD está lá sim: "Escreva
+o teste" "Escreva o teste
+
+82
+00:06:28.750 --> 00:06:32.900
+de modo que ele falhe",
+então agora nós vamos escrever o teste.
+
+83
+00:06:32.900 --> 00:06:38.901
+Ele vai falhar porque nós não vamos
+ter provavelmente nós não, ele vai
+
+84
+00:06:38.901 --> 00:06:42.230
+falha porque nós não vamos ter o código
+de produção que vai fazer ele funcionar.
+
+85
+00:06:42.230 --> 00:06:46.344
+Então, vejam esse caso teste, de teste,
+
+86
+00:06:46.344 --> 00:06:54.694
+como é que eu transformo ele num
+teste realmente quando você faz,
+
+87
+00:06:54.694 --> 00:06:59.112
+encontra lá no ciclo do TDD,
+escreva o teste, está certo?
+
+88
+00:06:59.112 --> 00:07:00.870
+Ora vejam como é que fica.
+
+89
+00:07:00.870 --> 00:07:05.520
+Nós começamos,
+eu estou usando aqui o padrão AAA,
+
+90
+00:07:05.520 --> 00:07:10.410
+que é estruturar o meu caso teste
+
+91
+00:07:10.410 --> 00:07:16.500
+usando o arrange, o act e o assert.
+
+92
+00:07:16.500 --> 00:07:21.450
+O assert é o caso teste que
+eu estou querendo provar,
+
+93
+00:07:21.450 --> 00:07:24.193
+ele é o caso teste que eu
+estou querendo provar.
+
+94
+00:07:24.193 --> 00:07:28.234
+Então eu começo sempre pelo assert
+porque o meu caso teste está lá.
+
+95
+00:07:28.234 --> 00:07:31.188
+Eu estou querendo mostrar
+nesse caso do ct1,
+
+96
+00:07:31.188 --> 00:07:36.434
+que ao emprestar livro para alguém,
+esse livro se torna indisponível.
+
+97
+00:07:36.434 --> 00:07:40.038
+Então, o que eu escrevi
+ali no meu assert é isso,
+
+98
+00:07:40.038 --> 00:07:43.290
+eu estou testando se isso ocorreu mesmo,
+
+99
+00:07:43.290 --> 00:07:48.506
+porque no nosso SAB, na biblioteca,
+
+100
+00:07:48.506 --> 00:07:53.740
+quando eu eu faço o empréstimo de livro,
+
+101
+00:07:53.740 --> 00:08:00.480
+o livro fica guardando para qual
+usuário que foi, ocorreu o empréstimo.
+
+102
+00:08:00.480 --> 00:08:07.336
+Então eu coloco lá, se o usuário é
+o 1 e eu estou usando o livro 2,
+
+103
+00:08:07.336 --> 00:08:11.901
+ao obter qualquer usuário do livro 2,
+tem que bater,
+
+104
+00:08:11.901 --> 00:08:17.017
+tem que ser true, porque eu estou
+pondo assertEquals, está certo?
+
+105
+00:08:17.017 --> 00:08:19.640
+Aí eu vou construir agora a parte do act.
+
+106
+00:08:19.640 --> 00:08:23.220
+Eu parto sempre do assert,
+agora vou construir a parte do act.
+
+107
+00:08:23.220 --> 00:08:27.535
+Bom, eu quero que isso seja verdadeiro.
+
+108
+00:08:27.535 --> 00:08:30.559
+Para ser verdadeiro,
+eu tenho que fazer o quê?
+
+109
+00:08:30.559 --> 00:08:33.228
+Emprestar o livro 2 para o usuário 1.
+
+110
+00:08:33.228 --> 00:08:36.940
+Veja como é simples de fazer,
+eu vou fazendo isso.
+
+111
+00:08:36.940 --> 00:08:41.420
+Bom aí tem, essa é a parte do act,
+agora tem a parte do arrange.
+
+112
+00:08:41.420 --> 00:08:45.852
+A parte do arrange,
+é tudo o que eu preciso
+
+113
+00:08:45.852 --> 00:08:50.504
+fazer para criar objetos
+e outras coisas mais,
+
+114
+00:08:50.504 --> 00:08:54.530
+para que eu possa fazer o
+meu act e o meu assert.
+
+115
+00:08:54.530 --> 00:09:01.438
+No caso aqui, está tudo feito no setup
+mesmo e o que é eu criei no setup?
+
+116
+00:09:01.438 --> 00:09:03.794
+Usuário 1 e livro 2.
+
+117
+00:09:03.794 --> 00:09:08.877
+Só isso que eu fiz, que eu precisei aqui,
+logo lógico no meu setup lá,
+
+118
+00:09:08.877 --> 00:09:12.850
+eu eu criei mais outras coisas para
+o meu exemplo ficar mais real,
+
+119
+00:09:12.850 --> 00:09:16.445
+mas aqui eu só preciso
+disso e isso ficou lá.
+
+120
+00:09:16.445 --> 00:09:21.022
+Às vezes o arrange fica com
+alguma coisa lá no setup e
+
+121
+00:09:21.022 --> 00:09:25.608
+alguma coisa aqui no meu teste
+que eu escrevi por JUnit.
+
+122
+00:09:25.608 --> 00:09:29.827
+Outro caso teste para
+a responsabilidade empresta livro.
+
+123
+00:09:29.827 --> 00:09:33.572
+que eu estou considerando o caminho feliz
+ainda porque o livro e o usuário são
+
+124
+00:09:33.572 --> 00:09:34.099
+válidos.
+
+125
+00:09:34.099 --> 00:09:35.502
+É o ct3, o caso de teste 3,
+
+126
+00:09:35.502 --> 00:09:38.988
+eu empresto 3 livros ao usuário
+com nenhum livro emprestado.
+
+127
+00:09:38.988 --> 00:09:39.679
+Porquê 3?
+
+128
+00:09:39.679 --> 00:09:41.778
+Não, podia ser 2, podia ser 5.
+
+129
+00:09:41.778 --> 00:09:46.327
+Eu estou emprestando vez,
+quando eu emprestei 1 livro e ele não
+
+130
+00:09:46.327 --> 00:09:50.952
+tinha nenhum livro emprestado,
+ele passou a ter 1 livro.
+
+131
+00:09:50.952 --> 00:09:53.846
+Agora, eu quero ver se emprestando 2,
+
+132
+00:09:53.846 --> 00:09:58.830
+emprestando 3 ele vai ter esse total
+de livros que eu estou emprestando.
+
+133
+00:09:58.830 --> 00:10:03.712
+Então, o tamanho da lista de livros
+de usuários após esse empréstimo de 3
+
+134
+00:10:03.712 --> 00:10:06.560
+livros para esse usuário, tem que ser 3.
+
+135
+00:10:06.560 --> 00:10:11.685
+Então, eu tenho caso teste que está
+bem simples aí, que é livro, usuário,
+
+136
+00:10:11.685 --> 00:10:16.810
+espero que a lista de
+livros do usuário seja 3
+
+137
+00:10:16.810 --> 00:10:22.589
+e o real, quando eu rodar o meu programa,
+
+138
+00:10:22.589 --> 00:10:26.980
+a lista, quando o empréstimo for
+realizado, tem que ser 3.
+
+139
+00:10:26.980 --> 00:10:28.345
+Está certo?
+
+140
+00:10:28.345 --> 00:10:36.548
+Agora o ct4, então nós vamos lá para o
+caminho alternativo, o teste negativo.
+
+141
+00:10:36.548 --> 00:10:41.165
+Agora a gente vai olhar que
+o livro pode ser válido ou
+
+142
+00:10:41.165 --> 00:10:45.911
+inválido e o usuário pode ser válido ou
+inválido ou os 2 podem ser inválidos.
+
+143
+00:10:45.911 --> 00:10:47.990
+Então vamos começar pelo caso teste ct4.
+
+144
+00:10:47.990 --> 00:10:53.300
+Eu empresto livro válido,
+já emprestado ao usuário válido,
+
+145
+00:10:53.300 --> 00:10:57.695
+ou seja, o livro,
+ele já foi emprestado para alguém.
+
+146
+00:10:57.695 --> 00:11:02.512
+Significa que ele está indisponível
+para novo empréstimo para outro usuário,
+
+147
+00:11:02.512 --> 00:11:03.710
+aquele dado livro.
+
+148
+00:11:03.710 --> 00:11:04.552
+Está certo?
+
+149
+00:11:04.552 --> 00:11:07.390
+Então meu caso teste, se vocês olharem aí,
+
+150
+00:11:07.390 --> 00:11:11.714
+está escrito lá,
+a entrada: livro já emprestado e usuário.
+
+151
+00:11:11.714 --> 00:11:16.275
+Se o livro está emprestado,
+eu espero que seja lançada uma exceção,
+
+152
+00:11:16.275 --> 00:11:19.206
+aí eu estou colocando a exceção com nome,
+
+153
+00:11:19.206 --> 00:11:23.376
+pode ser o nome mais apropriado
+para alguém que esteja escrevendo,
+
+154
+00:11:23.376 --> 00:11:27.640
+eu achei a exceção livro indisponível
+para empréstimo, está certo?
+
+155
+00:11:27.640 --> 00:11:29.020
+isso é o que eu espero.
+
+156
+00:11:29.020 --> 00:11:30.838
+E quando eu rodar o programa,
+
+157
+00:11:30.838 --> 00:11:35.950
+tem que sair uma exceção do tipo
+livro indisponível para empréstimo.
+
+158
+00:11:35.950 --> 00:11:38.247
+Vai bater com o que eu espero,
+se não bater,
+
+159
+00:11:38.247 --> 00:11:41.120
+significa que no meu código
+está alguma coisa errada.
+
+160
+00:11:41.120 --> 00:11:47.171
+Novamente, esse ct4 que eu vou mostrar
+daqui a pouco, como é que eu construo,
+
+161
+00:11:47.171 --> 00:11:52.737
+como é que eu escrevo o código
+de teste ou o teste, está certo?
+
+162
+00:11:52.737 --> 00:11:55.710
+Como é que eu escrevo
+esse código de teste?
+
+163
+00:11:55.710 --> 00:11:57.711
+Vai ser a partir desse caso teste,
+
+164
+00:11:57.711 --> 00:12:02.712
+esse que está entre colchetes é caso
+teste, caso de teste, está certo?
+
+165
+00:12:02.712 --> 00:12:06.880
+O ct5 eu empresto livro
+inválido ao usuário válido.
+
+166
+00:12:06.880 --> 00:12:11.248
+Então eu estou lá,
+o que é que é livro inválido?
+
+167
+00:12:11.248 --> 00:12:12.710
+É livro null.
+
+168
+00:12:12.710 --> 00:12:13.884
+Está certo?
+
+169
+00:12:13.884 --> 00:12:18.846
+Então o usuário é válido, aí eu vou lançar
+uma exceção e aí você pode dar o nome
+
+170
+00:12:18.846 --> 00:12:21.340
+mais apropriado que você queira,
+está certo?
+
+171
+00:12:21.340 --> 00:12:26.850
+Então poderia ser exceção do livro
+inválido, por exemplo, né, está certo?
+
+172
+00:12:26.850 --> 00:12:32.970
+Agora o ct4 aqui, eu vou mostrar, eu vou
+voltar para vocês darem uma olhadinha,
+
+173
+00:12:32.970 --> 00:12:39.433
+que eu estou trabalhando código
+apropriado, escrevendo código apropriado.
+
+174
+00:12:39.433 --> 00:12:41.570
+Onde é que a gente começa a escrever?
+
+175
+00:12:41.570 --> 00:12:44.291
+Através do Assert, né, então o que é isso?
+
+176
+00:12:44.291 --> 00:12:48.142
+Empresta o livro válido já
+emprestado ao usuário válido.
+
+177
+00:12:48.142 --> 00:12:50.972
+O que é que vai acontecer
+no meu caso teste?
+
+178
+00:12:50.972 --> 00:12:52.532
+Vai voltar uma exceção.
+
+179
+00:12:52.532 --> 00:12:56.407
+Como é que a gente faz isso no JUnit?
+
+180
+00:12:56.407 --> 00:13:01.581
+A gente coloca lá cima no expected,
+
+181
+00:13:01.581 --> 00:13:05.379
+qual é a exceção que eu
+estou esperando está certo?
+
+182
+00:13:05.379 --> 00:13:09.420
+E a exceção que eu estou esperando é
+livro indisponível para empréstimo,
+
+183
+00:13:09.420 --> 00:13:14.440
+essa é a exceção que eu estou
+esperando aí nesse caso.
+
+184
+00:13:14.440 --> 00:13:20.150
+Então, o assert ele é implícito,
+eu não preciso por nada.
+
+185
+00:13:20.150 --> 00:13:23.890
+Quando é exceção ela aparece lá cima.
+
+186
+00:13:23.890 --> 00:13:28.409
+Se por acaso, o meu código falhar,
+o meu código não for
+
+187
+00:13:28.409 --> 00:13:33.500
+apropriado, se ele lançar a exceção certa,
+
+188
+00:13:33.500 --> 00:13:40.488
+esse código que eu pus aí ele
+vai capturar e vai voltar verde.
+
+189
+00:13:40.488 --> 00:13:44.965
+Se ele lançar se perder e lançar
+alguma coisa que não seja
+
+190
+00:13:44.965 --> 00:13:49.475
+a exceção que eu estou esperando,
+vai aparecer barra vermelha, está certo?
+
+191
+00:13:49.475 --> 00:13:51.158
+Vai aparecer barra vermelha.
+
+192
+00:13:51.158 --> 00:13:54.296
+Bom, com base nisso, eu trabalho no Act.
+
+193
+00:13:54.296 --> 00:13:56.286
+O que é que eu quero fazer?
+
+194
+00:13:56.286 --> 00:13:58.470
+Eu quero emprestar o livro.
+
+195
+00:13:58.470 --> 00:14:01.015
+O que que eu estou emprestando o livro?
+
+196
+00:14:01.015 --> 00:14:05.794
+Eu estou emprestando livro que já
+foi emprestado para outro usuário,
+
+197
+00:14:05.794 --> 00:14:09.440
+então eu simplesmente
+ponho empréstimo do livro.
+
+198
+00:14:09.440 --> 00:14:12.670
+Bom, se eu quero que
+ele seja já emprestado,
+
+199
+00:14:12.670 --> 00:14:15.757
+já na parte do arrange o que
+é que eu tenho que fazer?
+
+200
+00:14:15.757 --> 00:14:19.820
+É emprestar ele de novo, tá certo,
+ou seja ele vai ser emprestado primeiro,
+
+201
+00:14:19.820 --> 00:14:21.070
+novamente ali.
+
+202
+00:14:21.070 --> 00:14:26.848
+Por isso que eu estou repetindo
+biblioteca empresta livro 2 ao usuário 1,
+
+203
+00:14:26.848 --> 00:14:32.851
+porque eu tinha colocado emprestar o
+livro 2 para o usuário 3, no caso do Act.
+
+204
+00:14:32.851 --> 00:14:34.827
+Então, o que eu estou fazendo?
+
+205
+00:14:34.827 --> 00:14:39.056
+Eu estou emprestando livro já emprestado,
+ele já foi emprestado,
+
+206
+00:14:39.056 --> 00:14:40.410
+o 2 para o usuário 1.
+
+207
+00:14:40.410 --> 00:14:44.574
+Agora eu estou emprestando
+para o usuário 3 de novo?
+
+208
+00:14:44.574 --> 00:14:49.032
+Não está certo isso,
+vai ter que aparecer alguma exceção.
+
+209
+00:14:49.032 --> 00:14:51.615
+Então, é assim que a gente constrói.
+
+210
+00:14:51.615 --> 00:14:55.922
+Nesse caso é exemplo que parte
+do Arrange está no set up.
+
+211
+00:14:55.922 --> 00:14:58.560
+Então o que é que está lá no set up?
+
+212
+00:14:58.560 --> 00:15:02.840
+É o livro usuário 1, usuário 3 e livro 2.
+
+213
+00:15:02.840 --> 00:15:04.803
+Já está lá no set up.
+
+214
+00:15:04.803 --> 00:15:11.639
+E apenas aqui no código de teste,
+eu coloquei biblioteca empresta livro,
+
+215
+00:15:11.639 --> 00:15:16.254
+livro 2 usuário 1 está fazendo parte com
+
+216
+00:15:16.254 --> 00:15:20.940
+uma fixture no meu código de teste.
+
+217
+00:15:20.940 --> 00:15:24.953
+Aí continuando com o negative testing,
+a gente tem o ct6,
+
+218
+00:15:24.953 --> 00:15:31.180
+que eu empresto livro
+válido a usuário inválido.
+
+219
+00:15:31.180 --> 00:15:32.277
+Está certo?
+
+220
+00:15:32.277 --> 00:15:39.042
+Então no meu caso teste eu vou colocar
+lá livro, livro qualquer válido,
+
+221
+00:15:39.042 --> 00:15:44.059
+o usuário eu coloco, ele é inválido,
+então eu coloco null, está certo?
+
+222
+00:15:44.059 --> 00:15:49.990
+Eu coloco null e aí ele vai me voltar uma
+exceção, porque o usuário é inválido.
+
+223
+00:15:49.990 --> 00:15:54.126
+Aí seria por exemplo, tipo de exceção que
+eu espero, que seria usuário inválido,
+
+224
+00:15:54.126 --> 00:15:54.820
+por exemplo.
+
+225
+00:15:54.820 --> 00:15:59.103
+E eu espero também que quando o código for
+rodado real,
+
+226
+00:15:59.103 --> 00:16:03.528
+o código de produção,
+ele vai corresponder à essa exceção,
+
+227
+00:16:03.528 --> 00:16:09.000
+se não corresponder ele tem que ser
+debugado até que faça isso funcionar.
+
+228
+00:16:09.000 --> 00:16:13.018
+Já na ct7 eu empresto livro
+inválido a usuário inválido.
+
+229
+00:16:13.018 --> 00:16:14.910
+Então os 2 são inválidos.
+
+230
+00:16:14.910 --> 00:16:17.775
+Então os 2, livro é null, usuário é null,
+
+231
+00:16:17.775 --> 00:16:22.228
+volta uma exceção que essa
+exceção poderia ser por exemplo,
+
+232
+00:16:22.228 --> 00:16:26.662
+livro inválido e usuário inválido,
+por exemplo.
+
+233
+00:16:26.662 --> 00:16:32.357
+O nosso objetivo aqui então
+era exemplificar a definição
+
+234
+00:16:32.357 --> 00:16:37.788
+de casos testes, uma coisa mais
+concreta que vocês já tinham uma noção,
+
+235
+00:16:37.788 --> 00:16:42.740
+que era no caso cima do SAB,
+o sistema de automação de bibliotecas.
+
+236
+00:16:42.740 --> 00:16:48.538
+E nós mostramos então para vocês que
+através da responsabilidade empresta
+
+237
+00:16:48.538 --> 00:16:54.456
+livro, nós conseguimos definir alguns
+casos de testes e eu exemplifiquei
+
+238
+00:16:54.456 --> 00:17:01.445
+também como é que eu escreveria
+caso de teste do caminho feliz e
+
+239
+00:17:01.445 --> 00:17:06.322
+caso de teste do negative
+testing ou caminho alternativo,
+
+240
+00:17:06.322 --> 00:17:11.821
+como é que eu escreveria isso no JUnit,
+está certo?
+
+241
+00:17:11.821 --> 00:17:13.420
+Obrigado.
+
+242
+00:17:13.420 --> 00:17:18.210
+[MÚSICA]

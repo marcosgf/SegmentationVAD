@@ -1,0 +1,131 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.730
+[MÚSICA]
+
+2
+00:00:06.730 --> 00:00:12.600
+[MÚSICA]
+
+3
+00:00:12.600 --> 00:00:19.326
+[MÚSICA] Seja bem-vindo à
+
+4
+00:00:19.326 --> 00:00:25.000
+última semana do curso de Controle
+usando a Resposta Frequência.
+
+5
+00:00:25.000 --> 00:00:31.696
+Até aqui, você aprendeu que a resposta
+de sistemas LIT (lineares e invariantes
+
+6
+00:00:31.696 --> 00:00:36.976
+no tempo) para entrada senoidal de
+frequência ômega após decorrido
+
+7
+00:00:36.976 --> 00:00:42.060
+certo tempo é uma senoide com
+amplitude e fase dependentes do módulo
+
+8
+00:00:42.060 --> 00:00:49.130
+e da fase da função de transferência G de
+s do sistema, avaliada s igual a j ômega.
+
+9
+00:00:49.130 --> 00:00:54.060
+A determinação do módulo e fase
+de G de j ômega como função de
+
+10
+00:00:54.060 --> 00:00:57.910
+ômega é a chamada resposta
+frequência do sistema.
+
+11
+00:00:57.910 --> 00:01:03.830
+Ela pode ser representada pelo diagrama
+de Bode com gráfico de módulo versus
+
+12
+00:01:03.830 --> 00:01:09.090
+ômega e outra de fase versus ômega na
+forma polar ou na carta de Nichols Black.
+
+13
+00:01:09.090 --> 00:01:13.490
+A partir da resposta
+frequência de malha aberta,
+
+14
+00:01:13.490 --> 00:01:17.890
+é possível determinar propriedades da
+resposta frequência de malha fechada,
+
+15
+00:01:17.890 --> 00:01:21.407
+que estão ligadas com o
+comportamento no tempo.
+
+16
+00:01:21.407 --> 00:01:26.084
+O critério de Nyquist pode ser usado para
+determinar a estabilidade dos sistemas
+
+17
+00:01:26.084 --> 00:01:28.030
+a partir da resposta frequência.
+
+18
+00:01:28.030 --> 00:01:32.329
+Compensadores de avanço
+e de atraso podem ser
+
+19
+00:01:32.329 --> 00:01:36.109
+projetados usando a resposta
+frequência para atingir
+
+20
+00:01:36.109 --> 00:01:40.400
+requisitos sobre a saída no regime
+transitório ou estacionário.
+
+21
+00:01:40.400 --> 00:01:46.648
+Nesta última semana, você aprenderá
+como projetar controladores PD PI e PID,
+
+22
+00:01:46.648 --> 00:01:51.970
+que estão entre os mais usados no
+cotidiano do engenheiro de controle.
+
+23
+00:01:51.970 --> 00:01:56.765
+Você verá que esses controladores podem
+ser encarados como casos extremos
+
+24
+00:01:56.765 --> 00:02:01.560
+dos compensadores de avanço,
+atraso e avanço e atraso.
+
+25
+00:02:01.560 --> 00:02:06.453
+Assim, nessa semana você concluirá o
+estudo de controle usando a resposta
+
+26
+00:02:06.453 --> 00:02:10.482
+frequência, tendo aprendido o
+conteúdo básico necessário para
+
+27
+00:02:10.482 --> 00:02:13.170
+se habilitar a projeto de controle real.
