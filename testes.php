@@ -6,7 +6,7 @@
  * Time: 16:26
  */
 
-$item1 = file('tempo/1.txt');
+/*$item1 = file('tempo/1.txt');
 for($i=0;$i<2;$i++) {
     //echo $item1[$i];
     $tempo = explode("|||||", $item1[$i]);
@@ -37,4 +37,29 @@ for($i=0;$i<2;$i++) {
     $id2 = str_pad($i, 6, "0", STR_PAD_LEFT);
     echo $inicio."\n".$fim."\n".$id1."\n".$id2."\n";
     */
-}
+
+/*
+    $carac = array("(",")","'", ",");
+    $arquivos = scandir('tempos_VADT/',1);
+    for($i = 0 ; $i < sizeof($arquivos); $i++){
+        $line = file("tempos_VADT/$arquivos[$i]");
+        for($j = 0 ; $j < sizeof($line) ; $j++){
+            $newLine = str_replace($carac,"",$line[$j]);
+            if($newLine != "\n"){
+                file_put_contents("tempos_VAD/$arquivos[$i]",$newLine, FILE_APPEND);
+            }
+        }
+    }
+
+$arquivos = scandir('tempos_VADT/',1);
+for($i = 0 ; $i < sizeof($arquivos); $i++){
+    $line = file("tempos_VADT/$arquivos[$i]");
+    for($j = 0 ; $j < sizeof($line) ; $j++){
+        $nome1 = str_replace("A","",$arquivos[$i]);
+        $nome = explode(".",$nome1);
+        file_put_contents("tempos_VAD/A".(int)$nome[0].".txt",$line[$j], FILE_APPEND);
+    }
+}*/
+$times = "0.000 5.527";
+$end_ori = (explode(" ",$times))[1];
+echo $end_ori;
