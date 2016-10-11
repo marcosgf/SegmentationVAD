@@ -7,7 +7,7 @@
  */
 $limit_sec = 1;
 $arqs = scandir('tempos_VAD/',1);
-for($i = 600 ; $i < sizeof($arqs) ; $i++){
+for($i = 0 ; $i < sizeof($arqs) ; $i++){
     echo " Arquivo atual: $arqs[$i] \n";
 
     //vetores de tempos originais e legendas
@@ -33,7 +33,7 @@ for($i = 600 ; $i < sizeof($arqs) ; $i++){
         $t_beg = (explode(" ", $times_vad[$j]))[0];
         $t_end = (explode(" ", $times_vad[$j]))[1];
         $end_ori = (explode(" ",$times[$id]))[1];
-        //echo " t_beg = $t_beg ,  t_end = $t_end ,  end_ori = $end_ori \n";
+
         while($j < sizeof($times_vad) && $id < sizeof($times)){
             if(((float)$t_end <= (float)$end_ori && (float)$end_ori <= (float)$t_end+$limit_sec) ||
                 ((float)$t_end-$limit_sec <= (float)$end_ori && (float)$end_ori <= (float)$t_end)){
@@ -52,6 +52,9 @@ for($i = 600 ; $i < sizeof($arqs) ; $i++){
                     $t_end = (explode(" ", $times_vad[$j]))[1];
                     break;
                 }
+                if($t_end > $end_ori){
+                    $j--;
+                }
                 $t_end = (explode(" ", $times_vad[$j]))[1];
                 if((float)$end_ori >= (float)$t_end || (((float)$t_end <= (float)$end_ori && (float)$end_ori <= (float)$t_end+$limit_sec) ||
                         ((float)$t_end-$limit_sec <= (float)$end_ori && (float)$end_ori <= (float)$t_end))){
@@ -65,6 +68,7 @@ for($i = 600 ; $i < sizeof($arqs) ; $i++){
                     $legenda = $legenda.$legend[$id];
                     $end_ori = (explode(" ",$times[$id]))[1];
                 }
+                //echo " t_beg = $t_beg ,  t_end = $t_end ,  end_ori = $end_ori \n";
             }
         }
         //echo "6 ";
