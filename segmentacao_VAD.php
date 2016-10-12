@@ -7,9 +7,9 @@
  */
 $limit_sec = 1;
 $arqs = scandir('tempos_VAD/',1);
-for($i = 0 ; $i < sizeof($arqs); $i++){
+echo "sizeof:".sizeof($arqs);
+for($i = $argv[1] ; $i < $argv[1] + 1; $i++){
     echo " Arquivo atual: $arqs[$i] \n";
-
     //vetores de tempos originais e legendas
     $file = file("tempos/$arqs[$i]");
     $k = 0;
@@ -23,19 +23,23 @@ for($i = 0 ; $i < sizeof($arqs); $i++){
         $legend[$k] = $file[$l+1];
         $k++;
     }
-
     $times_vad = file("tempos_VAD/$arqs[$i]");
     $id = 0;
     $l = 0;
-    for($j = 0 ; $j < sizeof($times_vad) ; $j++){
-        $legenda = "";
+
+    for($t=0; $t<sizeof($times);$t++){
+        $vet_end[$t] = (explode(" ",$times[$t]))[1];
+    }
+
+    for($j = 0 ; $j < sizeof($times_vad) ; $j++ , $id++){
+        $legenda = null;
+        $leg_aux = null;
         //echo "1 ";
         $t_beg = (explode(" ", $times_vad[$j]))[0];
         $t_end = (explode(" ", $times_vad[$j]))[1];
-        $end_ori = (explode(" ",$times[$id]))[1];
-
-        while($j < sizeof($times_vad) && $id < sizeof($times)){
-            if(((float)$t_end <= (float)$end_ori && (float)$end_ori <= (float)$t_end+$limit_sec) ||
+        $end_ori = (float)$vet_end[$id];
+        while($j < sizeof($times_vad) ){
+            /*if(((float)$t_end <= (float)$end_ori && (float)$end_ori <= (float)$t_end+$limit_sec) ||
                 ((float)$t_end-$limit_sec <= (float)$end_ori && (float)$end_ori <= (float)$t_end)){
                 $leg_aux = $legenda;
                 //echo "2 ";
@@ -71,9 +75,53 @@ for($i = 0 ; $i < sizeof($arqs); $i++){
                     $legenda = $legenda.$legend[$id];
                     $end_ori = (explode(" ",$times[$id]))[1];
                 }
+            }*/
+            $bool = false;
+            if(((float)$t_end <= (float)$end_ori && (float)$end_ori <= (float)$t_end+$limit_sec) ||
+                ((float)$t_end-$limit_sec <= (float)$end_ori && (float)$end_ori <= (float)$t_end)){
+                $legenda = null;
+                $leg_aux = null;
+                $leg_aux = $legenda;
+                $legenda = str_replace("\n","",$leg_aux);
+                $legenda = $legend[$id];
+                break;
+            }
+            else{
+                $r = $id;
+                $legenda = null;
+                $leg_aux = null;
+                while($r<sizeof($times)){
+                    $aux_end_orig = $vet_end[$r];
+                    $leg_aux = $legenda;
+                    $legenda = str_replace("\n"," ",$leg_aux);
+                    $legenda = $legenda.$legend[$r];
+                    if(((float)$t_end <= (float)$aux_end_orig && (float)$aux_end_orig <= (float)$t_end+$limit_sec) ||
+                        ((float)$t_end-$limit_sec <= (float)$aux_end_orig && (float)$aux_end_orig <= (float)$t_end)){
+                        $bool = true;
+                        break;
+                    }
+                    $r++;
+                }
+                if($bool){
+                    $id = $r;
+                    $end_orig = $aux_end_orig;
+                    break;
+                }
+                else{
+                    if(($j+1) == sizeof($times_vad)){
+                        $t_end = (explode(" ", $times_vad[$j]))[1];
+                        break;
+                    }
+                    else{
+                        $legenda = "";
+                        $j++;
+                        $t_end = (explode(" ", $times_vad[$j]))[1];
+                    }
 
+                }
             }
         }
+
         //echo "6 ";
         $name = str_pad(str_replace("A","",(explode(".",$arqs[$i]))[0]),3,0,STR_PAD_LEFT);
         $id1 =  str_pad($l, 6, "0", STR_PAD_LEFT);
@@ -83,4 +131,6 @@ for($i = 0 ; $i < sizeof($arqs); $i++){
         file_put_contents("segments","A$name-$id1-$begin-$end $legenda", FILE_APPEND);
         $l++;
     }
+    file_put_contents("text","\n", FILE_APPEND);
+    file_put_contents("segments","\n", FILE_APPEND);
 }
