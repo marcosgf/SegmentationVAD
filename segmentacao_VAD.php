@@ -127,8 +127,8 @@ for($i = $argv[1] ; $i < $argv[1] + 1; $i++){
         $id1 =  str_pad($l, 6, "0", STR_PAD_LEFT);
         $begin = str_replace("\n","",str_pad((explode(".",$t_beg))[0].substr((explode(".",$t_beg))[1],0,-1), 6, "0",STR_PAD_LEFT));
         $end = str_replace("\n","",str_pad((explode(".",$t_end))[0].substr((explode(".",$t_end))[1],0,-2), 6, "0",STR_PAD_LEFT));
-        file_put_contents("text","A$name-$id1-$begin-$end ".substr($t_beg,0,-1)." ".substr($t_end,0,-2)."\n", FILE_APPEND);
-        file_put_contents("segments","A$name-$id1-$begin-$end $legenda", FILE_APPEND);
+        file_put_contents("segments","A$name-$id1-$begin-$end A$name ".substr($t_beg,0,-1)." ".substr($t_end,0,-2)."\n", FILE_APPEND);
+        file_put_contents("text","A$name-$id1-$begin-$end $legenda \n", FILE_APPEND);
         $l++;
     }
     file_put_contents("text","\n", FILE_APPEND);

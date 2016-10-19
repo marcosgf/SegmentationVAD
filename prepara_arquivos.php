@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
 function removeCaracteres($x) {
-    $remover = array("WEBVTT", ",","!", '"', "-", ":", ".", ">","?","_","(",")","III",";","{","}","'","ª","º","□","”","’","‘");
-
+    $remover = array("WEBVTT","!", '"', ":", ".", ">","?","_","(",")","III",";","{","}","'","ª","º","□","”","’","‘");
+    $removerE = array(", ",",\n");
     $trocaMIN = array(
         'à', 'á', 'ã', 'â',
         'ê', 'é',
@@ -21,7 +21,7 @@ function removeCaracteres($x) {
         'Ç',
         'É', 'Ê');
 
-    return $x=(strtoupper(str_replace($trocaMIN,$trocaMAI,(str_replace($remover,"",$x)))));
+    return $x=(strtoupper(str_replace($trocaMIN,$trocaMAI,(str_replace($remover,"",str_replace($removerE," ",$x))))));
 }
 for($id=1;$id<=621;$id++) {
     //Mudar o caminho de acordo com o arquivo srt ou vtt que for usar.
