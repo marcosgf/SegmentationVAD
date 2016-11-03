@@ -167,3 +167,33 @@ for($i = 0 ; $i < 1; $i++){
     }
 }
  */
+
+//TUDO MAIÚSCULO
+/*
+function UpperCaracteres($x) {
+    $trocaMIN = array(
+        'à', 'á', 'ã', 'â',
+        'è','ê', 'é',
+        'ì','í',
+        'ò','ó', 'õ', 'ô',
+        'ù','ú', 'ü',
+        'ç',
+        'é', 'ê');
+
+    $trocaMAI = array(
+        'À', 'Á', 'Ã', 'Â',
+        'È','Ê', 'É',
+        'Ì','Í',
+        'Ò','Ó', 'Õ', 'Ô',
+        'Ù','Ú', 'Ü',
+        'Ç',
+        'É', 'Ê');
+
+    return $x=(strtoupper(str_replace($trocaMIN,$trocaMAI,$x)));
+}
+
+$words = file('dict');
+for($i=0;$i<sizeof($words);$i++){
+    file_put_contents("dict1",UpperCaracteres($words[$i]), FILE_APPEND);
+}
+*/
