@@ -69,7 +69,7 @@ function soNumero($str) {
 
 
 //linha text 52105
-
+/*
 $arquivo = file('text');
 for($j = 0 ; $j < sizeof($arquivo) ; $j++){
     echo $j."\n";
@@ -104,5 +104,33 @@ for($i = 0 ; $i < sizeof($arquivo) ; $i++){
         if(is_numeric($textos{$j})){
             echo $text[0]."\n";
         }
+    }
+}
+*/
+
+//PARA NORMALIZAR CARACTER '-'
+/*$arquivo = file('text');
+for($i=0; $i<sizeof($arquivo); $i++){
+    $words = explode(" ",$arquivo[$i]);
+    for($j=1; $j<sizeof($words); $j++){
+        if((stristr($words[$j],' - ') === FALSE) || (stristr($words[$j],'- ') === FALSE) || (stristr($words[$j],' -') === FALSE)) {}
+        else{
+            echo $arquivo[$i]."\n";
+        }
+    }
+}*/
+
+//PARA RETIRAR QUEBRAS DE LINHA DESNECESSÁRIAS
+$arquivo = file('text');
+for($i=0; $i<sizeof($arquivo); $i++){
+    if($arquivo[$i]!="\n" && $arquivo[$i]!=" \n"){
+        file_put_contents('text_normalize', $arquivo[$i], FILE_APPEND);
+    }
+}
+
+$arquivo = file('segments');
+for($i=0; $i<sizeof($arquivo); $i++){
+    if($arquivo[$i]!="\n" && $arquivo[$i]!=" \n"){
+        file_put_contents('segments_normalize', $arquivo[$i], FILE_APPEND);
     }
 }
